@@ -1,0 +1,11 @@
+python-dotenv
+datalab-python-sdk
+tavily-python
+pydantic
+beautifulsoup4
+langchain-openrouter
+langsmith
+numpy
+tqdm
+neo4j
+pytest
