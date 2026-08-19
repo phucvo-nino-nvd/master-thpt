@@ -1,22 +1,14 @@
-.agents/
-.venv/
-.vscode/
-docs/
-.cursor/
-img/
-Tabs_Engineers.md
-gdgoc/
-.env
 __pycache__/
+.pytest_cache/
+.venv/
 .env
-infra/.env.api
-infra/.env.web
-infra/.env.ai
-test.py
-test.pdf
-logs/
-tmp/
-ping.js
-ocr_output.json
-ocr_output_tune.json
-.vscode/
+.omo/
+
+# Generated data. Only the finished knowledge graph is tracked.
+artifacts/*
+!artifacts/knowledge_graph
+artifacts/knowledge_graph/*
+!artifacts/knowledge_graph/knowledge_graph.json
+
+# 112MB of textbook PDFs, source input for the graph pipeline.
+backend/knowledge/graph/data/
