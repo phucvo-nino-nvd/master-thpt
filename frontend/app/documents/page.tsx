@@ -171,8 +171,11 @@ export default function DocumentsPage() {
 										) : null}
 									</div>
 									<div className="documents-card-actions">
-										<Link href={`/practice/${item.id}`} className="btn-primary documents-start-btn">
-											Làm bài
+										<Link href={`/exams/${item.id}?intent=practice`} className="btn-ghost documents-start-btn">
+											Luyện tập
+										</Link>
+										<Link href={`/exams/${item.id}`} className="btn-primary documents-start-btn">
+											Làm đề thi
 										</Link>
 									</div>
 								</div>

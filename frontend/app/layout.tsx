@@ -1,12 +1,18 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Literata } from 'next/font/google';
 import Script from 'next/script';
 import 'katex/dist/katex.min.css';
 import './globals.css';
 
 const inter = Inter({
-	subsets: ['latin'],
+	subsets: ['latin', 'vietnamese'],
 	display: 'swap',
+});
+
+const literata = Literata({
+	subsets: ['latin', 'vietnamese'],
+	display: 'swap',
+	variable: '--font-reading',
 });
 
 export const metadata: Metadata = {
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={`${inter.className} ${literata.variable}`}>
 				<Script src="https://accounts.google.com/gsi/client" strategy="afterInteractive" />
 				{children}
 			</body>

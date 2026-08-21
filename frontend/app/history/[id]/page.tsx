@@ -1,102 +1,102 @@
 'use client';
 
 import { QuestionFeedbackPanels } from '@/features/exams/components/feedback-panels';
-import { formatDateTime, formatScore } from '@/features/exams/lib/helpers';
+import { formatDateTime, formatDuration, formatScore, isAnswered } from '@/features/exams/lib/helpers';
 import { MathText } from '@/features/exams/components/math-text';
 import { ExamQuestionHeader } from '@/features/exams/components/question-header';
 import { ResultAnswerPanel } from '@/features/exams/components/result-answer-panel';
 import { FlatQuestion, flattenExam } from '@/features/exams/lib/types';
 import {
-	AskHintResponse,
-	ExamEvaluationItem,
+	MAX_HINT_LEVEL,
+	DocumentDetailResponse,
 	HistoryDetailResponse,
+	HistoryMode,
+	HistoryQuestion,
 	askHint,
+	askSolution,
+	getDocumentDetail,
 	getHistoryDetail,
-	reviewMistake,
 } from '@/shared/api/client';
 import { getApiErrorMessage } from '@/shared/api/error-message';
+import { getCachedExamDetail } from '@/features/exams/lib/exam-runtime-store';
 import Link from 'next/link';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { DashboardTopbar } from '@/features/dashboard/components/dashboard-topbar';
 
-function intentToLabel(intent: HistoryDetailResponse['intent']) {
-	return intent === 'EXAM_PRACTICE' ? 'Luyện tập' : 'Đề thi';
+function modeToLabel(mode: HistoryMode) {
+	return mode === 'exam' ? 'Đề thi' : 'Luyện tập';
 }
 
 export default function HistoryDetailPage() {
-	const router = useRouter();
 	const params = useParams<{ id: string }>();
 	const historyId = typeof params?.id === 'string' ? params.id : '';
 
 	const [history, setHistory] = useState<HistoryDetailResponse | null>(null);
+	const [exam, setExam] = useState<DocumentDetailResponse | null>(null);
 	const [error, setError] = useState('');
 	const [loading, setLoading] = useState(true);
 	const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
-	const [hintFeedbacks, setHintFeedbacks] = useState<Record<string, AskHintResponse>>({});
+	const [hintFeedbacks, setHintFeedbacks] = useState<Record<string, string[]>>({});
 	const [loadingHintQuestionId, setLoadingHintQuestionId] = useState<string | null>(null);
 	const [hintError, setHintError] = useState('');
-	const [reviewFeedbacks, setReviewFeedbacks] = useState<Record<string, string>>({});
-	const [loadingReviewQuestionId, setLoadingReviewQuestionId] = useState<string | null>(null);
-	const [reviewError, setReviewError] = useState('');
+	const [solutions, setSolutions] = useState<Record<string, string>>({});
+	const [loadingSolutionQuestionId, setLoadingSolutionQuestionId] = useState<string | null>(null);
+	const [solutionError, setSolutionError] = useState('');
 
 	useEffect(() => {
 		if (!historyId) {
-			setError('Không tìm thấy lịch sử bài làm.');
+			setError('Không tìm thấy lượt làm bài.');
 			setLoading(false);
 			return;
 		}
-
 
 		async function loadHistoryDetail() {
 			setLoading(true);
 			setError('');
 
 			try {
-				const data = await getHistoryDetail(historyId);
-				setHistory(data);
-			} catch {
-				setError('Không tải được chi tiết bài làm.');
+				const detail = await getHistoryDetail(historyId);
+				setHistory(detail);
+				setExam(getCachedExamDetail(detail.exam_id) ?? (await getDocumentDetail(detail.exam_id)));
+			} catch (error) {
+				setError(getApiErrorMessage(error, 'Không tải được chi tiết bài làm.'));
 			} finally {
 				setLoading(false);
 			}
 		}
 
 		loadHistoryDetail();
-	}, [historyId, router]);
+	}, [historyId]);
 
+	const answeredByQuestionId = useMemo(() => {
+		const entries = history?.questions.map((item) => [item.question_id, item] as const) ?? [];
+
+		return new Map<string, HistoryQuestion>(entries);
+	}, [history]);
+
+	// Only graded questions are reviewable; practice runs grade one question at a time.
 	const flatQuestions = useMemo<FlatQuestion[]>(() => {
-		if (!history) {
+		if (!exam) {
 			return [];
 		}
 
-		return flattenExam(history.questions);
-	}, [history]);
-
-	const evaluationMap = useMemo(() => {
-		if (!history) {
-			return new Map<string, ExamEvaluationItem>();
-		}
-
-		return new Map(history.evaluation.per_question.map((item) => [item.question_id, item]));
-	}, [history]);
+		return flattenExam(exam.questions).filter((item) => answeredByQuestionId.has(item.question_id));
+	}, [answeredByQuestionId, exam]);
 
 	const activeQuestion = flatQuestions[activeQuestionIndex];
-	const activeEvaluation = activeQuestion ? evaluationMap.get(activeQuestion.question_id) : null;
-	const activeHint = activeQuestion ? hintFeedbacks[activeQuestion.question_id]?.feedback ?? '' : '';
-	const activeHintLevels = activeQuestion ? hintFeedbacks[activeQuestion.question_id]?.hints : undefined;
-	const activeReview = activeQuestion ? reviewFeedbacks[activeQuestion.question_id] : '';
-	const scoreSummaryValue = history?.score !== null && history?.score !== undefined
-		? formatScore(history.score)
-		: `${history?.correct_count ?? 0}/${history?.evaluation.total_questions ?? 0}`;
-	const scoreSummaryLabel = history?.score !== null && history?.score !== undefined
-		? 'Điểm tổng'
-		: 'Số câu đúng';
-	const scoreSummaryMeta = history?.score !== null && history?.score !== undefined
-		? ''
-		: 'Câu đúng trên tổng số câu';
+	const activeAnswer = activeQuestion ? answeredByQuestionId.get(activeQuestion.question_id) : undefined;
+	const activeHints = activeQuestion ? hintFeedbacks[activeQuestion.question_id] ?? [] : [];
+	const activeSolution = activeQuestion ? solutions[activeQuestion.question_id] : '';
 
 	const handleAskHint = useCallback(async () => {
-		if (!activeQuestion || !history || loadingHintQuestionId || hintFeedbacks[activeQuestion.question_id]) {
+		if (!activeQuestion || loadingHintQuestionId) {
+			return;
+		}
+
+		const seen = hintFeedbacks[activeQuestion.question_id] ?? [];
+
+		if (seen.length >= MAX_HINT_LEVEL) {
 			return;
 		}
 
@@ -104,77 +104,89 @@ export default function HistoryDetailPage() {
 		setLoadingHintQuestionId(activeQuestion.question_id);
 		try {
 			const data = await askHint({
-				exam_id: history.exam_id,
 				question_id: activeQuestion.question_id,
+				level: seen.length + 1,
+				student_answer: activeAnswer?.student_answer ?? '',
 			});
 			setHintFeedbacks((prev) => ({
 				...prev,
-				[activeQuestion.question_id]: data,
+				[activeQuestion.question_id]: [...(prev[activeQuestion.question_id] ?? []), data.hint],
 			}));
 		} catch (error) {
 			setHintError(getApiErrorMessage(error, 'Không thể lấy gợi ý lúc này. Vui lòng thử lại.'));
 		} finally {
 			setLoadingHintQuestionId(null);
 		}
-	}, [activeQuestion, hintFeedbacks, history, loadingHintQuestionId, router]);
+	}, [activeAnswer, activeQuestion, hintFeedbacks, loadingHintQuestionId]);
 
-	const handleReviewMistake = useCallback(async () => {
-		if (!activeQuestion || !activeEvaluation || loadingReviewQuestionId || reviewFeedbacks[activeQuestion.question_id]) {
+	const handleAskSolution = useCallback(async () => {
+		if (!activeQuestion || loadingSolutionQuestionId || solutions[activeQuestion.question_id]) {
 			return;
 		}
 
-		setReviewError('');
-		setLoadingReviewQuestionId(activeQuestion.question_id);
+		setSolutionError('');
+		setLoadingSolutionQuestionId(activeQuestion.question_id);
 		try {
-			const data = await reviewMistake({
+			const data = await askSolution({
+				history_id: historyId,
 				question_id: activeQuestion.question_id,
-				student_ans: activeEvaluation.student_answer,
 			});
-			setReviewFeedbacks((prev) => ({
+			setSolutions((prev) => ({
 				...prev,
-				[activeQuestion.question_id]: data.feedback,
+				[activeQuestion.question_id]: data.solution,
 			}));
 		} catch (error) {
-			setReviewError(getApiErrorMessage(error, 'Không thể lấy giải thích lúc này. Vui lòng thử lại.'));
+			setSolutionError(getApiErrorMessage(error, 'Không thể lấy lời giải lúc này. Vui lòng thử lại.'));
 		} finally {
-			setLoadingReviewQuestionId(null);
+			setLoadingSolutionQuestionId(null);
 		}
-	}, [activeEvaluation, activeQuestion, loadingReviewQuestionId, reviewFeedbacks, router]);
+	}, [activeQuestion, historyId, loadingSolutionQuestionId, solutions]);
 
 	if (loading) {
-		return <main className="exam-room">Đang tải bài làm...</main>;
+		return (
+			<main className="dashboard-shell exam-room">
+				<DashboardTopbar />
+				<p>Đang tải bài làm...</p>
+			</main>
+		);
 	}
 
-	if (error || !history || !activeQuestion || !activeEvaluation) {
+	if (error || !history || !exam || !activeQuestion || !activeAnswer) {
 		return (
-			<main className="exam-room">
-				<p className="documents-error">{error || 'Không có dữ liệu bài làm.'}</p>
-				<Link href="/dashboard" className="btn-primary">
-					Quay lại tổng quan
+			<main className="dashboard-shell exam-room">
+				<DashboardTopbar />
+				<p className="documents-error">{error || 'Lượt làm bài này chưa có câu nào được chấm.'}</p>
+				<Link href="/history" className="btn-primary">
+					Về lịch sử làm bài
 				</Link>
 			</main>
 		);
 	}
 
+	const duration = formatDuration(history.duration_seconds);
+
 	return (
-		<main className="exam-room exam-result-room">
+		<main className="dashboard-shell exam-room exam-result-room">
+			<DashboardTopbar />
 			<header className="exam-header exam-result-header">
+				<Link href="/history" className="exam-back-btn" aria-label="Về lịch sử làm bài">&lsaquo;</Link>
 				<div className="exam-header-main">
 					<p className="documents-kicker">Xem lại bài làm</p>
-					<h1 className="documents-title">{history.subject} - {history.exam_type}</h1>
-					<p className="text-soft">
-						{history.grade ? `Lớp ${history.grade} | ` : ''}
-						{intentToLabel(history.intent)} | {formatDateTime(history.created_at)}
-					</p>
+					<h1 className="documents-title">{exam.subject} - {exam.title}</h1>
+					<div className="exam-result-meta">
+						<span className="documents-tag">{modeToLabel(history.mode)}</span>
+						{exam.grade ? <span>Lớp {exam.grade}</span> : null}
+						<span>{formatDateTime(history.created_at)}</span>
+						{duration ? <span>{duration}</span> : null}
+					</div>
 				</div>
 				<div className="exam-header-side">
-					<Link href="/dashboard" className="btn-ghost">Về tổng quan</Link>
 					<div className="exam-result-hero">
-						<p className="exam-result-hero-label">{scoreSummaryLabel}</p>
-						<p className="exam-result-hero-value">{scoreSummaryValue}</p>
-						{scoreSummaryMeta ? (
-							<p className="exam-result-hero-meta">{scoreSummaryMeta}</p>
-						) : null}
+						<p className="exam-result-hero-label">Điểm tổng</p>
+						<p className="exam-result-hero-value">{formatScore(history.total_score)}</p>
+						<p className="exam-result-hero-meta">
+							Đúng {history.correct_count}/{history.total_questions} câu
+						</p>
 					</div>
 				</div>
 			</header>
@@ -187,26 +199,30 @@ export default function HistoryDetailPage() {
 							showHintButton
 							onAskHint={handleAskHint}
 							isHintLoading={loadingHintQuestionId === activeQuestion.question_id}
-							hasHint={Boolean(activeHint)}
-							showReviewButton
-							onReviewMistake={handleReviewMistake}
-							isReviewLoading={loadingReviewQuestionId === activeQuestion.question_id}
-							hasReview={Boolean(activeReview)}
-							statusText={activeEvaluation.is_correct ? 'Trả lời đúng' : 'Trả lời sai'}
-							statusTone={activeEvaluation.is_correct ? 'is-correct' : 'is-wrong'}
+							hintCount={activeHints.length}
+							showSolutionButton
+							onAskSolution={handleAskSolution}
+							isSolutionLoading={loadingSolutionQuestionId === activeQuestion.question_id}
+							hasSolution={Boolean(activeSolution)}
+							statusText={activeAnswer.evaluation.correct ? 'Trả lời đúng' : 'Trả lời sai'}
+							statusTone={activeAnswer.evaluation.correct ? 'is-correct' : 'is-wrong'}
 						/>
 
 						<div className="exam-question-content"><MathText text={activeQuestion.question.content} /></div>
 
 						<QuestionFeedbackPanels
 							hintError={hintError}
-							hintFeedback={activeHint}
-							hintLevels={activeHintLevels}
-							reviewError={reviewError}
-							reviewFeedback={activeReview}
+							hints={activeHints}
+							solutionError={solutionError}
+							solution={activeSolution}
 						/>
 
-						<ResultAnswerPanel question={activeQuestion} evaluation={activeEvaluation} />
+						<ResultAnswerPanel
+							question={activeQuestion}
+							studentAnswer={activeAnswer.student_answer}
+							correctAnswer={activeQuestion.question.answer}
+							evaluation={activeAnswer.evaluation}
+						/>
 					</div>
 
 					<div className="exam-main-actions">
@@ -234,10 +250,10 @@ export default function HistoryDetailPage() {
 					<div className="exam-index-grid">
 						{flatQuestions.map((item, idx) => {
 							const isActive = idx === activeQuestionIndex;
-							const evaluation = evaluationMap.get(item.question_id);
-							const stateClass = !evaluation?.student_answer
+							const answered = answeredByQuestionId.get(item.question_id);
+							const stateClass = !isAnswered(answered?.student_answer)
 								? 'is-unanswered'
-								: evaluation.is_correct
+								: answered?.evaluation.correct
 									? 'is-correct'
 									: 'is-wrong';
 

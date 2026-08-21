@@ -4,39 +4,28 @@ import { EditableAnswerPanel } from '@/features/exams/components/editable-answer
 import { QuestionFeedbackPanels } from '@/features/exams/components/feedback-panels';
 import { MathText } from '@/features/exams/components/math-text';
 import { ExamQuestionHeader } from '@/features/exams/components/question-header';
+import { AnswerValue, formatAnswer, isAnswered, toApiAnswer } from '@/features/exams/lib/helpers';
 import { FlatQuestion, flattenExam } from '@/features/exams/lib/types';
 import {
-	AskHintResponse,
+	MAX_HINT_LEVEL,
 	DocumentDetailResponse,
-	PracticeQuestionCheckResponse,
+	Evaluation,
 	askHint,
+	askSolution,
 	checkPracticeQuestion,
 	createHistory,
 	getDocumentDetail,
-	reviewMistake,
 	submitExam,
 } from '@/shared/api/client';
 import { getApiErrorMessage } from '@/shared/api/error-message';
 import {
 	cacheExamDetail,
-	cacheExamQuestionTimings,
-	cacheExamResult,
-	clearCachedExamQuestionTimings,
-	clearCachedExamResult,
-	clearExamRuntimeCache,
+	clearCachedExamDetail,
 	getCachedExamDetail,
 } from '@/features/exams/lib/exam-runtime-store';
 import Link from 'next/link';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-
-function hasAnswerValue(value?: string) {
-	if (!value) {
-		return false;
-	}
-
-	return value.split(',').some((token) => token.trim().length > 0);
-}
 
 export default function ExamRoomPage() {
 	const router = useRouter();
@@ -49,7 +38,7 @@ export default function ExamRoomPage() {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
 	const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
-	const [answers, setAnswers] = useState<Record<string, string>>({});
+	const [answers, setAnswers] = useState<Record<string, AnswerValue>>({});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitError, setSubmitError] = useState('');
 	const [checkError, setCheckError] = useState('');
@@ -58,61 +47,16 @@ export default function ExamRoomPage() {
 	const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
 	const [checkingQuestionId, setCheckingQuestionId] = useState<string | null>(null);
 	const [isCompletingPractice, setIsCompletingPractice] = useState(false);
-	const [checkedResults, setCheckedResults] = useState<Record<string, PracticeQuestionCheckResponse>>({});
-	const [hintFeedbacks, setHintFeedbacks] = useState<Record<string, AskHintResponse>>({});
+	const [checkedResults, setCheckedResults] = useState<Record<string, Evaluation>>({});
+	const [hintFeedbacks, setHintFeedbacks] = useState<Record<string, string[]>>({});
 	const [loadingHintQuestionId, setLoadingHintQuestionId] = useState<string | null>(null);
 	const [hintError, setHintError] = useState('');
-	const [reviewFeedbacks, setReviewFeedbacks] = useState<Record<string, string>>({});
-	const [loadingReviewQuestionId, setLoadingReviewQuestionId] = useState<string | null>(null);
-	const [reviewError, setReviewError] = useState('');
-	const [practiceCompleteError, setPracticeCompleteError] = useState('');
+	const [solutions, setSolutions] = useState<Record<string, string>>({});
+	const [loadingSolutionQuestionId, setLoadingSolutionQuestionId] = useState<string | null>(null);
+	const [solutionError, setSolutionError] = useState('');
 	const examStartAtRef = useRef<number>(Date.now());
 	const autoSubmitTriggeredRef = useRef(false);
-	const questionTimeMsByIdRef = useRef<Record<string, number>>({});
-	const activeQuestionIdRef = useRef<string | null>(null);
-	const activeQuestionStartedAtRef = useRef<number | null>(null);
-
-	function commitCurrentQuestionTime() {
-		if (!activeQuestionIdRef.current || activeQuestionStartedAtRef.current === null) {
-			return;
-		}
-
-		const elapsedMs = Math.max(0, Date.now() - activeQuestionStartedAtRef.current);
-		questionTimeMsByIdRef.current[activeQuestionIdRef.current] =
-			(questionTimeMsByIdRef.current[activeQuestionIdRef.current] ?? 0) + elapsedMs;
-		activeQuestionStartedAtRef.current = null;
-	}
-
-	function resumeCurrentQuestionTime() {
-		if (
-			!activeQuestionIdRef.current ||
-			activeQuestionStartedAtRef.current !== null ||
-			document.visibilityState === 'hidden'
-		) {
-			return;
-		}
-
-		activeQuestionStartedAtRef.current = Date.now();
-	}
-
-	function getQuestionTimeSecondsMap() {
-		return Object.fromEntries(
-			Object.entries(questionTimeMsByIdRef.current).map(([questionId, elapsedMs]) => [
-				questionId,
-				Math.max(0, Math.round(elapsedMs / 1000)),
-			]),
-		);
-	}
-
-	function buildStudentAnswerRecords() {
-		const questionTimeSecondsById = getQuestionTimeSecondsMap();
-
-		return exam?.questions.map((question) => ({
-			question_id: question.id,
-			student_answer: answers[question.id] ?? '',
-			time_spent_seconds: questionTimeSecondsById[question.id] ?? 0,
-		})) ?? [];
-	}
+	const historyIdRef = useRef<string | null>(null);
 
 	const flatQuestions = useMemo<FlatQuestion[]>(() => {
 		if (!exam) {
@@ -124,38 +68,24 @@ export default function ExamRoomPage() {
 
 	const activeQuestion = flatQuestions[activeQuestionIndex];
 
-	const handlePracticeComplete = useCallback(async () => {
-		if (!examId) {
-			if (examId) {
-				clearExamRuntimeCache(examId);
-			}
-
-			router.push('/practice');
-			return;
+	const ensureHistoryId = useCallback(async () => {
+		if (!historyIdRef.current) {
+			const created = await createHistory({ exam_id: examId, mode: 'practice' });
+			historyIdRef.current = created.history_id;
 		}
 
-		commitCurrentQuestionTime();
-		const studentAnswers = buildStudentAnswerRecords();
-		setPracticeCompleteError('');
+		return historyIdRef.current;
+	}, [examId]);
+
+	const handlePracticeComplete = useCallback(() => {
 		setIsCompletingPractice(true);
+		clearCachedExamDetail(examId);
 
-		try {
-			await createHistory({
-				intent: 'EXAM_PRACTICE',
-				exam_id: examId,
-				student_ans: studentAnswers,
-				correct_count: Object.values(checkedResults).filter((item) => item.is_correct).length,
-			});
-			clearExamRuntimeCache(examId);
-			router.push('/practice');
-		} catch (error) {
-			setPracticeCompleteError(getApiErrorMessage(error, 'Không thể hoàn tất lượt luyện tập lúc này. Vui lòng thử lại.'));
-			setIsCompletingPractice(false);
-		}
-	}, [answers, checkedResults, exam, examId, router]);
+		router.push(historyIdRef.current ? `/history/${historyIdRef.current}` : '/practice');
+	}, [examId, router]);
 
 	const handlePracticeDiscard = useCallback(() => {
-		clearExamRuntimeCache(examId);
+		clearCachedExamDetail(examId);
 		router.push('/practice');
 	}, [examId, router]);
 
@@ -166,15 +96,11 @@ export default function ExamRoomPage() {
 			return;
 		}
 
-		clearCachedExamResult(examId);
-		clearCachedExamQuestionTimings(examId);
-
 		async function loadExam() {
 			setLoading(true);
 			setError('');
 			setSubmitError('');
 			setCheckError('');
-			setPracticeCompleteError('');
 
 			try {
 				const cachedExam = getCachedExamDetail(examId);
@@ -198,62 +124,11 @@ export default function ExamRoomPage() {
 		loadExam();
 	}, [examId, router]);
 
-	useEffect(() => {
-		if (!activeQuestion?.question_id) {
-			commitCurrentQuestionTime();
-			activeQuestionIdRef.current = null;
-			return;
-		}
-
-		if (activeQuestionIdRef.current !== activeQuestion.question_id) {
-			commitCurrentQuestionTime();
-			activeQuestionIdRef.current = activeQuestion.question_id;
-		}
-
-		resumeCurrentQuestionTime();
-	}, [activeQuestion?.question_id]);
-
-	useEffect(() => {
-		function handleVisibilityChange() {
-			if (document.visibilityState === 'hidden') {
-				commitCurrentQuestionTime();
-				return;
-			}
-
-			resumeCurrentQuestionTime();
-		}
-
-		function handlePageHide() {
-			commitCurrentQuestionTime();
-		}
-
-		function handleWindowBlur() {
-			commitCurrentQuestionTime();
-		}
-
-		function handleWindowFocus() {
-			resumeCurrentQuestionTime();
-		}
-
-		document.addEventListener('visibilitychange', handleVisibilityChange);
-		window.addEventListener('pagehide', handlePageHide);
-		window.addEventListener('blur', handleWindowBlur);
-		window.addEventListener('focus', handleWindowFocus);
-
-		return () => {
-			commitCurrentQuestionTime();
-			document.removeEventListener('visibilitychange', handleVisibilityChange);
-			window.removeEventListener('pagehide', handlePageHide);
-			window.removeEventListener('blur', handleWindowBlur);
-			window.removeEventListener('focus', handleWindowFocus);
-		};
-	}, []);
 	const isLowTime = remainingSeconds !== null && remainingSeconds <= 10 * 60;
-	const activeHint = activeQuestion ? hintFeedbacks[activeQuestion.question_id]?.feedback ?? '' : '';
-	const activeHintLevels = activeQuestion ? hintFeedbacks[activeQuestion.question_id]?.hints : undefined;
-	const activeReview = activeQuestion ? reviewFeedbacks[activeQuestion.question_id] : '';
+	const activeHints = activeQuestion ? hintFeedbacks[activeQuestion.question_id] ?? [] : [];
+	const activeSolution = activeQuestion ? solutions[activeQuestion.question_id] : '';
 	const answeredCount = useMemo(
-		() => flatQuestions.filter((question) => hasAnswerValue(answers[question.question_id])).length,
+		() => flatQuestions.filter((question) => isAnswered(answers[question.question_id])).length,
 		[answers, flatQuestions],
 	);
 	const remainingQuestionCount = Math.max(flatQuestions.length - answeredCount, 0);
@@ -302,7 +177,7 @@ export default function ExamRoomPage() {
 		};
 	}, [exam]);
 
-	function setAnswer(questionId: string, value: string) {
+	function setAnswer(questionId: string, value: AnswerValue) {
 		if (isPracticeMode && checkedResults[questionId]) {
 			return;
 		}
@@ -323,28 +198,16 @@ export default function ExamRoomPage() {
 		setIsSubmitting(true);
 
 		try {
-			const timeTakenSeconds = Math.max(1, Math.floor((Date.now() - examStartAtRef.current) / 1000));
-			commitCurrentQuestionTime();
-			const studentAnswerRecords = buildStudentAnswerRecords();
-
-			const fullExam = {
-				...exam,
-				questions: exam.questions.map((question) => ({
-					...question,
-					student_answer: answers[question.id] ?? '',
-				})),
-			};
-
 			const result = await submitExam({
 				exam_id: exam.exam_id,
-				time_taken_seconds: timeTakenSeconds,
-				student_ans: studentAnswerRecords,
-				full_exam: fullExam,
+				answers: exam.questions.map((question) => ({
+					question_id: question.id,
+					student_answer: toApiAnswer(answers[question.id] ?? ''),
+				})),
+				duration_seconds: Math.max(1, Math.floor((Date.now() - examStartAtRef.current) / 1000)),
 			});
 
-			cacheExamQuestionTimings(exam.exam_id, getQuestionTimeSecondsMap());
-			cacheExamResult(exam.exam_id, result);
-			router.push(`/exams/${exam.exam_id}/results`);
+			router.push(`/history/${result.history_id}`);
 		} catch (error) {
 			setSubmitError(getApiErrorMessage(error, 'Nộp bài thất bại. Vui lòng thử lại sau.'));
 			setIsSubmitting(false);
@@ -352,31 +215,37 @@ export default function ExamRoomPage() {
 	}, [answers, exam, isSubmitting, router]);
 
 	const handleCheckCurrentQuestion = useCallback(async () => {
-		if (!exam || !activeQuestion || checkingQuestionId) {
+		if (!activeQuestion || checkingQuestionId) {
 			return;
 		}
 
 		setCheckError('');
 		setCheckingQuestionId(activeQuestion.question_id);
 		try {
-			const result = await checkPracticeQuestion({
-				exam_id: exam.exam_id,
+			const evaluation = await checkPracticeQuestion({
+				history_id: await ensureHistoryId(),
 				question_id: activeQuestion.question_id,
-				student_answer: answers[activeQuestion.question_id] ?? '',
+				student_answer: toApiAnswer(answers[activeQuestion.question_id] ?? ''),
 			});
 			setCheckedResults((prev) => ({
 				...prev,
-				[activeQuestion.question_id]: result,
+				[activeQuestion.question_id]: evaluation,
 			}));
-		} catch {
-			setCheckError('Không thể kiểm tra câu này. Vui lòng thử lại.');
+		} catch (error) {
+			setCheckError(getApiErrorMessage(error, 'Không thể kiểm tra câu này. Vui lòng thử lại.'));
 		} finally {
 			setCheckingQuestionId(null);
 		}
-	}, [activeQuestion, answers, checkingQuestionId, exam, router]);
+	}, [activeQuestion, answers, checkingQuestionId, ensureHistoryId]);
 
 	const handleAskHint = useCallback(async () => {
-		if (!activeQuestion || !exam || loadingHintQuestionId || hintFeedbacks[activeQuestion.question_id]) {
+		if (!activeQuestion || loadingHintQuestionId) {
+			return;
+		}
+
+		const seen = hintFeedbacks[activeQuestion.question_id] ?? [];
+
+		if (seen.length >= MAX_HINT_LEVEL) {
 			return;
 		}
 
@@ -384,47 +253,49 @@ export default function ExamRoomPage() {
 		setLoadingHintQuestionId(activeQuestion.question_id);
 		try {
 			const data = await askHint({
-				exam_id: exam.exam_id,
 				question_id: activeQuestion.question_id,
+				level: seen.length + 1,
+				student_answer: toApiAnswer(answers[activeQuestion.question_id] ?? ''),
 			});
 			setHintFeedbacks((prev) => ({
 				...prev,
-				[activeQuestion.question_id]: data,
+				[activeQuestion.question_id]: [...(prev[activeQuestion.question_id] ?? []), data.hint],
 			}));
 		} catch (error) {
 			setHintError(getApiErrorMessage(error, 'Không thể lấy gợi ý lúc này. Vui lòng thử lại.'));
 		} finally {
 			setLoadingHintQuestionId(null);
 		}
-	}, [activeQuestion, exam, hintFeedbacks, loadingHintQuestionId, router]);
+	}, [activeQuestion, answers, hintFeedbacks, loadingHintQuestionId]);
 
-	const handleReviewMistake = useCallback(async () => {
-		if (!activeQuestion || loadingReviewQuestionId || reviewFeedbacks[activeQuestion.question_id]) {
+	const handleAskSolution = useCallback(async () => {
+		const historyId = historyIdRef.current;
+
+		if (!activeQuestion || !historyId || loadingSolutionQuestionId || solutions[activeQuestion.question_id]) {
 			return;
 		}
 
-		const checkedCurrent = checkedResults[activeQuestion.question_id];
-		if (!checkedCurrent) {
+		if (!checkedResults[activeQuestion.question_id]) {
 			return;
 		}
 
-		setReviewError('');
-		setLoadingReviewQuestionId(activeQuestion.question_id);
+		setSolutionError('');
+		setLoadingSolutionQuestionId(activeQuestion.question_id);
 		try {
-			const data = await reviewMistake({
+			const data = await askSolution({
+				history_id: historyId,
 				question_id: activeQuestion.question_id,
-				student_ans: checkedCurrent.student_answer,
 			});
-			setReviewFeedbacks((prev) => ({
+			setSolutions((prev) => ({
 				...prev,
-				[activeQuestion.question_id]: data.feedback,
+				[activeQuestion.question_id]: data.solution,
 			}));
 		} catch (error) {
-			setReviewError(getApiErrorMessage(error, 'Không thể lấy giải thích lúc này. Vui lòng thử lại.'));
+			setSolutionError(getApiErrorMessage(error, 'Không thể lấy lời giải lúc này. Vui lòng thử lại.'));
 		} finally {
-			setLoadingReviewQuestionId(null);
+			setLoadingSolutionQuestionId(null);
 		}
-	}, [activeQuestion, checkedResults, loadingReviewQuestionId, reviewFeedbacks, router]);
+	}, [activeQuestion, checkedResults, loadingSolutionQuestionId, solutions]);
 
 	function openSubmitConfirm() {
 		if (isSubmitting) {
@@ -444,12 +315,12 @@ export default function ExamRoomPage() {
 
 	function handleExitExamRoom() {
 		setShowExitConfirm(false);
-		clearExamRuntimeCache(examId);
-		router.push('/documents');
+		clearCachedExamDetail(examId);
+		router.push(isPracticeMode ? '/practice' : '/documents');
 	}
 
 	useEffect(() => {
-		if (!exam || remainingSeconds === null || isSubmitting) {
+		if (!exam || remainingSeconds === null || isSubmitting || isPracticeMode) {
 			return;
 		}
 
@@ -459,7 +330,7 @@ export default function ExamRoomPage() {
 
 		autoSubmitTriggeredRef.current = true;
 		handleSubmitExam();
-	}, [exam, handleSubmitExam, isSubmitting, remainingSeconds]);
+	}, [exam, handleSubmitExam, isPracticeMode, isSubmitting, remainingSeconds]);
 
 	if (loading) {
 		return <main className="exam-room">Đang tải đề thi...</main>;
@@ -487,33 +358,34 @@ export default function ExamRoomPage() {
 
 	return (
 		<main className="exam-room">
-			<header className="exam-header">
+			<header className="exam-header exam-result-header">
+				<button
+					type="button"
+					className="exam-back-btn"
+					onClick={openExitConfirm}
+					aria-label={isPracticeMode ? 'Thoát luyện tập' : 'Thoát phòng thi'}
+				>
+					&lsaquo;
+				</button>
 				<div className="exam-header-main">
-					<p className="documents-kicker">Phòng thi</p>
+					<p className="documents-kicker">Đang làm bài</p>
 					<h1 className="documents-title">{exam.subject} - {exam.title}</h1>
-					<p className="text-soft">
-						{exam.grade ? `Lớp ${exam.grade} | ` : ''}
-						{exam.total_questions} câu | {exam.duration_minutes} phút
-					</p>
-					<div className="exam-progress-strip" aria-label="Tiến độ làm bài">
-						<div className="exam-progress-copy">
-							<strong>Đã làm {answeredCount}/{flatQuestions.length} câu</strong>
-							<span>Còn {remainingQuestionCount} câu • {progressPercent}%</span>
-						</div>
-						<div className="exam-progress-bar" aria-hidden="true">
-							<span style={{ width: `${progressPercent}%` }} />
-						</div>
+					<div className="exam-result-meta">
+						<span className="documents-tag">{isPracticeMode ? 'Luyện tập' : 'Đề thi'}</span>
+						{exam.grade ? <span>Lớp {exam.grade}</span> : null}
+						<span>{exam.total_questions} câu</span>
+						<span>{exam.duration_minutes} phút</span>
 					</div>
 				</div>
-				{isPracticeMode ? (
-					<button type="button" className="btn-ghost" onClick={handlePracticeDiscard}>
-						Thoát luyện tập
-					</button>
-				) : (
-					<button type="button" className="btn-danger exam-exit-btn" onClick={openExitConfirm}>
-						Thoát phòng thi
-					</button>
-				)}
+				<div className="exam-header-side">
+					<div className="exam-result-hero">
+						<p className="exam-result-hero-label">Tiến độ</p>
+						<p className="exam-result-hero-value">{answeredCount}/{flatQuestions.length}</p>
+						<p className="exam-result-hero-meta">
+							Còn {remainingQuestionCount} câu • {progressPercent}%
+						</p>
+					</div>
+				</div>
 			</header>
 
 			<section className="exam-layout">
@@ -524,37 +396,39 @@ export default function ExamRoomPage() {
 							showHintButton={isPracticeMode}
 							onAskHint={handleAskHint}
 							isHintLoading={loadingHintQuestionId === activeQuestion.question_id}
-							hasHint={Boolean(activeHint)}
-							showReviewButton={isPracticeMode && Boolean(checkedCurrentQuestion)}
-							onReviewMistake={handleReviewMistake}
-							isReviewLoading={loadingReviewQuestionId === activeQuestion.question_id}
-							hasReview={Boolean(activeReview)}
+							hintCount={activeHints.length}
+							showSolutionButton={isPracticeMode && Boolean(checkedCurrentQuestion)}
+							onAskSolution={handleAskSolution}
+							isSolutionLoading={loadingSolutionQuestionId === activeQuestion.question_id}
+							hasSolution={Boolean(activeSolution)}
 						/>
 
 						<div className="exam-question-content"><MathText text={activeQuestion.question.content} /></div>
 
 						<QuestionFeedbackPanels
 							hintError={hintError}
-							hintFeedback={activeHint}
-							hintLevels={activeHintLevels}
-							reviewError={reviewError}
-							reviewFeedback={activeReview}
+							hints={activeHints}
+							solutionError={solutionError}
+							solution={activeSolution}
 						/>
 
 						<EditableAnswerPanel
 							question={activeQuestion}
-							answer={answers[activeQuestion.question_id] ?? ''}
+							answer={answers[activeQuestion.question_id]}
 							onChange={(value) => setAnswer(activeQuestion.question_id, value)}
 							disabled={isCurrentQuestionLocked}
 						/>
 
 						{isPracticeMode && checkedCurrentQuestion ? (
-							<div className={`exam-result-short ${checkedCurrentQuestion.is_correct ? 'is-correct' : 'is-wrong'}`}>
+							<div className={`exam-result-short ${checkedCurrentQuestion.correct ? 'is-correct' : 'is-wrong'}`}>
 								<p>
-									<strong>Kết quả:</strong> {checkedCurrentQuestion.is_correct ? 'Đúng' : 'Sai'}
+									<strong>Kết quả:</strong> {checkedCurrentQuestion.correct ? 'Đúng' : 'Sai'} • {checkedCurrentQuestion.score} điểm
 								</p>
 								<p>
-									<strong>Đáp án đúng:</strong> {checkedCurrentQuestion.correct_answer || 'Chưa có'}
+									<strong>Đáp án đúng:</strong> <MathText text={formatAnswer(activeQuestion.question.answer) || 'Chưa có'} />
+								</p>
+								<p>
+									<MathText text={checkedCurrentQuestion.feedback} />
 								</p>
 							</div>
 						) : null}
@@ -590,10 +464,10 @@ export default function ExamRoomPage() {
 					<div className="exam-index-grid">
 						{flatQuestions.map((item, idx) => {
 							const active = idx === activeQuestionIndex;
-							const answered = Boolean(answers[item.question_id]);
+							const answered = isAnswered(answers[item.question_id]);
 							const checkedResult = checkedResults[item.question_id];
 							const stateClass = checkedResult
-								? (checkedResult.is_correct ? 'is-correct' : 'is-wrong')
+								? (checkedResult.correct ? 'is-correct' : 'is-wrong')
 								: answered
 									? 'is-answered'
 									: 'is-unanswered';
@@ -646,16 +520,7 @@ export default function ExamRoomPage() {
 										'Xong'
 									)}
 								</button>
-								<button
-									type="button"
-									className="btn-danger exam-submit-side-btn"
-									onClick={handlePracticeDiscard}
-									disabled={isCompletingPractice}
-								>
-									Thoát không lưu
-								</button>
 								{checkError ? <p className="documents-error exam-submit-error">{checkError}</p> : null}
-								{practiceCompleteError ? <p className="documents-error exam-submit-error">{practiceCompleteError}</p> : null}
 							</>
 						) : (
 							<>
@@ -686,7 +551,7 @@ export default function ExamRoomPage() {
 					<div className="exam-submit-confirm-card">
 						<h3 id="submit-confirm-title">Xác nhận nộp bài?</h3>
 						<p>
-							Sau khi nộp, hệ thống sẽ chấm điểm và chuyển sang trang kết quả.
+							Sau khi nộp, hệ thống sẽ chấm điểm và chuyển sang trang xem lại bài làm.
 						</p>
 						<div className="exam-submit-confirm-actions">
 							<button
@@ -710,13 +575,15 @@ export default function ExamRoomPage() {
 				</div>
 			) : null}
 
-			{!isPracticeMode && showExitConfirm ? (
+			{showExitConfirm ? (
 				<div className="exam-submit-confirm-overlay" role="dialog" aria-modal="true" aria-labelledby="exit-confirm-title">
 					<div className="exam-submit-confirm-card exam-exit-confirm-card">
 						<p className="exam-exit-confirm-kicker">Cảnh báo</p>
-						<h3 id="exit-confirm-title">Thoát phòng thi?</h3>
+						<h3 id="exit-confirm-title">{isPracticeMode ? 'Thoát luyện tập?' : 'Thoát phòng thi?'}</h3>
 						<p>
-							Nếu thoát phòng thi lúc này, bài làm hiện tại sẽ không được lưu lại.
+							{isPracticeMode
+								? 'Các câu đã kiểm tra vẫn được lưu, những câu chưa kiểm tra sẽ mất.'
+								: 'Nếu thoát phòng thi lúc này, bài làm hiện tại sẽ không được lưu lại.'}
 						</p>
 						<div className="exam-submit-confirm-actions">
 							<button

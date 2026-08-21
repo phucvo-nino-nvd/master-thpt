@@ -17,6 +17,7 @@
 }
 
 .exam-header-main {
+	flex: 1;
 	min-width: 0;
 }
 
@@ -25,46 +26,6 @@
 	flex-direction: column;
 	align-items: flex-end;
 	gap: 12px;
-}
-
-.exam-exit-btn {
-	flex-shrink: 0;
-}
-
-/* progress strip (concept .dots / .bar-track) */
-.exam-progress-strip {
-	max-width: 420px;
-	margin-top: 16px;
-}
-
-.exam-progress-copy {
-	display: flex;
-	align-items: baseline;
-	justify-content: space-between;
-	gap: 12px;
-	margin-bottom: 6px;
-	font-size: 12px;
-	color: var(--ink-soft);
-}
-
-.exam-progress-copy strong {
-	font-size: 12.5px;
-	color: var(--ink);
-}
-
-.exam-progress-bar {
-	height: 6px;
-	border-radius: 4px;
-	background: var(--line);
-	overflow: hidden;
-}
-
-.exam-progress-bar span {
-	display: block;
-	height: 100%;
-	border-radius: 4px;
-	background: var(--amber);
-	transition: width 0.25s ease;
 }
 
 .exam-layout {
@@ -170,10 +131,13 @@
 
 .exam-result-status {
 	margin: 0;
-	padding: 4px 12px;
+	padding: 7px 14px;
+	border: 1px solid transparent;
 	border-radius: 999px;
 	font-size: 11.5px;
 	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
 }
 
 .exam-result-status.is-correct {
@@ -244,7 +208,7 @@
 
 .exam-hint-box,
 .exam-review-box {
-	margin: 0 0 20px;
+	margin: 20px 0;
 	padding: 16px 18px;
 	border: 1px solid var(--line);
 	border-radius: 14px;
@@ -271,8 +235,9 @@
 
 .exam-hint-content,
 .exam-review-content {
-	font-size: 13.5px;
-	line-height: 1.6;
+	font-family: var(--font-reading), Georgia, serif;
+	font-size: 14.5px;
+	line-height: 1.7;
 }
 
 .exam-hint-level-list {
@@ -583,6 +548,10 @@
 	background: var(--green-bg);
 }
 
+.exam-question-shell > .exam-result-short {
+	margin-top: 20px;
+}
+
 .exam-result-short.is-wrong {
 	border-left-color: var(--red);
 	background: var(--red-bg);
@@ -590,8 +559,9 @@
 
 .exam-result-short p {
 	margin: 0;
-	font-size: 13px;
-	line-height: 1.6;
+	font-family: var(--font-reading), Georgia, serif;
+	font-size: 14px;
+	line-height: 1.7;
 }
 
 .exam-result-short p + p {
@@ -707,9 +677,8 @@
 }
 
 .exam-index-btn.is-active {
-	border-color: var(--ink);
-	box-shadow: inset 0 0 0 1px var(--ink);
-	color: var(--ink);
+	border-color: var(--amber);
+	box-shadow: 0 0 0 2px var(--amber-bg);
 }
 
 .exam-submit-wrap {
@@ -748,12 +717,6 @@
 .exam-submit-confirm-btn:disabled {
 	opacity: 0.5;
 	cursor: not-allowed;
-}
-
-.exam-submit-side-btn {
-	margin-top: 2px;
-	width: 100%;
-	font-size: 12.5px;
 }
 
 .exam-submit-error {
@@ -819,13 +782,55 @@
 
 /* ---------- result hero ---------- */
 
-.exam-result-hero {
-	min-width: 172px;
-	padding: 14px 18px;
-	border: 1px solid var(--line);
-	border-radius: 16px;
+.exam-back-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	flex-shrink: 0;
+	width: 34px;
+	height: 34px;
+	padding: 0;
+	font-size: 22px;
+	line-height: 1;
+	color: var(--ink-soft);
+	cursor: pointer;
+	text-decoration: none;
 	background: var(--paper-card);
-	text-align: right;
+	border: 1px solid var(--line);
+	border-radius: 50%;
+}
+
+.exam-back-btn:hover {
+	color: var(--ink);
+	border-color: var(--ink-soft);
+}
+
+.exam-result-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	margin-top: 8px;
+	font-size: 12.5px;
+	color: var(--ink-soft);
+}
+
+.exam-result-meta > span + span::before {
+	content: '·';
+	margin-right: 10px;
+}
+
+.exam-result-meta > .documents-tag + span::before {
+	content: none;
+}
+
+.exam-result-hero {
+	padding: 12px 22px;
+	border: 1px solid var(--line-strong);
+	border-radius: 14px;
+	background: var(--paper-card);
+	text-align: center;
 }
 
 .exam-result-hero-label {

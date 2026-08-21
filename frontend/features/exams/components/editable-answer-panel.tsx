@@ -1,11 +1,11 @@
 import { MathText } from '@/features/exams/components/math-text';
-import { getAlphabetLabel } from '@/features/exams/lib/helpers';
+import { AnswerValue, getAlphabetLabel } from '@/features/exams/lib/helpers';
 import { FlatQuestion } from '@/features/exams/lib/types';
 
 type EditableAnswerPanelProps = {
 	question: FlatQuestion;
-	answer: string;
-	onChange: (value: string) => void;
+	answer?: AnswerValue;
+	onChange: (value: AnswerValue) => void;
 	disabled?: boolean;
 };
 
@@ -45,7 +45,7 @@ export function EditableAnswerPanel({
 
 	if (question.sectionType === 'true_false') {
 		const parts = question.question.parts;
-		const tokens = answer.split(',');
+		const picked = Array.isArray(answer) ? answer : [];
 
 		return (
 			<div className="exam-tf-table">
@@ -56,13 +56,13 @@ export function EditableAnswerPanel({
 				</div>
 
 				{parts.map((part, index) => {
-					const current = tokens[index] ?? '';
+					const current = picked[index] ?? null;
 
-					function updateToken(next: 'T' | 'F') {
-						// Keep the comma-delimited answer format unchanged for the current API contract.
-						const clone = [...tokens];
+					function updatePart(next: boolean) {
+						// The API grades true/false per part, so the answer stays a per-part list.
+						const clone = parts.map((_, position) => picked[position] ?? null);
 						clone[index] = next;
-						onChange(clone.join(','));
+						onChange(clone);
 					}
 
 					return (
@@ -74,15 +74,15 @@ export function EditableAnswerPanel({
 
 							<button
 								type="button"
-								className={`exam-tf-radio ${current === 'T' ? 'is-selected' : ''}`}
-								onClick={() => updateToken('T')}
+								className={`exam-tf-radio ${current === true ? 'is-selected' : ''}`}
+								onClick={() => updatePart(true)}
 								aria-label={`Chọn đúng cho phát biểu ${getAlphabetLabel(index)}`}
 								disabled={disabled}
 							/>
 							<button
 								type="button"
-								className={`exam-tf-radio ${current === 'F' ? 'is-selected' : ''}`}
-								onClick={() => updateToken('F')}
+								className={`exam-tf-radio ${current === false ? 'is-selected' : ''}`}
+								onClick={() => updatePart(false)}
 								aria-label={`Chọn sai cho phát biểu ${getAlphabetLabel(index)}`}
 								disabled={disabled}
 							/>
@@ -101,7 +101,7 @@ export function EditableAnswerPanel({
 				type="text"
 				className="exam-short-input"
 				placeholder=""
-				value={answer}
+				value={typeof answer === 'string' ? answer : ''}
 				onChange={(event) => onChange(event.target.value)}
 				disabled={disabled}
 			/>

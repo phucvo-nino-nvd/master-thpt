@@ -2,6 +2,7 @@ type ApiErrorResponse = {
 	response?: {
 		data?: {
 			message?: string | string[];
+			detail?: string | string[];
 		};
 		status?: number;
 	};
@@ -16,7 +17,8 @@ function getApiErrorResponse(error: unknown): ApiErrorResponse | null {
 }
 
 function getRawApiErrorMessage(error: unknown) {
-	const message = getApiErrorResponse(error)?.response?.data?.message;
+	const data = getApiErrorResponse(error)?.response?.data;
+	const message = data?.message ?? data?.detail;
 
 	if (Array.isArray(message)) {
 		return message[0] ?? '';

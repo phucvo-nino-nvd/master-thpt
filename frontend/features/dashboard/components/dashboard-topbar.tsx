@@ -8,8 +8,8 @@ export function DashboardTopbar() {
 	const navItems = [
 		{ href: '/knowledge_graph', label: '1 · Bản đồ tri thức' },
 		{ href: '/documents', label: '2 · Kho đề gốc' },
-		{ href: '/practice', label: '3 · Luyện tập tập trung' },
-		{ href: '/dashboard', label: '4 · Ôn tập & thống kê' },
+		{ href: '/practice', label: '3 · Luyện tập' },
+		{ href: '/history', label: '4 · Lịch sử làm bài' },
 	] as const;
 
 	function isActiveLink(href: string) {

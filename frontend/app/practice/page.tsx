@@ -114,7 +114,7 @@ export default function PracticePage() {
 			<DashboardTopbar />
 
 			<header className="documents-head">
-				<h1 className="documents-title">Luyện tập tập trung</h1>
+				<h1 className="documents-title">Luyện tập</h1>
 				<p className="text-soft">
 					Từng câu được chọn theo phần bạn còn yếu, làm xong là chấm ngay.
 				</p>

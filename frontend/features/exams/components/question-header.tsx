@@ -1,13 +1,15 @@
+import { MAX_HINT_LEVEL } from '@/shared/api/client';
+
 type ExamQuestionHeaderProps = {
 	questionIndex: number;
 	showHintButton?: boolean;
 	onAskHint: () => void;
 	isHintLoading: boolean;
-	hasHint: boolean;
-	showReviewButton?: boolean;
-	onReviewMistake?: () => void;
-	isReviewLoading?: boolean;
-	hasReview?: boolean;
+	hintCount: number;
+	showSolutionButton?: boolean;
+	onAskSolution?: () => void;
+	isSolutionLoading?: boolean;
+	hasSolution?: boolean;
 	statusText?: string;
 	statusTone?: 'is-correct' | 'is-wrong';
 };
@@ -19,11 +21,11 @@ export function ExamQuestionHeader({
 	showHintButton = true,
 	onAskHint,
 	isHintLoading,
-	hasHint,
-	showReviewButton = false,
-	onReviewMistake,
-	isReviewLoading = false,
-	hasReview = false,
+	hintCount,
+	showSolutionButton = false,
+	onAskSolution,
+	isSolutionLoading = false,
+	hasSolution = false,
 	statusText,
 	statusTone,
 }: ExamQuestionHeaderProps) {
@@ -39,21 +41,26 @@ export function ExamQuestionHeader({
 						type="button"
 						className="exam-hint-btn"
 						onClick={onAskHint}
-						disabled={isHintLoading || hasHint}
+						disabled={isHintLoading || hintCount >= MAX_HINT_LEVEL}
 					>
-						{/* Hint is intentionally one-shot per question in the current product flow. */}
-						{isHintLoading ? 'Đang lấy gợi ý...' : hasHint ? 'Đã lấy gợi ý' : 'Gợi ý'}
+						{isHintLoading
+							? 'Đang lấy gợi ý...'
+							: hintCount === 0
+								? 'Gợi ý'
+								: hintCount < MAX_HINT_LEVEL
+									? `Gợi ý tiếp (${hintCount}/${MAX_HINT_LEVEL})`
+									: 'Hết gợi ý'}
 					</button>
 				) : null}
-				{showReviewButton && onReviewMistake ? (
+				{showSolutionButton && onAskSolution ? (
 					<button
 						type="button"
 						className="exam-review-btn"
-						onClick={onReviewMistake}
-						disabled={isReviewLoading || hasReview}
+						onClick={onAskSolution}
+						disabled={isSolutionLoading || hasSolution}
 					>
-						{/* Review is also one-shot so users do not repeatedly call the AI endpoint. */}
-						{isReviewLoading ? 'Đang lấy giải thích...' : hasReview ? 'Đã lấy giải thích' : 'Giải thích'}
+						{/* Solutions are one-shot so users do not repeatedly call the AI endpoint. */}
+						{isSolutionLoading ? 'Đang lấy lời giải...' : hasSolution ? 'Đã có lời giải' : 'Xem lời giải'}
 					</button>
 				) : null}
 				{statusText && statusTone ? (

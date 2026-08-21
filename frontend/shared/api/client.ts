@@ -69,122 +69,91 @@ export type DocumentDetailResponse = {
 	questions: ExamQuestion[];
 };
 
+export type AnswerPayload = string | boolean[];
+
+export type Evaluation = {
+	score: number;
+	correct: boolean;
+	part_correct: boolean[];
+	feedback: string;
+};
+
 export type SubmitExamBody = {
 	exam_id: string;
-	time_taken_seconds: number;
-	student_ans?: Array<{
+	answers: Array<{
 		question_id: string;
-		student_answer: string;
-		time_spent_seconds?: number;
+		student_answer: AnswerPayload;
 	}>;
-	full_exam: Omit<DocumentDetailResponse, 'questions'> & {
-		questions: Array<ExamQuestion & { student_answer: string }>;
-	};
+	duration_seconds?: number;
 };
 
-export type ExamEvaluationItem = {
-	question_id: string;
-	student_answer: string;
-	correct_answer: string;
-	is_correct: boolean;
-	reasoning: string;
-	error_analysis: null | {
-		error_type: string;
-		remedial: string;
-	};
-};
-
-export type ExamEvaluationResponse = {
+export type SubmitExamResponse = {
+	exam_id: string;
+	history_id: string;
+	total_score: number;
 	correct_count: number;
-	total_questions: number;
-	score: number | null;
-	per_question: ExamEvaluationItem[];
+	per_question: Record<string, Evaluation>;
 };
 
 export type PracticeQuestionCheckBody = {
-	exam_id: string;
+	history_id: string;
 	question_id: string;
-	student_answer: string;
+	student_answer: AnswerPayload;
 };
 
-export type PracticeQuestionCheckResponse = {
-	question_id: string;
-	student_answer: string;
-	correct_answer: string;
-	is_correct: boolean;
-};
+export type HistoryMode = 'exam' | 'practice';
 
 export type CreateHistoryBody = {
-	intent: 'EXAM_PRACTICE' | 'VIEW_ANALYSIS';
 	exam_id: string;
-	student_ans: Array<{
-		question_id: string;
-		student_answer: string;
-		time_spent_seconds?: number;
-	}>;
-	correct_count: number;
-	score?: number;
+	mode?: HistoryMode;
+	duration_seconds?: number;
 };
 
-export type HistoryListItem = {
+export type HistoryCreated = {
 	history_id: string;
-	intent: 'EXAM_PRACTICE' | 'VIEW_ANALYSIS';
-	exam_id: string;
-	correct_count: number;
-	score?: number | null;
-	created_at: string;
-	subject: string;
-	grade: number | null;
-	exam_type: string;
-	source: string;
-	total_questions: number;
-	duration: number;
-	year: number | null;
 };
 
-export type HistoryDetailResponse = {
+export type HistoryItem = {
 	history_id: string;
-	intent: 'EXAM_PRACTICE' | 'VIEW_ANALYSIS';
-	correct_count: number;
-	score?: number | null;
-	created_at: string;
 	exam_id: string;
-	subject: string;
-	grade: number;
-	exam_type: string;
-	source: string;
+	mode: HistoryMode;
+	total_score: number;
+	correct_count: number;
 	total_questions: number;
-	duration_minutes: number;
-	questions: ExamQuestion[];
-	evaluation: ExamEvaluationResponse;
+	duration_seconds: number | null;
+	created_at: string;
 };
+
+export type HistoryQuestion = {
+	question_id: string;
+	student_answer: AnswerPayload;
+	evaluation: Evaluation;
+};
+
+export type HistoryDetailResponse = HistoryItem & {
+	questions: HistoryQuestion[];
+};
+
+export const MAX_HINT_LEVEL = 3;
 
 export type AskHintBody = {
-	exam_id: string;
 	question_id: string;
-};
-
-export type AskHintLevels = {
-	hint_1: string;
-	hint_2: string;
-	hint_3: string;
+	level: number;
+	student_answer?: string | boolean[];
 };
 
 export type AskHintResponse = {
-	exam_id: string;
-	question_id: string;
-	feedback: string;
-	hints: AskHintLevels;
+	hint: string;
+	level: number;
 };
 
-export type ReviewMistakeBody = {
+export type AskSolutionBody = {
+	history_id: string;
 	question_id: string;
-	student_ans: string;
 };
 
-export type ReviewMistakeResponse = {
-	question_id: string;
-	feedback: string;
+export type AskSolutionResponse = {
+	solution: string;
 };
 
 export type KnowledgeStatus = 'weak' | 'learning' | 'mastered' | 'untouched';
@@ -212,7 +181,7 @@ const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL?.trim() || '/api';
 
 const api = axios.create({
 	baseURL: apiBaseUrl,
-	timeout: 60000,
+	timeout: 180000,
 });
 
 export async function getDocuments() {
@@ -243,25 +212,25 @@ export async function getDocumentDetail(id: string) {
 }
 
 export async function submitExam(body: SubmitExamBody) {
-	const { data } = await api.post<ExamEvaluationResponse>('/exams/submit', body);
+	const { data } = await api.post<SubmitExamResponse>('/exams/submit', body);
 
 	return data;
 }
 
 export async function checkPracticeQuestion(body: PracticeQuestionCheckBody) {
-	const { data } = await api.post<PracticeQuestionCheckResponse>('/practice/check-question', body);
+	const { data } = await api.post<Evaluation>('/practice/check-question', body);
 
 	return data;
 }
 
 export async function createHistory(body: CreateHistoryBody) {
-	const { data } = await api.post('/history', body);
+	const { data } = await api.post<HistoryCreated>('/history', body);
 
 	return data;
 }
 
 export async function getHistoryList() {
-	const { data } = await api.get<HistoryListItem[]>('/history');
+	const { data } = await api.get<HistoryItem[]>('/history');
 
 	return data;
 }
@@ -278,8 +247,8 @@ export async function askHint(body: AskHintBody) {
 	return data;
 }
 
-export async function reviewMistake(body: ReviewMistakeBody) {
-	const { data } = await api.post<ReviewMistakeResponse>('/hints/review-mistake', body);
+export async function askSolution(body: AskSolutionBody) {
+	const { data } = await api.post<AskSolutionResponse>('/solutions', body);
 
 	return data;
 }
