@@ -115,14 +115,6 @@ def process_attempt(
                 f"Question {question_id!r} has no knowledge mapping"
             )
 
-        conn.execute(
-            """
-            INSERT INTO attempts (question_id, correct)
-            VALUES (?, ?)
-            """,
-            (question_id, int(correct)),
-        )
-
         updated_states = []
 
         for mapping in mappings:

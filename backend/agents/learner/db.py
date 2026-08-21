@@ -29,14 +29,6 @@ def init_db() -> None:
                 PRIMARY KEY (question_id, knowledge_id)
             );
 
-            CREATE TABLE IF NOT EXISTS attempts (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                question_id TEXT NOT NULL,
-                correct INTEGER NOT NULL,
-                attempted_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                CHECK (correct IN (0, 1))
-            );
-
             CREATE TABLE IF NOT EXISTS knowledge_state (
                 knowledge_id TEXT PRIMARY KEY,
                 mastery REAL,

@@ -111,13 +111,6 @@ def test_first_wrong_attempt_creates_state(learner_db):
     assert state["incorrect"] == 1
 
     with db.get_connection() as conn:
-        attempt = conn.execute(
-            """
-            SELECT question_id, correct
-            FROM attempts
-            """
-        ).fetchone()
-
         stored_state = conn.execute(
             """
             SELECT *
@@ -126,9 +119,6 @@ def test_first_wrong_attempt_creates_state(learner_db):
             """,
             ("DAO_HAM",),
         ).fetchone()
-
-    assert attempt["question_id"] == "Q001"
-    assert attempt["correct"] == 0
 
     assert stored_state["mastery"] == pytest.approx(0.375)
     assert stored_state["attempts"] == 1
@@ -164,10 +154,6 @@ def test_next_correct_attempt_updates_existing_state(learner_db):
     assert state["incorrect"] == 1
 
     with db.get_connection() as conn:
-        attempt_count = conn.execute(
-            "SELECT COUNT(*) FROM attempts"
-        ).fetchone()[0]
-
         stored_state = conn.execute(
             """
             SELECT *
@@ -176,8 +162,6 @@ def test_next_correct_attempt_updates_existing_state(learner_db):
             """,
             ("DAO_HAM",),
         ).fetchone()
-
-    assert attempt_count == 2
 
     assert stored_state["mastery"] == pytest.approx(0.5)
     assert stored_state["attempts"] == 2

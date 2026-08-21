@@ -1,0 +1,66 @@
+from __future__ import annotations
+
+from functools import lru_cache
+from langsmith import traceable
+
+import os
+
+from agents.teacher.main import answer_text, question_block, reference_solution
+from agents.teacher.rubric import apply_rubric
+from common.schema import Evaluation
+from common.utils import chat_model
+from knowledge.bank.main import Item
+from .context import VERIFY_CONTEXT
+
+
+VERIFIER_MODEL = os.getenv("OPENROUTER_VERIFIER_MODEL")
+
+
+@lru_cache(maxsize=1)
+def verifier():
+    return chat_model(VERIFIER_MODEL).with_structured_output(
+        Evaluation,
+        method="json_schema",
+        strict=True,
+    )
+
+
+def build_verify_prompt(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> str:
+    sections = [
+        VERIFY_CONTEXT,
+        question_block(item),
+        reference_solution(item),
+    ]
+
+    if item.parts:
+        sections.append(f"Return exactly {len(item.parts)} booleans in part_correct.")
+
+    sections.append(f"Student answer:\n{answer_text(item, student_answer) or '(empty)'}")
+
+    sections.append(
+        "Decision under review:\n"
+        f"correct: {evaluation.correct}\n"
+        f"part_correct: {evaluation.part_correct}\n"
+        f"score: {evaluation.score}\n"
+        f"feedback: {evaluation.feedback}"
+    )
+
+    return "\n\n".join(section for section in sections if section)
+
+
+@traceable(name="Verify evaluation")
+def verify(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Evaluation:
+    prompt = build_verify_prompt(item, student_answer, evaluation)
+
+    reviewed = None
+
+    for _ in range(2):
+        reviewed = Evaluation.model_validate(verifier().invoke(prompt))
+
+        if len(reviewed.part_correct) == len(item.parts):
+            return apply_rubric(item.type, reviewed)
+
+    raise ValueError(
+        f"Verifier judged {len(reviewed.part_correct) if reviewed else 0} sub-statements "
+        f"for item {item.id} which has {len(item.parts)}"
+    )

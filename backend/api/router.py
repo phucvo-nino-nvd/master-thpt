@@ -1,32 +1,29 @@
 from __future__ import annotations
 
 from pathlib import Path
+from sqlite3 import IntegrityError
 from uuid import NAMESPACE_URL, uuid5
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
 
 import json
 import re
 
 from agents.learner.service import get_knowledge_graph
+from agents.teacher.main import explain, give_hint
+from agents.teacher.rubric import answer_of
+from agents.teacher.schema import HintRequest, HintResponse, SolutionRequest, SolutionResponse
+from common.schema import Evaluation
+from history.main import get_answer, get_history, list_history, save_answer, start_history
+from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRequest
+from knowledge.bank.main import Item
+from main import grade
+from .schema import CheckRequest, DocumentItem, SubmitRequest, SubmitResponse
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 ITEM_BANK_PATH = ROOT_DIR / "artifacts" / "item_bank.jsonl"
 IMAGES_DIR = ROOT_DIR / "artifacts" / "data"
 SECTION_ORDER = {"multiple_choice": 0, "true_false": 1, "short_answer": 2}
-
-
-class DocumentItem(BaseModel):
-    id: str
-    title: str
-    subject: str
-    grade: int
-    year: int | None = None
-    source: str
-    total_questions: int
-    duration: int
-    is_completed: bool
 
 
 def load_items() -> list[dict]:
@@ -41,23 +38,6 @@ def document_id_of(source_url: str) -> str:
     return str(uuid5(NAMESPACE_URL, source_url))
 
 
-def answer_of(item: dict) -> str | list[bool]:
-    solution = item.get("solution") or ""
-
-    if item["type"] == "multiple_choice":
-        match = re.search(r"Chọn\s+\**\s*([A-D])", solution)
-        return match.group(1) if match else ""
-
-    if item["type"] == "true_false":
-        return [
-            bool(re.match(r"\s*\**\s*ĐÚNG", part.get("solution") or ""))
-            for part in item["parts"]
-        ]
-
-    results = re.findall(r"Kết quả:\s*([^\n_]+)", solution)
-    return results[-1].strip().rstrip(".") if results else ""
-
-
 def image_url(item: dict, image: dict) -> str:
     return f"/api/images/{item['source_title']}/{image['path']}"
 
@@ -69,6 +49,19 @@ def inline_image_urls(item: dict) -> str:
         content = content.replace(f"]({image['path']})", f"]({image_url(item, image)})")
 
     return content
+
+
+def find_item(question_id: str) -> Item:
+    item = next((item for item in load_items() if item["id"] == question_id), None)
+
+    if not item:
+        raise HTTPException(status_code=404, detail="Không tìm thấy câu hỏi.")
+
+    return Item.model_validate(item)
+
+
+def submission_of(question_id: str, student_answer: str | list[bool]) -> dict:
+    return {"item": find_item(question_id), "student_answer": student_answer}
 
 
 def list_documents() -> list[DocumentItem]:
@@ -141,11 +134,89 @@ def get_document(document_id: str) -> dict:
                     }
                     for image in item["images"]
                 ],
-                "answer": answer_of(item),
+                "answer": answer_of(Item.model_validate(item)),
             }
             for item in items
         ],
     }
+
+
+@app.post("/api/hints")
+def post_hint(request: HintRequest) -> HintResponse:
+    return give_hint(find_item(request.question_id), request.level, request.student_answer)
+
+
+@app.post("/api/solutions")
+def post_solution(request: SolutionRequest) -> SolutionResponse:
+    answered = get_answer(request.history_id, request.question_id)
+
+    if not answered:
+        raise HTTPException(status_code=404, detail="Câu này chưa được chấm.")
+
+    return explain(find_item(request.question_id), answered.student_answer, answered.evaluation)
+
+
+@app.post("/api/history")
+def post_history(request: HistoryRequest) -> HistoryCreated:
+    return start_history(request.exam_id, request.mode, request.duration_seconds)
+
+
+@app.get("/api/history")
+def get_history_list() -> list[HistoryItem]:
+    return list_history()
+
+
+@app.get("/api/history/{history_id}")
+def get_history_detail(history_id: str) -> HistoryDetail:
+    detail = get_history(history_id)
+
+    if not detail:
+        raise HTTPException(status_code=404, detail="Không tìm thấy lượt làm bài.")
+
+    return detail
+
+
+@app.post("/api/exams/submit")
+def post_exam_submit(request: SubmitRequest) -> SubmitResponse:
+    submissions = [
+        submission_of(answer.question_id, answer.student_answer)
+        for answer in request.answers
+    ]
+
+    state = grade(submissions)
+    created = start_history(request.exam_id, "exam", request.duration_seconds)
+
+    for submission, evaluation in zip(submissions, state["evaluations"]):
+        save_answer(
+            created.history_id,
+            submission["item"].id,
+            submission["student_answer"],
+            evaluation,
+        )
+
+    return SubmitResponse(
+        exam_id=request.exam_id,
+        history_id=created.history_id,
+        total_score=state["total_score"],
+        correct_count=sum(evaluation.correct for evaluation in state["evaluations"]),
+        per_question={
+            submission["item"].id: evaluation
+            for submission, evaluation in zip(submissions, state["evaluations"])
+        },
+    )
+
+
+@app.post("/api/practice/check-question")
+def post_practice_check(request: CheckRequest) -> Evaluation:
+    submission = submission_of(request.question_id, request.student_answer)
+    evaluation = grade([submission])["evaluations"][0]
+
+    try:
+        save_answer(request.history_id, request.question_id, request.student_answer, evaluation)
+    except IntegrityError:
+        raise HTTPException(status_code=404, detail="Không tìm thấy lượt làm bài.")
+
+    return evaluation
 
 
 @app.get("/api/knowledge_graph")

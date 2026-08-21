@@ -70,4 +70,5 @@ class Document(BaseModel):
 class Evaluation(BaseModel):
     score: float = Field(ge=0.0, le=1.0)
     correct: bool
+    part_correct: list[bool] = Field(default_factory=list)
     feedback: str
