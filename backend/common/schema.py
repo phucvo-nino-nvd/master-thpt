@@ -65,3 +65,9 @@ class Document(BaseModel):
     grade: int | None = None
 
     questions: list[Question]
+
+
+class Evaluation(BaseModel):
+    score: float = Field(ge=0.0, le=1.0)
+    correct: bool
+    feedback: str

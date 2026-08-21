@@ -6,7 +6,7 @@ import base64
 import json
 import os
 
-from ..crawler.pipeline import CrawlerResponse
+from ..crawler.main import CrawlerResponse
 from .refine import refine
 
 
@@ -18,6 +18,7 @@ question_options = ConvertOptions(
     output_format="json",
     disable_image_extraction=False,
     disable_image_captions=False,
+    mode="balanced"
 )
 
 textbook_options = ConvertOptions(

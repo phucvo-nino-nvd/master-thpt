@@ -4,7 +4,7 @@ import base64
 import json
 import sys
 
-from agents.parser.pipeline import client, question_options
+from agents.parser.main import client, question_options
 from agents.parser.refine import refine
 
 

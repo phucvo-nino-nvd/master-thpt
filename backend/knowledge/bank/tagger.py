@@ -11,9 +11,10 @@ import os
 from agents.learner.db import get_connection, init_db
 from knowledge.graph.canonicalize import normalize_name
 from knowledge.graph.config import CANONICAL_MODEL, KNOWLEDGE_GRAPH_PATH
-from knowledge.graph.utils import chat_model, load_json, require_online
+from common.utils import chat_model, load_json
+from knowledge.graph.utils import require_online
 
-from .pipeline import Item
+from .main import Item
 
 
 MIN_ALIAS_LENGTH = int(os.getenv("TAGGER_MIN_ALIAS_LENGTH", "6"))

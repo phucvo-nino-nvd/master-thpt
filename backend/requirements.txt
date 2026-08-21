@@ -1,4 +1,6 @@
 python-dotenv
+fastapi
+uvicorn[standard]
 datalab-python-sdk
 tavily-python
 pydantic

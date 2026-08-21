@@ -2,11 +2,12 @@ from __future__ import annotations
 
 import json
 import re
+import string
 import unicodedata
+
 from html.parser import HTMLParser
 from typing import Any
-
-from .schema import (
+from common.schema import (
     Document,
     ImageRef,
     Option,
@@ -21,6 +22,56 @@ QUESTION_RE = re.compile(r"^\s*Câu\s+(\d+)\s*[.:]?\s*", re.IGNORECASE)      # C
 OPTION_RE = re.compile(r"(?<!\w)([A-D])\.\s*")                              # A. ..., B. ..., C. ..., D. ...
 PART_ITEM_RE = re.compile(r"(?<!\w)([a-d])[\)\.]\s*", re.IGNORECASE)        # a) ..., b) ..., c) ..., d) ...
 PART_ITEM_START_RE = re.compile(r"^\s*([a-d])[\)\.]\s*", re.IGNORECASE)     # a) ..., b) ..., c) ..., d) ... at the start of a block
+
+
+# Math symbols the OCR emits as plain unicode instead of <math>
+SYMBOLS = {
+    "∫": r"\int",
+    "∑": r"\sum",
+    "∏": r"\prod",
+    "√": r"\sqrt",
+    "≠": r"\neq",
+    "≤": r"\leq",
+    "≥": r"\geq",
+    "±": r"\pm",
+    "×": r"\times",
+    "÷": r"\div",
+    "∞": r"\infty",
+    "→": r"\to",
+    "⇒": r"\Rightarrow",
+    "⇔": r"\Leftrightarrow",
+    "∈": r"\in",
+    "∉": r"\notin",
+    "⊂": r"\subset",
+    "∪": r"\cup",
+    "∩": r"\cap",
+    "∅": r"\emptyset",
+    "α": r"\alpha",
+    "β": r"\beta",
+    "γ": r"\gamma",
+    "θ": r"\theta",
+    "π": r"\pi",
+    "Δ": r"\Delta",
+    "°": r"^\circ",
+}
+
+FUNCTIONS = ("log", "ln", "exp", "sin", "cos", "tan", "cot", "lim", "max", "min")
+
+OPENERS = "([{"
+CLOSERS = ")]}"
+MATH_CHARS = set(
+    string.ascii_letters + string.digits + OPENERS + CLOSERS + "+-*/=<>;,.'!:_^"
+) | set(SYMBOLS)
+
+STRONG_RE = re.compile(
+    r"[_^'=<>]|[A-Za-z]\(|[A-Za-z]\d|\d[A-Za-z]|[\[(][-+]?\d|\d;|[" + "".join(SYMBOLS) + "]"
+)
+TRAILING_RE = re.compile(r"[.,?:;]+$")
+BRACKET_RE = re.compile(r"^[\[({]+|[\])}]+$")
+PLAIN_WORD_RE = re.compile(r"^[A-Za-z]+$")
+ACCENT_RE = re.compile(r"[À-ỹ]")
+KEEP_MATH_RE = re.compile(r"\$[^$]*\$")
+TAG_TEXT_RE = re.compile(r">([^<>]+)<")
 
 
 class HTMLContentParser(HTMLParser):
@@ -44,6 +95,11 @@ class HTMLContentParser(HTMLParser):
         self.math_buffer: list[str] = []
 
         self.skip_depth = 0
+
+        self.table_rows: list[list[tuple[str, int, int, bool]]] | None = None
+        self.row: list[tuple[str, int, int, bool]] = []
+        self.cell_start = 0
+        self.cell_span = (1, 1, False)
 
         self.images: list[dict[str, str | None]] = []
 
@@ -83,6 +139,24 @@ class HTMLContentParser(HTMLParser):
             self.out.append("\n")
             return
 
+        if tag == "table":
+            self.table_rows = []
+            return
+
+        if self.table_rows is not None:
+            if tag == "tr":
+                self.row = []
+                return
+
+            if tag in {"td", "th"}:
+                self.cell_start = len(self.out)
+                self.cell_span = (
+                    int(attrs_dict.get("rowspan") or 1),
+                    int(attrs_dict.get("colspan") or 1),
+                    tag == "th",
+                )
+                return
+
         if tag in {"p", "li", "h1", "h2", "h3", "h4", "h5", "h6", "tr"}:
             if self.out and not self.out[-1].endswith("\n"):
                 self.out.append("\n")
@@ -113,10 +187,26 @@ class HTMLContentParser(HTMLParser):
             self.math_buffer = []
             return
 
+        if self.table_rows is not None:
+            if tag in {"td", "th"}:
+                cell = "".join(self.out[self.cell_start:]).strip().replace("\n", " ")
+                del self.out[self.cell_start:]
+                self.row.append((cell, *self.cell_span))
+                return
+
+            if tag == "tr":
+                if self.row:
+                    self.table_rows.append(self.row)
+                self.row = []
+                return
+
+            if tag == "table":
+                self.out.append(html_table(self.table_rows))
+                self.table_rows = None
+                return
+
         if tag in {"p", "li", "h1", "h2", "h3", "h4", "h5", "h6", "tr"}:
             self.out.append("\n")
-        elif tag in {"td", "th"}:
-            self.out.append(" | ")
 
     def handle_data(self, data: str) -> None:
         if self.skip_depth:
@@ -136,6 +226,28 @@ class HTMLContentParser(HTMLParser):
         text = re.sub(r"\n{3,}", "\n\n", text)
 
         return text.strip()
+
+
+def html_table(rows: list[list[tuple[str, int, int, bool]]]) -> str:
+    if not rows:
+        return ""
+
+    lines = ["<table>"]
+
+    for row in rows:
+        cells = []
+
+        for text, rowspan, colspan, is_header in row:
+            tag = "th" if is_header else "td"
+            spans = f' rowspan="{rowspan}"' if rowspan > 1 else ""
+            spans += f' colspan="{colspan}"' if colspan > 1 else ""
+            cells.append(f"<{tag}{spans}>{text}</{tag}>")
+
+        lines.append("<tr>" + "".join(cells) + "</tr>")
+
+    lines.append("</table>")
+
+    return "\n" + "\n".join(lines) + "\n"
 
 
 def parse_html(html: str | None) -> tuple[str, list[dict[str, str | None]]]:
@@ -251,6 +363,10 @@ def image_path(prefix: str, name: str) -> str:
         return name
 
     return f"{prefix.rstrip('/')}/{name.lstrip('/')}"
+
+
+def image_markers(images: list[ImageRef]) -> str:
+    return "\n\n".join(f"![{image.alt or ''}]({image.path})" for image in images)
 
 
 def extract_images(
@@ -525,6 +641,7 @@ def parse_questions(
 
             if images:
                 current_question.images.extend(images)
+                append_content(current_question, image_markers(images))
 
             continue
 
@@ -539,6 +656,7 @@ def parse_questions(
 
         if images:
             current_question.images.extend(images)
+            append_content(current_question, image_markers(images))
             append_source(current_question, block)
 
         inline_solution = extract_inline_solution_start(text)
@@ -763,6 +881,99 @@ def parse_solutions(
     return question_solutions, part_solutions
 
 
+def is_math_token(token: str) -> bool:
+    core = TRAILING_RE.sub("", token)
+
+    if not core or not set(core) <= MATH_CHARS:
+        return False
+
+    word = BRACKET_RE.sub("", core)
+
+    if PLAIN_WORD_RE.match(word) and len(word) > 2:
+        return word.isupper() or word.lower() in FUNCTIONS
+
+    return True
+
+
+def math_to_latex(run: str) -> str:
+    for symbol, command in SYMBOLS.items():
+        run = run.replace(symbol, f" {command} ")
+
+    for name in FUNCTIONS:
+        run = re.sub(rf"(?<![\\A-Za-z]){name}(?![A-Za-z])", rf"\\{name}", run)
+
+    run = re.sub(r"(?<!\\)([{}])", r"\\\1", run)
+
+    return re.sub(r"\s+", " ", run).strip()
+
+
+def wrap_math_run(run: list[str]) -> str:
+    body = " ".join(run)
+    tail = TRAILING_RE.search(body)
+    tail_text = tail.group() if tail else ""
+    body = body[: len(body) - len(tail_text)]
+
+    if not body or not STRONG_RE.search(body):
+        return f"{body}{tail_text}"
+
+    return f"${math_to_latex(body)}${tail_text}"
+
+
+def mathify_line(line: str) -> str:
+    out: list[str] = []
+    run: list[str] = []
+    depth = 0
+
+    for token in line.split(" "):
+        if run and depth > 0 and not ACCENT_RE.search(token):
+            run.append(token)
+        elif is_math_token(token):
+            run.append(token)
+        else:
+            if run:
+                out.append(wrap_math_run(run))
+                run = []
+
+            out.append(token)
+            continue
+
+        depth = max(
+            0,
+            depth
+            + sum(char in OPENERS for char in token)
+            - sum(char in CLOSERS for char in token),
+        )
+
+    if run:
+        out.append(wrap_math_run(run))
+
+    return " ".join(out)
+
+
+def mathify_text(text: str) -> str:
+    parts = KEEP_MATH_RE.split(text)
+    kept = KEEP_MATH_RE.findall(text) + [""]
+
+    return "".join(mathify_line(part) + keep for part, keep in zip(parts, kept))
+
+
+def mathify(text: str) -> str:
+    """Wrap ASCII math left behind by the OCR in $...$, keeping existing LaTeX spans intact."""
+    lines = []
+
+    for line in text.split("\n"):
+        stripped = line.lstrip()
+
+        if stripped.startswith("!["):
+            lines.append(line)
+        elif stripped.startswith("<"):
+            lines.append(TAG_TEXT_RE.sub(lambda match: f">{mathify_text(match.group(1))}<", line))
+        else:
+            lines.append(mathify_text(line))
+
+    return "\n".join(lines)
+
+
 def refine(
     ocr: dict[str, Any] | str,
     source_url: str,
@@ -849,6 +1060,15 @@ def refine(
                         part.label,
                     )
                 )
+
+    for _, question in records:
+        question.content = mathify(question.content)
+
+        for option in question.options:
+            option.content = mathify(option.content)
+
+        for part in question.parts:
+            part.content = mathify(part.content)
 
     return Document(
         source_url=source_url,

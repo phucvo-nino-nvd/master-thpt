@@ -3,7 +3,7 @@ from __future__ import annotations
 import pytest
 
 from agents.learner import db
-from agents.learner.service import process_attempt
+from agents.learner.service import get_knowledge_graph, process_attempt, status
 
 
 @pytest.fixture
@@ -32,6 +32,54 @@ def add_mapping(
             """,
             (question_id, knowledge_id),
         )
+
+
+def test_status_thresholds():
+    assert status(None) == "untouched"
+    assert status(0.0) == "weak"
+    assert status(0.49) == "weak"
+    assert status(0.50) == "learning"
+    assert status(0.79) == "learning"
+    assert status(0.80) == "mastered"
+    assert status(1.0) == "mastered"
+
+
+def test_knowledge_graph_overlays_mastery(learner_db):
+    add_mapping("Q001", "DAO_HAM")
+
+    process_attempt(
+        "Q001",
+        correct=False,
+    )
+
+    knowledge_graph = get_knowledge_graph()
+
+    nodes = {node["id"]: node for node in knowledge_graph["nodes"]}
+
+    # Attempted: mastery 0.375 -> weak.
+    assert nodes["DAO_HAM"]["status"] == "weak"
+    assert nodes["DAO_HAM"]["score"] == 38
+    assert nodes["DAO_HAM"]["label"] == "Đạo hàm"
+
+    # Never attempted nodes stay grey, not weak.
+    untouched = [
+        node
+        for node in knowledge_graph["nodes"]
+        if node["id"] != "DAO_HAM"
+    ]
+
+    assert untouched
+    assert all(node["status"] == "untouched" for node in untouched)
+    assert all(node["score"] is None for node in untouched)
+
+    assert knowledge_graph["edges"]
+
+    node_ids = set(nodes)
+
+    assert all(
+        edge["source"] in node_ids and edge["target"] in node_ids
+        for edge in knowledge_graph["edges"]
+    )
 
 
 def test_question_without_mapping_raises_error(learner_db):

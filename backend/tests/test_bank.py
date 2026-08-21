@@ -5,8 +5,8 @@ import sys
 BACKEND = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BACKEND))
 
-from agents.parser.schema import Document
-from knowledge.bank.pipeline import Item, build_item_bank
+from common.schema import Document
+from knowledge.bank.main import Item, build_item_bank
 from knowledge.bank.tagger import BATCH_SIZE, node_names, tag_items
 
 

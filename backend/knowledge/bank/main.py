@@ -4,7 +4,7 @@ from pathlib import Path
 
 import json
 
-from agents.parser.schema import (
+from common.schema import (
     Document,
     ImageRef,
     Option,

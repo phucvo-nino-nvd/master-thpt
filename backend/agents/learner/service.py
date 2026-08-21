@@ -6,6 +6,7 @@ from typing import Any
 
 import os
 
+from knowledge.graph.convert import load_graph
 from knowledge.graph.query import (
     get_dependents,
     get_prerequisites,
@@ -32,6 +33,66 @@ def get_mastery(knowledge_id: str) -> float | None:
         ).fetchone()
 
     return None if row is None else row["mastery"]
+
+
+def status(mastery: float | None) -> str:
+    if mastery is None:
+        return "untouched"
+
+    if mastery < WEAK_THRESHOLD:
+        return "weak"
+
+    if mastery < MASTERED_THRESHOLD:
+        return "learning"
+
+    return "mastered"
+
+
+def get_knowledge_graph() -> dict:
+    """
+    Knowledge graph overlaid with the learner's mastery, for the knowledge graph UI.
+    """
+    init_db()
+
+    with get_connection() as conn:
+        mastery_by_id = {
+            row["knowledge_id"]: row["mastery"]
+            for row in conn.execute(
+                """
+                SELECT knowledge_id, mastery
+                FROM knowledge_state
+                """
+            )
+        }
+
+    graph_nodes, graph_edges = load_graph()
+
+    nodes = []
+
+    for node in graph_nodes:
+        mastery = mastery_by_id.get(node["id"])
+
+        nodes.append(
+            {
+                "id": node["id"],
+                "label": node["name"],
+                "grade": node["introduced_grade"],
+                "status": status(mastery),
+                "score": None if mastery is None else round(mastery * 100),
+            }
+        )
+
+    return {
+        "nodes": nodes,
+        "edges": [
+            {
+                "source": edge["source"],
+                "target": edge["target"],
+                "relation": edge["relation"],
+            }
+            for edge in graph_edges
+        ],
+    }
 
 
 def process_attempt(

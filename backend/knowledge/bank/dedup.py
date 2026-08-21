@@ -1,6 +1,6 @@
 import hashlib
 
-from .pipeline import Item
+from .main import Item
 
 
 def normalize_content(text: str) -> str:

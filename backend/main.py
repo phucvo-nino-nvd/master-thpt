@@ -6,11 +6,11 @@ from typing import Any
 from dotenv import load_dotenv
 from langsmith import traceable
 
-from agents.crawler.pipeline import CrawlerRequest, crawl
-from agents.parser.pipeline import parse_question
-from agents.parser.schema import Document
+from agents.crawler.main import CrawlerRequest, crawl
+from agents.parser.main import parse_question
+from common.schema import Document
 from agents.learner.service import run_learner
-from knowledge.bank.pipeline import build_item_bank
+from knowledge.bank.main import build_item_bank
 from knowledge.bank.tagger import tag_items
 
 
