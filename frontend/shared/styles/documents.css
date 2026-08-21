@@ -1,0 +1,421 @@
+@import './documents-pills.css';
+/* ---------- shared page headings ---------- */
+
+.documents-kicker {
+	margin: 0;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--amber-dark);
+}
+
+.documents-title {
+	margin: 7px 0 0;
+	font-size: 28px;
+	line-height: 1.2;
+}
+
+.documents-count {
+	margin: 0 0 16px;
+	font-size: 12.5px;
+	color: var(--ink-soft);
+}
+
+.documents-message {
+	margin: 0 0 16px;
+	padding: 10px 14px;
+	border-radius: 10px;
+	background: var(--amber-bg);
+	font-size: 12.5px;
+	font-weight: 600;
+	color: var(--amber-dark);
+}
+
+.documents-error {
+	margin: 0 0 16px;
+	padding: 11px 14px;
+	border: 1px solid var(--line);
+	border-left: 4px solid var(--red);
+	border-radius: 10px;
+	background: var(--red-bg);
+	font-size: 12.5px;
+	font-weight: 600;
+	color: var(--red);
+}
+
+.documents-empty {
+	padding: 26px 22px;
+	border: 1px dashed var(--line-strong);
+	border-radius: 16px;
+	background: var(--paper-card);
+	text-align: center;
+	font-size: 13px;
+	color: var(--ink-soft);
+}
+
+.documents-head {
+	margin-bottom: 22px;
+}
+
+.documents-head .documents-title {
+	margin: 0;
+}
+
+/* ---------- filter row (concept .filters / .chip) ---------- */
+
+.documents-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 22px;
+}
+
+.documents-search-input {
+	flex: 1 1 240px;
+	max-width: 340px;
+	padding: 8px 16px;
+	border-radius: 999px;
+	font-size: 12.5px;
+}
+
+.documents-select {
+	padding: 8px 14px;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	background: var(--paper-card);
+	font-size: 12.5px;
+	font-weight: 600;
+	color: var(--ink-soft);
+	cursor: pointer;
+	outline: none;
+	transition:
+		background-color 0.16s ease,
+		border-color 0.16s ease,
+		color 0.16s ease;
+}
+
+.documents-select:hover {
+	border-color: var(--line-strong);
+	color: var(--ink);
+}
+
+.documents-select:focus-visible {
+	outline: 2px solid var(--amber);
+	outline-offset: 2px;
+}
+
+/* ---------- exam grid (concept .exam-grid / .exam-card) ---------- */
+
+.documents-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+	gap: 18px;
+}
+
+.documents-card {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	position: relative;
+	overflow: hidden;
+	padding: 18px 18px 16px;
+	border: 1px solid var(--line);
+	border-radius: 16px;
+	background: var(--paper-card);
+}
+
+.documents-card::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 14px;
+	bottom: 14px;
+	width: 4px;
+	border-radius: 2px;
+	background: var(--amber);
+}
+
+.documents-card.is-completed::before {
+	background: var(--green);
+}
+
+.documents-card-top {
+	display: flex;
+	flex-direction: column;
+}
+
+.documents-card-type {
+	margin: 0;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--amber-dark);
+}
+
+.documents-card-title {
+	margin: 8px 0 10px;
+	font-size: 16.5px;
+	line-height: 1.32;
+}
+
+.documents-card-stat {
+	margin: 0;
+	font-size: 12.5px;
+	font-weight: 600;
+	color: var(--ink);
+}
+
+.documents-card-meta {
+	margin: 6px 0 0;
+	font-size: 11.5px;
+	color: var(--muted);
+}
+
+.documents-card-bottom {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: auto;
+}
+
+.documents-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.documents-tag {
+	padding: 3px 10px;
+	border-radius: 999px;
+	background: var(--amber-bg);
+	font-size: 10.5px;
+	font-weight: 700;
+	color: var(--amber-dark);
+}
+
+.documents-tag-completed {
+	background: var(--green-bg);
+	color: var(--green);
+}
+
+.documents-card-actions {
+	display: flex;
+	gap: 8px;
+}
+
+.documents-start-btn {
+	flex: 1;
+	padding: 9px 0;
+	border-radius: 9px;
+	font-size: 12.5px;
+}
+
+/* ---------- practice composer dock ---------- */
+
+.practice-page {
+	padding-bottom: 132px;
+}
+
+.practice-status {
+	background: var(--amber-bg);
+	color: var(--amber-dark);
+}
+
+.practice-composer-dock {
+	position: fixed;
+	left: 50%;
+	bottom: 22px;
+	z-index: 15;
+	width: min(680px, calc(100% - 48px));
+	transform: translateX(-50%);
+}
+
+.practice-composer-shell {
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
+	padding: 10px 10px 10px 16px;
+	border: 1px solid var(--line);
+	border-radius: 18px;
+	background: var(--paper-card);
+	box-shadow: 0 10px 28px rgba(27, 36, 48, 0.1);
+}
+
+.practice-composer-input {
+	flex: 1;
+	max-height: 128px;
+	padding: 9px 0;
+	border: none;
+	background: none;
+	font-size: 14px;
+	line-height: 1.5;
+	color: var(--ink);
+	outline: none;
+	resize: none;
+}
+
+.practice-composer-input::placeholder {
+	color: var(--muted);
+}
+
+.practice-composer-send {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 38px;
+	height: 38px;
+	border: none;
+	border-radius: 12px;
+	background: var(--ink);
+	color: #fff;
+	cursor: pointer;
+	transition:
+		background-color 0.16s ease,
+		opacity 0.16s ease;
+}
+
+.practice-composer-send:hover:not(:disabled) {
+	background: #2b3a4d;
+}
+
+.practice-composer-send:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.practice-composer-icon {
+	width: 18px;
+	height: 18px;
+}
+
+.practice-composer-error {
+	margin: 10px 0 0;
+}
+
+/* ---------- spinners ---------- */
+
+.practice-spinner,
+.exam-submit-spinner {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 2px solid var(--line-strong);
+	border-top-color: var(--amber);
+	border-radius: 50%;
+	animation: practice-spin 0.7s linear infinite;
+}
+
+.practice-spinner {
+	width: 26px;
+	height: 26px;
+	border-width: 3px;
+}
+
+.practice-composer-spinner {
+	border-color: rgba(255, 255, 255, 0.32);
+	border-top-color: #fff;
+}
+
+@keyframes practice-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.practice-spinner,
+	.exam-submit-spinner {
+		animation-duration: 2.4s;
+	}
+}
+
+/* ---------- skeleton sizing ---------- */
+
+.documents-skeleton-heading {
+	width: 280px;
+	height: 26px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+}
+
+.documents-skeleton-subheading {
+	width: 420px;
+	max-width: 100%;
+	height: 12px;
+}
+
+.documents-skeleton-search {
+	width: 300px;
+	height: 34px;
+}
+
+.documents-skeleton-select {
+	width: 122px;
+	height: 34px;
+}
+
+.documents-skeleton-count {
+	width: 190px;
+	height: 12px;
+	margin-bottom: 16px;
+}
+
+.documents-card-skeleton::before {
+	background: var(--line-strong);
+}
+
+.documents-skeleton-kicker {
+	width: 78px;
+	height: 11px;
+}
+
+.documents-skeleton-title {
+	width: 100%;
+	height: 15px;
+	margin-top: 9px;
+	border-radius: 6px;
+}
+
+.documents-skeleton-title-short {
+	width: 62%;
+	margin-bottom: 10px;
+}
+
+.documents-skeleton-stat {
+	width: 130px;
+	height: 12px;
+}
+
+.documents-skeleton-meta {
+	width: 168px;
+	height: 11px;
+	margin-top: 7px;
+}
+
+.documents-skeleton-tag {
+	width: 62px;
+	height: 17px;
+}
+
+.documents-skeleton-button {
+	width: 100%;
+	height: 34px;
+	border-radius: 9px;
+}
+
+.practice-skeleton-input {
+	flex: 1;
+	height: 20px;
+	margin: 9px 0;
+	border-radius: 6px;
+}
+
+.practice-skeleton-send {
+	width: 38px;
+	height: 38px;
+	border-radius: 12px;
+}

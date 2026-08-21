@@ -1,0 +1,103 @@
+@media (max-width: 1180px) {
+	.dash-progress-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.exam-layout {
+		grid-template-columns: minmax(0, 1fr) 232px;
+	}
+}
+
+@media (max-width: 960px) {
+	.dashboard-shell,
+	.exam-room {
+		padding: 24px 22px 96px;
+	}
+
+	.dash-topbar {
+		flex-wrap: wrap;
+		gap: 12px;
+		margin: -24px -22px 24px;
+		padding: 12px 22px;
+	}
+
+	.dash-nav {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		padding-bottom: 2px;
+		scrollbar-width: none;
+	}
+
+	.dash-nav::-webkit-scrollbar {
+		display: none;
+	}
+
+	.dash-userbar {
+		margin-left: 0;
+	}
+
+	.exam-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.exam-sidebar {
+		position: static;
+	}
+
+	.exam-index-grid {
+		grid-template-columns: repeat(8, 1fr);
+	}
+
+	.exam-header,
+	.exam-result-header {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.exam-header-side {
+		align-items: stretch;
+	}
+
+	.exam-result-hero {
+		text-align: left;
+	}
+
+	.exam-question-shell {
+		padding: 24px 20px;
+	}
+}
+
+@media (max-width: 640px) {
+	.documents-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.documents-search-input {
+		max-width: none;
+	}
+
+	.documents-title {
+		font-size: 23px;
+	}
+
+	.exam-question-content {
+		font-size: 16px;
+	}
+
+	.exam-tf-head,
+	.exam-tf-item {
+		grid-template-columns: minmax(0, 1fr) 48px 48px;
+	}
+
+	.exam-index-grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.exam-main-actions {
+		flex-direction: column-reverse;
+	}
+
+	.practice-composer-dock {
+		width: calc(100% - 28px);
+	}
+}
