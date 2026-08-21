@@ -114,6 +114,12 @@ def load_graph() -> tuple[list[dict], list[dict]]:
     return nodes, edges
 
 
+def node_map() -> dict[str, dict]:
+    nodes, _ = load_graph()
+
+    return {node["id"]: node for node in nodes}
+
+
 if __name__ == "__main__":
     nodes, edges = load_graph()
 

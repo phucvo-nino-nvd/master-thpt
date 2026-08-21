@@ -152,6 +152,21 @@ def get_history(history_id: str) -> HistoryDetail | None:
     )
 
 
+def solved_question_ids() -> set[str]:
+    init_db()
+
+    with get_connection() as conn:
+        rows = conn.execute(
+            """
+            SELECT DISTINCT question_id
+            FROM history_question
+            WHERE correct = 1
+            """
+        ).fetchall()
+
+    return {row["question_id"] for row in rows}
+
+
 def get_answer(history_id: str, question_id: str) -> HistoryQuestion | None:
     init_db()
 

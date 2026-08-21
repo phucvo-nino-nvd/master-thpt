@@ -3,7 +3,12 @@ from __future__ import annotations
 import pytest
 
 from agents.learner import db
-from agents.learner.service import get_knowledge_graph, process_attempt, status
+from agents.learner.service import (
+    get_knowledge_graph,
+    learning_path,
+    process_attempt,
+    status,
+)
 
 
 @pytest.fixture
@@ -80,6 +85,34 @@ def test_knowledge_graph_overlays_mastery(learner_db):
         edge["source"] in node_ids and edge["target"] in node_ids
         for edge in knowledge_graph["edges"]
     )
+
+
+def test_learning_path_puts_prerequisite_before_weak_node(learner_db):
+    add_mapping("Q001", "DAO_HAM")
+
+    process_attempt(
+        "Q001",
+        correct=False,
+    )
+
+    path = learning_path()
+    knowledge_ids = [step["knowledge_id"] for step in path]
+
+    assert knowledge_ids.index("GIOI_HAN_HAM_SO") < knowledge_ids.index("DAO_HAM")
+
+    steps = {step["knowledge_id"]: step["action"] for step in path}
+
+    assert steps["DAO_HAM"] == "practice"
+    assert steps["GIOI_HAN_HAM_SO"] == "diagnose"
+
+
+def test_learning_path_without_history_starts_at_graph_roots(learner_db):
+    path = learning_path()
+
+    assert path
+    assert all(step["action"] == "diagnose" for step in path)
+
+    assert "DAO_HAM" not in {step["knowledge_id"] for step in path}
 
 
 def test_question_without_mapping_raises_error(learner_db):

@@ -6,7 +6,7 @@ import base64
 import json
 import os
 
-from ..crawler.main import CrawlerResponse
+from ..crawler.schema import CrawlerResponse
 from .refine import refine
 
 

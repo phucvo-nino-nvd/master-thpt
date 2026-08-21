@@ -6,7 +6,8 @@ from typing import Any
 
 import os
 
-from knowledge.graph.convert import load_graph
+from agents.crawler.schema import CrawlerRequest
+from knowledge.graph.convert import load_graph, node_map
 from knowledge.graph.query import (
     get_dependents,
     get_prerequisites,
@@ -19,6 +20,10 @@ load_dotenv()
 
 WEAK_THRESHOLD = float(os.getenv("WEAK_THRESHOLD", "0.50"))
 MASTERED_THRESHOLD = float(os.getenv("MASTERED_THRESHOLD", "0.80"))
+MIN_QUESTIONS = int(os.getenv("PRACTICE_MIN_QUESTIONS", "6"))
+CRAWL_TOP_K = int(os.getenv("CRAWL_TOP_K", "3"))
+CRAWL_NODES = int(os.getenv("CRAWL_NODES", "2"))
+CRAWL_GRADE = int(os.getenv("CRAWL_GRADE", "12"))
 
 
 def get_mastery(knowledge_id: str) -> float | None:
@@ -237,6 +242,210 @@ def recommend(knowledge_id: str) -> dict:
         "action": "practice",
         "knowledge_id": knowledge_id,
     }
+
+
+def prerequisite_map(edges: Sequence[dict]) -> dict[str, list[str]]:
+    prerequisites: dict[str, list[str]] = {}
+
+    for edge in edges:
+        if edge["relation"] != "REQUIRES":
+            continue
+
+        prerequisites.setdefault(edge["source"], []).append(edge["target"])
+
+    return prerequisites
+
+
+def learning_path() -> list[dict]:
+    init_db()
+
+    with get_connection() as conn:
+        mastery_by_id = {
+            row["knowledge_id"]: row["mastery"]
+            for row in conn.execute(
+                """
+                SELECT knowledge_id, mastery
+                FROM knowledge_state
+                """
+            )
+        }
+
+    graph_nodes, graph_edges = load_graph()
+
+    node_by_id = {node["id"]: node for node in graph_nodes}
+    prerequisites = prerequisite_map(graph_edges)
+
+    def state_of(knowledge_id: str) -> str:
+        return status(mastery_by_id.get(knowledge_id))
+
+    selected: set[str] = set()
+    pending = [
+        node["id"]
+        for node in graph_nodes
+        if state_of(node["id"]) == "weak"
+    ]
+
+    while pending:
+        knowledge_id = pending.pop()
+
+        if knowledge_id in selected or knowledge_id not in node_by_id:
+            continue
+
+        selected.add(knowledge_id)
+
+        pending.extend(
+            prerequisite_id
+            for prerequisite_id in prerequisites.get(knowledge_id, ())
+            if state_of(prerequisite_id) in ("untouched", "weak")
+        )
+
+    if not selected:
+        selected = {
+            node["id"]
+            for node in graph_nodes
+            if state_of(node["id"]) == "untouched"
+            and all(
+                state_of(prerequisite_id) == "mastered"
+                for prerequisite_id in prerequisites.get(node["id"], ())
+            )
+        }
+
+    depth_by_id: dict[str, int] = {}
+
+    def depth_of(knowledge_id: str, visiting: frozenset[str]) -> int:
+        if knowledge_id in depth_by_id:
+            return depth_by_id[knowledge_id]
+
+        if knowledge_id in visiting:
+            return 0
+
+        parents = [
+            prerequisite_id
+            for prerequisite_id in prerequisites.get(knowledge_id, ())
+            if prerequisite_id in selected
+        ]
+
+        depth = 0 if not parents else 1 + max(
+            depth_of(parent, visiting | {knowledge_id})
+            for parent in parents
+        )
+
+        depth_by_id[knowledge_id] = depth
+
+        return depth
+
+    ordered = sorted(
+        selected,
+        key=lambda knowledge_id: (
+            depth_of(knowledge_id, frozenset()),
+            node_by_id[knowledge_id]["introduced_grade"] or 0,
+            node_by_id[knowledge_id]["name"],
+        ),
+    )
+
+    return [
+        {
+            "action": (
+                "diagnose"
+                if state_of(knowledge_id) == "untouched"
+                else "practice"
+            ),
+            "knowledge_id": knowledge_id,
+        }
+        for knowledge_id in ordered
+    ]
+
+
+def questions_of(knowledge_ids: Sequence[str]) -> dict[str, list[str]]:
+    if not knowledge_ids:
+        return {}
+
+    init_db()
+
+    placeholders = ", ".join("?" * len(knowledge_ids))
+
+    with get_connection() as conn:
+        rows = conn.execute(
+            f"""
+            SELECT knowledge_id, question_id
+            FROM question_knowledge
+            WHERE knowledge_id IN ({placeholders})
+            ORDER BY question_id
+            """,
+            tuple(knowledge_ids),
+        ).fetchall()
+
+    questions: dict[str, list[str]] = {}
+
+    for row in rows:
+        questions.setdefault(row["knowledge_id"], []).append(row["question_id"])
+
+    return questions
+
+
+def pending_of(knowledge_ids: Sequence[str], solved: set[str]) -> dict[str, list[str]]:
+    return {
+        knowledge_id: [
+            question_id
+            for question_id in question_ids
+            if question_id not in solved
+        ]
+        for knowledge_id, question_ids in questions_of(knowledge_ids).items()
+    }
+
+
+def lacking_knowledge(solved: set[str]) -> list[str]:
+    path = learning_path()
+    pending = pending_of([step["knowledge_id"] for step in path], solved)
+
+    lacking = [
+        step
+        for step in path
+        if len(pending.get(step["knowledge_id"], [])) < MIN_QUESTIONS
+    ]
+
+    weak = sorted(
+        (
+            step["knowledge_id"]
+            for step in lacking
+            if step["action"] == "practice"
+        ),
+        key=lambda knowledge_id: get_mastery(knowledge_id) or 0.0,
+    )
+
+    return weak + [
+        step["knowledge_id"]
+        for step in lacking
+        if step["action"] == "diagnose"
+    ]
+
+
+def crawl_requests(
+    solved: set[str],
+    exclude_urls: list[str],
+    concept: str = "",
+) -> list[CrawlerRequest]:
+    if concept:
+        return [
+            CrawlerRequest(
+                grade=CRAWL_GRADE,
+                concept=concept,
+                top_k=CRAWL_TOP_K,
+                exclude_urls=exclude_urls,
+            )
+        ]
+
+    nodes = node_map()
+
+    return [
+        CrawlerRequest(
+            grade=nodes[knowledge_id]["introduced_grade"] or CRAWL_GRADE,
+            concept=nodes[knowledge_id]["name"],
+            top_k=CRAWL_TOP_K,
+            exclude_urls=exclude_urls,
+        )
+        for knowledge_id in lacking_knowledge(solved)[:CRAWL_NODES]
+    ]
 
 
 def run_learner(

@@ -6,12 +6,23 @@ from langchain_openrouter import ChatOpenRouter
 
 import json
 import os
+import unicodedata
 
 
 load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "").rstrip("/")
+
+
+def normalized(text: str) -> str:
+    lowered = text.casefold().replace("đ", "d")
+
+    return "".join(
+        char
+        for char in unicodedata.normalize("NFD", lowered)
+        if not unicodedata.combining(char)
+    )
 
 
 def load_json(path: Path):

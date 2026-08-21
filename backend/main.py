@@ -10,14 +10,16 @@ from langsmith import traceable
 
 import os
 
-from agents.crawler.main import CrawlerRequest, crawl
+from agents.crawler.main import crawl
+from agents.crawler.schema import CrawlerRequest
 from agents.parser.main import parse_question
 from agents.teacher.main import evaluate
 from agents.teacher.rubric import match_answer
 from agents.verifier.main import verify
 from common.schema import Document, Evaluation
-from agents.learner.service import run_learner
-from knowledge.bank.main import build_item_bank
+from agents.learner.service import crawl_requests, run_learner
+from history.main import solved_question_ids
+from knowledge.bank.main import build_item_bank, source_urls
 from knowledge.bank.tagger import tag_items
 
 
@@ -130,6 +132,31 @@ def learner_agent(state: State) -> State:
 @traceable(name="Ingest Pipeline", run_type="chain")
 def ingest(request: CrawlerRequest) -> State:
     return run((crawler_agent, parser_agent, item_bank), {"request": request})
+
+
+crawling: str | None = None
+
+
+def crawl_concept() -> str | None:
+    return crawling
+
+
+@traceable(name="Practice Stocking", run_type="chain")
+def stock_practice(concept: str = "") -> None:
+    global crawling
+
+    if crawling is not None:
+        return
+
+    crawling = concept
+
+    try:
+        for request in crawl_requests(solved_question_ids(), source_urls(), concept):
+            request.exclude_urls = source_urls()
+
+            ingest(request)
+    finally:
+        crawling = None
 
 
 @traceable(name="Grading Pipeline", run_type="chain")

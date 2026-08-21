@@ -28,6 +28,10 @@ class SubmitResponse(BaseModel):
     per_question: dict[str, Evaluation]
 
 
+class PracticeRequest(BaseModel):
+    request: str = ""
+
+
 class DocumentItem(BaseModel):
     id: str
     title: str

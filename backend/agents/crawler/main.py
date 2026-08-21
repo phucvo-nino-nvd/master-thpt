@@ -1,6 +1,5 @@
 from tavily import TavilyClient
 from dotenv import load_dotenv
-from pydantic import BaseModel, Field
 from urllib.parse import urlparse, urljoin, parse_qs
 from bs4 import BeautifulSoup
 
@@ -9,6 +8,8 @@ import re
 import requests
 
 from .prompt import build_query
+from .refine import is_single_exam
+from .schema import CrawledDoc, CrawlerRequest, CrawlerResponse
 
 load_dotenv(override=True)
 
@@ -20,35 +21,8 @@ DOMAINS = ["toanmath.com"]
 TIMEOUT = int(os.getenv("CRAWLER_TIMEOUT", "15"))
 
 
-class CrawlerRequest(BaseModel):
-    grade: int
-    concept: str
-    type: str = ""
-    difficulty: str = ""
-    top_k: int = Field(default=5, ge=1, le=50)
-    exclude_urls: list[str] = Field(default_factory=list)
-
-
-class CrawledDoc(BaseModel):
-    url: str
-    title: str = ""
-    score: float = 0.0
-
-
-class CrawlerResponse(BaseModel):
-    request: CrawlerRequest
-    query: str
-    docs: list[CrawledDoc]
-    missing: int
-
-
 def crawl(request: CrawlerRequest) -> CrawlerResponse:
-    query = build_query(
-        request.concept,
-        request.grade,
-        request.type,
-        request.difficulty,
-    )
+    query = build_query(request.concept, request.grade)
 
     results = client.search(
         query,
@@ -66,7 +40,7 @@ def crawl(request: CrawlerRequest) -> CrawlerResponse:
     for r in results:
         url = r["url"]
 
-        if url in seen:
+        if url in seen or not is_single_exam(r.get("title", ""), url, r.get("content", "")):
             continue
 
         response = requests.get(url, timeout=TIMEOUT, allow_redirects=True, stream=True)

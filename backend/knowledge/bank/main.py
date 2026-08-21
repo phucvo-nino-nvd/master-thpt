@@ -14,6 +14,9 @@ from common.schema import (
 )
 
 
+ITEM_BANK_PATH = Path(__file__).resolve().parents[3] / "artifacts" / "item_bank.jsonl"
+
+
 class Item(BaseModel):
     id: str
 
@@ -36,6 +39,22 @@ class Item(BaseModel):
     solution: str | None = None
 
     source_blocks: list[SourceBlock] = Field(default_factory=list)
+
+
+def load_items() -> list[dict]:
+    if not ITEM_BANK_PATH.exists():
+        return []
+
+    with open(ITEM_BANK_PATH, "r", encoding="utf-8") as f:
+        return [json.loads(line) for line in f if line.strip()]
+
+
+def source_urls() -> list[str]:
+    return sorted({item["source_url"] for item in load_items()})
+
+
+def items_of(question_ids: set[str]) -> list[dict]:
+    return [item for item in load_items() if item["id"] in question_ids]
 
 
 def make_item_id(source_url: str, section: str | None, number: str) -> str:
@@ -89,10 +108,11 @@ def build_item_bank(document: Document) -> list[Item]:
     items = document_to_items(document)
     unique_items = dedup_items(items)
 
-    path = Path(__file__).resolve().parents[3] / "artifacts" / "item_bank.jsonl"
+    path = ITEM_BANK_PATH
     path.parent.mkdir(parents=True, exist_ok=True)
 
     existing_fingerprints: set[str] = set()
+    existing_ids: set[str] = set()
     if path.exists():
         with open(path, "r", encoding="utf-8") as f:
             for line in f:
@@ -101,15 +121,17 @@ def build_item_bank(document: Document) -> list[Item]:
 
                 old_item = Item.model_validate_json(line)
                 existing_fingerprints.add(make_fingerprint(old_item))
+                existing_ids.add(old_item.id)
 
     new_items: list[Item] = []
     for item in unique_items:
         fingerprint = make_fingerprint(item)
 
-        if fingerprint in existing_fingerprints:
+        if fingerprint in existing_fingerprints or item.id in existing_ids:
             continue
 
         existing_fingerprints.add(fingerprint)
+        existing_ids.add(item.id)
         new_items.append(item)
 
     # Append new items to the item bank file
