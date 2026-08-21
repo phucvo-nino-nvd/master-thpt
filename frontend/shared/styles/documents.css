@@ -213,6 +213,73 @@
 	font-size: 12.5px;
 }
 
+.history-versions {
+	border-top: 1px solid var(--line);
+	padding-top: 10px;
+}
+
+.history-versions > summary {
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 700;
+	color: var(--amber-dark);
+	list-style: none;
+}
+
+.history-versions > summary::after {
+	content: ' ▾';
+}
+
+.history-versions[open] > summary::after {
+	content: ' ▴';
+}
+
+.history-version-list {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin: 10px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.history-version-link {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 2px 10px;
+	padding: 8px 10px;
+	border: 1px solid var(--line);
+	border-radius: 9px;
+	text-decoration: none;
+	color: var(--ink);
+}
+
+.history-version-link:hover {
+	border-color: var(--amber);
+	background: var(--amber-bg);
+}
+
+.history-version-tag {
+	grid-row: span 2;
+	align-self: center;
+	padding: 3px 8px;
+	border-radius: 999px;
+	background: var(--amber-bg);
+	font-size: 10.5px;
+	font-weight: 700;
+	color: var(--amber-dark);
+}
+
+.history-version-score {
+	font-size: 12.5px;
+	font-weight: 600;
+}
+
+.history-version-date {
+	font-size: 11px;
+	color: var(--muted);
+}
+
 /* ---------- practice composer dock ---------- */
 
 .practice-page {

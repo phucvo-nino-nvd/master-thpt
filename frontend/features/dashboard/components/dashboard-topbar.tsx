@@ -10,6 +10,7 @@ export function DashboardTopbar() {
 		{ href: '/documents', label: '2 · Kho đề gốc' },
 		{ href: '/practice', label: '3 · Luyện tập' },
 		{ href: '/history', label: '4 · Lịch sử làm bài' },
+		{ href: '/review', label: '5 · Ôn tập & thống kê' },
 	] as const;
 
 	function isActiveLink(href: string) {

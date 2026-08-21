@@ -14,7 +14,7 @@ const STATUS_COLORS: Record<string, string> = {
   mastered: "#4d805e",
   learning: "#d98236",
   weak: "#c85a4a",
-  untouched: "#dfad9d",
+  untouched: "#b9ae97",
 };
 
 const STATUS_LABELS: Record<string, string> = {
@@ -32,16 +32,19 @@ const GRADE_TINTS: Record<number, string> = {
 
 const TAU = Math.PI * 2;
 const MIN_CLUSTER = 3;
-const NODE_PAD = 1.5;
-const PACK_FILL = 0.72;
+const NODE_PAD = 5;
+const PACK_FILL = 0.9;
 const DETAIL_ZOOM = 1.6;
 const LABEL_ZOOM = 2.6;
+const FOCUS_ZOOM = 5.5;
+const LABEL_SIZE = 15;
 const GOLDEN_ANGLE = 2.399963229728653;
 
 const gradeTint = (grade: number) => GRADE_TINTS[grade] ?? "#b9ae97";
 const titleCase = (text: string) =>
   text ? text.charAt(0).toLocaleUpperCase("vi") + text.slice(1) : text;
-const radiusOf = (degree: number) => 5 + Math.min(degree, 12) * 0.55;
+const radiusOf = (degree: number, children: number) =>
+  2.4 + Math.min(degree, 12) * 0.16 + Math.sqrt(Math.min(children, 40)) * 1.5;
 
 type GraphNode = KnowledgeGraphNode & {
   degree: number;
@@ -74,6 +77,7 @@ type Model = {
 function buildModel(raw: KnowledgeGraphResponse): Model {
   const byId = new Map(raw.nodes.map((node) => [node.id, node]));
   const degree = new Map(raw.nodes.map((node) => [node.id, 0]));
+  const children = new Map(raw.nodes.map((node) => [node.id, 0]));
   const requires = new Map<string, string[]>();
   const neighbours = new Map(raw.nodes.map((node) => [node.id, new Set<string>()]));
   const parent = new Map(raw.nodes.map((node) => [node.id, node.id]));
@@ -117,6 +121,11 @@ function buildModel(raw: KnowledgeGraphResponse): Model {
     seen.add(key);
     degree.set(edge.source, degree.get(edge.source)! + 1);
     degree.set(edge.target, degree.get(edge.target)! + 1);
+
+    if (edge.relation !== "REQUIRES") {
+      children.set(edge.target, children.get(edge.target)! + 1);
+    }
+
     links.push({
       source: edge.source,
       target: edge.target,
@@ -151,7 +160,10 @@ function buildModel(raw: KnowledgeGraphResponse): Model {
       .map(([key, ids]) => ({
         key,
         r: Math.sqrt(
-          ids.reduce((sum, id) => sum + (radiusOf(degree.get(id)!) + NODE_PAD) ** 2, 0) /
+          ids.reduce(
+            (sum, id) => sum + (radiusOf(degree.get(id)!, children.get(id)!) + NODE_PAD) ** 2,
+            0,
+          ) /
             PACK_FILL,
         ),
         x: 0,
@@ -179,7 +191,7 @@ function buildModel(raw: KnowledgeGraphResponse): Model {
       ...node,
       label: titleCase(node.label),
       degree: degree.get(node.id)!,
-      r: radiusOf(degree.get(node.id)!),
+      r: radiusOf(degree.get(node.id)!, children.get(node.id)!),
       cluster,
       cx: circle.x,
       cy: circle.y,
@@ -261,8 +273,8 @@ export function KnowledgeMapClient() {
 
     wiredRef.current = model;
     fg.d3Force("center", null);
-    (fg.d3Force("charge") as any)?.strength(-14).distanceMax(70);
-    (fg.d3Force("link") as any)?.distance(16).strength(0.6);
+    (fg.d3Force("charge") as any)?.strength(-22).distanceMax(90);
+    (fg.d3Force("link") as any)?.distance(26).strength(0.45);
     fg.d3Force("collide", forceCollide<any>((node) => node.r + NODE_PAD).iterations(3));
     fg.d3Force("x", forceX<any>((node) => node.cx).strength(0.35));
     fg.d3Force("y", forceY<any>((node) => node.cy).strength(0.35));
@@ -320,56 +332,28 @@ export function KnowledgeMapClient() {
           ? gradeTint(node.grade)
           : STATUS_COLORS[node.status] ?? STATUS_COLORS.untouched;
       ctx.fill();
-      ctx.lineWidth = 1 / scale;
-      ctx.strokeStyle = "#fdfbf6";
-      ctx.stroke();
 
       if (marked) {
-        ctx.lineWidth = 2.5 / scale;
+        ctx.lineWidth = 1.6 / scale;
         ctx.strokeStyle = "#1b2430";
         ctx.stroke();
       }
 
       if (!dimmed && (marked || scale >= LABEL_ZOOM)) {
-        ctx.font = `${11 / scale}px ui-sans-serif, system-ui, sans-serif`;
+        ctx.font = `${marked ? 600 : 500} ${LABEL_SIZE / scale}px ui-sans-serif, system-ui, sans-serif`;
         ctx.textAlign = "center";
         ctx.textBaseline = "top";
+        ctx.lineWidth = 3 / scale;
+        ctx.strokeStyle = "#fafafa";
+        ctx.strokeText(node.label, node.x, node.y + node.r + 3 / scale);
         ctx.fillStyle = "#1b2430";
-        ctx.fillText(node.label, node.x, node.y + node.r + 2 / scale);
+        ctx.fillText(node.label, node.x, node.y + node.r + 3 / scale);
       }
 
       ctx.globalAlpha = 1;
     },
     [related, activeId, hoverId, isLit, picked],
   );
-
-  const paintClusters = useCallback(
-    (ctx: CanvasRenderingContext2D, scale: number) => {
-      if (!model || scale >= DETAIL_ZOOM) {
-        return;
-      }
-
-      ctx.globalAlpha = 0.55;
-      ctx.fillStyle = "#ece5d8";
-
-      for (const cluster of model.clusters) {
-        ctx.beginPath();
-        ctx.arc(cluster.x, cluster.y, cluster.r, 0, TAU);
-        ctx.fill();
-      }
-
-      ctx.globalAlpha = 1;
-    },
-    [model],
-  );
-
-  const onNodeClick = useCallback((node: any) => {
-    setFocusId(node.id);
-
-    if (!detailRef.current) {
-      fgRef.current?.zoomToFit(600, 40, (other: any) => other.cluster === node.cluster);
-    }
-  }, []);
 
   const onBackgroundClick = useCallback(() => {
     setFocusId("");
@@ -393,7 +377,7 @@ export function KnowledgeMapClient() {
 
     setFocusId(node.id);
     fg?.centerAt(node.x, node.y, 600);
-    fg?.zoom(Math.max(fg.zoom(), DETAIL_ZOOM + 1), 600);
+    fg?.zoom(Math.max(fg.zoom() * 1.8, FOCUS_ZOOM), 600);
   }, []);
 
   const pickMatch = useCallback(
@@ -544,7 +528,7 @@ export function KnowledgeMapClient() {
                 nodeCanvasObject={paintNode}
                 nodePointerAreaPaint={(node: any, color: string, ctx: CanvasRenderingContext2D) => {
                   ctx.beginPath();
-                  ctx.arc(node.x, node.y, node.r + 1, 0, TAU);
+                  ctx.arc(node.x, node.y, node.r + 3, 0, TAU);
                   ctx.fillStyle = color;
                   ctx.fill();
                 }}
@@ -553,20 +537,19 @@ export function KnowledgeMapClient() {
                 }
                 linkColor={(link: any) => {
                   if (!isLit(link.source) || !isLit(link.target)) {
-                    return "rgba(182, 171, 147, 0.12)";
+                    return "rgba(182, 171, 147, 0.08)";
                   }
 
                   return related?.has(endId(link.source)) && related?.has(endId(link.target))
                     ? "rgba(125, 115, 98, 0.85)"
-                    : "rgba(182, 171, 147, 0.35)";
+                    : "rgba(182, 171, 147, 0.22)";
                 }}
-                linkWidth={0.6}
+                linkWidth={0.4}
                 linkDirectionalArrowLength={(link: any) => (link.requires ? 2.5 : 0)}
                 linkDirectionalArrowRelPos={1}
                 linkDirectionalArrowColor={() => "rgba(125, 115, 98, 0.6)"}
-                onRenderFramePre={paintClusters}
                 onNodeHover={(node: any) => setHoverId(node ? node.id : "")}
-                onNodeClick={onNodeClick}
+                onNodeClick={revealNode}
                 onBackgroundClick={onBackgroundClick}
                 onZoom={onZoom}
                 onEngineTick={() => {

@@ -32,11 +32,30 @@ export default function HistoryPage() {
 		loadHistory();
 	}, []);
 
-	// History rows only carry exam_id, so titles come from the document list.
-	const titleByExamId = useMemo(
-		() => new Map(documents.map((document) => [document.id, document.title?.trim() || document.subject])),
+	// History rows only carry exam_id, so đề info comes from the document list.
+	const docByExamId = useMemo(
+		() => new Map(documents.map((document) => [document.id, document])),
 		[documents],
 	);
+
+	// One card per đề; each attempt keeps its own numbered version, newest first.
+	const groups = useMemo(() => {
+		const byExamId = new Map<string, HistoryItem[]>();
+
+		for (const item of items) {
+			const attempts = byExamId.get(item.exam_id);
+			attempts ? attempts.push(item) : byExamId.set(item.exam_id, [item]);
+		}
+
+		return [...byExamId.entries()]
+			.map(([examId, attempts]) => {
+				const ordered = [...attempts].sort((a, b) => a.created_at.localeCompare(b.created_at));
+				const versions = ordered.map((item, idx) => ({ item, version: idx + 1 })).reverse();
+
+				return { examId, versions, latest: versions[0] };
+			})
+			.sort((a, b) => b.latest.item.created_at.localeCompare(a.latest.item.created_at));
+	}, [items]);
 
 	if (loading) {
 		return <DocumentsPageSkeleton cardCount={4} />;
@@ -57,38 +76,56 @@ export default function HistoryPage() {
 
 			{!error ? (
 				<>
-					<p className="documents-count">Có {items.length} lượt làm bài</p>
+					<p className="documents-count">
+						{items.length} lượt làm bài trên {groups.length} đề
+					</p>
 
 					<section className="documents-grid">
-						{items.map((item) => {
-							const duration = formatDuration(item.duration_seconds);
+						{groups.map(({ examId, versions, latest }) => {
+							const doc = docByExamId.get(examId);
+							const duration = formatDuration(latest.item.duration_seconds);
 
 							return (
-								<article key={item.history_id} className="documents-card">
+								<article key={examId} className="documents-card">
 									<div className="documents-card-top">
-										<p className="documents-card-type">
-											{item.mode === 'exam' ? 'Đề thi' : 'Luyện tập'}
-										</p>
+										<p className="documents-card-type">{doc?.exam_type?.trim() || 'Đề gốc'}</p>
 										<h2 className="documents-card-title">
-											{titleByExamId.get(item.exam_id) ?? 'Đề đã xoá khỏi kho'}
+											{doc ? doc.title?.trim() || doc.subject : 'Đề đã xoá khỏi kho'}
 										</h2>
 										<p className="documents-card-stat">
-											{formatScore(item.total_score)} điểm • Đúng {item.correct_count}/{item.total_questions} câu
+											Lần gần nhất: {formatScore(latest.item.total_score)} điểm • Đúng{' '}
+											{latest.item.correct_count}/{latest.item.total_questions} câu
 										</p>
 										<p className="documents-card-meta">
-											{formatDateTime(item.created_at)}
+											{formatDateTime(latest.item.created_at)}
 											{duration ? ` • ${duration}` : ''}
 										</p>
 									</div>
 									<div className="documents-card-bottom">
 										<div className="documents-tags">
-											<span className="documents-tag">{item.total_questions} câu đã chấm</span>
+											<span className="documents-tag">{versions.length} lần làm</span>
+											{doc?.grade ? <span className="documents-tag">Lớp {doc.grade}</span> : null}
 										</div>
-										<div className="documents-card-actions">
-											<Link href={`/history/${item.history_id}`} className="btn-primary documents-start-btn">
-												Xem lại
-											</Link>
-										</div>
+										<details className="history-versions">
+											<summary>Xem các lần đã làm</summary>
+											<ol className="history-version-list">
+												{versions.map(({ item, version }) => (
+													<li key={item.history_id}>
+														<Link href={`/history/${item.history_id}`} className="history-version-link">
+															<span className="history-version-tag">Lần {version}</span>
+															<span className="history-version-score">
+																{formatScore(item.total_score)} điểm • {item.correct_count}/
+																{item.total_questions}
+															</span>
+															<span className="history-version-date">
+																{formatDateTime(item.created_at)} •{' '}
+																{item.mode === 'exam' ? 'Đề thi' : 'Luyện tập'}
+															</span>
+														</Link>
+													</li>
+												))}
+											</ol>
+										</details>
 									</div>
 								</article>
 							);

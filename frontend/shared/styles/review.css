@@ -1,0 +1,193 @@
+/* ---------- review & stats page ---------- */
+
+.review-layout {
+	display: grid;
+	grid-template-columns: minmax(200px, 250px) 1fr;
+	gap: 38px;
+	align-items: start;
+}
+
+.review-block + .review-block {
+	margin-top: 30px;
+}
+
+.review-empty {
+	margin: 14px 0 0;
+	padding: 18px 20px;
+	border: 1px dashed var(--line-strong);
+	border-radius: 14px;
+	background: var(--paper-card);
+	font-size: 12.5px;
+	color: var(--ink-soft);
+}
+
+/* ---------- attempt timeline ---------- */
+
+.review-timeline {
+	margin: 16px 0 0;
+	padding: 0 0 0 20px;
+	list-style: none;
+	border-left: 1px solid var(--line-strong);
+}
+
+.review-timeline > li {
+	position: relative;
+	padding-bottom: 24px;
+}
+
+.review-timeline > li:last-child {
+	padding-bottom: 0;
+}
+
+.review-timeline > li::before {
+	content: '';
+	position: absolute;
+	left: -25px;
+	top: 3px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: var(--amber);
+}
+
+.review-attempt-date {
+	margin: 0;
+	font-size: 11.5px;
+	color: var(--ink-soft);
+}
+
+.review-attempt-title {
+	margin: 4px 0 0;
+	font-size: 13.5px;
+	font-weight: 700;
+	line-height: 1.35;
+	color: var(--ink);
+}
+
+.review-attempt-score {
+	display: block;
+	margin-top: 4px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.review-attempt-score.is-weak {
+	color: var(--red);
+}
+
+.review-attempt-score.is-learning {
+	color: var(--amber-dark);
+}
+
+.review-attempt-score.is-mastered {
+	color: var(--green);
+}
+
+/* ---------- mastery bars ---------- */
+
+.review-bars {
+	display: grid;
+	gap: 11px;
+	margin: 16px 0 0;
+}
+
+.review-bar {
+	display: grid;
+	grid-template-columns: minmax(120px, 210px) 1fr 42px;
+	align-items: center;
+	gap: 16px;
+	font-size: 12.5px;
+}
+
+.review-bar-label {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: var(--ink);
+}
+
+.review-bar-track {
+	height: 7px;
+	border-radius: 999px;
+	background: var(--line);
+}
+
+.review-bar-fill {
+	display: block;
+	height: 100%;
+	border-radius: 999px;
+	background: var(--muted);
+}
+
+.review-bar-fill.is-weak {
+	background: var(--red);
+}
+
+.review-bar-fill.is-learning {
+	background: var(--amber);
+}
+
+.review-bar-fill.is-mastered {
+	background: var(--green);
+}
+
+.review-bar-score {
+	text-align: right;
+	font-variant-numeric: tabular-nums;
+	color: var(--ink-soft);
+}
+
+/* ---------- frequent mistakes ---------- */
+
+.review-mistakes {
+	display: grid;
+	gap: 14px;
+	margin: 16px 0 0;
+}
+
+.review-mistake {
+	padding: 14px 18px;
+	border: 1px solid var(--line);
+	border-left: 4px solid var(--red);
+	border-radius: 12px;
+	background: var(--paper-card);
+}
+
+.review-mistake-title {
+	margin: 0;
+	font-size: 13px;
+	font-weight: 700;
+	color: var(--red-dark);
+}
+
+.review-mistake-meta {
+	margin: 4px 0 0;
+	font-size: 11.5px;
+	color: var(--muted);
+}
+
+.review-mistake-list {
+	display: grid;
+	gap: 7px;
+	margin: 11px 0 0;
+	padding-left: 18px;
+	font-size: 12.5px;
+	line-height: 1.5;
+	color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+	.review-layout {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.review-bar {
+		grid-template-columns: 1fr 38px;
+		gap: 6px 12px;
+	}
+
+	.review-bar-label {
+		grid-column: 1 / -1;
+	}
+}

@@ -374,7 +374,7 @@ export default function ExamRoomPage() {
 						<span className="documents-tag">{isPracticeMode ? 'Luyện tập' : 'Đề thi'}</span>
 						{exam.grade ? <span>Lớp {exam.grade}</span> : null}
 						<span>{exam.total_questions} câu</span>
-						<span>{exam.duration_minutes} phút</span>
+						{isPracticeMode ? null : <span>{exam.duration_minutes} phút</span>}
 					</div>
 				</div>
 				<div className="exam-header-side">
@@ -455,10 +455,12 @@ export default function ExamRoomPage() {
 				</article>
 
 				<aside className="exam-sidebar">
-					<div className={`exam-timer ${isLowTime ? 'is-warning' : ''}`}>
-						<p className="exam-timer-label">Thời gian còn lại</p>
-						<p className="exam-timer-value">{formattedRemainingTime}</p>
-					</div>
+					{isPracticeMode ? null : (
+						<div className={`exam-timer ${isLowTime ? 'is-warning' : ''}`}>
+							<p className="exam-timer-label">Thời gian còn lại</p>
+							<p className="exam-timer-value">{formattedRemainingTime}</p>
+						</div>
+					)}
 
 					<h3>Danh sách câu</h3>
 					<div className="exam-index-grid">

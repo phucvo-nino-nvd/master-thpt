@@ -2,45 +2,50 @@
 
 import { DocumentsPageSkeleton } from '@/features/dashboard/components/loading-skeletons';
 import { DashboardTopbar } from '@/features/dashboard/components/dashboard-topbar';
-import { PracticeExamItem, getPracticeExams, updatePractice } from '@/shared/api/client';
+import { DocumentItem, getPracticeExams, updatePractice } from '@/shared/api/client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from 'react';
 
-function formatPracticePrimaryMetric(item: PracticeExamItem) {
+const FILTER_DELAY = 200;
+
+function formatPracticePrimaryMetric(item: DocumentItem) {
 	return `${item.total_questions} câu • Lớp ${item.grade}`;
 }
 
 export default function PracticePage() {
 	const router = useRouter();
 	const textareaRef = useRef<HTMLTextAreaElement | null>(null);
-	const [items, setItems] = useState<PracticeExamItem[]>([]);
+	const [items, setItems] = useState<DocumentItem[]>([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
 	const [requestText, setRequestText] = useState('');
 	const [isUpdating, setIsUpdating] = useState(false);
 	const [updateError, setUpdateError] = useState('');
 
-	async function loadPracticeExams() {
-		setLoading(true);
+	async function loadPracticeExams(query = '') {
 		setError('');
 
 		try {
-			const data = await getPracticeExams();
+			const data = await getPracticeExams(query);
 			setItems(data);
 		} catch {
 			setError('Không thể tải danh sách bài luyện tập. Vui lòng thử lại.');
-		} finally {
-			setLoading(false);
 		}
 	}
 
 	useEffect(() => {
-		loadPracticeExams();
-	}, [router]);
+		const filterTimer = window.setTimeout(() => {
+			void loadPracticeExams(requestText.trim()).finally(() => setLoading(false));
+		}, FILTER_DELAY);
+
+		return () => {
+			window.clearTimeout(filterTimer);
+		};
+	}, [requestText, router]);
 
 	useEffect(() => {
-		if (loading || error || items.length > 0 || isUpdating) {
+		if (loading || error || items.length > 0 || isUpdating || requestText.trim()) {
 			return;
 		}
 
@@ -51,7 +56,7 @@ export default function PracticePage() {
 		return () => {
 			window.clearTimeout(retryTimer);
 		};
-	}, [error, isUpdating, items.length, loading]);
+	}, [error, isUpdating, items.length, loading, requestText]);
 
 	useEffect(() => {
 		const textarea = textareaRef.current;
@@ -60,12 +65,12 @@ export default function PracticePage() {
 		}
 
 		textarea.style.height = '0px';
-		const nextHeight = Math.min(textarea.scrollHeight, 128);
-		textarea.style.height = `${Math.max(nextHeight, 48)}px`;
+		textarea.style.height = `${Math.min(textarea.scrollHeight, 128)}px`;
 	}, [requestText]);
 
 	async function submitPracticeUpdate() {
 		const trimmedRequest = requestText.trim();
+
 		if (!trimmedRequest || isUpdating) {
 			return;
 		}
@@ -74,11 +79,7 @@ export default function PracticePage() {
 		setIsUpdating(true);
 
 		try {
-			await updatePractice({
-				request: trimmedRequest,
-			});
-			await loadPracticeExams();
-			setRequestText('');
+			setItems(await updatePractice({ request: trimmedRequest }));
 		} catch {
 			setUpdateError('Không thể gửi yêu cầu cập nhật lúc này. Vui lòng thử lại.');
 		} finally {
@@ -92,15 +93,18 @@ export default function PracticePage() {
 	}
 
 	function onComposerKeyDown(event: KeyboardEvent<HTMLTextAreaElement>) {
+		if ((event.key === 'Backspace' || event.key === 'Delete') && requestText) {
+			event.preventDefault();
+			setRequestText('');
+
+			return;
+		}
+
 		if (event.key !== 'Enter' || event.shiftKey) {
 			return;
 		}
 
 		event.preventDefault();
-
-		if (!requestText.trim() || isUpdating) {
-			return;
-		}
 
 		void submitPracticeUpdate();
 	}
@@ -131,24 +135,19 @@ export default function PracticePage() {
 			{!error ? (
 				<>
 					<p className="documents-count">
-						Có {items.length} câu luyện tập dành cho bạn
+						Có {items.length} phần cần luyện thêm
 					</p>
 					<section className="documents-grid">
 						{items.map((item) => (
 							<article key={item.id} className="documents-card">
 								<div className="documents-card-top">
-									<p className="documents-card-type">{item.exam_type}</p>
-									<h2 className="documents-card-title">
-										{item.subject} - {item.exam_type}
-									</h2>
+									<p className="documents-card-type">Phần cần củng cố</p>
+									<h2 className="documents-card-title">{item.title}</h2>
 									<p className="documents-card-stat">{formatPracticePrimaryMetric(item)}</p>
-									<p className="documents-card-meta">
-										{item.source} • Năm {item.year}
-									</p>
 								</div>
 								<div className="documents-card-bottom">
 									<div className="documents-tags">
-										<span className="documents-tag">Adaptive practice</span>
+										<span className="documents-tag">{item.subject}</span>
 									</div>
 									<div className="documents-card-actions">
 										<Link href={`/exams/${item.id}?intent=practice`} className="btn-primary documents-start-btn">

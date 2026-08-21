@@ -15,16 +15,6 @@ export type DocumentItem = {
 	created_at?: string;
 };
 
-export type PracticeExamItem = {
-	id: string;
-	subject: string;
-	source: string;
-	total_questions: number;
-	exam_type: string;
-	grade: number;
-	year: number;
-};
-
 export type UpdatePracticeBody = {
 	request: string;
 };
@@ -194,14 +184,14 @@ export async function getKnowledgeGraph() {
 	return data;
 }
 
-export async function getPracticeExams() {
-	const { data } = await api.get<PracticeExamItem[]>('/practice');
+export async function getPracticeExams(query = '') {
+	const { data } = await api.get<DocumentItem[]>('/practice', { params: { q: query } });
 
 	return data;
 }
 
 export async function updatePractice(body: UpdatePracticeBody) {
-	const { data } = await api.post('/practice/update', body);
+	const { data } = await api.post<DocumentItem[]>('/practice/update', body);
 
 	return data;
 }
