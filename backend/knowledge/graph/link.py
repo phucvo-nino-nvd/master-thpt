@@ -10,6 +10,7 @@ import hashlib
 import json
 import numpy as np
 
+from common.utils import chat_model, load_json, write_json
 from .config import (
     EMBEDDING_MODEL,
     GLOBAL_NODES_PATH,
@@ -26,13 +27,7 @@ from .config import (
     LOCAL_EDGES_PATH,
 )
 from .context import LINK_CONTEXT
-from .utils import (
-    build_embeddings,
-    chat_model,
-    load_json,
-    require_online,
-    write_json,
-)
+from .utils import build_embeddings, require_online
 
 RELATION_MAP = {
     "left_requires_right": ("LEFT", "REQUIRES"),

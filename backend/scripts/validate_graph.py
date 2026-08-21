@@ -3,9 +3,10 @@ from __future__ import annotations
 from collections import defaultdict
 from pathlib import Path
 
-import json
 import re
 import unicodedata
+
+from common.utils import load_json, write_json
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -26,17 +27,6 @@ ID_RE = re.compile(r"^[A-Z0-9_]+$")
 SUSPICIOUS_ID_FRAGMENTS = {
     "_NHAI_": "_NHAT_",
 }
-
-
-def load_json(path: Path):
-    with path.open("r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def write_json(path: Path, data) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def normalize_text(text: str) -> str:

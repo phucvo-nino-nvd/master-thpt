@@ -20,8 +20,6 @@ KNOWLEDGE_GRAPH_PATH = KG_DIR / "knowledge_graph.json"
 
 
 EXTRACTED_DIR = KG_DIR / "extracted"
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-OPENROUTER_BASE_URL = os.getenv("OPENROUTER_BASE_URL", "").rstrip("/")
 EXTRACTION_MODEL = os.getenv("OPENROUTER_EXTRACT_MODEL", "")
 CANONICAL_MODEL = os.getenv("OPENROUTER_CANONICAL_MODEL", "")
 EMBEDDING_MODEL = os.getenv("OPENROUTER_EMBEDDING_MODEL", "openai/text-embedding-3-small")

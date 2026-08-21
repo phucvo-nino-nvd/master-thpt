@@ -13,6 +13,7 @@ import re
 import unicodedata
 import numpy as np
 
+from common.utils import chat_model, load_json, write_json
 from .config import (
     CANONICAL_DIR,
     CANONICAL_MODEL,
@@ -33,14 +34,7 @@ from .config import (
 from .chunk import load_chunks
 from .context import CANONICALIZATION_CONTEXT, SEMANTIC_DEDUP_CONTEXT
 from .schema import ExtractionResult, KnowledgeNode, NodeType
-from .utils import (
-    build_embeddings,
-    chat_model,
-    embedding_text,
-    load_json,
-    require_online,
-    write_json,
-)
+from .utils import build_embeddings, embedding_text, require_online
 
 
 ID_RENAMES = {

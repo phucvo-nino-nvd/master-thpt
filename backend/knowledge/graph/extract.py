@@ -7,11 +7,12 @@ from langsmith import traceable
 import hashlib
 import json
 
+from common.utils import chat_model, load_json
 from .chunk import MarkdownChunk, load_chunks
 from .config import EXTRACTED_DIR, EXTRACTION_MODEL
 from .context import EXTRACTION_CONTEXT
 from .schema import ExtractionResult, KnowledgeEdge, KnowledgeNode
-from .utils import chat_model, load_json, require_online
+from .utils import require_online
 
 
 @lru_cache(maxsize=1)

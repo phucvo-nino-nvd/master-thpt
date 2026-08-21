@@ -1,18 +1,12 @@
 from __future__ import annotations
 
 from pathlib import Path
-from langchain_openrouter import ChatOpenRouter
 
 import hashlib
-import json
 import requests
 
-from .config import (
-    EMBEDDING_MODEL,
-    KG_OFFLINE,
-    OPENROUTER_API_KEY,
-    OPENROUTER_BASE_URL,
-)
+from common.utils import OPENROUTER_API_KEY, OPENROUTER_BASE_URL, load_json, write_json
+from .config import EMBEDDING_MODEL, KG_OFFLINE
 
 
 class OfflineCacheMiss(RuntimeError):
@@ -23,32 +17,6 @@ def require_online(item: str) -> None:
     """Fail before any API call when running offline."""
     if KG_OFFLINE:
         raise OfflineCacheMiss(f"KG_OFFLINE=true and this cache item is missing: {item}")
-
-
-def load_json(path: Path):
-    """Load a JSON file."""
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def write_json(path: Path, data: object) -> None:
-    """Write formatted UTF-8 JSON."""
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-
-
-def chat_model(model: str, **kwargs) -> ChatOpenRouter:
-    """Build an OpenRouter chat model. Call lazily, never at import time."""
-    if not OPENROUTER_API_KEY or not OPENROUTER_BASE_URL:
-        raise RuntimeError("OPENROUTER_API_KEY and OPENROUTER_BASE_URL are required")
-
-    return ChatOpenRouter(
-        model=model,
-        api_key=OPENROUTER_API_KEY,
-        base_url=OPENROUTER_BASE_URL,
-        temperature=0,
-        max_retries=0,
-        openrouter_provider={"require_parameters": True},
-        **kwargs,
-    )
 
 
 def embedding_text(node: dict) -> str:

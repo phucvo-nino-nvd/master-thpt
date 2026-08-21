@@ -5,9 +5,9 @@ from typing import get_args
 
 import csv
 
+from common.utils import load_json
 from .config import KNOWLEDGE_GRAPH_PATH, NEO4J_DIR
 from .schema import RelationType
-from .utils import load_json
 
 
 RELATIONS = get_args(RelationType)
