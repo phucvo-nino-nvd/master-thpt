@@ -6,3 +6,6 @@ __pycache__/
 
 # 112MB of textbook PDFs, source input for the graph pipeline.
 backend/knowledge/graph/data/
+
+*.db-wal
+*.db-shm
