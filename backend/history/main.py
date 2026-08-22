@@ -1,15 +1,22 @@
 from __future__ import annotations
 
+from datetime import date
+from dotenv import load_dotenv
 from sqlite3 import Row
 from uuid import uuid4
 
 import json
+import os
 
 from agents.crawler.schema import CrawledDoc, CrawlerRequest, CrawlerResponse
 from common.schema import Evaluation
 from .db import get_connection, init_db
 from .schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryQuestion, Mode
 
+
+load_dotenv()
+
+REVIEW_DAYS = int(os.getenv("REVIEW_INTERVAL_DAYS", "7"))
 
 SUMMARY_SQL = """
 SELECT
@@ -173,13 +180,45 @@ def solved_question_ids() -> set[str]:
     with get_connection() as conn:
         rows = conn.execute(
             """
-            SELECT DISTINCT question_id
+            SELECT question_id
             FROM history_question
             WHERE correct = 1
-            """
+            GROUP BY question_id
+            HAVING MAX(answered_at) > datetime('now', ?)
+            """,
+            (f"-{REVIEW_DAYS} days",),
         ).fetchall()
 
     return {row["question_id"] for row in rows}
+
+
+def streak() -> int:
+    init_db()
+
+    with get_connection() as conn:
+        today = conn.execute("SELECT DATE('now', 'localtime') AS day").fetchone()["day"]
+        rows = conn.execute(
+            """
+            SELECT DISTINCT DATE(answered_at, 'localtime') AS day
+            FROM history_question
+            ORDER BY day DESC
+            """
+        ).fetchall()
+
+    days = [date.fromisoformat(row["day"]) for row in rows]
+
+    if not days or (date.fromisoformat(today) - days[0]).days > 1:
+        return 0
+
+    count = 1
+
+    for previous, current in zip(days, days[1:]):
+        if (previous - current).days != 1:
+            break
+
+        count += 1
+
+    return count
 
 
 def batches_of(rows: list[Row]) -> list[CrawlerResponse]:

@@ -5,12 +5,13 @@ from langsmith import traceable
 
 import os
 
-from common.schema import Evaluation
+from common.schema import Evaluation, Question
 from common.utils import chat_model
 from knowledge.bank.main import Item
-from .context import EVALUATE_CONTEXT, HINT_CONTEXT, HINT_LEVELS, SOLUTION_CONTEXT
+from ..parser.refine import rescued
+from .context import AUTHOR_CONTEXT, EVALUATE_CONTEXT, HINT_CONTEXT, HINT_LEVELS, SOLUTION_CONTEXT
 from .rubric import answer_of, apply_rubric, settled
-from .schema import HintResponse, SolutionResponse
+from .schema import AuthoredQuestions, HintResponse, SolutionResponse
 
 
 TEACHER_MODEL = os.getenv("OPENROUTER_TEACHER_MODEL")
@@ -30,6 +31,15 @@ def evaluator():
 def hinter():
     return chat_model(TEACHER_MODEL).with_structured_output(
         HintResponse,
+        method="json_schema",
+        strict=True,
+    )
+
+
+@lru_cache(maxsize=1)
+def writer():
+    return chat_model(TEACHER_MODEL).with_structured_output(
+        AuthoredQuestions,
         method="json_schema",
         strict=True,
     )
@@ -167,6 +177,31 @@ def evaluate(item: Item, student_answer: str | list[bool]) -> Evaluation:
         f"LLM judged {len(evaluation.part_correct) if evaluation else 0} sub-statements "
         f"for item {item.id} which has {len(item.parts)}"
     )
+
+
+def build_author_prompt(concept: str, grade: int, count: int) -> str:
+    return "\n\n".join([
+        AUTHOR_CONTEXT,
+        f"Concept: {concept}",
+        f"Grade: {grade}",
+        f"Questions to write: {count}",
+    ])
+
+
+@traceable(name="Write questions")
+def write_questions(concept: str, grade: int, count: int) -> list[Question]:
+    if count < 1:
+        return []
+
+    result = AuthoredQuestions.model_validate(
+        writer().invoke(build_author_prompt(concept, grade, count))
+    )
+
+    return [
+        rescued(question)
+        for question in result.questions
+        if question.content.strip()
+    ][:count]
 
 
 @traceable(name="Give hint")

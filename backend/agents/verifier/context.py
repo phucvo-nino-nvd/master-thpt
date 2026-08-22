@@ -25,6 +25,10 @@ Keep the reviewed decision unless it is wrong. Overturn it when:
 - the feedback names a mistake the student did not make, or states a wrong result.
 
 Rules:
+- You have a calculator that evaluates sympy expressions exactly, and your first action is one
+  call on the value that decides this question. Call it again for any other value that matters,
+  including whether two forms are equal, which is their difference being 0. What it returns
+  outranks the reviewed decision and your own arithmetic.
 - Solve the question yourself before agreeing with the decision under review.
 - Judge the mathematics of the verdict and the truth of the feedback, never its style or tone.
 - Read the reviewed feedback as a claim about the student's work and check that claim.

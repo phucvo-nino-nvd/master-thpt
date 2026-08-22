@@ -8,6 +8,7 @@ beautifulsoup4
 langchain-openrouter
 langsmith
 numpy
+sympy
 tqdm
 neo4j
 pytest

@@ -974,6 +974,40 @@ def mathify(text: str) -> str:
     return "\n".join(lines)
 
 
+def mathified(question: Question) -> Question:
+    question.content = mathify(question.content)
+
+    for option in question.options:
+        option.content = mathify(option.content)
+
+    for part in question.parts:
+        part.content = mathify(part.content)
+
+    return question
+
+
+def rescued(question: Question) -> Question:
+    """Pull A/B/C/D or a)/b)/c)/d) back out of a stem an author left them in."""
+    if not question.options and question.type in ("unknown", "multiple_choice"):
+        options = extract_options(question.content)
+        marker = OPTION_RE.search(question.content)
+
+        if len(options) > 1 and marker is not None:
+            question.content = question.content[: marker.start()].strip()
+            question.options = options
+            question.type = "multiple_choice"
+
+    if not question.parts and question.type == "true_false":
+        parts = extract_multiple_parts(question.content)
+        marker = PART_ITEM_RE.search(question.content)
+
+        if parts and marker is not None:
+            question.content = question.content[: marker.start()].strip()
+            question.parts = parts
+
+    return mathified(question)
+
+
 def refine(
     ocr: dict[str, Any] | str,
     source_url: str,
@@ -1062,13 +1096,7 @@ def refine(
                 )
 
     for _, question in records:
-        question.content = mathify(question.content)
-
-        for option in question.options:
-            option.content = mathify(option.content)
-
-        for part in question.parts:
-            part.content = mathify(part.content)
+        rescued(question)
 
     return Document(
         source_url=source_url,

@@ -2,8 +2,11 @@ from __future__ import annotations
 
 import pytest
 
-from agents.learner import db
+from agents.learner import db, service
 from agents.learner.service import (
+    MIN_QUESTIONS,
+    crawl_requests,
+    matching_nodes,
     get_knowledge_graph,
     learning_path,
     process_attempt,
@@ -200,3 +203,25 @@ def test_next_correct_attempt_updates_existing_state(learner_db):
     assert stored_state["attempts"] == 2
     assert stored_state["correct"] == 1
     assert stored_state["incorrect"] == 1
+
+def test_search_skips_crawl_when_concept_already_stocked(learner_db):
+    for number in range(MIN_QUESTIONS):
+        add_mapping(f"Q{number:03d}", "DAO_HAM")
+
+    assert crawl_requests(set(), [], "đạo hàm") == []
+
+    solved = {f"Q{number:03d}" for number in range(2)}
+
+    requests = crawl_requests(solved, [], "đạo hàm")
+
+    assert [request.concept for request in requests] == ["đạo hàm"]
+
+
+def test_matching_nodes_ignores_nodes_outside_learning_path(learner_db, monkeypatch):
+    monkeypatch.setattr(
+        service,
+        "learning_path",
+        lambda: [{"knowledge_id": "DAO_HAM_CAP_HAI"}],
+    )
+
+    assert matching_nodes("đạo hàm") == ["DAO_HAM_CAP_HAI"]

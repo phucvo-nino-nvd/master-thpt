@@ -120,3 +120,64 @@ def test_queue_keeps_one_row_per_url(history_db):
     history.queue_docs(crawled("a.pdf", "b.pdf"))
 
     assert [doc.url for doc in history.queued_docs()[0].docs] == ["a.pdf", "b.pdf"]
+
+
+def test_busy_pipeline_rejects_new_request_instead_of_dropping_it(monkeypatch):
+    from fastapi import HTTPException
+
+    from api import router
+
+    monkeypatch.setattr(
+        main,
+        "progress",
+        {"concept": "Đạo hàm", "stage": "crawler_agent", "step": 1, "total": 2},
+    )
+
+    with pytest.raises(HTTPException) as raised:
+        router.reject_if_busy()
+
+    assert raised.value.status_code == 409
+    assert "Đạo hàm" in raised.value.detail
+
+
+def test_restock_targets_the_weakest_node_just_graded(monkeypatch):
+    monkeypatch.setattr(
+        main,
+        "node_map",
+        lambda: {"a": {"name": "Đạo hàm"}, "b": {"name": "Tích phân"}},
+    )
+
+    state = {
+        "knowledge_states": [
+            {"knowledge_id": "b", "mastery": 0.7},
+            {"knowledge_id": "a", "mastery": 0.2},
+            {"knowledge_id": "unmapped", "mastery": 0.0},
+        ]
+    }
+
+    assert main.restock_concept(state) == "Đạo hàm"
+    assert main.restock_concept({"knowledge_states": []}) is None
+
+
+def test_check_question_publishes_grading_then_clears(monkeypatch):
+    from types import SimpleNamespace
+
+    from api import router
+    from api.schema import CheckRequest
+
+    seen: list[str | None] = []
+
+    monkeypatch.setattr(router, "submission_of", lambda question_id, answer: {})
+    monkeypatch.setattr(router, "get_history", lambda history_id: SimpleNamespace(exam_id="node-1"))
+    monkeypatch.setattr(router, "save_answer", lambda *args: None)
+    monkeypatch.setattr(
+        router,
+        "grade",
+        lambda submissions: seen.append(main.grading) or {"evaluations": ["graded"]},
+    )
+
+    request = CheckRequest(history_id="h1", question_id="q1", student_answer="3")
+
+    assert router.post_practice_check(request) == "graded"
+    assert seen == ["node-1"]
+    assert main.grading is None

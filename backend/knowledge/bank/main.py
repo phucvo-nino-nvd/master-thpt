@@ -8,6 +8,7 @@ from common.schema import (
     Document,
     ImageRef,
     Option,
+    Question,
     QuestionPart,
     QuestionType,
     SourceBlock,
@@ -15,6 +16,8 @@ from common.schema import (
 
 
 ITEM_BANK_PATH = Path(__file__).resolve().parents[3] / "artifacts" / "item_bank.jsonl"
+SECTIONS = {"multiple_choice": "I", "true_false": "II", "short_answer": "III"}
+GENERATED_PREFIX = "generated://"
 
 
 class Item(BaseModel):
@@ -67,10 +70,36 @@ def make_item_id(source_url: str, section: str | None, number: str) -> str:
     return str(uuid5(NAMESPACE_URL, key))
 
 
+def numbered(questions: list[Question], source_url: str) -> list[Question]:
+    counters: dict[str | None, int] = {}
+
+    for item in load_items():
+        if item["source_url"] == source_url:
+            section = item["section"]
+            counters[section] = max(counters.get(section, 0), int(item["number"]))
+
+    ordered = []
+
+    for question in questions:
+        section = SECTIONS.get(question.type)
+        counters[section] = counters.get(section, 0) + 1
+
+        ordered.append(
+            question.model_copy(
+                update={"section": section, "number": str(counters[section])}
+            )
+        )
+
+    return ordered
+
+
 def document_to_items(document: Document) -> list[Item]:
     items: list[Item] = []
 
     for question in document.questions:
+        if question.type not in SECTIONS:
+            continue
+
         item = Item(
             id=make_item_id(
                 source_url=document.source_url,

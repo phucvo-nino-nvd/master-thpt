@@ -7,6 +7,7 @@ from typing import Any
 import os
 
 from agents.crawler.schema import CrawlerRequest
+from common.utils import normalized
 from knowledge.graph.convert import load_graph, node_map
 from knowledge.graph.query import (
     get_dependents,
@@ -416,12 +417,32 @@ def lacking_knowledge(solved: set[str]) -> list[str]:
     ]
 
 
+def matching_nodes(concept: str) -> list[str]:
+    wanted = normalized(concept)
+    nodes = node_map()
+
+    return [
+        step["knowledge_id"]
+        for step in learning_path()
+        if wanted in normalized(nodes[step["knowledge_id"]]["name"])
+    ]
+
+
+def stocked_count(concept: str, solved: set[str]) -> int:
+    pending = pending_of(matching_nodes(concept), solved)
+
+    return sum(len(question_ids) for question_ids in pending.values())
+
+
 def crawl_requests(
     solved: set[str],
     exclude_urls: list[str],
     concept: str = "",
 ) -> list[CrawlerRequest]:
     if concept:
+        if stocked_count(concept, solved) >= MIN_QUESTIONS:
+            return []
+
         return [
             CrawlerRequest(
                 grade=CRAWL_GRADE,

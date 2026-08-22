@@ -4,6 +4,7 @@ from collections.abc import Callable, Iterable, Sequence
 from concurrent.futures import ThreadPoolExecutor
 from contextvars import copy_context
 from pathlib import Path
+from threading import Thread
 from typing import Any
 from dotenv import load_dotenv
 from langsmith import traceable
@@ -13,14 +14,16 @@ import os
 from agents.crawler.main import crawl
 from agents.crawler.schema import CrawlerRequest
 from agents.parser.main import parse_question
-from agents.teacher.main import evaluate
+from agents.teacher.main import evaluate, write_questions
 from agents.teacher.rubric import match_answer, settled
 from agents.verifier.main import verify
 from common.schema import Document, Evaluation
-from agents.learner.service import crawl_requests, run_learner
+from common.utils import normalized, write_json
+from agents.learner.service import MIN_QUESTIONS, crawl_requests, run_learner, stocked_count
 from history.main import queue_docs, solved_question_ids, take_doc
-from knowledge.bank.main import build_item_bank, source_urls
+from knowledge.bank.main import GENERATED_PREFIX, build_item_bank, numbered, source_urls
 from knowledge.bank.tagger import tag_items
+from knowledge.graph.convert import node_map
 
 
 State = dict[str, Any]
@@ -30,6 +33,7 @@ Node = Callable[[State], State]
 load_dotenv(override=True)
 
 MAX_GRADING_WORKERS = int(os.getenv("MAX_GRADING_WORKERS", "8"))
+ARTIFACTS = Path(__file__).resolve().parents[1] / "artifacts"
 
 def run(
     nodes: Sequence[Node],
@@ -71,6 +75,34 @@ def crawler_agent(state: State) -> State:
 def parser_agent(state: State) -> State:
     # PDF/Word URL -> Datalab OCR -> refined.json per document
     return {"refined_paths": parse_question(state["crawled"])}
+
+
+@traceable(name="Author Agent", run_type="chain")
+def author_agent(state: State) -> State:
+    request = state["request"]
+
+    questions = write_questions(
+        request.concept,
+        request.grade,
+        MIN_QUESTIONS - stocked_count(request.concept, solved_question_ids()),
+    )
+
+    if not questions:
+        return {"refined_paths": []}
+
+    source_url = f"{GENERATED_PREFIX}{normalized(request.concept).replace(' ', '-')}"
+
+    document = Document(
+        source_url=source_url,
+        title=f"Câu tự sinh: {request.concept}",
+        grade=request.grade,
+        questions=numbered(questions, source_url),
+    )
+
+    path = ARTIFACTS / "data" / document.title / "refined.json"
+    write_json(path, document.model_dump())
+
+    return {"refined_paths": [path]}
 
 
 @traceable(name="Item Bank", run_type="chain")
@@ -129,15 +161,41 @@ def graded_attempts(state: State) -> list[dict]:
 
 @traceable(name="Learner Agent", run_type="chain")
 def learner_agent(state: State) -> State:
-    return run_learner(
+    learned = run_learner(
         knowledge_id=state.get("knowledge_id"),
         attempts=graded_attempts(state),
     )
+    concept = restock_concept(learned)
+
+    if concept is not None:
+        Thread(target=stock_practice, args=(concept,), daemon=True).start()
+
+    return learned
+
+
+def restock_concept(state: State) -> str | None:
+    nodes = node_map()
+
+    touched = [
+        updated
+        for updated in state["knowledge_states"]
+        if updated["knowledge_id"] in nodes
+    ]
+
+    if not touched:
+        return None
+
+    weakest = min(touched, key=lambda updated: updated["mastery"])
+
+    return nodes[weakest["knowledge_id"]]["name"]
 
 
 @traceable(name="Ingest Pipeline", run_type="chain")
 def ingest(request: CrawlerRequest, on_node: Callable[[str], None] | None = None) -> State:
     state = run((crawler_agent,), {"request": request}, on_node)
+
+    if not state["crawled"].docs:
+        return run((author_agent, item_bank), state, on_node)
 
     if manual:
         queue_docs(state["crawled"])

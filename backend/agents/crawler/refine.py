@@ -20,6 +20,7 @@ BUNDLES = (
 BUNDLE_COUNT = re.compile(r"(?<!toan )(?<!lop )(?<!lan )(?<!khoi )\b\d{1,3}\s*de\b")
 EXAM_NUMBER = re.compile(r"(?<!ma )\bde\s*(?:so\s*)?(\d{1,2})\b")
 SEPARATORS = re.compile(r"[\s\-_.+/]+")
+PAGE_OBJECT = re.compile(rb"/Type\s*/Page[^s]")
 MIN_EXAMS = 2
 
 
@@ -52,4 +53,8 @@ def is_multi_exam(text: str) -> bool:
 
 def is_single_exam(title: str, url: str, content: str = "") -> bool:
     return not is_bundle(title, url) and not is_multi_exam(f"{title} {content}")
+
+
+def page_count(body: bytes) -> int:
+    return len(PAGE_OBJECT.findall(body))
 

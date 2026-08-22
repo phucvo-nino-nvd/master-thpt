@@ -10,15 +10,15 @@ import main
 import os
 import re
 
-from agents.learner.service import get_knowledge_graph, learning_path, pending_of
+from agents.learner.service import crawl_requests, get_knowledge_graph, learning_path, pending_of, stocked_count
 from agents.teacher.main import explain, give_hint
 from agents.teacher.rubric import answer_of
 from agents.teacher.schema import HintRequest, HintResponse, SolutionRequest, SolutionResponse
 from common.schema import Evaluation
 from common.utils import normalized
-from history.main import attempted_exam_ids, drop_doc, get_answer, get_history, list_history, queued_docs, save_answer, solved_question_ids, start_history
+from history.main import attempted_exam_ids, drop_doc, get_answer, get_history, list_history, queued_docs, save_answer, solved_question_ids, start_history, streak
 from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRequest
-from knowledge.bank.main import Item, items_of, load_items
+from knowledge.bank.main import GENERATED_PREFIX, Item, items_of, load_items, source_urls
 from knowledge.graph.convert import node_map
 from main import approve, grade, stock_practice
 from .schema import CheckRequest, DocumentItem, GradingStatus, PracticeRequest, PracticeStatus, SubmitRequest, SubmitResponse
@@ -63,6 +63,9 @@ def submission_of(question_id: str, student_answer: str | list[bool]) -> dict:
 def list_documents() -> list[DocumentItem]:
     groups: dict[str, list[dict]] = {}
     for item in load_items():
+        if item["source_url"].startswith(GENERATED_PREFIX):
+            continue
+
         groups.setdefault(item["source_url"], []).append(item)
 
     attempted = attempted_exam_ids()
@@ -166,6 +169,16 @@ def ingest_state() -> dict:
     return {"manual": main.manual, "batches": queued_docs()}
 
 
+def reject_if_busy() -> None:
+    if main.progress is None:
+        return
+
+    raise HTTPException(
+        status_code=409,
+        detail=f"Đang nạp đề cho \"{main.progress['concept'] or 'phần bạn còn yếu'}\". Xong sẽ tự cập nhật, thử lại sau.",
+    )
+
+
 def practice_set_of(knowledge_id: str, question_ids: set[str] | None = None) -> dict:
     node = node_map().get(knowledge_id)
 
@@ -242,6 +255,8 @@ def delete_ingest(url: str) -> dict:
 
 @app.post("/api/ingest/approve")
 def post_ingest_approve(url: str, background: BackgroundTasks) -> dict:
+    reject_if_busy()
+
     background.add_task(approve, url)
 
     return ingest_state()
@@ -260,6 +275,16 @@ def get_practice_status() -> PracticeStatus:
 @app.post("/api/practice/update")
 def post_practice_update(request: PracticeRequest, background: BackgroundTasks) -> list[DocumentItem]:
     query = request.request.strip()
+
+    reject_if_busy()
+
+    solved = solved_question_ids()
+
+    if query and not crawl_requests(solved, source_urls(), query):
+        raise HTTPException(
+            status_code=409,
+            detail=f'Đã có {stocked_count(query, solved)} câu "{query}" chưa làm, chưa cần tìm thêm đề.',
+        )
 
     background.add_task(stock_practice, query)
 
@@ -307,7 +332,7 @@ def get_grading_status() -> GradingStatus:
 
 
 @app.post("/api/exams/submit")
-def post_exam_submit(request: SubmitRequest, background: BackgroundTasks) -> SubmitResponse:
+def post_exam_submit(request: SubmitRequest) -> SubmitResponse:
     submissions = [
         submission_of(answer.question_id, answer.student_answer)
         for answer in request.answers
@@ -329,8 +354,6 @@ def post_exam_submit(request: SubmitRequest, background: BackgroundTasks) -> Sub
     finally:
         main.grading = None
 
-    background.add_task(stock_practice)
-
     return SubmitResponse(
         exam_id=request.exam_id,
         history_id=created.history_id,
@@ -344,23 +367,26 @@ def post_exam_submit(request: SubmitRequest, background: BackgroundTasks) -> Sub
 
 
 @app.post("/api/practice/check-question")
-def post_practice_check(request: CheckRequest, background: BackgroundTasks) -> Evaluation:
+def post_practice_check(request: CheckRequest) -> Evaluation:
     submission = submission_of(request.question_id, request.student_answer)
-    evaluation = grade([submission])["evaluations"][0]
+    reviewed = get_history(request.history_id)
+
+    main.grading = reviewed.exam_id if reviewed else None
 
     try:
+        evaluation = grade([submission])["evaluations"][0]
         save_answer(request.history_id, request.question_id, request.student_answer, evaluation)
     except IntegrityError:
         raise HTTPException(status_code=404, detail="Không tìm thấy lượt làm bài.")
-
-    background.add_task(stock_practice)
+    finally:
+        main.grading = None
 
     return evaluation
 
 
 @app.get("/api/knowledge_graph")
 def get_graph() -> dict:
-    return get_knowledge_graph()
+    return {**get_knowledge_graph(), "streak": streak()}
 
 
 if __name__ == "__main__":

@@ -87,7 +87,7 @@ def settled(item: Item) -> bool:
 
 
 def normalize_answer(text: str) -> str:
-    return text.strip().casefold().replace(",", ".").replace(" ", "").rstrip(".")
+    return text.strip().casefold().replace(",", ".").replace(" ", "").replace("$", "").rstrip(".")
 
 
 def match_answer(item: Item, student_answer: str | list[bool]) -> Evaluation | None:

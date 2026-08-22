@@ -8,7 +8,7 @@ import re
 import requests
 
 from .prompt import build_query
-from .refine import is_single_exam
+from .refine import is_single_exam, page_count
 from .schema import CrawledDoc, CrawlerRequest, CrawlerResponse
 
 load_dotenv(override=True)
@@ -19,6 +19,7 @@ client = TavilyClient(api_key=os.environ.get("TAVILY_API_KEY"))
 PARSABLE = (".pdf", ".doc", ".docx")
 DOMAINS = ["toanmath.com"]
 TIMEOUT = int(os.getenv("CRAWLER_TIMEOUT", "15"))
+MAX_PAGES = int(os.getenv("CRAWLER_MAX_PAGES", "15"))
 
 
 def crawl(request: CrawlerRequest) -> CrawlerResponse:
@@ -52,7 +53,7 @@ def crawl(request: CrawlerRequest) -> CrawlerResponse:
             or "application/msword" in content_type
             or "application/vnd.openxmlformats-officedocument.wordprocessingml.document" in content_type
         ):
-            url = response.url
+            url, payload = response.url, response
 
         # Tavily returns HTML page with a link to the PDF/Word file
         elif "text/html" in content_type:
@@ -107,12 +108,12 @@ def crawl(request: CrawlerRequest) -> CrawlerResponse:
             if not is_file:
                 continue
 
-            url = file_response.url
+            url, payload = file_response.url, file_response
 
         else:
             continue
 
-        if url in seen:
+        if url in seen or page_count(payload.content) > MAX_PAGES:
             continue
 
         seen.add(url)

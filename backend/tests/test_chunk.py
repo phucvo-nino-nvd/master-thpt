@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from knowledge.graph.chunk import REFINED_DIR, chunk_markdown_file
 
 

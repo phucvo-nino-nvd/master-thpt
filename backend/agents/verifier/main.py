@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from functools import lru_cache
+from langchain_core.messages import BaseMessage, HumanMessage
 from langsmith import traceable
 
 import os
@@ -11,18 +12,38 @@ from common.schema import Evaluation
 from common.utils import chat_model
 from knowledge.bank.main import Item
 from .context import VERIFY_CONTEXT
+from .tools import TOOLS, tool_messages
 
 
 VERIFIER_MODEL = os.getenv("OPENROUTER_VERIFIER_MODEL")
+TOOL_TURNS = int(os.getenv("VERIFIER_TOOL_TURNS", "2"))
 
 
 @lru_cache(maxsize=1)
 def verifier():
-    return chat_model(VERIFIER_MODEL).with_structured_output(
+    return chat_model(VERIFIER_MODEL).bind_tools(TOOLS).with_structured_output(
         Evaluation,
         method="json_schema",
         strict=True,
+        include_raw=True,
     )
+
+
+@lru_cache(maxsize=1)
+def calculator():
+    return chat_model(VERIFIER_MODEL).bind_tools(TOOLS, tool_choice="any")
+
+
+def answered(messages: list[BaseMessage], reply: BaseMessage) -> bool:
+    results = tool_messages(reply)
+
+    if not results:
+        return False
+
+    messages.append(reply)
+    messages.extend(results)
+
+    return True
 
 
 def build_verify_prompt(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> str:
@@ -50,12 +71,24 @@ def build_verify_prompt(item: Item, student_answer: str | list[bool], evaluation
 
 @traceable(name="Verify evaluation")
 def verify(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Evaluation:
-    prompt = build_verify_prompt(item, student_answer, evaluation)
+    messages: list[BaseMessage] = [
+        HumanMessage(build_verify_prompt(item, student_answer, evaluation))
+    ]
+
+    answered(messages, calculator().invoke(messages))
 
     reviewed = None
 
-    for _ in range(2):
-        reviewed = Evaluation.model_validate(verifier().invoke(prompt))
+    for _ in range(TOOL_TURNS + 2):
+        result = verifier().invoke(messages)
+
+        if answered(messages, result["raw"]):
+            continue
+
+        if result["parsed"] is None:
+            continue
+
+        reviewed = Evaluation.model_validate(result["parsed"])
 
         if len(reviewed.part_correct) == len(item.parts):
             return apply_rubric(item, student_answer, reviewed)
