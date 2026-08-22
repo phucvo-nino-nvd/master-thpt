@@ -246,3 +246,8 @@ We welcome and appreciate all contributions to the MASTER THPT platform. Thank y
   <img src="https://contrib.rocks/image?repo=khang1108/masterTHPT" />
   </a>
 </p>
+
+## License
+
+MIT, covering the code in this repository. Exam papers, textbook extracts and anything else under
+`artifacts/` stay with their original owners and are not licensed here.
