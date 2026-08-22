@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG",
+  "right_id": "CONG_THUC_CONG_TAN",
+  "merge": false,
+  "rationale": "'Công thức cộng' is a general term for trigonometric addition formulas, while 'Công thức cộng tan' is a specific formula for tangent. The general concept encompasses multiple specific formulas (sin, cos, tan). They are not identical; one is a general category, the other a specific instance."
+}

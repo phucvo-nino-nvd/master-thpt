@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_BIEN_THIEN_HAM_SO_LOGARIT",
+  "right_id": "TINH_CHAT_BIEN_THIEN_HAM_SO_MU",
+  "merge": false,
+  "rationale": "The left node describes the monotonicity property of logarithmic functions, and the right node describes the monotonicity property of exponential functions. They are properties of two different function families. They are related but represent different mathematical objects."
+}

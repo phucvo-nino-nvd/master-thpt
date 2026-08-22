@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_PHAP_HINH_CAY",
+  "right_id": "SO_DO_HINH_CAY_METHOD",
+  "merge": true,
+  "rationale": "Phương pháp hình cây and Phương pháp sơ đồ hình cây both describe the tree diagram method for probability. The descriptions are semantically identical; they are true duplicates."
+}

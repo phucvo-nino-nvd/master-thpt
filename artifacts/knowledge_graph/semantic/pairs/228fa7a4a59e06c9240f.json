@@ -1,0 +1,6 @@
+{
+  "left_id": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "The left node is the 'solution region' (a set of points), which is a geometric concept. The right node is the 'solution' (a specific ordered pair), which is an algebraic concept. One is a set, the other is an element of that set. They are related but distinct concepts."
+}

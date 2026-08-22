@@ -1,0 +1,6 @@
+{
+  "left_id": "DINH_LI_BA_DUONG_VUONG_GOC",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node is the theorem of three perpendiculars, relating a line, its projection, and a line in a plane. The right node is a theorem about a line and a plane both perpendicular to another line. They are distinct theorems in solid geometry."
+}

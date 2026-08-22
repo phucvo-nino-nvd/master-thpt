@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_HOP",
+  "right_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+  "merge": false,
+  "rationale": "The left node 'Đạo hàm của hàm số hợp' is the chain rule for derivatives. The right node 'Đạo hàm của các hàm số sơ cấp cơ bản' is a collection of derivative rules for basic elementary functions. They are distinct derivative rules: one for composition, the other for basic functions."
+}

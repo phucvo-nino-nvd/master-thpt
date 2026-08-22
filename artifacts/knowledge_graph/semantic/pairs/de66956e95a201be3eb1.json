@@ -1,0 +1,6 @@
+{
+  "left_id": "HINH_HOP_DUNG",
+  "right_id": "HINH_LANG_TRU_DUNG",
+  "merge": false,
+  "rationale": "Right (upright prism) is a general concept. Left (upright rectangular prism) is a specific subtype (with parallelogram base). One is a special case of the other."
+}

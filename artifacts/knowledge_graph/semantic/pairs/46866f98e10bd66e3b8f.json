@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_LIEN_TUC_HAM_DA_THUC",
+  "right_id": "TINH_CHAT_LIEN_TUC_HAM_TAN_COT",
+  "merge": false,
+  "rationale": "These are distinct theorems about continuity of different function families: polynomials vs. trigonometric functions tan and cot."
+}

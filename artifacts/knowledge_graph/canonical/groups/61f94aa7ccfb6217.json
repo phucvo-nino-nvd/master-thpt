@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+      "name": "Vị trí tương đối giữa hai đường thẳng",
+      "type": "CONCEPT",
+      "description": "Quan hệ giữa hai đường thẳng, bao gồm cắt nhau, song song, trùng nhau, vuông góc."
+    },
+    {
+      "id": "PHUONG_PHAP_XAC_DINH_VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+      "name": "Phương pháp xác định vị trí tương đối hai đường thẳng",
+      "type": "METHOD",
+      "description": "Phương pháp xác định vị trí tương đối giữa hai đường thẳng bằng cách phân tích vectơ chỉ phương và vectơ nối hai điểm thuộc hai đường thẳng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0008",
+      "original_id": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+      "canonical_id": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+      "rationale": "This occurrence describes the concept of relative positions between two lines in the coordinate plane. It is a foundational CONCEPT."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0005",
+      "original_id": "VI_TRI_TUONG_DOI_DUONG_THANG",
+      "canonical_id": "PHUONG_PHAP_XAC_DINH_VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+      "rationale": "This occurrence describes a specific METHOD for determining the relative position between two lines in space using vector analysis. It is a procedural technique, distinct from the general concept. Therefore, it should be split into a separate canonical node."
+    }
+  ]
+}

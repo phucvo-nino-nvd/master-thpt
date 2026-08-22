@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_HOP",
+  "right_id": "DAO_HAM_CUA_HAM_SO_SIN",
+  "merge": false,
+  "rationale": "The left node is the general chain rule for composite functions. The right node is a specific derivative rule for the sine function and its composite form. One is a general rule, the other is a specific application/instance. They are not semantic duplicates."
+}

@@ -1,0 +1,125 @@
+{
+  "chunk_id": "toan-10-tap-2:0012",
+  "nodes": [
+    {
+      "id": "HOAN_VI",
+      "name": "Hoán vị",
+      "type": "CONCEPT",
+      "description": "Một cách sắp xếp có thứ tự n phần tử của một tập hợp có n phần tử (n ≥ 1).",
+      "grade": 10
+    },
+    {
+      "id": "CHINH_HOP",
+      "name": "Chỉnh hợp",
+      "type": "CONCEPT",
+      "description": "Một cách sắp xếp có thứ tự k phần tử từ một tập hợp n phần tử (1 ≤ k ≤ n).",
+      "grade": 10
+    },
+    {
+      "id": "TO_HOP",
+      "name": "Tổ hợp",
+      "type": "CONCEPT",
+      "description": "Một cách chọn k phần tử từ một tập hợp n phần tử (0 ≤ k ≤ n) mà không quan tâm đến thứ tự.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_HOAN_VI",
+      "name": "Công thức hoán vị",
+      "type": "FORMULA",
+      "description": "Số hoán vị của n phần tử là Pₙ = n! = n × (n-1) × ... × 2 × 1.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_CHINH_HOP",
+      "name": "Công thức chỉnh hợp",
+      "type": "FORMULA",
+      "description": "Số chỉnh hợp chập k của n là Aₙᵏ = n × (n-1) × ... × (n-k+1) = n! / (n-k)!.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_TO_HOP",
+      "name": "Công thức tổ hợp",
+      "type": "FORMULA",
+      "description": "Số tổ hợp chập k của n là Cₙᵏ = n! / (k! × (n-k)!).",
+      "grade": 10
+    },
+    {
+      "id": "QUY_TAC_NHAN",
+      "name": "Quy tắc nhân",
+      "type": "METHOD",
+      "description": "Phương pháp tính số cách thực hiện nhiều công việc liên tiếp bằng cách nhân số cách thực hiện từng công việc.",
+      "grade": 10
+    },
+    {
+      "id": "GIAI_THUAT_TINH_HOAN_VI",
+      "name": "Giải thuật tính hoán vị",
+      "type": "METHOD",
+      "description": "Sử dụng máy tính cầm tay để tính n! bằng cách nhập n, ấn phím giai thừa, và ấn phím bằng.",
+      "grade": 10
+    },
+    {
+      "id": "GIAI_THUAT_TINH_CHINH_HOP",
+      "name": "Giải thuật tính chỉnh hợp",
+      "type": "METHOD",
+      "description": "Sử dụng máy tính cầm tay để tính Aₙᵏ bằng cách nhập n, ấn phím chỉnh hợp, nhập k, và ấn phím bằng.",
+      "grade": 10
+    },
+    {
+      "id": "GIAI_THUAT_TINH_TO_HOP",
+      "name": "Giải thuật tính tổ hợp",
+      "type": "METHOD",
+      "description": "Sử dụng máy tính cầm tay để tính Cₙᵏ bằng cách nhập n, ấn phím tổ hợp, nhập k, và ấn phím bằng.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "HOAN_VI",
+      "target": "CONG_THUC_HOAN_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CHINH_HOP",
+      "target": "CONG_THUC_CHINH_HOP",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TO_HOP",
+      "target": "CONG_THUC_TO_HOP",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CHINH_HOP",
+      "target": "QUY_TAC_NHAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TO_HOP",
+      "target": "QUY_TAC_NHAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "HOAN_VI",
+      "target": "CHINH_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_HOAN_VI",
+      "target": "CONG_THUC_CHINH_HOP",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_CHINH_HOP",
+      "target": "CONG_THUC_TO_HOP",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

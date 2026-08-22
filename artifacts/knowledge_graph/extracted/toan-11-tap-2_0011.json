@@ -1,0 +1,184 @@
+{
+  "chunk_id": "toan-11-tap-2:0011",
+  "nodes": [
+    {
+      "id": "GOC_GIUA_HAI_MAT_PHANG",
+      "name": "Góc giữa hai mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Góc giữa hai mặt phẳng được xác định bởi góc giữa hai đường thẳng tương ứng vuông góc với mỗi mặt phẳng.",
+      "grade": 11
+    },
+    {
+      "id": "HAI_MAT_PHANG_VUONG_GOC",
+      "name": "Hai mặt phẳng vuông góc",
+      "type": "CONCEPT",
+      "description": "Hai mặt phẳng được gọi là vuông góc với nhau nếu góc giữa chúng bằng 90°.",
+      "grade": 11
+    },
+    {
+      "id": "GOC_NHI_DIEN",
+      "name": "Góc nhị diện",
+      "type": "CONCEPT",
+      "description": "Góc nhị diện là hình gồm hai nửa mặt phẳng có chung bờ.",
+      "grade": 11
+    },
+    {
+      "id": "GOC_PHANG_CUA_GOC_NHI_DIEN",
+      "name": "Góc phẳng của góc nhị diện",
+      "type": "CONCEPT",
+      "description": "Góc phẳng của góc nhị diện là góc giữa hai tia vuông góc với cạnh của góc nhị diện.",
+      "grade": 11
+    },
+    {
+      "id": "HINH_LANG_TRU_DUNG",
+      "name": "Hình lăng trụ đứng",
+      "type": "CONCEPT",
+      "description": "Hình lăng trụ đứng là hình lăng trụ có các cạnh bên vuông góc với mặt đáy.",
+      "grade": 11
+    },
+    {
+      "id": "HINH_LANG_TRU_DEU",
+      "name": "Hình lăng trụ đều",
+      "type": "CONCEPT",
+      "description": "Hình lăng trụ đều là hình lăng trụ đứng có đáy là đa giác đều.",
+      "grade": 11
+    },
+    {
+      "id": "HINH_HOP_DUNG",
+      "name": "Hình hộp đứng",
+      "type": "CONCEPT",
+      "description": "Hình hộp đứng là hình lăng trụ đứng có đáy là hình bình hành.",
+      "grade": 11
+    },
+    {
+      "id": "HINH_HOP_CHU_NHAT",
+      "name": "Hình hộp chữ nhật",
+      "type": "CONCEPT",
+      "description": "Hình hộp chữ nhật là hình hộp đứng có đáy là hình chữ nhật.",
+      "grade": 11
+    },
+    {
+      "id": "HINH_LAP_PHUONG",
+      "name": "Hình lập phương",
+      "type": "CONCEPT",
+      "description": "Hình lập phương là hình hộp chữ nhật có tất cả các cạnh bằng nhau.",
+      "grade": 11
+    },
+    {
+      "id": "HINH_CHOP_DEU",
+      "name": "Hình chóp đều",
+      "type": "CONCEPT",
+      "description": "Hình chóp đều là hình chóp có đáy là đa giác đều và các cạnh bên bằng nhau.",
+      "grade": 11
+    },
+    {
+      "id": "HINH_CHOP_CUT_DEU",
+      "name": "Hình chóp cụt đều",
+      "type": "CONCEPT",
+      "description": "Hình chóp cụt đều được tạo thành từ hình chóp đều sau khi cắt đi chóp đều nhỏ hơn.",
+      "grade": 11
+    },
+    {
+      "id": "DIEU_KIEN_HAI_MAT_PHANG_VUONG_GOC",
+      "name": "Điều kiện hai mặt phẳng vuông góc",
+      "type": "THEOREM",
+      "description": "Hai mặt phẳng vuông góc với nhau nếu mặt phẳng này chứa một đường thẳng vuông góc với mặt phẳng kia.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC",
+      "name": "Tính chất hai mặt phẳng vuông góc",
+      "type": "THEOREM",
+      "description": "Với hai mặt phẳng vuông góc với nhau, bất kì đường thẳng nào nằm trong mặt phẳng này mà vuông góc với giao tuyến cũng vuông góc với mặt phẳng kia.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_GIAO_TUYEN_CUNG_VUONG_GOC",
+      "name": "Tính chất giao tuyến cùng vuông góc",
+      "type": "THEOREM",
+      "description": "Nếu hai mặt phẳng cắt nhau và cùng vuông góc với một mặt phẳng thứ ba thì giao tuyến của chúng vuông góc với mặt phẳng thứ ba đó.",
+      "grade": 11
+    },
+    {
+      "id": "CHUYEN_DOI_GOC_NHI_DIEN",
+      "name": "Chuyển đổi góc nhị diện",
+      "type": "METHOD",
+      "description": "Chuyển đổi giữa góc phẳng của góc nhị diện và góc giữa hai mặt phẳng.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "HAI_MAT_PHANG_VUONG_GOC",
+      "target": "GOC_GIUA_HAI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": "Để định nghĩa hai mặt phẳng vuông góc, cần hiểu khái niệm góc giữa hai mặt phẳng."
+    },
+    {
+      "source": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC",
+      "target": "HAI_MAT_PHANG_VUONG_GOC",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất hai mặt phẳng vuông góc dựa trên định nghĩa hai mặt phẳng vuông góc."
+    },
+    {
+      "source": "TINH_CHAT_GIAO_TUYEN_CUNG_VUONG_GOC",
+      "target": "HAI_MAT_PHANG_VUONG_GOC",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất giao tuyến cùng vuông góc dựa trên định nghĩa hai mặt phẳng vuông góc."
+    },
+    {
+      "source": "GOC_PHANG_CUA_GOC_NHI_DIEN",
+      "target": "GOC_NHI_DIEN",
+      "relation": "REQUIRES",
+      "rationale": "Để định nghĩa góc phẳng của góc nhị diện, cần hiểu khái niệm góc nhị diện."
+    },
+    {
+      "source": "HINH_LANG_TRU_DUNG",
+      "target": "HAI_MAT_PHANG_VUONG_GOC",
+      "relation": "REQUIRES",
+      "rationale": "Hình lăng trụ đứng được định nghĩa dựa trên khái niệm hai mặt phẳng vuông góc."
+    },
+    {
+      "source": "HINH_LANG_TRU_DEU",
+      "target": "HINH_LANG_TRU_DUNG",
+      "relation": "REQUIRES",
+      "rationale": "Hình lăng trụ đều là một trường hợp đặc biệt của hình lăng trụ đứng."
+    },
+    {
+      "source": "HINH_HOP_DUNG",
+      "target": "HINH_LANG_TRU_DUNG",
+      "relation": "REQUIRES",
+      "rationale": "Hình hộp đứng là một trường hợp đặc biệt của hình lăng trụ đứng."
+    },
+    {
+      "source": "HINH_HOP_CHU_NHAT",
+      "target": "HINH_HOP_DUNG",
+      "relation": "REQUIRES",
+      "rationale": "Hình hộp chữ nhật là một trường hợp đặc biệt của hình hộp đứng."
+    },
+    {
+      "source": "HINH_LAP_PHUONG",
+      "target": "HINH_HOP_CHU_NHAT",
+      "relation": "REQUIRES",
+      "rationale": "Hình lập phương là một trường hợp đặc biệt của hình hộp chữ nhật."
+    },
+    {
+      "source": "HINH_CHOP_DEU",
+      "target": "HAI_MAT_PHANG_VUONG_GOC",
+      "relation": "REQUIRES",
+      "rationale": "Hình chóp đều được định nghĩa dựa trên khái niệm hai mặt phẳng vuông góc."
+    },
+    {
+      "source": "HINH_CHOP_CUT_DEU",
+      "target": "HINH_CHOP_DEU",
+      "relation": "REQUIRES",
+      "rationale": "Hình chóp cụt đều được tạo thành từ hình chóp đều."
+    },
+    {
+      "source": "CHUYEN_DOI_GOC_NHI_DIEN",
+      "target": "GOC_NHI_DIEN",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp chuyển đổi góc nhị diện dựa trên khái niệm góc nhị diện."
+    }
+  ]
+}

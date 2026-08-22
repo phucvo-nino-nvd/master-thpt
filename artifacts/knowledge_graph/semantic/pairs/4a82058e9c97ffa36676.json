@@ -1,0 +1,6 @@
+{
+  "left_id": "TAP_GIA_TRI",
+  "right_id": "TAP_XAC_DINH",
+  "merge": false,
+  "rationale": "Tập giá trị (range) and Tập xác định (domain) are distinct concepts in function theory. One is the set of input values, the other is the set of output values. They are related but not semantic duplicates."
+}

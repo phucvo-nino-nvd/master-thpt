@@ -1,0 +1,135 @@
+{
+  "chunk_id": "toan-10-tap-1:0006",
+  "nodes": [
+    {
+      "id": "DINH_LI_COSIN",
+      "name": "Định lí côsin",
+      "type": "THEOREM",
+      "description": "Trong tam giác ABC, công thức liên hệ độ dài các cạnh với lượng giác của các góc: a² = b² + c² - 2bc cos A, b² = a² + c² - 2ac cos B, c² = a² + b² - 2ab cos C.",
+      "grade": 10
+    },
+    {
+      "id": "DINH_LI_SIN",
+      "name": "Định lí sin",
+      "type": "THEOREM",
+      "description": "Trong tam giác ABC, công thức liên hệ độ dài các cạnh với lượng giác của các góc: a/sin A = b/sin B = c/sin C = 2R, với R là bán kính đường tròn ngoại tiếp.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+      "name": "Công thức tính diện tích tam giác",
+      "type": "FORMULA",
+      "description": "Diện tích tam giác ABC có thể tính theo công thức: S = (1/2)bc sin A = (1/2)ca sin B = (1/2)ab sin C = (abc)/(4R) = √[p(p-a)(p-b)(p-c)] (Công thức Heron).",
+      "grade": 10
+    },
+    {
+      "id": "GIAI_TAM_GIAC",
+      "name": "Giải tam giác",
+      "type": "METHOD",
+      "description": "Xác định các cạnh và góc của tam giác khi biết một số thông tin ban đầu (ví dụ: hai cạnh và góc xen giữa, ba cạnh, một cạnh và hai góc kề).",
+      "grade": 10
+    },
+    {
+      "id": "TAM_GIAC",
+      "name": "Tam giác",
+      "type": "CONCEPT",
+      "description": "Hình ba cạnh, ba đỉnh và ba góc. Các thành phần: các đỉnh A, B, C; các cạnh a, b, c; các góc A, B, C; nửa chu vi p; diện tích S; bán kính ngoại tiếp R, nội tiếp r.",
+      "grade": 10
+    },
+    {
+      "id": "DUONG_TRON_NGOAI_TIEP",
+      "name": "Đường tròn ngoại tiếp",
+      "type": "CONCEPT",
+      "description": "Đường tròn đi qua ba đỉnh của tam giác, bán kính là R.",
+      "grade": 10
+    },
+    {
+      "id": "DUONG_TRON_NOI_TIEP",
+      "name": "Đường tròn nội tiếp",
+      "type": "CONCEPT",
+      "description": "Đường tròn tiếp xúc với ba cạnh của tam giác, bán kính là r.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_HERON",
+      "name": "Công thức Heron",
+      "type": "FORMULA",
+      "description": "Diện tích tam giác tính theo nửa chu vi p và độ dài các cạnh: S = √[p(p-a)(p-b)(p-c)].",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "DINH_LI_COSIN",
+      "target": "TAM_GIAC",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "DINH_LI_SIN",
+      "target": "TAM_GIAC",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+      "target": "TAM_GIAC",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "GIAI_TAM_GIAC",
+      "target": "TAM_GIAC",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "DINH_LI_SIN",
+      "target": "DUONG_TRON_NGOAI_TIEP",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+      "target": "DUONG_TRON_NGOAI_TIEP",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+      "target": "DUONG_TRON_NOI_TIEP",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_HERON",
+      "target": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "GIAI_TAM_GIAC",
+      "target": "DINH_LI_COSIN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIAI_TAM_GIAC",
+      "target": "DINH_LI_SIN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+      "target": "DINH_LI_SIN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_HERON",
+      "target": "DINH_LI_COSIN",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

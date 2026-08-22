@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_LOGARIT",
+  "right_id": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+  "merge": false,
+  "rationale": "The left node describes logarithmic inequalities in general. The right node describes basic logarithmic inequalities. The right node is likely a subset or special case (basic form) of the general concept. One is a general concept, the other is a specific subtype. They are not true semantic duplicates."
+}

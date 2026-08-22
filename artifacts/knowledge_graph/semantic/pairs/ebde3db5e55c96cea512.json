@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_VUONG_GOC_HAI_MAT_PHANG",
+  "right_id": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC",
+  "merge": false,
+  "rationale": "The left node is a condition (theorem) for two planes to be perpendicular based on their normal vectors. The right node is a property (theorem) of two planes that are already perpendicular. One is a criterion, the other is a consequence; they are related but not identical."
+}

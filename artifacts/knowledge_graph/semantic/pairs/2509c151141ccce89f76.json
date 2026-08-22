@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_LOGARIT",
+  "right_id": "HAM_SO_LOGARIT_CO_SO_A",
+  "merge": true,
+  "rationale": "Both nodes define the logarithmic function with base a: y = logₐx, with the same conditions a > 0, a ≠ 1. 'Hàm số lôgarit' and 'Hàm số lôgarit cơ số a' are different phrasings for the same core concept. The descriptions are identical. They are semantic duplicates."
+}

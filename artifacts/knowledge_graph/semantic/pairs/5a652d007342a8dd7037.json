@@ -1,0 +1,6 @@
+{
+  "left_id": "TOA_DO_VECTO_TRONG_KG",
+  "right_id": "TOA_DO_VECTO_TRONG_MP",
+  "merge": false,
+  "rationale": "The left node describes vector coordinates in 3D space (Oxyz), while the right node describes vector coordinates in 2D plane (Oxy). They represent the same concept but in different dimensional spaces. According to the guidelines, a 2D formula and its 3D analogue should be KEPT separate as they encode different coordinate dimensions."
+}

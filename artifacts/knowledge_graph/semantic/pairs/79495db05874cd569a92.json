@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_MAT_PHANG",
+  "right_id": "DUONG_THANG_NAM_TRONG_MAT_PHANG",
+  "merge": false,
+  "rationale": "Đường thẳng cắt mặt phẳng and Đường thẳng nằm trong mặt phẳng describe two different, mutually exclusive spatial relationships between a line and a plane."
+}

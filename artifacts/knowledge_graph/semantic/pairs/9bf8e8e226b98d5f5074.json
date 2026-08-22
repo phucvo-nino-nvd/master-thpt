@@ -1,0 +1,6 @@
+{
+  "left_id": "SIN_ALPHA",
+  "right_id": "TAN_ALPHA",
+  "merge": false,
+  "rationale": "sin α and tan α are different trigonometric functions with distinct definitions and properties. They are not semantic duplicates; one cannot replace the other without losing meaningful mathematical distinction."
+}

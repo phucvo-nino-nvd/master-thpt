@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "KHONG_GIAN_MAU",
+      "name": "Không gian mẫu",
+      "type": "CONCEPT",
+      "description": "Tập hợp tất cả các kết quả có thể xảy ra của một phép thử ngẫu nhiên."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0005",
+      "original_id": "KHOANG_GIA_TRI_MAU",
+      "canonical_id": "KHONG_GIAN_MAU",
+      "rationale": "Occurrence describes the concept of sample space. The original ID 'KHOANG_GIA_TRI_MAU' appears to be a typo or variant spelling. It should be merged with other occurrences describing the same concept under the canonical ID 'KHONG_GIAN_MAU'."
+    },
+    {
+      "chunk_id": "toan-10-tap-2:0006",
+      "original_id": "KHOANG_GIAN_MAU",
+      "canonical_id": "KHONG_GIAN_MAU",
+      "rationale": "Occurrence describes the concept of sample space. The original ID 'KHOANG_GIAN_MAU' is a close variant of the standard term. It should be merged with other occurrences describing the same concept under the canonical ID 'KHONG_GIAN_MAU'."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0014",
+      "original_id": "KHOANG_GIA_TRI_MAU",
+      "canonical_id": "KHONG_GIAN_MAU",
+      "rationale": "Occurrence describes the concept of sample space. The original ID 'KHOANG_GIA_TRI_MAU' appears to be a typo or variant spelling. It should be merged with other occurrences describing the same concept under the canonical ID 'KHONG_GIAN_MAU'. Grade difference (11 vs 10) is not a reason to split."
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "chunk_id": "toan-10-tap-2:0006",
+  "nodes": [
+    {
+      "id": "XAC_SUAT_BIEN_CO_DOI",
+      "name": "Xác suất của biến cố đôi",
+      "type": "CONCEPT",
+      "description": "Xác suất của hai biến cố liên quan, thường được tính bằng quy tắc xác suất của biến cố đối.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_TO_HOP",
+      "name": "Phương pháp tổ hợp",
+      "type": "METHOD",
+      "description": "Phương pháp sử dụng các quy tắc đếm, hoán vị, chỉnh hợp và tổ hợp để tính xác suất.",
+      "grade": 10
+    },
+    {
+      "id": "SO_DO_HINH_CAY",
+      "name": "Sơ đồ hình cây",
+      "type": "METHOD",
+      "description": "Phương pháp mô tả các kết quả có thể của phép thử bằng sơ đồ hình cây để tính xác suất.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_XAC_SUAT_BIEN_CO_DOI",
+      "name": "Công thức xác suất của biến cố đối",
+      "type": "FORMULA",
+      "description": "Công thức P(¬E) = 1 - P(E) liên hệ xác suất của biến cố với xác suất của biến cố đối.",
+      "grade": 10
+    },
+    {
+      "id": "BIEN_CO_DOI",
+      "name": "Biến cố đôi",
+      "type": "CONCEPT",
+      "description": "Hai biến cố liên quan, thường được tính bằng quy tắc xác suất của biến cố đối.",
+      "grade": 10
+    },
+    {
+      "id": "KHOANG_GIAN_MAU",
+      "name": "Không gian mẫu",
+      "type": "CONCEPT",
+      "description": "Tập tất cả các kết quả có thể của một phép thử ngẫu nhiên.",
+      "grade": 10
+    },
+    {
+      "id": "BIEN_CO",
+      "name": "Biến cố",
+      "type": "CONCEPT",
+      "description": "Một tập con của không gian mẫu, đại diện cho một sự kiện có thể xảy ra.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "XAC_SUAT_BIEN_CO_DOI",
+      "target": "PHUONG_PHAP_TO_HOP",
+      "relation": "REQUIRES",
+      "rationale": "Xác suất của biến cố đôi có thể được tính bằng phương pháp tổ hợp."
+    },
+    {
+      "source": "XAC_SUAT_BIEN_CO_DOI",
+      "target": "SO_DO_HINH_CAY",
+      "relation": "REQUIRES",
+      "rationale": "Xác suất của biến cố đôi cũng có thể được tính bằng sơ đồ hình cây."
+    },
+    {
+      "source": "XAC_SUAT_BIEN_CO_DOI",
+      "target": "CONG_THUC_XAC_SUAT_BIEN_CO_DOI",
+      "relation": "REQUIRES",
+      "rationale": "Xác suất của biến cố đôi được tính bằng công thức xác suất của biến cố đối."
+    },
+    {
+      "source": "CONG_THUC_XAC_SUAT_BIEN_CO_DOI",
+      "target": "BIEN_CO_DOI",
+      "relation": "REQUIRES",
+      "rationale": "Công thức xác suất của biến cố đối yêu cầu hiểu về biến cố đối."
+    },
+    {
+      "source": "BIEN_CO_DOI",
+      "target": "BIEN_CO",
+      "relation": "IS_A",
+      "rationale": "Biến cố đối là một loại biến cố."
+    },
+    {
+      "source": "PHUONG_PHAP_TO_HOP",
+      "target": "KHOANG_GIAN_MAU",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tổ hợp yêu cầu hiểu về không gian mẫu."
+    },
+    {
+      "source": "SO_DO_HINH_CAY",
+      "target": "KHOANG_GIAN_MAU",
+      "relation": "REQUIRES",
+      "rationale": "Sơ đồ hình cây yêu cầu hiểu về không gian mẫu."
+    }
+  ]
+}

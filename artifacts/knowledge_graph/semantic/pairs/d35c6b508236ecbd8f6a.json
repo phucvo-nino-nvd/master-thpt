@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN",
+  "right_id": "GIOI_HAN_TAI_VO_CUC",
+  "merge": false,
+  "rationale": "'Giới hạn' is the general concept of limit, while 'Giới hạn tại vô cực' is a specific type of limit (at infinity). The latter is a special case of the former. They are not identical; the general concept is broader."
+}

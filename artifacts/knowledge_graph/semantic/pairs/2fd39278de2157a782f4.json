@@ -1,0 +1,6 @@
+{
+  "left_id": "HE_TRUC_TOA_DO_DESCARTES_VUONG_GOC",
+  "right_id": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+  "merge": true,
+  "rationale": "Both nodes describe the same concept: a Cartesian coordinate system in three-dimensional space with three mutually perpendicular axes. The descriptions are semantically equivalent, with one mentioning 'Descartes vuông góc' and the other describing the axes and unit vectors. They represent the same reusable mathematical knowledge."
+}

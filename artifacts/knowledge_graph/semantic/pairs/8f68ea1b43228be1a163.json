@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+  "right_id": "DUONG_VUONG_GOC_CHUNG",
+  "merge": false,
+  "rationale": "The left node defines a line perpendicular to a plane. The right node defines a common perpendicular line between two skew lines. They are distinct geometric concepts and relationships."
+}

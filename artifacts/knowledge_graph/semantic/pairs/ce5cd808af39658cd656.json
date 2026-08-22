@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_DAY_SO",
+  "right_id": "GIOI_HAN_VO_CUC",
+  "merge": false,
+  "rationale": "The left node is the concept of the limit of a sequence. The right node is the concept of an infinite limit (which can apply to sequences or functions). While related, 'limit of a sequence' is a specific type of limit, and 'infinite limit' describes a specific behavior. They are not the same reusable knowledge node."
+}

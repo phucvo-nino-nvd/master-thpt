@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_LIEN_TUC_TREN_MOT_DOAN",
+  "right_id": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+  "merge": false,
+  "rationale": "Continuity on a closed interval vs. continuity on an open interval. Different domains, different definitions."
+}

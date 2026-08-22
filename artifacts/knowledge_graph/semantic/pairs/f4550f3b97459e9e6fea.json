@@ -1,0 +1,6 @@
+{
+  "left_id": "METHOD_XAC_DINH_VI_TRI_TUONG_DOI",
+  "right_id": "PHUONG_PHAP_XAC_DINH_VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+  "merge": false,
+  "rationale": "Both describe methods for determining relative position of two lines, but left uses direction/normal vectors while right specifically mentions analyzing direction vectors and connecting vector between points. They are related but not identical; right adds a specific computational detail."
+}

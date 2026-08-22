@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+  "right_id": "HAM_SO_LIEN_TUC_TREN_MOT_DOAN",
+  "merge": false,
+  "rationale": "The left node 'Hàm số liên tục tại một điểm' is continuity at a point. The right node 'Hàm số liên tục trên một đoạn' is continuity on a closed interval. They are related concepts but differ in domain (point vs. closed interval). One is a local property, the other is a global property with additional endpoint conditions."
+}

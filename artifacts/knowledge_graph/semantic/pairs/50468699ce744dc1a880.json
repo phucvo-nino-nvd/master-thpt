@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_HOP",
+  "right_id": "DAO_HAM_CUA_HAM_SO_MU",
+  "merge": false,
+  "rationale": "The left node is the derivative rule for composite functions. The right node is the derivative rule for exponential functions. They are distinct derivative rules for different function types, not semantic duplicates."
+}

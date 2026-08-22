@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "VECTO_DON_VI",
+      "name": "Vectơ đơn vị",
+      "type": "CONCEPT",
+      "description": "Vectơ có độ dài bằng 1, được sử dụng để biểu diễn hướng trên các trục toạ độ. Trong mặt phẳng, các vectơ đơn vị là i và j. Trong không gian, các vectơ đơn vị là i, j, và k."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0010",
+      "original_id": "VECTO_DON_VI",
+      "canonical_id": "VECTO_DON_VI",
+      "rationale": "Both occurrences describe the same mathematical concept: a unit vector with length 1 used in coordinate systems. The grade 10 description is in the plane (i, j), and the grade 12 description extends to space (i, j, k), but the core concept is identical. Grade differences alone are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0007",
+      "original_id": "VECTO_DON_VI",
+      "canonical_id": "VECTO_DON_VI",
+      "rationale": "Both occurrences describe the same mathematical concept: a unit vector with length 1 used in coordinate systems. The grade 10 description is in the plane (i, j), and the grade 12 description extends to space (i, j, k), but the core concept is identical. Grade differences alone are not a reason to split."
+    }
+  ]
+}

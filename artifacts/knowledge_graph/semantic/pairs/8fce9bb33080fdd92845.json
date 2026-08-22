@@ -1,0 +1,6 @@
+{
+  "left_id": "QUY_TAC_TINH_GIOI_HAN",
+  "right_id": "QUY_TAC_TINH_GIOI_HAN_TICH",
+  "merge": false,
+  "rationale": "The left node is a general theorem about limit calculation rules for basic operations (addition, subtraction, multiplication, division). The right node is a specific rule for the limit of a product when one factor has an infinite limit. The right is a special case or a specific application of the general rules. Therefore, they are not true semantic duplicates; one is a component of the other. KEEP."
+}

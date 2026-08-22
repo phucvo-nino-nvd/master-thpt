@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN",
+  "right_id": "GIOI_HAN_DAY_SO",
+  "merge": false,
+  "rationale": "The left node is the general concept of 'Giới hạn' (limit), which applies to functions and sequences. The right node is the specific concept 'Giới hạn của dãy số' (limit of a sequence). The right is a special case of the general concept (applied to sequences), not a semantic duplicate."
+}

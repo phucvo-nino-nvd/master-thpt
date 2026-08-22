@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_SIN",
+  "right_id": "CONG_THUC_CONG_TAN",
+  "merge": false,
+  "rationale": "The formulas for sin and tan of sum/difference are distinct trigonometric identities. They represent different mathematical objects and cannot be merged into a single reusable node without losing the distinction between sine and tangent."
+}

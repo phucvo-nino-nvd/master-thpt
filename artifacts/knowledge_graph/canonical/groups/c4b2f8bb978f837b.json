@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "QUY_TAC_TINH_GIOI_HAN",
+      "name": "Quy tắc tính giới hạn",
+      "type": "THEOREM",
+      "description": "Các quy tắc để tính giới hạn của các phép toán cơ bản (cộng, trừ, nhân, chia) giữa các dãy số hoặc hàm số."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0015",
+      "original_id": "QUY_TAC_TINH_GIOI_HAN",
+      "canonical_id": "QUY_TAC_TINH_GIOI_HAN",
+      "rationale": "Both occurrences describe the same fundamental theorem for calculating limits of basic arithmetic operations, despite one applying to sequences and the other to functions. The core mathematical rule is identical."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0016",
+      "original_id": "QUY_TAC_TINH_GIOI_HAN",
+      "canonical_id": "QUY_TAC_TINH_GIOI_HAN",
+      "rationale": "Both occurrences describe the same fundamental theorem for calculating limits of basic arithmetic operations, despite one applying to sequences and the other to functions. The core mathematical rule is identical."
+    }
+  ]
+}

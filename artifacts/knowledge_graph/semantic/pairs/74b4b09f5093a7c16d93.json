@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_THE_TICH_KHOI_TRON_XOAY",
+  "right_id": "CONG_THUC_THE_TICH_VAT_THE",
+  "merge": false,
+  "rationale": "The left node is a specific formula for the volume of a solid of revolution (using disk method). The right node is a general formula for the volume of a solid using cross-sectional areas. One is a specific application of the general principle. They are related but not identical reusable knowledge nodes."
+}

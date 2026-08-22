@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_HAM_SO",
+  "right_id": "GIOI_HAN_LA_0",
+  "merge": false,
+  "rationale": "Giới hạn của hàm số is a general concept, while giới hạn là 0 is a specific limit value or a property of sequences/functions. They are related but not identical; one is a general concept, the other a specific instance."
+}

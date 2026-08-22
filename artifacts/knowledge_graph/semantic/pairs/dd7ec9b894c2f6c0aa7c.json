@@ -1,0 +1,6 @@
+{
+  "left_id": "DAY_SO_GIAM",
+  "right_id": "DAY_SO_TANG",
+  "merge": false,
+  "rationale": "Dãy số giảm and Dãy số tăng are two opposite, distinct properties of sequences."
+}

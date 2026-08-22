@@ -1,0 +1,6 @@
+{
+  "left_id": "GIA_TRI_LUONG_GIAC_GOC_DOI_NHAU",
+  "right_id": "HE_THUC_CO_BAN",
+  "merge": false,
+  "rationale": "The left node gives trigonometric identities for opposite angles. The right node gives fundamental Pythagorean trigonometric identities. They are different sets of formulas."
+}

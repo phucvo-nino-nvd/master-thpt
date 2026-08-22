@@ -1,0 +1,6 @@
+{
+  "left_id": "DINH_LI_BA_DUONG_VUONG_GOC",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node is the 'three perpendiculars theorem', a specific and important theorem in spatial geometry. The right node states a property about a line perpendicular to a plane also being perpendicular to lines parallel to that plane. These are different spatial geometry theorems with different conclusions."
+}

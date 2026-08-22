@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_LOGARIT_CO_SO_A",
+  "right_id": "HAM_SO_MU_CO_SO_A",
+  "merge": false,
+  "rationale": "Left node is 'logarithmic function with base a'. Right node is 'exponential function with base a'. They are distinct, inverse functions. They represent different mathematical objects and are not semantic duplicates."
+}

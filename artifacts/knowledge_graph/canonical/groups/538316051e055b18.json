@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "KY_HIEU_VECTO",
+      "name": "Ký hiệu vectơ",
+      "type": "CONCEPT",
+      "description": "Vectơ được ký hiệu là AB (vectơ từ A đến B) hoặc a, b, x, y, ..."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0007",
+      "original_id": "KY_HIEU_VECTO",
+      "canonical_id": "KY_HIEU_VECTO",
+      "rationale": "Both occurrences describe the notation for vectors, including the arrow notation for a vector from point A to B and the notation for generic vectors. The mathematical meaning is the same across grades 10 and 12. Grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "KY_HIEU_VECTO",
+      "canonical_id": "KY_HIEU_VECTO",
+      "rationale": "Both occurrences describe the notation for vectors, including the arrow notation for a vector from point A to B and the notation for generic vectors. The mathematical meaning is the same across grades 10 and 12. Grade difference is not a reason to split."
+    }
+  ]
+}

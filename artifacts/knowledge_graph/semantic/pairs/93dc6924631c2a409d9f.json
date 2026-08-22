@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_NHAU",
+  "right_id": "HAI_DUONG_THANG_CHEO_NHAU",
+  "merge": false,
+  "rationale": "Left node is the concept of 'two intersecting lines'. Right node is the concept of 'two skew lines'. They describe mutually exclusive spatial relationships between lines. They are not semantic duplicates."
+}

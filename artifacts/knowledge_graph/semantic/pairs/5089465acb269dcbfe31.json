@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_HUU_HAN",
+  "right_id": "GIOI_HAN_VO_CUC",
+  "merge": false,
+  "rationale": "Finite limit and infinite limit are distinct types of limits with different behaviors and definitions. They are not semantic duplicates."
+}

@@ -1,0 +1,177 @@
+{
+  "chunk_id": "toan-10-tap-2:0010",
+  "nodes": [
+    {
+      "id": "DUONG_CONIC",
+      "name": "Đường conic",
+      "type": "CONCEPT",
+      "description": "Hình học bao gồm elip, hypebol, parabol.",
+      "grade": 10
+    },
+    {
+      "id": "ELIP",
+      "name": "Elip",
+      "type": "CONCEPT",
+      "description": "Tập hợp các điểm M sao cho MF1 + MF2 = 2a, với F1, F2 là hai tiêu điểm cố định.",
+      "grade": 10
+    },
+    {
+      "id": "TIEU_DIEM",
+      "name": "Tiêu điểm",
+      "type": "CONCEPT",
+      "description": "Hai điểm cố định F1, F2 trong định nghĩa elip.",
+      "grade": 10
+    },
+    {
+      "id": "TIEU_CU",
+      "name": "Tiêu cự",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa hai tiêu điểm F1F2 = 2c.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_CHINH_TAC",
+      "name": "Phương trình chính tắc",
+      "type": "CONCEPT",
+      "description": "Phương trình đại số mô tả đường conic.",
+      "grade": 10
+    },
+    {
+      "id": "DUONG_CHUAN",
+      "name": "Đường chuẩn",
+      "type": "CONCEPT",
+      "description": "Đường thẳng cố định trong định nghĩa parabol.",
+      "grade": 10
+    },
+    {
+      "id": "THAM_SO_TIEU",
+      "name": "Tham số tiêu",
+      "type": "CONCEPT",
+      "description": "Khoảng cách từ tiêu điểm đến đường chuẩn.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_ELIP",
+      "name": "Phương trình chính tắc của elip",
+      "type": "FORMULA",
+      "description": "Phương trình elip trong hệ tọa độ Oxy với tiêu điểm trên trục hoành.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_HYPEBOL",
+      "name": "Phương trình chính tắc của hypebol",
+      "type": "FORMULA",
+      "description": "Phương trình hypebol trong hệ tọa độ Oxy với tiêu điểm trên trục hoành.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_PARABOL",
+      "name": "Phương trình chính tắc của parabol",
+      "type": "FORMULA",
+      "description": "Phương trình parabol trong hệ tọa độ Oxy với tiêu điểm và đường chuẩn.",
+      "grade": 10
+    },
+    {
+      "id": "HYPEBOL",
+      "name": "Hypebol",
+      "type": "CONCEPT",
+      "description": "Tập hợp các điểm M sao cho |MF1 - MF2| = 2a, với F1, F2 là hai tiêu điểm cố định.",
+      "grade": 10
+    },
+    {
+      "id": "PARABOL",
+      "name": "Parabol",
+      "type": "CONCEPT",
+      "description": "Tập hợp các điểm M cách đều một tiêu điểm F và một đường chuẩn Δ.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_QUANG_HOC",
+      "name": "Tính chất quang học",
+      "type": "CONCEPT",
+      "description": "Quy tắc phản xạ ánh sáng khi gặp các gương conic.",
+      "grade": 10
+    },
+    {
+      "id": "UNG_DUNG_CONIC",
+      "name": "Ứng dụng của ba đường conic",
+      "type": "CONCEPT",
+      "description": "Các ứng dụng trong khoa học và cuộc sống của ba đường conic.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "ELIP",
+      "target": "DUONG_CONIC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "HYPEBOL",
+      "target": "DUONG_CONIC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PARABOL",
+      "target": "DUONG_CONIC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_ELIP",
+      "target": "ELIP",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_HYPEBOL",
+      "target": "HYPEBOL",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_PARABOL",
+      "target": "PARABOL",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_QUANG_HOC",
+      "target": "ELIP",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_QUANG_HOC",
+      "target": "HYPEBOL",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_QUANG_HOC",
+      "target": "PARABOL",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "UNG_DUNG_CONIC",
+      "target": "ELIP",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "UNG_DUNG_CONIC",
+      "target": "HYPEBOL",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "UNG_DUNG_CONIC",
+      "target": "PARABOL",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "QUY_TAC_HINH_BINH_HANG",
+      "name": "Quy tắc hình bình hành",
+      "type": "THEOREM",
+      "description": "Nếu ABCD là hình bình hành thì AB + AD = AC."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0008",
+      "original_id": "QUY_TAC_HINH_BINH_HANG",
+      "canonical_id": "QUY_TAC_HINH_BINH_HANG",
+      "rationale": "Both occurrences describe the same theorem: the parallelogram rule for vector addition. The descriptions are identical. Grade difference (10 vs 12) is not a reason to split. The original ID 'QUY_TAC_HINH_BINH_HANG' is a good canonical ID."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "QUY_TAC_HINH_BINH_HANGH",
+      "canonical_id": "QUY_TAC_HINH_BINH_HANG",
+      "rationale": "This occurrence describes the same theorem as the other. The description is identical. The original ID appears to have a typo (extra 'H'). It should be merged into the canonical node with the correct ID 'QUY_TAC_HINH_BINH_HANG'."
+    }
+  ]
+}

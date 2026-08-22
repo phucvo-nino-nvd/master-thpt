@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN",
+  "right_id": "GIOI_HAN_LA_0",
+  "merge": false,
+  "rationale": "The left node is the general concept of 'Giới hạn' (limit). The right node is a specific case: 'Giới hạn là 0' (limit is 0). The right is a special instance of the general concept, not a duplicate."
+}

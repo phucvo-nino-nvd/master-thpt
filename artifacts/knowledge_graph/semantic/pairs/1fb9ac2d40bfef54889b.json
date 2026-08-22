@@ -1,0 +1,6 @@
+{
+  "left_id": "TICH_VO_HUONG_VUONG_GOC",
+  "right_id": "TINH_CHAT_VUONG_GOC",
+  "merge": false,
+  "rationale": "Left is a coordinate-free theorem: u ⟂ v ⇔ u·v = 0. Right is a coordinate-specific representation of the same theorem for vectors in the plane. According to the guidelines, a general coordinate-free theorem and its coordinate-specific form should be KEPT separate."
+}

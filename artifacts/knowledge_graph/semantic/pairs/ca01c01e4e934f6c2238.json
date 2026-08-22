@@ -1,0 +1,6 @@
+{
+  "left_id": "DINH_LI_TICH_PHAN",
+  "right_id": "Y_NGHI_A_HINH_HOC_CUA_TICH_PHAN",
+  "merge": false,
+  "rationale": "Left is the integral theorem stating both the area interpretation and the Fundamental Theorem of Calculus (F(b)-F(a)). Right is only the geometric interpretation (area) part. The left contains additional mathematical content (F(b)-F(a)). According to guidelines, a theorem and its interpretation/consequence should be KEPT separate."
+}

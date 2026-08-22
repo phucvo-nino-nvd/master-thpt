@@ -1,0 +1,86 @@
+{
+  "chunk_id": "toan-10-tap-1:0012",
+  "nodes": [
+    {
+      "id": "SO_GAN_DUNG",
+      "name": "Số gần đúng",
+      "type": "CONCEPT",
+      "description": "Giá trị xấp xỉ một số đúng, kí hiệu là a.",
+      "grade": 10
+    },
+    {
+      "id": "SO_DUNG",
+      "name": "Số đúng",
+      "type": "CONCEPT",
+      "description": "Giá trị chính xác của một đại lượng, kí hiệu là a̅.",
+      "grade": 10
+    },
+    {
+      "id": "SAI_SO_TUYET_DOI",
+      "name": "Sai số tuyệt đối",
+      "type": "CONCEPT",
+      "description": "Mức độ sai lệch giữa số gần đúng và số đúng, kí hiệu là Δa = |a - a̅|.",
+      "grade": 10
+    },
+    {
+      "id": "DO_CHINH_XAC",
+      "name": "Độ chính xác",
+      "type": "CONCEPT",
+      "description": "Số dương d mà sai số tuyệt đối không vượt quá d, biểu thị bằng a ± d.",
+      "grade": 10
+    },
+    {
+      "id": "SAI_SO_TUONG_DOI",
+      "name": "Sai số tương đối",
+      "type": "CONCEPT",
+      "description": "Tỉ số giữa sai số tuyệt đối và giá trị tuyệt đối của số gần đúng, kí hiệu là δa = Δa/|a|.",
+      "grade": 10
+    },
+    {
+      "id": "SO_QUY_TRON",
+      "name": "Số quy tròn",
+      "type": "CONCEPT",
+      "description": "Số thu được sau khi làm tròn số gần đúng theo quy tắc làm tròn.",
+      "grade": 10
+    },
+    {
+      "id": "QUY_TAC_LAM_TRON",
+      "name": "Quy tắc làm tròn",
+      "type": "METHOD",
+      "description": "Giữ nguyên chữ số hàng làm tròn nếu chữ số ngay bên phải nhỏ hơn 5, tăng 1 đơn vị nếu lớn hơn hoặc bằng 5.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "SO_GAN_DUNG",
+      "target": "SO_DUNG",
+      "relation": "REQUIRES",
+      "rationale": "Số gần đúng là xấp xỉ của số đúng."
+    },
+    {
+      "source": "SAI_SO_TUYET_DOI",
+      "target": "SO_GAN_DUNG",
+      "relation": "REQUIRES",
+      "rationale": "Sai số tuyệt đối được định nghĩa dựa trên số gần đúng và số đúng."
+    },
+    {
+      "source": "DO_CHINH_XAC",
+      "target": "SAI_SO_TUYET_DOI",
+      "relation": "REQUIRES",
+      "rationale": "Độ chính xác liên quan đến giới hạn của sai số tuyệt đối."
+    },
+    {
+      "source": "SAI_SO_TUONG_DOI",
+      "target": "SAI_SO_TUYET_DOI",
+      "relation": "REQUIRES",
+      "rationale": "Sai số tương đối được tính từ sai số tuyệt đối."
+    },
+    {
+      "source": "SO_QUY_TRON",
+      "target": "QUY_TAC_LAM_TRON",
+      "relation": "REQUIRES",
+      "rationale": "Số quy tròn được tạo ra bằng cách áp dụng quy tắc làm tròn."
+    }
+  ]
+}

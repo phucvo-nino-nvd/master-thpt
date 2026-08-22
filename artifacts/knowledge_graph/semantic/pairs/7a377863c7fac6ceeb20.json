@@ -1,0 +1,6 @@
+{
+  "left_id": "HIEU_VECTO",
+  "right_id": "TONG_VECTO",
+  "merge": false,
+  "rationale": "These are two distinct fundamental vector operations: vector subtraction and vector addition. They are related but not semantic duplicates."
+}

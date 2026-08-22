@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_LOGARIT",
+  "right_id": "HAM_SO_LOGARIT_CO_SO_A",
+  "merge": true,
+  "rationale": "Hàm lôgarit and Hàm số lôgarit cơ số a both describe the logarithmic function y = logₐ x with the same conditions (a > 0, a ≠ 1). The descriptions are semantically identical; they are true duplicates."
+}

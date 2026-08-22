@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_NHAU",
+  "right_id": "DUONG_THANG_TRUNG_NHAU",
+  "merge": false,
+  "rationale": "Hai đường thẳng cắt nhau (intersecting lines) and Hai đường thẳng trùng nhau (coincident lines) are distinct positional relationships between lines in geometry. They are not semantic duplicates."
+}

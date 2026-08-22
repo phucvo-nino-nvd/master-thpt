@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+  "right_id": "CONG_THUC_HERON",
+  "merge": false,
+  "rationale": "Left node is a collection of formulas for the area of a triangle, which includes Heron's formula among others. Right node is specifically Heron's formula. The left node contains additional content (other area formulas). They are not exact semantic duplicates; one is a broader set of formulas."
+}

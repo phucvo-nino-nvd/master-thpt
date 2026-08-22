@@ -1,0 +1,6 @@
+{
+  "left_id": "GIAI_THUAT_TINH_CHINH_HOP",
+  "right_id": "GIAI_THUAT_TINH_TO_HOP",
+  "merge": false,
+  "rationale": "The left node is an algorithm for calculating permutations (A_n^k). The right node is an algorithm for calculating combinations (C_n^k). They are distinct algorithms for distinct combinatorial operations."
+}

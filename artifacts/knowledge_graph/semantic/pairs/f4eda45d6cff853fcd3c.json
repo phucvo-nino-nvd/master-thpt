@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+  "right_id": "PHUONG_TRINH_DUONG_THANG",
+  "merge": false,
+  "rationale": "The left node 'Đường thẳng trong mặt phẳng toạ độ' is a concept describing a line represented in the coordinate plane. The right node 'Phương trình đường thẳng' is a concept describing the algebraic equation that represents such a line. One is the mathematical object, and the other is its representation/formula. They are related but not identical."
+}

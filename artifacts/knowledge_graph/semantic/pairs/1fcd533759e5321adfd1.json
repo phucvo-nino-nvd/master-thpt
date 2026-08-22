@@ -1,0 +1,6 @@
+{
+  "left_id": "HIEU_HAI_TAP_HOP",
+  "right_id": "HOP_HAI_TAP_HOP",
+  "merge": false,
+  "rationale": "Set difference and set union are distinct set operations with different definitions and properties. They are not semantic duplicates."
+}

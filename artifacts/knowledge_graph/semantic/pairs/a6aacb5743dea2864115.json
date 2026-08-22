@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_CO_DOI",
+  "right_id": "BIEN_CO_HOP",
+  "merge": false,
+  "rationale": "Biến cố đối and biến cố hợp are distinct set operations on events (complement vs. union). They are related but not identical."
+}

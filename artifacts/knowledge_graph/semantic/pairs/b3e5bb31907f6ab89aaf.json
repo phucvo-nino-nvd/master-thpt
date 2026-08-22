@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_DOANH_THU_BIEN",
+  "right_id": "HAM_LOI_NHUAN_BIEN",
+  "merge": false,
+  "rationale": "These are two distinct economic concepts: marginal revenue and marginal profit. While both are derivatives (marginal functions), they are derivatives of different underlying functions (revenue vs. profit) and represent different economic quantities."
+}

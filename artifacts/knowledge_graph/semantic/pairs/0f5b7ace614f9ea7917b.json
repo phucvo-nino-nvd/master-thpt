@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_LA_0",
+  "right_id": "GIOI_HAN_LA_A",
+  "merge": false,
+  "rationale": "Two distinct limit concepts: limit equal to 0 vs limit equal to a general number a. They are not the same reusable knowledge."
+}

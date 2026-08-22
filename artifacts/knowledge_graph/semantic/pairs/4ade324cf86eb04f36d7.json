@@ -1,0 +1,6 @@
+{
+  "left_id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "These are different theorems. The left is about a plane containing a line parallel to another (skew lines). The right states that two distinct planes perpendicular to the same line are parallel. They describe different geometric configurations and conclusions."
+}

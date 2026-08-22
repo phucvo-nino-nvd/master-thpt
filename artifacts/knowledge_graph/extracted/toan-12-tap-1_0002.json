@@ -1,0 +1,86 @@
+{
+  "chunk_id": "toan-12-tap-1:0002",
+  "nodes": [
+    {
+      "id": "GIA_TRI_LON_NHAT",
+      "name": "giá trị lớn nhất",
+      "type": "CONCEPT",
+      "description": "Giá trị lớn nhất của hàm số trên một tập xác định là số M sao cho f(x) ≤ M với mọi x thuộc tập và tồn tại x₀ thuộc tập sao cho f(x₀) = M.",
+      "grade": 12
+    },
+    {
+      "id": "GIA_TRI_NHO_NHAT",
+      "name": "giá trị nhỏ nhất",
+      "type": "CONCEPT",
+      "description": "Giá trị nhỏ nhất của hàm số trên một tập xác định là số m sao cho f(x) ≥ m với mọi x thuộc tập và tồn tại x₀ thuộc tập sao cho f(x₀) = m.",
+      "grade": 12
+    },
+    {
+      "id": "HAM_SO",
+      "name": "hàm số",
+      "type": "CONCEPT",
+      "description": "Quan hệ giữa hai tập hợp, trong đó mỗi phần tử của tập đầu vào được ánh xạ đến một phần tử duy nhất của tập đầu ra.",
+      "grade": 12
+    },
+    {
+      "id": "DAO_HAM",
+      "name": "đạo hàm",
+      "type": "CONCEPT",
+      "description": "Đạo hàm của một hàm số tại một điểm là giới hạn của tỷ lệ biến thiên của hàm số khi biến độc lập thay đổi.",
+      "grade": 12
+    },
+    {
+      "id": "BANG_BIEN_THIEN",
+      "name": "bảng biến thiên",
+      "type": "CONCEPT",
+      "description": "Bảng tổng hợp giá trị của đạo hàm và hàm số tại các điểm quan trọng để phân tích biến thiên của hàm số.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_PHAP_TIM_GIA_TRI_LON_NHAT_NHO_NHAT",
+      "name": "phương pháp tìm giá trị lớn nhất và nhỏ nhất",
+      "type": "METHOD",
+      "description": "Phương pháp sử dụng đạo hàm và bảng biến thiên để tìm giá trị lớn nhất và nhỏ nhất của hàm số trên một đoạn.",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_THE_TICH_HOP",
+      "name": "công thức thể tích hộp",
+      "type": "FORMULA",
+      "description": "Thể tích của hộp chữ nhật không có nắp được tính bằng công thức V(x) = (60 - 2x)² * x.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "GIA_TRI_LON_NHAT",
+      "target": "HAM_SO",
+      "relation": "PART_OF",
+      "rationale": "Giá trị lớn nhất là một khái niệm liên quan đến hàm số."
+    },
+    {
+      "source": "GIA_TRI_NHO_NHAT",
+      "target": "HAM_SO",
+      "relation": "PART_OF",
+      "rationale": "Giá trị nhỏ nhất là một khái niệm liên quan đến hàm số."
+    },
+    {
+      "source": "PHUONG_PHAP_TIM_GIA_TRI_LON_NHAT_NHO_NHAT",
+      "target": "DAO_HAM",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tìm giá trị lớn nhất và nhỏ nhất yêu cầu sử dụng đạo hàm."
+    },
+    {
+      "source": "PHUONG_PHAP_TIM_GIA_TRI_LON_NHAT_NHO_NHAT",
+      "target": "BANG_BIEN_THIEN",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tìm giá trị lớn nhất và nhỏ nhất yêu cầu lập bảng biến thiên."
+    },
+    {
+      "source": "CONG_THUC_THE_TICH_HOP",
+      "target": "PHUONG_PHAP_TIM_GIA_TRI_LON_NHAT_NHO_NHAT",
+      "relation": "REQUIRES",
+      "rationale": "Công thức thể tích hộp được sử dụng trong phương pháp tìm giá trị lớn nhất và nhỏ nhất."
+    }
+  ]
+}

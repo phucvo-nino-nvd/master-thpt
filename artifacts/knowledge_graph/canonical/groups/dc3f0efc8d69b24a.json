@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "PHUONG_TRINH_CHUYEN_DONG",
+      "name": "Phương trình chuyển động",
+      "type": "CONCEPT",
+      "description": "Phương trình mô tả vị trí của một vật chuyển động theo thời gian."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0005",
+      "original_id": "PHUONG_TRINH_CHUYEN_DONG",
+      "canonical_id": "PHUONG_TRINH_CHUYEN_DONG",
+      "rationale": "Both occurrences describe the same mathematical concept: the position function of a moving object as a function of time. The descriptions are consistent and appear in related lessons within the same grade and textbook volume. They should be merged."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0007",
+      "original_id": "PHUONG_TRINH_CHUYEN_DONG",
+      "canonical_id": "PHUONG_TRINH_CHUYEN_DONG",
+      "rationale": "Both occurrences describe the same mathematical concept: the position function of a moving object as a function of time. The descriptions are consistent and appear in related lessons within the same grade and textbook volume. They should be merged."
+    }
+  ]
+}

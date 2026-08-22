@@ -1,0 +1,6 @@
+{
+  "left_id": "DAY_SO",
+  "right_id": "DAY_SO_VO_HAN",
+  "merge": true,
+  "rationale": "Both define a sequence as a function on positive integers. Descriptions are identical. 'Dãy số' and 'Dãy số vô hạn' are the same concept in this context."
+}

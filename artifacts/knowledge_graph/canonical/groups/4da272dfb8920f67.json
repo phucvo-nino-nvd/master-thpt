@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "MAU_SO_LIEU_GHEP_NHOM",
+      "name": "Mẫu số liệu ghép nhóm",
+      "type": "CONCEPT",
+      "description": "Mẫu số liệu được biểu diễn dưới dạng bảng tần số của các nhóm số liệu, mỗi nhóm được định nghĩa bởi một khoảng giá trị. Dùng để tính các số đặc trưng thống kê như xu thế trung tâm và mức độ phân tán."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0008",
+      "original_id": "MAU_SO_LIEU_GHEP_NHOM",
+      "canonical_id": "MAU_SO_LIEU_GHEP_NHOM",
+      "rationale": "Occurrence describes the concept of grouped data as a frequency table of value intervals, which is the core definition. It should be merged with other occurrences of the same concept."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0009",
+      "original_id": "MAU_SO_LIEU_GHEP_NHOM",
+      "canonical_id": "MAU_SO_LIEU_GHEP_NHOM",
+      "rationale": "Occurrence describes the same concept of grouped data divided into groups with corresponding frequencies. Grade difference is not a reason to split. It represents the same reusable mathematical knowledge."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0009",
+      "original_id": "MAU_SO_LIEU_GHEP_NHOM",
+      "canonical_id": "MAU_SO_LIEU_GHEP_NHOM",
+      "rationale": "Occurrence describes the same concept of grouped data used for calculating dispersion measures. The description adds context but the core concept remains 'grouped data'. It should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0010",
+      "original_id": "MAU_SO_LIEU_GHEP_NHOM",
+      "canonical_id": "MAU_SO_LIEU_GHEP_NHOM",
+      "rationale": "Occurrence describes the same concept of grouped data divided into groups with corresponding frequencies. It is identical in meaning to other occurrences and should be merged."
+    }
+  ]
+}

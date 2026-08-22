@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "DUONG_THANG_TRUNG_NHAU",
+      "name": "Hai đường thẳng trùng nhau",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng đồng phẳng và có tất cả các điểm chung, hoặc trong không gian khi hai vectơ chỉ phương cùng phương và chúng có chung một điểm."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0011",
+      "original_id": "DUONG_THANG_TRUNG_NHAU",
+      "canonical_id": "DUONG_THANG_TRUNG_NHAU",
+      "rationale": "This occurrence describes the concept of two coincident lines in a plane, defined by sharing all points. It is a foundational geometric concept."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0005",
+      "original_id": "DUONG_THANG_TRUNG",
+      "canonical_id": "DUONG_THANG_TRUNG_NHAU",
+      "rationale": "This occurrence describes a theorem providing a vector condition for two lines in space to be coincident. It is a specific, reusable mathematical result about the same underlying concept of coincident lines, albeit in a different context (space vs. plane). Grade difference and context shift (plane to space) do not warrant a split as the core mathematical knowledge (coincident lines) is the same. The theorem is a property of the concept."
+    }
+  ]
+}

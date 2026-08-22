@@ -1,0 +1,6 @@
+{
+  "left_id": "GOC_NHI_DIEN",
+  "right_id": "GOC_PHANG_CUA_GOC_NHI_DIEN",
+  "merge": false,
+  "rationale": "The left node is the concept of a dihedral angle. The right node is the concept of the plane angle of a dihedral angle. The plane angle is a measure/representation of the dihedral angle. They are closely related but one is the general concept and the other is a specific associated angle used to measure it."
+}

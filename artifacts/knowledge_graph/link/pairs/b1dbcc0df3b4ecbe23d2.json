@@ -1,0 +1,10 @@
+{
+  "left_requires_right": false,
+  "right_requires_left": true,
+  "left_is_a_right": false,
+  "right_is_a_left": false,
+  "left_subset_of_right": false,
+  "right_subset_of_left": false,
+  "left_part_of_right": true,
+  "right_part_of_left": false
+}

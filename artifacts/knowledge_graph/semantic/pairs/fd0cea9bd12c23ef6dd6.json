@@ -1,0 +1,6 @@
+{
+  "left_id": "GIAO_HAI_TAP_HOP",
+  "right_id": "HOP_HAI_TAP_HOP",
+  "merge": false,
+  "rationale": "Giao của hai tập hợp (intersection) and Hợp của hai tập hợp (union) are two fundamental, distinct set operations. They are related but not the same concept."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CHINH_HOP",
+  "right_id": "CONG_THUC_TO_HOP",
+  "merge": false,
+  "rationale": "The left node is the formula for permutations (A_n^k). The right node is the formula for combinations (C_n^k). They are distinct combinatorial formulas for counting different arrangements, not semantic duplicates."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS",
+  "right_id": "TICH_VO_HUONG_VUONG_GOC",
+  "merge": false,
+  "rationale": "The left node 'Điều kiện vuông góc của hai đường thẳng (vectơ)' is a theorem about perpendicular lines using direction vectors. The right node 'Tích vô hướng và vuông góc' is a theorem about perpendicular vectors using the dot product. While closely related, the left is specifically about lines (using vectors), and the right is about vectors themselves. They are applications of the same underlying principle but in different contexts (lines vs. vectors)."
+}

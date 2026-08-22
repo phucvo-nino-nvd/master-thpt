@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_LOGARIT",
+  "right_id": "DAO_HAM_CUA_HAM_SO_MU",
+  "merge": false,
+  "rationale": "These are distinct derivative rules for different function families: logarithmic functions vs. exponential functions."
+}

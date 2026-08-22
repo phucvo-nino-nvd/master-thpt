@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node is a theorem about a line perpendicular to two sides of a triangle. The right node is a theorem about a line and a plane both perpendicular to another line. They state different geometric facts and are not semantic duplicates."
+}

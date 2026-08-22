@@ -1,0 +1,6 @@
+{
+  "left_id": "GIAO_HAI_TAP_HOP",
+  "right_id": "TAP_HOP_HOP",
+  "merge": false,
+  "rationale": "The nodes represent two distinct fundamental set operations: intersection and union. They are related but opposite operations, not semantic duplicates."
+}

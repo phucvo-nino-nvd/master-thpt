@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+      "name": "Vectơ cùng phương",
+      "type": "CONCEPT",
+      "description": "Hai vectơ có giá (đường thẳng đi qua điểm đầu và điểm cuối) song song hoặc trùng nhau."
+    },
+    {
+      "id": "VECTO_CUNG_PHUONG_DIEU_KIEN_TOA_DO",
+      "name": "Điều kiện vectơ cùng phương",
+      "type": "THEOREM",
+      "description": "Vectơ v(x'; y') cùng phương với vectơ u(x; y) ≠ 0 khi và chỉ khi tồn tại số k sao cho x' = kx, y' = ky (hay x'/x = y'/y nếu xy ≠ 0)."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0007",
+      "original_id": "VECTO_CUNG_PHUONG",
+      "canonical_id": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+      "rationale": "This occurrence defines the concept of two vectors being collinear (cùng phương) based on their lines of action (giá). It is a CONCEPT node describing the geometric definition."
+    },
+    {
+      "chunk_id": "toan-10-tap-1:0010",
+      "original_id": "VECTO_CUNG_PHUONG",
+      "canonical_id": "VECTO_CUNG_PHUONG_DIEU_KIEN_TOA_DO",
+      "rationale": "This occurrence provides a coordinate condition (theorem) for two vectors to be collinear. It is a THEOREM node describing an algebraic criterion, which is a different type of mathematical knowledge from the geometric definition."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "VECTO_CUNG_PHUONG",
+      "canonical_id": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+      "rationale": "This occurrence defines the concept of two vectors being collinear in space, which is the same geometric concept as the first occurrence, just restated for grade 12. Grade differences are not a reason to split."
+    }
+  ]
+}

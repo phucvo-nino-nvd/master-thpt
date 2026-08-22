@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "HAI_DUONG_THANG_CHEO_NHAU",
+      "name": "Hai đường thẳng chéo nhau",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng không cùng nằm trong bất kì mặt phẳng nào. Điều kiện để hai đường thẳng chéo nhau là hai vectơ chỉ phương của chúng không cùng phương và vectơ nối một điểm trên đường thẳng này với một điểm trên đường thẳng kia không vuông góc với tích có hướng của hai vectơ chỉ phương đó."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0011",
+      "original_id": "HAI_DUONG_THANG_CHEO_NHAU",
+      "canonical_id": "HAI_DUONG_THANG_CHEO_NHAU",
+      "rationale": "This is the core definition of the concept 'two skew lines'."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0005",
+      "original_id": "DUONG_THANG_CHEO",
+      "canonical_id": "HAI_DUONG_THANG_CHEO_NHAU",
+      "rationale": "This describes a condition (theorem) for determining when two lines are skew, which is directly about the same mathematical concept. The type difference (CONCEPT vs. THEOREM) is acceptable as they describe different aspects (definition vs. criterion) of the same knowledge entity 'two skew lines'."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_DONG_BIEN",
+  "right_id": "KHOANG_DONG_BIEN",
+  "merge": false,
+  "rationale": "One is a property of a function (monotonically increasing), the other is an interval where that property holds. General concept vs. specific domain."
+}

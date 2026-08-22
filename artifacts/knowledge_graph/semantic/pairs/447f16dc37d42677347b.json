@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_BEN_PHAI",
+  "right_id": "GIOI_HAN_MOT_BEN",
+  "merge": false,
+  "rationale": "Right-hand limit vs. one-sided limit (which includes both left and right). One is a specific case of the other."
+}

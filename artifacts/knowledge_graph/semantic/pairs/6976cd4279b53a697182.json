@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_SAI_MAU_GHEP_NHOM",
+  "right_id": "PHUONG_SAI_MAU_GHEP_NHOM_CONG_THUC_KHAC",
+  "merge": false,
+  "rationale": "Both are formulas for the variance of grouped data. The left gives the definitional formula s^2 = (1/n) * sum(m_i * (x_i - x_bar)^2). The right gives an alternative computational formula s^2 = (1/n) * sum(m_i * x_i^2) - x_bar^2. They are mathematically equivalent but represent different computational forms or representations of the same concept. According to guidelines, a concept and a formula used to calculate it should be kept separate, and here we have two different formula representations. KEEP."
+}

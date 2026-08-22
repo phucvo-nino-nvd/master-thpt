@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "TICH_PHAN",
+      "name": "Tích phân",
+      "type": "CONCEPT",
+      "description": "Hiệu số F(b) - F(a) của một nguyên hàm F(x) của hàm số liên tục f(x) trên đoạn [a, b], kí hiệu ∫ₐᵇ f(x) dx."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0005",
+      "original_id": "TICH_PHAN",
+      "canonical_id": null,
+      "rationale": "The description explicitly states the concept is not mentioned in the lesson ('Khái niệm liên quan đến đạo hàm, nhưng không được đề cập trong đoạn văn.'). Therefore, this occurrence should be dropped."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0002",
+      "original_id": "TICH_PHAN",
+      "canonical_id": "TICH_PHAN",
+      "rationale": "This occurrence provides a proper definition of the integral concept as the difference F(b)-F(a) of an antiderivative, which is the core mathematical knowledge. It should be kept as the canonical node."
+    }
+  ]
+}

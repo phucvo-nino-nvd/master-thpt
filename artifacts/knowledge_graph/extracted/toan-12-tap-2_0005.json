@@ -1,0 +1,170 @@
+{
+  "chunk_id": "toan-12-tap-2:0005",
+  "nodes": [
+    {
+      "id": "VECTO_CHI_PHUONG",
+      "name": "Vectơ chỉ phương",
+      "type": "CONCEPT",
+      "description": "Vectơ không bằng không được gọi là vectơ chỉ phương của đường thẳng nếu giá của nó song song hoặc trùng với đường thẳng đó.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_TRINH_THAM_SO",
+      "name": "Phương trình tham số",
+      "type": "CONCEPT",
+      "description": "Hệ phương trình xác định đường thẳng đi qua một điểm và có vectơ chỉ phương.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_TRINH_CHINH_TAC",
+      "name": "Phương trình chính tắc",
+      "type": "CONCEPT",
+      "description": "Hệ phương trình dưới dạng phân số bằng nhau xác định đường thẳng đi qua một điểm và có vectơ chỉ phương.",
+      "grade": 12
+    },
+    {
+      "id": "DUONG_THANG_VUONG_GOC",
+      "name": "Hai đường thẳng vuông góc",
+      "type": "THEOREM",
+      "description": "Hai đường thẳng vuông góc với nhau khi và chỉ khi tích vô hướng của hai vectơ chỉ phương bằng không.",
+      "grade": 12
+    },
+    {
+      "id": "DUONG_THANG_SONG",
+      "name": "Hai đường thẳng song song",
+      "type": "THEOREM",
+      "description": "Hai đường thẳng song song với nhau khi và chỉ khi hai vectơ chỉ phương cùng phương và không cùng điểm.",
+      "grade": 12
+    },
+    {
+      "id": "DUONG_THANG_TRUNG",
+      "name": "Hai đường thẳng trùng nhau",
+      "type": "THEOREM",
+      "description": "Hai đường thẳng trùng nhau khi và chỉ khi hai vectơ chỉ phương cùng phương và cùng điểm.",
+      "grade": 12
+    },
+    {
+      "id": "DUONG_THANG_CAT",
+      "name": "Hai đường thẳng cắt nhau",
+      "type": "THEOREM",
+      "description": "Hai đường thẳng cắt nhau khi và chỉ khi hai vectơ chỉ phương không cùng phương và vectơ nối hai điểm thuộc hai đường thẳng vuông góc với vectơ chéo của hai vectơ chỉ phương.",
+      "grade": 12
+    },
+    {
+      "id": "DUONG_THANG_CHEO",
+      "name": "Hai đường thẳng chéo nhau",
+      "type": "THEOREM",
+      "description": "Hai đường thẳng chéo nhau khi và chỉ khi hai vectơ chỉ phương không cùng phương và vectơ nối hai điểm thuộc hai đường thẳng không vuông góc với vectơ chéo của hai vectơ chỉ phương.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+      "name": "Phương trình tham số của đường thẳng",
+      "type": "FORMULA",
+      "description": "Hệ phương trình x = x₀ + at, y = y₀ + bt, z = z₀ + ct xác định đường thẳng đi qua điểm (x₀, y₀, z₀) và có vectơ chỉ phương (a, b, c).",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG",
+      "name": "Phương trình chính tắc của đường thẳng",
+      "type": "FORMULA",
+      "description": "Hệ phương trình (x - x₀)/a = (y - y₀)/b = (z - z₀)/c xác định đường thẳng đi qua điểm (x₀, y₀, z₀) và có vectơ chỉ phương (a, b, c).",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_TRINH_THAM_SO_HAI_DIEM",
+      "name": "Phương trình tham số của đường thẳng đi qua hai điểm",
+      "type": "FORMULA",
+      "description": "Hệ phương trình x = x₁ + (x₂ - x₁)t, y = y₁ + (y₂ - y₁)t, z = z₁ + (z₂ - z₁)t xác định đường thẳng đi qua hai điểm (x₁, y₁, z₁) và (x₂, y₂, z₂).",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_TRINH_CHINH_TAC_HAI_DIEM",
+      "name": "Phương trình chính tắc của đường thẳng đi qua hai điểm",
+      "type": "FORMULA",
+      "description": "Hệ phương trình (x - x₁)/(x₂ - x₁) = (y - y₁)/(y₂ - y₁) = (z - z₁)/(z₂ - z₁) xác định đường thẳng đi qua hai điểm (x₁, y₁, z₁) và (x₂, y₂, z₂).",
+      "grade": 12
+    },
+    {
+      "id": "VI_TRI_TUONG_DOI_DUONG_THANG",
+      "name": "Vị trí tương đối giữa hai đường thẳng",
+      "type": "METHOD",
+      "description": "Phương pháp xác định vị trí tương đối giữa hai đường thẳng bằng cách phân tích vectơ chỉ phương và vectơ nối hai điểm thuộc hai đường thẳng.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHUONG_TRINH_THAM_SO",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình tham số của đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "PHUONG_TRINH_CHINH_TAC",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình chính tắc của đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "DUONG_THANG_VUONG_GOC",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Điều kiện hai đường thẳng vuông góc yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "DUONG_THANG_SONG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Điều kiện hai đường thẳng song song yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "DUONG_THANG_TRUNG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Điều kiện hai đường thẳng trùng nhau yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "DUONG_THANG_CAT",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Điều kiện hai đường thẳng cắt nhau yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "DUONG_THANG_CHEO",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Điều kiện hai đường thẳng chéo nhau yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình tham số của đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình chính tắc của đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "PHUONG_TRINH_THAM_SO_HAI_DIEM",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình tham số của đường thẳng đi qua hai điểm yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "PHUONG_TRINH_CHINH_TAC_HAI_DIEM",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình chính tắc của đường thẳng đi qua hai điểm yêu cầu hiểu về vectơ chỉ phương."
+    },
+    {
+      "source": "VI_TRI_TUONG_DOI_DUONG_THANG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp xác định vị trí tương đối giữa hai đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    }
+  ]
+}

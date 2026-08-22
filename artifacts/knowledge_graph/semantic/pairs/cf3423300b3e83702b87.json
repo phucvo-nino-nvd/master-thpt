@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG",
+  "right_id": "CONG_THUC_CONG_SIN",
+  "merge": false,
+  "rationale": "The left node is 'addition formulas', a general category of trigonometric formulas for sum/difference of angles. The right node is 'sine addition formula', a specific formula within that category. The right is a component of the left. A general concept and a specific case should be KEPT separate."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "HIEU_HAI_VECTO",
+  "right_id": "KY_HIEU_VECTO",
+  "merge": false,
+  "rationale": "The left node 'hiệu của hai vectơ' is the concept of vector subtraction. The right node 'Ký hiệu vectơ' is the concept of vector notation. They are distinct concepts: one is an operation, the other is about notation/symbols."
+}

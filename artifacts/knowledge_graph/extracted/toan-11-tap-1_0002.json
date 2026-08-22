@@ -1,0 +1,141 @@
+{
+  "chunk_id": "toan-11-tap-1:0002",
+  "nodes": [
+    {
+      "id": "CONG_THUC_CONG",
+      "name": "Công thức cộng",
+      "type": "FORMULA",
+      "description": "Công thức lượng giác cho phép tính giá trị lượng giác của tổng hoặc hiệu hai góc.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_CONG_COS",
+      "name": "Công thức cộng cosin",
+      "type": "FORMULA",
+      "description": "Công thức lượng giác cho cosin của tổng hoặc hiệu hai góc.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_CONG_SIN",
+      "name": "Công thức cộng sin",
+      "type": "FORMULA",
+      "description": "Công thức lượng giác cho sin của tổng hoặc hiệu hai góc.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_CONG_TAN",
+      "name": "Công thức cộng tan",
+      "type": "FORMULA",
+      "description": "Công thức lượng giác cho tan của tổng hoặc hiệu hai góc.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_NHAN_DOI",
+      "name": "Công thức nhân đôi",
+      "type": "FORMULA",
+      "description": "Công thức lượng giác cho giá trị lượng giác của góc đôi.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_BIEN_DOI_TICH_THANH_TONG",
+      "name": "Công thức biến đổi tích thành tổng",
+      "type": "FORMULA",
+      "description": "Công thức lượng giác biến đổi tích các hàm lượng giác thành tổng các hàm lượng giác.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_BIEN_DOI_TONG_THANH_TICH",
+      "name": "Công thức biến đổi tổng thành tích",
+      "type": "FORMULA",
+      "description": "Công thức lượng giác biến đổi tổng các hàm lượng giác thành tích các hàm lượng giác.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+      "name": "Phương pháp biến đổi lượng giác",
+      "type": "METHOD",
+      "description": "Phương pháp sử dụng các công thức lượng giác để biến đổi và giải các biểu thức lượng giác.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "CONG_THUC_CONG",
+      "target": "CONG_THUC_CONG_COS",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_CONG",
+      "target": "CONG_THUC_CONG_SIN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_CONG",
+      "target": "CONG_THUC_CONG_TAN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_CONG_COS",
+      "target": "CONG_THUC_CONG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_CONG_SIN",
+      "target": "CONG_THUC_CONG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_CONG_TAN",
+      "target": "CONG_THUC_CONG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_NHAN_DOI",
+      "target": "CONG_THUC_CONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_BIEN_DOI_TICH_THANH_TONG",
+      "target": "CONG_THUC_CONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_BIEN_DOI_TONG_THANH_TICH",
+      "target": "CONG_THUC_CONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+      "target": "CONG_THUC_CONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+      "target": "CONG_THUC_NHAN_DOI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+      "target": "CONG_THUC_BIEN_DOI_TICH_THANH_TONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+      "target": "CONG_THUC_BIEN_DOI_TONG_THANH_TICH",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

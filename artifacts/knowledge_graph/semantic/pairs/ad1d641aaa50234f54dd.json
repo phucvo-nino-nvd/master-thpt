@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_NHAU",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The nodes represent different geometric relations: 'Hai đường thẳng cắt nhau' (intersecting lines) and 'Đường thẳng vuông góc với mặt phẳng' (line perpendicular to a plane). One is a line-line relation, the other is a line-plane relation. They are not semantic duplicates."
+}

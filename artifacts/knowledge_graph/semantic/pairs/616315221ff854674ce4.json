@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_GIAO",
+  "right_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_HOP",
+  "merge": false,
+  "rationale": "Phương pháp xác định biến cố giao (intersection) and Phương pháp xác định biến cố hợp (union) are two different set operations applied to events in probability. They are related but distinct methods."
+}

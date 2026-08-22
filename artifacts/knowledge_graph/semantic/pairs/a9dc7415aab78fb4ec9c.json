@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_HAM_SO",
+  "right_id": "GIOI_HAN_MOT_BEN",
+  "merge": false,
+  "rationale": "Left is the general concept of the limit of a function. Right is the specific concept of a one-sided limit. The right is a special case/subtype of the left, so they are not semantic duplicates."
+}

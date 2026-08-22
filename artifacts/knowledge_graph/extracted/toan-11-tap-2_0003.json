@@ -1,0 +1,164 @@
+{
+  "chunk_id": "toan-11-tap-2:0003",
+  "nodes": [
+    {
+      "id": "HAM_SO_MU",
+      "name": "Hàm số mũ",
+      "type": "CONCEPT",
+      "description": "Hàm số có dạng y = a^x, với a > 0, a ≠ 1",
+      "grade": 11
+    },
+    {
+      "id": "HAM_SO_MU_CO_SO_A",
+      "name": "Hàm số mũ cơ số a",
+      "type": "CONCEPT",
+      "description": "Hàm số có dạng y = a^x, với a > 0, a ≠ 1",
+      "grade": 11
+    },
+    {
+      "id": "TAP_XAC_DINH_HAM_SO_MU",
+      "name": "Tập xác định của hàm số mũ",
+      "type": "CONCEPT",
+      "description": "Tập xác định của hàm số mũ là ℝ (tất cả số thực)",
+      "grade": 11
+    },
+    {
+      "id": "TAP_GIA_TRI_HAM_SO_MU",
+      "name": "Tập giá trị của hàm số mũ",
+      "type": "CONCEPT",
+      "description": "Tập giá trị của hàm số mũ là (0, +∞)",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_BIEN_THIEN_HAM_SO_MU",
+      "name": "Tính chất biến thiên của hàm số mũ",
+      "type": "CONCEPT",
+      "description": "Hàm số mũ đồng biến trên ℝ khi a > 1 và nghịch biến trên ℝ khi 0 < a < 1",
+      "grade": 11
+    },
+    {
+      "id": "DO_THI_HAM_SO_MU",
+      "name": "Đồ thị của hàm số mũ",
+      "type": "CONCEPT",
+      "description": "Đồ thị của hàm số mũ đi qua các điểm (0, 1) và (1, a) và luôn nằm phía trên trục hoành",
+      "grade": 11
+    },
+    {
+      "id": "HAM_SO_LOGARIT",
+      "name": "Hàm số lôgarit",
+      "type": "CONCEPT",
+      "description": "Hàm số có dạng y = logₐx, với a > 0, a ≠ 1",
+      "grade": 11
+    },
+    {
+      "id": "HAM_SO_LOGARIT_CO_SO_A",
+      "name": "Hàm số lôgarit cơ số a",
+      "type": "CONCEPT",
+      "description": "Hàm số có dạng y = logₐx, với a > 0, a ≠ 1",
+      "grade": 11
+    },
+    {
+      "id": "TAP_XAC_DINH_HAM_SO_LOGARIT",
+      "name": "Tập xác định của hàm số lôgarit",
+      "type": "CONCEPT",
+      "description": "Tập xác định của hàm số lôgarit là (0, +∞)",
+      "grade": 11
+    },
+    {
+      "id": "TAP_GIA_TRI_HAM_SO_LOGARIT",
+      "name": "Tập giá trị của hàm số lôgarit",
+      "type": "CONCEPT",
+      "description": "Tập giá trị của hàm số lôgarit là ℝ (tất cả số thực)",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_BIEN_THIEN_HAM_SO_LOGARIT",
+      "name": "Tính chất biến thiên của hàm số lôgarit",
+      "type": "CONCEPT",
+      "description": "Hàm số lôgarit đồng biến trên (0, +∞) khi a > 1 và nghịch biến trên (0, +∞) khi 0 < a < 1",
+      "grade": 11
+    },
+    {
+      "id": "DO_THI_HAM_SO_LOGARIT",
+      "name": "Đồ thị của hàm số lôgarit",
+      "type": "CONCEPT",
+      "description": "Đồ thị của hàm số lôgarit đi qua các điểm (1, 0) và (a, 1) và luôn nằm bên phải trục tung",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_TANG_TRUONG_MU",
+      "name": "Công thức tăng trưởng mũ",
+      "type": "FORMULA",
+      "description": "A = Pe^{rt}, trong đó P là dân số của năm lấy làm mốc, A là dân số sau t năm, r là tỉ lệ tăng dân số hằng năm",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "HAM_SO_MU_CO_SO_A",
+      "target": "HAM_SO_MU",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "HAM_SO_LOGARIT_CO_SO_A",
+      "target": "HAM_SO_LOGARIT",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TAP_XAC_DINH_HAM_SO_MU",
+      "target": "HAM_SO_MU",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "TAP_GIA_TRI_HAM_SO_MU",
+      "target": "HAM_SO_MU",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_BIEN_THIEN_HAM_SO_MU",
+      "target": "HAM_SO_MU",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "DO_THI_HAM_SO_MU",
+      "target": "HAM_SO_MU",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "TAP_XAC_DINH_HAM_SO_LOGARIT",
+      "target": "HAM_SO_LOGARIT",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "TAP_GIA_TRI_HAM_SO_LOGARIT",
+      "target": "HAM_SO_LOGARIT",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_BIEN_THIEN_HAM_SO_LOGARIT",
+      "target": "HAM_SO_LOGARIT",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "DO_THI_HAM_SO_LOGARIT",
+      "target": "HAM_SO_LOGARIT",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_TANG_TRUONG_MU",
+      "target": "HAM_SO_MU",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

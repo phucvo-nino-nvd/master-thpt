@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_CO_A",
+  "right_id": "BIEN_CO_B",
+  "merge": false,
+  "rationale": "These are generic labels for events A and B in probability. They are distinct placeholders representing different events in a context. While structurally similar, they are not the same reusable knowledge node; they represent different mathematical objects (different events)."
+}

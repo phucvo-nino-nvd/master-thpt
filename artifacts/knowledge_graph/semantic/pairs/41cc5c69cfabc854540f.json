@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO_CUNG_HUONG",
+  "right_id": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+  "merge": false,
+  "rationale": "The left node defines vectors with the same direction, which is a stricter condition than the right node which defines collinear vectors (same or opposite direction). One is a subtype of the other."
+}

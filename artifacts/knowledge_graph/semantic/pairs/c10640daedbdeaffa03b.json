@@ -1,0 +1,6 @@
+{
+  "left_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+  "right_id": "GOC_GIUA_HAI_VECTO",
+  "merge": false,
+  "rationale": "Different concepts: angle between two lines in space vs. angle between two vectors. Related but not identical."
+}

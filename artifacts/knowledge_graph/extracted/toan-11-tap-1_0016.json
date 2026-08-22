@@ -1,0 +1,138 @@
+{
+  "chunk_id": "toan-11-tap-1:0016",
+  "nodes": [
+    {
+      "id": "GIOI_HAN_HAM_SO",
+      "name": "Giới hạn của hàm số",
+      "type": "CONCEPT",
+      "description": "Khái niệm về giới hạn của một hàm số khi biến số tiến gần một giá trị xác định hoặc vô cực.",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_HUU_HAN",
+      "name": "Giới hạn hữu hạn",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một hàm số khi biến số tiến gần một giá trị xác định và kết quả là một số hữu hạn.",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_TAI_VO_CUC",
+      "name": "Giới hạn tại vô cực",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một hàm số khi biến số tiến gần vô cực (tăng hoặc giảm vô cùng).",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_VO_CUC",
+      "name": "Giới hạn vô cực",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một hàm số khi biến số tiến gần một giá trị xác định và kết quả là vô cùng (vô cùng dương hoặc vô cùng âm).",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_MOT_BEN",
+      "name": "Giới hạn một bên",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một hàm số khi biến số tiến gần một giá trị xác định từ một phía (bên phải hoặc bên trái).",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_BEN_PHAI",
+      "name": "Giới hạn bên phải",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một hàm số khi biến số tiến gần một giá trị xác định từ phía bên phải.",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_BEN_TRAI",
+      "name": "Giới hạn bên trái",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một hàm số khi biến số tiến gần một giá trị xác định từ phía bên trái.",
+      "grade": 11
+    },
+    {
+      "id": "QUY_TAC_TINH_GIOI_HAN",
+      "name": "Quy tắc tính giới hạn",
+      "type": "THEOREM",
+      "description": "Các quy tắc để tính giới hạn của các phép toán cơ bản (cộng, trừ, nhân, chia) giữa hai hàm số.",
+      "grade": 11
+    },
+    {
+      "id": "QUY_TAC_TINH_GIOI_HAN_TICH",
+      "name": "Quy tắc tính giới hạn của tích",
+      "type": "THEOREM",
+      "description": "Quy tắc để tính giới hạn của tích hai hàm số khi một trong hai hàm số có giới hạn vô cực.",
+      "grade": 11
+    },
+    {
+      "id": "QUY_TAC_TINH_GIOI_HAN_THUONG",
+      "name": "Quy tắc tính giới hạn của thương",
+      "type": "THEOREM",
+      "description": "Quy tắc để tính giới hạn của thương hai hàm số khi một trong hai hàm số có giới hạn vô cực hoặc một hàm số có giới hạn là 0.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_GIOI_HAN",
+      "name": "Phương pháp tính giới hạn",
+      "type": "METHOD",
+      "description": "Các phương pháp để tính giới hạn của một hàm số, bao gồm sử dụng định nghĩa, quy tắc tính giới hạn và các quy tắc đặc biệt.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "GIOI_HAN_HAM_SO",
+      "target": "GIOI_HAN_HUU_HAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_HAM_SO",
+      "target": "GIOI_HAN_TAI_VO_CUC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_HAM_SO",
+      "target": "GIOI_HAN_VO_CUC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_HAM_SO",
+      "target": "GIOI_HAN_MOT_BEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_MOT_BEN",
+      "target": "GIOI_HAN_BEN_PHAI",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_MOT_BEN",
+      "target": "GIOI_HAN_BEN_TRAI",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_GIOI_HAN",
+      "target": "QUY_TAC_TINH_GIOI_HAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_GIOI_HAN",
+      "target": "QUY_TAC_TINH_GIOI_HAN_TICH",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_GIOI_HAN",
+      "target": "QUY_TAC_TINH_GIOI_HAN_THUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

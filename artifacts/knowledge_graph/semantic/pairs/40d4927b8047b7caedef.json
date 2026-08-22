@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_DOANH_THU",
+  "right_id": "HAM_DOANH_THU_BIEN",
+  "merge": false,
+  "rationale": "The left node is the revenue function. The right node is the marginal revenue function, defined as the derivative of the revenue function. One is a concept, the other is a derived concept (its derivative). They are related as a function and its rate of change, not semantic duplicates."
+}

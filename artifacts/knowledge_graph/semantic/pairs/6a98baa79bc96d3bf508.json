@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_COS",
+  "right_id": "HAM_SO_TANG",
+  "merge": false,
+  "rationale": "The left node is the cosine function. The right node is the tangent function. They are distinct trigonometric functions with different definitions and properties."
+}

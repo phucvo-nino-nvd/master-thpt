@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+  "right_id": "DAO_HAM_CUA_TICH_THUONG",
+  "merge": false,
+  "rationale": "The left node lists derivative rules for basic elementary functions. The right node is the product/quotient rule for derivatives. They are distinct sets of derivative rules."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC",
+  "right_id": "CONG_THUC_NHAN_XAC_SUAT_BIEN_CO_DOC_LAP",
+  "merge": false,
+  "rationale": "The left node is the addition rule for probabilities of mutually exclusive events. The right node is the multiplication rule for probabilities of independent events. They are distinct, fundamental probability formulas used under different conditions."
+}

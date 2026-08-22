@@ -1,0 +1,105 @@
+{
+  "chunk_id": "toan-12-tap-2:0006",
+  "nodes": [
+    {
+      "id": "GOC_GIUA_HAI_DUONG_THANG",
+      "name": "Góc giữa hai đường thẳng",
+      "type": "CONCEPT",
+      "description": "Góc tạo bởi hai đường thẳng trong không gian",
+      "grade": 12
+    },
+    {
+      "id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "name": "Góc giữa đường thẳng và mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Góc tạo bởi đường thẳng với mặt phẳng trong không gian",
+      "grade": 12
+    },
+    {
+      "id": "GOC_GIUA_HAI_MAT_PHANG",
+      "name": "Góc giữa hai mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Góc tạo bởi hai mặt phẳng trong không gian",
+      "grade": 12
+    },
+    {
+      "id": "VECTO_CHI_PHUONG",
+      "name": "Vectơ chỉ phương",
+      "type": "CONCEPT",
+      "description": "Vectơ xác định hướng của đường thẳng trong không gian",
+      "grade": 12
+    },
+    {
+      "id": "VECTO_PHAP_TUYEN",
+      "name": "Vectơ pháp tuyến",
+      "type": "CONCEPT",
+      "description": "Vectơ vuông góc với mặt phẳng",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_GOC_GIUA_HAI_DUONG_THANG",
+      "name": "Công thức tính góc giữa hai đường thẳng",
+      "type": "FORMULA",
+      "description": "Công thức tính cosin của góc giữa hai đường thẳng dựa trên vectơ chỉ phương",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "name": "Công thức tính góc giữa đường thẳng và mặt phẳng",
+      "type": "FORMULA",
+      "description": "Công thức tính sin của góc giữa đường thẳng và mặt phẳng dựa trên vectơ chỉ phương và vectơ pháp tuyến",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG",
+      "name": "Công thức tính góc giữa hai mặt phẳng",
+      "type": "FORMULA",
+      "description": "Công thức tính cosin của góc giữa hai mặt phẳng dựa trên vectơ pháp tuyến",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "CONG_THUC_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "GOC_GIUA_HAI_DUONG_THANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "target": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG",
+      "target": "GOC_GIUA_HAI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "target": "VECTO_PHAP_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG",
+      "target": "VECTO_PHAP_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

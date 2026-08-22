@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG",
+  "right_id": "CONG_THUC_NHAN_DOI",
+  "merge": false,
+  "rationale": "The left node refers to trigonometric addition formulas (e.g., sin(a+b)), while the right node refers to double-angle formulas (e.g., sin(2a)). They are distinct sets of trigonometric identities."
+}

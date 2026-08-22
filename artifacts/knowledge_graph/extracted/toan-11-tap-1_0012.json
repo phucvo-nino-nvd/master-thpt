@@ -1,0 +1,79 @@
+{
+  "chunk_id": "toan-11-tap-1:0012",
+  "nodes": [
+    {
+      "id": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "name": "Đường thẳng song song với mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Đường thẳng không có điểm chung với mặt phẳng",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_CAT_MAT_PHANG",
+      "name": "Đường thẳng cắt mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Đường thẳng có một điểm chung duy nhất với mặt phẳng",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_NAM_TRONG_MAT_PHANG",
+      "name": "Đường thẳng nằm trong mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Đường thẳng có nhiều hơn một điểm chung với mặt phẳng",
+      "grade": 11
+    },
+    {
+      "id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "name": "Điều kiện đường thẳng song song với mặt phẳng",
+      "type": "THEOREM",
+      "description": "Nếu đường thẳng không nằm trong mặt phẳng và song song với một đường thẳng nằm trong mặt phẳng, thì đường thẳng đó song song với mặt phẳng",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "name": "Tính chất đường thẳng song song với mặt phẳng",
+      "type": "THEOREM",
+      "description": "Nếu đường thẳng song song với mặt phẳng và mặt phẳng khác chứa đường thẳng đó cắt mặt phẳng ban đầu, thì giao tuyến của hai mặt phẳng song song với đường thẳng",
+      "grade": 11
+    },
+    {
+      "id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+      "name": "Mặt phẳng chứa đường thẳng song song với đường thẳng khác",
+      "type": "THEOREM",
+      "description": "Cho hai đường thẳng chéo nhau, có duy nhất một mặt phẳng chứa đường thẳng này và song song với đường thẳng kia",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_CAT_MAT_PHANG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_NAM_TRONG_MAT_PHANG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+      "target": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

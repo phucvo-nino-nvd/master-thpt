@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_TRUNG_BINH_BANG_TAN_SO",
+  "right_id": "TRUNG_BINH_CONG_MAU_SO_LIEU",
+  "merge": false,
+  "rationale": "The left node describes the formula for the mean using a frequency table (grouped data), while the right node describes the formula for the mean of ungrouped data. They are different computational forms for different data representations, not semantic duplicates."
+}

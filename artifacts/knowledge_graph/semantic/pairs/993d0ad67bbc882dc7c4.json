@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_BEN_PHAI",
+  "right_id": "GIOI_HAN_BEN_TRAI",
+  "merge": false,
+  "rationale": "Giới hạn bên phải (right-hand limit) and Giới hạn bên trái (left-hand limit) are distinct one-sided limit concepts; they are not semantic duplicates."
+}

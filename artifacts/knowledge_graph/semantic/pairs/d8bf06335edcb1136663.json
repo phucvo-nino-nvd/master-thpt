@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_TICH_THUONG",
+  "right_id": "DAO_HAM_CUA_TONG_HIEU",
+  "merge": false,
+  "rationale": "Đạo hàm của tích, thương (derivative of product/quotient) and Đạo hàm của tổng, hiệu (derivative of sum/difference) are separate differentiation rules; they are components of derivative calculus but not identical."
+}

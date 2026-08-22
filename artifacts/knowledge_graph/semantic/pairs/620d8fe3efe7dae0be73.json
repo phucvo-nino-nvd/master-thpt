@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "merge": false,
+  "rationale": "The left node is a condition for two lines to be perpendicular based on their direction vectors. The right node is a theorem about two distinct lines both perpendicular to a plane being parallel. They describe different geometric relationships and are not the same theorem."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_SIN",
+  "right_id": "HAM_SO_TANG",
+  "merge": false,
+  "rationale": "Different trigonometric functions: sine vs tangent. They are distinct concepts."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_VUONG_GOC_CHUNG",
+  "right_id": "HAI_DUONG_THANG_VUONG_GOC",
+  "merge": false,
+  "rationale": "The left node is the concept of a common perpendicular line for two skew lines. The right node is the concept of two perpendicular lines. They are different concepts; one is a specific construction for skew lines, the other is a general definition. So KEEP."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "CUC_TRI",
+  "right_id": "GIA_TRI_CUC_TRI",
+  "merge": false,
+  "rationale": "The left node 'Cực trị' refers to the concept of extrema (maximum or minimum values of a function), while the right node 'Giá trị cực trị' refers specifically to the value of the function at an extremum point. One is the general concept, and the other is a specific value associated with it. They are related but not identical; one is a property/component of the other."
+}

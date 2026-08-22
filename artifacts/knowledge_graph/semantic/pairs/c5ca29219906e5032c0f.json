@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_DI_QUA_HAI_DIEM",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "merge": false,
+  "rationale": "The nodes are different theorems. One is a fundamental axiom/postulate: there is exactly one line through two distinct points. The other is a theorem about lines perpendicular to a plane being parallel. They are not semantic duplicates."
+}

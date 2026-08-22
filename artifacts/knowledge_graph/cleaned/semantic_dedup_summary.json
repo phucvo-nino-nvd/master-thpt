@@ -1,0 +1,237 @@
+{
+  "canonical_nodes_before": 722,
+  "semantic_candidates": 581,
+  "merged_pairs": 21,
+  "merged_groups": 17,
+  "canonical_nodes_after": 703,
+  "local_edges_before": 741,
+  "local_edges_after": 734,
+  "deterministic_id_renames": {
+    "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN"
+  },
+  "embedding_model": "openai/text-embedding-3-small",
+  "judge_model": "deepseek/deepseek-v3.2",
+  "top_k": 8,
+  "min_similarity": 0.82,
+  "merge_groups": [
+    [
+      "CONG_THUC_CAP_SO_NHAN",
+      "SO_HANG_TONG_QUAT_CAP_SO_NHAN"
+    ],
+    [
+      "CONG_THUC_SO_HANG_TONG_QUAT",
+      "SO_HANG_TONG_QUAT_CAP_SO_CONG"
+    ],
+    [
+      "DAY_SO",
+      "DAY_SO_VO_HAN"
+    ],
+    [
+      "GIAO_HAI_TAP_HOP",
+      "TAP_HOP_GIAO"
+    ],
+    [
+      "GIA_TRI_LUONG_GIAC_GOC_BU_NHAU",
+      "QUAN_HE_LUONG_GIAC_GOC_BU"
+    ],
+    [
+      "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU",
+      "QUAN_HE_LUONG_GIAC_GOC_PHU"
+    ],
+    [
+      "HAM_LOGARIT",
+      "HAM_SO_LOGARIT",
+      "HAM_SO_LOGARIT_CO_SO_A"
+    ],
+    [
+      "HAM_MU",
+      "HAM_SO_MU",
+      "HAM_SO_MU_CO_SO_A"
+    ],
+    [
+      "HAM_SO_GIAM",
+      "HAM_SO_NGHICH_BIEN"
+    ],
+    [
+      "HE_TRUC_TOA_DO_DESCARTES_VUONG_GOC",
+      "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN"
+    ],
+    [
+      "HIEU_HAI_VECTO",
+      "HIEU_VECTO"
+    ],
+    [
+      "HOP_HAI_TAP_HOP",
+      "TAP_HOP_HOP"
+    ],
+    [
+      "NGUYEN_HAM_HAM_SO_LUY_THUA",
+      "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT"
+    ],
+    [
+      "PHUONG_PHAP_HINH_CAY",
+      "SO_DO_HINH_CAY_METHOD"
+    ],
+    [
+      "PHUONG_TRINH_MU",
+      "PHUONG_TRINH_MU_CO_BAN"
+    ],
+    [
+      "TONG_HAI_VECTO",
+      "TONG_VECTO"
+    ],
+    [
+      "XAC_SUAT_CO_DIEU_KIEN",
+      "XAC_SUAT_DIEU_KIEN"
+    ]
+  ],
+  "merge_decisions": [
+    {
+      "left_id": "NGUYEN_HAM_HAM_SO_LUY_THUA",
+      "right_id": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT",
+      "similarity": 0.9799368054465187,
+      "merge": true,
+      "rationale": "Both nodes describe the indefinite integral (antiderivative) of the power function y = x^α, with the exact same formula and condition (α ≠ -1). The names 'Nguyên hàm của hàm số lũy thừa' and 'Nguyên hàm của hàm số lũy thừa tổng quát' refer to the same mathematical object. The description is identical. They are true semantic duplicates."
+    },
+    {
+      "left_id": "HAM_SO_LOGARIT",
+      "right_id": "HAM_SO_LOGARIT_CO_SO_A",
+      "similarity": 0.967789112010603,
+      "merge": true,
+      "rationale": "Both nodes define the logarithmic function with base a: y = logₐx, with the same conditions a > 0, a ≠ 1. 'Hàm số lôgarit' and 'Hàm số lôgarit cơ số a' are different phrasings for the same core concept. The descriptions are identical. They are semantic duplicates."
+    },
+    {
+      "left_id": "XAC_SUAT_CO_DIEU_KIEN",
+      "right_id": "XAC_SUAT_DIEU_KIEN",
+      "similarity": 0.9578713968397187,
+      "merge": true,
+      "rationale": "Both nodes define conditional probability: the probability of event A given event B has occurred, denoted P(A|B). The names 'Xác suất có điều kiện' and 'Xác suất điều kiện' are synonyms. The descriptions are semantically identical. They represent the same mathematical concept."
+    },
+    {
+      "left_id": "HAM_MU",
+      "right_id": "HAM_SO_MU",
+      "similarity": 0.9539192778024356,
+      "merge": true,
+      "rationale": "Both nodes define the exponential function: y = a^x, with the same conditions a > 0, a ≠ 1. 'Hàm mũ' and 'Hàm số mũ' are common synonyms for the same mathematical concept. The descriptions are identical. They are semantic duplicates."
+    },
+    {
+      "left_id": "DAY_SO",
+      "right_id": "DAY_SO_VO_HAN",
+      "similarity": 0.9518886636807711,
+      "merge": true,
+      "rationale": "Both define a sequence as a function on positive integers. Descriptions are identical. 'Dãy số' and 'Dãy số vô hạn' are the same concept in this context."
+    },
+    {
+      "left_id": "HAM_SO_MU",
+      "right_id": "HAM_SO_MU_CO_SO_A",
+      "similarity": 0.9496663961806063,
+      "merge": true,
+      "rationale": "Both define exponential function y = a^x with same conditions a>0, a≠1. 'Hàm số mũ' and 'Hàm số mũ cơ số a' are the same concept."
+    },
+    {
+      "left_id": "HAM_LOGARIT",
+      "right_id": "HAM_SO_LOGARIT",
+      "similarity": 0.937356517272095,
+      "merge": true,
+      "rationale": "Both define logarithmic function y = logₐ x with same conditions a>0, a≠1. 'Hàm lôgarit' and 'Hàm số lôgarit' are the same concept."
+    },
+    {
+      "left_id": "TONG_HAI_VECTO",
+      "right_id": "TONG_VECTO",
+      "similarity": 0.9209944895313481,
+      "merge": true,
+      "rationale": "Both nodes define the sum of two vectors. The left describes it as a vector defined by taking point A, drawing vectors AB = a and BC = b, then AC = a + b. The right describes AC as the sum of AB and BC, denoted a + b. The descriptions are semantically identical, both defining the same concept of vector addition. MERGE."
+    },
+    {
+      "left_id": "PHUONG_TRINH_MU",
+      "right_id": "PHUONG_TRINH_MU_CO_BAN",
+      "similarity": 0.9207871520860751,
+      "merge": true,
+      "rationale": "Both nodes describe the exponential equation of the form a^x = b with the same conditions (0 < a != 1). The right node is explicitly called 'basic', but the left node's description matches the basic form. They appear to be semantic duplicates describing the same concept. MERGE."
+    },
+    {
+      "left_id": "HAM_SO_GIAM",
+      "right_id": "HAM_SO_NGHICH_BIEN",
+      "similarity": 0.9191107590020513,
+      "merge": true,
+      "rationale": "Both nodes describe a decreasing function. The left is 'ham so giam' and the right is 'ham so nghich bien', which are synonyms in Vietnamese mathematics. Both describe a function that decreases as the variable increases on an interval. They are semantic duplicates. MERGE."
+    },
+    {
+      "left_id": "CONG_THUC_SO_HANG_TONG_QUAT",
+      "right_id": "SO_HANG_TONG_QUAT_CAP_SO_CONG",
+      "similarity": 0.9175203663338354,
+      "merge": true,
+      "rationale": "Both nodes describe the general term formula for an arithmetic sequence: u_n = u_1 + (n-1)d. The descriptions are semantically identical. MERGE."
+    },
+    {
+      "left_id": "HAM_LOGARIT",
+      "right_id": "HAM_SO_LOGARIT_CO_SO_A",
+      "similarity": 0.9014203845812673,
+      "merge": true,
+      "rationale": "Hàm lôgarit and Hàm số lôgarit cơ số a both describe the logarithmic function y = logₐ x with the same conditions (a > 0, a ≠ 1). The descriptions are semantically identical; they are true duplicates."
+    },
+    {
+      "left_id": "PHUONG_PHAP_HINH_CAY",
+      "right_id": "SO_DO_HINH_CAY_METHOD",
+      "similarity": 0.9013048474243659,
+      "merge": true,
+      "rationale": "Phương pháp hình cây and Phương pháp sơ đồ hình cây both describe the tree diagram method for probability. The descriptions are semantically identical; they are true duplicates."
+    },
+    {
+      "left_id": "HIEU_HAI_VECTO",
+      "right_id": "HIEU_VECTO",
+      "similarity": 0.8919456105216839,
+      "merge": true,
+      "rationale": "Both nodes define the concept of the difference/subtraction of two vectors. The descriptions are semantically identical: 'hiệu của hai vectơ' defined as a - b, and 'Hiệu vectơ' defined as a + (-b) which is equivalent to a - b. They represent exactly the same reusable mathematical knowledge."
+    },
+    {
+      "left_id": "HAM_MU",
+      "right_id": "HAM_SO_MU_CO_SO_A",
+      "similarity": 0.8890263892286349,
+      "merge": true,
+      "rationale": "Both nodes describe the exponential function y = a^x with the same conditions (a > 0, a != 1). The names 'Hàm mũ' and 'Hàm số mũ cơ số a' are synonyms referring to the same mathematical concept. One global node can represent this without loss."
+    },
+    {
+      "left_id": "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU",
+      "right_id": "QUAN_HE_LUONG_GIAC_GOC_PHU",
+      "similarity": 0.8814126081266686,
+      "merge": true,
+      "rationale": "Both nodes describe the same trigonometric relationships for complementary angles. The left uses radians (π/2 - α) and the right uses degrees (90° - α), but they express the exact same mathematical identities (sin(complement) = cos α, etc.). The difference is purely in the unit of measurement, not in the core reusable mathematical knowledge. They are semantic duplicates."
+    },
+    {
+      "left_id": "GIA_TRI_LUONG_GIAC_GOC_BU_NHAU",
+      "right_id": "QUAN_HE_LUONG_GIAC_GOC_BU",
+      "similarity": 0.8814077431418951,
+      "merge": true,
+      "rationale": "Both nodes describe the same trigonometric relationships for supplementary angles. The left uses radians (π - α) and the right uses degrees (180° - α), but they express the exact same mathematical identities (sin(supplement) = sin α, cos(supplement) = -cos α, etc.). The difference is purely in the unit of measurement. They are semantic duplicates."
+    },
+    {
+      "left_id": "HOP_HAI_TAP_HOP",
+      "right_id": "TAP_HOP_HOP",
+      "similarity": 0.8676416563097514,
+      "merge": true,
+      "rationale": "Both nodes define the union of two sets using the same notation (S ∪ T and A ∪ B) and the same semantic description: a set containing elements from either set. The difference in variable names (S/T vs. A/B) and phrasing ('gồm các phần tử' vs 'gồm tất cả các phần tử') is purely wording. They represent the same reusable mathematical concept."
+    },
+    {
+      "left_id": "GIAO_HAI_TAP_HOP",
+      "right_id": "TAP_HOP_GIAO",
+      "similarity": 0.8614953376472575,
+      "merge": true,
+      "rationale": "Both describe the same mathematical concept: the intersection of two sets. Descriptions are semantically identical despite slight wording differences."
+    },
+    {
+      "left_id": "HE_TRUC_TOA_DO_DESCARTES_VUONG_GOC",
+      "right_id": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+      "similarity": 0.8520841010362072,
+      "merge": true,
+      "rationale": "Both nodes describe the same concept: a Cartesian coordinate system in three-dimensional space with three mutually perpendicular axes. The descriptions are semantically equivalent, with one mentioning 'Descartes vuông góc' and the other describing the axes and unit vectors. They represent the same reusable mathematical knowledge."
+    },
+    {
+      "left_id": "CONG_THUC_CAP_SO_NHAN",
+      "right_id": "SO_HANG_TONG_QUAT_CAP_SO_NHAN",
+      "similarity": 0.8504846551424444,
+      "merge": true,
+      "rationale": "Both describe the same formula for the nth term of a geometric sequence: u_n = u_1 * q^(n-1). The descriptions are semantically identical."
+    }
+  ]
+}

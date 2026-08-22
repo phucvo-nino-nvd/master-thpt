@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "name": "Công thức tính góc giữa hai đường thẳng",
+      "type": "FORMULA",
+      "description": "Công thức tính cosin của góc giữa hai đường thẳng dựa trên vectơ chỉ phương hoặc vectơ pháp tuyến của chúng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0008",
+      "original_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "canonical_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "rationale": "Both occurrences describe the same core mathematical formula for calculating the angle between two lines, using direction or normal vectors. The grade difference (10 vs 12) and slight descriptive variation (plane vs space) do not constitute a fundamental difference in the formula's identity or purpose. The formula is conceptually the same and should be merged under a single canonical node."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0006",
+      "original_id": "CONG_THUC_GOC_GIUA_HAI_DUONG_THANG",
+      "canonical_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "rationale": "Both occurrences describe the same core mathematical formula for calculating the angle between two lines, using direction or normal vectors. The grade difference (10 vs 12) and slight descriptive variation (plane vs space) do not constitute a fundamental difference in the formula's identity or purpose. The formula is conceptually the same and should be merged under a single canonical node."
+    }
+  ]
+}

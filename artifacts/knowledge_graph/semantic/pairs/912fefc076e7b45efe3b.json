@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_HUU_HAN",
+  "right_id": "GIOI_HAN_LA_0",
+  "merge": false,
+  "rationale": "Left node is the general concept of a 'finite limit'. Right node is the specific case of a 'limit equal to 0'. One is a general concept and the other is a special case. They are not semantic duplicates."
+}

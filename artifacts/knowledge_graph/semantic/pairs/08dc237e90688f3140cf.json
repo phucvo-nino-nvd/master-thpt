@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_HINH_COS",
+  "right_id": "DUONG_HINH_TAN",
+  "merge": false,
+  "rationale": "Left is the graph of the cosine function. Right is the graph of the tangent function. They are distinct trigonometric functions and their graphs; one is not a semantic duplicate of the other."
+}

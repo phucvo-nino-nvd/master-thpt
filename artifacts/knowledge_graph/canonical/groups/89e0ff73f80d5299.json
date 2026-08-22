@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "HAM_SO_DONG_BIEN",
+      "name": "Hàm số đồng biến",
+      "type": "CONCEPT",
+      "description": "Hàm số được gọi là đồng biến trên một khoảng nếu giá trị của nó tăng khi biến số tăng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0001",
+      "original_id": "HAM_SO_DONG_BIEN",
+      "canonical_id": "HAM_SO_DONG_BIEN",
+      "rationale": "Both occurrences describe the same mathematical concept of an increasing function, with consistent definitions across grades 10 and 12. Grade differences alone are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0001",
+      "original_id": "HAM_SO_DONG_BIEN",
+      "canonical_id": "HAM_SO_DONG_BIEN",
+      "rationale": "Both occurrences describe the same mathematical concept of an increasing function, with consistent definitions across grades 10 and 12. Grade differences alone are not a reason to split."
+    }
+  ]
+}

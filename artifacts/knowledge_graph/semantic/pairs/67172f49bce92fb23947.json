@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG",
+  "right_id": "DUONG_THANG_TRUNG_NHAU",
+  "merge": false,
+  "rationale": "The left node 'đường thẳng' is the general concept of a line. The right node 'Hai đường thẳng trùng nhau' is the specific concept of two lines coinciding. One is a basic object, the other is a relationship between two such objects. They are related but not identical."
+}

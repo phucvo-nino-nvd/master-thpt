@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "merge": false,
+  "rationale": "Đường thẳng vuông góc với mặt phẳng cắt nhau (line perpendicular to plane intersects) and Đường thẳng vuông góc với mặt phẳng phân biệt (two distinct lines perpendicular to plane are parallel) are different geometric properties/theorems."
+}

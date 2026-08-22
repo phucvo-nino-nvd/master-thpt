@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_COT",
+  "right_id": "HAM_SO_TANG",
+  "merge": false,
+  "rationale": "Hàm số cotang (cotangent function) and Hàm số tang (tangent function) are distinct trigonometric functions; they are not semantic duplicates."
+}

@@ -1,0 +1,113 @@
+{
+  "chunk_id": "toan-12-tap-2:0007",
+  "nodes": [
+    {
+      "id": "PHUONG_TRINH_MAT_CAU",
+      "name": "Phương trình mặt cầu",
+      "type": "FORMULA",
+      "description": "Phương trình mặt cầu tâm I(a, b, c) bán kính R trong không gian Oxyz: (x - a)² + (y - b)² + (z - c)² = R².",
+      "grade": 12
+    },
+    {
+      "id": "TAM_MAT_CAU",
+      "name": "Tâm mặt cầu",
+      "type": "CONCEPT",
+      "description": "Điểm I(a, b, c) là tâm của mặt cầu.",
+      "grade": 12
+    },
+    {
+      "id": "BAN_KINH_MAT_CAU",
+      "name": "Bán kính mặt cầu",
+      "type": "CONCEPT",
+      "description": "Khoảng cách từ tâm đến bất kỳ điểm nào trên mặt cầu.",
+      "grade": 12
+    },
+    {
+      "id": "DUONG_KINH_MAT_CAU",
+      "name": "Đường kính mặt cầu",
+      "type": "CONCEPT",
+      "description": "Đoạn thẳng nối hai điểm trên mặt cầu qua tâm, có độ dài 2R.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_TRINH_MAT_CAU_TUONG_DUONG",
+      "name": "Phương trình mặt cầu tương đương",
+      "type": "FORMULA",
+      "description": "Phương trình x² + y² + z² - 2ax - 2by - 2cz + d = 0 là phương trình mặt cầu khi và chỉ khi a² + b² + c² - d > 0.",
+      "grade": 12
+    },
+    {
+      "id": "TOA_DO_TRONG_KHONG_GIAN",
+      "name": "Toạ độ trong không gian",
+      "type": "CONCEPT",
+      "description": "Hệ toạ độ Oxyz để xác định vị trí điểm trong không gian.",
+      "grade": 12
+    },
+    {
+      "id": "KHOANG_CACH_TRONG_KHONG_GIAN",
+      "name": "Khoảng cách trong không gian",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa hai điểm trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "KHOANG_CACH_TRONG_THUC_TE",
+      "name": "Khoảng cách trên thực tế",
+      "type": "CONCEPT",
+      "description": "Khoảng cách trên bề mặt Trái Đất tính bằng phương trình mặt cầu.",
+      "grade": 12
+    },
+    {
+      "id": "VI_DO_KINH_DO",
+      "name": "Vĩ độ và kinh độ",
+      "type": "CONCEPT",
+      "description": "Hệ thống tọa độ địa lý để xác định vị trí trên bề mặt Trái Đất.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_TRINH_MAT_CAU_TRAI_DAT",
+      "name": "Phương trình mặt cầu Trái Đất",
+      "type": "FORMULA",
+      "description": "Phương trình x² + y² + z² = 1 mô phỏng bề mặt Trái Đất trong không gian Oxyz.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHUONG_TRINH_MAT_CAU",
+      "target": "TAM_MAT_CAU",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình mặt cầu yêu cầu định nghĩa tâm mặt cầu."
+    },
+    {
+      "source": "PHUONG_TRINH_MAT_CAU",
+      "target": "BAN_KINH_MAT_CAU",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình mặt cầu yêu cầu định nghĩa bán kính mặt cầu."
+    },
+    {
+      "source": "PHUONG_TRINH_MAT_CAU",
+      "target": "TOA_DO_TRONG_KHONG_GIAN",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình mặt cầu sử dụng hệ toạ độ trong không gian."
+    },
+    {
+      "source": "PHUONG_TRINH_MAT_CAU_TUONG_DUONG",
+      "target": "PHUONG_TRINH_MAT_CAU",
+      "relation": "IS_A",
+      "rationale": "Phương trình mặt cầu tương đương là một dạng đặc biệt của phương trình mặt cầu."
+    },
+    {
+      "source": "KHOANG_CACH_TRONG_THUC_TE",
+      "target": "PHUONG_TRINH_MAT_CAU_TRAI_DAT",
+      "relation": "REQUIRES",
+      "rationale": "Khoảng cách trên thực tế sử dụng phương trình mặt cầu Trái Đất."
+    },
+    {
+      "source": "KHOANG_CACH_TRONG_THUC_TE",
+      "target": "VI_DO_KINH_DO",
+      "relation": "REQUIRES",
+      "rationale": "Khoảng cách trên thực tế yêu cầu định nghĩa vĩ độ và kinh độ."
+    }
+  ]
+}

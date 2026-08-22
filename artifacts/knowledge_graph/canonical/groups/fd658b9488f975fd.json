@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "TAP_XAC_DINH",
+      "name": "Tập xác định",
+      "type": "CONCEPT",
+      "description": "Tập hợp tất cả các giá trị của biến số (biến độc lập) mà hàm số được định nghĩa."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0001",
+      "original_id": "TAP_XAC_DINH",
+      "canonical_id": "TAP_XAC_DINH",
+      "rationale": "Both occurrences describe the same mathematical concept: the set of all values of the independent variable for which the function is defined. The descriptions are semantically identical despite minor phrasing differences. Grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0004",
+      "original_id": "TAP_XAC_DINH",
+      "canonical_id": "TAP_XAC_DINH",
+      "rationale": "Both occurrences describe the same mathematical concept: the set of all values of the independent variable for which the function is defined. The descriptions are semantically identical despite minor phrasing differences. Grade difference is not a reason to split."
+    }
+  ]
+}

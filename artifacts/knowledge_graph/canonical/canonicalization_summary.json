@@ -1,0 +1,10 @@
+{
+  "extraction_results": 79,
+  "node_occurrences": 812,
+  "candidate_groups": 698,
+  "ambiguous_groups": 84,
+  "canonical_nodes": 722,
+  "dropped_occurrences": 2,
+  "canonical_local_edges": 741,
+  "model": "deepseek/deepseek-v3.2"
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_HOP",
+  "right_id": "DAO_HAM_CUA_TONG_HIEU",
+  "merge": false,
+  "rationale": "These are distinct derivative rules: the chain rule vs. the sum/difference rule."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "TAP_CON",
+  "right_id": "TAP_HOP_GIAO",
+  "merge": false,
+  "rationale": "These are distinct set theory concepts: subset (A ⊂ B) and intersection (A ∩ B). They are related but represent different operations and relationships."
+}

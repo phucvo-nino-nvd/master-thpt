@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_NHAN_XAC_SUAT_TONG_QUAT",
+  "right_id": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+  "merge": false,
+  "rationale": "The left node is the general multiplication rule for probability (P(AB) = P(B) * P(A|B)). The right node is the total probability formula. They are distinct, fundamental probability formulas used for different purposes."
+}

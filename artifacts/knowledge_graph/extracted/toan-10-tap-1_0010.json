@@ -1,0 +1,196 @@
+{
+  "chunk_id": "toan-10-tap-1:0010",
+  "nodes": [
+    {
+      "id": "MAT_PHANG_TOA_DO",
+      "name": "Mặt phẳng toạ độ",
+      "type": "CONCEPT",
+      "description": "Mặt phẳng chứa hệ trục toạ độ Oxy, bao gồm trục hoành Ox và trục tung Oy, có gốc toạ độ chung O và vuông góc với nhau.",
+      "grade": 10
+    },
+    {
+      "id": "TOA_DO_CUA_VECTO",
+      "name": "Toạ độ của vectơ",
+      "type": "CONCEPT",
+      "description": "Cặp số (x₀; y₀) duy nhất đại diện cho vectơ u trên mặt phẳng toạ độ Oxy, với u = x₀i + y₀j, trong đó i và j là vectơ đơn vị của trục Ox và Oy.",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_DON_VI",
+      "name": "Vectơ đơn vị",
+      "type": "CONCEPT",
+      "description": "Vectơ có độ dài bằng 1, được sử dụng để biểu diễn các vectơ khác trên trục toạ độ. Vectơ đơn vị của trục Ox là i, vectơ đơn vị của trục Oy là j.",
+      "grade": 10
+    },
+    {
+      "id": "HE_TRUC_TOA_DO_OXY",
+      "name": "Hệ trục toạ độ Oxy",
+      "type": "CONCEPT",
+      "description": "Hệ gồm hai trục Ox và Oy có chung gốc toạ độ O và vuông góc với nhau, với i là vectơ đơn vị của Ox và j là vectơ đơn vị của Oy.",
+      "grade": 10
+    },
+    {
+      "id": "PHEP_CONG_VECTO_TOA_DO",
+      "name": "Phép cộng vectơ theo toạ độ",
+      "type": "FORMULA",
+      "description": "Cho hai vectơ u = (x; y) và v = (x'; y'), thì u + v = (x + x'; y + y').",
+      "grade": 10
+    },
+    {
+      "id": "PHEP_TRU_VECTO_TOA_DO",
+      "name": "Phép trừ vectơ theo toạ độ",
+      "type": "FORMULA",
+      "description": "Cho hai vectơ u = (x; y) và v = (x'; y'), thì u - v = (x - x'; y - y').",
+      "grade": 10
+    },
+    {
+      "id": "PHEP_NHAN_VECTO_TOA_DO",
+      "name": "Phép nhân vectơ theo toạ độ",
+      "type": "FORMULA",
+      "description": "Cho vectơ u = (x; y) và số thực k, thì ku = (kx; ky).",
+      "grade": 10
+    },
+    {
+      "id": "DO_DAI_VECTO_TOA_DO",
+      "name": "Độ dài vectơ theo toạ độ",
+      "type": "FORMULA",
+      "description": "Với vectơ u = (x; y), độ dài của u là |u| = √(x² + y²).",
+      "grade": 10
+    },
+    {
+      "id": "TOA_DO_VECTO_MN",
+      "name": "Toạ độ vectơ MN",
+      "type": "FORMULA",
+      "description": "Với hai điểm M(x; y) và N(x'; y'), vectơ MN có toạ độ (x' - x; y' - y).",
+      "grade": 10
+    },
+    {
+      "id": "KHOANG_CACH_HAI_DIEM",
+      "name": "Khoảng cách hai điểm",
+      "type": "FORMULA",
+      "description": "Với hai điểm M(x; y) và N(x'; y'), khoảng cách MN là |MN| = √((x' - x)² + (y' - y)²).",
+      "grade": 10
+    },
+    {
+      "id": "TRUNG_DIEM_DOAN_THANG",
+      "name": "Trung điểm đoạn thẳng",
+      "type": "FORMULA",
+      "description": "Trung điểm M của đoạn thẳng AB có toạ độ ((x_A + x_B)/2; (y_A + y_B)/2).",
+      "grade": 10
+    },
+    {
+      "id": "TRONG_TAM_TAM_GIAC",
+      "name": "Trọng tâm tam giác",
+      "type": "FORMULA",
+      "description": "Trọng tâm G của tam giác ABC có toạ độ ((x_A + x_B + x_C)/3; (y_A + y_B + y_C)/3).",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_CUNG_PHUONG",
+      "name": "Vectơ cùng phương",
+      "type": "THEOREM",
+      "description": "Vectơ v(x'; y') cùng phương với vectơ u(x; y) ≠ 0 khi và chỉ khi tồn tại số k sao cho x' = kx, y' = ky (hay x'/x = y'/y nếu xy ≠ 0).",
+      "grade": 10
+    },
+    {
+      "id": "DIEU_KIEN_THANG_HANG",
+      "name": "Điều kiện thẳng hàng",
+      "type": "THEOREM",
+      "description": "Ba điểm A, B, C thẳng hàng khi và chỉ khi hai vectơ AB và BC cùng phương.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_TIM_VI_TRI_BAO",
+      "name": "Phương pháp tìm vị trí bão",
+      "type": "METHOD",
+      "description": "Dựa vào toạ độ ban đầu và toạ độ cuối cùng của bão, sử dụng tính chất của vectơ cùng phương để xác định vị trí của bão tại thời điểm bất kỳ trong khoảng thời gian dự báo.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "MAT_PHANG_TOA_DO",
+      "target": "HE_TRUC_TOA_DO_OXY",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "HE_TRUC_TOA_DO_OXY",
+      "target": "VECTO_DON_VI",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "TOA_DO_CUA_VECTO",
+      "target": "VECTO_DON_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHEP_CONG_VECTO_TOA_DO",
+      "target": "TOA_DO_CUA_VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHEP_TRU_VECTO_TOA_DO",
+      "target": "TOA_DO_CUA_VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHEP_NHAN_VECTO_TOA_DO",
+      "target": "TOA_DO_CUA_VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DO_DAI_VECTO_TOA_DO",
+      "target": "TOA_DO_CUA_VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TOA_DO_VECTO_MN",
+      "target": "TOA_DO_CUA_VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "KHOANG_CACH_HAI_DIEM",
+      "target": "TOA_DO_VECTO_MN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TRUNG_DIEM_DOAN_THANG",
+      "target": "TOA_DO_CUA_VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TRONG_TAM_TAM_GIAC",
+      "target": "TOA_DO_CUA_VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "VECTO_CUNG_PHUONG",
+      "target": "TOA_DO_CUA_VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DIEU_KIEN_THANG_HANG",
+      "target": "VECTO_CUNG_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TIM_VI_TRI_BAO",
+      "target": "VECTO_CUNG_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

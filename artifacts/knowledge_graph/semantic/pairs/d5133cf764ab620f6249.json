@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO_BANG_NHAU",
+  "right_id": "VECTO_DOI",
+  "merge": false,
+  "rationale": "The left node defines equal vectors (same length and direction). The right node defines opposite vectors (same length, opposite direction). They are distinct, related concepts, not semantic duplicates."
+}

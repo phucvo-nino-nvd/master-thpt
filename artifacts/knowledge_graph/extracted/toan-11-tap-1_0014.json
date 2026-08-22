@@ -1,0 +1,157 @@
+{
+  "chunk_id": "toan-11-tap-1:0014",
+  "nodes": [
+    {
+      "id": "PHEP_CHIEU_SONG_SONG",
+      "name": "Phép chiếu song song",
+      "type": "CONCEPT",
+      "description": "Phép chiếu một điểm M trong không gian lên mặt phẳng theo phương chiếu",
+      "grade": 11
+    },
+    {
+      "id": "HINH_CHIEU",
+      "name": "Hình chiếu",
+      "type": "CONCEPT",
+      "description": "Tập hợp các hình chiếu của các điểm thuộc một hình qua phép chiếu song song",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_CHIEU",
+      "name": "Phương chiếu",
+      "type": "CONCEPT",
+      "description": "Đường thẳng được sử dụng để xác định hình chiếu của các điểm",
+      "grade": 11
+    },
+    {
+      "id": "MAT_PHANG_CHIEU",
+      "name": "Mặt phẳng chiếu",
+      "type": "CONCEPT",
+      "description": "Mặt phẳng mà các điểm được chiếu lên",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_PHEP_CHIEU_SONG_SONG",
+      "name": "Tính chất phép chiếu song song",
+      "type": "THEOREM",
+      "description": "Phép chiếu song song bảo toàn tính chất thẳng hàng, song song, và tỉ số độ dài",
+      "grade": 11
+    },
+    {
+      "id": "HINH_BIEU_DIEN",
+      "name": "Hình biểu diễn",
+      "type": "CONCEPT",
+      "description": "Hình chiếu song song của một hình không gian trên mặt phẳng hoặc hình đồng dạng với hình chiếu đó",
+      "grade": 11
+    },
+    {
+      "id": "HINH_BIEU_DIEN_TAM_GIAC",
+      "name": "Hình biểu diễn của tam giác",
+      "type": "THEOREM",
+      "description": "Hình biểu diễn của tam giác (cân, đều, vuông) là một tam giác",
+      "grade": 11
+    },
+    {
+      "id": "HINH_BIEU_DIEN_HINH_VUONG",
+      "name": "Hình biểu diễn của hình vuông",
+      "type": "THEOREM",
+      "description": "Hình biểu diễn của hình vuông, hình chữ nhật, hình thoi, hình bình hành là hình bình hành",
+      "grade": 11
+    },
+    {
+      "id": "HINH_BIEU_DIEN_HINH_THANG",
+      "name": "Hình biểu diễn của hình thang",
+      "type": "THEOREM",
+      "description": "Hình biểu diễn của hình thang ABCD với AB ∥ CD là một hình thang A'B'C'D' với A'B' ∥ C'D' và AB/CD = A'B'/C'D'",
+      "grade": 11
+    },
+    {
+      "id": "HINH_BIEU_DIEN_HINH_TRON",
+      "name": "Hình biểu diễn của hình tròn",
+      "type": "THEOREM",
+      "description": "Hình biểu diễn của hình tròn là hình elíp",
+      "grade": 11
+    },
+    {
+      "id": "XAC_DINH_HINH_CHIEU",
+      "name": "Xác định hình chiếu",
+      "type": "METHOD",
+      "description": "Xác định hình chiếu của một điểm, đoạn thẳng, tam giác, đường tròn qua phép chiếu song song",
+      "grade": 11
+    },
+    {
+      "id": "VE_HINH_BIEU_DIEN",
+      "name": "Vẽ hình biểu diễn",
+      "type": "METHOD",
+      "description": "Vẽ hình biểu diễn của các hình không gian đơn giản như lăng trụ, chóp, chữ cái",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHEP_CHIEU_SONG_SONG",
+      "target": "HINH_CHIEU",
+      "relation": "PART_OF",
+      "rationale": "Hình chiếu là kết quả của phép chiếu song song"
+    },
+    {
+      "source": "PHEP_CHIEU_SONG_SONG",
+      "target": "PHUONG_CHIEU",
+      "relation": "REQUIRES",
+      "rationale": "Phương chiếu là yếu tố cần thiết để thực hiện phép chiếu song song"
+    },
+    {
+      "source": "PHEP_CHIEU_SONG_SONG",
+      "target": "MAT_PHANG_CHIEU",
+      "relation": "REQUIRES",
+      "rationale": "Mặt phẳng chiếu là yếu tố cần thiết để thực hiện phép chiếu song song"
+    },
+    {
+      "source": "TINH_CHAT_PHEP_CHIEU_SONG_SONG",
+      "target": "PHEP_CHIEU_SONG_SONG",
+      "relation": "PART_OF",
+      "rationale": "Tính chất là một phần của phép chiếu song song"
+    },
+    {
+      "source": "HINH_BIEU_DIEN",
+      "target": "PHEP_CHIEU_SONG_SONG",
+      "relation": "IS_A",
+      "rationale": "Hình biểu diễn là một loại hình chiếu song song"
+    },
+    {
+      "source": "HINH_BIEU_DIEN_TAM_GIAC",
+      "target": "HINH_BIEU_DIEN",
+      "relation": "PART_OF",
+      "rationale": "Hình biểu diễn của tam giác là một phần của hình biểu diễn"
+    },
+    {
+      "source": "HINH_BIEU_DIEN_HINH_VUONG",
+      "target": "HINH_BIEU_DIEN",
+      "relation": "PART_OF",
+      "rationale": "Hình biểu diễn của hình vuông là một phần của hình biểu diễn"
+    },
+    {
+      "source": "HINH_BIEU_DIEN_HINH_THANG",
+      "target": "HINH_BIEU_DIEN",
+      "relation": "PART_OF",
+      "rationale": "Hình biểu diễn của hình thang là một phần của hình biểu diễn"
+    },
+    {
+      "source": "HINH_BIEU_DIEN_HINH_TRON",
+      "target": "HINH_BIEU_DIEN",
+      "relation": "PART_OF",
+      "rationale": "Hình biểu diễn của hình tròn là một phần của hình biểu diễn"
+    },
+    {
+      "source": "XAC_DINH_HINH_CHIEU",
+      "target": "PHEP_CHIEU_SONG_SONG",
+      "relation": "REQUIRES",
+      "rationale": "Phép chiếu song song là nền tảng để xác định hình chiếu"
+    },
+    {
+      "source": "VE_HINH_BIEU_DIEN",
+      "target": "HINH_BIEU_DIEN",
+      "relation": "REQUIRES",
+      "rationale": "Hình biểu diễn là nền tảng để vẽ hình biểu diễn"
+    }
+  ]
+}

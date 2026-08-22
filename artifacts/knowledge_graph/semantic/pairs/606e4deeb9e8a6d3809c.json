@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO_PHAP_TUYEN_DUONG_THANG",
+  "right_id": "VECTO_PHAP_TUYEN_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node is the normal vector of a line, while the right node is the normal vector of a plane. They are related concepts but apply to different geometric objects (line vs. plane). One is not a semantic duplicate of the other; they are distinct mathematical objects."
+}

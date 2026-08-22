@@ -1,0 +1,6 @@
+{
+  "left_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+  "right_id": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC",
+  "merge": false,
+  "rationale": "Left is a theorem about existence/uniqueness of a plane perpendicular to a line. Right is a property of two perpendicular planes. They are related but distinct theorems."
+}

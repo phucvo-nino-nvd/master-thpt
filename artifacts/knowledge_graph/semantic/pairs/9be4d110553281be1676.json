@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_MOT_BEN",
+  "right_id": "GIOI_HAN_TAI_VO_CUC",
+  "merge": false,
+  "rationale": "These are two distinct types of limits: one-sided limits (approaching from left or right) and limits at infinity (as the variable goes to positive or negative infinity). They are specific cases under the general limit concept but represent different mathematical situations."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO_CUNG_HUONG",
+  "right_id": "VECTO_NGUOC_HUONG",
+  "merge": false,
+  "rationale": "Hai vectơ cùng hướng (same direction) and Vectơ ngược hướng (opposite direction) are two distinct directional relationships between vectors. They are complementary but not the same concept."
+}

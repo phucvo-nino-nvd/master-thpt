@@ -1,0 +1,6 @@
+{
+  "left_id": "TIM_TIEM_CAN_DUNG",
+  "right_id": "TIM_TIEM_CAN_NGANG",
+  "merge": false,
+  "rationale": "The left node is a method for finding vertical asymptotes. The right node is a method for finding horizontal asymptotes. They are distinct procedures for finding different types of asymptotes."
+}

@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "VECTO_CUNG_HUONG",
+      "name": "Hai vectơ cùng hướng",
+      "type": "CONCEPT",
+      "description": "Hai vectơ cùng phương và có cùng hướng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0007",
+      "original_id": "VECTO_CUNG_HUONG",
+      "canonical_id": "VECTO_CUNG_HUONG",
+      "rationale": "Both occurrences describe the same mathematical concept: two vectors that are parallel and have the same direction. The grade difference (10 vs 12) is not a reason to split, as the definition is identical."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "VECTO_CUNG_HUONG",
+      "canonical_id": "VECTO_CUNG_HUONG",
+      "rationale": "Both occurrences describe the same mathematical concept: two vectors that are parallel and have the same direction. The grade difference (10 vs 12) is not a reason to split, as the definition is identical."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "TOA_DO_CUA_DIEM",
+  "right_id": "TOA_DO_VECTO_TRONG_KG",
+  "merge": false,
+  "rationale": "The left node defines the coordinates of a point in space. The right node defines the coordinates of a vector in space. They are distinct concepts: a point is a location, a vector is a direction/magnitude."
+}

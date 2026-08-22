@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "SO_TRUNG_BINH",
+      "name": "Số trung bình",
+      "type": "CONCEPT",
+      "description": "Giá trị trung bình cộng của các số trong mẫu số liệu, đại diện cho vị trí trung tâm của mẫu."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0013",
+      "original_id": "SO_TRUNG_BINH",
+      "canonical_id": "SO_TRUNG_BINH",
+      "rationale": "Both occurrences describe the same mathematical concept: the arithmetic mean as a measure of central tendency. The descriptions are consistent, and grade differences are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0009",
+      "original_id": "SO_TRUNG_BINH",
+      "canonical_id": "SO_TRUNG_BINH",
+      "rationale": "Both occurrences describe the same mathematical concept: the arithmetic mean as a measure of central tendency. The descriptions are consistent, and grade differences are not a reason to split."
+    }
+  ]
+}

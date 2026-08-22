@@ -1,0 +1,6 @@
+{
+  "left_id": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "The left node is the solution region of a single linear inequality in two variables. The right node is the solution region of a system of such inequalities. The right is a more complex concept built from the left. They are related but not duplicates; one is a component of the other. KEEP."
+}

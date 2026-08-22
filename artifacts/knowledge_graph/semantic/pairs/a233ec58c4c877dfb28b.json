@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "right_id": "TINH_CHAT_GIAO_TUYEN_CUNG_VUONG_GOC",
+  "merge": false,
+  "rationale": "Đường thẳng vuông góc với mặt phẳng phân biệt and tính chất giao tuyến cùng vuông góc are different theorems about perpendicularity in space (lines perpendicular to a plane vs. intersection line of planes perpendicular to a third plane). They are distinct."
+}

@@ -1,0 +1,79 @@
+{
+  "chunk_id": "toan-10-tap-1:0003",
+  "nodes": [
+    {
+      "id": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "name": "Bất phương trình bậc nhất hai ẩn",
+      "type": "CONCEPT",
+      "description": "Biểu thức bất đẳng thức tuyến tính với hai ẩn số x, y có dạng tổng quát ax + by ≤ c, ax + by ≥ c, ax + by < c, ax + by > c, trong đó a, b, c là số thực đã cho, a và b không đồng thời bằng 0.",
+      "grade": 10
+    },
+    {
+      "id": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "name": "Miền nghiệm của bất phương trình bậc nhất hai ẩn",
+      "type": "CONCEPT",
+      "description": "Tập hợp các điểm (x, y) trên mặt phẳng toạ độ thỏa mãn bất phương trình bậc nhất hai ẩn.",
+      "grade": 10
+    },
+    {
+      "id": "NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "name": "Nghiệm của bất phương trình bậc nhất hai ẩn",
+      "type": "CONCEPT",
+      "description": "Cặp số (x₀, y₀) thỏa mãn bất đẳng thức của bất phương trình bậc nhất hai ẩn.",
+      "grade": 10
+    },
+    {
+      "id": "BIEN_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+      "name": "Biểu diễn miền nghiệm trong mặt phẳng toạ độ",
+      "type": "METHOD",
+      "description": "Phương pháp biểu diễn miền nghiệm của bất phương trình bậc nhất hai ẩn bằng cách vẽ đường thẳng ax + by = c và xác định nửa mặt phẳng thỏa mãn bất đẳng thức.",
+      "grade": 10
+    },
+    {
+      "id": "DUONG_THANG_BAT_PHUONG_TRINH",
+      "name": "Đường thẳng bất phương trình",
+      "type": "CONCEPT",
+      "description": "Đường thẳng có phương trình ax + by = c, chia mặt phẳng toạ độ thành hai nửa mặt phẳng.",
+      "grade": 10
+    },
+    {
+      "id": "NHA_MAT_PHANG_BAT_PHUONG_TRINH",
+      "name": "Nửa mặt phẳng bất phương trình",
+      "type": "CONCEPT",
+      "description": "Mỗi nửa mặt phẳng được chia bởi đường thẳng bất phương trình, chứa các điểm thỏa mãn một bất đẳng thức nhất định.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "target": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "target": "BIEN_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "BIEN_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+      "target": "DUONG_THANG_BAT_PHUONG_TRINH",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "BIEN_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+      "target": "NHA_MAT_PHANG_BAT_PHUONG_TRINH",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "target": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "relation": "IS_A",
+      "rationale": null
+    }
+  ]
+}

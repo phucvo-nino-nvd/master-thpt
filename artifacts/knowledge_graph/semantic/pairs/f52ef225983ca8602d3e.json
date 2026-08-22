@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "The left node is the concept of a linear inequality in two variables. The right node is the concept of the solution set (region) of such an inequality. One is the mathematical object, the other is a property (its solution set). They are related but not identical."
+}

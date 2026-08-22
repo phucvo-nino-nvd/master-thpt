@@ -1,0 +1,170 @@
+{
+  "chunk_id": "toan-11-tap-1:0009",
+  "nodes": [
+    {
+      "id": "SO_TRUNG_BINH",
+      "name": "Số trung bình",
+      "type": "CONCEPT",
+      "description": "Số đặc trưng đo xu thế trung tâm của mẫu số liệu, tính bằng tổng các giá trị chia cho số lượng giá trị.",
+      "grade": 11
+    },
+    {
+      "id": "TRUNG_VI",
+      "name": "Trung vị",
+      "type": "CONCEPT",
+      "description": "Số đặc trưng đo xu thế trung tâm, chia mẫu số liệu thành hai phần có số lượng giá trị bằng nhau.",
+      "grade": 11
+    },
+    {
+      "id": "TU_PHAN_VI",
+      "name": "Tứ phân vị",
+      "type": "CONCEPT",
+      "description": "Ba số đặc trưng Q1, Q2, Q3 chia mẫu số liệu thành bốn phần, mỗi phần chứa 25% giá trị.",
+      "grade": 11
+    },
+    {
+      "id": "MOT",
+      "name": "Mốt",
+      "type": "CONCEPT",
+      "description": "Giá trị xuất hiện nhiều nhất trong mẫu số liệu, đo xu thế trung tâm.",
+      "grade": 11
+    },
+    {
+      "id": "MAU_SO_LIEU_GHEP_NHOM",
+      "name": "Mẫu số liệu ghép nhóm",
+      "type": "CONCEPT",
+      "description": "Mẫu số liệu được chia thành các nhóm có tần số tương ứng.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_TINH_TRUNG_BINH",
+      "name": "Công thức tính trung bình",
+      "type": "FORMULA",
+      "description": "Trung bình của mẫu số liệu ghép nhóm tính bằng công thức: x̄ = (m1x1 + ... + mkxk) / n, trong đó xi = (ai + ai+1)/2.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_TINH_TRUNG_VI",
+      "name": "Công thức tính trung vị",
+      "type": "FORMULA",
+      "description": "Trung vị của mẫu số liệu ghép nhóm tính bằng công thức: Me = ap + [(n/2 - (m1 + ... + mp-1))/mp] * (ap+1 - ap).",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_TINH_TU_PHAN_VI",
+      "name": "Công thức tính tứ phân vị",
+      "type": "FORMULA",
+      "description": "Tứ phân vị Q1 và Q3 của mẫu số liệu ghép nhóm tính tương tự trung vị nhưng với n/4 và 3n/4.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_TINH_MOT",
+      "name": "Công thức tính mốt",
+      "type": "FORMULA",
+      "description": "Mốt của mẫu số liệu ghép nhóm tính bằng công thức: Mo = aj + [(mj - mj-1)/((mj - mj-1) + (mj - mj+1))] * h.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_SO_TRUNG_BINH",
+      "name": "Phương pháp tính số trung bình",
+      "type": "METHOD",
+      "description": "Tính trung bình của mẫu số liệu ghép nhóm bằng cách sử dụng giá trị đại diện của mỗi nhóm và tần số tương ứng.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_TRUNG_VI",
+      "name": "Phương pháp tính trung vị",
+      "type": "METHOD",
+      "description": "Tính trung vị của mẫu số liệu ghép nhóm bằng cách xác định nhóm chứa trung vị và áp dụng công thức tính.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_TU_PHAN_VI",
+      "name": "Phương pháp tính tứ phân vị",
+      "type": "METHOD",
+      "description": "Tính tứ phân vị của mẫu số liệu ghép nhóm bằng cách xác định nhóm chứa Q1 và Q3 và áp dụng công thức tính tương ứng.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_MOT",
+      "name": "Phương pháp tính mốt",
+      "type": "METHOD",
+      "description": "Tính mốt của mẫu số liệu ghép nhóm bằng cách xác định nhóm có tần số lớn nhất và áp dụng công thức tính.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "SO_TRUNG_BINH",
+      "target": "MAU_SO_LIEU_GHEP_NHOM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TRUNG_VI",
+      "target": "MAU_SO_LIEU_GHEP_NHOM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TU_PHAN_VI",
+      "target": "MAU_SO_LIEU_GHEP_NHOM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MOT",
+      "target": "MAU_SO_LIEU_GHEP_NHOM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_TINH_TRUNG_BINH",
+      "target": "SO_TRUNG_BINH",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_TINH_TRUNG_VI",
+      "target": "TRUNG_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_TINH_TU_PHAN_VI",
+      "target": "TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_TINH_MOT",
+      "target": "MOT",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_SO_TRUNG_BINH",
+      "target": "CONG_THUC_TINH_TRUNG_BINH",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_TRUNG_VI",
+      "target": "CONG_THUC_TINH_TRUNG_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_TU_PHAN_VI",
+      "target": "CONG_THUC_TINH_TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_MOT",
+      "target": "CONG_THUC_TINH_MOT",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

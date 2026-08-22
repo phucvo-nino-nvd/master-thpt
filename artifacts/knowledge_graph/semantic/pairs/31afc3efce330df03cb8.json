@@ -1,0 +1,6 @@
+{
+  "left_id": "LOGARIT_THAP_PHAN",
+  "right_id": "LOGARIT_TU_NHIEN",
+  "merge": false,
+  "rationale": "These are distinct logarithmic bases (base 10 vs. base e), representing different specific cases."
+}

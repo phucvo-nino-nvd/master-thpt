@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_BAC_HAI",
+  "right_id": "BAT_PHUONG_TRINH_MU_CO_BAN",
+  "merge": false,
+  "rationale": "Bất phương trình bậc hai and bất phương trình mũ cơ bản are different types of inequalities (quadratic vs. exponential). They are related concepts but not semantic duplicates."
+}

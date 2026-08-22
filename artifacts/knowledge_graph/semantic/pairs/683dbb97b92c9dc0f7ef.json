@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_LOI_NHUAN",
+  "right_id": "HAM_LOI_NHUAN_BIEN",
+  "merge": false,
+  "rationale": "The profit function and the marginal profit function (derivative of profit) are related but distinct concepts. The marginal profit is derived from the profit function and represents its rate of change. They are not semantic duplicates; one is a function, the other is its derivative."
+}

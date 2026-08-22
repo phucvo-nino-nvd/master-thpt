@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left theorem states that if a line is perpendicular to a plane, then lines parallel to that line are also perpendicular to the plane. The right theorem states that two distinct planes perpendicular to the same line are parallel. They describe different geometric relationships (line-plane vs. plane-plane) and are not semantic duplicates."
+}

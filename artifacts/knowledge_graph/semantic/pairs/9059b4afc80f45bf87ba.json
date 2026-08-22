@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "right_id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "Different theorems: one about a line and plane both perpendicular to another line, the other about properties when a line is parallel to a plane."
+}

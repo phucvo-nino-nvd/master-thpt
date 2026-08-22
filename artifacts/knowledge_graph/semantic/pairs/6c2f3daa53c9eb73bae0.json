@@ -1,0 +1,6 @@
+{
+  "left_id": "QUY_TAC_HINH_BINH_HANG",
+  "right_id": "QUY_TAC_HINH_HOP_THEOREM",
+  "merge": false,
+  "rationale": "The left node is the parallelogram rule for vector addition in 2D/plane geometry. The right node is the parallelepiped rule for vector addition in 3D/space geometry. They are analogous rules but for different dimensional spaces (2D vs 3D). According to the guidelines, such dimensional distinctions warrant KEEP."
+}

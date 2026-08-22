@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "Đường thẳng vuông góc với mặt phẳng phân biệt and Mặt phẳng vuông góc với đường thẳng song song are two different theorems about perpendicularity and parallelism. One involves lines perpendicular to a plane, the other involves planes perpendicular to a line. They are not the same knowledge."
+}

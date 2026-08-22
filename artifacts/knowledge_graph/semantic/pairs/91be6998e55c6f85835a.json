@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_PHAP_TICH_PHAN_TINH_DIEN_TICH",
+  "right_id": "PHUONG_PHAP_TICH_PHAN_TINH_THE_TICH",
+  "merge": false,
+  "rationale": "Phương pháp tích phân tính diện tích (area by integration) and Phương pháp tích phân tính thể tích (volume by integration) are distinct applications in different dimensional contexts."
+}

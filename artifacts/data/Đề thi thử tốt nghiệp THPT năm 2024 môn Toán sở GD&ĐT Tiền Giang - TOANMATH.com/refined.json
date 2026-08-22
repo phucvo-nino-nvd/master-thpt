@@ -1,0 +1,2914 @@
+{
+  "source_url": "https://toanmath.com/toanmath-pdf/de-thi-thu-tot-nghiep-thpt-nam-2024-mon-toan-so-gddt-tien-giang.pdf",
+  "title": "Đề thi thử tốt nghiệp THPT năm 2024 môn Toán sở GD&ĐT Tiền Giang - TOANMATH.com",
+  "grade": 12,
+  "questions": [
+    {
+      "section": null,
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Cho khối trụ có chu vi đáy bằng $6\\pi$, đường sinh bằng 5. Thể tích khối trụ đã cho bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "$36\\pi$."
+        },
+        {
+          "label": "B",
+          "content": "$12\\pi$."
+        },
+        {
+          "label": "C",
+          "content": "$15\\pi$."
+        },
+        {
+          "label": "D",
+          "content": "$45\\pi$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho khối trụ có chu vi đáy bằng $6\\pi$, đường sinh bằng 5. Thể tích khối trụ đã cho bằng\nA. $36\\pi$.                      B. $12\\pi$.                      C. $15\\pi$.                      D. $45\\pi$.\n\nLời giải\n\nChọn D\n\nTa có: Chu vi đáy $C = 2\\pi r = 6\\pi \\Rightarrow r = 3$\n\nThể tích khối trụ $V = \\pi r^2 h = \\pi \\cdot 3^2 \\cdot 5 = 45\\pi$",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/6",
+          "page": 0,
+          "bbox": [
+            148.0,
+            443.0,
+            1441.0,
+            488.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/7",
+          "page": 0,
+          "bbox": [
+            172.0,
+            501.0,
+            1289.0,
+            537.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Có bao nhiêu cách xếp 5 học sinh vào một dãy ghế gồm 5 chiếc?",
+      "options": [
+        {
+          "label": "A",
+          "content": "24."
+        },
+        {
+          "label": "B",
+          "content": "5."
+        },
+        {
+          "label": "C",
+          "content": "120."
+        },
+        {
+          "label": "D",
+          "content": "60."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Có bao nhiêu cách xếp 5 học sinh vào một dãy ghế gồm 5 chiếc?\n\nA. 24.                      B. 5.                      C. 120.                      D. 60.\n\nLời giải\n\nChọn C\n\nTa có: $5! = 120$",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/8",
+          "page": 0,
+          "bbox": [
+            148.0,
+            542.0,
+            1139.0,
+            584.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/9",
+          "page": 0,
+          "bbox": [
+            172.0,
+            593.0,
+            1272.0,
+            627.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Cho hàm số bậc bốn $y = f(x)$ có đồ thị là đường cong trong hình bên. Số nghiệm thực của phương trình $f(x) - 3 = 0$ là\n\n![Graph of a quartic function y = f(x) on a coordinate plane. The x-axis and y-axis are shown. The origin is labeled O. The y-axis has tick marks at -1 and -2. The graph is a blue curve that is symmetric about the y-axis. It has a local maximum at (0, -1) and two local minima at approximately (-1.5, -2) and (1.5, -2). The curve crosses the x-axis at two points, one on each side of the y-axis, and also crosses the y-axis at y = -1.](images/89b28c243dfed3b8f74614bc550b8dc9_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "2."
+        },
+        {
+          "label": "B",
+          "content": "4."
+        },
+        {
+          "label": "C",
+          "content": "0."
+        },
+        {
+          "label": "D",
+          "content": "3."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "89b28c243dfed3b8f74614bc550b8dc9_img.jpg",
+          "path": "images/89b28c243dfed3b8f74614bc550b8dc9_img.jpg",
+          "page": 0,
+          "bbox": [
+            938.0,
+            645.0,
+            1286.0,
+            963.0
+          ],
+          "alt": "Graph of a quartic function y = f(x) on a coordinate plane. The x-axis and y-axis are shown. The origin is labeled O. The y-axis has tick marks at -1 and -2. The graph is a blue curve that is symmetric about the y-axis. It has a local maximum at (0, -1) and two local minima at approximately (-1.5, -2) and (1.5, -2). The curve crosses the x-axis at two points, one on each side of the y-axis, and also crosses the y-axis at y = -1."
+        }
+      ],
+      "solution": "Cho hàm số bậc bốn $y = f(x)$ có đồ thị là đường cong trong hình bên.\n\nSố nghiệm thực của phương trình $f(x) - 3 = 0$ là\n\nA. 2.                      B. 0.                      C. 4.                      D. 3.\n\nLời giải\n\nChọn A\n\nTa có: $f(x) - 3 = 0 \\Leftrightarrow f(x) = 3$. Đồ thị $y = f(x)$ cắt đồ thị $y = 3$ tại hai điểm phân biệt nên phương trình có hai nghiệm phân biệt.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/10",
+          "page": 0,
+          "bbox": [
+            148.0,
+            631.0,
+            772.0,
+            759.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/11",
+          "page": 0,
+          "bbox": [
+            148.0,
+            763.0,
+            582.0,
+            837.0
+          ]
+        },
+        {
+          "id": "/page/0/Figure/12",
+          "page": 0,
+          "bbox": [
+            938.0,
+            645.0,
+            1286.0,
+            963.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "4",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ liên tục trên $\\mathbb{R}$ và có bảng xét dấu đạo hàm như sau:\n\n<table>\n<tr><td>$x$</td><td>$-\\infty$</td><td>-1</td><td>0</td><td>1</td><td>2</td><td>$+\\infty$</td></tr>\n<tr><td>$y'$</td><td>+</td><td>0</td><td>-</td><td>0</td><td>+</td><td>-</td></tr>\n</table>\n\nHàm số đã cho có bao nhiêu điểm cực trị?",
+      "options": [
+        {
+          "label": "A",
+          "content": "2."
+        },
+        {
+          "label": "B",
+          "content": "4."
+        },
+        {
+          "label": "C",
+          "content": "3."
+        },
+        {
+          "label": "D",
+          "content": "1."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = f(x)$ liên tục trên $\\mathbb{R}$ và có bảng xét dấu đạo hàm như sau:\n\n<table>\n<tr><td>$x$</td><td>$-\\infty$</td><td></td><td>$-1$</td><td></td><td>$0$</td><td></td><td>$1$</td><td></td><td>$2$</td><td></td><td>$+\\infty$</td></tr>\n<tr><td>$y'$</td><td></td><td>+</td><td>0</td><td>-</td><td>0</td><td>+</td><td></td><td>-</td><td>0</td><td>+</td><td></td></tr>\n</table>\n\nHàm số đã cho có bao nhiêu cực trị?\n\nA. 2.                      B. 4.                      C. 3.                      D. 1.\n\nLời giải\n\nChọn B\n\nTa có: Dựa vào bảng xét dấu ta thấy hàm số đã cho có 4 điểm cực trị.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/13",
+          "page": 0,
+          "bbox": [
+            148.0,
+            967.0,
+            1260.0,
+            1012.0
+          ]
+        },
+        {
+          "id": "/page/0/Table/14",
+          "page": 0,
+          "bbox": [
+            469.0,
+            1025.0,
+            1190.0,
+            1131.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/15",
+          "page": 0,
+          "bbox": [
+            148.0,
+            1140.0,
+            716.0,
+            1180.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/16",
+          "page": 0,
+          "bbox": [
+            172.0,
+            1189.0,
+            1254.0,
+            1227.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "5",
+      "type": "multiple_choice",
+      "content": "Cho khối chóp $S.ABCD$ có diện tích đáy bằng 6, $SA = 2$ và $SA$ vuông góc với $(ABCD)$. Thể tích khối chóp $S.ABCD$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "24."
+        },
+        {
+          "label": "B",
+          "content": "12."
+        },
+        {
+          "label": "C",
+          "content": "72."
+        },
+        {
+          "label": "D",
+          "content": "4."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho khối chóp $S.ABCD$ có diện tích đáy bằng 6, $SA = 2$ và $SA$ vuông góc với $(ABCD)$. Thể tích khối chóp $S.ABCD$ bằng\nA. 24.                      B. 12.                      C. 72.                      D. 4.\n\nLời giải\n\nChọn D\n\nTa có: $V = \\frac{1}{3}B.h = \\frac{1}{3}.6.2 = 4$",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/17",
+          "page": 0,
+          "bbox": [
+            148.0,
+            1234.0,
+            1509.0,
+            1319.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/18",
+          "page": 0,
+          "bbox": [
+            172.0,
+            1326.0,
+            1254.0,
+            1361.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "6",
+      "type": "multiple_choice",
+      "content": "Trong không gian $Oxyz$, khoảng cách từ $M(-1; -2; 3)$ đến mặt phẳng $(Oxz)$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "2."
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{10}$."
+        },
+        {
+          "label": "C",
+          "content": "1."
+        },
+        {
+          "label": "D",
+          "content": "3."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Trong không gian $Oxyz$, khoảng cách từ $M(-1; -2; 3)$ đến mặt phẳng $(Oxz)$ bằng\nA. 2.                      B. $\\sqrt{10}$.                      C. 1.                      D. 3.\n\nLời giải\n\nChọn A\n\nTa có: $d(M; (Oxz)) = |y_M| = 2$.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/19",
+          "page": 0,
+          "bbox": [
+            148.0,
+            1366.0,
+            1386.0,
+            1413.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/20",
+          "page": 0,
+          "bbox": [
+            172.0,
+            1442.0,
+            1254.0,
+            1482.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "7",
+      "type": "multiple_choice",
+      "content": "Trong không gian $Oxyz$, một véc tơ pháp tuyến của mặt phẳng $(\\alpha) : \\frac{x}{2} + \\frac{y}{3} + \\frac{z}{4} = 1$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{p}(6; 4; 3)$."
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{n}(1; 1; 1)$."
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{q}(2; 3; 4)$."
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{m}(6; -4; 3)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Trong không gian $Oxyz$, một vectơ pháp tuyến của mặt phẳng $(\\alpha): \\frac{x}{2} + \\frac{y}{3} + \\frac{z}{4} = 1$ là\nA. $\\vec{p} = (6; 4; 3)$.                      B. $\\vec{n} = (1; 1; 1)$.                      C. $\\vec{q} = (2; 3; 4)$.                      D. $\\vec{m} = (6; -4; 3)$.\n\nLời giải\n\nChọn A\n\nTa có: $\\vec{n}_\\alpha = \\left(\\frac{1}{2}; \\frac{1}{3}; \\frac{1}{4}\\right)$ cùng phương với $\\vec{p} = (6; 4; 3)$.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/21",
+          "page": 0,
+          "bbox": [
+            148.0,
+            1505.0,
+            1426.0,
+            1576.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/22",
+          "page": 0,
+          "bbox": [
+            172.0,
+            1585.0,
+            1062.0,
+            1684.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "8",
+      "type": "multiple_choice",
+      "content": "Mệnh đề nào dưới đây sai?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\int \\sin x dx = \\cos x + C$."
+        },
+        {
+          "label": "B",
+          "content": "$\\int \\sin x dx = -\\cos x + C$."
+        },
+        {
+          "label": "C",
+          "content": "$\\int \\cos x dx = \\sin x + C$."
+        },
+        {
+          "label": "D",
+          "content": "$\\int \\cos x dx = \\sin(x + 2\\pi) + C$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Mệnh đề nào dưới đây sai?\nA. $\\int \\sin x dx = \\cos x + C$.                      B. $\\int \\sin x dx = -\\cos x + C$.\nC. $\\int \\cos x dx = \\sin x + C$.                      D. $\\int \\cos x dx = \\sin(x + 2\\pi) + C$.\n\nLời giải\n\nChọn A",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/23",
+          "page": 0,
+          "bbox": [
+            148.0,
+            1704.0,
+            620.0,
+            1744.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/24",
+          "page": 0,
+          "bbox": [
+            172.0,
+            1751.0,
+            1291.0,
+            1877.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "9",
+      "type": "multiple_choice",
+      "content": "Với $a, b$ là các số thực dương tùy ý, biểu thức $P = \\frac{a^{\\frac{5}{3}} b^{\\frac{1}{2}}}{a^{\\frac{3}{2}} b^{-\\frac{3}{2}}}$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "$a^{-1}b^2$."
+        },
+        {
+          "label": "B",
+          "content": "$ab^{-1}$."
+        },
+        {
+          "label": "C",
+          "content": "$ab^2$."
+        },
+        {
+          "label": "D",
+          "content": "$ab$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Với $a, b$ là các số thực dương tùy ý, biểu thức $P = \\frac{a^{\\frac{5}{2}} b^{\\frac{1}{2}}}{a^{\\frac{3}{2}} b^{-\\frac{3}{2}}}$\nA. $a^{-1} b^2$.                      B. $ab^{-1}$.                      C. $ab^2$.                      D. $ab$.\n\nLời giải\n\nChọn C\n\nTa có: $P = \\frac{a^{\\frac{5}{2}} b^{\\frac{1}{2}}}{a^{\\frac{3}{2}} b^{-\\frac{3}{2}}} = a^{\\frac{5}{2} - \\frac{3}{2}} b^{\\frac{1}{2} + \\frac{3}{2}} = ab^2$.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/25",
+          "page": 0,
+          "bbox": [
+            148.0,
+            1890.0,
+            1112.0,
+            2016.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/26",
+          "page": 0,
+          "bbox": [
+            172.0,
+            2031.0,
+            1267.0,
+            2074.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "10",
+      "type": "multiple_choice",
+      "content": "Hàm số nào dưới đây đồng biến trên $\\mathbb{R}$ ?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$y = x^2 + x$."
+        },
+        {
+          "label": "B",
+          "content": "$y = \\frac{1}{x}$."
+        },
+        {
+          "label": "C",
+          "content": "$y = x^3 + x$."
+        },
+        {
+          "label": "D",
+          "content": "$y = -\\frac{1}{x}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Hàm số nào dưới đây đồng biến trên $\\mathbb{R}$ ?\n\nA. $y = x^2 + x$.      B. $y = \\frac{1}{x}$.      C. $y = x^3 + x$.      D. $y = -\\frac{1}{x}$.\n\nLời giải\n\nChọn C\n\nTa có: $y = x^3 + x \\Rightarrow y' = 3x^2 + 1 > 0, \\forall x \\in \\mathbb{R}$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/0",
+          "page": 1,
+          "bbox": [
+            146.0,
+            87.0,
+            820.0,
+            132.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/1",
+          "page": 1,
+          "bbox": [
+            170.0,
+            147.0,
+            1355.0,
+            224.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "11",
+      "type": "multiple_choice",
+      "content": "Một hình nón có đường sinh bằng đường kính đáy. Góc ở đỉnh của hình nón bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "$30^\\circ$."
+        },
+        {
+          "label": "B",
+          "content": "$120^\\circ$."
+        },
+        {
+          "label": "C",
+          "content": "$60^\\circ$."
+        },
+        {
+          "label": "D",
+          "content": "$150^\\circ$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Một hình nón có đường sinh bằng đường kính đáy. Góc ở đỉnh của hình nón bằng\n\nA. $30^\\circ$.      B. $120^\\circ$.      C. $60^\\circ$.      D. $150^\\circ$.\n\nLời giải\n\nChọn C\n\nTa có $\\Delta SAB$ đều nên $\\widehat{ASB} = 60^\\circ$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/2",
+          "page": 1,
+          "bbox": [
+            146.0,
+            230.0,
+            1377.0,
+            275.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/3",
+          "page": 1,
+          "bbox": [
+            170.0,
+            284.0,
+            1295.0,
+            324.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "12",
+      "type": "multiple_choice",
+      "content": "Tập nghiệm của bất phương trình $\\log_3(2x - 1) > 1$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$S = (2; +\\infty)$."
+        },
+        {
+          "label": "B",
+          "content": "$S = (1; +\\infty)$."
+        },
+        {
+          "label": "C",
+          "content": "$S = \\left(\\frac{1}{2}; 2\\right)$."
+        },
+        {
+          "label": "D",
+          "content": "$S = \\left(\\frac{1}{2}; 1\\right)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Tập nghiệm của bất phương trình $\\log_3(2x-1) > 1$ là\n\nA. $S = (2; +\\infty)$.      B. $S = (1; +\\infty)$.      C. $S = \\left(\\frac{1}{2}; 2\\right)$.      D. $S = \\left(\\frac{1}{2}; 1\\right)$.\n\nLời giải\n\nChọn A\n\nĐiều kiện $x > \\frac{1}{2}$.\n\nTa có $\\log_3(2x-1) > 1 \\Leftrightarrow 2x-1 > 3 \\Leftrightarrow x > 2$.\n\nVậy $S = (2; +\\infty)$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/4",
+          "page": 1,
+          "bbox": [
+            146.0,
+            333.0,
+            984.0,
+            380.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/5",
+          "page": 1,
+          "bbox": [
+            170.0,
+            394.0,
+            1080.0,
+            544.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "13",
+      "type": "multiple_choice",
+      "content": "Đồ thị trong hình vẽ bên là của một trong bốn hàm số dưới đây. Hỏi đó là hàm số nào?\n\n![A graph of a rational function on a Cartesian coordinate system. The x-axis has labels -2, -1, and O (origin). The y-axis has a label 1. There is a vertical asymptote at x = -1. For x < -1, the curve is in the upper-left region relative to the asymptote, approaching the x-axis from above as x goes to negative infinity and going to positive infinity as x approaches -1 from the left. For x > -1, the curve is in the lower-right region, going to negative infinity as x approaches -1 from the right and approaching the horizontal asymptote y = 1 from below as x goes to positive infinity.](images/1ac0e11d90bece49015adc89be472a39_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$y = \\frac{x+2}{x+1}$."
+        },
+        {
+          "label": "B",
+          "content": "$y = \\frac{x+1}{x+2}$."
+        },
+        {
+          "label": "C",
+          "content": "$y = \\frac{2}{x+2}$."
+        },
+        {
+          "label": "D",
+          "content": "$y = \\frac{1}{x+1}$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "1ac0e11d90bece49015adc89be472a39_img.jpg",
+          "path": "images/1ac0e11d90bece49015adc89be472a39_img.jpg",
+          "page": 1,
+          "bbox": [
+            885.0,
+            564.0,
+            1324.0,
+            1001.0
+          ],
+          "alt": "A graph of a rational function on a Cartesian coordinate system. The x-axis has labels -2, -1, and O (origin). The y-axis has a label 1. There is a vertical asymptote at x = -1. For x < -1, the curve is in the upper-left region relative to the asymptote, approaching the x-axis from above as x goes to negative infinity and going to positive infinity as x approaches -1 from the left. For x > -1, the curve is in the lower-right region, going to negative infinity as x approaches -1 from the right and approaching the horizontal asymptote y = 1 from below as x goes to positive infinity."
+        }
+      ],
+      "solution": "Đồ thị trong hình vẽ bên là của một trong bốn hàm số dưới đây. Hỏi đó là hàm số nào?\n\nA. $y = \\frac{x+2}{x+1}$.      B. $y = \\frac{x+1}{x+2}$.      C. $y = \\frac{2}{x+2}$.      D. $y = \\frac{1}{x+1}$.\n\nLời giải\n\nChọn B\n\nTa có $\\lim_{x \\rightarrow \\pm\\infty} f(x) = 1$ nên $y = 1$ là phương trình tiệm cận ngang của đồ thị.\n\n$\\lim_{x \\rightarrow (-2)^+} f(x) = -\\infty, \\lim_{x \\rightarrow (-2)^-} f(x) = +\\infty$ nên $x = -2$ là phương trình tiệm cận đứng của đồ thị.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/6",
+          "page": 1,
+          "bbox": [
+            146.0,
+            555.0,
+            762.0,
+            669.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/7",
+          "page": 1,
+          "bbox": [
+            167.0,
+            678.0,
+            705.0,
+            848.0
+          ]
+        },
+        {
+          "id": "/page/1/Figure/8",
+          "page": 1,
+          "bbox": [
+            885.0,
+            564.0,
+            1324.0,
+            1001.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "14",
+      "type": "multiple_choice",
+      "content": "Tập xác định của hàm số $y = (1 - x)^{\\sqrt{2}}$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$D = (-\\infty; 1]$."
+        },
+        {
+          "label": "B",
+          "content": "$D = [1; +\\infty)$."
+        },
+        {
+          "label": "C",
+          "content": "$D = (1; +\\infty)$."
+        },
+        {
+          "label": "D",
+          "content": "$D = (-\\infty; 1)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Tập xác định của hàm số $y = (1-x)^{\\sqrt{2}}$ là\n\nA. $D = (-\\infty; 1]$.\n\nB. $D = [1; +\\infty)$.\n\nC. $D = (1; +\\infty)$.\n\nD. $D = (-\\infty; 1)$.\n\nLời giải\n\nChọn D\n\nTa có: $1 - x > 0 \\Leftrightarrow x < 1$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/9",
+          "page": 1,
+          "bbox": [
+            146.0,
+            1019.0,
+            829.0,
+            1068.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/10",
+          "page": 1,
+          "bbox": [
+            170.0,
+            1077.0,
+            1082.0,
+            1176.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "15",
+      "type": "multiple_choice",
+      "content": "Phần thực của số phức $z = (1 - 2i)(3i + 4)$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "$-9$."
+        },
+        {
+          "label": "B",
+          "content": "$-2$."
+        },
+        {
+          "label": "C",
+          "content": "$11$."
+        },
+        {
+          "label": "D",
+          "content": "$10$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Phần thực của số phức $z = (1 - 2i)(3i + 4)$ bằng\n\nA. $-9$.\n\nB. $-2$.\n\nC. $11$.\n\nD. $10$.\n\nLời giải\n\nChọn D\n\nTa có $z = (1 - 2i)(3i + 4) = 10 - 5i$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/11",
+          "page": 1,
+          "bbox": [
+            146.0,
+            1193.0,
+            927.0,
+            1240.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/12",
+          "page": 1,
+          "bbox": [
+            170.0,
+            1249.0,
+            1270.0,
+            1290.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "16",
+      "type": "multiple_choice",
+      "content": "Cho cấp số nhân $(u_n)$ với $u_1 = 2, u_2 = -1$. Số hạng $u_4$ của dãy số đã cho bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{8}$."
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{1}{4}$."
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{1}{8}$."
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho cấp số nhân $(u_n)$ với $u_1 = 2, u_2 = -1$. Số hạng $u_4$ của dãy số đã cho bằng\n\nA. $\\frac{1}{8}$.\n\nB. $-\\frac{1}{4}$.\n\nC. $-\\frac{1}{8}$.\n\nD. $\\frac{1}{4}$.\n\nLời giải\n\nChọn B\n\nTa có $q = -\\frac{1}{2} \\Rightarrow u_4 = u_1 q^3 = -\\frac{1}{4}$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/13",
+          "page": 1,
+          "bbox": [
+            146.0,
+            1294.0,
+            1340.0,
+            1344.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/14",
+          "page": 1,
+          "bbox": [
+            170.0,
+            1366.0,
+            1264.0,
+            1444.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "17",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ có đạo hàm $f'(x) = (x^2 - 2x)(x^2 - 2x + 4), \\forall x \\in \\mathbb{R}$. Số điểm cực trị của hàm số đã cho là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$."
+        },
+        {
+          "label": "B",
+          "content": "$4$."
+        },
+        {
+          "label": "C",
+          "content": "$1$."
+        },
+        {
+          "label": "D",
+          "content": "$2$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = f(x)$ có đạo hàm $f'(x) = (x^2 - 2x)(x^2 - 2x + 4), \\forall x \\in \\mathbb{R}$. Số điểm cực trị của hàm số đã cho là\n\nA. $3$.\n\nB. $4$.\n\nC. $1$.\n\nD. $2$.\n\nLời giải\n\nChọn D\n\nTa có $f'(x) = (x^2 - 2x)(x^2 - 2x + 4) = 0 \\Leftrightarrow \\begin{cases} x = 0 \\\\ x = 2 \\end{cases}$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/15",
+          "page": 1,
+          "bbox": [
+            146.0,
+            1458.0,
+            1506.0,
+            1554.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/16",
+          "page": 1,
+          "bbox": [
+            170.0,
+            1563.0,
+            1254.0,
+            1603.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "18",
+      "type": "multiple_choice",
+      "content": "Tiệm cận ngang của đồ thị hàm số $y = \\frac{-x+2}{x-1}$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$y = -1$."
+        },
+        {
+          "label": "B",
+          "content": "$x = 1$."
+        },
+        {
+          "label": "C",
+          "content": "$y = -2$."
+        },
+        {
+          "label": "D",
+          "content": "$x = -1$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Tiệm cận ngang của đồ thị hàm số $y = \\frac{-x + 2}{x - 1}$ là\n\nA. $y = -1$.\n\nB. $x = 1$.\n\nC. $y = -2$.\n\nD. $x = -1$.\n\nLời giải\n\nChọn A\n\n$$\\text{Ta có } \\lim_{x \\rightarrow \\pm\\infty} \\frac{-x+2}{x-1} = -1$$",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/17",
+          "page": 1,
+          "bbox": [
+            146.0,
+            1619.0,
+            946.0,
+            1695.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/18",
+          "page": 1,
+          "bbox": [
+            170.0,
+            1706.0,
+            1342.0,
+            1744.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "19",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ có bảng biến thiên như hình bên. Giá trị nhỏ nhất của hàm số $y = f(x) - 1$ trên $[-1; 3]$ bằng\n\n<table>\n<tr><td>$x$</td><td>$-\\infty$</td><td>$-1$</td><td>$1$</td><td>$+\\infty$</td></tr>\n<tr><td>$f'(x)$</td><td>$+$</td><td>$0$</td><td>$-$</td><td>$0$</td><td>$+$</td></tr>\n<tr><td>$f(x)$</td><td>$-\\infty$</td><td>$2$</td><td>$-2$</td><td>$+\\infty$</td></tr>\n</table>",
+      "options": [
+        {
+          "label": "A",
+          "content": "$-3$."
+        },
+        {
+          "label": "B",
+          "content": "$-1$."
+        },
+        {
+          "label": "C",
+          "content": "$-2$."
+        },
+        {
+          "label": "D",
+          "content": "$1$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = f(x)$ có bảng biến thiên như hình bên. Giá trị nhỏ nhất của hàm số $y = f(x) - 1$ trên $[-1; 3]$ bằng\n\nA. $-3$.\n\nB. $-1$.\n\nC. $-2$.\n\nD. $1$.\n\nLời giải\n\nChọn A\n\n$$\\text{Ta có } \\min_{[-1;3]} (f(x) - 1) = \\min_{[-1;3]} f(x) - 1 = -2 - 1 = -3.$$",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/19",
+          "page": 1,
+          "bbox": [
+            146.0,
+            1753.0,
+            782.0,
+            1881.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/20",
+          "page": 1,
+          "bbox": [
+            170.0,
+            1897.0,
+            612.0,
+            1971.0
+          ]
+        },
+        {
+          "id": "/page/1/Table/21",
+          "page": 1,
+          "bbox": [
+            810.0,
+            1762.0,
+            1439.0,
+            2000.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "20",
+      "type": "unknown",
+      "content": "Với $a$ là số thực dương khác 1 tùy ý, biểu thức $\\log_{a^2} a^4 + a^3$ bằng\n\nA. $\\frac{5}{2}$.\n\nB. $\\frac{3}{2} - \\frac{1}{2} \\log_a(a+1)$.\n\nC. $\\frac{7}{2}$.\n\nD. $\\frac{3}{2} + \\frac{1}{2} \\log_a(a+1)$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Với $a$ là số thực dương khác 1 tùy ý, biểu thức $\\log_{a^2}(a^4 + a^3)$ bằng\n\nA. $\\frac{5}{2}$.\n\nB. $\\frac{3}{2} - \\frac{1}{2}\\log_a(a+1)$.\n\nC. $\\frac{7}{2}$.\n\nD. $\\frac{3}{2} + \\frac{1}{2}\\log_a(a+1)$.\n\nLời giải\n\nChọn D\n\n$$\\text{Ta có: } \\log_{a^2}(a^4 + a^3) = \\log_{a^2} a^3(a+1) = \\frac{3}{2} + \\frac{1}{2}\\log_a(a+1).$$",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/0",
+          "page": 2,
+          "bbox": [
+            146.0,
+            89.0,
+            1197.0,
+            141.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/1",
+          "page": 2,
+          "bbox": [
+            169.0,
+            165.0,
+            261.0,
+            241.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/2",
+          "page": 2,
+          "bbox": [
+            834.0,
+            165.0,
+            1129.0,
+            241.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/3",
+          "page": 2,
+          "bbox": [
+            169.0,
+            253.0,
+            261.0,
+            327.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/4",
+          "page": 2,
+          "bbox": [
+            834.0,
+            253.0,
+            1133.0,
+            327.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "21",
+      "type": "unknown",
+      "content": "Cho hai số phức $z = -3 + 2i$ và $w = 1 - 4i$. Trong mặt phẳng tọa độ $Oxy$, điểm biểu diễn số phức $u = \\bar{z} + w$ là\n\nA. $M(-2; -2)$.\n\nB. $N(-2; -6)$.\n\nC. $P(4; -2)$.\n\nD. $Q(2; -6)$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hai số phức $z = -3 + 2i$ và $w = 1 - 4i$. Trong mặt phẳng tọa độ $Oxy$, điểm biểu diễn số phức $u = \\bar{z} + w$ là\n\nA. $M(-2; -2)$.\n\nB. $N(-2; -6)$.\n\nC. $P(4; -2)$.\n\nD. $Q(2; -6)$.\n\nLời giải\n\nChọn B\n\n$$\\text{Ta có: } \\bar{z} = -3 - 2i$$\n\n$$u = -2 - 6i \\text{ nên điểm } N(-2; -6) \\text{ biểu diễn số phức } u.$$",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/5",
+          "page": 2,
+          "bbox": [
+            146.0,
+            336.0,
+            1509.0,
+            425.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/6",
+          "page": 2,
+          "bbox": [
+            169.0,
+            432.0,
+            383.0,
+            472.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/7",
+          "page": 2,
+          "bbox": [
+            507.0,
+            432.0,
+            716.0,
+            472.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/8",
+          "page": 2,
+          "bbox": [
+            837.0,
+            432.0,
+            1019.0,
+            472.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/9",
+          "page": 2,
+          "bbox": [
+            1161.0,
+            432.0,
+            1347.0,
+            472.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "22",
+      "type": "unknown",
+      "content": "Cho hình lăng trụ tứ giác đều $ABCD.A'B'C'D'$ có $AB = a$, $AA' = \\sqrt{6}a$. Góc giữa $AC'$ và $(A'B'C'D')$ bằng\n\nA. $30^\\circ$.\n\nB. $60^\\circ$.\n\nC. $45^\\circ$.\n\nD. $90^\\circ$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho lăng trụ tứ giác đều $ABCD.A'B'C'D'$ có $AB = a$, $AA' = \\sqrt{6}a$. Góc giữa $AC'$ và $(A'B'C'D')$ bằng\n\nA. $30^\\circ$\n\nB. $60^\\circ$\n\nC. $45^\\circ$\n\nD. $90^\\circ$\n\nLời giải\n\nChọn B\n\nTa có : $(AC', (A'B'C'D')) = \\widehat{AC'A'} = 60^\\circ$\n\nTrong tam giác vuông $AA'C'$ : $\\tan \\widehat{AC'A'} = \\frac{AA'}{A'C'} = \\frac{a\\sqrt{6}}{a\\sqrt{2}} = \\sqrt{3}$.",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/10",
+          "page": 2,
+          "bbox": [
+            146.0,
+            495.0,
+            1535.0,
+            591.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/11",
+          "page": 2,
+          "bbox": [
+            169.0,
+            607.0,
+            276.0,
+            645.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/12",
+          "page": 2,
+          "bbox": [
+            502.0,
+            607.0,
+            606.0,
+            645.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/13",
+          "page": 2,
+          "bbox": [
+            837.0,
+            607.0,
+            943.0,
+            645.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/14",
+          "page": 2,
+          "bbox": [
+            1168.0,
+            607.0,
+            1278.0,
+            645.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "23",
+      "type": "unknown",
+      "content": "Trong không gian $Oxyz$, phương trình chính tắc của đường thẳng $\\Delta$ đi qua $M(3; 2; -1)$ và nhận $\\vec{u}(-5; 6; 7)$ làm vectơ chỉ phương là\n\nA. $\\Delta : \\frac{x-5}{3} = \\frac{y+6}{2} = \\frac{z+7}{-1}$.\n\nB. $\\Delta : \\frac{x+3}{-5} = \\frac{y+2}{6} = \\frac{z-1}{7}$.\n\nC. $\\Delta : \\frac{x-3}{-5} = \\frac{y-2}{6} = \\frac{z+1}{7}$.\n\nD. $\\Delta : \\frac{x+5}{3} = \\frac{y-6}{2} = \\frac{z-7}{-1}$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Trong không gian $Oxyz$, phương trình chính tắc của đường thẳng $\\Delta$ đi qua $M(3;2;-1)$ và nhận $\\vec{u} = (-5;6;7)$ làm vectơ chỉ phương là\n\nA. $\\Delta: \\frac{x-5}{3} = \\frac{y+6}{2} = \\frac{z+7}{-1}$\n\nB. $\\Delta: \\frac{x+3}{-5} = \\frac{y+2}{6} = \\frac{z-1}{7}$\n\nC. $\\Delta: \\frac{x-3}{-5} = \\frac{y-2}{6} = \\frac{z+1}{7}$\n\nD. $\\Delta: \\frac{x+5}{3} = \\frac{y-6}{2} = \\frac{z-7}{-1}$\n\nLời giải\n\nChọn C",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/15",
+          "page": 2,
+          "bbox": [
+            146.0,
+            649.0,
+            1517.0,
+            750.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/16",
+          "page": 2,
+          "bbox": [
+            169.0,
+            779.0,
+            598.0,
+            857.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/17",
+          "page": 2,
+          "bbox": [
+            834.0,
+            779.0,
+            1264.0,
+            857.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/18",
+          "page": 2,
+          "bbox": [
+            169.0,
+            869.0,
+            592.0,
+            945.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/19",
+          "page": 2,
+          "bbox": [
+            834.0,
+            869.0,
+            1264.0,
+            945.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "24",
+      "type": "unknown",
+      "content": "Biết $\\int_0^2 f(x)dx = 4$, tích phân $\\int_0^2 f(x) - 1 dx$ bằng\n\nA. 3.\n\nB. 5.\n\nC. -3.\n\nD. 2.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Biết $\\int_0^2 f(x)dx = 4$, tích phân $\\int_0^2 (f(x)-1)dx$ bằng\n\nA. 3.\n\nB. 5.\n\nC. -3.\n\nD. 2.\n\nLời giải\n\nChọn D\n\n$$\\int_0^2 (f(x)-1)dx = \\int_0^2 f(x)dx - \\int_0^2 1dx = 4 - 2 = 2.$$",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/20",
+          "page": 2,
+          "bbox": [
+            146.0,
+            960.0,
+            948.0,
+            1057.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/21",
+          "page": 2,
+          "bbox": [
+            169.0,
+            1070.0,
+            250.0,
+            1108.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/22",
+          "page": 2,
+          "bbox": [
+            502.0,
+            1070.0,
+            580.0,
+            1108.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/23",
+          "page": 2,
+          "bbox": [
+            837.0,
+            1070.0,
+            940.0,
+            1108.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/24",
+          "page": 2,
+          "bbox": [
+            1168.0,
+            1070.0,
+            1252.0,
+            1108.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "25",
+      "type": "unknown",
+      "content": "Cho hai số phức $z_1 = 2 + 3i$ và $z_2 = 1 + 2i$. Mô đun của số phức $z = z_1 - z_2$ bằng\n\nA. 10.\n\nB. 2.\n\nC. $\\sqrt{10}$.\n\nD. $\\sqrt{2}$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hai số phức $z_1 = 2 + 3i$ và $z_2 = 1 + 2i$. Môđun của số phức $z = z_1 - z_2$ bằng\n\nA. 10\n\nB. 2\n\nC. $\\sqrt{10}$\n\nD. $\\sqrt{2}$\n\nLời giải\n\nChọn D\n\nTa có: $|z| = |1 + i| = \\sqrt{2}$.",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/25",
+          "page": 2,
+          "bbox": [
+            146.0,
+            1120.0,
+            1390.0,
+            1164.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/26",
+          "page": 2,
+          "bbox": [
+            169.0,
+            1189.0,
+            266.0,
+            1227.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/27",
+          "page": 2,
+          "bbox": [
+            502.0,
+            1189.0,
+            580.0,
+            1227.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/28",
+          "page": 2,
+          "bbox": [
+            837.0,
+            1178.0,
+            954.0,
+            1227.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/29",
+          "page": 2,
+          "bbox": [
+            1168.0,
+            1178.0,
+            1275.0,
+            1227.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "26",
+      "type": "unknown",
+      "content": "Một dãy gồm 6 chiếc ghế được xếp liền nhau thành một hàng ngang. Xếp ngẫu nhiên 2 người phụ nữ và 4 người đàn ông vào dãy ghế đó, xác suất để 2 người phụ nữ không ngồi kề nhau bằng\n\nA. $\\frac{1}{6}$.\n\nB. $\\frac{2}{3}$.\n\nC. $\\frac{1}{3}$.\n\nD. $\\frac{5}{6}$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Một dãy gồm 6 chiếc ghế được xếp liền nhau thành một hàng ngang. Xếp ngẫu nhiên 2 người phụ nữ và 4 người đàn ông vào một dãy ghế đó, xác suất để 2 người nữ không ngồi kề nhau bằng\n\nA. $\\frac{1}{6}$.\n\nB. $\\frac{2}{3}$.\n\nC. $\\frac{1}{3}$.\n\nD. $\\frac{5}{6}$.\n\nLời giải\n\nChọn B\n\nSố phần tử không gian mẫu: $n(\\Omega) = 6! = 720$.\n\nGọi $A$ là biến cố: “2 người nữ không ngồi kề nhau”\n\nGọi $\\overline{A}$ là biến cố: “2 người nữ ngồi kề nhau”\n\nSố phần tử của biến cố $\\overline{A}$: $n(\\overline{A}) = 2!5! = 240$.\n\nXác suất 2 người nữ không ngồi kề nhau: $P(A) = 1 - \\frac{n(\\overline{A})}{n(\\Omega)} = 1 - \\frac{240}{720} = \\frac{2}{3}$.",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/30",
+          "page": 2,
+          "bbox": [
+            146.0,
+            1232.0,
+            1533.0,
+            1314.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/31",
+          "page": 2,
+          "bbox": [
+            169.0,
+            1328.0,
+            261.0,
+            1402.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/32",
+          "page": 2,
+          "bbox": [
+            502.0,
+            1328.0,
+            592.0,
+            1402.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/33",
+          "page": 2,
+          "bbox": [
+            837.0,
+            1328.0,
+            927.0,
+            1402.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/34",
+          "page": 2,
+          "bbox": [
+            1168.0,
+            1328.0,
+            1260.0,
+            1402.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "27",
+      "type": "unknown",
+      "content": "Cho hàm số $y = f(x)$ có đạo hàm $f'(x) = x^4 - 3x^2, \\forall x \\in \\mathbb{R}$. Số điểm cực trị của hàm số $g(x) = 2f(x) - 3$ là\n\nA. 1.\n\nB. 3.\n\nC. 4.\n\nD. 2.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = f(x)$ có đạo hàm $f'(x) = x^4 - 3x^2, \\forall x \\in \\mathbb{R}$. Số điểm cực trị của hàm số $g(x) = 2f(x) - 3$ là\n\nA. 1.\n\nB. 3.\n\nC. 4.\n\nD. 2.\n\nLời giải\n\nChọn D\n\nTa có: $g'(x) = 2f'(x)$\n\n$$g'(x) = 0 \\Leftrightarrow 2 \\cdot f'(x) = 0 \\Leftrightarrow 2(x^4 - 3x^2) = 0$$\n\n$$\\Leftrightarrow \\begin{cases} x^2 = 0 \\\\ x^2 - 3 = 0 \\end{cases} \\Leftrightarrow \\begin{cases} x = 0 \\text{ (kép)} \\\\ x = \\pm\\sqrt{3} \\end{cases}$$\n\nSố điểm cực trị của hàm số $g(x)$ là 2.",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/35",
+          "page": 2,
+          "bbox": [
+            146.0,
+            1415.0,
+            1473.0,
+            1518.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/36",
+          "page": 2,
+          "bbox": [
+            169.0,
+            1529.0,
+            250.0,
+            1565.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/37",
+          "page": 2,
+          "bbox": [
+            502.0,
+            1529.0,
+            580.0,
+            1565.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/38",
+          "page": 2,
+          "bbox": [
+            837.0,
+            1529.0,
+            917.0,
+            1565.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/39",
+          "page": 2,
+          "bbox": [
+            1168.0,
+            1529.0,
+            1252.0,
+            1565.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "28",
+      "type": "unknown",
+      "content": "Họ các nguyên hàm của hàm số $f(x) = \\cos 2x - 2^x$ là\n\nA. $F(x) = -\\frac{1}{2} \\sin 2x - \\frac{2^x}{\\ln 2} + C$.\n\nB. $F(x) = \\frac{1}{2} \\sin 2x - \\frac{2^x}{\\ln 2} + C$.\n\nC. $F(x) = -\\frac{1}{2} \\sin 2x - 2^x \\ln 2 + C$.\n\nD. $F(x) = \\frac{1}{2} \\sin 2x - 2^x \\ln 2 + C$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Họ các nguyên hàm của hàm số $f(x) = \\cos 2x - 2^x$ là\n\nA. $F(x) = -\\frac{1}{2} \\sin 2x - \\frac{2^x}{\\ln 2} + C$.\n\nB. $F(x) = \\frac{1}{2} \\sin 2x - \\frac{2^x}{\\ln 2} + C$.\n\nC. $F(x) = -\\frac{1}{2} \\sin 2x - 2^x \\ln 2 + C$.\n\nD. $F(x) = \\frac{1}{2} \\sin 2x - 2^x \\ln 2 + C$.\n\nLời giải\n\nChọn B",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/40",
+          "page": 2,
+          "bbox": [
+            146.0,
+            1576.0,
+            994.0,
+            1621.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/41",
+          "page": 2,
+          "bbox": [
+            169.0,
+            1639.0,
+            617.0,
+            1718.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/42",
+          "page": 2,
+          "bbox": [
+            813.0,
+            1639.0,
+            1236.0,
+            1718.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/43",
+          "page": 2,
+          "bbox": [
+            169.0,
+            1729.0,
+            644.0,
+            1805.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/44",
+          "page": 2,
+          "bbox": [
+            813.0,
+            1729.0,
+            1268.0,
+            1805.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "29",
+      "type": "unknown",
+      "content": "Đạo hàm của hàm số $f(x) = \\log_3(x^2 + 1)$ là\n\nA. $f'(x) = \\frac{2x}{(x^2 + 1) \\ln 3}$.\n\nB. $f'(x) = \\frac{1}{(x^2 + 1) \\ln 3}$.\n\nC. $f'(x) = \\frac{1}{x^2 + 1}$.\n\nD. $f'(x) = \\frac{2x}{x^2 + 1}$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Đạo hàm của hàm số $f(x) = \\log_3(x^2 + 1)$ là\n\nA. $f'(x) = \\frac{2x}{(x^2 + 1) \\ln 3}$.\n\nB. $f'(x) = \\frac{1}{(x^2 + 1) \\ln 3}$.\n\nC. $f'(x) = \\frac{1}{x^2 + 1}$.\n\nD. $f'(x) = \\frac{2x}{x^2 + 1}$.\n\nLời giải\n\nChọn A\n\nTa có: $f'(x) = \\frac{(x^2 + 1)'}{(x^2 + 1) \\ln 3} = \\frac{2x}{(x^2 + 1) \\ln 3}$.",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/45",
+          "page": 2,
+          "bbox": [
+            146.0,
+            1816.0,
+            861.0,
+            1863.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/46",
+          "page": 2,
+          "bbox": [
+            169.0,
+            1886.0,
+            505.0,
+            1968.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/47",
+          "page": 2,
+          "bbox": [
+            834.0,
+            1886.0,
+            1173.0,
+            1968.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/48",
+          "page": 2,
+          "bbox": [
+            169.0,
+            1984.0,
+            432.0,
+            2063.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/49",
+          "page": 2,
+          "bbox": [
+            834.0,
+            1984.0,
+            1101.0,
+            2063.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "30",
+      "type": "multiple_choice",
+      "content": "Trong không gian $Oxyz$, cho hai mặt phẳng $(\\alpha) : x + 2y + 3z - 1 = 0$ và $(\\beta) : x + 2y + 3z + 13 = 0$. Gọi $(P)$ là mặt phẳng song song và cách đều $(\\alpha), (\\beta)$. Mặt phẳng $(P)$ cắt $Oy$ tại điểm có tung độ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "3."
+        },
+        {
+          "label": "B",
+          "content": "-2."
+        },
+        {
+          "label": "C",
+          "content": "-6."
+        },
+        {
+          "label": "D",
+          "content": "-3."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Trong không gian $Oxyz$, cho hai mặt phẳng $(\\alpha) : x + 2y + 3z - 1 = 0$ và $(\\beta) : x + 2y + 3z + 13 = 0$. Gọi $(P)$ là mặt phẳng song song và cách đều $(\\alpha), (\\beta)$. Mặt phẳng $(P)$ cắt $Oy$ tại điểm có tung độ bằng\nA. 3.                                      B. -2.                                      C. -6.                                      D. -3.\n\nLời giải\n\nChọn D\n\nGọi $M(0; y; 0)$ là giao điểm của $(P)$ và $Oy$.\n\nTa có: $d(M; (\\alpha)) = d(M; (\\beta)) \\Leftrightarrow |2y - 1| = |2y + 13|$\n\n$\\Leftrightarrow \\begin{cases} 2y - 1 = 2y + 13 \\text{ (VN)} \\\\ 2y - 1 = -2y - 13 \\end{cases} \\Leftrightarrow y = -3$",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/0",
+          "page": 3,
+          "bbox": [
+            145.0,
+            31.0,
+            1490.0,
+            179.0
+          ]
+        },
+        {
+          "id": "/page/3/ListGroup/1",
+          "page": 3,
+          "bbox": [
+            170.0,
+            190.0,
+            1278.0,
+            228.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "31",
+      "type": "multiple_choice",
+      "content": "Trên tập số phức, gọi $z_1, z_2$ là hai nghiệm của phương trình $z^2 - 3z + 4 = 0$. Giá trị của biểu thức $P = |z_1|^2 + |z_2|^2$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "4."
+        },
+        {
+          "label": "B",
+          "content": "8."
+        },
+        {
+          "label": "C",
+          "content": "16."
+        },
+        {
+          "label": "D",
+          "content": "1."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Trên tập số phức, gọi $z_1, z_2$ là hai nghiệm của phương trình $z^2 - 3z + 4 = 0$. Giá trị của biểu thức $P = |z_1|^2 + |z_2|^2$ bằng\nA. 4                                      B. 8                                      C. 16                                      D. 1\n\nLời giải\n\nChọn B\n\n$z^2 - 3z + 4 = 0 \\Rightarrow z_1 = \\frac{3 - \\sqrt{7}i}{2}; z_2 = \\frac{3 + \\sqrt{7}i}{2}$\n\nVậy $P = |z_1|^2 + |z_2|^2 = 8$.",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/2",
+          "page": 3,
+          "bbox": [
+            145.0,
+            235.0,
+            1535.0,
+            353.0
+          ]
+        },
+        {
+          "id": "/page/3/ListGroup/3",
+          "page": 3,
+          "bbox": [
+            170.0,
+            367.0,
+            932.0,
+            405.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "32",
+      "type": "multiple_choice",
+      "content": "Cho hàm số bậc bốn $y = f(x)$ có đồ thị như hình bên. Hỏi phương trình $2f(x - 1) = 1$ có bao nhiêu nghiệm thuộc khoảng $(-\\infty; 0)$ ?\n\n![Graph of a quartic function y = f(x) on a coordinate plane. The x-axis has points -1 and 1 marked. The y-axis has a point 1 marked. The graph has local maxima at (-1, 1) and (1, 1), and a local minimum at (0, -1). It crosses the x-axis at three points: one to the left of -1, one between -1 and 0, and one between 0 and 1.](images/09af5b86cf9391543d22db5f2129b3ca_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "4."
+        },
+        {
+          "label": "B",
+          "content": "2."
+        },
+        {
+          "label": "C",
+          "content": "1."
+        },
+        {
+          "label": "D",
+          "content": "3."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "09af5b86cf9391543d22db5f2129b3ca_img.jpg",
+          "path": "images/09af5b86cf9391543d22db5f2129b3ca_img.jpg",
+          "page": 3,
+          "bbox": [
+            960.0,
+            421.0,
+            1423.0,
+            687.0
+          ],
+          "alt": "Graph of a quartic function y = f(x) on a coordinate plane. The x-axis has points -1 and 1 marked. The y-axis has a point 1 marked. The graph has local maxima at (-1, 1) and (1, 1), and a local minimum at (0, -1). It crosses the x-axis at three points: one to the left of -1, one between -1 and 0, and one between 0 and 1."
+        }
+      ],
+      "solution": "Cho hàm số bậc bốn $y = f(x)$ có đồ thị như hình bên. Hỏi phương trình $2f(x - 1) = 1$ có bao nhiêu nghiệm thuộc khoảng $(-\\infty; 0)$?\n\nA. 4                                      B. 2                                      C. 1                                      D. 3\n\nLời giải\n\nChọn C\n\nDựa vào đồ thị hàm số ta có:\n\n$$f(x) = \\frac{1}{2} \\Rightarrow \\begin{cases} x = a \\in (-\\infty; -1) \\\\ x = b \\in (-1; 0) \\\\ x = c \\in (0; 1) \\\\ x = d \\in (1; +\\infty) \\end{cases}$$\n\n$$\\text{Do đó: } 2f(x-1) = 1 \\Leftrightarrow f(x-1) = \\frac{1}{2} \\Rightarrow \\begin{cases} x-1 = a \\in (-\\infty; -1) \\\\ x-1 = b \\in (-1; 0) \\\\ x-1 = c \\in (0; 1) \\\\ x-1 = d \\in (1; +\\infty) \\end{cases} \\Rightarrow \\begin{cases} x = 1+a \\in (-\\infty; 0) \\\\ x = 1+b \\in (0; 1) \\\\ x = 1+c \\in (1; 2) \\\\ x = 1+d \\in (2; +\\infty) \\end{cases}$$\n\nVậy phương trình $2f(x-1) = 1$ có 1 nghiệm thuộc khoảng $(-\\infty; 0)$.\n\nCách khác:\n\n$$\\text{Ta có: } f(x-1) = \\frac{1}{2}$$\n\nTính tiến đồ thị $y = f(x)$ sang phải theo phương trục hoành 1 đơn vị được đồ thị hàm số $y = f(x-1)$.\n\nKhi đó, đường thẳng $y = \\frac{1}{2}$ cắt đồ thị hàm số $y = f(x-1)$ trên $(-\\infty; 0)$ tại 1 điểm.\n\nVậy phương trình $2f(x-1) = 1$ có 1 nghiệm thuộc khoảng $(-\\infty; 0)$.",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/4",
+          "page": 3,
+          "bbox": [
+            145.0,
+            412.0,
+            898.0,
+            542.0
+          ]
+        },
+        {
+          "id": "/page/3/Figure/5",
+          "page": 3,
+          "bbox": [
+            960.0,
+            421.0,
+            1423.0,
+            687.0
+          ]
+        },
+        {
+          "id": "/page/3/ListGroup/6",
+          "page": 3,
+          "bbox": [
+            170.0,
+            687.0,
+            1254.0,
+            723.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "33",
+      "type": "multiple_choice",
+      "content": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông tại $B$, $AB = a$, $AA' = \\sqrt{2}a$. Tính theo $a$ khoảng cách từ $A$ đến $(A'BC)$.",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{2}a}{6}$."
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{6}a}{6}$."
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{2}a}{3}$."
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{6}a}{3}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông tại $B$, $AB = a$, $AA' = \\sqrt{2}a$. Tính theo $a$ khoảng cách từ $A$ đến $(A'BC)$.\n\nA. $\\frac{\\sqrt{2}a}{6}$.\n\nB. $\\frac{\\sqrt{6}a}{6}$.\n\nC. $\\frac{\\sqrt{2}a}{3}$.\n\nD. $\\frac{\\sqrt{6}a}{3}$.\n\nLời giải\n\nChọn D\n\nTrong $(A'AB)$, kẻ $AH \\perp A'B$ (1).\n\nTa có:\n\n$$\\left. \\begin{matrix} BC \\perp AB \\\\ BC \\perp AA' \\end{matrix} \\right\\} \\Rightarrow BC \\perp (A'AB) \\Rightarrow BC \\perp AH \\text{ (2)}.$$\n\nTừ (1) và (2) suy ra $AH \\perp (A'AB)$\n\n$$\\Rightarrow d(A, (A'BC)) = AH = \\frac{AB \\cdot AA'}{\\sqrt{AB^2 + AA'^2}} = \\frac{a \\cdot a\\sqrt{2}}{\\sqrt{a^2 + (a\\sqrt{2})^2}} = \\frac{a\\sqrt{6}}{3}. (\\Delta A'AB \\text{ vuông tại } A)$$",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/7",
+          "page": 3,
+          "bbox": [
+            145.0,
+            730.0,
+            1447.0,
+            831.0
+          ]
+        },
+        {
+          "id": "/page/3/ListGroup/8",
+          "page": 3,
+          "bbox": [
+            170.0,
+            842.0,
+            1302.0,
+            934.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "34",
+      "type": "multiple_choice",
+      "content": "Trong không gian $Oxyz$, đường thẳng nào sau đây vuông góc với mặt phẳng $(\\alpha) : x + 2y - z + 1 = 0$?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$d_1 : \\begin{cases} x = -1 - t \\\\ y = 2 + t \\\\ z = 3 + t. \\end{cases}$"
+        },
+        {
+          "label": "B",
+          "content": "$d_4 : \\begin{cases} x = 1 - 2t \\\\ y = -2 - 4t \\\\ z = -3 + 2t. \\end{cases}$"
+        },
+        {
+          "label": "C",
+          "content": "$d_2 : \\begin{cases} x = -1 + 2t \\\\ y = 1 + t \\\\ z = 1 + 4t. \\end{cases}$"
+        },
+        {
+          "label": "D",
+          "content": "$d_3 : \\begin{cases} x = 2 + t \\\\ y = -1 - t \\\\ z = -1 + t. \\end{cases}$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Trong không gian $Oxyz$, đường thẳng nào sau đây vuông góc với mặt phẳng $(\\alpha): x + 2y - z + 1 = 0$?\n\nA. $d_1 : \\begin{cases} x = -1 - t \\\\ y = 2 + t \\\\ z = 3 + t \\end{cases}$      B. $d_4 : \\begin{cases} x = 1 - 2t \\\\ y = -2 - 4t \\\\ z = -3 + 2t \\end{cases}$      C. $d_2 : \\begin{cases} x = -1 + 2t \\\\ y = 1 + t \\\\ z = 1 + 4t \\end{cases}$      D. $d_3 : \\begin{cases} x = 2 + t \\\\ y = -1 - t \\\\ z = -1 + t \\end{cases}$\n\nLời giải\n\nChọn B\n\n$(\\alpha)$ có vectơ pháp tuyến $\\vec{n} = (1; 2; -1)$ cùng phương vectơ chỉ phương $\\vec{u}_4 = (-2; -4; 2)$ của đường thẳng $d_4$ nên $d_4 \\perp (\\alpha)$",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/9",
+          "page": 3,
+          "bbox": [
+            145.0,
+            940.0,
+            1299.0,
+            1030.0
+          ]
+        },
+        {
+          "id": "/page/3/ListGroup/10",
+          "page": 3,
+          "bbox": [
+            170.0,
+            1043.0,
+            1129.0,
+            1361.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "35",
+      "type": "multiple_choice",
+      "content": "Một quả bóng rổ có chu vi đường tròn lớn bằng $77cm$. Diện tích da để may quả bóng rổ đó gần nhất với số nào dưới đây?\n\n![A basketball.](images/8d5dd461d53a81859a9ae0d04d9bbaec_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$5898\\text{cm}^2$."
+        },
+        {
+          "label": "B",
+          "content": "$626\\text{cm}^2$."
+        },
+        {
+          "label": "C",
+          "content": "$1888\\text{cm}^2$."
+        },
+        {
+          "label": "D",
+          "content": "$7709\\text{cm}^2$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "8d5dd461d53a81859a9ae0d04d9bbaec_img.jpg",
+          "path": "images/8d5dd461d53a81859a9ae0d04d9bbaec_img.jpg",
+          "page": 3,
+          "bbox": [
+            1270.0,
+            1368.0,
+            1430.0,
+            1518.0
+          ],
+          "alt": "A basketball."
+        }
+      ],
+      "solution": "Một quả bóng rổ có chu vi đường tròn lớn bằng $77\\text{ cm}$. Diện tích da để may quả bóng rổ đó gần nhất với số nào dưới đây?\n\nA. $5898\\text{ cm}^2$      B. $626\\text{ cm}^2$      C. $1888\\text{ cm}^2$      D. $7709\\text{ cm}^2$\n\nLời giải\n\nChọn C\n\nBán kính quả bóng rổ là $R = \\frac{77}{2\\pi}$\n\nDiện tích da để may quả bóng rổ $S = 4\\pi R^2 = 4\\pi \\left(\\frac{77}{2\\pi}\\right)^2 \\approx 1887,26 \\text{ cm}^2$",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/11",
+          "page": 3,
+          "bbox": [
+            126.0,
+            1384.0,
+            1256.0,
+            1469.0
+          ]
+        },
+        {
+          "id": "/page/3/Picture/12",
+          "page": 3,
+          "bbox": [
+            1270.0,
+            1368.0,
+            1430.0,
+            1518.0
+          ]
+        },
+        {
+          "id": "/page/3/ListGroup/13",
+          "page": 3,
+          "bbox": [
+            170.0,
+            1565.0,
+            1361.0,
+            1606.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "36",
+      "type": "multiple_choice",
+      "content": "Cho hàm số bậc ba $y = f(x)$ có đồ thị như hình bên. Hàm số $g(x) = f(2 - x)$ đồng biến trên khoảng nào trong các khoảng dưới đây?\n\n![Graph of a cubic function y = f(x) on a coordinate plane. The x-axis has points -1 and 2 marked. The graph has a local maximum at x = -1 and a local minimum at x = 2. It crosses the x-axis at three points: one to the left of -1, one between -1 and 2, and one to the right of 2.](images/10ac14a735447206df16a3124982177a_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0; 2)$."
+        },
+        {
+          "label": "B",
+          "content": "$(2; 4)$."
+        },
+        {
+          "label": "C",
+          "content": "$(4; +\\infty)$."
+        },
+        {
+          "label": "D",
+          "content": "$(-\\infty; 0)$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "10ac14a735447206df16a3124982177a_img.jpg",
+          "path": "images/10ac14a735447206df16a3124982177a_img.jpg",
+          "page": 3,
+          "bbox": [
+            935.0,
+            1632.0,
+            1366.0,
+            1904.0
+          ],
+          "alt": "Graph of a cubic function y = f(x) on a coordinate plane. The x-axis has points -1 and 2 marked. The graph has a local maximum at x = -1 and a local minimum at x = 2. It crosses the x-axis at three points: one to the left of -1, one between -1 and 2, and one to the right of 2."
+        }
+      ],
+      "solution": "Cho hàm số bậc ba $y = f(x)$ có đồ thị như hình bên. Hàm số $g(x) = f(2-x)$ đồng biến trên khoảng nào trong các khoảng dưới đây?\n\nA. $(0; 2)$\n\nB. $(2; 4)$\n\nC. $(4; +\\infty)$\n\nD. $(-\\infty; 0)$\n\nLời giải\n\nChọn A\n\nTa có $g'(x) = -f'(2-x)$.\n\nHàm số đồng biến nên $g'(x) > 0 \\Leftrightarrow -f'(2-x) > 0 \\Leftrightarrow f'(2-x) < 0$\n\n$\\Leftrightarrow -1 < 2-x < 2 \\Leftrightarrow 0 < x < 3$\n\nVậy hàm số nghịch biến trên các khoảng $(0; 3)$.",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/14",
+          "page": 3,
+          "bbox": [
+            145.0,
+            1628.0,
+            847.0,
+            1760.0
+          ]
+        },
+        {
+          "id": "/page/3/Figure/15",
+          "page": 3,
+          "bbox": [
+            935.0,
+            1632.0,
+            1366.0,
+            1904.0
+          ]
+        },
+        {
+          "id": "/page/3/ListGroup/16",
+          "page": 3,
+          "bbox": [
+            145.0,
+            1758.0,
+            678.0,
+            1852.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "37",
+      "type": "multiple_choice",
+      "content": "Cho khối lăng trụ đứng $ABCD.A'B'C'D'$ có thể tích bằng 18, đáy $ABCD$ là hình vuông cạnh 3. Độ dài cạnh $AA'$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "6."
+        },
+        {
+          "label": "B",
+          "content": "2."
+        },
+        {
+          "label": "C",
+          "content": "18."
+        },
+        {
+          "label": "D",
+          "content": "3."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho khối lăng trụ đứng $ABCD.A'B'C'D'$ có thể tích bằng 18, đáy $ABCD$ là hình vuông cạnh 3. Độ dài cạnh $AA'$ bằng\n\nA. 6.\n\nB. 2.\n\nC. 18\n\nD. 3.\n\nLời giải\n\nChọn B\n\n$$V = S_{ABCD} AA' \\Rightarrow AA' = \\frac{V}{S_{ABCD}} = \\frac{18}{3^2} = 2.$$",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/17",
+          "page": 3,
+          "bbox": [
+            145.0,
+            1899.0,
+            1490.0,
+            1989.0
+          ]
+        },
+        {
+          "id": "/page/3/ListGroup/18",
+          "page": 3,
+          "bbox": [
+            170.0,
+            1986.0,
+            1254.0,
+            2022.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "38",
+      "type": "multiple_choice",
+      "content": "Diện tích $S$ của hình phẳng giới hạn bởi hai đồ thị hàm số $y = x^3$ và $y = 2x - x^2$ được tính bởi công thức nào dưới đây?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$S = \\int\\limits_{-2}^0 x^3 + x^2 - 2x \\, dx - \\int\\limits_0^1 x^3 + x^2 - 2x \\, dx.$"
+        },
+        {
+          "label": "B",
+          "content": "$S = \\left| \\int\\limits_{-2}^1 x^3 + x^2 - 2x \\, dx \\right|.$"
+        },
+        {
+          "label": "C",
+          "content": "$S = -\\int\\limits_{-2}^0 x^3 + x^2 - 2x \\, dx + \\int\\limits_0^1 x^3 + x^2 - 2x \\, dx.$"
+        },
+        {
+          "label": "D",
+          "content": "$S = \\int\\limits_{-2}^1 x^3 + x^2 - 2x \\, dx.$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Diện tích $S$ của hình phẳng giới hạn bởi hai đồ thị hàm số $y = x^3$ và $y = 2x - x^2$ được tính bởi công thức nào dưới đây?\n\nA. $\\int_{-2}^0 (x^3 + x^2 - 2x) dx - \\int_0^1 (x^3 + x^2 - 2x) dx$.\n\nB. $\\left| \\int_{-2}^1 (x^3 + x^2 - 2x) dx \\right|$.\n\nC. $-\\int_{-2}^0 (x^3 + x^2 - 2x) dx + \\int_0^1 (x^3 + x^2 - 2x) dx$\n\nD. $\\int_{-2}^1 (x^3 + x^2 - 2x) dx$.\n\nLời giải\n\nChọn A\n\nPTHDGĐ: $x^3 = 2x - x^2 \\Leftrightarrow x^3 + x^2 - 2x = 0 \\Leftrightarrow \\begin{cases} x = -2 \\\\ x = 0 \\\\ x = 1 \\end{cases}$.\n\nBXD:\n\n<table>\n<tr><td>$x$</td><td colspan=\"3\">$-2$</td><td colspan=\"3\">$0$</td><td colspan=\"3\">$1$</td></tr>\n<tr><td>$x^3 + x^2 - 2x$</td><td>-</td><td>0</td><td>+</td><td>0</td><td>-</td><td>0</td><td>+</td><td></td><td></td></tr>\n</table>\n\n$$S = \\int_{-2}^1 |x^3 + x^2 - 2x| dx = \\int_{-2}^0 (x^3 + x^2 - 2x) dx - \\int_0^1 (x^3 + x^2 - 2x) dx.$$",
+      "source_blocks": [
+        {
+          "id": "/page/4/Text/0",
+          "page": 4,
+          "bbox": [
+            146.0,
+            38.0,
+            1532.0,
+            129.0
+          ]
+        },
+        {
+          "id": "/page/4/ListGroup/1",
+          "page": 4,
+          "bbox": [
+            167.0,
+            136.0,
+            1319.0,
+            351.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "39",
+      "type": "multiple_choice",
+      "content": "Trên tập hợp các số phức, xét phương trình $z^2 - 2az + b^2 - 1 = 0 (a, b \\in \\mathbb{R})$. Có bao nhiêu cặp số thực $(a; b)$ sao cho phương trình trên có hai nghiệm $z_1, z_2$ thỏa mãn $|z_1 - 3 - 2i| = \\sqrt{5}$ và $|z_2 - i| = |z_2 + 1|$?",
+      "options": [
+        {
+          "label": "A",
+          "content": "6."
+        },
+        {
+          "label": "B",
+          "content": "8."
+        },
+        {
+          "label": "C",
+          "content": "4."
+        },
+        {
+          "label": "D",
+          "content": "2."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Trên tập hợp các số phức, xét phương trình $z^2 - 2az + b^2 - 1 = 0 (a, b \\in \\mathbb{R})$. Có bao nhiêu cặp số thực $(a, b)$ sao cho phương trình trên có hai nghiệm $z_1, z_2$ thỏa mãn $|z_1 - 3 - 2i| = \\sqrt{5}$ và $|z_2 - i| = |z_2 + 1|$?\n\nA. 6 .                                      B. 8 .                                      C. 4                                      D. 2 .\n\nLời giải\n\nChọn B\n\nTa có: $\\Delta' = a^2 - b^2 + 1$\n\n➤ TH1: $\\Delta' \\geq 0 \\Leftrightarrow a^2 - b^2 + 1 \\geq 0$. Phương trình có 2 nghiệm thực.\n\n$$\\begin{cases} |z_1 - 3 - 2i| = \\sqrt{5} \\\\ |z_2 - i| = |z_2 + 1| \\end{cases} \\Leftrightarrow \\begin{cases} (z_1 - 3)^2 + 4 = 5 \\\\ z_2^2 + 1 = (z_2 + 1)^2 \\end{cases} \\Leftrightarrow \\begin{cases} z_1 = 2 \\\\ z_1 = 4 \\\\ z_2 = 0 \\end{cases}$$\n\nVới $z_1 = 2, z_2 = 0$, ta có: $\\begin{cases} a = \\frac{z_1 + z_2}{2} = 1 \\text{ (nhận)} \\\\ b = \\pm 1 \\end{cases}$\n\nVới $z_1 = 4, z_2 = 0$, ta có: $\\begin{cases} a = \\frac{z_1 + z_2}{2} = 2 \\text{ (nhận)} \\\\ b = \\pm 1 \\end{cases}$\n\n➤ TH2: $\\Delta' < 0 \\Leftrightarrow a^2 - b^2 + 1 < 0$. Phương trình có 2 nghiệm phức.\n\nĐặt $\\begin{cases} z_1 = x + yi \\\\ z_2 = x - yi \\end{cases} (x, y \\in \\mathbb{R})$.\n\nTa có $\\begin{cases} |z_1 - 3 - 2i| = \\sqrt{5} \\\\ |z_2 - i| = |z_2 + 1| \\end{cases} \\Leftrightarrow \\begin{cases} (x - 3)^2 + (y - 2)^2 = 5 \\\\ x^2 + (y + 1)^2 = (x + 1)^2 + y^2 \\end{cases} \\Leftrightarrow \\begin{cases} (x - 3)^2 + (x - 2)^2 = 5 \\\\ x = y \\end{cases} \\Leftrightarrow \\begin{cases} x = 1 \\\\ x = 4 \\\\ x = y \\end{cases}$\n\n* $x = y = 1$\n\n$$z_1 = 1 + i \\Rightarrow 2i - 2a(1 + i) + b^2 - 1 = 0 \\Rightarrow \\begin{cases} -2a + b^2 - 1 = 0 \\\\ -2a + 2 = 0 \\end{cases} \\Rightarrow \\begin{cases} a = 1 \\\\ b = \\pm\\sqrt{3} \\end{cases} \\text{ (nhận)}$$\n\n$$* x = y = 4 \\Rightarrow z_1 = 4 + 4i \\Rightarrow 32i - 2a(4 + 4i) + b^2 - 1 = 0 \\Rightarrow \\begin{cases} -8a + b^2 - 1 = 0 \\\\ 32 - 8a = 0 \\end{cases} \\Rightarrow \\begin{cases} a = 4 \\\\ b = \\pm\\sqrt{33} \\end{cases} \\text{ (nhận)}$$\n\nVậy có 8 cặp $(a, b)$ thỏa đề.",
+      "source_blocks": [
+        {
+          "id": "/page/4/Text/2",
+          "page": 4,
+          "bbox": [
+            146.0,
+            367.0,
+            1497.0,
+            546.0
+          ]
+        },
+        {
+          "id": "/page/4/ListGroup/3",
+          "page": 4,
+          "bbox": [
+            170.0,
+            560.0,
+            1254.0,
+            598.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "40",
+      "type": "multiple_choice",
+      "content": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông cân tại $A$, $BC = 2a$, góc giữa $(A'BC')$ và $(BCC'B')$ bằng $60^\\circ$. Tính thể tích khối tứ diện $ABB'C'$.",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{2}a^3}{3}.$"
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{2}a^3}{9}.$"
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\sqrt{2}a^3}{3}.$"
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2}a^3.$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông cân tại $A$, $BC = 2a$, góc giữa $(A'BC')$ và $(BCC'B')$ bằng $60^\\circ$. Tính thể tích khối tứ diện $ABB'C'$.\n\nA. $\\frac{\\sqrt{2}a^3}{3}$.\n\nB. $\\frac{\\sqrt{2}a^3}{9}$.\n\nC. $\\frac{2\\sqrt{2}a^3}{3}$.\n\nD. $\\sqrt{2}a^3$.\n\nLời giải\n\nChọn A\n\nGọi $H'$ là trung điểm của $B'C' \\Rightarrow A'H' \\perp B'C'$ ($\\Delta A'B'C'$ vuông cân tại $A'$).\n\nTa có $\\begin{cases} A'H' \\perp B'C' \\\\ A'H' \\perp BB' \\end{cases} \\Rightarrow A'H' \\perp (BCC'B')$.\n\nKẻ $H'K \\perp BC'$ mà $BC' \\perp A'H'$ ($A'H' \\perp (BCC'B')$)\n\nSuy ra $A'K \\perp BC'$\n\nKhi đó $\\begin{cases} (A'BC') \\cap (BCC'B') = BC' \\\\ A'K \\perp BC' \\\\ H'K \\perp BC' \\end{cases} \\Rightarrow ((A'BC'), (BCC'B')) = (A'K, H'K) = \\widehat{A'KH'} = 60^\\circ$.\n\nTa có $AH = A'H' = \\frac{B'C'}{2} = a$, $H'K = A'H' \\cdot \\cot 60^\\circ = \\frac{a\\sqrt{3}}{3}$,\n\n$$KC' = \\sqrt{H'C'^2 - H'K^2} = \\sqrt{a^2 - \\frac{a^2}{3}} = \\frac{a\\sqrt{6}}{3}.$$\n\n$\\Delta B'C'B \\sim \\Delta KC'H'$ (g.g)\n\n$$\\Rightarrow \\frac{B'B}{KH'} = \\frac{B'C'}{KC'} \\Rightarrow B'B = \\frac{B'C'}{KC'} \\cdot KH' = a\\sqrt{2}.$$\n\n$$V_{A.BB'C'} = \\frac{1}{3} AH \\cdot S_{\\Delta BB'C'} = \\frac{1}{3} a \\cdot \\frac{1}{2} \\cdot 2a \\cdot a\\sqrt{2} = \\frac{a^3\\sqrt{2}}{3}.$$",
+      "source_blocks": [
+        {
+          "id": "/page/4/Text/4",
+          "page": 4,
+          "bbox": [
+            146.0,
+            602.0,
+            1520.0,
+            696.0
+          ]
+        },
+        {
+          "id": "/page/4/ListGroup/5",
+          "page": 4,
+          "bbox": [
+            167.0,
+            705.0,
+            1303.0,
+            799.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "41",
+      "type": "multiple_choice",
+      "content": "Theo Tổng cục Thống kê, dân số Việt Nam ở cuối tháng 12 của hai năm 2022 và 2023 lần lượt là 99,47 và 100,3 triệu người. Hỏi nếu với tỉ lệ tăng dân số trung bình hằng năm như năm 2023 thì năm nào dưới đây là năm đầu tiên dân số nước ta vượt ngưỡng 120 triệu người?",
+      "options": [
+        {
+          "label": "A",
+          "content": "2043."
+        },
+        {
+          "label": "B",
+          "content": "2045."
+        },
+        {
+          "label": "C",
+          "content": "2046."
+        },
+        {
+          "label": "D",
+          "content": "2047."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Theo Tổng cục Thống kê, dân số Việt Nam ở cuối tháng 12 của hai năm 2022 và 2023 lần lượt là 99,47 và 100,3 triệu người. Hỏi nếu với tỉ lệ tăng dân số trung bình hằng năm như năm 2023 thì năm nào dưới đây là năm đầu tiên dân số nước ta vượt ngưỡng 120 triệu người?\n\nA. 2043. B. 2045. C. 2046. D. 2047.\n\nLời giải\n\nChọn B\n\nTỉ lệ năm 2023 là r = (100,3 - 99,47) / 99,47 = 83 / 9947\n\nGọi n là số năm đủ để dân số vượt ngưỡng 120 triệu người.\n\nTa có: 100,3.(1+r)^n > 120 => n > 21,5.\n\nVậy dân số năm 2045 sẽ vượt ngưỡng 120 triệu người.",
+      "source_blocks": [
+        {
+          "id": "/page/4/Text/6",
+          "page": 4,
+          "bbox": [
+            146.0,
+            804.0,
+            1524.0,
+            931.0
+          ]
+        },
+        {
+          "id": "/page/4/ListGroup/7",
+          "page": 4,
+          "bbox": [
+            170.0,
+            938.0,
+            1303.0,
+            976.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "42",
+      "type": "multiple_choice",
+      "content": "Một vật lưu niệm cao 15 cm, gồm hai hình nón chung đỉnh và chung trục như hình vẽ, đường sinh bất kỳ của hai hình nón luôn tạo với mặt đáy một góc $60^\\circ$. Biết rằng thể tích của khối nón nhỏ bằng 12,5% thể tích của khối nón lớn. Tính thể tích của vật lưu niệm đó?\n\n![A diagram of a biconical object (two cones sharing a common apex and axis). The total height is 15 cm. The angle between the axis and the generatrix of the larger cone is 60 degrees.](images/f3ba0fe172c179cca0e5ab2661b0a2d0_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$125\\pi \\text{ cm}^3.$"
+        },
+        {
+          "label": "B",
+          "content": "$100\\pi \\text{ cm}^3.$"
+        },
+        {
+          "label": "C",
+          "content": "$156,25\\pi \\text{ cm}^3.$"
+        },
+        {
+          "label": "D",
+          "content": "$109,75\\pi \\text{ cm}^3.$"
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "f3ba0fe172c179cca0e5ab2661b0a2d0_img.jpg",
+          "path": "images/f3ba0fe172c179cca0e5ab2661b0a2d0_img.jpg",
+          "page": 4,
+          "bbox": [
+            1109.0,
+            981.0,
+            1495.0,
+            1337.0
+          ],
+          "alt": "A diagram of a biconical object (two cones sharing a common apex and axis). The total height is 15 cm. The angle between the axis and the generatrix of the larger cone is 60 degrees."
+        }
+      ],
+      "solution": "Một vật lưu niệm cao 15 cm, gồm hai hình nón chung đỉnh và chung trục như hình vẽ, đường sinh bất kỳ của hai hình nón luôn tạo với mặt đáy một góc 60°. Biết rằng thể tích của khối nón nhỏ bằng 12,5% thể tích của khối nón lớn. Tính thể tích của vật lưu niệm đó?\n\nA. 125π cm³. B. 100π cm³. C. 156,25π cm³. D. 109,75π cm³.\n\nLời giải\n\nChọn A\n\nGọi SO = x > 0 => SO' = 15 - x, OA = x / sqrt(3), O'B = (15 - x) / sqrt(3)\n\nTa có: 1/3 * π * ((15-x) / sqrt(3))^2 * (15-x) = 1/8 * 1/3 * π * (x / sqrt(3))^2 * x\n\nVậy: Thể tích của vật lưu niệm đó là 1/3 * π * 10^3 / 3 + 1/8 * 1/3 * π * 10^3 / 3 = 125π cm³.",
+      "source_blocks": [
+        {
+          "id": "/page/4/Text/8",
+          "page": 4,
+          "bbox": [
+            127.0,
+            981.0,
+            1086.0,
+            1146.0
+          ]
+        },
+        {
+          "id": "/page/4/ListGroup/9",
+          "page": 4,
+          "bbox": [
+            127.0,
+            1155.0,
+            740.0,
+            1258.0
+          ]
+        },
+        {
+          "id": "/page/4/Picture/10",
+          "page": 4,
+          "bbox": [
+            1109.0,
+            981.0,
+            1495.0,
+            1337.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "43",
+      "type": "multiple_choice",
+      "content": "Xét các số phức $z, w$ thỏa mãn $|z| = 3, |w| = 5$ và $(z - w)\\bar{z}$ là số ảo. Giá trị nhỏ nhất của $P = |z + 3w + 4i|$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "8."
+        },
+        {
+          "label": "B",
+          "content": "$3\\sqrt{2} - 1.$"
+        },
+        {
+          "label": "C",
+          "content": "$12\\sqrt{2} - 4.$"
+        },
+        {
+          "label": "D",
+          "content": "14."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Xét các số phức z, w thỏa mãn |z| = 3, |w| = 5 và (z - w)z̄ là số ảo. Giá trị nhỏ nhất của P = |z + 3w + 4i| bằng\n\nA. 8. B. 3*sqrt(2) - 1. C. 12*sqrt(2) - 4. D. 14.\n\nLời giải\n\nChọn C\n\nGọi z = x + yi. Ta có: |z| = 3 => x^2 + y^2 = 9.\n\nw = a + bi. Ta có: |w| = 5 => a^2 + b^2 = 25.\n\n(z - w)z̄ = z.z̄ - w.z̄ là số ảo nên x^2 + y^2 - ax - by = 0 <=> ax + by = 9\n\n$$\\begin{aligned}\n|z + 3w| &= |(x + yi) + 3(a + bi)| = \\sqrt{(x + 3a)^2 + (y + 3b)^2} \\\\\n&= \\sqrt{(x^2 + y^2) + 6(ax + by) + 9(a^2 + b^2)} = \\sqrt{9 + 6 \\cdot 9 + 9 \\cdot 25} = 12\\sqrt{2}\n\\end{aligned}$$\n\n$$P = |z + 3w + 4i| \\geq ||z + 3w| - |4i|| = 12\\sqrt{2} - 4.$$\n\nVậy giá trị nhỏ nhất của $P$ bằng $12\\sqrt{2} - 4$.",
+      "source_blocks": [
+        {
+          "id": "/page/4/Text/11",
+          "page": 4,
+          "bbox": [
+            146.0,
+            1339.0,
+            1487.0,
+            1451.0
+          ]
+        },
+        {
+          "id": "/page/4/ListGroup/12",
+          "page": 4,
+          "bbox": [
+            170.0,
+            1462.0,
+            1270.0,
+            1507.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "44",
+      "type": "multiple_choice",
+      "content": "Trong không gian $Oxyz$, cho hai điểm $A(3; 3; 1), B(0; 2; 1)$ và mặt phẳng\n\n$(\\alpha): x + y + z - 7 = 0$. Đường thẳng $\\Delta$ nằm trong $(\\alpha)$ sao cho mọi điểm thuộc $\\Delta$ luôn cách đều hai điểm $A, B$. Biết rằng $\\vec{u}(1; a; b)$ là véc tơ chỉ phương của $\\Delta$. Tính $|\\vec{u}|$.",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{11}.$"
+        },
+        {
+          "label": "B",
+          "content": "3."
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{14}.$"
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{6}.$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Trong không gian $Oxyz$, cho hai điểm $A(3;3;1)$, $B(0;2;1)$ và mặt phẳng $(\\alpha): x + y + z - 7 = 0$. Đường thẳng $\\Delta$ nằm trong $(\\alpha)$ sao cho mọi điểm thuộc $\\Delta$ luôn cách đều hai điểm $A, B$. Biết rằng $\\vec{u} = (1; a; b)$ là vectơ chỉ phương của $\\Delta$. Tính $|\\vec{u}|$.\n\nA. $\\sqrt{11}$.\n\nB. 3.\n\nC. $\\sqrt{14}$.\n\nD. $\\sqrt{6}$.\n\nLời giải\n\nChọn C\n\nVì $\\Delta$ luôn cách đều hai điểm $A, B$ nên $\\Delta$ nằm trong mặt phẳng trung trực $(\\beta)$ của đoạn $AB$.\n\n$$\\text{Ta có } \\vec{n}_\\beta = \\overrightarrow{AB} = (-3; -1; 0); \\vec{n}_\\alpha = (1; 1; 1); [\\vec{n}_\\alpha, \\vec{n}_\\beta] = (1; -3; 2) = \\vec{u} \\Rightarrow |\\vec{u}| = \\sqrt{14}.$$",
+      "source_blocks": [
+        {
+          "id": "/page/4/Text/13",
+          "page": 4,
+          "bbox": [
+            146.0,
+            1505.0,
+            1262.0,
+            1550.0
+          ]
+        },
+        {
+          "id": "/page/4/Text/14",
+          "page": 4,
+          "bbox": [
+            146.0,
+            1556.0,
+            1535.0,
+            1659.0
+          ]
+        },
+        {
+          "id": "/page/4/ListGroup/15",
+          "page": 4,
+          "bbox": [
+            170.0,
+            1677.0,
+            1278.0,
+            1727.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "45",
+      "type": "multiple_choice",
+      "content": "Cho hàm số bậc ba $y = f(x)$ thỏa mãn $f(2) = 1$.\n\nĐồ thị hàm số $y = f'(x)$ như hình vẽ bên.\n\nHỏi hàm số $g(x) = \\left| f(x) + \\frac{1}{x} \\right|$ có bao nhiêu điểm cực trị?\n\n![A graph of the derivative function y = f'(x). It is a cubic curve that crosses the x-axis at x = -1 and x = 2. It has a local minimum between these two points and a local maximum to the right of x = 2.](images/5f3d208ed123640709891495c7029a53_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "4."
+        },
+        {
+          "label": "B",
+          "content": "6."
+        },
+        {
+          "label": "C",
+          "content": "2."
+        },
+        {
+          "label": "D",
+          "content": "3."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "5f3d208ed123640709891495c7029a53_img.jpg",
+          "path": "images/5f3d208ed123640709891495c7029a53_img.jpg",
+          "page": 4,
+          "bbox": [
+            1003.0,
+            1738.0,
+            1353.0,
+            2058.0
+          ],
+          "alt": "A graph of the derivative function y = f'(x). It is a cubic curve that crosses the x-axis at x = -1 and x = 2. It has a local minimum between these two points and a local maximum to the right of x = 2."
+        }
+      ],
+      "solution": "Cho hàm số bậc ba $y = f(x)$ thỏa mãn $f(2) = 1$. Đồ thị hàm số $y = f'(x)$ như hình vẽ\n\nHỏi hàm số $g(x) = \\left| f(x) + \\frac{1}{x} \\right|$ có bao nhiêu điểm cực trị?\n\nA. 4.\n\nB. 6.\n\nC. 2.\n\nD. 3.\n\nLời giải\n\nChọn A\n\nBBT của $f(x)$:\n\n$$\\text{Đặt } h(x) = f(x) + \\frac{1}{x} \\Rightarrow h'(x) = f'(x) - \\frac{1}{x^2} = 0 \\Leftrightarrow \\begin{cases} x = a < -1 \\\\ x = b > 2 \\end{cases}.$$\n\nBBT của $h(x)$\n\nTrong đó $h(a) = f(a) + \\frac{1}{a} > h(-1) = f(-1) + \\frac{1}{a} > 1 + \\frac{1}{a} > 0$ và $h(b) = f(b) + \\frac{1}{b} > 0$.\n\nDo đó hàm số $g(x) = \\left| f(x) + \\frac{1}{x} \\right| = |h(x)|$ có 4 cực trị.",
+      "source_blocks": [
+        {
+          "id": "/page/4/Text/16",
+          "page": 4,
+          "bbox": [
+            146.0,
+            1729.0,
+            924.0,
+            1776.0
+          ]
+        },
+        {
+          "id": "/page/4/Text/17",
+          "page": 4,
+          "bbox": [
+            146.0,
+            1778.0,
+            716.0,
+            1821.0
+          ]
+        },
+        {
+          "id": "/page/4/Text/18",
+          "page": 4,
+          "bbox": [
+            143.0,
+            1825.0,
+            912.0,
+            1919.0
+          ]
+        },
+        {
+          "id": "/page/4/Figure/19",
+          "page": 4,
+          "bbox": [
+            1003.0,
+            1738.0,
+            1353.0,
+            2058.0
+          ]
+        },
+        {
+          "id": "/page/4/ListGroup/20",
+          "page": 4,
+          "bbox": [
+            170.0,
+            2056.0,
+            1257.0,
+            2094.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "46",
+      "type": "multiple_choice",
+      "content": "Có bao nhiêu số nguyên $a$ sao cho ứng với mỗi $a$ tồn tại số thực $b > a$ thỏa mãn $a = \\log_6 1 + 2^b + 3^b$ và đoạn $[a; b]$ chứa không quá 6 số nguyên?",
+      "options": [
+        {
+          "label": "A",
+          "content": "Vô số."
+        },
+        {
+          "label": "B",
+          "content": "9."
+        },
+        {
+          "label": "C",
+          "content": "8."
+        },
+        {
+          "label": "D",
+          "content": "10."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Có bao nhiêu số nguyên $a$ sao cho ứng với mỗi $a$ tồn tại số thực $b > a$ thỏa mãn $a = \\log_6(1 + 2^b + 3^b)$ và đoạn $[a; b]$ chứa không quá 6 số nguyên?\n\nA. Vô số.                      B. 9.                      C. 8.                      D. 10.\n\nLời giải\n\nChọn C\n\nTa có $a = \\log_6(1 + 2^b + 3^b) \\Leftrightarrow 1 + 2^b + 3^b - 6^a = 0$\n\nĐặt $f(b) = 1 + 2^b + 3^b - 6^a$ thì $f(b) = 0$ và $f'(b) = 2^b \\ln 2 + 3^b \\ln 3 > 0, \\forall b$ nên $f(b)$ đồng biến trên $\\mathbb{R}$.\n\nDo đoạn $[a; b]$ chứa không quá 6 số nguyên (và $a < b$) nên ta có điều kiện đủ $a < b < a + 6$.\n\nDo vậy chỉ cần xét hàm số $f(b)$ đồng biến trên $[a; a + 6]$.\n\nTa có $a < b < a + 6 \\Rightarrow f(a) < f(b) = 0 < f(a + 6)$\n\nHay $\\begin{cases} f(a) < 0 \\\\ f(a + 6) > 0 \\end{cases} \\Rightarrow \\begin{cases} 1 + 2^a + 3^a - 6^a < 0 \\quad (1) \\\\ 1 + 2^{a+6} + 3^{a+6} - 6^a > 0 \\quad (2) \\end{cases}$\n\n+ Xét (1) $\\Leftrightarrow \\left(\\frac{1}{6}\\right)^a + \\left(\\frac{1}{3}\\right)^a + \\left(\\frac{1}{2}\\right)^a - 1 < 0 \\Leftrightarrow h(a) < h(1) \\Leftrightarrow a > 1$\n\n(vì $h(x) = \\left(\\frac{1}{6}\\right)^x + \\left(\\frac{1}{3}\\right)^x + \\left(\\frac{1}{2}\\right)^x - 1$ nghịch biến trên $\\mathbb{R}$)\n\n+ Xét (2) $\\Leftrightarrow \\left(\\frac{1}{6}\\right)^a + 2^6 \\cdot \\left(\\frac{1}{3}\\right)^a + 3^6 \\cdot \\left(\\frac{1}{2}\\right)^a - 1 > 0$\n\n$g(x) = \\left(\\frac{1}{6}\\right)^x + 2^6 \\cdot \\left(\\frac{1}{3}\\right)^x + 3^6 \\cdot \\left(\\frac{1}{2}\\right)^x - 1$ có bảng biến thiên như sau\n\nDo đó $(2) \\Rightarrow a < 9,51$\n\nSuy ra $a \\in \\{2; 3; \\dots; 9\\}$.\n\nVậy có 8 giá trị nguyên của $a$ thỏa yêu cầu.",
+      "source_blocks": [
+        {
+          "id": "/page/5/Text/0",
+          "page": 5,
+          "bbox": [
+            140.0,
+            33.0,
+            1375.0,
+            136.0
+          ]
+        },
+        {
+          "id": "/page/5/ListGroup/1",
+          "page": 5,
+          "bbox": [
+            172.0,
+            150.0,
+            1272.0,
+            190.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "47",
+      "type": "multiple_choice",
+      "content": "Khi quay hình phẳng giới hạn bởi các đường $y = \\log_2 x$, $y = 0$ và $x = 4$ xung quanh đường thẳng $x = 4$ thu được khối tròn xoay có thể tích gần nhất với giá trị nào sau đây?",
+      "options": [
+        {
+          "label": "A",
+          "content": "13."
+        },
+        {
+          "label": "B",
+          "content": "25."
+        },
+        {
+          "label": "C",
+          "content": "26."
+        },
+        {
+          "label": "D",
+          "content": "14."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Khi quay hình phẳng giới hạn bởi các đường $y = \\log_2 x$, $y = 0$ và $x = 4$ xung quanh đường thẳng $x = 4$ thu được khối tròn xoay có thể tích gần nhất với giá trị nào sau đây?\n\nA. 13.\n\nB. 25.\n\nC. 26.\n\nD. 14.\n\nLời giải\n\nChọn C\n\nDời hệ trục $Oxy$ thành hệ trục $IXY$ với gốc tọa độ $I(4;0)$ như hình vẽ.\n\nCông thức đổi trục $\\begin{cases} x = X + 4 \\\\ y = Y \\end{cases}$.\n\nTrong hệ trục $IXY$, các đường $y = \\log_2 x$, $y = 0$ và $x = 4$ lần lượt trở thành các đường $Y = \\log_2(X + 4)$, $Y = 0$, $X = 0$.\n\nBài toán trở thành tính thể tích khối tròn xoay khi quay hình phẳng giới hạn bởi các đường $Y = \\log_2(X + 4)$, $Y = 0$, $X = 0$ quanh trục tung.\n\nTa có $Y = \\log_2(X + 4) \\Rightarrow X = 2^Y - 4$.\n\nThể tích khối tròn xoay tạo thành là\n\n$$V = \\pi \\int_0^2 (2^Y - 4)^2 dY = \\pi \\int_0^2 (2^{2Y} - 8 \\cdot 2^Y + 16) dY = \\pi \\left( \\frac{2^{2Y}}{2 \\ln 2} - \\frac{8 \\cdot 2^Y}{\\ln 2} + 16Y \\right) \\Big|_0^2 \\approx 25,75.$$",
+      "source_blocks": [
+        {
+          "id": "/page/5/Text/2",
+          "page": 5,
+          "bbox": [
+            146.0,
+            201.0,
+            1509.0,
+            297.0
+          ]
+        },
+        {
+          "id": "/page/5/ListGroup/3",
+          "page": 5,
+          "bbox": [
+            172.0,
+            306.0,
+            1272.0,
+            342.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "48",
+      "type": "multiple_choice",
+      "content": "Trong không gian $Oxyz$, cho điểm $A(1; -12; 4)$, mặt phẳng $(P) : y + z + 4 = 0$ cắt mặt cầu $(S) : x^2 + y^2 + z^2 + 10x + 4z + 5 = 0$ theo giao tuyến là đường tròn $(\\omega)$. Điểm $M$ thuộc $(\\omega)$ sao cho đoạn thẳng $AM$ ngắn nhất. Khẳng định nào sau đây đúng?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$OM = 2\\sqrt{6}$."
+        },
+        {
+          "label": "B",
+          "content": "$OM = \\sqrt{6}$."
+        },
+        {
+          "label": "C",
+          "content": "$OM = 10$."
+        },
+        {
+          "label": "D",
+          "content": "$OM = 5$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Trong không gian $Oxyz$, cho điểm $A(1; -12; 4)$, mặt phẳng $(P): y + z + 4 = 0$ cắt mặt cầu $(S): x^2 + y^2 + z^2 + 10x + 4z + 5 = 0$ theo giao tuyến là đường tròn $(\\omega)$. Điểm $M$ thuộc $(\\omega)$ sao cho đoạn thẳng $AM$ ngắn nhất. Khẳng định nào sau đây đúng?\n\nA. $OM = 2\\sqrt{6}$.\n\nB. $OM = \\sqrt{6}$.\n\nC. $OM = 10$.\n\nD. $OM = 5$.\n\nLời giải\n\nChọn D\n\nGọi $I, J$ lần lượt là tâm mặt cầu $(S)$ và tâm của đường tròn $(\\omega)$.\n\nMặt cầu $(S)$ có tâm $I(-5; 0; -2)$, bán kính $R = 2\\sqrt{6}$.\n\n$\\Delta IMJ$ vuông tại $J$ có $IM^2 = IJ^2 + JM^2 \\Leftrightarrow R^2 = d^2(I, (P)) + r_{(\\omega)}^2 \\Rightarrow r_{(\\omega)} = \\sqrt{22}$.\n\nKẻ $AH \\perp (P)$ tại $H$. Suy ra $AH = d(A, (P)) = \\frac{|-12 + 4 + 4|}{\\sqrt{1^2 + 1^2}} = 2\\sqrt{2}$.\n\nVì $H, J$ lần lượt là hình chiếu vuông góc của điểm $A$ và $I$ lên mặt phẳng $(P)$ nên ta tìm được $J(-5; -1; -3)$ và $H(1; -10; 6)$. Suy ra $HJ = 3\\sqrt{22}$.\n\n$\\Delta AHM$ vuông tại $H$ có $AM^2 = AH^2 + HM^2 = 8 + HM^2$.\n\nĐể $AM$ ngắn nhất $\\Leftrightarrow HM$ ngắn nhất. Khi đó $HM = |HJ - r_{(\\omega)}| = 2\\sqrt{22}$.\n\nSuy ra $AM_{\\min} = \\sqrt{8 + (2\\sqrt{22})^2} = 4\\sqrt{6}$.\n\nDấu \"$=$\" xảy ra khi và chỉ khi $M = HJ \\cap (\\omega)$ và $M$ nằm giữa $H$ và $J$.\n\nTa có $\\overrightarrow{MJ} = \\frac{MJ}{HJ} \\cdot \\overrightarrow{HJ} = \\frac{1}{3} \\overrightarrow{HJ}$ nên ta tìm được tọa độ điểm $M$ là $M(-3; -4; 0)$.\n\nVậy độ dài đoạn thẳng $OM = \\sqrt{(-3)^2 + (-4)^2 + 0^2} = 5$.",
+      "source_blocks": [
+        {
+          "id": "/page/5/Text/4",
+          "page": 5,
+          "bbox": [
+            146.0,
+            347.0,
+            1546.0,
+            497.0
+          ]
+        },
+        {
+          "id": "/page/5/ListGroup/5",
+          "page": 5,
+          "bbox": [
+            172.0,
+            506.0,
+            1034.0,
+            591.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "49",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $f(x) = ax^3 + bx^2 + cx + d$ ($a, b, c, d \\in \\mathbb{R}$). Đồ thị hàm số $y = f(x)$, trục hoành và đường thẳng $x = 4$ tạo ra 3 hình phẳng có diện tích là\n\n$S_1, S_2, S_3$ (hình vẽ bên). Biết $S_1 + S_3 = S_2 + \\frac{5}{6}$, tích\n\nphân $\\int_{-1}^4 (2x - 1)f'(x)dx$ bằng\n\n![Graph of a cubic function y = f(x) on a coordinate plane. The x-axis has points -1, O, and 4. The y-axis has a point 4. The curve passes through (-1, 0), has a local maximum, crosses the x-axis, has a local minimum, and ends at (4, 4). Three regions are labeled: S1 is the area between the curve and the x-axis from x=-1 to the first root; S2 is the area between the x-axis and the curve from the first root to the second root; S3 is the area between the curve and the vertical line x=4 from the second root to x=4.](images/92c6488dfdf125bc1b7bb6a235394652_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{89}{3}$."
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{173}{6}$."
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{79}{3}$."
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{163}{6}$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "92c6488dfdf125bc1b7bb6a235394652_img.jpg",
+          "path": "images/92c6488dfdf125bc1b7bb6a235394652_img.jpg",
+          "page": 5,
+          "bbox": [
+            949.0,
+            598.0,
+            1414.0,
+            1016.0
+          ],
+          "alt": "Graph of a cubic function y = f(x) on a coordinate plane. The x-axis has points -1, O, and 4. The y-axis has a point 4. The curve passes through (-1, 0), has a local maximum, crosses the x-axis, has a local minimum, and ends at (4, 4). Three regions are labeled: S1 is the area between the curve and the x-axis from x=-1 to the first root; S2 is the area between the x-axis and the curve from the first root to the second root; S3 is the area between the curve and the vertical line x=4 from the second root to x=4."
+        }
+      ],
+      "solution": "Cho hàm số $f(x) = ax^3 + bx^2 + cx + d$ ($a, b, c, d \\in \\mathbb{R}$). Đồ thị hàm số $y = f(x)$, trục hoành và đường thẳng $x = 4$ tạo ra 3 hình phẳng có diện tích là $S_1, S_2, S_3$ (hình vẽ bên). Biết\n\n$S_1 + S_3 = S_2 + \\frac{5}{6}$, tích phân $\\int_{-1}^4 (2x-1)f'(x)dx$ bằng\n\nA. $\\frac{89}{3}$.\n\nB. $\\frac{173}{6}$.\n\nC. $\\frac{79}{3}$.\n\nD. $\\frac{163}{6}$.\n\nLời giải\n\nChọn C\n\nDựa vào đồ thị, ta có $\\int_{-1}^4 f(x) dx = S_1 + S_3 - S_2 = \\frac{5}{6}$.\n\n$$\\begin{aligned} \\text{Khi đó } \\int_{-1}^4 (2x-1)f'(x) dx &= (2x-1)f(x) \\Big|_{-1}^4 - 2 \\int_{-1}^4 f(x) dx \\\\ &= 7f(4) + 3f(-1) - 2 \\int_{-1}^4 f(x) dx = 7 \\cdot 4 + 3 \\cdot 0 - 2 \\cdot \\frac{5}{6} = \\frac{79}{3}. \\end{aligned}$$",
+      "source_blocks": [
+        {
+          "id": "/page/5/Text/6",
+          "page": 5,
+          "bbox": [
+            146.0,
+            598.0,
+            890.0,
+            730.0
+          ]
+        },
+        {
+          "id": "/page/5/Text/7",
+          "page": 5,
+          "bbox": [
+            146.0,
+            736.0,
+            858.0,
+            813.0
+          ]
+        },
+        {
+          "id": "/page/5/Text/8",
+          "page": 5,
+          "bbox": [
+            146.0,
+            822.0,
+            544.0,
+            920.0
+          ]
+        },
+        {
+          "id": "/page/5/Figure/9",
+          "page": 5,
+          "bbox": [
+            949.0,
+            598.0,
+            1414.0,
+            1016.0
+          ]
+        },
+        {
+          "id": "/page/5/ListGroup/10",
+          "page": 5,
+          "bbox": [
+            172.0,
+            1037.0,
+            1294.0,
+            1113.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": null,
+      "number": "50",
+      "type": "multiple_choice",
+      "content": "Cho hàm số bậc ba $y = f(x)$ có đồ thị như hình bên. Có bao nhiêu giá trị nguyên của tham số $a$ để hàm số $g(x) = f\\left(\\frac{1}{8} 2x^4 + a - 2x^2\\right)$ đồng biến trên khoảng $(0; 1)$?\n\n![Graph of a cubic function y = f(x) on a coordinate plane. The x-axis has points O and 2. The curve has a local maximum at x=0 and a local minimum at x=2. It crosses the x-axis at three points: one to the left of 0, one between 0 and 2, and one to the right of 2.](images/096d7a8a21933900dad68d82ae8a97fb_img.jpg)\n\n----- HẾT -----\nThí sinh không được sử dụng tài liệu. Cán bộ coi thi không giải thích gì thêm.\nHọ và tên thí sinh:.....Số báo danh:.....\n\n<table>\n<tr><th>Câu</th><th>Mã 101</th><th>Mã 102</th><th>Mã 103</th><th>Mã 104</th><th>Mã 105</th><th>Mã 106</th><th>Mã 107</th><th>Mã 108</th></tr>\n<tr><td>1</td><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td><td>B</td></tr>\n<tr><td>2</td><td>C</td><td>C</td><td>D</td><td>D</td><td>C</td><td>C</td><td>D</td><td>D</td></tr>\n<tr><td>3</td><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td></tr>\n<tr><td>4</td><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td><td>A</td></tr>\n<tr><td>5</td><td>D</td><td>A</td><td>B</td><td>D</td><td>D</td><td>A</td><td>B</td><td>D</td></tr>\n<tr><td>6</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>\n<tr><td>7</td><td>A</td><td>A</td><td>D</td><td>C</td><td>A</td><td>A</td><td>D</td><td>C</td></tr>\n<tr><td>8</td><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td></tr>\n<tr><td>9</td><td>C</td><td>C</td><td>A</td><td>D</td><td>C</td><td>C</td><td>A</td><td>D</td></tr>\n<tr><td>10</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td></tr>\n<tr><td>11</td><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td></tr>\n<tr><td>12</td><td>A</td><td>D</td><td>A</td><td>D</td><td>A</td><td>D</td><td>A</td><td>D</td></tr>\n<tr><td>13</td><td>B</td><td>D</td><td>D</td><td>D</td><td>B</td><td>D</td><td>D</td><td>D</td></tr>\n<tr><td>14</td><td>D</td><td>D</td><td>B</td><td>C</td><td>D</td><td>D</td><td>B</td><td>C</td></tr>\n<tr><td>15</td><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td></tr>\n<tr><td>16</td><td>B</td><td>C</td><td>D</td><td>A</td><td>B</td><td>C</td><td>D</td><td>A</td></tr>\n<tr><td>17</td><td>D</td><td>B</td><td>A</td><td>D</td><td>D</td><td>B</td><td>A</td><td>D</td></tr>\n<tr><td>18</td><td>A</td><td>B</td><td>D</td><td>B</td><td>A</td><td>B</td><td>D</td><td>B</td></tr>\n<tr><td>19</td><td>A</td><td>B</td><td>C</td><td>C</td><td>A</td><td>B</td><td>C</td><td>C</td></tr>\n<tr><td>20</td><td>D</td><td>D</td><td>C</td><td>C</td><td>D</td><td>D</td><td>C</td><td>C</td></tr>\n<tr><td>21</td><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td><td>B</td></tr>\n<tr><td>22</td><td>B</td><td>C</td><td>B</td><td>D</td><td>B</td><td>C</td><td>B</td><td>D</td></tr>\n<tr><td>23</td><td>C</td><td>D</td><td>D</td><td>D</td><td>C</td><td>D</td><td>D</td><td>D</td></tr>\n<tr><td>24</td><td>D</td><td>B</td><td>A</td><td>B</td><td>D</td><td>B</td><td>A</td><td>B</td></tr>\n<tr><td>25</td><td>D</td><td>B</td><td>D</td><td>B</td><td>D</td><td>B</td><td>D</td><td>B</td></tr>\n<tr><td>26</td><td>B</td><td>C</td><td>A</td><td>D</td><td>B</td><td>C</td><td>A</td><td>D</td></tr>\n<tr><td>27</td><td>D</td><td>C</td><td>A</td><td>A</td><td>D</td><td>C</td><td>A</td><td>A</td></tr>\n<tr><td>28</td><td>B</td><td>D</td><td>C</td><td>C</td><td>B</td><td>D</td><td>C</td><td>C</td></tr>\n<tr><td>29</td><td>A</td><td>B</td><td>B</td><td>C</td><td>A</td><td>B</td><td>B</td><td>C</td></tr>\n<tr><td>30</td><td>D</td><td>A</td><td>C</td><td>C</td><td>D</td><td>A</td><td>C</td><td>C</td></tr>\n<tr><td>31</td><td>B</td><td>C</td><td>B</td><td>B</td><td>B</td><td>C</td><td>B</td><td>B</td></tr>\n<tr><td>32</td><td>C</td><td>B</td><td>D</td><td>D</td><td>C</td><td>B</td><td>D</td><td>D</td></tr>\n<tr><td>33</td><td>D</td><td>D</td><td>D</td><td>A</td><td>D</td><td>D</td><td>D</td><td>A</td></tr>\n<tr><td>34</td><td>B</td><td>A</td><td>C</td><td>B</td><td>B</td><td>A</td><td>C</td><td>B</td></tr>\n<tr><td>35</td><td>C</td><td>D</td><td>D</td><td>B</td><td>C</td><td>D</td><td>D</td><td>B</td></tr>\n<tr><td>36</td><td>A</td><td>D</td><td>A</td><td>C</td><td>A</td><td>D</td><td>A</td><td>C</td></tr>\n<tr><td>37</td><td>B</td><td>A</td><td>C</td><td>A</td><td>B</td><td>A</td><td>C</td><td>A</td></tr>\n<tr><td>38</td><td>A</td><td>A</td><td>A</td><td>C</td><td>A</td><td>A</td><td>A</td><td>C</td></tr>\n<tr><td>39</td><td>B</td><td>A</td><td>A</td><td>A</td><td>B</td><td>A</td><td>A</td><td>A</td></tr>\n<tr><td>40</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td></tr>\n<tr><td>41</td><td>B</td><td>D</td><td>B</td><td>B</td><td>B</td><td>D</td><td>B</td><td>B</td></tr>\n<tr><td>42</td><td>A</td><td>C</td><td>B</td><td>A</td><td>A</td><td>C</td><td>B</td><td>A</td></tr>\n<tr><td>43</td><td>C</td><td>B</td><td>C</td><td>C</td><td>C</td><td>B</td><td>C</td><td>C</td></tr>\n<tr><td>44</td><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td></tr>\n<tr><td>45</td><td>A</td><td>B</td><td>B</td><td>B</td><td>A</td><td>B</td><td>B</td><td>B</td></tr>\n<tr><td>46</td><td>C</td><td>B</td><td>A</td><td>A</td><td>C</td><td>B</td><td>A</td><td>A</td></tr>\n<tr><td>47</td><td>C</td><td>A</td><td>C</td><td>D</td><td>C</td><td>A</td><td>C</td><td>D</td></tr>\n<tr><td>48</td><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td></tr>\n<tr><td>49</td><td>C</td><td>C</td><td>B</td><td>C</td><td>C</td><td>C</td><td>B</td><td>C</td></tr>\n<tr><td>50</td><td>A</td><td>A</td><td>B</td><td>A</td><td>A</td><td>A</td><td>B</td><td>A</td></tr>\n</table>\n\n<table>\n<tr><th>Mã 109</th><th>Mã 110</th><th>Mã 111</th><th>Mã 112</th><th>Mã 113</th><th>Mã 114</th><th>Mã 115</th><th>Mã 116</th><th>Mã 117</th></tr>\n<tr><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td></tr>\n<tr><td>C</td><td>C</td><td>D</td><td>D</td><td>C</td><td>C</td><td>D</td><td>D</td><td>C</td></tr>\n<tr><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td></tr>\n<tr><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td></tr>\n<tr><td>D</td><td>A</td><td>B</td><td>D</td><td>D</td><td>A</td><td>B</td><td>D</td><td>D</td></tr>\n<tr><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td></tr>\n<tr><td>A</td><td>A</td><td>D</td><td>C</td><td>A</td><td>A</td><td>D</td><td>C</td><td>A</td></tr>\n<tr><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td></tr>\n<tr><td>C</td><td>C</td><td>A</td><td>D</td><td>C</td><td>C</td><td>A</td><td>D</td><td>C</td></tr>\n<tr><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td></tr>\n<tr><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td></tr>\n<tr><td>A</td><td>D</td><td>A</td><td>D</td><td>A</td><td>D</td><td>A</td><td>D</td><td>A</td></tr>\n<tr><td>B</td><td>D</td><td>D</td><td>D</td><td>B</td><td>D</td><td>D</td><td>D</td><td>B</td></tr>\n<tr><td>D</td><td>D</td><td>B</td><td>C</td><td>D</td><td>D</td><td>B</td><td>C</td><td>D</td></tr>\n<tr><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td></tr>\n<tr><td>B</td><td>C</td><td>D</td><td>A</td><td>B</td><td>C</td><td>D</td><td>A</td><td>B</td></tr>\n<tr><td>D</td><td>B</td><td>A</td><td>D</td><td>D</td><td>B</td><td>A</td><td>D</td><td>D</td></tr>\n<tr><td>A</td><td>B</td><td>D</td><td>B</td><td>A</td><td>B</td><td>D</td><td>B</td><td>A</td></tr>\n<tr><td>A</td><td>B</td><td>C</td><td>C</td><td>A</td><td>B</td><td>C</td><td>C</td><td>A</td></tr>\n<tr><td>D</td><td>D</td><td>C</td><td>C</td><td>D</td><td>D</td><td>C</td><td>C</td><td>D</td></tr>\n<tr><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td></tr>\n<tr><td>B</td><td>C</td><td>B</td><td>D</td><td>B</td><td>C</td><td>B</td><td>D</td><td>B</td></tr>\n<tr><td>C</td><td>D</td><td>D</td><td>D</td><td>C</td><td>D</td><td>D</td><td>D</td><td>C</td></tr>\n<tr><td>D</td><td>B</td><td>A</td><td>B</td><td>D</td><td>B</td><td>A</td><td>B</td><td>D</td></tr>\n<tr><td>D</td><td>B</td><td>D</td><td>B</td><td>D</td><td>B</td><td>D</td><td>B</td><td>D</td></tr>\n<tr><td>B</td><td>C</td><td>A</td><td>D</td><td>B</td><td>C</td><td>A</td><td>D</td><td>B</td></tr>\n<tr><td>D</td><td>C</td><td>A</td><td>A</td><td>D</td><td>C</td><td>A</td><td>A</td><td>D</td></tr>\n<tr><td>B</td><td>D</td><td>C</td><td>C</td><td>B</td><td>D</td><td>C</td><td>C</td><td>B</td></tr>\n<tr><td>A</td><td>B</td><td>B</td><td>C</td><td>A</td><td>B</td><td>B</td><td>C</td><td>A</td></tr>\n<tr><td>D</td><td>A</td><td>C</td><td>C</td><td>D</td><td>A</td><td>C</td><td>C</td><td>D</td></tr>\n<tr><td>B</td><td>C</td><td>B</td><td>B</td><td>B</td><td>C</td><td>B</td><td>B</td><td>B</td></tr>\n<tr><td>C</td><td>B</td><td>D</td><td>D</td><td>C</td><td>B</td><td>D</td><td>D</td><td>C</td></tr>\n<tr><td>D</td><td>D</td><td>D</td><td>A</td><td>D</td><td>D</td><td>D</td><td>A</td><td>D</td></tr>\n<tr><td>B</td><td>A</td><td>C</td><td>B</td><td>B</td><td>A</td><td>C</td><td>B</td><td>B</td></tr>\n<tr><td>C</td><td>D</td><td>D</td><td>B</td><td>C</td><td>D</td><td>D</td><td>B</td><td>C</td></tr>\n<tr><td>A</td><td>D</td><td>A</td><td>C</td><td>A</td><td>D</td><td>A</td><td>C</td><td>A</td></tr>\n<tr><td>B</td><td>A</td><td>C</td><td>A</td><td>B</td><td>A</td><td>C</td><td>A</td><td>B</td></tr>\n<tr><td>A</td><td>A</td><td>A</td><td>C</td><td>A</td><td>A</td><td>A</td><td>C</td><td>A</td></tr>\n<tr><td>B</td><td>A</td><td>A</td><td>A</td><td>B</td><td>A</td><td>A</td><td>A</td><td>B</td></tr>\n<tr><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td></tr>\n<tr><td>B</td><td>D</td><td>B</td><td>B</td><td>B</td><td>D</td><td>B</td><td>B</td><td>B</td></tr>\n<tr><td>A</td><td>C</td><td>B</td><td>A</td><td>A</td><td>C</td><td>B</td><td>A</td><td>A</td></tr>\n<tr><td>C</td><td>B</td><td>C</td><td>C</td><td>C</td><td>B</td><td>C</td><td>C</td><td>C</td></tr>\n<tr><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td></tr>\n<tr><td>A</td><td>B</td><td>B</td><td>B</td><td>A</td><td>B</td><td>B</td><td>B</td><td>A</td></tr>\n<tr><td>C</td><td>B</td><td>A</td><td>A</td><td>C</td><td>B</td><td>A</td><td>A</td><td>C</td></tr>\n<tr><td>C</td><td>A</td><td>C</td><td>D</td><td>C</td><td>A</td><td>C</td><td>D</td><td>C</td></tr>\n<tr><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td></tr>\n<tr><td>C</td><td>C</td><td>B</td><td>C</td><td>C</td><td>C</td><td>B</td><td>C</td><td>C</td></tr>\n<tr><td>A</td><td>A</td><td>B</td><td>A</td><td>A</td><td>A</td><td>B</td><td>A</td><td>A</td></tr>\n</table>\n\n<table>\n<tr><th>Mā 117</th><th>Mā 118</th><th>Mā 119</th><th>Mā 120</th><th>Mā 121</th><th>Mā 122</th><th>Mā 123</th><th>Mā 124</th></tr>\n<tr><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td><td>B</td></tr>\n<tr><td>C</td><td>C</td><td>D</td><td>D</td><td>C</td><td>C</td><td>D</td><td>D</td></tr>\n<tr><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td></tr>\n<tr><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td><td>A</td></tr>\n<tr><td>D</td><td>A</td><td>B</td><td>D</td><td>D</td><td>A</td><td>B</td><td>D</td></tr>\n<tr><td>A</td><td>B</td><td>C</td><td>B</td><td>A</td><td>B</td><td>C</td><td>B</td></tr>\n<tr><td>A</td><td>A</td><td>D</td><td>C</td><td>A</td><td>A</td><td>D</td><td>C</td></tr>\n<tr><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td></tr>\n<tr><td>C</td><td>C</td><td>A</td><td>D</td><td>C</td><td>C</td><td>A</td><td>D</td></tr>\n<tr><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td></tr>\n<tr><td>C</td><td>B</td><td>D</td><td>A</td><td>C</td><td>B</td><td>D</td><td>A</td></tr>\n<tr><td>A</td><td>D</td><td>A</td><td>D</td><td>A</td><td>D</td><td>A</td><td>D</td></tr>\n<tr><td>B</td><td>D</td><td>D</td><td>D</td><td>B</td><td>D</td><td>D</td><td>D</td></tr>\n<tr><td>D</td><td>D</td><td>B</td><td>C</td><td>D</td><td>D</td><td>B</td><td>C</td></tr>\n<tr><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td></tr>\n<tr><td>B</td><td>C</td><td>D</td><td>A</td><td>B</td><td>C</td><td>D</td><td>A</td></tr>\n<tr><td>D</td><td>B</td><td>A</td><td>D</td><td>D</td><td>B</td><td>A</td><td>D</td></tr>\n<tr><td>A</td><td>B</td><td>D</td><td>B</td><td>A</td><td>B</td><td>D</td><td>B</td></tr>\n<tr><td>A</td><td>B</td><td>C</td><td>C</td><td>A</td><td>B</td><td>C</td><td>C</td></tr>\n<tr><td>D</td><td>D</td><td>C</td><td>C</td><td>D</td><td>D</td><td>C</td><td>C</td></tr>\n<tr><td>B</td><td>A</td><td>D</td><td>B</td><td>B</td><td>A</td><td>D</td><td>B</td></tr>\n<tr><td>B</td><td>C</td><td>B</td><td>D</td><td>B</td><td>C</td><td>B</td><td>D</td></tr>\n<tr><td>C</td><td>D</td><td>D</td><td>D</td><td>C</td><td>D</td><td>D</td><td>D</td></tr>\n<tr><td>D</td><td>B</td><td>A</td><td>B</td><td>D</td><td>B</td><td>A</td><td>B</td></tr>\n<tr><td>D</td><td>B</td><td>D</td><td>B</td><td>D</td><td>B</td><td>D</td><td>B</td></tr>\n<tr><td>B</td><td>C</td><td>A</td><td>D</td><td>B</td><td>C</td><td>A</td><td>D</td></tr>\n<tr><td>D</td><td>C</td><td>A</td><td>A</td><td>D</td><td>C</td><td>A</td><td>A</td></tr>\n<tr><td>B</td><td>D</td><td>C</td><td>C</td><td>B</td><td>D</td><td>C</td><td>C</td></tr>\n<tr><td>A</td><td>B</td><td>B</td><td>C</td><td>A</td><td>B</td><td>B</td><td>C</td></tr>\n<tr><td>D</td><td>A</td><td>C</td><td>C</td><td>D</td><td>A</td><td>C</td><td>C</td></tr>\n<tr><td>B</td><td>C</td><td>B</td><td>B</td><td>B</td><td>C</td><td>B</td><td>B</td></tr>\n<tr><td>C</td><td>B</td><td>D</td><td>D</td><td>C</td><td>B</td><td>D</td><td>D</td></tr>\n<tr><td>D</td><td>D</td><td>D</td><td>A</td><td>D</td><td>D</td><td>D</td><td>A</td></tr>\n<tr><td>B</td><td>A</td><td>C</td><td>B</td><td>B</td><td>A</td><td>C</td><td>B</td></tr>\n<tr><td>C</td><td>D</td><td>D</td><td>B</td><td>C</td><td>D</td><td>D</td><td>B</td></tr>\n<tr><td>A</td><td>D</td><td>A</td><td>C</td><td>A</td><td>D</td><td>A</td><td>C</td></tr>\n<tr><td>B</td><td>A</td><td>C</td><td>A</td><td>B</td><td>A</td><td>C</td><td>A</td></tr>\n<tr><td>A</td><td>A</td><td>A</td><td>C</td><td>A</td><td>A</td><td>A</td><td>C</td></tr>\n<tr><td>B</td><td>A</td><td>A</td><td>A</td><td>B</td><td>A</td><td>A</td><td>A</td></tr>\n<tr><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td><td>A</td><td>C</td></tr>\n<tr><td>B</td><td>D</td><td>B</td><td>B</td><td>B</td><td>D</td><td>B</td><td>B</td></tr>\n<tr><td>A</td><td>C</td><td>B</td><td>A</td><td>A</td><td>C</td><td>B</td><td>A</td></tr>\n<tr><td>C</td><td>B</td><td>C</td><td>C</td><td>C</td><td>B</td><td>C</td><td>C</td></tr>\n<tr><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td></tr>\n<tr><td>A</td><td>B</td><td>B</td><td>B</td><td>A</td><td>B</td><td>B</td><td>B</td></tr>\n<tr><td>C</td><td>B</td><td>A</td><td>A</td><td>C</td><td>B</td><td>A</td><td>A</td></tr>\n<tr><td>C</td><td>A</td><td>C</td><td>D</td><td>C</td><td>A</td><td>C</td><td>D</td></tr>\n<tr><td>D</td><td>C</td><td>A</td><td>B</td><td>D</td><td>C</td><td>A</td><td>B</td></tr>\n<tr><td>C</td><td>C</td><td>B</td><td>C</td><td>C</td><td>C</td><td>B</td><td>C</td></tr>\n<tr><td>A</td><td>A</td><td>B</td><td>A</td><td>A</td><td>A</td><td>B</td><td>A</td></tr>\n</table>",
+      "options": [
+        {
+          "label": "A",
+          "content": "3."
+        },
+        {
+          "label": "B",
+          "content": "14."
+        },
+        {
+          "label": "C",
+          "content": "1."
+        },
+        {
+          "label": "D",
+          "content": "15."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "096d7a8a21933900dad68d82ae8a97fb_img.jpg",
+          "path": "images/096d7a8a21933900dad68d82ae8a97fb_img.jpg",
+          "page": 5,
+          "bbox": [
+            1040.0,
+            1120.0,
+            1315.0,
+            1400.0
+          ],
+          "alt": "Graph of a cubic function y = f(x) on a coordinate plane. The x-axis has points O and 2. The curve has a local maximum at x=0 and a local minimum at x=2. It crosses the x-axis at three points: one to the left of 0, one between 0 and 2, and one to the right of 2."
+        }
+      ],
+      "solution": "Cho hàm số bậc ba $y = f(x)$ có đồ thị như hình bên. Có bao nhiêu giá trị nguyên của tham số $a$ để hàm số $g(x) = f\\left(\\frac{1}{8}(2x^4 + a) - 2x^2\\right)$ đồng biến trên khoảng $(0;1)$?\n\nA. 3.\n\nB. 14.\n\nC. 1.\n\nD. 15.\n\nLời giải\n\nChọn A\n\nDựa vào đồ thị, ta thấy $f'(x) \\leq 0 \\Leftrightarrow 0 \\leq x \\leq 2$.\n\n$$\\text{Ta có } g'(x) = (x^3 - 4x) f'\\left(\\frac{1}{8}(2x^4 + a) - 2x^2\\right).$$\n\nHàm số $g(x)$ đồng biến trên khoảng $(0;1)$ thì $g'(x) \\geq 0, \\forall x \\in (0;1)$\n\n$$\\Leftrightarrow (x^3 - 4x) f'\\left(\\frac{1}{8}(2x^4 + a) - 2x^2\\right) \\geq 0, \\forall x \\in (0;1) \\quad (1).$$\n\nVì $x \\in (0;1)$ nên $x^3 - 4x = x(x^2 - 4) = x(x-2)(x+2) < 0, \\forall x \\in (0;1)$\n\n$$\\text{Khi đó } (1) \\Leftrightarrow f'\\left(\\frac{1}{8}(2x^4 + a) - 2x^2\\right) \\leq 0, \\forall x \\in (0;1)$$\n\n$$\\Leftrightarrow 0 \\leq \\frac{1}{8}(2x^4 + a) - 2x^2 \\leq 2, \\forall x \\in (0;1) \\Leftrightarrow \\begin{cases} a \\geq 16x^2 - 2x^4 \\\\ a - 16 \\leq 16x^2 - 2x^4 \\end{cases}, \\forall x \\in (0;1) \\quad (2).$$\n\nXét hàm số $h(x) = 16x^2 - 2x^4$ trên đoạn $[0;1]$ có $h'(x) = 32x - 8x^3 = 8x(4 - x^2) \\geq 0, \\forall x \\in [0;1]$\n\nSuy ra hàm số $h(x)$ luôn đồng biến trên $[0;1]$.\n\nKhi đó $\\min_{[0;1]} h(x) = h(0) = 0$ và $\\max_{[0;1]} h(x) = h(1) = 14$.\n\n$$\\text{Khi đó } (2) \\Leftrightarrow \\begin{cases} a \\geq \\max_{[0;1]} h(x) \\\\ a - 16 \\leq \\min_{[0;1]} h(x) \\end{cases} \\Leftrightarrow \\begin{cases} a \\geq 14 \\\\ a \\leq 16 \\end{cases} \\Leftrightarrow 14 \\leq a \\leq 16.$$\n\nVì $a \\in \\mathbb{Z}$ nên $a \\in \\{14; 15; 16\\}$.\n\nVậy có 3 giá trị nguyên của $a$ thỏa mãn bài toán.",
+      "source_blocks": [
+        {
+          "id": "/page/5/Text/11",
+          "page": 5,
+          "bbox": [
+            146.0,
+            1120.0,
+            938.0,
+            1301.0
+          ]
+        },
+        {
+          "id": "/page/5/Figure/12",
+          "page": 5,
+          "bbox": [
+            1040.0,
+            1120.0,
+            1315.0,
+            1400.0
+          ]
+        },
+        {
+          "id": "/page/5/ListGroup/13",
+          "page": 5,
+          "bbox": [
+            172.0,
+            1400.0,
+            1272.0,
+            1438.0
+          ]
+        },
+        {
+          "id": "/page/5/Text/14",
+          "page": 5,
+          "bbox": [
+            268.0,
+            1489.0,
+            1401.0,
+            1624.0
+          ]
+        },
+        {
+          "id": "/page/6/Table/0",
+          "page": 6,
+          "bbox": [
+            122.0,
+            165.0,
+            1469.0,
+            1496.0
+          ]
+        },
+        {
+          "id": "/page/7/Table/0",
+          "page": 7,
+          "bbox": [
+            122.0,
+            176.0,
+            1471.0,
+            1507.0
+          ]
+        },
+        {
+          "id": "/page/8/Table/0",
+          "page": 8,
+          "bbox": [
+            180.0,
+            172.0,
+            1394.0,
+            1503.0
+          ]
+        }
+      ]
+    }
+  ]
+}

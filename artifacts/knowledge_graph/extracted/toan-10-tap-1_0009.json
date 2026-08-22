@@ -1,0 +1,111 @@
+{
+  "chunk_id": "toan-10-tap-1:0009",
+  "nodes": [
+    {
+      "id": "TICH_VECTO_VOI_SO",
+      "name": "Tích của một vectơ với một số",
+      "type": "METHOD",
+      "description": "Phép nhân một vectơ với một số thực, kết quả là một vectơ cùng hoặc ngược hướng với vectơ ban đầu, độ dài là |k| lần độ dài vectơ ban đầu.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_TICH_VECTO_VOI_SO",
+      "name": "Tính chất của phép nhân vectơ với một số",
+      "type": "THEOREM",
+      "description": "Các tính chất cơ bản của phép nhân vectơ với một số, bao gồm tính kết hợp, tính phân phối, và các quy tắc cơ bản.",
+      "grade": 10
+    },
+    {
+      "id": "PHAN_TICH_VECTO",
+      "name": "Phân tích vectơ",
+      "type": "METHOD",
+      "description": "Biểu diễn một vectơ dưới dạng tổ hợp tuyến tính của hai vectơ không cùng phương.",
+      "grade": 10
+    },
+    {
+      "id": "DIEU_KIEN_TRUNG_DIEM",
+      "name": "Điều kiện trung điểm",
+      "type": "THEOREM",
+      "description": "Điểm I là trung điểm của đoạn thẳng AB khi và chỉ khi vectơ IA + vectơ IB = vectơ 0.",
+      "grade": 10
+    },
+    {
+      "id": "DIEU_KIEN_TRONG_TAM",
+      "name": "Điều kiện trọng tâm",
+      "type": "THEOREM",
+      "description": "Điểm G là trọng tâm của tam giác ABC khi và chỉ khi vectơ GA + vectơ GB + vectơ GC = vectơ 0.",
+      "grade": 10
+    },
+    {
+      "id": "DIEU_KIEN_KHOI_TAM",
+      "name": "Điều kiện khối tâm",
+      "type": "THEOREM",
+      "description": "Điểm M là khối tâm của hệ chất điểm A1, A2, ..., An với khối lượng tương ứng m1, m2, ..., mn khi và chỉ khi m1 vectơ MA1 + m2 vectơ MA2 + ... + mn vectơ MAn = vectơ 0.",
+      "grade": 10
+    },
+    {
+      "id": "VEC_TO",
+      "name": "Vectơ",
+      "type": "CONCEPT",
+      "description": "Đối tượng toán học có cả độ dài và hướng.",
+      "grade": 10
+    },
+    {
+      "id": "SO_THUC",
+      "name": "Số thực",
+      "type": "CONCEPT",
+      "description": "Số thuộc tập số thực, bao gồm cả số nguyên, số phân số và số vô tỉ.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "TICH_VECTO_VOI_SO",
+      "target": "VEC_TO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TICH_VECTO_VOI_SO",
+      "target": "SO_THUC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_TICH_VECTO_VOI_SO",
+      "target": "TICH_VECTO_VOI_SO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHAN_TICH_VECTO",
+      "target": "VEC_TO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DIEU_KIEN_TRUNG_DIEM",
+      "target": "VEC_TO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DIEU_KIEN_TRONG_TAM",
+      "target": "VEC_TO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DIEU_KIEN_KHOI_TAM",
+      "target": "VEC_TO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DIEU_KIEN_KHOI_TAM",
+      "target": "DIEU_KIEN_TRONG_TAM",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

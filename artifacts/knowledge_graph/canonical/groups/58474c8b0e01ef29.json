@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "TU_PHAN_VI",
+      "name": "Tứ phân vị",
+      "type": "CONCEPT",
+      "description": "Ba giá trị Q1, Q2, Q3 chia mẫu số liệu (không ghép nhóm) thành bốn phần, mỗi phần chứa 25% giá trị."
+    },
+    {
+      "id": "TU_PHAN_VI_MAU_GHOP_NHOM",
+      "name": "Tứ phân vị mẫu ghép nhóm",
+      "type": "CONCEPT",
+      "description": "Tứ phân vị thứ r (r = 1, 2, 3) của một mẫu số liệu ghép nhóm, được tính dựa trên vị trí và công thức xác định nhóm chứa để tìm giá trị xấp xỉ."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0013",
+      "original_id": "TU_PHAN_VI",
+      "canonical_id": "TU_PHAN_VI",
+      "rationale": "The description in grade 10 defines the quartiles Q1, Q2, Q3 as dividing the data into four parts, each containing 25% of values. This is the standard definition of quartiles for ungrouped data."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0009",
+      "original_id": "TU_PHAN_VI",
+      "canonical_id": "TU_PHAN_VI",
+      "rationale": "The description in grade 11 is identical in meaning to the grade 10 description, defining quartiles Q1, Q2, Q3 as dividing the data into four parts, each containing 25% of values. Grade differences alone are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0009",
+      "original_id": "TU_PHAN_VI",
+      "canonical_id": "TU_PHAN_VI_MAU_GHOP_NHOM",
+      "rationale": "The description in grade 12 explicitly defines quartiles for grouped data (mẫu số liệu ghép nhóm), involving a specific calculation method using formulas to find approximate values. This represents a distinct mathematical concept (quartiles for grouped data) compared to the standard quartiles for ungrouped data described in grades 10 and 11. Therefore, it should be split into a separate canonical node."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DO_LECH_CHUAN_MAU_GHEP_NHOM",
+  "right_id": "DO_LECH_CHUAN_MAU_GHEP_NHOM_SAI_SO",
+  "merge": false,
+  "rationale": "The left node defines standard deviation of grouped data as the square root of the sample variance (with divisor n). The right node defines standard deviation of grouped data as the square root of the 'sai số' variance (with divisor n-1). They are based on different underlying variance formulas. They are related but distinct statistical measures."
+}

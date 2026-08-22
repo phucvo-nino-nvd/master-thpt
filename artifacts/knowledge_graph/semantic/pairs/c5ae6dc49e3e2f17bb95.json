@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_NHAU",
+  "right_id": "HAI_DUONG_THANG_DONG_PHANG",
+  "merge": false,
+  "rationale": "The left node (intersecting lines) is a specific case of the right node (coplanar lines). Intersecting lines are coplanar, but not all coplanar lines intersect. One is a subtype/property of the other."
+}

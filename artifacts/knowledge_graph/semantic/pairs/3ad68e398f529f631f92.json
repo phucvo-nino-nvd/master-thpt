@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_BANG_BANG",
+  "right_id": "HAM_SO_CUA_BIEN_SO",
+  "merge": false,
+  "rationale": "Related but distinct concepts: one describes a function given by a table, the other describes a function of a variable. They are not identical."
+}

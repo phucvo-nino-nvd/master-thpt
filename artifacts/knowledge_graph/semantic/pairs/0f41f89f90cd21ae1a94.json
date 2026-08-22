@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_DI_QUA_HAI_DIEM",
+  "right_id": "DUONG_THANG_THUOC_MAT_PHANG",
+  "merge": false,
+  "rationale": "These are two distinct axioms/theorems in geometry. One states a line is determined by two points. The other states a line lies in a plane if two of its points do. They are related but not identical."
+}

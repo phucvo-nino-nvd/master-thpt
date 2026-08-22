@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_DONG_BIEN",
+  "right_id": "HAM_SO_GIAM",
+  "merge": false,
+  "rationale": "Left node is the concept of an 'increasing function'. Right node is the concept of a 'decreasing function'. They are opposite monotonicity properties. They are not semantic duplicates."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "Miền nghiệm (solution region) and Nghiệm (solution) of a two-variable inequality are related but distinct concepts; one is a set of points, the other is a single point satisfying the condition."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_LIEN_TUC_HAM_CAN",
+  "right_id": "TINH_CHAT_LIEN_TUC_HAM_PHAN_THUC",
+  "merge": false,
+  "rationale": "The left node is a theorem about the continuity of the square root function. The right node is a theorem about the continuity of rational functions. They are two specific instances of continuity theorems for different function types. They are related but not semantic duplicates."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+  "right_id": "DIEN_TICH_HINH_PHANG",
+  "merge": false,
+  "rationale": "The left node is a specific concept for the area bounded by two graphs, while the right node is a more general concept for the area of a plane figure bounded by a graph and the x-axis. One is a special case of the other, so they are not identical."
+}

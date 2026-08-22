@@ -1,0 +1,6 @@
+{
+  "left_id": "COS_ALPHA",
+  "right_id": "SIN_ALPHA",
+  "merge": false,
+  "rationale": "cos α and sin α are distinct trigonometric functions; they are not semantic duplicates."
+}

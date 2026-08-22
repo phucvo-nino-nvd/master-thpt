@@ -1,0 +1,6 @@
+{
+  "left_id": "HAI_DUONG_THANG_CHEO_NHAU",
+  "right_id": "HAI_DUONG_THANG_DONG_PHANG",
+  "merge": false,
+  "rationale": "Left node is the concept of skew lines. Right node is the concept of coplanar lines. They are complementary/opposite concepts but are not semantic duplicates. They represent distinct spatial relationships."
+}

@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "BANG_BIEN_THIEN",
+      "name": "Bảng biến thiên",
+      "type": "CONCEPT",
+      "description": "Bảng tổng hợp thông tin về dấu đạo hàm, sự đồng biến/nghịch biến, cực trị, giới hạn và tiệm cận của hàm số để phân tích sự biến thiên của nó."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-12-tap-1:0001",
+      "original_id": "BANG_BIEN_THIEN",
+      "canonical_id": "BANG_BIEN_THIEN",
+      "rationale": "All occurrences describe the same mathematical concept of a variation table used to analyze the monotonicity, extrema, and behavior of a function. The descriptions are consistent and complementary, focusing on different aspects (sign of derivative, function values, limits, asymptotes) of the same tool used in function analysis. Grade is the same. Therefore, they should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0002",
+      "original_id": "BANG_BIEN_THIEN",
+      "canonical_id": "BANG_BIEN_THIEN",
+      "rationale": "All occurrences describe the same mathematical concept of a variation table used to analyze the monotonicity, extrema, and behavior of a function. The descriptions are consistent and complementary, focusing on different aspects (sign of derivative, function values, limits, asymptotes) of the same tool used in function analysis. Grade is the same. Therefore, they should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0004",
+      "original_id": "BANG_BIEN_THIEN",
+      "canonical_id": "BANG_BIEN_THIEN",
+      "rationale": "All occurrences describe the same mathematical concept of a variation table used to analyze the monotonicity, extrema, and behavior of a function. The descriptions are consistent and complementary, focusing on different aspects (sign of derivative, function values, limits, asymptotes) of the same tool used in function analysis. Grade is the same. Therefore, they should be merged."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "NGHIEM_BAT_PHUONG_TRINH_LOGARIT",
+  "right_id": "NGHIEM_BAT_PHUONG_TRINH_MU",
+  "merge": false,
+  "rationale": "The left node describes the solution set for a logarithmic inequality. The right node describes the solution set for an exponential inequality. They are distinct types of inequalities with different solution criteria, representing different mathematical objects."
+}

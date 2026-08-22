@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+  "right_id": "DAO_HAM_CUA_TONG_HIEU",
+  "merge": false,
+  "rationale": "The left node is a collection of derivative formulas for basic elementary functions, while the right node is the derivative rule for sum and difference of functions. They are distinct derivative rules and formulas."
+}

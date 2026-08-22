@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_SONG_SONG",
+  "right_id": "DUONG_THANG_TRUNG_NHAU",
+  "merge": false,
+  "rationale": "The nodes represent distinct geometric relations: 'Hai đường thẳng song song' (parallel lines) and 'Hai đường thẳng trùng nhau' (coincident lines). They are different specific cases of the relative position of two lines, not semantic duplicates."
+}

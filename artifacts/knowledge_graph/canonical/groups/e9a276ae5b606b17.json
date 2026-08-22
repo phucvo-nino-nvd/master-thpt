@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "BIEN_CO_HOP",
+      "name": "Biến cố hợp",
+      "type": "CONCEPT",
+      "description": "Biến cố hợp của hai biến cố A và B, ký hiệu A ∪ B, là biến cố xảy ra khi ít nhất một trong hai biến cố A hoặc B xảy ra."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0014",
+      "original_id": "BIEN_CO_HOP",
+      "canonical_id": "BIEN_CO_HOP",
+      "rationale": "Both occurrences describe the same mathematical concept: the union of two events in probability theory, denoted A ∪ B, meaning 'A or B occurs'. The descriptions are consistent and complementary."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0015",
+      "original_id": "BIEN_CO_HOP",
+      "canonical_id": "BIEN_CO_HOP",
+      "rationale": "Both occurrences describe the same mathematical concept: the union of two events in probability theory, denoted A ∪ B, meaning 'A or B occurs'. The descriptions are consistent and complementary."
+    }
+  ]
+}

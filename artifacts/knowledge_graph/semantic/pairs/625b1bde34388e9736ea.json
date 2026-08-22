@@ -1,0 +1,6 @@
+{
+  "left_id": "KHAO_SAT_HAM_BAC_BA",
+  "right_id": "SO_DO_KHAO_SAT_HAM_SO",
+  "merge": false,
+  "rationale": "Left is a specific application of the general method (right) to cubic functions. One is a special case of the other."
+}

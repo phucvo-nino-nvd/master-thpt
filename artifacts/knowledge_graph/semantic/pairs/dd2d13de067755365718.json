@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "These are two different theorems about lines perpendicular to planes. One states such a line intersects the plane. The other states it is perpendicular to every line parallel to the plane. They are related properties but not the same statement."
+}

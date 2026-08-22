@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_PHAP_TINH_SO_TRUNG_BINH",
+  "right_id": "PHUONG_PHAP_TINH_TRUNG_VI",
+  "merge": false,
+  "rationale": "These are distinct statistical methods for calculating different measures of central tendency: mean vs. median."
+}

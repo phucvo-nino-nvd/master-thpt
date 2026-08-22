@@ -1,0 +1,773 @@
+{
+  "source_url": "https://toanmath.com/toanmath-pdf/de-kiem-tra-theo-bai-hoc-chu-de-dao-ham.pdf",
+  "title": "Đề kiểm tra theo bài học chủ đề đạo hàm",
+  "grade": 11,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ xác định trên $\\mathbb{R}$ và có $f'(2) = 5$. Phương trình tiếp tuyến của đồ thị hàm số $y = f(x)$ tại $M(2;1)$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$y = 5x + 11$."
+        },
+        {
+          "label": "B",
+          "content": "$y = 5x - 9$."
+        },
+        {
+          "label": "C",
+          "content": "$y = 5x - 11$."
+        },
+        {
+          "label": "D",
+          "content": "$y = 5x + 3$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = f(x)$ xác định trên $\\mathbb{R}$ và có $f'(2) = 5$. Phương trình tiếp tuyến của đồ thị hàm số $y = f(x)$ tại $M(2;1)$ là\n\nA. $y = 5x + 11$.      B. $y = 5x - 9$.      C. $y = 5x - 11$.      D. $y = 5x + 3$.\n\nLời giải\n\nTa có: $y = f'(x_0)(x - x_0) + f(x_0) = 5.(x - 2) + 1 = 5x - 9$.\n\nNếu $\\lim_{x \\rightarrow 3} \\frac{f(x) - f(3)}{x - 3} = 7$ thì ta kết luận\n\nA. $f'(3) = 3$.      B. $f'(7) = 0$.      C. $f'(7) = 3$.      D. $f'(3) = 7$.\n\nNếu $\\lim_{x \\rightarrow 3} \\frac{f(x) - f(3)}{x - 3} = 7$ thì ta kết luận\n\nA. $f'(3) = 3$.      B. $f'(7) = 0$.      C. $f'(7) = 3$.      D. $f'(3) = 7$.\n\nLời giải\n\nVì $\\lim_{x \\rightarrow 3} \\frac{f(x) - f(3)}{x - 3} = 7$ nên $f'(3) = 7$.\n\nHàm số $y = 2^x$ xác định trên $\\mathbb{R}$ có công thức đạo hàm\n\nA. $y' = 2^x$.      B. $y' = 2^x \\ln 2$.      C. $y' = \\frac{2^x}{\\ln 2}$.      D. $y' = 2x \\ln 2$.\n\nHàm số y = 2^x xác định trên R có công thức đạo hàm\n\nA. y' = 2^x. B. y' = 2^x ln 2. C. y' = 2^x / ln 2. D. y' = 2x ln 2.\n\nLời giải\n\nTheo bảng đạo hàm trong SGK.\n\nĐạo hàm của hàm số y = sqrt(4-x) là\n\nA. 1/(2*sqrt(4-x)) B. sqrt(4-x) C. -1/sqrt(4-x) D. -1/(2*sqrt(4-x))\n\nĐạo hàm của hàm số y = √(4-x) là\n\nA. 1/(2√(4-x)) B. √(4-x) C. -1/√(4-x) D. -1/(2√(4-x))\n\nLời giải\n\nTa có y' = (√(4-x))' = (4-x)' / (2√(4-x)) = -1 / (2√(4-x))\n\nĐạo hàm cấp hai của hàm số $y = \\frac{1}{x}$ là\n\nA. $y'' = -\\frac{1}{x^3}$.      B. $y'' = -\\frac{2}{x^3}$.      C. $y'' = \\frac{2}{x^3}$.      D. $y'' = \\frac{1}{x^3}$.\n\nĐạo hàm cấp hai của hàm số y = 1/x là\n\nA. y'' = -1/x^3. B. y'' = -2/x^3. C. y'' = 2/x^3. D. y'' = 1/x^3.\n\nLời giải\n\nTa có: y' = -1/x^2 nên y'' = (x^2)' / x^4 = 2x / x^4 = 2/x^3.\n\nHàm số $y = \\frac{x}{x-2}$ có đạo hàm cấp hai là:\n\nA. $y'' = 0$.      B. $y'' = \\frac{1}{(x-2)^2}$.      C. $y'' = -\\frac{4}{(x-2)^2}$.      D. $y'' = \\frac{4}{(x-2)^3}$.\n\nHàm số y = x/(x-2) có đạo hàm cấp hai là:\n\nA. y'' = 0. B. y'' = 1/(x-2)^2. C. y'' = -4/(x-2)^2. D. y'' = 4/(x-2)^3.\n\nLời giải\n\nTa có y' = (x/(x-2))' = -2/(x-2)^2; y'' = (-2/(x-2)^2)' = 2 * 2(x-2)/(x-2)^4 = 4/(x-2)^3.\n\nTính số gia của hàm số $y = \\frac{x^2}{2}$ tại điểm $x_0 = -1$ ứng với số gia $\\Delta x$.\n\nA. $\\Delta y = \\frac{1}{2}(\\Delta x)^2 - \\Delta x$.\n\nB. $\\Delta y = \\frac{1}{2}[(\\Delta x)^2 - \\Delta x]$.\n\nC. $\\Delta y = \\frac{1}{2}[(\\Delta x)^2 + \\Delta x]$.\n\nD. $\\Delta y = \\frac{1}{2}(\\Delta x)^2 + \\Delta x$.\n\nTính số gia của hàm số y = x^2/2 tại điểm x0 = -1 ứng với số gia Δx.\n\nA. Δy = 1/2(Δx)^2 - Δx. B. Δy = 1/2[(Δx)^2 - Δx]. C. Δy = 1/2[(Δx)^2 + Δx]. D. Δy = 1/2(Δx)^2 + Δx.\n\nLời giải\n\nTa có Δy = f(x0 + Δx) - f(x0) = f(-1 + Δx) - f(-1)\n(-1 + Δx)^2/2 - 1/2 = (1 - 2Δx + (Δx)^2)/2 - 1/2 = 1/2(Δx)^2 - Δx.\n\nCho hàm số $y = f(x)$ có $f'(2) = -2$. Khi đó $\\lim_{x \\rightarrow 2} \\frac{f(x) - f(2)}{x - 2}$ bằng\n\nA. 2.                      B. $\\frac{1}{2}$.                      C. $-\\frac{1}{2}$.                      D. -2.\n\nCho hàm số y = f(x) có f'(2) = -2. Khi đó lim_{x→2} (f(x) - f(2)) / (x - 2) bằng\n\nA. 2. B. 1/2. C. -1/2. D. -2.\n\nLời giải\n\nTa có: lim_{x→2} (f(x) - f(2)) / (x - 2) = f'(2) = -2.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/7",
+          "page": 0,
+          "bbox": [
+            106.0,
+            624.0,
+            1500.0,
+            730.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/8",
+          "page": 0,
+          "bbox": [
+            239.0,
+            739.0,
+            1361.0,
+            781.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Trong các khẳng định sau, khẳng định nào là sai?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(c)' = 0$ (với $c$ là hằng số)."
+        },
+        {
+          "label": "B",
+          "content": "$(2x)' = 2$."
+        },
+        {
+          "label": "C",
+          "content": "$(x^6)' = 6x^5$."
+        },
+        {
+          "label": "D",
+          "content": "$(\\sqrt{x})' = 2\\sqrt{x}$ (với $x > 0$)."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Trong các khẳng định sau, khẳng định nào là sai?\n\nA. $(c)' = 0$ (với $c$ là hằng số).      B. $(2x)' = 2$.\nC. $(x^6)' = 6x^5$.      D. $(\\sqrt{x})' = 2\\sqrt{x}$ (với $x > 0$).\n\nLời giải\n\nTa có: $(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}$ (với $x > 0$).\n\nHàm số $f(x) = x^2 - 5x$ có đạo hàm tại $x = 2$ là\n\nA. $f'(2) = -1$.      B. $f'(2) = 9$.      C. $f'(2) = -6$.      D. $f'(2) = 10$.\n\nHàm số $f(x) = x^2 - 5x$ có đạo hàm tại $x = 2$ là\n\nA. $f'(2) = -1$.      B. $f'(2) = 9$.      C. $f'(2) = -6$.      D. $f'(2) = 10$.\n\nLời giải\n\nTa có: $f(x) - f(2) = x^2 - 5x + 6 = (x - 2)(x - 3)$\n\nVới $x \\neq 2$, $\\frac{f(x) - f(2)}{x - 2} = \\frac{(x - 2)(x - 3)}{x - 2} = x - 3$\n\nTính giới hạn: $\\lim_{x \\rightarrow 2} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x \\rightarrow 2} (x - 3) = -1$\n\nVậy $f'(2) = -1$.\n\nHàm số $y = e^{2x}$ có đạo hàm là\n\nA. $y' = e^{2x}$.      B. $y' = 2e^{2x}$.      C. $y' = \\frac{1}{2}e^{2x}$.      D. $y' = \\frac{1}{2}e^x$.\n\nHàm số y = e^{2x} có đạo hàm là\n\nA. y' = e^{2x}. B. y' = 2e^{2x}. C. y' = 1/2 e^{2x}. D. y' = 1/2 e^x.\n\nLời giải\n\nTa có: y' = (e^{2x})' = (2x)' e^{2x} = 2e^{2x}.\n\nTính đạo hàm của hàm số f(x) = x^2024\n\nA. f'(x) = 2024x^2024 B. f'(x) = x^2023 C. f'(x) = 2024x^2023 D. f'(x) = 2023x^2023\n\nTính đạo hàm của hàm số f(x) = x^2024\n\nA. f'(x) = 2024x^2024 B. f'(x) = x^2023 C. f'(x) = 2024x^2023 D. f'(x) = 2023x^2023\n\nLời giải\n\ny' = (x^2024)' = 2024.x^2023\n\nCho hàm số $y = \\cos^2 x$. Khi đó $y''\\left(\\frac{\\pi}{6}\\right)$ bằng:\n\nA. $-2$.      B. $2$.      C. $-1$.      D. $-2\\sqrt{3}$.\n\nCho hàm số y = cos^2 x. Khi đó y''(pi/6) bằng:\n\nA. -2. B. 2. C. -1. D. -2*sqrt(3).\n\nLời giải\n\nTa có\n\ny' = 2 cos x.(-sin x) = -sin 2x, y'' = -2 cos 2x => y''(pi/6) = -2 cos 2(pi/6) = -1.\n\nHàm số $y = \\tan x$ có đạo hàm cấp hai bằng:\n\nA. $y'' = -\\frac{2 \\sin x}{\\cos^3 x}$.      B. $y'' = \\frac{1}{\\cos^2 x}$.      C. $y'' = -\\frac{1}{\\cos^2 x}$.      D. $y'' = \\frac{2 \\sin x}{\\cos^3 x}$.\n\nHàm số y = tan x có đạo hàm cấp hai bằng:\n\nA. y'' = -2sin x / cos^3 x. B. y'' = 1 / cos^2 x. C. y'' = -1 / cos^2 x. D. y'' = 2sin x / cos^3 x.\n\nLời giải\n\nTa có: y' = 1 / cos^2 x -> y'' = -2cosx(-sinx) / cos^4 x = 2sinx / cos^3 x\n\nTính đạo hàm của hàm số $y = \\sin\\left(\\frac{\\pi}{6} - 3x\\right)$.\n\nA. $y' = 3 \\cos\\left(\\frac{\\pi}{6} - 3x\\right)$.\n\nB. $y' = -3 \\cos\\left(\\frac{\\pi}{6} - 3x\\right)$.\n\nC. $y' = \\cos\\left(\\frac{\\pi}{6} - 3x\\right)$.\n\nD. $y' = -3 \\sin\\left(\\frac{\\pi}{6} - 3x\\right)$.\n\nTính đạo hàm của hàm số y = sin(π/6 - 3x).\n\nA. y' = 3 cos(π/6 - 3x). B. y' = -3 cos(π/6 - 3x). C. y' = cos(π/6 - 3x). D. y' = -3 sin(π/6 - 3x).\n\nLời giải\n\nTa có y' = (π/6 - 3x)' . cos(π/6 - 3x) = -3 . cos(π/6 - 3x).\n\nĐạo hàm của hàm số $y = \\sin x + \\cos x + 2025$ bằng\n\nA. $y' = \\sin x + \\cos x$.                      B. $y' = \\cos x - \\sin x + 2025$.\nC. $y' = \\cos x - \\sin x$.                      D. $y' = -\\cos x + \\sin x$.\n\nĐạo hàm của hàm số y = sin x + cos x + 2025 bằng\n\nA. y' = sin x + cos x. B. y' = cos x - sin x + 2025. C. y' = cos x - sin x. D. y' = -cos x + sin x.\n\nLời giải\n\nTa có: y' = cos x + (-sin x) = cos x - sin x.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/9",
+          "page": 0,
+          "bbox": [
+            106.0,
+            801.0,
+            884.0,
+            846.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/10",
+          "page": 0,
+          "bbox": [
+            239.0,
+            860.0,
+            1251.0,
+            994.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $f(x) = \\begin{cases} ax^2 + bx + 2, & x > 0 \\\\ x + a, & x \\leq 0 \\end{cases}$. Khi hàm số $f(x)$ có đạo hàm tại $x_0 = 0$. Hãy tính",
+      "options": [
+        {
+          "label": "A",
+          "content": "$T = -4$."
+        },
+        {
+          "label": "B",
+          "content": "$T = 0$."
+        },
+        {
+          "label": "C",
+          "content": "$T = 3$."
+        },
+        {
+          "label": "D",
+          "content": "$T = 4$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $f(x) = \\begin{cases} ax^2 + bx + 2, & x > 0 \\\\ x + a, & x \\leq 0 \\end{cases}$. Khi hàm số $f(x)$ có đạo hàm tại $x_0 = 0$. Hãy tính\n\n$T = a + b$.\nA. $T = -4$.      B. $T = 0$.      C. $T = 3$.      D. $T = 4$.\n\nLời giải\n\nTa có: $f(0) = a$.\n\n$$\\lim_{x \\rightarrow 0^+} f(x) = \\lim_{x \\rightarrow 0^+} (ax^2 + bx + 2) = 2.$$\n\n$$\\lim_{x \\rightarrow 0^-} f(x) = \\lim_{x \\rightarrow 0^-} (x + a) = a.$$\n\nĐể hàm số có đạo hàm tại $x_0 = 0$ thì hàm số phải liên tục tại $x_0 = 0$ nên\n\n$$\\lim_{x \\rightarrow 0^+} f(x) = \\lim_{x \\rightarrow 0^-} f(x) = f(0). \\text{ Suy ra } a = 2.$$\n\nKhi đó $f(x) = \\begin{cases} 2x^2 + bx + 2, & x > 0 \\\\ x + 2, & x \\leq 0 \\end{cases}$.\n\n$$\\lim_{x \\rightarrow 0^+} \\frac{f(x) - f(0)}{x} = \\lim_{x \\rightarrow 0^+} \\frac{2x^2 + bx + 2 - 2}{x} = \\lim_{x \\rightarrow 0^+} (2x + b) = b.$$\n\n$$\\lim_{x \\rightarrow 0^-} \\frac{f(x) - f(0)}{x} = \\lim_{x \\rightarrow 0^-} \\frac{x + 2 - 2}{x} = \\lim_{x \\rightarrow 0^-} (1) = 1.$$\n\nHàm số có đạo hàm tại $x_0 = 0$ thì $b = 1$.\n\nVậy với $a = 2, b = 1$ thì hàm số có đạo hàm tại $x_0 = 0$ khi đó $T = 3$.\n\nTính đạo hàm của hàm số $y = x^3 + 1$ tại $x_0 = 2$\n\nA. 12.      B. 13.      C. 24.      D. 9.\n\nTính đạo hàm của hàm số $y = x^3 + 1$ tại $x_0 = 2$\n\nA. 12.      B. 13.      C. 24.      D. 9.\n\nLời giải\n\nTa có $\\lim_{x \\rightarrow 2} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x \\rightarrow 2} \\frac{x^3 + 1 - 9}{x - 2} = \\lim_{x \\rightarrow 2} \\frac{x^3 - 8}{x - 2}$\n\n$= \\lim_{x \\rightarrow 2} \\frac{(x - 2)(x^2 + 2x + 4)}{x - 2} = \\lim_{x \\rightarrow 2} (x^2 + 2x + 4) = 12$\n\nVậy $f'(2) = 12$.\n\nVới mọi $x$ dương, hàm số $y = \\ln 3x$ có đạo hàm là\n\nA. $y' = 3x$.      B. $y' = 3 \\ln x$.      C. $y' = \\frac{1}{x}$.      D. $y' = \\frac{1}{3x}$.\n\nVới mọi x dương, hàm số y = ln 3x có đạo hàm là\n\nA. y' = 3x. B. y' = 3 ln x. C. y' = 1/x. D. y' = 1/3x.\n\nLời giải\n\nTa có: y' = (ln 3x)' = (3x)' / 3x = 1/x.\n\nCho hàm số f(x) = x^3 - 3x + 2. Tập nghiệm của bất phương trình f'(x) < 0 là\n\nA. (-1;1) B. (1;2) C. (-1;2) D. (-inf;1)\n\nCho hàm số f(x) = x^3 - 3x + 2. Tập nghiệm của bất phương trình f'(x) < 0 là\n\nA. (-1;1) B. (1;2) C. (-1;2) D. (-∞;1)\n\nLời giải\n\nTa có f'(x) = 3(x^2 - 1)\n\nTa có f'(x) < 0 ⇔ x^2 - 1 < 0 ⇔ x ∈ (-1;1)\n\nCho hàm số $f(x) = \\sqrt{x}$ ($x > 0$) Tính $f''(4)$\n\nA. $f''(4) = -\\frac{1}{16}$.      B. $f''(4) = -\\frac{1}{32}$.      C. $f''(4) = \\frac{1}{4}$.      D. $f''(4) = -\\frac{1}{32}$.\n\nCho hàm số f(x) = sqrt(x) (x > 0) Tính f''(4)\n\nA. f''(4) = -1/16. B. f''(4) = -1/32. C. f''(4) = 1/4. D. f''(4) = -1/32.\n\nLời giải\n\nTa có f'(x) = 1/(2*sqrt(x)) => f''(x) = -1/(4x*sqrt(x)) nên f''(4) = -1/32.\n\nHàm số $y = \\frac{-2x^2 + 3x}{1-x}$ có đạo hàm cấp hai bằng:\n\nA. $y'' = 2 + \\frac{1}{(1-x)^2}$.      B. $y'' = \\frac{2}{(1-x)^3}$.      C. $y'' = \\frac{-2}{(1-x)^3}$.      D. $y'' = \\frac{2}{(1-x)^4}$.\n\nHàm số y = (-2x^2 + 3x) / (1-x) có đạo hàm cấp hai bằng:\n\nA. y'' = 2 + 1/(1-x)^2. B. y'' = 2/(1-x)^3. C. y'' = -2/(1-x)^3. D. y'' = 2/(1-x)^4.\n\nLời giải\n\nTa có: y = 2x - 1 + 1/(1-x) => y' = 2 + 1/(1-x)^2; y'' = 2/(1-x)^3.\n\nĐạo hàm của hàm số $y = e^{1-2x}$ là\n\nA. $y' = 2e^{1-2x}$\n\nB. $y' = -2e^{1-2x}$\n\nC. $y' = \\frac{1}{2}e^{1-2x}$\n\nD. $y' = e^{1-2x}$\n\nĐạo hàm của hàm số y = e^(1-2x) là\n\nA. y' = 2e^(1-2x) B. y' = -2e^(1-2x) C. y' = 1/2 e^(1-2x) D. y' = e^(1-2x)\n\nLời giải\n\ny' = (e^(1-2x))' = e^(1-2x) (1-2x)' = -2e^(1-2x)\n\nTìm đạo hàm của hàm số $y = \\pi^x$.\n\nA. $y' = x\\pi^{x-1} \\ln \\pi$.                      B. $y' = \\pi^x \\ln \\pi$.                      C. $y' = \\frac{\\pi^x}{\\ln \\pi}$.                      D. $y' = x\\pi^{x-1}$.\n\nTìm đạo hàm của hàm số y = π^x.\n\nA. y' = xπ^{x-1} ln π. B. y' = π^x ln π. C. y' = π^x / ln π. D. y' = xπ^{x-1}.\n\nLời giải\n\nÁp dụng (a^x)' = a^x . ln a (a > 0, a ≠ 1).",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/11",
+          "page": 0,
+          "bbox": [
+            106.0,
+            1023.0,
+            1500.0,
+            1120.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/12",
+          "page": 0,
+          "bbox": [
+            239.0,
+            1128.0,
+            1303.0,
+            1209.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "4",
+      "type": "multiple_choice",
+      "content": "Tính đạo hàm của hàm số $y = -x^2 + 2x$ tại $x_0 = 1$",
+      "options": [
+        {
+          "label": "A",
+          "content": "2."
+        },
+        {
+          "label": "B",
+          "content": "-1."
+        },
+        {
+          "label": "C",
+          "content": "-2."
+        },
+        {
+          "label": "D",
+          "content": "0."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Tính đạo hàm của hàm số $y = -x^2 + 2x$ tại $x_0 = 1$\n\nA. 2.      B. -1.      C. -2.      D. 0.\n\nLời giải\n\nTa có $\\lim_{x \\rightarrow 1} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\rightarrow 1} \\frac{-x^2 + 2x - 1}{x - 1} = \\lim_{x \\rightarrow 1} \\frac{-(x^2 - 2x + 1)}{x - 1}$\n\n$= \\lim_{x \\rightarrow 1} [-(x - 1)] = 0$\n\nVậy $f'(1) = 0$.\n\nCho hàm số $f(x) = \\begin{cases} \\frac{4 - \\sqrt{9 - x}}{2} & \\text{khi } x \\neq 0 \\\\ \\frac{1}{2} & \\text{khi } x = 0 \\end{cases}$. Khi đó $f'(0)$ là kết quả nào sau đây?\n\nA. $\\frac{1}{4}$.      B. $\\frac{1}{16}$.      C. $\\frac{1}{32}$.      D. $\\frac{1}{12}$.\n\nCho hàm số $f(x) = \\begin{cases} \\frac{4 - \\sqrt{9 - x}}{2} & \\text{khi } x \\neq 0 \\\\ \\frac{1}{2} & \\text{khi } x = 0 \\end{cases}$. Khi đó $f'(0)$ là kết quả nào sau đây?\n\nA. $\\frac{1}{4}$.      B. $\\frac{1}{16}$.      C. $\\frac{1}{32}$.      D. $\\frac{1}{12}$.\n\nLời giải\n\nVới $x \\neq 0$ xét:\n\n$\\lim_{x \\rightarrow 0} \\frac{f(x) - f(0)}{x - 0} = \\lim_{x \\rightarrow 0} \\frac{\\frac{4 - \\sqrt{9 - x}}{2} - \\frac{1}{2}}{x} = \\lim_{x \\rightarrow 0} \\frac{\\frac{3 - \\sqrt{9 - x}}{2}}{x} = \\lim_{x \\rightarrow 0} \\frac{9 - (9 - x)}{2x(3 + \\sqrt{9 - x})}$\n\n$= \\lim_{x \\rightarrow 0} \\frac{1}{2(3 + \\sqrt{9 - x})} = \\frac{1}{12}$\n\nVậy f'(0) = 1/12\n\nĐạo hàm của hàm số $y = (x^2 + 1)^{\\frac{3}{2}}$ bằng\n\nA. $\\frac{3}{2}(x^2 + 1)^{\\frac{1}{2}}$.      B. $\\frac{3}{4}x^4$.      C. $\\frac{3}{2}(2x)^{\\frac{1}{2}}$.      D. $3x(x^2 + 1)^{\\frac{1}{2}}$.\n\nĐạo hàm của hàm số y = (x^2 + 1)^{3/2} bằng\n\nA. 3/2 (x^2 + 1)^{1/2}. B. 3/4 x^{1/4}. C. 3/2 (2x)^{1/2}. D.\n\n3x(x^2 + 1)^{1/2}.\n\nLời giải\n\nTa có: y' = [(x^2 + 1)^{3/2}]' = 3/2 (x^2 + 1)^{1/2} * (x^2 + 1)' = 3x(x^2 + 1)^{1/2}.\n\nVới x > 0, đạo hàm của hàm số y = 2^x + log_5 x là:\n\nA. y' = 2^x * ln 2 + 1/(x * ln 2) B. y' = 2^x + 1/(x * ln 5) C. y' = 2^x * ln 2 + 1/ln 5 D. y' = 2^x * ln 2 + 1/(x * ln 5)\n\nVới x > 0, đạo hàm của hàm số y = 2^x + log_5 x là:\n\nA. y' = 2^x . ln 2 + 1/(x.ln 2) B. y' = 2^x + 1/(x.ln 5) C. y' = 2^x . ln 2 + 1/ln 5 D. y' = 2^x . ln 2 + 1/(x.ln 5)\n\nLời giải\n\nTa có: y' = (2^x + log_5 x)' = (2^x)' + (log_5 x)' = 2^x . ln 2 + 1/(x.ln 5)\n\nCho hàm số $f(x) = 3x^4 - 2x^3 + x - 5$. Tính đạo hàm cấp hai $f''(x)$\n\nA. $f''(x) = 36x^2 - 12x$.      B. $f''(x) = 36x^2 - 12x + 1$.\nC. $f''(x) = 12x^2 - 12x$.      D. $f''(x) = 12x^2 - 6x$.\n\nCho hàm số f(x) = 3x^4 - 2x^3 + x - 5. Tính đạo hàm cấp hai f''(x)\n\nA. f''(x) = 36x^2 - 12x. B. f''(x) = 36x^2 - 12x + 1. C. f''(x) = 12x^2 - 12x. D. f''(x) = 12x^2 - 6x.\n\nLời giải\n\nTa có:\n\nf'(x) = 12x^3 - 6x^2 + 1.\n\nf''(x) = 36x^2 - 12x.\n\nCho hàm số $y = \\sin 2x$. Chọn khẳng định đúng?\n\nA. $4y - y' = 0$.      B. $4y + y'' = 0$.      C. $y = y' \\tan 2x$.      D. $y^2 = (y')^2 = 4$.\n\nCho hàm số y = sin2x. Chọn khẳng định đúng?\n\nA. 4y - y' = 0. B. 4y + y'' = 0. C. y = y' tan 2x. D. y^2 = (y')^2 = 4.\n\nLời giải\n\nTa có: y' = 2cos2x; y'' = -4sin2x.\n\nTừ đó suy ra: 4y + y'' = 0.\n\nCho hàm số $f(x) = \\frac{x^3}{x-1}$. Phương trình $f'(x) = 0$ có tập nghiệm $S$ là:\n\nA. $S = \\left\\{0; \\frac{2}{3}\\right\\}$.\n\nB. $S = \\left\\{-\\frac{2}{3}; 0\\right\\}$.\n\nC. $S = \\left\\{0; \\frac{3}{2}\\right\\}$.\n\nD. $S = \\left\\{-\\frac{3}{2}; 0\\right\\}$.\n\nCho hàm số f(x) = x^3/(x-1). Phương trình f'(x) = 0 có tập nghiệm S là:\n\nA. S = {0; 2/3}. B. S = {-2/3; 0}. C. S = {0; 3/2}. D. S = {-3/2; 0}.\n\nLời giải\n\nTa có f'(x) = (x^3)'(x-1) - x^3(x-1)' / (x-1)^2 = (3x^2(x-1) - x^3) / (x-1)^2 = (2x^3 - 3x^2) / (x-1)^2.\n\nPhương trình f'(x) = 0 <=> (2x^3 - 3x^2) / (x-1)^2 = 0 <=> 2x^3 - 3x^2 = 0 <=> x = 0, x = 3/2.\n\nTrên khoảng $(0; +\\infty)$, hàm số $y = \\log_3 x$ có đạo hàm là:\n\nA. $y' = \\frac{x}{\\ln 3}$.                      B. $y' = x \\ln 3$.                      C. $y' = \\frac{1}{x \\ln 3}$.                      D. $y' = \\frac{\\ln 3}{x}$.\n\nTrên khoảng (0; +∞), hàm số y = log_3 x có đạo hàm là:\n\nA. y' = x / ln 3. B. y' = x ln 3. C. y' = 1 / (x ln 3). D. y' = ln 3 / x.\n\nLời giải\n\nTa có: y' = (log_3 x)' = 1 / (x ln 3).",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/13",
+          "page": 0,
+          "bbox": [
+            106.0,
+            1232.0,
+            884.0,
+            1276.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/14",
+          "page": 0,
+          "bbox": [
+            239.0,
+            1283.0,
+            1254.0,
+            1323.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "5",
+      "type": "multiple_choice",
+      "content": "Tính đạo hàm của hàm số $y = \\frac{x+1}{x-2}$ tại $x_0 = 1$",
+      "options": [
+        {
+          "label": "A",
+          "content": "Không tồn tại."
+        },
+        {
+          "label": "B",
+          "content": "0"
+        },
+        {
+          "label": "C",
+          "content": "-1."
+        },
+        {
+          "label": "D",
+          "content": "-3."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Tính đạo hàm của hàm số $y = \\frac{x+1}{x-2}$ tại $x_0 = 1$\n\nA. Không tồn tại.      B. 0      C. -1.      D. -3.\n\nLời giải\n\nTa có $\\lim_{x \\rightarrow 1} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\rightarrow 1} \\frac{\\frac{x+1}{x-2} + 2}{x - 1} = \\lim_{x \\rightarrow 1} \\frac{3(x-1)}{(x-1)(x-2)} = \\lim_{x \\rightarrow 1} \\frac{3}{x-2} = -3$. Vậy $f'(1) = -3$\n\nĐạo hàm của hàm số $y = 1$ là\n\nA. 1.      B. 0.      C. -1.      D. Không xác định.\n\nĐạo hàm của hàm số y = 1 là\n\nA. 1. B. 0. C. -1. D. Không xác định.\n\nLời giải\n\nTa có: y = f(x) = x. Lấy x0 bất kì thuộc R.\n\nTa có: lim (f(x)-f(x0))/(x-x0) = lim (1-1)/(x-x0) = 0 => f'(x0) = 0.\n\nVậy y' = 0.\n\nĐạo hàm của hàm số $f(x) = \\sqrt{-5x^2 + 14x - 9}$ là\n\nA. $\\frac{1}{\\sqrt{-5x^2 + 14x - 9}}$.      B. $\\frac{-5x + 7}{2\\sqrt{-5x^2 + 14x - 9}}$.      C. $\\frac{-5x + 7}{\\sqrt{-5x^2 + 14x - 9}}$.      D. $\\frac{1}{2\\sqrt{-5x^2 + 14x - 9}}$.\n\nĐạo hàm của hàm số f(x) = sqrt(-5x^2 + 14x - 9) là\n\nA. 1 / sqrt(-5x^2 + 14x - 9). B. (-5x + 7) / 2*sqrt(-5x^2 + 14x - 9). C. (-5x + 7) / sqrt(-5x^2 + 14x - 9). D. 1 / 2*sqrt(-5x^2 + 14x - 9).\n\nLời giải\n\nTập xác định: D = [1; 9/5].\n\nTa có f(x) = sqrt(-5x^2 + 14x - 9) => f'(x) = (-5x^2 + 14x - 9)' / 2*sqrt(-5x^2 + 14x - 9)\n\n=> f'(x) = (-10x + 14) / 2*sqrt(-5x^2 + 14x - 9) = (-5x + 7) / sqrt(-5x^2 + 14x - 9),forall x in [1; 9/5].\n\nTính đạo hàm của hàm số y = 2 sin 3x + cos 2x.\n\nA. y' = 6 cos 3x - 2 sin 2x B. y' = 2 cos 3x + sin 2x C. y' = -6 cos 3x + 2 sin 2x D. y' = 2 cos 3x - sin 2x\n\nTính đạo hàm của hàm số y = 2 sin 3x + cos 2x.\n\nA. y' = 6 cos 3x - 2 sin 2x B. y' = 2 cos 3x + sin 2x C. y' = -6 cos 3x + 2 sin 2x D. y' = 2 cos 3x - sin 2x\n\nLời giải\n\nTa có:\n\ny' = (2 cos 3x).3 - (sin 2x).2 = 6 cos 3x - 2 sin 2x.\n\nCho hàm số $y = \\sin x$. Đạo hàm cấp hai của hàm số là:\n\nA. $\\cos x$.      B. $-\\sin x$.      C. $-\\cos x$.      D. $\\sin x$.\n\nCho hàm số y = sin x. Đạo hàm cấp hai của hàm số là:\n\nA. cos x. B. -sin x. C. -cos x. D. sin x.\n\nLời giải\n\nTa có: y' = cos x, y'' = -sin x.\n\nCho hàm số $y = e^{x^2}$. Đạo hàm cấp hai của hàm số là:\n\nA. $2xe^{x^2}$.      B. $4x^2e^{x^2}$.      C. $2e^{x^2}(1+2x^2)$.      D. $2e^{x^2}(2x^2-1)$.\n\nCho hàm số y = e^x^2. Đạo hàm cấp hai của hàm số là:\n\nA. 2xe^x^2. B. 4x^2e^x^2. C. 2e^x^2(1+2x^2). D. 2e^x^2(2x^2-1).\n\nLời giải\n\nTa có: y' = e^x^2 * 2x = 2xe^x^2; y'' = 2e^x^2 + 2x(e^x^2 * 2x) = 2e^x^2 + 4x^2e^x^2 = 2e^x^2(1+2x^2).\n\nTính đạo hàm của hàm số $f(x) = \\sqrt{x-1}$ tại điểm $x = 1$.\n\nA. $f'(1) = \\frac{1}{2}$.\n\nB. $f'(1) = 1$.\n\nC. $f'(1) = 0$.\n\nD. Không tồn tại.\n\nTính đạo hàm của hàm số f(x) = sqrt(x-1) tại điểm x = 1.\n\nA. f'(1) = 1/2. B. f'(1) = 1. C. f'(1) = 0. D. Không tồn tại.\n\nLời giải\n\nTa có f'(x) = 1 / (2*sqrt(x-1)).\n\nTại x = 1 thì f'(x) không xác định.\n\nTính đạo hàm của hàm số $y = \\frac{x^2 + 2x - 3}{x + 2}$.\n\nA. $y' = 1 + \\frac{3}{(x+2)^2}$.                      B. $y' = \\frac{x^2 + 6x + 7}{(x+2)^2}$.                      C. $y' = \\frac{x^2 + 4x + 5}{(x+2)^2}$.                      D. $y' = \\frac{x^2 + 8x + 1}{(x+2)^2}$.\n\nTính đạo hàm của hàm số y = (x^2 + 2x - 3) / (x + 2).\n\nA. y' = 1 + 3 / (x + 2)^2. B. y' = (x^2 + 6x + 7) / (x + 2)^2. C. y' = (x^2 + 4x + 5) / (x + 2)^2. D. y' = (x^2 + 8x + 1) / (x + 2)^2.\n\nLời giải\n\nTa có: y = x - 3 / (x + 2) => y' = 1 + 3 / (x + 2)^2.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/15",
+          "page": 0,
+          "bbox": [
+            106.0,
+            1332.0,
+            829.0,
+            1411.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/16",
+          "page": 0,
+          "bbox": [
+            239.0,
+            1417.0,
+            1270.0,
+            1458.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "6",
+      "type": "multiple_choice",
+      "content": "Đạo hàm của hàm số $y = \\sqrt{x}$ trên $(0; +\\infty)$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sqrt{x}$."
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2\\sqrt{x}}$."
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{x}}$."
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{x}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Đạo hàm của hàm số $y = \\sqrt{x}$ trên $(0; +\\infty)$ là\n\nA. $2\\sqrt{x}$.      B. $\\frac{1}{2\\sqrt{x}}$.      C. $\\frac{1}{\\sqrt{x}}$.      D. $\\sqrt{x}$.\n\nLời giải\n\nTa có: $y = f(x) = \\sqrt{x}$\n\nXét $\\Delta x$ là số gia của đối số tại điểm $x$\n\nKhi đó hàm số có số gia tương ứng:\n\n$\\Delta y = f(x + \\Delta x) - f(x) = \\sqrt{x + \\Delta x} - \\sqrt{x}$\n\nTa có:\n\n$\\lim_{\\Delta x \\rightarrow 0} \\frac{\\Delta y}{\\Delta x} = \\lim_{\\Delta x \\rightarrow 0} \\frac{\\sqrt{x + \\Delta x} - \\sqrt{x}}{\\Delta x} = \\lim_{\\Delta x \\rightarrow 0} \\frac{x + \\Delta x - x}{\\Delta x(\\sqrt{x + \\Delta x} + \\sqrt{x})}$\n\n$= \\lim_{\\Delta x \\rightarrow 0} \\frac{\\Delta x}{\\Delta x(\\sqrt{x + \\Delta x} + \\sqrt{x})} = \\lim_{\\Delta x \\rightarrow 0} \\frac{1}{\\sqrt{x + \\Delta x} + \\sqrt{x}} = \\frac{1}{\\sqrt{x} + \\sqrt{x}} = \\frac{1}{2\\sqrt{x}}$\n\nVậy $y' = \\frac{1}{2\\sqrt{x}}$.\n\nĐạo hàm của hàm số $y = \\frac{1}{x+1}$ trên tập xác định là\n\nA. $-\\frac{1}{(x+1)^2}$.      B. $\\frac{1}{x+1}$.      C. $\\frac{x}{x+1}$.      D. $\\frac{x}{(x+1)^2}$.\n\nĐạo hàm của hàm số y = 1/(x+1) trên tập xác định là\n\nA. -1/(x+1)^2. B. 1/(x+1). C. x/(x+1). D. x/(x+1)^2.\n\nLời giải\n\ny = f(x) = 1/(x+1). TXĐ: D = R \\ {-1}.\n\nXét Δx là số gia của đối số tại điểm x\n\nKhi đó hàm số có số gia tương ứng:\n\nΔy = f(x + Δx) - f(x) = 1/(x + Δx + 1) - 1/(x + 1) = -Δx / ((x + Δx + 1) * (x + 1)) => Δy / Δx = -1 / ((x + Δx + 1) * (x + 1))\n\nSuy ra\n\nlim (Δy / Δx) = lim (Δx -> 0) -1 / ((x + Δx + 1) * (x + 1)) = -1 / (x + 1)^2 => y' = -1 / (x + 1)^2.\n\nCho hàm số $y = 2x^4 + x^2 - 1$. Chọn đáp án đúng?\n\nA. $y' = 8x^2$.      B. $y' = 2x^3 + 2x - 1$.\nC. $y' = 2x^3 + x$.      D. $y' = 8x^3 + 2x$.\n\nCho hàm số $y = 2x^4 + x^2 - 1$. Chọn đáp án đúng?\n\nA. $y' = 8x^2$.\n\nB. $y' = 2x^3 + 2x - 1$.\n\nC. $y' = 2x^3 + x$.\n\nD. $y' = 8x^3 + 2x$.\n\nLời giải\n\n$y' = (2x^4 + x^2 - 1)' = 2.4x^3 + 2x = 8x^3 + 2x$\n\nĐạo hàm của hàm số y = x.e^x bằng:\n\nA. y' = (1+x)e^x B. y' = e^x C. y' = x.e^x D. y' = (1-x)e^x\n\nĐạo hàm của hàm số y = x.e^x bằng:\n\nA. y' = (1+x)e^x B. y' = e^x C. y' = x.e^x D. y' = (1-x)e^x\n\nLời giải\n\nTa có: y' = x'.e^x + x.(e^x)' = e^x + x.e^x = (1+x)e^x\n\nCho hàm số $y = e^{2x}$. Đạo hàm cấp hai của hàm số là:\n\nA. $4e^{2x}$.      B. $2e^{2x}$.      C. $e^{2x}$.      D. $e^x$.\n\nCho hàm số y = e^2x. Đạo hàm cấp hai của hàm số là:\n\nA. 4e^2x. B. 2e^2x. C. e^2x. D. e^x.\n\nLời giải\n\nTa có: $y' = 2e^{2x}, y'' = 4e^{2x}$.\n\nCho hàm số $y = \\ln(x^2 + 1)$. Đạo hàm cấp hai của hàm số là:\n\nA. $\\frac{2x}{x^2 + 1}$.      B. $\\frac{2}{x^2 + 1}$.      C. $\\frac{2(1-x^2)}{(x^2 + 1)^2}$.      D. $\\frac{2(x^2 - 1)}{(x^2 + 1)^2}$.\n\nCho hàm số y = ln(x^2 + 1). Đạo hàm cấp hai của hàm số là:\n\nA. 2x / (x^2 + 1). B. 2 / (x^2 + 1). C. 2(1-x^2) / (x^2 + 1)^2. D. 2(x^2 - 1) / (x^2 + 1)^2.\n\nLời giải\n\nTa có: $y' = \\frac{2x}{x^2+1}$; $y'' = \\frac{2(x^2+1)-2x(2x)}{(x^2+1)^2} = \\frac{2x^2+2-4x^2}{(x^2+1)^2} = \\frac{2-2x^2}{(x^2+1)^2} = \\frac{2(1-x^2)}{(x^2+1)^2}$.\n\nCho hàm số $f(x) = x^2 + 3x - 1$ có đồ thị $(C)$. Xác định hệ số góc của tiếp tuyến của đồ thị $(C)$ tại giao điểm của đồ thị với trục $Oy$\n\nA. $-3$.\n\nB. $2$.\n\nC. $3$.\n\nD. $4$.\n\nCho hàm số f(x) = x^2 + 3x - 1 có đồ thị (C). Xác định hệ số góc của tiếp tuyến của đồ thị (C) tại giao điểm của đồ thị với trục Oy\n\nA. -3. B. 2. C. 3. D. 4.\n\nLời giải\n\nTa có f'(x) = 2x + 3.\n\nTiếp tuyến tại giao điểm của đồ thị với trục Oy có hoành độ tiếp điểm x0 = 0.\n\nHệ số góc của tiếp tuyến tại điểm x0 = 0 là k = f'(0) = 2.0 + 3 = 3\n\nVậy hệ số góc của tiếp tuyến đã cho bằng 3.\n\nĐạo hàm của hàm số $f(x) = \\sqrt{2 - 3x^2}$ bằng biểu thức nào sau đây?\n\nA. $\\frac{-3x}{\\sqrt{2 - 3x^2}}$.                      B. $\\frac{1}{2\\sqrt{2 - 3x^2}}$.                      C. $\\frac{-6x^2}{2\\sqrt{2 - 3x^2}}$.                      D. $\\frac{3x}{\\sqrt{2 - 3x^2}}$.\n\nĐạo hàm của hàm số f(x) = √(2 - 3x^2) bằng biểu thức nào sau đây?\n\nA. -3x / √(2 - 3x^2). B. 1 / 2√(2 - 3x^2). C. -6x^2 / 2√(2 - 3x^2). D. 3x / √(2 - 3x^2).\n\nLời giải\n\nTa có : (√u)' = u' / 2√u.\n\n$$f'(x) = \\left( \\sqrt{2-3x^2} \\right)' = \\frac{(2-3x^2)'}{2\\sqrt{2-3x^2}} = \\frac{-6x}{2\\sqrt{2-3x^2}} = \\frac{-3x}{\\sqrt{2-3x^2}}.$$",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/17",
+          "page": 0,
+          "bbox": [
+            106.0,
+            1476.0,
+            826.0,
+            1527.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/18",
+          "page": 0,
+          "bbox": [
+            239.0,
+            1541.0,
+            1278.0,
+            1624.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "7",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $f(x) = x^3 + 1$ có đồ thị $(C)$. Hê số góc của tiếp tuyến của đồ thị $(C)$ tại điểm có hoành độ $x = 1$ là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$f'(1) = 3$."
+        },
+        {
+          "label": "B",
+          "content": "$f'(1) = -3$."
+        },
+        {
+          "label": "C",
+          "content": "$f'(1) = 4$."
+        },
+        {
+          "label": "D",
+          "content": "$f'(1) = -4$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $f(x) = x^3 + 1$ có đồ thị $(C)$. Hệ số góc của tiếp tuyến của đồ thị $(C)$ tại điểm có hoành độ $x = 1$ là:\n\nA. $f'(1) = 3$.      B. $f'(1) = -3$.      C. $f'(1) = 4$.      D. $f'(1) = -4$.\n\nLời giải\n\n$f'(1) = \\lim_{x \\rightarrow 1} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\rightarrow 1} \\frac{x^3 + 1 - 2}{x - 1} = \\lim_{x \\rightarrow 1} \\frac{x^3 - 1}{x - 1} = \\lim_{x \\rightarrow 1} (x^2 + x + 1) = 3$\n\nĐạo hàm của hàm số $f(x) = x^3 + 3x^2 + x - 5$ trên tập $\\mathbb{R}$ là\n\nA. $f'(x) = 3x^2 + 6x + 1$.      B. $f'(x) = x^2 + 3x + 1$.\nC. $f'(x) = 3x^2 - 6x + 1$.      D. $f'(x) = 9x + 1$.\n\nĐạo hàm của hàm số f(x) = x^3 + 3x^2 + x - 5 trên tập R là\n\nA. f'(x) = 3x^2 + 6x + 1. B. f'(x) = x^2 + 3x + 1. C. f'(x) = 3x^2 - 6x + 1. D. f'(x) = 9x + 1.\n\nLời giải\n\n∀x0 ∈ R, ta có: f'(x0) = lim (f(x)-f(x0))/(x-x0) = lim (x^3 + 3x^2 + x - x0^3 - 3x0^2 - x0)/(x-x0) = lim ((x-x0)(x^2 + x0x + x0^2 + 3x + 3x0 + 1))/(x-x0) = lim (x^2 + x0x + x0^2 + 3x + 3x0 + 1) = 3x0^2 + 6x0 + 1.\n\nVậy f'(x) = 3x^2 + 6x + 1.\n\nVị trí của một vật chuyển động thẳng được cho bởi hàm số $s(t) = t^3 - 6t^2 + 9t$, trong đó $t$ tính bằng giây và $s$ tính bằng mét. Vận tốc của vật tại thời điểm $t = 4$ giây là\n\nA. 6 m/s.      B. 7 m/s.      C. 8 m/s.      D. 9 m/s.\n\nVị trí của một vật chuyển động thẳng được cho bởi hàm số $s(t) = t^3 - 6t^2 + 9t$, trong đó $t$ tính bằng giây và $s$ tính bằng mét. Vận tốc của vật tại thời điểm $t = 4$ giây là\n\nA. 6 m/s.\n\nB. 7 m/s.\n\nC. 8 m/s.\n\nD. 9 m/s.\n\nLời giải\n\nVận tốc tức thời của vật: $v(t) = s'(t) = 3t^2 - 12t + 9$\n\nVận tốc của vật tại thời điểm $t = 4$ giây : $v(4) = 3.4^2 - 12.4 + 9 = 9$ m/s\n\nĐạo hàm của hàm số y = (2x+1)/(1-x) bằng:\n\nA. y' = -2/(1-x)^2 B. y' = 3/(1-x)^2 C. y' = -2 D. y' = -3/(x-1)^2\n\nĐạo hàm của hàm số $y = \\frac{2x+1}{1-x}$ bằng:\n\nA. $y' = \\frac{-2}{(1-x)^2}$\n\nB. $y' = \\frac{3}{(1-x)^2}$\n\nC. $y' = -2$\n\nD. $y' = \\frac{-3}{(x-1)^2}$\n\nLời giải\n\nTa có:\n\n$$y' = \\frac{(2x+1)' \\cdot (1-x) - (2x+1) \\cdot (1-x)'}{(1-x)^2} = \\frac{2(1-x) - (-1)(2x+1)}{(x-1)^2} = \\frac{2-2x+2x+1}{(1-x)^2} = \\frac{3}{(1-x)^2}.$$\n\nCho hàm số $y = \\log_2 x$. Đạo hàm cấp hai của hàm số là:\n\nA. $\\frac{1}{x \\ln 2}$.      B. $\\frac{-1}{x^2 \\ln 2}$.      C. $\\frac{-1}{x(\\ln 2)^2}$.      D. $\\frac{1}{x(\\ln 2)^2}$.\n\nCho hàm số $y = \\log_2 x$. Đạo hàm cấp hai của hàm số là:\n\nA. $\\frac{1}{x \\ln 2}$.\n\nB. $\\frac{-1}{x^2 \\ln 2}$.\n\nC. $\\frac{-1}{x(\\ln 2)^2}$.\n\nD. $\\frac{1}{x(\\ln 2)^2}$.\n\nLời giải\n\nTa có: $y' = \\frac{1}{x \\ln 2}; y'' = \\left(\\frac{1}{x \\ln 2}\\right)' = -\\frac{(x \\ln 2)'}{(x \\ln 2)^2} = \\frac{-1}{x^2 \\ln 2}$.\n\nCho hàm số $y = -\\frac{1}{x}$. Khi đó $y''\\left(\\frac{1}{2}\\right)$ bằng\n\nA. $-16$.      B. $-8$.      C. $8$.      D. $16$.\n\nCho hàm số $y = -\\frac{1}{x}$. Khi đó $y''\\left(\\frac{1}{2}\\right)$ bằng\n\nA. -16. B. -8. C. 8. D. 16.\n\nLời giải\n\nTa có: $y = -\\frac{1}{x} \\Rightarrow y' = \\frac{1}{x^2} \\Rightarrow y'' = -\\frac{2}{x^3} \\Rightarrow y''\\left(\\frac{1}{2}\\right) = -16$.\n\nPhương trình tiếp tuyến của đồ thị hàm số $y = x^3 - 2$ tại điểm $M(2; 6)$ là.\n\nA. $y = 12x - 18$.\n\nB. $y = 12x + 18$.\n\nC. $y = -12x + 18$.\n\nD. $y = -12x - 18$.\n\nPhương trình tiếp tuyến của đồ thị hàm số y = x^3 - 2 tại điểm M(2;6) là.\n\nA. y = 12x - 18. B. y = 12x + 18. C. y = -12x + 18. D. y = -12x - 18.\n\nLời giải\n\nTa có f'(x) = 3x^2.\n\nTiếp điểm M(2;6).\n\nHệ số góc của tiếp tuyến tại điểm x0 = 2 là k = f'(2) = 12.\n\nVậy tiếp tuyến của đồ thị hàm số y = x^3 - 2 tại điểm M(2;6) có phương trình:\n\ny = 12(x - 2) + 6 <-> y = 12x - 18.\n\nHệ số góc của tiếp tuyến đồ thị hàm số $y = x^3 + 2x^2 + 1$ tại điểm có hoành độ bằng -2 là\n\nA. $k = 1$.                      B. $k = 4$.                      C. $k = -20$.                      D. $k = -15$.\n\nHệ số góc của tiếp tuyến đồ thị hàm số $y = x^3 + 2x^2 + 1$ tại điểm có hoành độ bằng $-2$ là\n\nA. $k = 1$.                      B. $k = 4$.                      C. $k = -20$.                      D. $k = -15$.\n\nLời giải\n\nTa có $y' = 3x^2 + 4x$.\n\nHệ số góc của tiếp tuyến đồ thị hàm số tại điểm có hoành độ bằng $-2$ là\n\n$y'(-2) = 3 \\cdot (-2)^2 + 4 \\cdot (-2) = 4$.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/19",
+          "page": 0,
+          "bbox": [
+            106.0,
+            1648.0,
+            1498.0,
+            1747.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/20",
+          "page": 0,
+          "bbox": [
+            239.0,
+            1753.0,
+            1374.0,
+            1798.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "8",
+      "type": "multiple_choice",
+      "content": "Một chất điểm chuyển động có phương trình $S(t) = 4t^2 + 2$, với $t$ tính bằng giây (s) và $S$ là được tính bằng mét (m). Vận tốc tức thời của chất điểm tại thời điểm $t_0 = 4(s)$.",
+      "options": [
+        {
+          "label": "A",
+          "content": "$v(4) = 32 \\text{ m/s}$."
+        },
+        {
+          "label": "B",
+          "content": "$v(4) = 34 \\text{ m/s}$."
+        },
+        {
+          "label": "C",
+          "content": "$v(4) = 36 \\text{ m/s}$."
+        },
+        {
+          "label": "D",
+          "content": "$v(4) = 8 \\text{ m/s}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Một chất điểm chuyển động có phương trình $S(t) = 4t^2 + 2$, với $t$ tính bằng giây\n\n$(s)$ và $S$ là được tính bằng mét $(m)$. Vận tốc tức thời của chất điểm tại thời điểm $t_0 = 4(s)$.\n\nA. $v(4) = 32 \\text{ m/s}$.      B. $v(4) = 34 \\text{ m/s}$.      C. $v(4) = 36 \\text{ m/s}$.      D. $v(4) = 8 \\text{ m/s}$.\n\nLời giải\n\nVận tốc tức thời của chất điểm tại thời điểm $t_0 = 4(s)$ là\n\n$$v(4) = S'(4) = \\lim_{t \\rightarrow 4} \\frac{S(t) - S(4)}{t - 4} = \\lim_{t \\rightarrow 4} \\frac{4t^2 + 2 - 66}{t - 4} = \\lim_{t \\rightarrow 4} \\frac{4(t^2 - 16)}{t - 4} = \\lim_{t \\rightarrow 4} 4(t + 4) = 32.$$\n\nĐạo hàm của hàm số $f(x) = \\frac{x^2 - 2x - 3}{x - 1}$ trên các khoảng $(-\\infty; 1)$ và $(1; +\\infty)$ là\n\nA. $f'(x) = \\frac{x^2 - 2x + 5}{x - 1}$.      B. $f'(x) = \\frac{x^2 - 2x + 5}{(x - 1)^2}$.      C. $f'(x) = \\frac{x^2 - 2x - 3}{(x - 1)^2}$.      D. $f'(x) = \\frac{x^2 - 2x - 3}{x - 1}$.\n\nĐạo hàm của hàm số f(x) = (x^2 - 2x - 3)/(x - 1) trên các khoảng (-∞; 1) và (1; +∞) là\n\nA. f'(x) = (x^2 - 2x + 5)/(x - 1). B. f'(x) = (x^2 - 2x + 5)/(x - 1)^2. C. f'(x) = (x^2 - 2x - 3)/(x - 1)^2. D. f'(x) = (x^2 - 2x - 3)/(x - 1).\n\nLời giải\n\nTa có: $f(x) = x - 1 - \\frac{4}{x-1}$.\n\n$\\forall x_0 \\in (-\\infty; 1) \\cup (1; +\\infty)$, ta có:\n\n$$f'(x_0) = \\lim_{x \\rightarrow x_0} \\frac{f(x) - f(x_0)}{x - x_0} = \\lim_{x \\rightarrow x_0} \\frac{x - \\frac{4}{x-1} - x_0 + \\frac{4}{x_0-1}}{x - x_0} = \\lim_{x \\rightarrow x_0} \\left( 1 + \\frac{4}{(x-1)(x_0-1)} \\right)$$\n\n$$= 1 + \\frac{4}{(x_0-1)^2} = \\frac{x_0^2 - 2x_0 + 5}{(x_0-1)^2}.$$\n\nVậy $f'(x) = \\frac{x^2 - 2x + 5}{(x-1)^2}$.\n\nHàm số $y = 2 \\cos(x^2)$ có đạo hàm là\n\nA. $-4x \\sin(x^2)$.      B. $-4x \\cos x^2$.      C. $-2x \\sin x^2$.      D. $-2 \\sin x^2$.\n\nHàm số $y = 2 \\cos(x^2)$ có đạo hàm là\n\nA. $-4x \\sin(x^2)$.\n\nB. $-4x \\cos x^2$.\n\nC. $-2x \\sin x^2$.\n\nD. $-2 \\sin x^2$.\n\nLời giải\n\n$y' = -2.2x.\\sin(x^2) = -4x \\sin(x^2)$.\n\nHàm số y = sin^2 x . cos x có đạo hàm là:\n\nA. y' = sin x.(3 cos^2 x - 1) B. y' = sin x.(3 cos^2 x + 1) C. y' = sin x.(cos^2 x + 1) D. y' = sin x.(cos^2 x - 1)\n\nHàm số $y = \\sin^2 x \\cdot \\cos x$ có đạo hàm là:\n\nA. $y' = \\sin x \\cdot (3 \\cos^2 x - 1)$.\n\nB. $y' = \\sin x \\cdot (3 \\cos^2 x + 1)$.\n\nC. $y' = \\sin x \\cdot (\\cos^2 x + 1)$.\n\nD. $y' = \\sin x \\cdot (\\cos^2 x - 1)$.\n\nLời giải\n\nTa có: $y' = (\\sin^2 x)' \\cdot \\cos x + \\sin^2 x \\cdot (\\cos x)'$\n\n$$y' = 2 \\sin x \\cdot \\cos x \\cdot \\cos x + \\sin^2 x \\cdot (-\\sin x)$$\n\n$$y' = 2 \\sin x \\cdot \\cos^2 x - \\sin^3 x$$\n\n$$y' = \\sin x \\cdot (2 \\cos^2 x - \\sin^2 x)$$\n\n$$y' = \\sin x \\cdot (3 \\cos^2 x - 1).$$\n\nCho hàm số $y = \\frac{x}{x+1}$. Đạo hàm cấp hai của hàm số là:\n\nA. $\\frac{2}{(x+1)^3}$.      B. $\\frac{-2}{(x+1)^3}$.      C. $\\frac{2}{(x+1)^2}$.      D. $\\frac{-2}{(x+1)^2}$.\n\nCho hàm số $y = \\frac{x}{x+1}$. Đạo hàm cấp hai của hàm số là:\n\nA. $\\frac{2}{(x+1)^3}$.\n\nB. $\\frac{-2}{(x+1)^3}$.\n\nC. $\\frac{2}{(x+1)^2}$.\n\nD. $\\frac{-2}{(x+1)^2}$.\n\nLời giải\n\nTa có: $y' = \\frac{1}{(x+1)^2}, y'' = -2(x+1)^{-3} = \\frac{-2}{(x+1)^3}$.\n\nCho hàm số $f(x) = ax^2 + bx + 3$ ($a, b$ là các hằng số). Biết $f'(1) = 0$ và $f''(1) = -2$. Tính $a + b$ bằng\n\nA. $1$.      B. $2$.      C. $-1$.      D. $0$.\n\nCho hàm số $f(x) = ax^2 + bx + 3$ ($a, b$ là các hằng số). Biết $f'(1) = 0$ và $f''(1) = -2$. Tính $a + b$ bằng\n\nA. 1. B. 2. C. -1. D. 0.\n\nLời giải\n\n$f'(x) = 2ax + b \\Rightarrow f'(1) = 2a + b = 0$.\n\n$f''(x) = 2a \\Rightarrow f''(1) = 2a = -2 \\Leftrightarrow a = -1$. Thay vào trên, ta được $b = 2$.\n\nVậy $a + b = 1$.\n\nHàm số $y = \\tan x + \\sqrt{3}$ có đạo hàm tại mọi $x \\neq \\frac{\\pi}{2} + k\\pi, k \\in \\mathbb{Z}$ là\n\nA. $y' = \\frac{1}{\\cos^2 x}$.      B. $y' = \\frac{1}{\\cos^2 x} + \\sqrt{3}$.      C. $y' = -\\frac{1}{\\cos^2 x}$.      D. $y' = -\\frac{1}{\\cos^2 x} + \\sqrt{3}$.\n\nHàm số y = tan x + sqrt(3) có đạo hàm tại mọi x != pi/2 + k*pi, k in Z là\n\nA. y' = 1 / (cos^2 x). B. y' = 1 / (cos^2 x) + sqrt(3). C. y' = -1 / (cos^2 x). D. y' = -1 / (cos^2 x) + sqrt(3).\n\nLời giải\n\nTa có (tan x)' = 1 / (cos^2 x),forall x != pi/2 + k*pi nên y' = (tan x + sqrt(3))' = (tan x)' + (sqrt(3))' = 1 / (cos^2 x).\n\nTiếp tuyến của đồ thị hàm số $(C): y = x^3 - 3x + 1$ tại giao điểm của $(C)$ với trục $Oy$ có phương trình là:\n\nA. $y = -3x + 1$.                      B. $y = 3x + 1$.                      C. $y = -3x + 3$.                      D. $y = x + 1$.\n\nTiếp tuyến của đồ thị hàm số $(C): y = x^3 - 3x + 1$ tại giao điểm của $(C)$ với trục $Oy$ có phương trình là:\n\nA. $y = -3x + 1$.                      B. $y = 3x + 1$.                      C. $y = -3x + 3$.                      D. $y = x + 1$.\n\nLời giải\n\nTa có $y' = 3x^2 - 3$.\n\nGiao điểm $M$ của đồ thị hàm số $(C)$ với trục $Oy$ là $x_0 = 0 \\Rightarrow y_0 = 1$.\n\nHệ số góc của tiếp tuyến tại $M(0;1)$ là: $k = y'(0) = -3$.\n\nPhương trình tiếp tuyến tại điểm $M(0;1)$ là: $y = k(x - x_0) + y_0 \\Leftrightarrow y = -3x + 1$.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/21",
+          "page": 0,
+          "bbox": [
+            106.0,
+            1823.0,
+            1498.0,
+            1930.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/22",
+          "page": 0,
+          "bbox": [
+            239.0,
+            1942.0,
+            1414.0,
+            1986.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "9",
+      "type": "multiple_choice",
+      "content": "Một chất điểm chuyển động có quãng đường được cho bởi phương trình $s(t) = \\frac{1}{4}t^4 - t^3 + \\frac{5}{2}t^2 + 10t$, trong đó $t > 0$ với $t$ tính bằng giây (s) và $s$ tính bằng mét (m). Hỏi tại thời điểm gia tốc của vật đạt giá trị nhỏ nhất thì vận tốc của vật bằng bao nhiêu ?\n\nA. 13.                      B. 11.                      C. 10.                      D. 12.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Một chất điểm chuyển động có quãng đường được cho bởi phương trình $s(t) = \\frac{1}{4}t^4 - t^3 + \\frac{5}{2}t^2 + 10t$, trong đó $t > 0$ với $t$ tính bằng giây (s) và $s$ tính bằng mét (m). Hỏi tại thời điểm gia tốc của vật đạt giá trị nhỏ nhất thì vận tốc của vật bằng bao nhiêu ?\nA. 13.                      B. 11.                      C. 10.                      D. 12.\n\nLời giải\n\nVận tốc của chuyển động là: $v(t) = t^3 - 3t^2 + 5t + 10$.\n\nGia tốc của chuyển động là $a(t) = 3t^2 - 6t + 5$.\n\nDễ thấy: $a(t) = 3t^2 - 6t + 5 = 3(t - 1)^2 + 2 \\geq 2$ với mọi $t$. Dấu “=” xảy ra khi $t = 1$.\n\nKhi đó, vận tốc của chuyển động là $v(1) = 13$ (m/s).\n\nCho hàm số $y = -x^3 + 2x^2 + 1$. Hệ số góc của tiếp tuyến tại điểm $x_0 = -1$ của hàm số là\n\nA. 7.                      B. 1.                      C. -1.                      D. -7.\n\nCho hàm số $y = -x^3 + 2x^2 + 1$. Hệ số góc của tiếp tuyến tại điểm $x_0 = -1$ của hàm số là\n\nA. 7.\n\nB. 1.\n\nC. -1.\n\nD. -7.\n\nLời giải\n\nTa có: $\\lim_{x \\rightarrow -1} \\frac{f(x) - f(-1)}{x + 1} = \\lim_{x \\rightarrow -1} \\frac{-x^3 + 2x^2 - 3}{x + 1} = \\lim_{x \\rightarrow -1} \\frac{(x+1)(-x^2 + 3x - 3)}{x + 1}$\n\n$$= \\lim_{x \\rightarrow -1} (-x^2 + 3x - 3) = -7$$\n\nTiếp tuyến của đồ thị hàm số tại điểm $x_0 = -1$ có hệ số góc: -7\n\nTính đạo hàm $y = \\sqrt{\\cos 6x}$\n\nA. y' = 3 sin 6x / 2sqrt(sin 6x) B. y' = -3 sin 6x / sqrt(sin 6x) C. y' = 3 sin 6x / sqrt(sin 6x) D. y' = -3 sin 6x / 2sqrt(sin 6x)\n\nTính đạo hàm $y = \\sqrt{\\cos 6x}$\n\nA. $y' = \\frac{3 \\sin 6x}{2\\sqrt{\\sin 6x}}$.\n\nB. $y' = \\frac{-3 \\sin 6x}{\\sqrt{\\sin 6x}}$.\n\nC. $y' = \\frac{3 \\sin 6x}{\\sqrt{\\sin 6x}}$.\n\nD. $y' = \\frac{-3 \\sin 6x}{2\\sqrt{\\sin 6x}}$.\n\nLời giải\n\nTa có $y = \\sqrt{\\cos 6x} \\Rightarrow y' = (\\sqrt{\\cos 6x})' = \\frac{(\\cos 6x)'}{2\\sqrt{\\cos 6x}} = \\frac{-6 \\sin 6x}{2\\sqrt{\\cos 6x}} = \\frac{-3 \\sin 6x}{\\sqrt{\\sin 6x}}$\n\nNếu số lượng sản phẩm sản xuất được của một nhà máy là $x$ (đơn vị: trăm sản phẩm) thì lợi nhuận sinh ra là $P(x) = -150x^2 + 24000x - 35000$ (nghìn đồng). Tính tốc độ thay đổi lợi nhuận của nhà máy đó khi sản xuất 1000 sản phẩm.\n\nA. 20000 .      B. 22500 .      C. 21000 .      D. 24000 .\n\nNếu số lượng sản phẩm sản xuất được của một nhà máy là $x$ (đơn vị: trăm sản phẩm) thì lợi nhuận sinh ra là $P(x) = -150x^2 + 24000x - 35000$ (nghìn đồng). Tính tốc độ thay đổi lợi nhuận của nhà máy đó khi sản xuất 1000 sản phẩm.\n\nA. 20000 .\n\nB. 22500 .\n\nC. 21000 .\n\nD. 24000 .\n\nLời giải\n\nTa có: $P'(x) = -300x + 24000$\n\nTốc độ thay đổi lợi nhuận của nhà máy đó khi sản xuất 1000 sản phẩm là\n\n$$P'(10) = -300 \\cdot 10 + 24000 = 21000.$$\n\nCho hàm số $y = \\sqrt{x^2 + 1}$. Đạo hàm cấp hai của hàm số là:\n\nA. $\\frac{1-x^2}{(x^2+1)^{3/2}}$.      B. $\\frac{-1}{(x^2+1)^{3/2}}$.      C. $\\frac{x^2-1}{(x^2+1)^{3/2}}$.      D. $\\frac{1}{(x^2+1)^{3/2}}$.\n\nCho hàm số $y = \\sqrt{x^2 + 1}$. Đạo hàm cấp hai của hàm số là:\n\nA. $\\frac{1-x^2}{(x^2+1)^{3/2}}$.\n\nB. $\\frac{-1}{(x^2+1)^{3/2}}$.\n\nC. $\\frac{x^2-1}{(x^2+1)^{3/2}}$.\n\nD. $\\frac{1}{(x^2+1)^{3/2}}$.\n\nLời giải\n\nTa có: $y' = \\frac{1}{2\\sqrt{x^2+1}} \\cdot 2x = \\frac{x}{\\sqrt{x^2+1}}; y'' = \\frac{\\sqrt{x^2+1} - x \\cdot \\frac{x}{\\sqrt{x^2+1}}}{x^2+1} = \\frac{x^2+1-x^2}{(x^2+1)\\sqrt{x^2+1}} = \\frac{1}{(x^2+1)^{3/2}}$.\n\nMột chất điểm chuyển động theo phương trình $s = f(t)$ thỏa mãn $f''(t) = 2 + 3t$, với $t$ (giây) là khoảng thời gian tính từ khi vật bắt đầu chuyển động và $s$ (mét) là quãng đường vật đi được trong thời gian đó. Gia tốc tức thời tại điểm $t = 1$ giây của chuyển động bằng\n\nA. $5 \\text{ m/s}^2$.      B. $3 \\text{ m/s}^2$.      C. $2 \\text{ m/s}^2$.      D. $6 \\text{ m/s}^2$.\n\nMột chất điểm chuyển động theo phương trình $s = f(t)$ thỏa mãn $f''(t) = 2 + 3t$, với $t$ (giây) là khoảng thời gian tính từ khi vật bắt đầu chuyển động và $s$ (mét) là quãng đường vật đi được trong thời gian đó. Gia tốc tức thời tại điểm $t = 1$ giây của chuyển động bằng\n\nA. 5 m/s2. B. 3 m/s2. C. 2 m/s2. D. 6 m/s2.\n\nLời giải\n\nTa có $a(t) = s''(t) = f''(t) = 2 + 3t$.\n\nVậy gia tốc tức thời tại điểm $t = 1$ giây của chuyển động là $a(1) = 2 + 3.1 = 5 \\text{ m/s}^2$.\n\nĐạo hàm của hàm số $y = 4^{x^2+3}$ là\n\nA. $y' = (x^2 + 3).4^{x^2+3}$.      B. $y' = \\ln 4.4^{x^2+3}$.      C. $y' = 2x.\\ln 4.4^{x^2+3}$.      D. $y' = 2x.\\ln 2.2^{2x^2+6}$.\n\nĐạo hàm của hàm số y = 4^(x^2+3) là\n\nA. y' = (x^2 + 3).4^(x^2+3). B. y' = ln 4.4^(x^2+3). C. y' = 2x.ln 4.4^(x^2+3). D. y' = 2x.ln 2.2^(2x^2+6).\n\nLời giải\n\nĐặt u = x^2 + 3, ta có y = 4^u. Khi đó y'_u = (4^u)' = 4^u.ln 4; u'_x = 2x\n\nTheo công thức tính đạo hàm của hàm hợp, ta có:\n\ny'_x = y'_u.u'_x = 4^u.ln 4.2x = 4^(x^2+3).ln 4.2x = 2x.ln 4.4^(x^2+3).\n\nĐạo hàm của hàm số $y = \\tan 3x$ bằng biểu thức nào sau đây?\n\nA. $\\frac{3x}{\\cos^2 3x}$.      B. $-\\frac{3}{\\cos^2 3x}$.      C. $\\frac{3}{\\cos^2 3x}$.      D. $-\\frac{3}{\\sin^2 3x}$.\n\nĐạo hàm của hàm số $y = \\tan 3x$ bằng biểu thức nào sau đây?\n\nA. $\\frac{3x}{\\cos^2 3x}$.                      B. $-\\frac{3}{\\cos^2 3x}$.                      C. $\\frac{3}{\\cos^2 3x}$.                      D. $-\\frac{3}{\\sin^2 3x}$.\n\nLời giải\n\nTa có: $y' = (\\tan 3x)' = \\frac{(3x)'}{\\cos^2 3x} = \\frac{3}{\\cos^2 3x}$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/1",
+          "page": 1,
+          "bbox": [
+            106.0,
+            112.0,
+            1498.0,
+            324.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "10",
+      "type": "multiple_choice",
+      "content": "Chuyển động của một vật có phương trình $s = 5 + \\sin\\left(0,8\\pi t + \\frac{\\pi}{6}\\right)$, trong đó $s$ tính bằng centimet và thời gian $t$ tính bằng giây. Tính giá trị tuyệt đối của gia tốc của vật tại các thời điểm vận tốc bằng 0.\n\nA. $0,64\\pi^2$.                      B. $10,64\\pi^2$.                      C. $0,32\\pi^2$.                      D. $0,14\\pi^2$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Chuyển động của một vật có phương trình $s = 5 + \\sin\\left(0,8\\pi t + \\frac{\\pi}{6}\\right)$, trong đó $s$ tính bằng centimet và thời gian $t$ tính bằng giây. Tính giá trị tuyệt đối của gia tốc của vật tại các thời điểm vận tốc bằng 0.\nA. $0,64\\pi^2$.                      B. $10,64\\pi^2$.                      C. $0,32\\pi^2$.                      D. $0,14\\pi^2$.\n\nLời giải\n\nTa có $v = s' = 0,8\\pi \\cos\\left(0,8\\pi t + \\frac{\\pi}{6}\\right)$ và $a = v' = -0,64\\pi^2 \\sin\\left(0,8\\pi t + \\frac{\\pi}{6}\\right)$.\n\nThời điểm vận tốc bằng 0 tương đương với $\\cos\\left(0,8\\pi t + \\frac{\\pi}{6}\\right) = 0 \\Leftrightarrow \\left| \\sin\\left(0,8\\pi t + \\frac{\\pi}{6}\\right) \\right| = 1$.\n\nKhi đó, $|a| = 0,64\\pi^2 \\left| \\sin\\left(0,8\\pi t + \\frac{\\pi}{6}\\right) \\right| = 0,64\\pi^2$.\n\nMột vật chuyển động xác định bởi phương trình $s(t) = \\frac{1}{3}t^3 - t^2$, trong đó $t$ tính bằng giây và $s$ tính bằng mét. Vận tốc tức thời của vật tại thời điểm $t = 3$ bằng bao nhiêu?\n\nA. $4m/s$.                      B. $1m/s$.                      C. $3m/s$.                      D. $2m/s$.\n\nMột vật chuyển động xác định bởi phương trình $s(t) = \\frac{1}{3}t^3 - t^2$, trong đó $t$ tính bằng giây và $s$ tính bằng mét. Vận tốc tức thời của vật tại thời điểm $t = 3$ bằng bao nhiêu?\n\nA. 4m/s.\n\nB. 1m/s.\n\nC. 3m/s.\n\nD. 2m/s.\n\nLời giải\n\n$$v(3) = S'(3) = \\lim_{t \\rightarrow 3} \\frac{S(t) - S(3)}{t - 3} = \\lim_{t \\rightarrow 3} \\frac{\\frac{1}{3}t^3 - t^2 - 0}{t - 3} = \\lim_{t \\rightarrow 3} \\frac{\\frac{1}{3}t^3 - t^2}{t - 3} = \\lim_{t \\rightarrow 3} \\frac{\\frac{1}{3}t^2(t-3)}{t - 3} = \\lim_{t \\rightarrow 3} \\frac{1}{3}t^2 = 3.$$\n\nVận tốc tức thời của vật tại thời điểm $t = 3$ bằng: $v(3) = 3^2 - 2 \\cdot 3 = 3$ (m/s).\n\nCho hàm số f(x) = 2^x và A = 3f'(0) + ln 2. Giá trị của A bằng\n\nA. ln 2. B. 2 ln 2. C. 3 ln 2. D. 4 ln 2.\n\nCho hàm số $f(x) = 2^x$ và $A = 3f'(0) + \\ln 2$. Giá trị của $A$ bằng\n\nA. $\\ln 2$.\n\nB. $2 \\ln 2$.\n\nC. $3 \\ln 2$.\n\nD. $4 \\ln 2$.\n\nLời giải\n\nTa có: $f'(x) = 2^x \\ln 2 \\Rightarrow f'(0) = \\ln 2$.\n\nSuy ra $A = 3f'(0) + \\ln 2 = 3 \\ln 2 + \\ln 2 = 4 \\ln 2$.\n\nĐạo hàm của hàm số $y = \\sqrt[3]{x^2 + 1}$ bằng\n\nA. $\\frac{1}{3\\sqrt[3]{(x^2 + 1)^2}}$ .      B. $(x^2 + 1)^{\\frac{1}{3}} \\ln(x^2 + 1)$ .\n\nC. $\\frac{2x}{\\sqrt[3]{(x^2 + 1)^2}}$ .      D. $\\frac{2x}{3\\sqrt[3]{(x^2 + 1)^2}}$ .\n\nĐạo hàm của hàm số $y = \\sqrt[3]{x^2 + 1}$ bằng\n\nA. $\\frac{1}{3\\sqrt[3]{(x^2 + 1)^2}}.$\n\nB. $(x^2 + 1)^{\\frac{1}{3}} \\ln(x^2 + 1).$\n\nC. $\\frac{2x}{\\sqrt[3]{(x^2 + 1)^2}}.$\n\nD. $\\frac{2x}{3\\sqrt[3]{(x^2 + 1)^2}}.$\n\nLời giải\n\nTa có: $y' = \\left[ (x^2 + 1)^{\\frac{1}{3}} \\right]' = \\frac{1}{3} 2x \\cdot (x^2 + 1)^{\\frac{-2}{3}} = \\frac{2x}{3\\sqrt[3]{(x^2 + 1)^2}}.$\n\nCho hàm số $y = 3 \\cos(2x + \\frac{\\pi}{3})$. Đạo hàm cấp hai của hàm số là:\n\nA. $12 \\cos(2x + \\frac{\\pi}{3})$.    B. $12 \\sin(2x + \\frac{\\pi}{3})$.    C. $-12 \\sin(2x + \\frac{\\pi}{3})$.    D. $-12 \\cos(2x + \\frac{\\pi}{3})$.\n\nCho hàm số $y = 3 \\cos(2x + \\frac{\\pi}{3})$. Đạo hàm cấp hai của hàm số là:\n\nA. $12 \\cos(2x + \\frac{\\pi}{3})$.\n\nB. $12 \\sin(2x + \\frac{\\pi}{3})$.\n\nC. $-12 \\sin(2x + \\frac{\\pi}{3})$.\n\nD. $-12 \\cos(2x + \\frac{\\pi}{3})$.\n\nLời giải\n\nTa có: $y' = -3 \\sin(2x + \\frac{\\pi}{3}) \\cdot 2 = -6 \\sin(2x + \\frac{\\pi}{3}); y'' = -6 \\cos(2x + \\frac{\\pi}{3}) \\cdot 2 = -12 \\cos(2x + \\frac{\\pi}{3})$.\n\nMột chất điểm chuyển động theo phương trình $s(t) = \\frac{1}{3}t^3 - 2t^2 + 5t + 2$, trong đó $t > 0$, $t$ tính bằng giây và $s(t)$ tính bằng mét. Tính gia tốc tức thời của chất điểm tại thời điểm $t = 5$ giây.\n\nA. $6 \\text{ m/s}^2$.      B. $10 \\text{ m/s}^2$.      C. $10 \\text{ m/s}$.      D. $2 \\text{ m/s}$.\n\nMột chất điểm chuyển động theo phương trình $s(t) = \\frac{1}{3}t^3 - 2t^2 + 5t + 2$, trong đó $t > 0$, $t$ tính bằng giây và $s(t)$ tính bằng mét. Tính gia tốc tức thời của chất điểm tại thời điểm $t = 5$ giây.\n\nA. 6 m/s2. B. 10 m/s2. C. 10 m/s. D. 2 m/s.\n\nLời giải\n\nTa tính được $v(t) = s'(t) = t^2 - 4t + 5$; $a(t) = s''(t) = 2t - 4$\n\nGia tốc của chất điểm tại thời điểm $t = 5$ giây là $a(t) = s''(t) = 2t - 4 \\Rightarrow a(5) = 2.5 - 4 = 6 \\text{ m/s}^2$.\n\nHàm số $y = \\cos^2 5x$ có đạo hàm là\n\nA. $y' = 2 \\cos 5x$.      B. $y' = 10 \\cos 5x$.      C. $y' = -5 \\sin 10x$.      D. $y' = 10 \\sin 10x$.\n\nHàm số y = cos^2 5x có đạo hàm là\n\nA. y' = 2 cos 5x. B. y' = 10 cos 5x. C. y' = -5 sin 10x. D. y' = 10 sin 10x.\n\nLời giải\n\nĐặt $u = \\cos 5x$, ta có $y = u^2$. Khi đó: $y'_u = 2u$; $u'_x = -5 \\sin 5x$.\n\nTheo công thức tính đạo hàm của hàm hợp, ta có:\n\n$$y'_x = y'_u \\cdot u'_x = 2u \\cdot (-5 \\sin 5x) = 2 \\cdot \\cos 5x \\cdot (-5 \\sin 5x) = -10 \\cos 5x \\sin 5x = -5 \\sin 10x.$$\n\nTính đạo hàm của hàm số $y = \\log_2(x + e^x)$.\n\nA. $\\frac{1 + e^x}{x + e^x}$.      B. $\\frac{1}{(x + e^x) \\ln 2}$.      C. $\\frac{1 + e^x}{\\ln 2}$.      D. $\\frac{1 + e^x}{(x + e^x) \\ln 2}$.\n\nTính đạo hàm của hàm số $y = \\log_2(x + e^x)$.\n\nA. $\\frac{1+e^x}{x+e^x}$.                      B. $\\frac{1}{(x+e^x)\\ln 2}$.                      C. $\\frac{1+e^x}{\\ln 2}$.                      D. $\\frac{1+e^x}{(x+e^x)\\ln 2}$.\n\nLời giải\n\nTa có $y' = \\frac{(x + e^x)'}{(x + e^x) \\ln 2} = \\frac{1 + e^x}{(x + e^x) \\ln 2}$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/2",
+          "page": 1,
+          "bbox": [
+            106.0,
+            349.0,
+            1498.0,
+            575.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "11",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = x^3 - 3x^2 + 2$. Viết phương trình tiếp tuyến của đồ thị hàm số tại giao điểm với đường thẳng $y = -2$.\n\nA. $y = -9x + 7; y = -2$.    B. $y = -2$.                      C. $y = 9x + 7; y = -2$.    D. $y = 9x + 7; y = 2$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = x^3 - 3x^2 + 2$. Viết phương trình tiếp tuyến của đồ thị hàm số tại giao điểm với đường thẳng $y = -2$.\nA. $y = -9x + 7$; $y = -2$.    B. $y = -2$.                      C. $y = 9x + 7$; $y = -2$.    D. $y = 9x + 7$; $y = 2$.\n\nLời giải\n\nPhương trình hoành độ giao điểm : $y = x^3 - 3x^2 + 2 = -2 \\Leftrightarrow \\begin{cases} x = -1 \\\\ x = 2 \\end{cases}$.\n\nVới $x = -1 \\rightarrow \\begin{cases} y = -2 \\\\ k = y'(-1) = 9 \\end{cases}$. Suy ra phương trình tiếp tuyến cần tìm là: $y = 9x + 7$.\n\nVới $x = 2 \\rightarrow \\begin{cases} y = -2 \\\\ k = y'(-2) = 0 \\end{cases}$. suy ra phương trình tiếp tuyến cần tìm là: $y = -2$.\n\nPhương trình tiếp tuyến của hàm số $y = \\frac{x+1}{2x-1}$ tại điểm có hoành độ $x = 2$ là\n\nA. $y = \\frac{1}{3}x + \\frac{4}{3}$.                      B. $y = -\\frac{1}{3}x + \\frac{5}{3}$.                      C. $y = \\frac{2}{3}x - \\frac{4}{3}$.                      D. $y = -\\frac{2}{3}x - \\frac{4}{3}$.\n\nPhương trình tiếp tuyến của hàm số $y = \\frac{x+1}{2x-1}$ tại điểm có hoành độ $x = 2$ là\n\nA. $y = \\frac{1}{3}x + \\frac{4}{3}$.\n\nB. $y = -\\frac{1}{3}x + \\frac{5}{3}$.\n\nC. $y = \\frac{2}{3}x - \\frac{4}{3}$.\n\nD. $y = -\\frac{2}{3}x - \\frac{4}{3}$.\n\nLời giải\n\nTa có: $\\lim_{x \\rightarrow 2} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x \\rightarrow 2} \\frac{\\frac{x+1}{2x-1} - 1}{x - 2} = \\lim_{x \\rightarrow 2} \\frac{-x+2}{(x-2)(2x-1)} = \\lim_{x \\rightarrow 2} \\frac{-1}{(2x-1)} - \\frac{1}{3}$\n\nHệ số góc của tiếp tuyến tại điểm có hoành độ $x = 2$ là $-\\frac{1}{3}$; $y(2) = 1$.\n\nPhương trình tiếp tuyến của hàm số tại điểm có hoành độ $x = 2$ là:\n\n$$y = -\\frac{1}{3}(x - 2) + 1 \\Leftrightarrow y = -\\frac{1}{3}x + \\frac{5}{3}.$$\n\nMột chuyển động theo qui luật là s = -1/2 t^3 + 3t^2 + 20 với t giây là khoảng thời gian tính từ khi vật bắt đầuu chuyển động và s ( mét) là quãng đường vật di chuyển được trong khoảng thời gian đó. Quãng đường vật đi được bắt đầu từ lúc vật chuyển động tới thời điểm vật đạt được vận tốc lớn nhất bằng\n\nA. 20m. B. 28m. C. 32m. D. 36m.\n\nMột chuyển động theo qui luật là $s = -\\frac{1}{2}t^3 + 3t^2 + 20$ với $t$ giây là khoảng thời gian tính từ khi vật bắt đầuu chuyển động và $s$ ( mét) là quãng đường vật di chuyển được trong khoảng thời gian đó. Quãng đường vật đi được bắt đầu từ lúc vật chuyển động tới thời điểm vật đạt được vận tốc lớn nhất bằng\n\nA. 20m.\n\nB. 28m.\n\nC. 32m.\n\nD. 36m.\n\nLời giải\n\n$s = -\\frac{1}{2}t^3 + 3t^2 + 20$\n\n$v(t) = s'(t) = -\\frac{3}{2}t^2 + 6t$\n\n$$v(t) = s'(t) = \\frac{-3}{2}(t^2 - 4t + 4 - 4) = \\frac{-3}{2}[(t-2)^2 - 4] = \\frac{-3}{2}(t-2)^2 + 6 \\leq 6$$\n\nVậy vận tốc đạt được giá trị lớn nhất tại thời điểm $t = 2(s)$.\n\nKhi đó quãng đường vật đi được là: $s = s(2) = -4 + 12 + 20 = 28(m)$.\n\nHàm số $y = 2x + \\ln(x^2 - x + 1)$ có đạo hàm là\n\nA. $y' = \\frac{2x^2 + 1}{x^2 - x + 1}$ .      B. $y' = \\frac{2x^2 + 2}{x^2 - x + 1}$ .\n\nC. $y' = \\frac{x^2 + x}{x^2 - x + 1}$ .      D. $y' = \\frac{x^2 + x + 1}{x^2 - x + 1}$ .\n\nHàm số $y = 2x + \\ln(x^2 - x + 1)$ có đạo hàm là\n\nA. $y' = \\frac{2x^2 + 1}{x^2 - x + 1}$.      B. $y' = \\frac{2x^2 + 2}{x^2 - x + 1}$.      C. $y' = \\frac{x^2 + x}{x^2 - x + 1}$.      D. $y' = \\frac{x^2 + x + 1}{x^2 - x + 1}$.\n\nLời giải\n\nTa có: $y' = (2x + \\ln(x^2 - x + 1))' = 2 + \\frac{2x - 1}{x^2 - x + 1} = \\frac{2x^2 + 1}{x^2 - x + 1}$.\n\nMột vật dao động điều hòa với phương trình $x = 4 \\cos\\left(\\pi t + \\frac{\\pi}{4}\\right)$ (cm), trong đó $t$ tính bằng giây.\n\nGia tốc của vật tại thời điểm $t = 1$ giây là:\n\nA. $2\\sqrt{2}\\pi^2 \\text{ cm/s}^2$.    B. $4\\pi^2 \\text{ cm/s}^2$.    C. $-4\\pi^2 \\text{ cm/s}^2$.    D. $0 \\text{ cm/s}^2$.\n\nMột vật dao động điều hòa với phương trình $x = 4 \\cos\\left(\\pi t + \\frac{\\pi}{4}\\right)$ (cm), trong đó $t$ tính bằng giây.\n\nGia tốc của vật tại thời điểm $t = 1$ giây là:\n\nA. $2\\sqrt{2}\\pi^2 \\text{ cm/s}^2$.\n\nB. $4\\pi^2 \\text{ cm/s}^2$.\n\nC. $-4\\pi^2 \\text{ cm/s}^2$.\n\nD. $0 \\text{ cm/s}^2$.\n\nLời giải\n\nVận tốc: $v(t) = x'(t) = -4\\pi \\sin\\left(\\pi t + \\frac{\\pi}{4}\\right)$.\n\nGia tốc: $a(t) = v'(t) = x''(t) = -4\\pi^2 \\cos\\left(\\pi t + \\frac{\\pi}{4}\\right)$.\n\nTại thời điểm $t = 1$ giây: $a(1) = -4\\pi^2 \\cos(\\pi \\cdot 1 + \\frac{\\pi}{4}) = -4\\pi^2 \\cos\\left(\\frac{5\\pi}{4}\\right) = 2\\sqrt{2}\\pi^2 \\text{ (cm/s}^2\\text{)}$.\n\nMột chất điểm chuyển động theo phương trình $s(t) = 3 \\sin\\left(6t + \\frac{\\pi}{3}\\right)$, trong đó $t > 0$, $t$ tính bằng giây và $s(t)$ tính bằng mét. Tính gia tốc tức thời của chất điểm tại thời điểm $t = \\frac{\\pi}{2}$ giây.\n\nA. $54\\sqrt{3} \\text{ m/s}^2$.      B. $-9 \\text{ m/s}^2$.      C. $54\\sqrt{3} \\text{ m/s}$.      D. $9 \\text{ m/s}^2$.\n\nMột chất điểm chuyển động theo phương trình $s(t) = 3 \\sin\\left(6t + \\frac{\\pi}{3}\\right)$, trong đó $t > 0$, $t$ tính bằng giây và $s(t)$ tính bằng mét. Tính gia tốc tức thời của chất điểm tại thời điểm $t = \\frac{\\pi}{2}$ giây.\n\nA. $54\\sqrt{3} \\text{ m/s}^2$. B. -9 m/s2. C. $54\\sqrt{3} \\text{ m/s}$. D. 9 m/s2.\n\nLời giải\n\nTa tính được $s'(t) = 18 \\cos\\left(6t + \\frac{\\pi}{3}\\right)$; $s''(t) = -108 \\sin\\left(6t + \\frac{\\pi}{3}\\right)$\n\nGia tốc của chất điểm $a(t) = s''(t) = -108 \\sin\\left(6t + \\frac{\\pi}{3}\\right) \\Rightarrow a\\left(\\frac{\\pi}{2}\\right) = 54\\sqrt{3} \\text{ m/s}^2$\n\nMột chất điểm chuyển động có phương trình $S = t^3 - 3t^2 - 9t + 5$, trong đó $t$ được tính bằng giây và $S$ được tính bằng mét. Gia tốc tại thời điểm vận tốc bị triệt tiêu là\n\nA. $12m/s^2$.      B. $9m/s^2$.      C. $-9m/s^2$.      D. $-12m/s^2$.\n\nMột chất điểm chuyển động có phương trình $S = t^3 - 3t^2 - 9t + 5$, trong đó $t$ được tính bằng giây và $S$ được tính bằng mét. Gia tốc tại thời điểm vận tốc bị triệt tiêu là\n\nA. $12m/s^2$.      B. $9m/s^2$.      C. $-9m/s^2$.      D. $-12m/s^2$.\n\nLời giải\n\nVận tốc tại thời điểm $t$ của chất điểm được tính theo công thức $v(t) = S'(t) = 3t^2 - 6t - 9$.\n\nGia tốc tức thời $t$ là $g(t) = v'(t) = 6t - 6$.\n\nVận tốc triệt tiêu nên $3t^2 - 6t - 9 = 0 \\Leftrightarrow \\begin{cases} t = 3 \\\\ t = -1(l) \\end{cases}$\n\nSuy ra gia tốc tại thời điểm đó là: $g(3) = 6 \\cdot 3 - 6 = 12(m/s^2)$.\n\nĐạo hàm của hàm số $y = 5 \\sin 3x - 7 \\cos 4x$ là\n\nA. $y' = 15 \\sin 3x - 28 \\cos 4x$.      B. $y' = 15 \\cos 3x - 28 \\sin 4x$.\nC. $y' = 15 \\cos 3x + 28 \\sin 4x$.      D. $y' = 5 \\cos 3x + 7 \\sin 4x$.\n\nĐạo hàm của hàm số $y = 5 \\sin 3x - 7 \\cos 4x$ là\n\nA. $y' = 15 \\sin 3x - 28 \\cos 4x$.                      B. $y' = 15 \\cos 3x - 28 \\sin 4x$.\n\nC. $y' = 15 \\cos 3x + 28 \\sin 4x$.                      D. $y' = 5 \\cos 3x + 7 \\sin 4x$.\n\nLời giải\n\nTa có $y' = 5 \\cdot 3 \\cos 3x + 7 \\cdot 4 \\sin 4x = 15 \\cos 3x + 28 \\sin 4x$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/3",
+          "page": 1,
+          "bbox": [
+            106.0,
+            600.0,
+            1498.0,
+            739.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "12",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = x^3 - 3x^2 + 2$. Viết phương trình tiếp tuyến của đồ thị hàm số biết tiếp tuyến song song với đường thẳng $y = 9x + 7$.\n\nA. $y = 9x + 7; y = 9x - 25$.                      B. $y = 9x - 25$.\n\nC. $y = 9x - 7; y = 9x + 25$.                      D. $y = 9x + 25$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = x^3 - 3x^2 + 2$. Viết phương trình tiếp tuyến của đồ thị hàm số biết tiếp tuyến song song với đường thẳng $y = 9x + 7$.\nA. $y = 9x + 7$; $y = 9x - 25$.                      B. $y = 9x - 25$.\n\nC. $y = 9x - 7; y = 9x + 25.$\n\nD. $y = 9x + 25.$\n\nLời giải\n\nGọi $M(x_0; y_0)$ là tọa độ tiếp điểm.\n\nTa tính được $k = y'(x_0) = 3x_0^2 - 6x_0$. Do tiếp tuyến song song với đường thẳng $y = 9x + 7$ nên có\n\n$$k = 9 \\Leftrightarrow 3x_0^2 - 6x_0 = 9 \\Leftrightarrow \\begin{cases} x_0 = -1 \\\\ x_0 = 3 \\end{cases}.$$\n\nVới $x_0 = -1 \\rightarrow \\begin{cases} y_0 = -2 \\\\ k = 9 \\end{cases}$. Phương trình tiếp tuyến cần tìm là: $y = 9x + 7$ (loại) (vì trùng với đường thẳng đã cho).\n\nVới $x_0 = 3 \\rightarrow \\begin{cases} y_0 = 2 \\\\ k = 9 \\end{cases}$. Phương trình tiếp tuyến cần tìm là: $y = 9x - 25.$\n\nCho hàm số $y = \\sqrt{x-1}$. Hệ số góc của tiếp tuyến của đồ thị hàm số tại điểm có hoành độ $x_0 = 2$ là?\n\nA. $k = \\frac{1}{4}$.                      B. $k = 2$.                      C. $k = \\frac{1}{2}$.                      D. $k = \\frac{1}{3}$.\n\nCho hàm số $y = \\sqrt{x-1}$. Hệ số góc của tiếp tuyến của đồ thị hàm số tại điểm có hoành độ $x_0 = 2$ là?\n\nA. $k = \\frac{1}{4}$.                      B. $k = 2$.                      C. $k = \\frac{1}{2}$.                      D. $k = \\frac{1}{3}$.\n\nLời giải\n\nXét $\\lim_{x \\rightarrow 2} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x \\rightarrow 2} \\frac{\\sqrt{x-1} - 1}{x - 2} = \\lim_{x \\rightarrow 2} \\frac{x - 2}{(x - 2)(\\sqrt{x-1} + 1)} = \\lim_{x \\rightarrow 2} \\frac{1}{\\sqrt{x-1} + 1} = \\frac{1}{2}$.\n\nVậy hệ số góc của tiếp tuyến là $k = \\frac{1}{2}$.\n\nMột con lắc lò xo chuyển động điều hòa theo phương ngang trên mặt phẳng không ma sát, có phương trình chuyển động x = 2 cos(πt - π/3) - 5, trong đó t tính bằng giây (s) và x tính bằng centimet (cm). Tìm thời điểm mà vận tốc tức thời của con lắc lò xo bằng 0?\n\nA. t = 1/3 + k (s); (k ∈ Z). B. t = 2 + k (s); (k ∈ Z). C. t = 2/3 + k (s); (k ∈ Z). D. t = 5/3 + k (s); (k ∈ Z).\n\nMột con lắc lò xo chuyển động điều hòa theo phương ngang trên mặt phẳng không ma sát, có phương trình chuyển động $x = 2 \\cos\\left(\\pi t - \\frac{\\pi}{3}\\right) - 5$, trong đó $t$ tính bằng giây (s) và $x$ tính bằng centimet (cm). Tìm thời điểm mà vận tốc tức thời của con lắc lò xo bằng 0?\n\nA. $t = \\frac{1}{3} + k(s); (k \\in \\mathbb{Z})$.      B. $t = 2 + k(s); (k \\in \\mathbb{Z})$.\n\nC. $t = \\frac{2}{3} + k(s); (k \\in \\mathbb{Z})$.      D. $t = \\frac{5}{3} + k(s); (k \\in \\mathbb{Z})$.\n\nLời giải\n\nVận tốc tức thời của con lắc: $v(t) = x' = -2\\pi \\sin\\left(\\pi t - \\frac{\\pi}{3}\\right)$.\n\n$$v(t) = 0 \\Leftrightarrow -2\\pi \\sin\\left(\\pi t - \\frac{\\pi}{3}\\right) = 0 \\Leftrightarrow \\sin\\left(\\pi t - \\frac{\\pi}{3}\\right) = 0 \\Leftrightarrow \\pi t - \\frac{\\pi}{3} = k\\pi; (k \\in \\mathbb{Z})$$\n\n$$\\Leftrightarrow t = \\frac{1}{3} + k; (k \\in \\mathbb{Z}).$$\n\nTính đạo hàm của hàm số hợp $y = \\sqrt{x + 3}$\n\nA. $y' = \\frac{1}{\\sqrt{x + 3}}$ .      B. $y' = \\frac{1}{2\\sqrt{x + 3}}$ .\n\nC. $y' = \\frac{3}{2\\sqrt{x + 3}}$ .      D. $y' = -\\frac{1}{\\sqrt{x + 3}}$ .\n\nTính đạo hàm của hàm số hợp $y = \\sqrt{x + 3}$\n\nA. $y' = \\frac{1}{\\sqrt{x + 3}}$.      B. $y' = \\frac{1}{2\\sqrt{x + 3}}$.      C. $y' = \\frac{3}{2\\sqrt{x + 3}}$.      D. $y' = -\\frac{1}{\\sqrt{x + 3}}$.\n\nLời giải\n\nVới $u = u(x) = x + 3$, ta có $y' = (\\sqrt{u})' = \\frac{u'}{2\\sqrt{u}}$. Suy ra\n\n$$y' = (\\sqrt{x + 3})' = \\frac{(x + 3)'}{2\\sqrt{x + 3}} = \\frac{1}{2\\sqrt{x + 3}}.$$\n\nMột vật dao động điều hòa với phương trình $x = 10 \\cos\\left(2\\pi t - \\frac{\\pi}{3}\\right)$ (cm), trong đó $t$ tính bằng giây.\n\nGia tốc của vật tại thời điểm $t = \\frac{1}{4}$ giây là:\n\nA. $-20\\sqrt{3}\\pi^2 \\text{ cm/s}^2$.    B. $40\\pi^2 \\text{ cm/s}^2$.    C. $-40\\pi^2 \\text{ cm/s}^2$.    D. $0 \\text{ cm/s}^2$.\n\nMột vật dao động điều hòa với phương trình $x = 10 \\cos\\left(2\\pi t - \\frac{\\pi}{3}\\right)$ (cm), trong đó $t$ tính bằng giây. Gia tốc của vật tại thời điểm $t = \\frac{1}{4}$ giây là:\n\nA. $-20\\sqrt{3}\\pi^2 \\text{ cm/s}^2$.      B. $40\\pi^2 \\text{ cm/s}^2$.      C. $-40\\pi^2 \\text{ cm/s}^2$.      D. $0 \\text{ cm/s}^2$.\n\nLời giải\n\nVận tốc: $v(t) = x'(t) = -20\\pi \\sin\\left(2\\pi t - \\frac{\\pi}{3}\\right)$.\n\nGia tốc: $a(t) = v'(t) = x''(t) = -40\\pi^2 \\cos\\left(2\\pi t - \\frac{\\pi}{3}\\right)$.\n\nTại thời điểm $t = \\frac{1}{4}$ giây: $a\\left(\\frac{1}{4}\\right) = -40\\pi^2 \\cos\\left(2\\pi \\cdot \\frac{1}{4} - \\frac{\\pi}{3}\\right) = -20\\sqrt{3}\\pi^2 \\text{ (cm / s}^2\\text{)}$.\n\nMột chất điểm dao động theo phương trình ly độ $x(t) = 2 \\cos(2\\pi t)$, trong đó $t > 0$, $t$ tính bằng giây và $x(t)$ tính bằng mét. Tính gia tốc lớn nhất của chất điểm\n\nA. $8\\pi^2 \\text{ m/s}^2$.      B. $4\\pi^2 \\text{ m/s}^2$.      C. $2\\pi \\text{ m/s}$.      D. $4\\pi \\text{ m/s}^2$.\n\nMột chất điểm dao động theo phương trình ly độ $x(t) = 2 \\cos(2\\pi t)$, trong đó $t > 0$, $t$ tính bằng giây và $x(t)$ tính bằng mét. Tính gia tốc lớn nhất của chất điểm\n\nA. $8\\pi^2 \\text{ m/s}^2$.      B. $4\\pi^2 \\text{ m/s}^2$.      C. $2\\pi \\text{ m/s}$.      D. $4\\pi \\text{ m/s}^2$.\n\nLời giải\n\nTa tính được $v(t) = x'(t) = -4\\pi \\sin(2\\pi t)$; $a(t) = x''(t) = -8\\pi^2 \\cos(2\\pi t)$.\n\n$\\Rightarrow$ Gia tốc lớn nhất của chất điểm là $8\\pi^2 \\text{ m/s}^2$ vì $-1 \\leq \\cos(2\\pi t) \\leq 1$.\n\nCho hàm số $y = f(x) = \\log_8 x$ với $x > 0$. Khi đó $f''(x)$ bằng\n\nA. $\\frac{1}{x^2 \\ln 8}$      B. $\\frac{-1}{3x^2 \\ln 2}$      C. $\\frac{1}{x \\ln 8}$      D. $\\frac{-1}{3x^2}$.\n\nCho hàm số $y = f(x) = \\log_8 x$ với $x > 0$. Khi đó $f''(x)$ bằng\n\nA. $\\frac{1}{x^2 \\ln 8}$      B. $\\frac{-1}{3x^2 \\ln 2}$      C. $\\frac{1}{x \\ln 8}$      D. $\\frac{-1}{3x^2}$.\n\nCho chuyển động được xác định bởi phương trình $s = 2t^3 + 6t^2 - t$, trong đó $t$ được tính bằng giây và $s$ được tính bằng mét. Gia tốc của chuyển động tại thời điểm $t = 3s$ là:\n\nA. $48(m/s)$.      B. $89(m/s^2)$.      C. $36(m/s^2)$.      D. $48(m/s^2)$.\n\nCho chuyển động được xác định bởi phương trình $s = 2t^3 + 6t^2 - t$, trong đó $t$ được tính bằng giây và $s$ được tính bằng mét. Gia tốc của chuyển động tại thời điểm $t = 3s$ là:\n\nA. $48(m/s)$.      B. $89(m/s^2)$.      C. $36(m/s^2)$.      D. $48(m/s^2)$.\n\nLời giải\n\nTa có $v(t) = S'(t) = 6t^2 + 12t - 1 \\Rightarrow a(t) = v'(t) = 12t + 12$.\n\nGia tốc của chuyển động khi $t = 3s$ là: $a(3) = 12.3 + 12 = 48(m/s^2)$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/4",
+          "page": 1,
+          "bbox": [
+            106.0,
+            766.0,
+            1498.0,
+            954.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Dùng định nghĩa để tính đạo hàm của hàm số $y = f(x) = x^2 + 2x$ tại điểm $x_0 = 1$. Xét tính đúng sai của các khẳng định sau:\n\na) $f'(1) = \\lim_{x \\rightarrow 1} \\frac{f(x) - f(1)}{x - 1}$\n\nb) $f'(1) = \\lim_{x \\rightarrow 1} \\frac{x^2 + 2x - 3}{x - 1}$\n\nc) $f'(1) = \\lim_{x \\rightarrow 1} (x + 4)$\n\nd) $f'(1) = a \\Rightarrow a > 5$",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Dùng định nghĩa để tính đạo hàm của hàm số $y = f(x) = x^2 + 2x$ tại điểm $x_0 = 1$. Xét tính đúng sai của các khẳng định sau:\n\nDùng định nghĩa để tính đạo hàm của hàm số $f(x) = \\frac{2}{1-x}$ với $x \\neq 1$.\n\n<table>\n<tr><th></th><th>Mệnh đề</th><th>Đúng</th><th>Sai</th></tr>\n<tr><td>a)</td><td>Với bất kì $x_0 \\neq 1$, ta có: $f'(x_0) = \\lim_{x \\rightarrow x_0} \\frac{2}{(1-x)(1-x_0)}$</td><td></td><td></td></tr>\n<tr><td>b)</td><td>$f'(2) = 2$</td><td></td><td></td></tr>\n<tr><td>c)</td><td>$f'(3) = \\frac{1}{3}$</td><td></td><td></td></tr>\n<tr><td>d)</td><td>$f'(2) + f'(3) = \\frac{3}{2}$</td><td></td><td></td></tr>\n</table>\n\nDùng định nghĩa để tính đạo hàm của hàm số $f(x) = \\frac{2}{1-x}$ với $x \\neq 1$.\n\n<table>\n<tr><th></th><th>Mệnh đề</th><th>Đúng</th><th>Sai</th></tr>\n<tr><td>a)</td><td>Với bất kì $x_0 \\neq 1$, ta có: $f'(x_0) = \\lim_{x \\rightarrow x_0} \\frac{2}{(1-x)(1-x_0)}$</td><td></td><td></td></tr>\n<tr><td>b)</td><td>$f'(2) = 2$</td><td></td><td></td></tr>\n<tr><td>c)</td><td>$f'(3) = \\frac{1}{3}$</td><td></td><td></td></tr>\n<tr><td>d)</td><td>$f'(2) + f'(3) = \\frac{3}{2}$</td><td></td><td></td></tr>\n</table>\n\nLời giải\n\n<table>\n<tr><td>a) Đúng</td><td>b) Đúng</td><td>c) Sai</td><td>d) Sai</td></tr>\n</table>\n\nCho hàm số f(x) = -cos x + sin x - cos 2x\n\nCho hàm số $f(x) = -\\cos x + \\sin x - \\cos 2x$\n\nCho hàm số $y = -4x^3 + \\frac{x^2}{2} - 2x + 3$, biết $y' = ax^2 + bx + c$.\n\nCho hàm số $y = -4x^3 + \\frac{x^2}{2} - 2x + 3$, biết $y' = ax^2 + bx + c$.\n\nCho hàm số $y = \\sin 2x$.\n\nCho hàm số $y = \\sin 2x$.\n\nCho hàm số $f(x) = \\frac{1}{12}x^4 - x^3 + \\frac{7}{2}x^2 + 4x - 5$.\n\nCho hàm số $f(x) = \\frac{1}{12}x^4 - x^3 + \\frac{7}{2}x^2 + 4x - 5$.\n\nCho hàm số $f(x) = \\frac{1}{2}x^4 - 3x^2 + 2024$ có đồ thị $(C)$ và đường thẳng $d: y = -4x + \\frac{4043}{2}$.\n\nCho hàm số $f(x) = \\frac{1}{2}x^4 - 3x^2 + 2024$ có đồ thị $(C)$ và đường thẳng $d: y = -4x + \\frac{4043}{2}$.\n\nCho hàm số $y = -x^3 + 3x^2 + 9x - 1$ có đồ thị là (C).\n\nCho hàm số $y = -x^3 + 3x^2 + 9x - 1$ có đồ thị là (C).",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/6",
+          "page": 1,
+          "bbox": [
+            106.0,
+            1108.0,
+            1498.0,
+            1505.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Dùng định nghĩa để tính đạo hàm của hàm số $f(x) = 2x^3$. Khi đó:\n\na) Với bất kì $x_0$: $f'(x_0) = \\lim_{x \\rightarrow x_0} \\frac{f(x) - f(x_0)}{x - x_0}$\n\nb) $f'(1) = -6$\n\nc) $f'(0) = 0$\n\nd) $f'(2) = 24$",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Dùng định nghĩa để tính đạo hàm của hàm số $f(x) = 2x^3$. Khi đó:\n\nCho hàm số $y = x^2 + 3x + 1$ có đồ thị (C). Viết được phương trình tiếp tuyến của (C) tại giao điểm của (C) với trục tung.\n\nCho hàm số $y = x^2 + 3x + 1$ có đồ thị (C). Viết được phương trình tiếp tuyến của (C) tại giao điểm của (C) với trục tung.\n\nCho hàm số y = f(x) = ln(x/(x+1)) - 2025\n\nCho hàm số $y = f(x) = \\ln \\frac{x}{x+1} - 2025$.\n\nXét hàm số $f(x) = \\sqrt[3]{\\cos 2x}$.\n\nXét hàm số $f(x) = \\sqrt[3]{\\cos 2x}$.\n\nCho hàm số $y = f(x) = \\ln(2x - 4)$.\n\nCho hàm số $y = f(x) = \\ln(2x - 4)$.\n\nMột con lắc lò xo chuyển động theo phương nằm ngang trên mặt phẳng không ma sát, có phương trình chuyển động $x = 4 \\cos\\left(\\pi t - \\frac{2\\pi}{3}\\right) + 3$, trong đó $t$ tính bằng giây và $x$ tính bằng centimét.\n\nMột con lắc lò xo chuyển động theo phương nằm ngang trên mặt phẳng không ma sát, có phương trình chuyển động $x = 4.\\cos\\left(\\pi t - \\frac{2\\pi}{3}\\right) + 3$, trong đó $t$ tính bằng giây và $x$ tính bằng centimét.\n\nCho hàm số $y = x^3 - 3x^2 + 2$.\n\nCho hàm số $y = x^3 - 3x^2 + 2$.\n\nCho hàm số $f(x) = x \\ln x$ có đồ thị (C).\n\nCho hàm số $f(x) = x \\ln x$ có đồ thị (C).",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/7",
+          "page": 1,
+          "bbox": [
+            106.0,
+            1518.0,
+            1106.0,
+            1839.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "3",
+      "type": "true_false",
+      "content": "Cho hàm số $y = f(x) = 2x^3$ có đồ thị $(C)$ và điểm $M$ thuộc $(C)$ có hoành độ $x_0 = -1$. Khi đó:\na) Hệ số góc của tiếp tuyến của $(C)$ tại điểm $M$ bằng 6\nb) Phương trình tiếp tuyến của $(C)$ tại $M$ đi qua điểm $A(0; 4)$\nc) Phương trình tiếp tuyến của $(C)$ tại $M$ cắt đường thẳng $d : y = 3x$ tại điểm có hoành độ bằng 4\nd) Phương trình tiếp tuyến của $(C)$ tại $M$ vuông góc với đường thẳng $\\Delta : y = -\\frac{1}{6}x$",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = f(x) = 2x^3$ có đồ thị $(C)$ và điểm $M$ thuộc $(C)$ có hoành độ $x_0 = -1$. Khi đó:\n\nViết được phương trình tiếp tuyến của đồ thị hàm số $y = \\frac{4}{x-1}$ tại điểm có hoành độ $x_0 = -1$.\n\nViết được phương trình tiếp tuyến của đồ thị hàm số $y = \\frac{4}{x-1}$ tại điểm có hoành độ $x_0 = -1$.\n\nCho hàm số $f(x) = x^3 - 3x^2 + 2x$.\n\n<table>\n<tr><th></th><th>Mệnh đề</th><th>Đúng</th><th>Sai</th></tr>\n<tr><td>a)</td><td>Hàm số có đạo hàm là $f'(x) = 3x^2 - 6x + 2$.</td><td></td><td></td></tr>\n<tr><td>b)</td><td>$f'(3) = 6$</td><td></td><td></td></tr>\n<tr><td>c)</td><td>$f'(4) < f'(5)$</td><td></td><td></td></tr>\n<tr><td>d)</td><td>$f'(2) + f'(-2) = 0$</td><td></td><td></td></tr>\n</table>\n\nCho hàm số $f(x) = x^3 - 3x^2 + 2x$.\n\n<table>\n<tr><th></th><th>Mệnh đề</th><th>Đúng</th><th>Sai</th></tr>\n<tr><td>a)</td><td>Hàm số có đạo hàm là $f'(x) = 3x^2 - 6x + 2$.</td><td></td><td></td></tr>\n<tr><td>b)</td><td>$f'(3) = 6$</td><td></td><td></td></tr>\n<tr><td>c)</td><td>$f'(4) < f'(5)$</td><td></td><td></td></tr>\n<tr><td>d)</td><td>$f'(2) + f'(-2) = 0$</td><td></td><td></td></tr>\n</table>\n\nLời giải\n\n<table>\n<tr><td>a) Đúng</td><td>b) Sai</td><td>c) Đúng</td><td>d) Sai</td></tr>\n</table>\n\nCho hàm số $f(x) = \\frac{x-3}{x+2}$ và $g(x) = x \\ln x$.\n\n<table>\n<tr><th></th><th>Mệnh đề</th><th>Đúng</th><th>Sai</th></tr>\n<tr><td>a)</td><td>Hàm số $f(x)$ có đạo hàm là $f'(x) = \\frac{5}{(x+2)^2}$</td><td></td><td></td></tr>\n<tr><td>b)</td><td>Hàm số $g(x)$ có đạo hàm là $g'(x) = \\ln x + 1$.</td><td></td><td></td></tr>\n<tr><td>c)</td><td>$f'(-1) - g'(e) = 2$</td><td></td><td></td></tr>\n<tr><td>d)</td><td>Phương trình $(x+2)^2 f'(x) = g'(x)$ có hai nghiệm.</td><td></td><td></td></tr>\n</table>\n\nCho hàm số $f(x) = \\frac{x-3}{x+2}$ và $g(x) = x \\ln x$.\n\n<table>\n<tr><th></th><th>Mệnh đề</th><th>Đúng</th><th>Sai</th></tr>\n<tr><td>a)</td><td>Hàm số $f(x)$ có đạo hàm là $f'(x) = \\frac{5}{(x+2)^2}$</td><td></td><td></td></tr>\n<tr><td>b)</td><td>Hàm số $g(x)$ có đạo hàm là $g'(x) = \\ln x + 1$.</td><td></td><td></td></tr>\n<tr><td>c)</td><td>$f'(-1) - g'(e) = 2$</td><td></td><td></td></tr>\n<tr><td>d)</td><td>Phương trình $(x+2)^2 f'(x) = g'(x)$ có hai nghiệm.</td><td></td><td></td></tr>\n</table>\n\nLời giải\n\n<table>\n<tr><td>a) Đúng</td><td>b) Đúng</td><td>c) Sai</td><td>d) Sai</td></tr>\n</table>\n\nMột vật chuyển động trên đường thẳng được xác định bởi công thức $s(t) = t^3 - 3t^2 + 7t - 2$, trong đó $t > 0$ và tính bằng giây và $s(t)$ là quãng đường chuyển động được của vật trong $t$ giây tính bằng mét.\n\nMột vật chuyển động trên đường thẳng được xác định bởi công thức $s(t) = t^3 - 3t^2 + 7t - 2$, trong đó $t > 0$ và tính bằng giây và $s(t)$ là quãng đường chuyển động được của vật trong $t$ giây tính bằng mét.\n\nChuyển động của một vật có phương trình $s(t) = 4 \\cos\\left(2\\pi t - \\frac{\\pi}{12}\\right)$ (m), với $t$ là thời gian tính bằng giây.\n\nChuyển động của một vật có phương trình $s(t) = 4 \\cos\\left(2\\pi t - \\frac{\\pi}{12}\\right) \\text{ (m)}$, với $t$ là thời gian tính bằng giây.\n\nCho hàm số $f(x) = \\sin x - x$.\n\nCho hàm số $f(x) = \\sin x - x$.\n\nCho hàm số $y = f(x) = 2x^3 + 2$.\n\nCho hàm số $y = f(x) = 2x^3 + 2$.",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/1",
+          "page": 2,
+          "bbox": [
+            103.0,
+            109.0,
+            1484.0,
+            463.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "4",
+      "type": "true_false",
+      "content": "Viết được phương trình tiếp tuyến của đồ thị hàm số $y = \\frac{x+9}{x+1}$ biết tiếp tuyến vuông góc với đường thẳng $d : x - 2y + 2 = 0$. Khi đó:\na) Có hai phương trình tiếp tuyến thỏa mãn.\nb) Hệ số góc của tiếp tuyến bằng $-2$\nc) Phương trình tiếp tuyến đi qua điểm $A(1; 5)$\nd) Phương trình tiếp tuyến đi qua điểm $B(1; -7)$",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Viết được phương trình tiếp tuyến của đồ thị hàm số $y = \\frac{x+9}{x+1}$ biết tiếp tuyến vuông góc với đường thẳng $d : x - 2y + 2 = 0$. Khi đó:\na) Có hai phương trình tiếp tuyến thỏa mãn.\nb) Hệ số góc của tiếp tuyến bằng $-2$\nc) Phương trình tiếp tuyến đi qua điểm $A(1;5)$\nd) Phương trình tiếp tuyến đi qua điểm $B(1;-7)$\n\nLời giải\n\n<table>\n<tr><td>a) Đúng</td><td>b) Đúng</td><td>c) Đúng</td><td>d) Đúng</td></tr>\n</table>\n\nĐường thẳng $d : x - 2y + 2 = 0 \\Rightarrow y = \\frac{1}{2}x + 1$ nên đường thẳng $d$ có hệ số góc là $k_d = \\frac{1}{2}$.\n\nTiếp tuyến cần tìm có hệ số góc $k$ vuông góc với đường thẳng $d$\n\n$$\\Rightarrow k \\cdot k_d = -1 \\Rightarrow k = -\\frac{1}{k_d} = -2.$$\n\nHoành độ tiếp điểm là nghiệm của phương trình $y' = k \\Rightarrow \\frac{-8}{(x+1)^2} = -2 \\Rightarrow \\begin{cases} x = 1 \\\\ x = -3 \\end{cases}$.\n\nVới $x = 1$, phương trình tiếp tuyến là $y = -2x + 7$.\n\nVới $x = -3$, phương trình tiếp tuyến là $y = -2x - 9$.\n\nVậy có hai phương trình tiếp tuyến thỏa mãn là $d_1 : y = -2x + 7; y = -2x - 9$.\n\nCho hàm số $f(x) = \\frac{2}{1-x}$ có đồ thị $(C)$ và điểm $M(3; -1) \\in (C)$. Khi đó:\n\nCho hàm số $f(x) = \\frac{2}{1-x}$ có đồ thị $(C)$ và điểm $M(3; -1) \\in (C)$. Khi đó:\n\nMột chất điểm chuyển động với phương trình chuyển động $s(t) = \\frac{t^4}{12} - \\frac{2t^3}{3} + 4t^2 + 5t + 2$ (m).\n\nMột chất điểm chuyển động với phương trình chuyển động $s(t) = \\frac{t^4}{12} - \\frac{2t^3}{3} + 4t^2 + 5t + 2$ (m).\n\nCho hàm số $y = (x-2)\\sqrt{x^2+m}$ với $m$ là tham số.\n\n<table>\n<tr><th></th><th>Mệnh đề</th><th>Đúng</th><th>Sai</th></tr>\n<tr><td>a)</td><td>Hàm số $f(x)$ có đạo hàm là $f'(x) = \\frac{x^2 - 2x + m}{\\sqrt{x^2+m}}$.</td><td></td><td></td></tr>\n<tr><td>b)</td><td>$f'(0) = \\sqrt{m}$</td><td></td><td></td></tr>\n<tr><td>c)</td><td>Hệ số góc tiếp tuyến của đồ thị hàm số tại $x_0 = 1$ là $\\frac{m}{\\sqrt{m+1}}$.</td><td></td><td></td></tr>\n<tr><td>d)</td><td>Để phương trình $f'(x) = 0$ có hai nghiệm phân biệt thì $m < \\frac{1}{2}$.</td><td></td><td></td></tr>\n</table>\n\nCho hàm số $y = (x - 2)\\sqrt{x^2 + m}$ với $m$ là tham số.\n\n<table>\n<tr><th></th><th>Mệnh đề</th><th>Đúng</th><th>Sai</th></tr>\n<tr><td>a)</td><td>Hàm số $f(x)$ có đạo hàm là $f'(x) = \\frac{x^2 - 2x + m}{\\sqrt{x^2 + m}}$.</td><td></td><td></td></tr>\n<tr><td>b)</td><td>$f'(0) = \\sqrt{m}$</td><td></td><td></td></tr>\n<tr><td>c)</td><td>Hệ số góc tiếp tuyến của đồ thị hàm số tại $x_0 = 1$ là $\\frac{m}{\\sqrt{m+1}}$.</td><td></td><td></td></tr>\n<tr><td>d)</td><td>Để phương trình $f'(x) = 0$ có hai nghiệm phân biệt thì $m < \\frac{1}{2}$.</td><td></td><td></td></tr>\n</table>\n\nLời giải\n\n<table>\n<tr><td>a) Sai</td><td>b) Đúng</td><td>c) Đúng</td><td>d) Đúng</td></tr>\n</table>\n\nMột vật chuyển động thẳng xác định bởi phương trình $s = s(t) = t^3 - 3t^2 - 9t$ trong đó $t$ được tính bằng giây và $S$ được tính bằng mét.\n\n<table>\n<tr><th></th><th>Mệnh đề</th><th>Đúng</th><th>Sai</th></tr>\n<tr><td>a)</td><td>Vận tốc của vật tại thời điểm $t = 5s$ là 36m/s.</td><td></td><td></td></tr>\n<tr><td>b)</td><td>Gia tốc của vật tại thời điểm $t = 3s$ là 6m/s2.</td><td></td><td></td></tr>\n<tr><td>c)</td><td>Gia tốc tại thời điểm vận tốc triệt tiêu là 12m/s2.</td><td></td><td></td></tr>\n<tr><td>d)</td><td>Vận tốc tại thời điểm gia tốc triệt tiêu là 12m/s.</td><td></td><td></td></tr>\n</table>\n\nMột vật chuyển động thẳng xác định bởi phương trình $s = s(t) = t^3 - 3t^2 - 9t$ trong đó $t$ được tính bằng giây và $S$ được tính bằng mét.\n\n<table>\n<tr><td></td><td>Mệnh đề</td><td>Đúng</td><td>Sai</td></tr>\n</table>\n\n<table>\n<tr><td>a)</td><td>Vận tốc của vật tại thời điểm $t = 5s$ là 36m/s.</td><td></td><td></td></tr>\n<tr><td>b)</td><td>Gia tốc của vật tại thời điểm $t = 3s$ là 6m/s2.</td><td></td><td></td></tr>\n<tr><td>c)</td><td>Gia tốc tại thời điểm vận tốc triệt tiêu là 12m/s2.</td><td></td><td></td></tr>\n<tr><td>d)</td><td>Vận tốc tại thời điểm gia tốc triệt tiêu là 12m/s.</td><td></td><td></td></tr>\n</table>\n\nLời giải\n\n<table>\n<tr><td>a) Đúng</td><td>b) Đúng</td><td>c) Đúng</td><td>d) Sai</td></tr>\n</table>\n\nTại $t_0 \\in \\mathbb{R}$ tuỳ ý, ta có:\n\n$$\\begin{aligned}\ns(t) - s(t_0) &= t^3 - 3t^2 - 9t - (t_0^3 - 3t_0^2 - 9t_0) = (t - t_0)(t^2 + t.t_0 + t_0^2) - 3(t - t_0)(t + t_0) - 9(t - t_0) \\\\\n&= (t - t_0)(t^2 + t.t_0 + t_0^2 - 3t - 3t_0 - 9) \\\\\n\\lim_{t \\rightarrow t_0} \\frac{s(t) - s(t_0)}{t - t_0} &= \\lim_{t \\rightarrow t_0} \\frac{(t - t_0)(t^2 + t.t_0 + t_0^2 - 3t - 3t_0 - 9)}{t - t_0} \\\\\n&= \\lim_{t \\rightarrow t_0} (t^2 + t.t_0 + t_0^2 - 3t - 3t_0 - 9) = 3t_0^2 - 6t_0 - 9\n\\end{aligned}$$\n\nTa có: $v(t) = s'(t) = 3t^2 - 6t - 9$\n\nTại $t_0 \\in \\mathbb{R}$ tuỳ ý, ta có:\n\n$$\\begin{aligned}\nv(t) - v(t_0) &= 3t^2 - 6t - 9 - (3t_0^2 - 6t_0 - 9) = (t - t_0)(3t + 3t_0 - 6) \\\\\n\\lim_{t \\rightarrow t_0} \\frac{v(t) - v(t_0)}{t - t_0} &= \\lim_{t \\rightarrow t_0} \\frac{(t - t_0)(3t + 3t_0 - 6)}{t - t_0} = \\lim_{t \\rightarrow t_0} (3t + 3t_0 - 6) = 6t_0 - 6\n\\end{aligned}$$\n\nTa có: $a(t) = v'(t) = 6t - 6$\n\nCho hàm số $y = e^{\\sin x}$.\n\nCho hàm số $y = e^{\\sin x}.$\n\nMột tài xế đang lái xe ô tô. Ngay khi phát hiện phía trước có vật cản, tài xế đã phanh gấp lại nhưng vẫn xảy ra va chạm, chiếc ô tô để lại vết trượt dài 24,24m (được tính từ lúc bắt đầu đạp phanh đến khi xảy ra va chạm). Trong quá trình đạp phanh, ô tô chuyển động theo phương trình $s(t) = 22t - \\frac{3}{2}t^2$, trong đó $s$ (m) là độ dài quãng đường đi được sau khi phanh, $t$ (s) là thời gian tính từ lúc bắt đầu phanh ($0 \\leq t \\leq 5$).\n\nMột tài xế đang lái xe ô tô. Ngay khi phát hiện phía trước có vật cản, tài xế đã phanh gấp lại nhưng vẫn xảy ra va chạm, chiếc ô tô để lại vết trượt dài 24,24m (được tính từ lúc bắt đầu đạp phanh đến khi xảy ra va chạm). Trong quá trình đạp phanh, ô tô chuyển động theo phương trình $s(t) = 22t - \\frac{3}{2}t^2$, trong đó $s$ (m) là độ dài quãng đường đi được sau khi phanh, $t$ (s) là thời gian tính từ lúc bắt đầu phanh ($0 \\leq t \\leq 5$).\n\nMột vật chuyển động trên đường thẳng được xác định bởi công thức $s(t) = t^3 - 3t^2 + 7t - 2$, trong đó $t > 0$ và tính bằng giây và $s$ là quãng đường chuyển động được của vật trong $t$ giây tính bằng mét. Khi đó:\n\nMột vật chuyển động trên đường thẳng được xác định bởi công thức $s(t) = t^3 - 3t^2 + 7t - 2$, trong đó $t > 0$ và tính bằng giây và $s$ là quãng đường chuyển động được của vật trong $t$ giây tính bằng mét. Khi đó:",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/2",
+          "page": 2,
+          "bbox": [
+            103.0,
+            492.0,
+            1484.0,
+            817.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Tính đạo hàm (bằng định nghĩa) của hàm số $y = 2x^2 + x + 1$ tại $x_0 = 2$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Tính đạo hàm (bằng định nghĩa) của hàm số $y = 2x^2 + x + 1$ tại $x_0 = 2$.\n\nLời giải\n\nTa có: $f(x) - f(x_0) = f(x) - f(2) = 2x^2 + x + 1 - 11 = 2x^2 + x - 10$\n\nKhi đó:\n$$\\frac{f(x) - f(2)}{x - 2} = \\frac{2x^2 + x - 10}{x - 2} = \\frac{2(x-2)\\left(x + \\frac{5}{2}\\right)}{x - 2} = 2x + 5$$\n\nTa có\n$$\\lim_{x \\rightarrow 2} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x \\rightarrow 2} (2x + 5) = 9.$$\nVậy $f'(2) = 9$\n\nCho hàm số $f(x)$ xác định bởi $f(x) = \\begin{cases} \\frac{\\sqrt{4x^2+1}-1}{x} & \\text{khi } x \\neq 0 \\\\ 0 & \\text{khi } x = 0 \\end{cases}$. Giá trị $f'(0)$ bằng\n\nCho hàm số $f(x)$ xác định bởi $f(x) = \\begin{cases} \\frac{\\sqrt{4x^2+1}-1}{x} & \\text{khi } x \\neq 0 \\\\ 0 & \\text{khi } x = 0 \\end{cases}$. Giá trị $f'(0)$ bằng\n\nLời giải\n\nTập xác định: $D = \\mathbb{R}$.\n\nTa có : $\\lim_{x \\rightarrow 0} \\frac{f(x) - f(0)}{x - 0} = \\lim_{x \\rightarrow 0} \\frac{\\sqrt{4x^2 + 1} - 1}{x^2} = \\lim_{x \\rightarrow 0} \\frac{4x^2}{x^2 \\left( \\sqrt{4x^2 + 1} + 1 \\right)} = \\lim_{x \\rightarrow 0} \\frac{4}{\\sqrt{4x^2 + 1} + 1} = 2$\n\nVậy $f'(0) = 2$.\n\nĐạo hàm của hàm số $y = x^5$ tại điểm $x = 2$ là:\n\nĐạo hàm của hàm số $y = x^5$ tại điểm $x = 2$ là:\n\nLời giải\n\nTa có: $y' = (x^5)' = 5x^4$.\n\nTừ đó $y'(2) = 5 \\cdot 2^4 = 80$.\n\nHệ số góc của tiếp tuyến với đồ thị hàm số $y = (x+2)(x^2+1)$ tại điểm có hoành độ $x=1$ bằng\n\nHệ số góc của tiếp tuyến với đồ thị hàm số $y = (x + 2)(x^2 + 1)$ tại điểm có hoành độ $x = 1$ bằng\n\nLời giải\n\nTa có $f'(x) = (x + 2)'(x^2 + 1) + (x + 2)(x^2 + 1)' = x^2 + 1 + 2x(x + 2) = 3x^2 + 4x + 1$.\n\nHệ số góc của tiếp tuyến tại điểm có hoành độ $x = 1$ là $f'(1) = 8$.\n\nCho hàm số $f(x) = x^3 + 2x$, giá trị của $f''(-1)$ bằng\n\nCho hàm số $f(x) = x^3 + 2x$, giá trị của $f''(-1)$ bằng\n\nLời giải\n\n$f'(x) = 3x^2 + 2, f''(x) = 6x \\Rightarrow f''(-1) = -6.$\n\nTính đạo hàm cấp hai của hàm số sau: $y = x \\sin x$ tại $x_0 = 0$.\n\nTính đạo hàm cấp hai của hàm số sau: $y = x \\sin x$ tại $x_0 = 0.$\n\nLời giải\n\nTrả lời: 2\n\nTa có:\n\n$$\\begin{aligned} y' &= (x \\sin x)' = x' \\cdot \\sin x + (\\sin x)' \\cdot x = \\sin x + x \\cos x \\\\ y' &= (\\sin x + x \\cos x)' = (\\sin x)' + (x \\cos x)' \\\\ &= \\cos x + x' \\cdot \\cos x + (\\cos x)' \\cdot x = 2 \\cos x - x \\sin x \\\\ \\Rightarrow y''(0) &= 2 \\cos 0 - 0 \\cdot \\sin 0 = 2 \\end{aligned}$$\n\nCho hàm số $f(x) = \\log_2(x^2 + 1)$, tính $f'(1)$\n\nCho hàm số $f(x) = \\log_2(x^2 + 1)$, tính $f'(1)$\n\nLời giải\n\nTXĐ: $D = \\mathbb{R}$.\n\n$$f'(x) = \\frac{2x}{(x^2 + 1) \\cdot \\ln 2} \\Rightarrow f'(1) = \\frac{1}{\\ln 2}.$$\n\nMột phản ứng hóa học tạo ra một chất B, có nồng độ $C(t)$ mol / l tại thời điểm t giờ được mô tả bởi hàm $C(t) = 5 - 5e^{-0,1t}$, $t \\geq 0$. Giả sử khi tốc độ của phản ứng theo nồng độ giảm còn $\\frac{1}{5}$ so với lúc ban đầu, nhà nghiên cứu dừng phản ứng để tránh lãng phí nguyên liệu. Hãy cho biết ở thời điểm đó nồng độ của chất B là bao nhiêu?\n\nMột phản ứng hóa học tạo ra một chất B, có nồng độ $C(t)$ mol / l tại thời điểm t giờ được mô tả bởi hàm $C(t) = 5 - 5e^{-0,1t}$, $t \\geq 0$. Giả sử khi tốc độ của phản ứng theo nồng độ giảm còn $\\frac{1}{5}$ so với lúc ban đầu, nhà nghiên cứu dừng phản ứng để tránh lãng phí nguyên liệu. Hãy cho biết ở thời điểm đó nồng độ của chất B là bao nhiêu?\n\nLời giải\n\nTốc độ phản ứng của nồng độ là: $C'(t) = -5 \\cdot (-0,1) \\cdot e^{-0,1t} = 0,5 \\cdot e^{-0,1t}$\n\nTại thời điểm ban đầu, tốc độ của phản ứng là: $C'(0) = 0,5 \\cdot e^{-0,1 \\cdot 0} = 0,5$ .\n\nKhi tốc độ phản ứng giảm còn $\\frac{1}{5}$ so với lúc ban đầu thì:\n\n$$C'(t) = 0,5 \\cdot e^{-0,1t} = 0,1 \\Rightarrow e^{-0,1t} = \\frac{1}{5} \\Rightarrow -0,1t = \\ln\\left(\\frac{1}{5}\\right) \\Rightarrow t = -10 \\ln\\left(\\frac{1}{5}\\right)$$\n\nTại thời điểm đó, ta có nồng độ của chất B là: $C\\left(-10 \\cdot \\ln\\frac{1}{5}\\right) = 5 - 5e^{-0,1 \\cdot (-10) \\ln\\frac{1}{5}} = 4$ mol / l .",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/4",
+          "page": 2,
+          "bbox": [
+            103.0,
+            931.0,
+            1153.0,
+            976.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "2",
+      "type": "short_answer",
+      "content": "Cho hàm số $f(x) = \\begin{cases} \\frac{3 - \\sqrt{4 - x}}{4} & \\text{khi } x \\neq 0 \\\\ \\frac{1}{4} & \\text{khi } x = 0 \\end{cases}$. Tính $f'(0)$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $f(x) = \\begin{cases} \\frac{3 - \\sqrt{4 - x}}{4} & \\text{khi } x \\neq 0 \\\\ \\frac{1}{4} & \\text{khi } x = 0 \\end{cases}$. Tính $f'(0)$.\n\nLời giải\n\n$$\\begin{aligned} \\text{Xét } \\lim_{x \\rightarrow 0} \\frac{f(x) - f(0)}{x - 0} &= \\lim_{x \\rightarrow 0} \\frac{\\frac{3 - \\sqrt{4 - x}}{4} - \\frac{1}{4}}{x} = \\lim_{x \\rightarrow 0} \\frac{\\frac{2 - \\sqrt{4 - x}}{4}}{x} \\\\ &= \\lim_{x \\rightarrow 0} \\frac{(2 - \\sqrt{4 - x})(2 + \\sqrt{4 - x})}{4x(2 + \\sqrt{4 - x})} = \\lim_{x \\rightarrow 0} \\frac{x}{4x(2 + \\sqrt{4 - x})} = \\lim_{x \\rightarrow 0} \\frac{1}{4(2 + \\sqrt{4 - x})} = \\frac{1}{16}. \\end{aligned}$$\n\nCho hàm số $f(x) = \\begin{cases} \\frac{\\sqrt{x^2+1}-1}{x} & \\text{khi } x \\neq 0 \\\\ 0 & \\text{khi } x = 0 \\end{cases}$. Tính $f'(0)$.\n\nCho hàm số $f(x) = \\begin{cases} \\frac{\\sqrt{x^2 + 1} - 1}{x} & \\text{khi } x \\neq 0 \\\\ 0 & \\text{khi } x = 0 \\end{cases}$. Tính $f'(0)$.\n\nLời giải\n\n$$\\begin{aligned} \\text{Xét } \\lim_{x \\rightarrow 0} \\frac{f(x) - f(0)}{x - 0} &= \\lim_{x \\rightarrow 0} \\frac{\\frac{\\sqrt{x^2 + 1} - 1}{x} - 0}{x} = \\lim_{x \\rightarrow 0} \\frac{\\sqrt{x^2 + 1} - 1}{x^2} \\\\ &= \\lim_{x \\rightarrow 0} \\frac{(\\sqrt{x^2 + 1} - 1)(\\sqrt{x^2 + 1} + 1)}{x^2 (\\sqrt{x^2 + 1} + 1)} = \\lim_{x \\rightarrow 0} \\frac{x^2}{x^2 (\\sqrt{x^2 + 1} + 1)} = \\lim_{x \\rightarrow 0} \\frac{1}{\\sqrt{x^2 + 1} + 1} = \\frac{1}{2}. \\end{aligned}$$\n\nĐạo hàm của hàm số $y = \\ln x$ tại điểm $x = \\frac{1}{3}$ là:\n\nĐạo hàm của hàm số $y = \\ln x$ tại điểm $x = \\frac{1}{3}$ là:\n\nLời giải\n\nTa có: $y' = (\\ln x)' = \\frac{1}{x}$.\n\nTừ đó $y'\\left(\\frac{1}{3}\\right) = 3$.\n\nMột chất điểm chuyển động có phương trình chuyển động là $s(t) = \\frac{2}{3}t^3 - t^2 + 3t - 4$, ($t$ được tính bằng giây, $s$ tính bằng mét). Vận tốc tức thời của chất điểm tại thời điểm $t=5$ là\n\nMột chất điểm chuyển động có phương trình chuyển động là $s(t) = \\frac{2}{3}t^3 - t^2 + 3t - 4$, ($t$ được tính bằng giây, $s$ tính bằng mét). Vận tốc tức thời của chất điểm tại thời điểm $t = 5$ là\n\nLời giải\n\nTa có: $v(t) = s'(t) = 2t^2 - 2t + 3$\n\n$s'(5) = 2 \\cdot 5^2 - 2 \\cdot 5 + 3 = 43$.\n\nVận tốc tức thời của chất điểm tại thời điểm $t = 5$ là: 43 (m/s).\n\nMột vật chuyển động biến đổi đều với phương trình chuyển động $s = 2t^2 + 3t + 1$ (mét), trong đó $t$ tính bằng giây. Gia tốc của vật tại thời điểm $t = 2$ là:\n\nMột vật chuyển động biến đổi đều với phương trình chuyển động $s = 2t^2 + 3t + 1$ (mét), trong đó $t$ tính bằng giây. Gia tốc của vật tại thời điểm $t = 2$ là:\n\nLời giải\n\nTốc độ của vật là đạo hàm cấp 1 của phương trình chuyển động: $v(t) = s'(t) = 4t + 3.$\n\nGia tốc của vật là đạo hàm cấp 2 của phương trình chuyển động (hoặc đạo hàm cấp 1 của vận tốc): $a(t) = v'(t) = s''(t) = 4.$\n\nGia tốc là một hằng số, không phụ thuộc vào thời gian. Vì vậy, gia tốc của vật tại thời điểm $t = 2$ là $4\\text{m/s}^2.$\n\nVị trí chuyển động của một vật trên đường thẳng được biểu diễn bởi công thức $s(t) = 3t^3 + 5t + 2$, trong đó $t$ là thời gian tính bằng giây và $s$ tính bằng mét. Tính gia tốc của vật đó khi $t = 1$.\n\nVị trí chuyển động của một vật trên đường thẳng được biểu diễn bởi công thức $s(t) = 3t^3 + 5t + 2$, trong đó $t$ là thời gian tính bằng giây và $s$ tính bằng mét. Tính gia tốc của vật đó khi $t = 1$.\n\nLời giải\n\nTa có $s'(t) = 9t^2 + 5$ suy ra gia tốc $s''(t) = 18t$, gia tốc $s''(1) = 18$.\n\nMột chất điểm chuyển động theo phương trình $s(t) = 6\\sin\\left(3t + \\frac{\\pi}{4}\\right)$, trong đó $t > 0, t$ tính bằng giây, $s(t)$ tính bằng centimét. Vận tốc tức thời của chất điểm tại thời điểm $t = \\frac{\\pi}{6}$ (s) là $-\\sqrt{a}$ (cm/s). Tìm $a$\n\nMột chất điểm chuyển động theo phương trình $s(t) = 6 \\sin\\left(3t + \\frac{\\pi}{4}\\right)$, trong đó $t > 0, t$ tính bằng giây, $s(t)$ tính bằng centimét. Vận tốc tức thời của chất điểm tại thời điểm $t = \\frac{\\pi}{6}(s)$ là $-\\sqrt{a}(cm/s)$. Tìm $a$\n\nLời giải\n\nVận tốc tức thời của chất điểm tại thời điểm $t(s)$ là: $v(t) = s'(t) = 18 \\cos\\left(3t + \\frac{\\pi}{4}\\right)$.\n\nVậy vận tốc tức thời của chất điểm tại thời điểm $t = \\frac{\\pi}{6}(s)$ là:\n\n$$v\\left(\\frac{\\pi}{6}\\right) = 18 \\cos\\left(3 \\cdot \\frac{\\pi}{6} + \\frac{\\pi}{4}\\right) = -9\\sqrt{2} = -\\sqrt{162}(cm/s) \\Rightarrow a = 162$$\n\nCho hàm số $y = \\frac{5x+1}{x-2}$ có đồ thị (C). Biết $y = ax + b$ là phương trình tiếp tuyến của (C) có hệ số góc nhỏ nhất trong các tiếp tuyến có hoành độ tiếp điểm là số nguyên dương. Tính $3a + b$.\n\nCho hàm số $y = \\frac{5x+1}{x-2}$ có đồ thị (C). Biết $y = ax + b$ là phương trình tiếp tuyến của (C) có hệ số góc nhỏ nhất trong các tiếp tuyến có hoành độ tiếp điểm là số nguyên dương. Tính $3a + b$ .\n\nLời giải\n\nTa có $y' = f'(x) = \\frac{-11}{(x-2)^2}$ .\n\nPhương trình tiếp tuyến của (C) tại điểm $M(x_0; y_0) \\in (C)$ có dạng $y = f'(x_0)(x - x_0) + y_0$ .\n\nTa có $f'(x_0) = \\frac{-11}{(x_0-2)^2}$ đạt giá trị nhỏ nhất khi $(x_0-2)^2$ đạt giá trị nhỏ nhất mà $x_0$ phải là số nguyên dương khác 2 nên $x_0 = 3$ thỏa mãn yêu cầu.\n\nVới $x_0 = 3 \\Rightarrow y_0 = 16$\n\nKhi đó phương trình tiếp tuyến là: $y = -11(x - 3) + 16 \\Leftrightarrow y = -11x + 49$ .\n\n$\\Rightarrow a = -11; b = 49 \\Rightarrow 3a + b = 3 \\cdot (-11) + 49 = 16$",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/5",
+          "page": 2,
+          "bbox": [
+            103.0,
+            985.0,
+            1000.0,
+            1162.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "3",
+      "type": "short_answer",
+      "content": "Cho chuyển động được xác định bởi phương trình $s = 2t^3 + 6t^2 - t$, trong đó $t$ được tính bằng giây và $s$ được tính bằng mét. Vận tốc tức thời của chuyển động tại thời điểm $t = 3s$ là:",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho chuyển động được xác định bởi phương trình $s = 2t^3 + 6t^2 - t$, trong đó $t$ được tính bằng giây và $s$ được tính bằng mét. Vận tốc tức thời của chuyển động tại thời điểm $t = 3s$ là:\n\nLời giải\n\nTa có $v(t) = S'(t) = 6t^2 + 12t - 1$.\n\nVận tốc tức thời của chuyển động khi $t = 3s$ là: $v(3) = 6 \\cdot 3^2 + 12 \\cdot 3 - 1 = 89(m/s)$.\n\nTính đạo hàm của hàm số $f(x) = \\begin{cases} \\frac{\\sqrt{x^3+x^2+1}-1}{x} & \\text{khi } x \\neq 0 \\\\ 0 & \\text{khi } x = 0 \\end{cases}$ tại $x = 0$.\n\nTính đạo hàm của hàm số $f(x) = \\begin{cases} \\frac{\\sqrt{x^3 + x^2 + 1} - 1}{x} & \\text{khi } x \\neq 0 \\\\ 0 & \\text{khi } x = 0 \\end{cases}$ tại $x = 0$.\n\nLời giải\n\nTa có : $f(0) = 0$, do đó: $\\lim_{x \\rightarrow 0} \\frac{f(x) - f(0)}{x} = \\lim_{x \\rightarrow 0} \\frac{\\sqrt{x^3 + x^2 + 1} - 1}{x^2} = \\lim_{x \\rightarrow 0} \\frac{x + 1}{\\sqrt{x^3 + x^2 + 1} + 1} = \\frac{1}{2}$.\n\nVậy $f'(0) = \\frac{1}{2}$.\n\nCho hàm số $f(x) = e^x + e^{2x}$. Chọn khẳng định đúng\n\nCho hàm số $f(x) = e^x + e^{2x}$. Chọn khẳng định đúng\n\nLời giải\n\nTa có: $f'(x) = (e^x + e^{2x})' = e^x + 2e^{2x} \\Rightarrow f'(0) = 3$.\n\nMột vật chuyển động theo quy luật $s = -\\frac{1}{2}t^3 + 9t^2$ với $t$ (giây) là khoảng thời gian tính từ lúc bắt đầu chuyển động và $s$ (mét) là quãng đường vật đi được trong khoảng thời gian đó. Hỏi trong khoảng thời gian 10 giây, kể từ lúc bắt đầu chuyển động, vận tốc lớn nhất của vật đạt được bằng bao nhiêu?\n\nMột vật chuyển động theo quy luật $s = -\\frac{1}{2}t^3 + 9t^2$ với $t$ (giây) là khoảng thời gian tính từ lúc bắt đầu chuyển động và $s$ (mét) là quãng đường vật đi được trong khoảng thời gian đó. Hỏi trong khoảng thời gian 10 giây, kể từ lúc bắt đầu chuyển động, vận tốc lớn nhất của vật đạt được bằng bao nhiêu?\n\nLời giải\n\nVận tốc tại thời điểm $t$ là $v(t) = s'(t) = -\\frac{3}{2}t^2 + 18t$ với $t \\in [0; 10]$.\n\nTa có : $v'(t) = -3t + 18 = 0 \\Leftrightarrow t = 6$.\n\nSuy ra: $v(0) = 0; v(10) = 30; v(6) = 54$. Vậy vận tốc lớn nhất của vật đạt được bằng 54 (m/s)\n\nCho hàm số $f(x) = x^{2018} + x^{2017} + \\dots + x^3 + x^2 + x + 1$, ($x \\neq 1$). Biết $f'(2) = a.2^b + 1$, tính tổng $a + b$.\n\nCho hàm số $f(x) = x^{2018} + x^{2017} + \\dots + x^3 + x^2 + x + 1, (x \\neq 1).$ Biết $f'(2) = a.2^b + 1,$ tính tổng $a + b.$\n\nLời giải\n\nVới $x \\neq 1,$ thì $f(x)$ là tổng của 2019 số hạng đầu của cấp số nhân với $u_1 = 1, q = x$ nên ta được:\n\n$$f(x) = \\frac{1 - x^{2019}}{1 - x} = \\frac{x^{2019} - 1}{x - 1}.$$\n\nKhi đó, ta có:\n\n$$f'(x) = \\frac{2019x^{2018}(x-1) - (x^{2019} - 1)}{(x-1)^2} \\Rightarrow f'(2) = \\frac{2019 \\cdot 2^{2018} - (2^{2019} - 1)}{1} = 2017 \\cdot 2^{2018} + 1.$$\n\nVậy $a = 2017, b = 2018 \\Rightarrow a + b = 4035.$\n\nMột chất điểm chuyển động theo phương trình $s(t) = \\frac{1}{3}t^3 - 3t^2 + 8t + 2$, trong đó $t > 0$, $t$ tính bằng giây, $s(t)$ tính bằng mét. Tính gia tốc tức thời của chất điểm tại thời điểm mà vận tốc tức thời của chất điểm bằng $-1 m/s$.\n\nMột chất điểm chuyển động theo phương trình $s(t) = \\frac{1}{3}t^3 - 3t^2 + 8t + 2$, trong đó $t > 0$, $t$ tính bằng giây, $s(t)$ tính bằng mét. Tính gia tốc tức thời của chất điểm tại thời điểm mà vận tốc tức thời của chất điểm bằng $-1 \\text{ m/s}$.\n\nLời giải\n\nTheo giả thiết, $s'(t) = t^2 - 6t + 8 = -1 \\Leftrightarrow t = 3 \\text{ (s)}$.\n\nGia tốc tức thời của chất điểm tại thời điểm $t = 3(s)$ là: $s''(3) = 0(m/s^2)$.\n\nCho hàm số $y = \\frac{2x+1}{x-2}$ có đồ thị (C). Phương trình tiếp tuyến của (C) có hệ số góc -5 có dạng $y = ax + b$. Tìm $Min(a + b)$\n\nCho hàm số $y = \\frac{2x+1}{x-2}$ có đồ thị (C). Phương trình tiếp tuyến của (C) có hệ số góc -5 có dạng $y = ax + b$. Tìm $Min(a + b)$\n\nLời giải\n\nGọi $A(x_0; y_0)$ là tiếp điểm.\n\n$$\\text{Ta có: } y'(x_0) = -5 \\Leftrightarrow \\frac{-5}{(x_0 - 2)^2} = -5 \\Leftrightarrow \\begin{cases} x_0 = 1 \\\\ x_0 = 3 \\end{cases}.$$\n\n- Với $x_0 = 1$ ta được $y_0 = -3$, phương trình tiếp tuyến cần tìm là: $y = -5x + 2$\n\n- Với $x_0 = 3$ ta được $y_0 = 7$, phương trình tiếp tuyến cần tìm là: $y = -5x + 22$\n\n$$\\text{Vậy } Min(a + b) = -5 + 2 = -3$$\n\nPhương trình tiếp tuyến của đồ thị hàm số (C): $y = x^3 - 3x + 1$ tại giao điểm của (C) với trục Oy có dạng: $y = ax + b$. Tính $2a + 5b$\n\nPhương trình tiếp tuyến của đồ thị hàm số (C): $y = x^3 - 3x + 1$ tại giao điểm của (C) với trục Oy có dạng: $y = ax + b$ . Tính $2a + 5b$\n\nLời giải\n\nTa có $y' = 3x^2 - 3$ .\n\nGiao điểm M của đồ thị hàm số (C) với trục Oy là $x_0 = 0 \\Rightarrow y_0 = 1$ .\n\nHệ số góc của tiếp tuyến tại $M(0;1)$ là: $k = y'(0) = -3$ .\n\nPhương trình tiếp tuyến tại điểm $M(0;1)$ là: $y = k(x - x_0) + y_0 \\Leftrightarrow y = -3x + 1$ .",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/6",
+          "page": 2,
+          "bbox": [
+            103.0,
+            1173.0,
+            1484.0,
+            1261.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "4",
+      "type": "short_answer",
+      "content": "Cho hàm số $y = x^3 - 3x + 1$. Phương trình tiếp tuyến với đồ thị hàm số tại giao điểm của đồ thị hàm số với trục tung có dạng: $y = ax + b$. Tính $2a + 5b$",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = x^3 - 3x + 1$. Phương trình tiếp tuyến với đồ thị hàm số tại giao điểm của đồ thị hàm số với trục tung có dạng: $y = ax + b$. Tính $2a + 5b$\n\nLời giải\n\nTa có: $y' = 3x^2 - 3$.\n\nĐồ thị hàm số cắt $Oy$ tại điểm $A(x_0; y_0) \\Rightarrow x_0 = 0 \\Rightarrow y_0 = 1$.\n\nGọi tiếp tuyến $(d)$ tiếp xúc đồ thị hàm số tại điểm $A(0;1)$\n\n$\\Rightarrow$ Hệ số góc $k = y'(x_0) = y'(0) = -3$\n\n$\\Rightarrow$ Phương trình tiếp tuyến $(d)$: $y = -3(x - 0) + 1 \\Leftrightarrow y = -3x + 1$.\n\nPhương trình tiếp tuyến của đồ thị hàm số $y = 4x^3 - 6x^2 + 1$ tại điểm có hoành độ $x = 1$ có dạng: $y = ax + b$. Tính $2a + 5b$\n\nPhương trình tiếp tuyến của đồ thị hàm số $y = 4x^3 - 6x^2 + 1$ tại điểm có hoành độ $x = 1$ có dạng: $y = ax + b$. Tính $2a + 5b$\n\nLời giải\n\nTa có $y' = 12x^2 - 12x \\Rightarrow y'(1) = 0$.\n\nTa có $x_0 = 1 \\Rightarrow y_0 = -1$.\n\nPhương trình tiếp tuyến của đồ thị hàm số $y = 4x^3 - 6x^2 + 1$ tại điểm có hoành độ $x = 1$ là $y = -1$.\n\nCho hàm số $f(x) = \\log_2(x^2 + 1)$, tính $f'(1)$ (kết quả làm tròn đến hàng phần trăm)\n\nCho hàm số $f(x) = \\log_2(x^2 + 1)$, tính $f'(1)$ (kết quả làm tròn đến hàng phần trăm)\n\nLời giải\n\nTập xác định: $D = \\mathbb{R}$.\n\n$f'(x) = \\frac{2x}{(x^2 + 1) \\cdot \\ln 2} \\Rightarrow f'(1) = \\frac{1}{\\ln 2}$.\n\nMột vật chuyển động trong 1 giờ với vận tốc $v$ phụ thuộc vào thời gian $t$ có đồ thị vận tốc như hình bên. Trong khoảng thời gian 1 giờ kể từ khi bắt đầu chuyển động, đồ thị đó là một phần của đường parabol có đỉnh $I(\\frac{1}{2}; 8)$ và trục đối xứng song song với trục tung. Tính gia tốc của vật lúc $t = 0,25(h)$\n\nMột vật chuyển động trong 1 giờ với vận tốc $v$ phụ thuộc vào thời gian $t$ có đồ thị vận tốc như hình bên. Trong khoảng thời gian 1 giờ kể từ khi bắt đầu chuyển động, đồ thị đó là một phần của đường parabol có đỉnh $I(\\frac{1}{2}; 8)$ và trục đối xứng song song với trục tung. Tính gia tốc của vật lúc $t = 0,25(h)$\n\nLời giải\n\nGọi $v(t) = p.t^2 + q.t + r$ đi qua $O(0;0)$; $I(\\frac{1}{2};8)$ và $M(1;0)$ ta có hệ phương trình\n\n$$\\begin{cases} r = 0 \\\\ \\frac{1}{4}p + \\frac{1}{2}q + r = 8 \\\\ p + q + r = 0 \\end{cases} \\Leftrightarrow \\begin{cases} r = 0 \\\\ q = 32 \\\\ p = -32 \\end{cases} \\text{ . Vậy } v(t) = -32t^2 + 32.t$$\n\nGia tốc vật là $a = v'(t) = -64t + 32$\n\nLúc $t = 0,25(h)$ thì gia tốc là $a = 16(km / h^2)$.\n\nCho hàm số $y = \\frac{2mx}{x^2 + 5x + 6}$. Với $m$ bằng bao nhiêu thì $y''(-1) = \\frac{13}{4}$.\n\nCho hàm số $y = \\frac{2mx}{x^2 + 5x + 6}.$ Với $m$ bằng bao nhiêu thì $y''(-1) = \\frac{13}{4}.$\n\nLời giải\n\nTa có: $x = 3(x+2) - 2(x+3); x^2 + 5x + 6 = (x+2)(x+3).$\n\nSuy ra $y = 2m \\left( \\frac{3}{x+3} - \\frac{2}{x+2} \\right).$\n\nTa có: $y' = 2m \\left[ -\\frac{3}{(x+3)^2} + \\frac{2}{(x+2)^2} \\right] \\Rightarrow y'' = 2m \\left( \\frac{6}{(x+3)^3} - \\frac{4}{(x+2)^3} \\right).$\n\nKhi đó $y''(-1) = \\frac{13}{4} \\Leftrightarrow 2m \\cdot \\left( -\\frac{13}{4} \\right) = \\frac{13}{4} \\Leftrightarrow 2m = -1 \\Leftrightarrow m = -\\frac{1}{2}.$\n\nVận tốc của một chất điểm chuyển động được biểu thị bởi công thức $v(t) = 8t + 3t^2$, trong đó $t > 0$, $t$ tính bằng giây và $v(t)$ tính bằng mét/giây. Tìm gia tốc của chất điểm tại thời điểm mà vận tốc chuyển động là $11 \\text{ mét/giây}$.\n\nVận tốc của một chất điểm chuyển động được biểu thị bởi công thức $v(t) = 8t + 3t^2$, trong đó $t > 0$, $t$ tính bằng giây và $v(t)$ tính bằng mét/giây. Tìm gia tốc của chất điểm tại thời điểm mà vận tốc chuyển động là $11 \\text{ mét/giây}$.\n\nLời giải\n\nTrả lời: 14\n\nTa tính được $v'(t) = 8 + 6t$.\n\nTa có $v(t) = 11 \\Leftrightarrow 8t + 3t^2 = 11 \\Leftrightarrow t = 1 \\text{ (}t > 0\\text{)}$.\n\nGia tốc của chất điểm $a(t) = v'(t) = 8 + 6t \\longrightarrow a(1) = v'(1) = 8 + 6 \\cdot 1 = 14 \\text{ m/s}^2$.\n\nCho hàm số $f(x) = \\sin^2 x$. Số nghiệm thuộc $(0; 2\\pi)$ của phương trình $2f(x) + f''(x) = 0$ là bao nhiêu\n\nCho hàm số $f(x) = \\sin^2 x$. Số nghiệm thuộc $(0; 2\\pi)$ của phương trình $2f(x) + f''(x) = 0$ là bao nhiêu\n\nLời giải\n\n$$f'(x) = 2 \\sin x \\cdot (\\sin)' = 2 \\sin x \\cdot \\cos x = \\sin 2x$$\n\n$$f''(x) = 2 \\cos 2x$$\n\n$$2f(x) + f''(x) = 0 \\Leftrightarrow 2\\sin^2 x + 2\\cos 2x = 0 \\Leftrightarrow 1 - \\cos 2x + 2\\cos 2x = 0$$\n\n$$\\Leftrightarrow \\cos 2x = -1 \\Leftrightarrow x = \\frac{\\pi}{2} + k\\pi (k \\in \\mathbb{Z})$$\n\nVì nghiệm thuộc $(0; 2\\pi) \\Rightarrow k = 0; k = 1$ thoả mãn.\n\nSố nghiệm thuộc $(0; 2\\pi)$ của phương trình $2f(x) + f''(x) = 0$ là 2\n\nCho hàm số $f(x) = x^3 - 7x^2 + 10x + 2025$ có đồ thị (C). Cho $x_1, x_2$ là hai nghiệm của phương trình sau: $f'(x) - 2xf''(x) + 25 = 0$.\n\nTích các nghiệm của phương trình có dạng $-\\frac{a}{b}$ (tối giản). Khi đó $a - 2b$ là:\n\nCho hàm số $f(x) = x^3 - 7x^2 + 10x + 2025$ có đồ thị (C). Cho $x_1, x_2$ là hai nghiệm của phương trình sau: $f'(x) - 2xf''(x) + 25 = 0$ .\n\nTích các nghiệm của phương trình có dạng $-\\frac{a}{b}$ (tối giản). Khi đó $a - 2b$ là:\n\nLời giải\n\n$$f'(x) = 3x^2 - 14x + 10, \\quad f''(x) = 6x - 14$$\n\n$$\\begin{aligned} \\text{Khi đó } f'(x) - 2xf''(x) + 25 &= 0 \\Leftrightarrow (3x^2 - 14x + 10) - 2x(6x - 14) + 25 = 0 \\\\ &\\Leftrightarrow 9x^2 - 14x - 35 = 0 \\end{aligned}$$\n\n$$\\text{Tích các nghiệm của phương trình là: } x_1 \\cdot x_2 = -\\frac{35}{9}$$\n\n$$\\text{Vậy } a - 2b = 35 - 2 \\cdot 9 = 17$$",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/7",
+          "page": 2,
+          "bbox": [
+            103.0,
+            1272.0,
+            1484.0,
+            1366.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "5",
+      "type": "short_answer",
+      "content": "Cho hàm số $y = x^4 + 2x^2$ có đồ thị $(C)$. Phương trình tiếp tuyến của đồ thị $(C)$ tại $M(1; 3)$ có dạng: $y = ax + b$. Tính $2a + 5b$",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = x^4 + 2x^2$ có đồ thị $(C)$. Phương trình tiếp tuyến của đồ thị $(C)$ tại $M(1;3)$ có dạng: $y = ax + b$. Tính $2a + 5b$\n\nLời giải\n\nTa có: $y' = 4x^3 + 4x \\Rightarrow y'(1) = 8$.\n\nPhương trình tiếp tuyến của đồ thị $(C)$ tại $M(1;3)$ là $y = 8(x - 1) + 3 \\Leftrightarrow y = 8x - 5$.\n\nCho hàm số $y = -x^3 + 3x - 2$ có đồ thị $(C)$. Phương trình tiếp tuyến của $(C)$ tại điểm có hoành độ $x_0 = 2$ có dạng: $y = ax + b$. Tính $2a + 5b$\n\nCho hàm số $y = -x^3 + 3x - 2$ có đồ thị $(C)$. Phương trình tiếp tuyến của $(C)$ tại điểm có hoành độ $x_0 = 2$ có dạng: $y = ax + b$. Tính $2a + 5b$\n\nLời giải\n\nTa có: $y' = -3x^2 + 3$; $y'(2) = -3 \\cdot 2^2 + 3 = -9$; $y(2) = -2^3 + 3 \\cdot 2 - 2 = -4$\n\nTiếp tuyến có dạng: $y = -9(x - 2) + 4 = -9x + 22$.\n\nCho hàm số $y = \\frac{x^2}{2x+1}$. Biết rằng $y' = \\frac{ax^2 + bx}{(2x+1)^2}$; giá trị của $a + b + ab$ bằng\n\nCho hàm số $y = \\frac{x^2}{2x+1}$. Biết rằng $y' = \\frac{ax^2 + bx}{(2x+1)^2}$; giá trị của $a + b + ab$ bằng\n\nLời giải\n\nTa có $y = \\frac{x^2}{2x+1}$ nên $y' = \\frac{2x(2x+1) - 2x^2}{(2x+1)^2} = \\frac{2x^2 + 2x}{(2x+1)^2}$.\n\nDo đó $a = 2$ và $b = 2$; suy ra $a + b + ab = 8$.\n\nMột vật chuyển động theo quy luật $s = \\frac{1}{3}t^3 - t^2 + 9t$, với $t$ (giây) là khoảng thời gian tính từ lúc vật bắt đầu chuyển động và $s$ (mét) là quãng đường vật đi được trong thời gian đó. Hỏi trong khoảng thời gian 10 giây, kể từ lúc bắt đầu chuyển động, vận tốc nhỏ nhất của vật đạt được bằng bao nhiêu?\n\nMột vật chuyển động theo quy luật $s = \\frac{1}{3}t^3 - t^2 + 9t$, với $t$ (giây) là khoảng thời gian tính từ lúc vật bắt đầu chuyển động và $s$ (mét) là quãng đường vật đi được trong thời gian đó. Hỏi trong khoảng thời gian 10 giây, kể từ lúc bắt đầu chuyển động, vận tốc nhỏ nhất của vật đạt được bằng bao nhiêu?\n\nLời giải\n\nVận tốc $v$ của vật được tính theo công thức: $v(t) = s'(t) = t^2 - 2t + 9$.\n\nTa có: $t^2 - 2t + 9 = (t-1)^2 + 8 \\geq 8 \\Rightarrow v \\geq 8$.\n\nVậy vận tốc nhỏ nhất của vật là $8(m/s)$ đạt được tại thời điểm $t = 1$ (giây).\n\nCho hàm số $y = e^{-x} \\cdot \\sin x$. Số nghiệm của phương trình $y'' + 2y' = 0$ trên đoạn $[0; 4\\pi]$ là bao nhiêu?\n\nCho hàm số $y = e^{-x} \\cdot \\sin x.$ Số nghiệm của phương trình $y'' + 2y' = 0$ trên đoạn $[0; 4\\pi]$ là bao nhiêu?\n\nLời giải\n\nTa có $y' = -e^{-x} \\sin x + e^{-x} \\cos x = e^{-x}(\\cos x - \\sin x)$\n\n$y'' = -e^{-x}(\\cos x - \\sin x) + e^{-x}(-\\cos x - \\sin x) = -2e^{-x} \\cos x$\n\nSuy ra $y'' + 2y' = -2e^{-x} \\cos x + 2e^{-x}(\\cos x - \\sin x) = -2e^{-x} \\cdot \\sin x.$\n\n$y'' + 2y' = 0 \\Leftrightarrow -2e^{-x} \\cdot \\sin x = 0 \\Leftrightarrow \\sin x = 0 \\Leftrightarrow x = k\\pi, k \\in \\mathbb{Z}.$\n\nVì $x \\in [0; 4\\pi] \\Rightarrow x \\in \\{0; \\pi; 2\\pi; 3\\pi; 4\\pi\\}$ hay phương trình đã cho có 5 nghiệm trên đoạn $[0; 4\\pi]$.\n\nMột chất điểm chuyển động theo phương trình $s(t) = 3 \\sin 2t + 2 \\cos 2t$, trong đó $t$ là thời gian tính bằng giây và $s$ là quãng đường chuyển động được của chất điểm trong $t$ giây tính bằng mét. Tính gia tốc của chất điểm đó khi $t = \\frac{\\pi}{4}$.\n\nMột chất điểm chuyển động theo phương trình $s(t) = 3 \\sin 2t + 2 \\cos 2t$, trong đó $t$ là thời gian tính bằng giây và $s$ là quãng đường chuyển động được của chất điểm trong $t$ giây tính bằng mét.\n\nTính gia tốc của chất điểm đó khi $t = \\frac{\\pi}{4}$.\n\nLời giải\n\nTa có: $s'(t) = 3(\\sin 2t)' + 2(\\cos 2t)' = 6 \\cos 2t - 4 \\sin 2t$.\n\nVà $s''(t) = 6(\\cos 2t)' - 4(\\sin 2t)' = -12 \\sin 2t - 8 \\cos 2t$.\n\nGia tốc của chất điểm tại thời điểm $t = \\frac{\\pi}{4}$ là:\n\n$$a\\left(\\frac{\\pi}{4}\\right) = s''\\left(\\frac{\\pi}{4}\\right) = -12 \\left[ \\sin \\left( 2 \\cdot \\frac{\\pi}{4} \\right) \\right] - 8 \\left[ \\cos \\left( 2 \\cdot \\frac{\\pi}{4} \\right) \\right] = -12$$\n\nMột vật chuyển động theo quy luật $S(t) = -\\frac{1}{3}t^3 + 6t^2$ với $t$ (giây) là khoảng thời gian tính từ lúc vật chuyển động và $S$ (mét) là quãng đường vật đi được trong khoảng thời gian đó. Hỏi trong khoảng thời gian 10 giây kể từ lúc vật bắt đầu chuyển động thì vận tốc lớn nhất của vật bằng bao nhiêu m/s?\n\nMột vật chuyển động theo quy luật $S(t) = -\\frac{1}{3}t^3 + 6t^2$ với $t$ (giây) là khoảng thời gian tính từ lúc vật chuyển động và $S$ (mét) là quãng đường vật đi được trong khoảng thời gian đó. Hỏi trong khoảng thời gian 10 giây kể từ lúc vật bắt đầu chuyển động thì vận tốc lớn nhất của vật bằng bao nhiêu m/s?\n\nLời giải\n\nPhương trình vận tốc chuyển động của vật là $v(t) = S'(t) = -t^2 + 12t$.\n\nTa có $v'(t) = -2t + 12 \\Rightarrow v'(t) = 0 \\Leftrightarrow t = 6$.\n\nSuy ra bảng biến thiên của hàm số chỉ vận tốc của vật trong khoảng thời gian 10 giây đầu là:\n\nVậy trong khoảng thời gian 10 giây kể từ lúc bắt đầu mới chuyển động vận tốc lớn nhất của vật đạt được là $36(m/s)$ tại thời điểm $t = 6(s)$.\n\nMột xưởng sản xuất xác định rằng tổng chi phí của họ để sản xuất $x$ mặt hàng là $C(x) = \\sqrt{3x^2 + 20}$ (triệu đồng) và xưởng lên kế hoạch nâng sản lượng trong $t$ tuần kể từ nay theo hàm số $x(t) = 5t + 8$. Chi phí sẽ tăng nhanh thế nào sau 2 tuần kể từ khi xưởng thực hiện kế hoạch đó (làm tròn đến hàng phần trăm, đơn vị: triệu đồng)?\n\nMột xưởng sản xuất xác định rằng tổng chi phí của họ để sản xuất $x$ mặt hàng là $C(x) = \\sqrt{3x^2 + 20}$ (triệu đồng) và xưởng lên kế hoạch nâng sản lượng trong $t$ tuần kể từ nay theo hàm số $x(t) = 5t + 8$. Chi phí sẽ tăng nhanh thế nào sau 2 tuần kể từ khi xưởng thực hiện kế hoạch đó (làm tròn đến hàng phần trăm, đơn vị: triệu đồng)?\n\nLời giải\n\nTốc độ tăng chi phí theo thời gian là:\n\n$$C'(t) = C'(x) \\cdot x'(t).$$\n\nTa có:\n\n$$\\begin{aligned} C'(x) &= \\frac{(3x^2 + 20)'}{2\\sqrt{3x^2 + 20}} = \\frac{3x}{\\sqrt{3x^2 + 20}}; \\quad x'(t) = 5 \\\\ \\Rightarrow C'(t) &= 5 \\cdot \\frac{3(5t + 8)}{\\sqrt{3(5t + 8)^2 + 20}} = \\frac{15(5t + 8)}{\\sqrt{3(5t + 8)^2 + 20}}. \\end{aligned}$$\n\nTốc độ tăng chi phí của xưởng sau 2 tuần kể từ khi thực hiện kế hoạch đó là:\n\n$$C(2) = \\frac{15(5 \\cdot 2 + 8)}{\\sqrt{3(5 \\cdot 2 + 8)^2 + 20}} \\approx 8,57.$$",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/8",
+          "page": 2,
+          "bbox": [
+            103.0,
+            1373.0,
+            1484.0,
+            1473.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "6",
+      "type": "short_answer",
+      "content": "Một vật di chuyển theo phương thẳng đứng lên trên từ độ cao $20m$ so với mặt đất với vận tốc ban đầu là $15m/s$. Độ cao $s$ của nó tính bằng mét sau $t$ giây kể từ khi bắt đầu chuyển động $t = 0$ được cho bởi công thức $s = 20 + 15t - 5t^2$. Tìm vận tốc của vật khi nó chạm đất.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Một vật di chuyển theo phương thẳng đứng lên trên từ độ cao $20m$ so với mặt đất với vận tốc ban đầu là $15m/s$. Độ cao $s$ của nó tính bằng mét sau $t$ giây kể từ khi bắt đầu chuyển động $t = 0$ được cho bởi công thức $s = 20 + 15t - 5t^2$. Tìm vận tốc của vật khi nó chạm đất.\n\nLời giải\n\nVận tốc của vật tại thời điểm $t$ là $v(t) = s'(t) = 15 - 10t$\n\nKhi vật chạm đất thì $s = 0 \\Rightarrow 20 + 15t - 5t^2 = 0 \\Rightarrow \\begin{cases} t = -1 \\\\ t = 4 \\end{cases}$\n\nVật sau khi chuyển động sẽ chạm đất khi $t = 4$\n\nVậy vận tốc của vật khi nó chạm đất là $v(4) = s'(4) = 15 - 10 \\cdot 4 = -25(m/s)$.\n\nVậy tốc độ khi vật chạm đất là $-25(m/s)$.\n\nCho chuyển động thẳng xác định bởi phương trình $s(t) = -\\frac{1}{3}t^3 + 4t^2 + 9t$, trong đó $t$ tính bằng giây và $s$ tính bằng mét. Tính quãng đường vật đi được từ lúc $t = 0$ đến lúc chuyển động có vận tốc bằng không.\n\nCho chuyển động thẳng xác định bởi phương trình $s(t) = -\\frac{1}{3}t^3 + 4t^2 + 9t$, trong đó $t$ tính bằng giây và $s$ tính bằng mét. Tính quãng đường vật đi được từ lúc $t = 0$ đến lúc chuyển động có vận tốc bằng không.\n\nLời giải\n\nVận tốc của chuyển động chính là đạo hàm của quãng đường $v(t) = s'(t) = -t^2 + 8t + 9$\n\nVận tốc bằng không khi: $v(t) = s'(t) = -t^2 + 8t + 9 = 0 \\Rightarrow \\begin{cases} t = -1 \\text{ (kTM)} \\\\ t = 9 \\text{ (TM)} \\end{cases}$\n\nQuãng đường vật chuyển động được đến thời điểm $t = 9$ là: $s(9) = -\\frac{1}{3} \\cdot 9^3 + 4 \\cdot 9^2 + 9 \\cdot 9 = 162 \\text{ (m)}$\n\nCân nặng trung bình của một em bé trong độ tuổi từ 0 đến 36 tháng có thể được tính gần đúng bởi hàm số $w(t) = 0,00076t^3 - 0,06t^2 + 1,8t + 8,2$, trong đó $t$ được tính bằng tháng và $w$ được tính bằng pound. Tính tốc độ thay đổi cân nặng của em bé đó tại thời điểm 15 tháng tuổi. (kết quả làm tròn đến hàng phần trăm)\n\nCân nặng trung bình của một em bé trong độ tuổi từ 0 đến 36 tháng có thể được tính gần đúng bởi hàm số $w(t) = 0,00076t^3 - 0,06t^2 + 1,8t + 8,2$, trong đó $t$ được tính bằng tháng và $w$ được tính bằng pound. Tính tốc độ thay đổi cân nặng của em bé đó tại thời điểm 15 tháng tuổi. (kết quả làm tròn đến hàng phần trăm)\n\nLời giải\n\nTa có: $w'(t) = \\frac{57}{25000}t^2 - \\frac{3}{25}t + 1,8$.\n\nTốc độ thay đổi cân nặng của em bé đó tại thời điểm 15 tháng tuổi là:\n\n$$w'(15) = \\frac{57}{25000} \\cdot 15^2 - \\frac{3}{25} \\cdot 15 + 1,8 = 0,51 \\text{ (pound/tháng)}$$\n\nMột chuyển động theo qui luật là $s = -\\frac{1}{2}t^3 + 3t^2 + 20$ với $t$ giây là khoảng thời gian tính từ khi vật bắt đầu chuyển động và $s$ ( mét) là quãng đường vật di chuyển được trong khoảng thời gian đó. Quãng đường vật đi được bắt đầu từ lúc vật chuyển động tới thời điểm vật đạt được vận tốc lớn nhất bằng.\n\nMột chuyển động theo qui luật là $s = -\\frac{1}{2}t^3 + 3t^2 + 20$ với $t$ giây là khoảng thời gian tính từ khi vật bắt đầu chuyển động và $s$ (mét) là quãng đường vật đi được trong khoảng thời gian đó. Quãng đường vật đi được bắt đầu từ lúc vật chuyển động tới thời điểm vật đạt được vận tốc lớn nhất bằng.\n\nLời giải\n\nTa có: $s = -\\frac{1}{2}t^3 + 3t^2 + 20 \\Rightarrow v(t) = s'(t) = -\\frac{3}{2}t^2 + 6t$\n\n$$\\Leftrightarrow v(t) = s'(t) = -\\frac{3}{2}(t^2 - 4t + 4 - 4) = -\\frac{3}{2}[(t-2)^2 - 4] = \\frac{3}{2}(t-2)^2 + 6 \\leq 6$$\n\nVậy vận tốc đạt được giá trị lớn nhất tại thời điểm $t = 2(s)$.\n\nKhi đó quãng đường vật đi được là: $s = s(2) = -4 + 12 + 20 = 28(m)$.\n\nMột chất điểm chuyển động theo phương trình $s(t) = \\frac{1}{24}t^4 - t^3 + 10t^2 - 4t$, trong đó $t$ tính bằng giây (s) và $s(t)$ tính bằng mét (m). Tại thời điểm gia tốc của chất điểm đạt giá trị nhỏ nhất thì vận tốc của chất điểm bằng bao nhiêu?\n\nMột chất điểm chuyển động theo phương trình $s(t) = \\frac{1}{24}t^4 - t^3 + 10t^2 - 4t$, trong đó $t$ tính bằng giây (s) và $s(t)$ tính bằng mét (m). Tại thời điểm gia tốc của chất điểm đạt giá trị nhỏ nhất thì vận tốc của chất điểm bằng bao nhiêu?\n\nLời giải\n\nVận tốc của chất điểm là: $v(t) = \\frac{1}{6}t^3 - 3t^2 + 20t - 4$.\n\nGia tốc của chất điểm là: $a(t) = \\frac{1}{2}t^2 - 6t + 20$.\n\nGia tốc của chất điểm đạt giá trị nhỏ nhất tại thời điểm $t = \\frac{6}{2 \\cdot \\frac{1}{2}} = 6$.\n\nKhi đó, vận tốc của chất điểm là $v(6) = 44$.\n\nMột vật dao động điều hòa có phương trình $x = 2 \\sin \\pi t$ ($x$ tính bằng cm, $t$ tính bằng giây). Tính thời điểm đầu tiên vật có gia tốc lớn nhất.\n\nMột vật dao động điều hòa có phương trình $x = 2 \\sin \\pi t$ ($x$ tính bằng $cm, t$ tính bằng giây). Tính thời điểm đầu tiên vật có gia tốc lớn nhất.\n\nLời giải\n\nGia tốc của vật bằng đạo hàm cấp hai của phương trình chuyển động\n\nTa có: $x' = 2\\pi \\cos \\pi t \\Rightarrow a(t) = x''(t) = -2\\pi^2 \\sin \\pi t$\n\nVì $-1 \\leq \\sin \\pi t \\leq 1 \\Leftrightarrow -2\\pi^2 \\leq -2\\pi^2 \\sin \\pi t \\leq 2\\pi^2 \\Leftrightarrow -2\\pi^2 \\leq a(t) \\leq 2\\pi^2$\n\nGia tốc lớn nhất khi $\\sin \\pi t = -1 \\Leftrightarrow \\pi t = -\\frac{\\pi}{2} + k2\\pi \\Leftrightarrow t = -\\frac{1}{2} + 2k$\n\nVới $k = 0 \\Rightarrow t = -\\frac{1}{2}(l); k = 1 \\Rightarrow t = \\frac{3}{2}$\n\nVậy tại $t = \\frac{3}{2}$ giây là thời điểm đầu tiên vật có gia tốc lớn nhất.\n\nMột tên lửa bay vào không trung với quãng đường đi được là $S(t)(km)$ là hàm số phụ\n\nSau khi phát hiện một dịch bệnh, các chuyên gia y tế ước tính số người nhiễm bệnh kể từ ngày xuất hiện bệnh nhân đầu tiên đến ngày thứ $t$ là $f(t) = 35t^2 - \\frac{5}{3}t^3$ (kết quả khảo sát trong 12 tháng liên tục). Nếu xem $f'(t)$ là tốc độ truyền bệnh (người/ngày) tại thời điểm $t$ thì tốc độ truyền bệnh lớn nhất bằng bao nhiêu người một ngày?\n\nSau khi phát hiện một dịch bệnh, các chuyên gia y tế ước tính số người nhiễm bệnh kể từ ngày xuất hiện bệnh nhân đầu tiên đến ngày thứ $t$ là $f(t) = 35t^2 - \\frac{5}{3}t^3$ (kết quả khảo sát trong 12 tháng liên tục). Nếu xem $f'(t)$ là tốc độ truyền bệnh (người/ngày) tại thời điểm $t$ thì tốc độ truyền bệnh lớn nhất bằng bao nhiêu người một ngày?\n\nLời giải\n\nTa có $f(t) = 35t^2 - \\frac{5}{3}t^3 \\Rightarrow f'(t) = -5t^2 + 70t; (t > 0)$\n\nVì hàm số $y = f'(t)$ là hàm số bậc hai có đồ thị là một parabol có bề lõm quay xuống nên đạt giá trị lớn nhất tại $t = -\\frac{70}{2(-5)} = 7$.\n\nVậy vào ngày thứ 7 thì tốc độ truyền bệnh là nhanh nhất và tốc độ truyền bệnh lớn nhất bằng $f'(7) = -5.7^2 + 70.7 = 735$ (người/ngày) hay $a = 735$.\n\nChuyển động của một vật gắn trên con lắc lò xo (khi bỏ qua ma sát và sức cản không khí) được cho bởi phương trình sau: $x(t) = 6 \\cos\\left(2\\pi t - \\frac{\\pi}{6}\\right)$, trong đó $x$ tính bằng centimet và thời gian $t$ tính bằng giây. Tìm gia tốc tức thời của vật tại thời điểm vật có li độ $x = 3$ lần thứ nhất (làm tròn kết quả đến hàng đơn vị, đơn vị: $(cm/s^2)$).\n\nChuyển động của một vật gắn trên con lắc lò xo (khi bỏ qua ma sát và sức cản không khí) được cho bởi phương trình sau: $x(t) = 6 \\cos\\left(2\\pi t - \\frac{\\pi}{6}\\right)$, trong đó $x$ tính bằng centimet và thời gian $t$ tính bằng giây. Tìm gia tốc tức thời của vật tại thời điểm vật có li độ $x = 3$ lần thứ nhất (làm tròn kết quả đến hàng đơn vị, đơn vị: $(cm/s^2)$).\n\nLời giải\n\n$$\\text{Vận tốc của vật tại thời điểm } t \\text{ là } v(t) = x'(t) = -12\\pi \\sin\\left(2\\pi t - \\frac{\\pi}{6}\\right).$$\n\n$$\\text{Gia tốc của vật tại thời điểm } t \\text{ là } a(t) = v'(t) = -24\\pi \\cos\\left(2\\pi t - \\frac{\\pi}{6}\\right).$$\n\nTại thời điểm vật có li độ $x = 3$, ta có:\n\n$$3 = 6 \\cos\\left(2\\pi t - \\frac{\\pi}{6}\\right) \\Leftrightarrow \\cos\\left(2\\pi t - \\frac{\\pi}{6}\\right) = \\frac{1}{2}$$\n\n$$\\Leftrightarrow \\begin{cases} 2\\pi t - \\frac{\\pi}{6} = \\frac{\\pi}{3} + k2\\pi \\\\ 2\\pi t - \\frac{\\pi}{6} = -\\frac{\\pi}{3} + k2\\pi \\end{cases}, k \\in \\mathbb{Z}$$\n\n$$\\Leftrightarrow \\begin{cases} t = \\frac{1}{4} + k \\\\ t = -\\frac{1}{12} + k \\end{cases}, k \\in \\mathbb{Z}$$\n\nVới $t = \\frac{1}{4} + k, k = 0 \\Rightarrow t = \\frac{1}{4}$.\n\nVới $t = -\\frac{1}{12} + k, k = 0 \\Rightarrow t = -\\frac{1}{12}$ (loại), $k = 1 \\Rightarrow t = \\frac{11}{12}$.\n\nDo đó, từ thời điểm $t = 0$, vật có li độ $x = 3$ lần đầu tiên tại thời điểm $t = \\frac{1}{4}$. Gia tốc của vật tại thời điểm $t = \\frac{1}{4}$ là:\n\n$$a\\left(\\frac{1}{4}\\right) = -24\\pi \\cos\\left(2\\pi \\cdot \\frac{1}{4} - \\frac{\\pi}{6}\\right) = -12\\pi \\approx -38 \\text{ (cm / s}^2\\text{)}.$$",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/9",
+          "page": 2,
+          "bbox": [
+            103.0,
+            1478.0,
+            1484.0,
+            1612.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "IV",
+      "number": "1",
+      "type": "unknown",
+      "content": "Tìm tham số thực $b$ để hàm số $f(x) = \\begin{cases} x^2 & \\text{khi } x \\leq 2 \\\\ -\\frac{x^2}{2} + bx - 6 & \\text{khi } x > 2 \\end{cases}$ có đạo hàm tại $x = 2$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Tìm tham số thực $b$ để hàm số $f(x) = \\begin{cases} x^2 & \\text{khi } x \\leq 2 \\\\ -\\frac{x^2}{2} + bx - 6 & \\text{khi } x > 2 \\end{cases}$ có đạo hàm tại $x = 2$.\n\nLời giải\n\nĐể hàm số có đạo hàm tại $x = 2$ trước tiên hàm số phải liên tục tại $x = 2$, tức là\n\n$$\\lim_{x \\rightarrow 2^+} f(x) = \\lim_{x \\rightarrow 2^-} f(x) \\Leftrightarrow \\lim_{x \\rightarrow 2^+} \\left( -\\frac{x^2}{2} + bx - 6 \\right) = \\lim_{x \\rightarrow 2^-} x^2 \\Leftrightarrow -2 + 2b - 6 = 4 \\Leftrightarrow b = 6.$$\n\nThử lại với $b = 6$, ta có\n\n$$\\begin{aligned} \\bullet \\lim_{x \\rightarrow 2^+} \\frac{f(x) - f(2)}{x - 2} &= \\lim_{x \\rightarrow 2^+} \\frac{-\\frac{x^2}{2} + bx - 10}{x - 2} = \\lim_{x \\rightarrow 2^+} \\frac{-\\frac{x^2}{2} + 6x - 10}{x - 2} \\\\ &= \\lim_{x \\rightarrow 2^+} \\frac{(x-2)(10-x)}{2(x-2)} = \\lim_{x \\rightarrow 2^+} \\frac{10-x}{2} = 4; \\end{aligned}$$\n\n$$\\bullet \\lim_{x \\rightarrow 2^-} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x \\rightarrow 2^-} \\frac{x^2 - 4}{x - 2} = 4.$$\n\nVì $\\lim_{x \\rightarrow 2^+} \\frac{f(x) - f(2)}{x - 2} = \\lim_{x \\rightarrow 2^-} \\frac{f(x) - f(2)}{x - 2}$ nên hàm số có đạo hàm tại $x = 2$.\n\nTìm $a, b$ để hàm số $f(x) = \\begin{cases} x^2 + x & \\text{khi } x \\leq 1 \\\\ ax + b & \\text{khi } x > 1 \\end{cases}$ có đạo hàm tại $x = 1$.\n\nTìm $a, b$ để hàm số $f(x) = \\begin{cases} x^2 + x & \\text{khi } x \\leq 1 \\\\ ax + b & \\text{khi } x > 1 \\end{cases}$ có đạo hàm tại $x = 1$.\n\nLời giải\n\nĐiều kiện cần: $f(1) = 2$ và $\\lim_{x \\rightarrow 1^-} f(x) = \\lim_{x \\rightarrow 1^-} (x^2 + x) = 2$; $\\lim_{x \\rightarrow 1^+} f(x) = \\lim_{x \\rightarrow 1^+} (ax + b) = a + b$\n\nĐể hàm số $f(x)$ có đạo hàm tại $x = 1$ thì $f(x)$ liên tục tại $x = 1$\n\n$\\Leftrightarrow \\lim_{x \\rightarrow 1^+} f(x) = \\lim_{x \\rightarrow 1^-} f(x) = f(1) \\Leftrightarrow a + b = 2$\n\nĐiều kiện đủ: $f'(1^-) = \\lim_{x \\rightarrow 1^-} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\rightarrow 1^-} \\frac{x^2 + x - 2}{x - 1} = \\lim_{x \\rightarrow 1^-} (x + 2) = 3$\n\n$f'(1^+) = \\lim_{x \\rightarrow 1^+} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\rightarrow 1^+} \\frac{ax + b - (a + b)}{x - 1} = \\lim_{x \\rightarrow 1^+} \\frac{ax - a}{x - 1} = a$\n\nĐể hàm số $f(x)$ có đạo hàm tại $x = 1$ thì $f'(1^+) = f'(1^-) \\Leftrightarrow a = 3 \\Rightarrow b = -1$.\n\nTính đạo hàm của hàm số sau: $y = \\tan\\left(2x^2 + \\frac{\\pi}{3}\\right)$.\n\nTính đạo hàm của hàm số sau: $y = \\tan\\left(2x^2 + \\frac{\\pi}{3}\\right)$.\n\nLời giải\n\n$$y' = \\left( \\tan\\left(2x^2 + \\frac{\\pi}{3}\\right) \\right)' = \\frac{\\left(2x^2 + \\frac{\\pi}{3}\\right)'}{\\cos^2\\left(2x^2 + \\frac{\\pi}{3}\\right)} = \\frac{4x}{\\cos^2\\left(2x^2 + \\frac{\\pi}{3}\\right)}$$\n\nĐạo hàm của hàm số $y = \\frac{\\sin^2 x - \\cos^2 x}{\\sin x \\cdot \\cos x}$ tại điểm $x = \\frac{\\pi}{6}$\n\nĐạo hàm của hàm số $y = \\frac{\\sin^2 x - \\cos^2 x}{\\sin x \\cdot \\cos x}$ tại điểm $x = \\frac{\\pi}{6}$\n\nLời giải\n\n$$y = \\frac{\\sin^2 x - \\cos^2 x}{\\sin x \\cdot \\cos x} = \\frac{-\\cos 2x}{\\frac{1}{2}\\sin 2x} = -2 \\cot 2x$$\n\n$$\\Rightarrow y' = -2 \\frac{-2}{\\sin^2 2x} = \\frac{4}{\\sin^2 2x} \\Rightarrow y'\\left(\\frac{\\pi}{6}\\right) = \\frac{16}{3}.$$\n\nCho $f(x) = (x - 3)^6$. Tính $f''(2)$.\n\nCho $f(x) = (x-3)^6$. Tính $f''(2)$.\n\nLời giải\n\nTa có: $f'(x) = 6(x-3)^5$\n\nSuy ra $f''(x) = 6 \\cdot 5 \\cdot (x-3)^4 = 30(x-3)^4$\n\nTừ đó: $f''(2) = 30 \\cdot (2-3)^4 = 30$.\n\nCho $f(x) = \\sin 3x$. Giá trị của $f''\\left(-\\frac{\\pi}{2}\\right)$ bằng:\n\nCho $f(x) = \\sin 3x$. Giá trị của $f''\\left(-\\frac{\\pi}{2}\\right)$ bằng:\n\nLời giải\n\nTa có: $f'(x) = 3\\cos 3x$ suy ra $f''(x) = -9\\sin 3x$\n\nDo đó: $f''\\left(-\\frac{\\pi}{2}\\right) = -9\\sin\\left(-\\frac{3\\pi}{2}\\right) = 9$.\n\nCho hàm số $f(x) = \\sqrt{x^3 - 2x^2 + x + 1}$. Tính tổng các nghiệm của phương trình $f'(x) = 0$ (làm tròn tới hàng phần trăm).\n\nCho hàm số $f(x) = \\sqrt{x^3 - 2x^2 + x + 1}$. Tính tổng các nghiệm của phương trình $f'(x) = 0$ (làm tròn tới hàng phần trăm).\n\nLời giải\n\n$$f(x) = \\sqrt{x^3 - 2x^2 + x + 1} \\Rightarrow f'(x) = \\frac{3x^2 - 4x + 1}{2\\sqrt{x^3 - 2x^2 + x + 1}}$$\n\n$$\\text{Xét } f'(x) = 0 \\Leftrightarrow \\frac{3x^2 - 4x + 1}{2\\sqrt{x^3 - 2x^2 + x + 1}} = 0$$\n\n$$\\Leftrightarrow \\begin{cases} x^3 - 2x^2 + x + 1 > 0 \\\\ 3x^2 - 4x + 1 = 0 \\end{cases} \\Leftrightarrow \\begin{cases} x_1 = 1 \\text{ (tm)} \\\\ x_2 = \\frac{1}{3} \\text{ (tm)} \\end{cases}$$\n\nVậy tổng các nghiệm của phương trình $f'(x) = 0$ là $x_1 + x_2 = \\frac{4}{3} \\approx 1,33$\n\nCho hàm số $f(x) = e^{x^2+3x}$. Tính $f'(0)$.\n\nCho hàm số $f(x) = e^{x^2+3x}$. Tính $f'(0)$.\n\nLời giải\n\nTa có: $f'(x) = (2x+3)e^{x^2+3x} \\Rightarrow f'(0) = 3 \\cdot e^0 = 3$",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/11",
+          "page": 2,
+          "bbox": [
+            103.0,
+            1718.0,
+            1378.0,
+            1854.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "IV",
+      "number": "2",
+      "type": "unknown",
+      "content": "Cho hàm số $f(x) = \\begin{cases} mx^2 + 2x + 2 & \\text{khi } x > 0 \\\\ nx + 1 & \\text{khi } x \\leq 0 \\end{cases}$. Tìm tất cả các giá trị của các tham số $m, n$ sao cho $f(x)$ có đạo hàm tại điểm $x = 0$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $f(x) = \\begin{cases} mx^2 + 2x + 2 & \\text{khi } x > 0 \\\\ nx + 1 & \\text{khi } x \\leq 0 \\end{cases}$. Tìm tất cả các giá trị của các tham số $m, n$ sao cho $f(x)$ có đạo hàm tại điểm $x = 0$.\n\nLời giải\n\nTa có $\\begin{cases} f(0) = 2 \\\\ \\lim_{x \\rightarrow 0^+} \\frac{f(x) - f(0)}{x - 0} = \\lim_{x \\rightarrow 0^+} \\frac{mx^2 + 2x + 2 - 2}{x} = \\lim_{x \\rightarrow 0^+} \\frac{mx^2 + 2x}{x} = \\lim_{x \\rightarrow 0^+} (mx + 2) = 2. \\\\ \\lim_{x \\rightarrow 0^-} \\frac{f(x) - f(0)}{x - 0} = \\lim_{x \\rightarrow 0^-} \\frac{nx + 2 - 2}{x} = \\lim_{x \\rightarrow 0^-} \\frac{nx}{x} = \\lim_{x \\rightarrow 0^-} n = n \\end{cases}$\n\nHàm số có đạo hàm tại $x = 0$ khi và chỉ khi tồn tại giới hạn $\\lim_{x \\rightarrow 0} \\frac{f(x) - f(0)}{x - 0}$\n\n$$\\Leftrightarrow \\lim_{x \\rightarrow 0^-} \\frac{f(x) - f(0)}{x - 0} = \\lim_{x \\rightarrow 0^+} \\frac{f(x) - f(0)}{x - 0} \\Leftrightarrow n = 2.$$\n\nCho hàm số $f(x) = \\begin{cases} \\frac{x^2}{2} & \\text{khi } x \\leq 1 \\\\ ax + b & \\text{khi } x > 1 \\end{cases}$. Tìm tất cả các giá trị của các tham số $a, b$ sao cho $f(x)$ có đạo hàm tại điểm $x = 1$.\n\nCho hàm số $f(x) = \\begin{cases} \\frac{x^2}{2} & \\text{khi } x \\leq 1 \\\\ ax + b & \\text{khi } x > 1 \\end{cases}$. Tìm tất cả các giá trị của các tham số $a, b$ sao cho\n\n$f(x)$ có đạo hàm tại điểm $x = 1$.\n\nLời giải\n\nHàm số có đạo hàm tại $x = 1$, do đó hàm số liên tục tại $x = 1 \\Rightarrow a + b = \\frac{1}{2}$. (1)\n\nTa có $\\begin{cases} \\lim_{x \\rightarrow 1^+} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\rightarrow 1^+} \\frac{ax + b - (a \\cdot 1 + b)}{x - 1} = \\lim_{x \\rightarrow 1^+} \\frac{a(x - 1)}{x - 1} = \\lim_{x \\rightarrow 1^+} a = a \\\\ \\lim_{x \\rightarrow 1^-} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\rightarrow 1^-} \\frac{\\frac{x^2}{2} - \\frac{1}{2}}{x - 1} = \\lim_{x \\rightarrow 1^-} \\frac{(x+1)(x-1)}{2(x-1)} = \\lim_{x \\rightarrow 1^-} \\frac{(x+1)}{2} = 1 \\end{cases}$.\n\nHàm số có đạo hàm tại $x = 1 \\Leftrightarrow \\lim_{x \\rightarrow 1^+} \\frac{f(x) - f(1)}{x - 1} = \\lim_{x \\rightarrow 1^-} \\frac{f(x) - f(1)}{x - 1} \\Leftrightarrow a = 1$. (2)\n\nTừ (1) và (2), ta có $a = 1, b = -\\frac{1}{2}$.\n\nTính đạo hàm của hàm số sau: $y = 2e^{2x-1}$;\n\nTính đạo hàm của hàm số sau: $y = 2e^{2x-1}$;\n\nLời giải\n\n$$y' = (2e^{2x-1})' = 2 \\cdot (2x-1)' e^{2x-1} = 4e^{2x-1}$$\n\nTính đạo hàm cấp hai của hàm số sau: $y = x \\sin x$.\n\nTính đạo hàm cấp hai của hàm số sau: $y = x \\sin x$.\n\nLời giải\n\nTa có:\n\n$$y' = (x \\sin x)' = x' \\cdot \\sin x + (\\sin x)' \\cdot x = \\sin x + x \\cos x$$\n\n$$y'' = (\\sin x + x \\cos x)' = (\\sin x)' + (x \\cos x)' = \\cos x + x' \\cdot \\cos x + (\\cos x)' \\cdot x = 2 \\cos x - x \\sin x$$\n\nCho $f(x) = \\sin 3x$. Tính $f''\\left(-\\frac{\\pi}{2}\\right)$, $f''(0)$, $f''\\left(\\frac{\\pi}{18}\\right)$.\n\nCho $f(x) = \\sin 3x$. Tính $f''\\left(-\\frac{\\pi}{2}\\right)$, $f''(0)$, $f''\\left(\\frac{\\pi}{18}\\right)$.\n\nLời giải\n\nTa có $f'(x) = 3\\cos 3x$ và $f''(x) = -9\\sin 3x$\n\nKhi đó: $f''\\left(-\\frac{\\pi}{2}\\right) = -9\\sin\\left(-\\frac{3\\pi}{2}\\right) = -9$; $f''(0) = -9\\sin(0) = 0$ và $f''\\left(\\frac{\\pi}{18}\\right) = -9\\sin\\left(\\frac{\\pi}{6}\\right) = -\\frac{9}{2}$.\n\nCho $f(x) = (x + 10)^6$. Tính $f''(2)$.\n\nCho $f(x) = (x+10)^6$. Tính $f''(2)$.\n\nLời giải\n\nTa có: $f'(x) = 6(x+10)^5$\n\nSuy ra $f''(x) = 6.5.(x+10)^4 = 30(x+10)^4$\n\nTừ đó: $f''(2) = 30.(2+10)^4 = 622080$.\n\nCó bao nhiêu tiếp tuyến của đồ thị hàm số $y = \\frac{x^3}{x-2} - 27$ song song với trục hoành?\n\nCó bao nhiêu tiếp tuyến của đồ thị hàm số $y = \\frac{x^3}{x-2} - 27$ song song với trục hoành?\n\nLời giải\n\nTập xác định $\\mathbb{R} \\setminus \\{2\\}$.\n\nGọi $x_0$ là hoành độ tiếp điểm. Vì tiếp tuyến song song trục hoành nên tiếp tuyến có hệ số góc $y'(x_0) = 0$ và $y(x_0) \\neq 0$.\n\n$$\\text{Ta có } y' = \\frac{2x^3 - 6x^2}{(x-2)^2}. \\text{ Do đó } y'(x_0) = 0 \\Leftrightarrow 2x_0^2(x_0 - 3) = 0 \\Leftrightarrow \\begin{cases} x_0 = 0 \\\\ x_0 = 3 \\end{cases}.$$\n\nTa có $y(0) = -27 \\neq 0$ (nhận) và $y(3) = 0$ (loại vì khi đó tiếp tuyến trùng trục hoành).\n\nVậy chỉ có một tiếp tuyến thỏa mãn đề bài.\n\nCho hàm số $f(x) = -\\sin\\left(2x + \\frac{\\pi}{12}\\right)$. Tính $f''\\left(\\frac{\\pi}{24}\\right)$.\n\nCho hàm số $f(x) = -\\sin\\left(2x + \\frac{\\pi}{12}\\right)$. Tính $f''\\left(\\frac{\\pi}{24}\\right)$.\n\nLời giải\n\nTa có: $f'(x) = -2 \\cos\\left(2x + \\frac{\\pi}{12}\\right) \\Rightarrow f''(x) = 4 \\sin\\left(2x + \\frac{\\pi}{12}\\right) \\Rightarrow f''\\left(\\frac{\\pi}{24}\\right) = 4 \\sin\\left(\\frac{\\pi}{6}\\right) = 2$",
+      "source_blocks": [
+        {
+          "id": "/page/2/ListGroup/12",
+          "page": 2,
+          "bbox": [
+            103.0,
+            1865.0,
+            1484.0,
+            2018.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "IV",
+      "number": "3",
+      "type": "unknown",
+      "content": "Cho hàm số $y = x^3 - 3x^2 + 2$ có đồ thị (C). Viết phương trình tiếp tuyến của đồ thị hàm số (C) biết tiếp tuyến song song với đường thẳng $y = 9x + 7$.\nCâu 4: Một viên đạn được bắn lên cao theo phương trình $s(t) = 196t - 4,9t^2$ trong đó $t > 0$, $t$ tính bằng giây kể từ thời điểm viên đạn được bắn lên cao và $s(t)$ là khoảng cách của viên đạn so với mặt đất được tính bằng mét. Tại thời điểm vận tốc của viên đạn bằng 0 thì viên đạn cách mặt đất bao nhiêu mét?\nCâu 5: Một chất điểm chuyển động có phương trình $s(t) = t^3 - 3t^2 + 9t + 2$, trong đó $t > 0$, $t$ tính bằng giây và $s(t)$ tính bằng mét. Hỏi tại thời điểm nào thì vận tốc của vật đạt giá trị nhỏ nhất?\nCâu 6: Một bình nuôi cấy vi sinh vật được giữ ở nhiệt độ $0^\\circ\\text{C}$. Tại thời điểm $t = 0$ (giây) người ta cung cấp nhiệt cho nó. Nhiệt độ tăng lên và được ước tính bởi hàm số $y = f(t) = t^2 + t + 1$ ($^\\circ\\text{C}$) với $f(t)$ là nhiệt độ của bình nuôi cấy ở thời điểm $t$. Hãy tính tốc độ tăng của bình tại thời điểm $t = 5$ giây.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Cho hàm số $y = x^3 - 3x^2 + 2$ có đồ thị (C). Viết phương trình tiếp tuyến của đồ thị hàm số (C) biết tiếp tuyến song song với đường thẳng $y = 9x + 7$.\n\nLời giải\n\nXét hàm số $y = f(x) = x^3 - 3x^2 + 2$.\n\nTa có: $y' = 3x^2 - 6x$.\n\nVì tiếp tuyến song song với đường thẳng $y = 9x + 7$ nên\n\n$$f'(x_0) = 9 \\Leftrightarrow 3x_0^2 - 6x_0 = 9 \\Leftrightarrow 3x_0^2 - 6x_0 - 9 = 0 \\Leftrightarrow \\begin{cases} x_0 = -1 \\\\ x_0 = 3 \\end{cases}.$$\n\nVới $x_0 = -1 \\Rightarrow y_0 = -2$. Phương trình tiếp tuyến là $y = 9(x+1) - 2 \\Leftrightarrow y = 9x + 7$ (Loại)\n\nVới $x_0 = 3 \\Rightarrow y_0 = 2$. Phương trình tiếp tuyến là $y = 9(x-3) + 2 \\Leftrightarrow y = 9x - 25$ (thỏa mãn).\n\nCho hàm số $y = x^3 + 3x^2 + 4x + 1$ có đồ thị là $(C)$. Số tiếp tuyến song song với đường thẳng $d: y = 4x + 5$ của đồ thị hàm số là\n\nCho hàm số $y = x^3 + 3x^2 + 4x + 1$ có đồ thị là $(C)$. Số tiếp tuyến song song với đường thẳng $d : y = 4x + 5$ của đồ thị hàm số là\n\nLời giải\n\nGọi $M(x_0; y_0)$ là tọa độ tiếp điểm.\n\nTa có $y' = 3x^2 + 6x + 4$ suy ra hệ số góc của tiếp tuyến $y(x_0) = 3x_0^2 + 6x_0 + 4$.\n\nTheo đề bài, ta có $3x_0^2 + 6x_0 + 4 = 4 \\Leftrightarrow x_0^2 + 2x_0 = 0 \\Leftrightarrow \\begin{cases} x_0 = 0 \\Rightarrow y_0 = 1 \\\\ x_0 = -2 \\Rightarrow y_0 = -3 \\end{cases}$.\n\nVới $M(0;1)$, phương trình tiếp tuyến là $y = 4x + 1$ (nhận).\n\nVới $M(-2;-3)$, phương trình tiếp tuyến là $y = 4x + 5$ (loại).\n\nVậy có một tiếp tuyến của đồ thị hàm số $(C)$ song song với đường thẳng $d : y = 4x + 5$.\n\nTính đạo hàm cấp hai của hàm số sau: $y = 2 \\sin x - \\ln x$;\n\nTính đạo hàm cấp hai của hàm số sau: $y = 2 \\sin x - \\ln x$;\n\nLời giải\n\nTa có: $y' = (2 \\sin x - \\ln x)' = 2 \\cos x - \\frac{1}{x}$;\n\n$$y'' = \\left(2 \\cos x - \\frac{1}{x}\\right)' = 2(\\cos x)' - \\left(\\frac{1}{x}\\right)' = -2 \\sin x + \\frac{1}{x^2}$$\n\nNhiệt độ cơ thể của một người trong thời gian bị bệnh được cho bởi công thức $T(t) = -0,1t^2 + 1,2t + 98,6$, trong đó $T$ là nhiệt độ (tính theo đơn vị đo Fahrenheit) tại thời điểm $t$ (tính theo ngày). Tìm tốc độ thay đổi nhiệt độ ở thời điểm $t = 2$.\n\nNhiệt độ cơ thể của một người trong thời gian bị bệnh được cho bởi công thức $T(t) = -0,1t^2 + 1,2t + 98,6$, trong đó $T$ là nhiệt độ (tính theo đơn vị đo Fahrenheit) tại thời điểm $t$ (tính theo ngày). Tìm tốc độ thay đổi nhiệt độ ở thời điểm $t = 2$.\n\nLời giải\n\nĐạo hàm của hàm số $T$ biểu thị tốc độ thay đổi của nhiệt độ.\n\nTa có: $T'(t) = -0,2t + 1,2$.\n\nVậy tốc độ thay đổi nhiệt độ tại thời điểm $t = 2$ là:\n\n$$T'(2) = -0,2 \\cdot 2 + 1,2 = 0,8 \\left( ^\\circ F / \\text{ngày} \\right).$$\n\nĐạo hàm cấp hai của hàm số $y = \\frac{x+1}{x-2}$ là:\n\nĐạo hàm cấp hai của hàm số $y = \\frac{x+1}{x-2}$ là:\n\nLời giải\n\nTa có: $y = \\frac{x+1}{x-2} = 1 + \\frac{3}{x-2} \\Rightarrow y' = -\\frac{3}{(x-2)^2}$ và $y'' = \\frac{6}{(x-2)^3}$\n\nĐạo hàm cấp hai của hàm số $y = \\sin 5x \\cos 2x$ là\n\nĐạo hàm cấp hai của hàm số $y = \\sin 5x \\cos 2x$ là\n\nLời giải\n\nTa có: $y = \\sin 5x \\cos 2x = \\frac{1}{2}(\\sin 7x + \\sin 3x)$\n\nDo đó $y' = \\frac{1}{2}(7\\cos 7x + 3\\cos 3x) \\Rightarrow y'' = \\frac{1}{2}(-49\\sin 7x - 9\\sin 3x)$\n\nCó hai tiếp tuyến của đồ thị hàm số $y = \\frac{3x-2}{x-1} (C)$ đi qua điểm $A(9;0)$. Tính hệ số góc của hai tiếp tuyến đó bằng bao nhiêu (làm tròn tới hàng phần trăm).\n\nCó hai tiếp tuyến của đồ thị hàm số $y = \\frac{3x-2}{x-1}$ (C) đi qua điểm $A(9;0)$. Tính hệ số góc của hai tiếp tuyến đó bằng bao nhiêu (làm tròn tới hàng phần trăm).\n\nLời giải\n\n$$y' = \\frac{-1}{(x-1)^2}.$$\n\nGọi $x_0$ là hoành độ tiếp điểm của tiếp tuyến kẻ từ $A$ ($x_0 \\neq 1$).\n\n$$\\text{Phương trình tiếp tuyến là: } y = \\frac{-1}{(x_0-1)^2}(x-x_0) + \\frac{3x_0-2}{x_0-1}.$$\n\n$$\\text{Tiếp tuyến qua } A \\Leftrightarrow \\frac{x_0-9}{(x_0-1)^2} + \\frac{3x_0-2}{x_0-1} = 0 \\Leftrightarrow x_0 - 9 + (3x_0 - 2)(x_0 - 1) = 0 \\Leftrightarrow \\begin{cases} x_0 = -1 \\\\ x_0 = \\frac{7}{3} \\end{cases}.$$\n\n$$\\text{Hai hệ số góc của hai tiếp tuyến kẻ từ } A \\text{ là } y'(-1) \\cdot y'\\left(\\frac{7}{3}\\right) = \\frac{9}{64} \\approx 0,14.$$\n\nTrên đồ thị của hàm số $y = \\frac{1}{x-1}$ có điểm $M$ sao cho tiếp tuyến tại đó cùng với các trục tọa độ tạo thành một tam giác có diện tích bằng 2. Khi đó $M$ có tung độ là\nCâu 4: Cho hàm số $y = x^3 - 6x^2 + 7x + 5$. Trên $(C)$ tiếp tuyến tại điểm $M(a;b)$ song song với đường thẳng $y = -2x + 9$. Tính $a + b$ ?\nCâu 5: Dân số của Việt Nam sau $t$ năm tính từ năm 2023 được dự đoán theo công thức $N(t) = 100 \\cdot e^{0.012t}$ với $N(t)$ tính theo đơn vị triệu người và $0 < t \\leq 50$. Cho biết đạo hàm của hàm số $N(t)$ biểu thị tốc độ gia tăng dân số của Việt Nam (đơn vị là triệu người/năm). Hỏi bắt đầu từ năm nào thì tốc độ gia tăng dân số hơn 2 triệu người/năm?\nCâu 6: Sau khi phát hiện một dịch bệnh, các chuyên gia y tế ước tính số người nhiễm bệnh kể từ ngày phát hiện bệnh nhân đầu tiên đến ngày thứ $t$ là $f(t) = -t^3 + 45t^2 + 600t$, $t \\in \\mathbb{N}$, $t \\leq 30$. Nếu coi $f(t)$ là hàm số xác định trên đoạn $[0;30]$ thì $f'(t)$ được xem là tốc độ truyền bệnh (người/ngày) tại thời điểm $t$. Trong 30 ngày đầu tiên, có bao nhiêu ngày mà tốc độ truyền bệnh lớn hơn 1200\n\n----- HẾT -----\n\nHƯỚNG DẪN GIẢI CHI TIẾT\n\nTrên đồ thị của hàm số $y = \\frac{1}{x-1}$ có điểm $M$ sao cho tiếp tuyến tại đó cùng với các trục tọa độ tạo thành một tam giác có diện tích bằng 2. Khi đó $M$ có tung độ là\n\nLời giải\n\nTa có $y' = -\\frac{1}{(x-1)^2}$.\n\nGọi $M\\left(x_o; \\frac{1}{x_o-1}\\right), x_o \\neq 1$.\n\nSuy ra phương trình tiếp tuyến của đồ thị hàm số tại $M$: $y - \\frac{1}{x_o-1} = -\\frac{1}{(x_o-1)^2}(x - x_o)$.\n\nCho $x = 0 \\Rightarrow y = \\frac{1}{x_o-1} + \\frac{x_o}{(x_o-1)^2} = \\frac{2x_o-1}{(x_o-1)^2}$. Suy ra tiếp tuyến cắt trục tung tại $A\\left(0; \\frac{2x_o-1}{(x_o-1)^2}\\right)$.\n\nCho $y = 0 \\Rightarrow x - x_o = x_o - 1 \\Rightarrow x = 2x_o - 1$. Suy ra tiếp tuyến cắt trục tung tại $B(2x_o - 1; 0)$\n\n$$S_{\\Delta OAB} = 2 \\Leftrightarrow \\frac{1}{2} \\cdot OA \\cdot OB = 2 \\Leftrightarrow \\frac{|2x_o-1|}{(x_o-1)^2} \\cdot |2x_o-1| = 4 \\Leftrightarrow x_o = \\frac{3}{4} \\Rightarrow y_M = \\frac{1}{\\frac{3}{4}-1} = -4.$$",
+      "source_blocks": [
+        {
+          "id": "/page/3/ListGroup/1",
+          "page": 3,
+          "bbox": [
+            103.0,
+            112.0,
+            1485.0,
+            734.0
+          ]
+        }
+      ]
+    }
+  ]
+}

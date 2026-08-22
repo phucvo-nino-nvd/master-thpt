@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "PHUONG_TRINH_TIEP_TUYEN_DUONG_TRON",
+      "name": "Phương trình tiếp tuyến đường tròn",
+      "type": "FORMULA",
+      "description": "Phương trình đại số biểu diễn tiếp tuyến của đường tròn tại một điểm cho trước trên đường tròn."
+    },
+    {
+      "id": "PHUONG_TRINH_TIEP_TUYEN_DO_THI_HAM_SO",
+      "name": "Phương trình tiếp tuyến đồ thị hàm số",
+      "type": "FORMULA",
+      "description": "Phương trình đường thẳng tiếp xúc với đồ thị của một hàm số tại một điểm, với hệ số góc bằng đạo hàm của hàm số tại điểm đó."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0009",
+      "original_id": "PHUONG_TRINH_TIEP_TUYEN",
+      "canonical_id": "PHUONG_TRINH_TIEP_TUYEN_DUONG_TRON",
+      "rationale": "This occurrence describes the equation of a tangent line to a circle, which is a specific geometric context. It should be split from the more general calculus-based formula."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0005",
+      "original_id": "PHUONG_TRINH_TIEP_TUYEN",
+      "canonical_id": "PHUONG_TRINH_TIEP_TUYEN_DO_THI_HAM_SO",
+      "rationale": "This occurrence describes the general equation of a tangent line to the graph of a function using derivatives. Its mathematical meaning and context (calculus) differ from the geometric circle-specific formula."
+    }
+  ]
+}

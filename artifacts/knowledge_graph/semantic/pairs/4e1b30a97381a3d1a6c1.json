@@ -1,0 +1,6 @@
+{
+  "left_id": "QUY_TAC_GIOI_HAN_VO_CUC",
+  "right_id": "QUY_TAC_TINH_GIOI_HAN_TICH",
+  "merge": false,
+  "rationale": "Quy tắc giới hạn vô cực (rules for infinite limits) is a general concept; Quy tắc tính giới hạn của tích (rule for limit of product) is a specific rule that may be a component of the general rules. They are not identical."
+}

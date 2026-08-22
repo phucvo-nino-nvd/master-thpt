@@ -1,0 +1,6 @@
+{
+  "left_id": "TAP_GIA_TRI_HAM_SO_MU",
+  "right_id": "TAP_XAC_DINH_HAM_SO_MU",
+  "merge": false,
+  "rationale": "These describe different properties of the same function: its range vs. its domain. They are related but distinct concepts."
+}

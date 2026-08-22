@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "Left is a theorem about a line perpendicular to a plane being perpendicular to lines parallel to that plane. Right is a theorem about two distinct planes perpendicular to the same line being parallel. They are distinct geometric theorems; one is not a semantic duplicate of the other."
+}

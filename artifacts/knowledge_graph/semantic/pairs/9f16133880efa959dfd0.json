@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_BANG_BANG",
+  "right_id": "HAM_SO_BANG_BIEU_DO",
+  "merge": false,
+  "rationale": "The left node defines a function given by a table. The right node defines a function given by a graph/diagram. They are distinct ways of representing a function, not the same mathematical object or concept."
+}

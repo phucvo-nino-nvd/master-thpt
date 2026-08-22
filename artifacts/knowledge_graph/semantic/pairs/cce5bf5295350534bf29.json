@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+  "right_id": "TINH_CHAT_TONG_HAM_SO",
+  "merge": false,
+  "rationale": "The left node describes the general form of all antiderivatives (F(x)+C). The right node describes the linearity property of antiderivatives (sum rule). They are distinct properties of antiderivatives."
+}

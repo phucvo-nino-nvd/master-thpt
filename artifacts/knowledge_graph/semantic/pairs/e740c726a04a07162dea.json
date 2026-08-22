@@ -1,0 +1,6 @@
+{
+  "left_id": "GIA_TOC_TUC_THOI",
+  "right_id": "VAN_TOC_TUC_THOI",
+  "merge": false,
+  "rationale": "These are distinct but related physical concepts: acceleration is the derivative of velocity."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_HAI_MAT_PHANG_VUONG_GOC",
+  "right_id": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS",
+  "merge": false,
+  "rationale": "These are conditions for perpendicularity in different contexts: between two planes (left) and between two lines using vectors (right). They are related geometric concepts but apply to different objects and use different criteria."
+}

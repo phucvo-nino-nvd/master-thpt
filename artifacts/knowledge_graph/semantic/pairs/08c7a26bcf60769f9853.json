@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_HAI_MAT_PHANG_VUONG_GOC",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The nodes are different theorems about perpendicularity and parallelism in space. One gives a condition for two planes to be perpendicular. The other states that two distinct planes perpendicular to the same line are parallel. They express different mathematical statements."
+}

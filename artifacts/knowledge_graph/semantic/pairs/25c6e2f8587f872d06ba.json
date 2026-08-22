@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_SO",
+  "right_id": "TINH_CHAT_HAM_SO",
+  "merge": false,
+  "rationale": "The nodes represent different concepts. 'Biến số' (variable) is a basic component of a function. 'Tính chất hàm số' (properties of a function) describes characteristics like monotonicity, parity, etc. They are related but not identical; one is a building block, the other describes behaviors of the whole."
+}

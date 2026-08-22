@@ -1,0 +1,6 @@
+{
+  "left_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+  "right_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+  "merge": false,
+  "rationale": "Left node is the concept of the 'angle between a line and a plane'. Right node is the concept of the 'angle between two lines in space'. They measure angles between different geometric entities. They are not semantic duplicates."
+}

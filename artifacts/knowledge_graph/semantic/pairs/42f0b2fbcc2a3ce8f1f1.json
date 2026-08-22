@@ -1,0 +1,6 @@
+{
+  "left_id": "COS_ALPHA",
+  "right_id": "TAN_ALPHA",
+  "merge": false,
+  "rationale": "The left node defines the cosine function. The right node defines the tangent function. They are distinct trigonometric functions, so KEEP."
+}

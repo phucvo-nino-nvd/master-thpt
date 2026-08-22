@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_LIEN_TUC_HAM_DA_THUC",
+  "right_id": "TINH_CHAT_LIEN_TUC_HAM_PHAN_THUC",
+  "merge": false,
+  "rationale": "Tính liên tục của hàm đa thức and Tính liên tục của hàm phân thức are two separate theorems about continuity for different classes of functions (polynomial vs. rational). They are not the same reusable knowledge node."
+}

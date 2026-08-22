@@ -1,0 +1,6 @@
+{
+  "left_id": "PHEP_CONG_VECTO_TOA_DO",
+  "right_id": "PHEP_TRU_VECTO_TOA_DO",
+  "merge": false,
+  "rationale": "Phép cộng vectơ theo toạ độ and Phép trừ vectơ theo toạ độ are two different coordinate formulas for vector addition and subtraction. They are distinct operations and formulas."
+}

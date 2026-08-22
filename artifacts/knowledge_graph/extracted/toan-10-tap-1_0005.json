@@ -1,0 +1,145 @@
+{
+  "chunk_id": "toan-10-tap-1:0005",
+  "nodes": [
+    {
+      "id": "GIA_TRI_LUONG_GIAC",
+      "name": "Giá trị lượng giác",
+      "type": "CONCEPT",
+      "description": "Giá trị lượng giác của một góc từ 0° đến 180° được định nghĩa dựa trên tọa độ của điểm trên nửa đường tròn đơn vị.",
+      "grade": 10
+    },
+    {
+      "id": "NUA_DUONG_TRON_DON_VI",
+      "name": "Nửa đường tròn đơn vị",
+      "type": "CONCEPT",
+      "description": "Nửa đường tròn có bán kính 1 nằm phía trên trục hoành trong mặt phẳng toạ độ.",
+      "grade": 10
+    },
+    {
+      "id": "SIN_ALPHA",
+      "name": "sin α",
+      "type": "FORMULA",
+      "description": "Tung độ của điểm M trên nửa đường tròn đơn vị tương ứng với góc α.",
+      "grade": 10
+    },
+    {
+      "id": "COS_ALPHA",
+      "name": "cos α",
+      "type": "FORMULA",
+      "description": "Hoành độ của điểm M trên nửa đường tròn đơn vị tương ứng với góc α.",
+      "grade": 10
+    },
+    {
+      "id": "TAN_ALPHA",
+      "name": "tan α",
+      "type": "FORMULA",
+      "description": "Tỉ số giữa tung độ và hoành độ của điểm M trên nửa đường tròn đơn vị tương ứng với góc α (khi α ≠ 90°).",
+      "grade": 10
+    },
+    {
+      "id": "COT_ALPHA",
+      "name": "cot α",
+      "type": "FORMULA",
+      "description": "Tỉ số giữa hoành độ và tung độ của điểm M trên nửa đường tròn đơn vị tương ứng với góc α (khi α ≠ 0° và α ≠ 180°).",
+      "grade": 10
+    },
+    {
+      "id": "QUAN_HE_SIN_COS_TAN_COT",
+      "name": "Quan hệ giữa sin, cos, tan, cot",
+      "type": "FORMULA",
+      "description": "tan α = sin α / cos α, cot α = cos α / sin α, tan α = 1 / cot α.",
+      "grade": 10
+    },
+    {
+      "id": "GIA_TRI_LUONG_GIAC_CAC_GOC_DAC_BIET",
+      "name": "Giá trị lượng giác của các góc đặc biệt",
+      "type": "FORMULA",
+      "description": "Bảng giá trị lượng giác của các góc 0°, 30°, 45°, 60°, 90°, 180°.",
+      "grade": 10
+    },
+    {
+      "id": "HAI_GOC_BU_NHAU",
+      "name": "Hai góc bù nhau",
+      "type": "CONCEPT",
+      "description": "Hai góc có tổng bằng 180°.",
+      "grade": 10
+    },
+    {
+      "id": "QUAN_HE_LUONG_GIAC_GOC_BU",
+      "name": "Quan hệ lượng giác của hai góc bù nhau",
+      "type": "FORMULA",
+      "description": "sin(180° - α) = sin α, cos(180° - α) = -cos α, tan(180° - α) = -tan α, cot(180° - α) = -cot α.",
+      "grade": 10
+    },
+    {
+      "id": "HAI_GOC_PHU_NHAU",
+      "name": "Hai góc phụ nhau",
+      "type": "CONCEPT",
+      "description": "Hai góc có tổng bằng 90°.",
+      "grade": 10
+    },
+    {
+      "id": "QUAN_HE_LUONG_GIAC_GOC_PHU",
+      "name": "Quan hệ lượng giác của hai góc phụ nhau",
+      "type": "FORMULA",
+      "description": "sin(90° - α) = cos α, cos(90° - α) = sin α, tan(90° - α) = cot α, cot(90° - α) = tan α.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "GIA_TRI_LUONG_GIAC",
+      "target": "NUA_DUONG_TRON_DON_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "SIN_ALPHA",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "COS_ALPHA",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TAN_ALPHA",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "COT_ALPHA",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "QUAN_HE_SIN_COS_TAN_COT",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIA_TRI_LUONG_GIAC_CAC_GOC_DAC_BIET",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "QUAN_HE_LUONG_GIAC_GOC_BU",
+      "target": "HAI_GOC_BU_NHAU",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "QUAN_HE_LUONG_GIAC_GOC_PHU",
+      "target": "HAI_GOC_PHU_NHAU",
+      "relation": "IS_A",
+      "rationale": null
+    }
+  ]
+}

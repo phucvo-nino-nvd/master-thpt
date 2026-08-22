@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_BEN_TRAI",
+  "right_id": "GIOI_HAN_MOT_BEN",
+  "merge": false,
+  "rationale": "The left node is 'left-hand limit', a specific type of one-sided limit. The right node is the general concept of 'one-sided limit', which includes both left-hand and right-hand limits. One is a specific subtype of the other, so they should be kept separate."
+}

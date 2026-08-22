@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_CUA_BIEN_SO",
+  "right_id": "HAM_SO_DONG_BIEN",
+  "merge": false,
+  "rationale": "Hàm số của biến số is a very general description of a function, while hàm số đồng biến is a specific property (monotonicity). The left is a general concept, the right is a specific property/type."
+}

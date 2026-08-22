@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_HAI_MAT_PHANG_SONG_SONG",
+  "right_id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+  "merge": false,
+  "rationale": "The left node is a condition for two planes to be parallel, while the right node is a theorem about a plane containing one line and parallel to another line. They are distinct geometric theorems about parallel conditions."
+}

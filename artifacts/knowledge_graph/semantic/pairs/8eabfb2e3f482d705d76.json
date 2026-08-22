@@ -1,0 +1,6 @@
+{
+  "left_id": "MAU_SO_LIEU_GHEP_NHOM",
+  "right_id": "NHOM_SO_LIEU",
+  "merge": false,
+  "rationale": "The left node is the concept of grouped data (a sample represented by grouped frequency tables). The right node is the concept of a data group (a single group of values). One is the overall data structure, the other is a component of that structure. They are related but not identical."
+}

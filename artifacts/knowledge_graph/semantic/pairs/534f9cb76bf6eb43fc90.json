@@ -1,0 +1,6 @@
+{
+  "left_id": "DAY_SO_HUU_HAN",
+  "right_id": "DAY_SO_VO_HAN",
+  "merge": false,
+  "rationale": "Finite sequence vs. infinite sequence. Distinct concepts, one defined on finite set, the other on positive integers."
+}

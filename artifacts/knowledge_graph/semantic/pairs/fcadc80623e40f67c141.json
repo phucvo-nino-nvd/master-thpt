@@ -1,0 +1,6 @@
+{
+  "left_id": "TAP_HOP_SO_HUU_TI",
+  "right_id": "TAP_HOP_SO_THUC",
+  "merge": false,
+  "rationale": "The left node is the set of rational numbers. The right node is the set of real numbers, which includes rational numbers. One is a proper subset of the other. They are distinct mathematical sets and should be kept separate."
+}

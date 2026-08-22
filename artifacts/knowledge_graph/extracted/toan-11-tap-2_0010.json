@@ -1,0 +1,53 @@
+{
+  "chunk_id": "toan-11-tap-2:0010",
+  "nodes": [
+    {
+      "id": "PHEP_CHIEU_VUONG_GOC",
+      "name": "Phép chiếu vuông góc",
+      "type": "METHOD",
+      "description": "Phép chiếu song song lên mặt phẳng (P) theo phương Δ vuông góc với (P).",
+      "grade": 11
+    },
+    {
+      "id": "HINH_CHIEU_VUONG_GOC",
+      "name": "Hình chiếu vuông góc",
+      "type": "CONCEPT",
+      "description": "Hình chiếu của một hình trên mặt phẳng (P) qua phép chiếu vuông góc.",
+      "grade": 11
+    },
+    {
+      "id": "DINH_LI_BA_DUONG_VUONG_GOC",
+      "name": "Định lí ba đường vuông góc",
+      "type": "THEOREM",
+      "description": "Cho đường thẳng a và mặt phẳng (P) không vuông góc với nhau. Khi đó, một đường thẳng b nằm trong mặt phẳng (P) vuông góc với đường thẳng a khi và chỉ khi b vuông góc với hình chiếu vuông góc a' của a trên (P).",
+      "grade": 11
+    },
+    {
+      "id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "name": "Góc giữa đường thẳng và mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Nếu đường thẳng a không vuông góc với mặt phẳng (P), thì góc giữa a và hình chiếu a' của nó trên (P) được gọi là góc giữa đường thẳng a và mặt phẳng (P).",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHEP_CHIEU_VUONG_GOC",
+      "target": "HINH_CHIEU_VUONG_GOC",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "DINH_LI_BA_DUONG_VUONG_GOC",
+      "target": "PHEP_CHIEU_VUONG_GOC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "target": "PHEP_CHIEU_VUONG_GOC",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

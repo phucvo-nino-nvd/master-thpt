@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "MOT",
+      "name": "Mốt",
+      "type": "CONCEPT",
+      "description": "Giá trị xuất hiện với tần số lớn nhất trong mẫu số liệu, dùng để đo xu thế trung tâm."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0013",
+      "original_id": "MOT",
+      "canonical_id": "MOT",
+      "rationale": "Both occurrences describe the same statistical concept of 'mode' (Mốt) as the value with the highest frequency in a data set. The descriptions are consistent, and grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0009",
+      "original_id": "MOT",
+      "canonical_id": "MOT",
+      "rationale": "Both occurrences describe the same statistical concept of 'mode' (Mốt) as the value with the highest frequency in a data set. The descriptions are consistent, and grade difference is not a reason to split."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "CONG_THUC_TINH_TU_PHAN_VI",
+      "name": "Công thức tính tứ phân vị",
+      "type": "FORMULA",
+      "description": "Công thức tính các tứ phân vị (thứ nhất Q1, thứ ba Q3, hoặc tổng quát Q_r) cho mẫu số liệu ghép nhóm."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0009",
+      "original_id": "CONG_THUC_TINH_TU_PHAN_VI",
+      "canonical_id": "CONG_THUC_TINH_TU_PHAN_VI",
+      "rationale": "The grade 11 occurrence describes the general idea of calculating quartiles Q1 and Q3 for grouped data, analogous to the median. The grade 12 occurrence provides the specific, detailed general formula for the r-th quartile in grouped data. Both are formulas for calculating quartiles (tứ phân vị) in grouped data, representing the same reusable mathematical knowledge. Grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0009",
+      "original_id": "CONG_THUC_TU_PHAN_VI",
+      "canonical_id": "CONG_THUC_TINH_TU_PHAN_VI",
+      "rationale": "The grade 12 occurrence provides the specific, detailed general formula for the r-th quartile in grouped data. The grade 11 occurrence describes the general idea of calculating quartiles Q1 and Q3 for grouped data. Both are formulas for calculating quartiles (tứ phân vị) in grouped data, representing the same reusable mathematical knowledge. Grade difference is not a reason to split."
+    }
+  ]
+}

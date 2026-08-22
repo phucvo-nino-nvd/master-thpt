@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_XAC_SUAT",
+  "right_id": "CONG_THUC_NHAN_XAC_SUAT_TONG_QUAT",
+  "merge": false,
+  "rationale": "The left node is the addition formula for probability (P(A ∪ B)). The right node is the general multiplication formula for probability (P(AB)). They are distinct, fundamental formulas for different probability operations, so they should be KEEP separate."
+}

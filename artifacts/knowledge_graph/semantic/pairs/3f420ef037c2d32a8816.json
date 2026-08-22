@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_MAT_CAU",
+  "right_id": "PHUONG_TRINH_MAT_CAU_TRAI_DAT",
+  "merge": false,
+  "rationale": "Phương trình mặt cầu is the general formula for a sphere. Phương trình mặt cầu Trái Đất is a specific application/instance of that formula (with radius 1 and center at the origin). One is a general concept/formula, the other is a specific case."
+}

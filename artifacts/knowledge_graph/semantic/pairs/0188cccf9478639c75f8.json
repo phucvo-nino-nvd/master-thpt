@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_MAT_CAU_TRAI_DAT",
+  "right_id": "PHUONG_TRINH_MAT_CAU_TUONG_DUONG",
+  "merge": false,
+  "rationale": "The left node is a specific equation modeling Earth's surface (x^2 + y^2 + z^2 = 1), while the right node is a general condition for an equation to represent a sphere. One is a specific instance, the other is a general criterion. They are related but not identical reusable knowledge."
+}

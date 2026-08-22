@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+  "right_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+  "merge": false,
+  "rationale": "The left node is the formula for the angle between a line and a plane. The right node is the formula for the angle between two lines. They are distinct formulas for different geometric configurations."
+}

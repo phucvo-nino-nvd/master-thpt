@@ -1,0 +1,125 @@
+{
+  "chunk_id": "toan-11-tap-2:0014",
+  "nodes": [
+    {
+      "id": "BIEN_CO_HOP",
+      "name": "Biến cố hợp",
+      "type": "CONCEPT",
+      "description": "Biến cố 'A hoặc B xảy ra' của hai biến cố A và B, kí hiệu là A ∪ B.",
+      "grade": 11
+    },
+    {
+      "id": "BIEN_CO_GIAO",
+      "name": "Biến cố giao",
+      "type": "CONCEPT",
+      "description": "Biến cố 'Cả A và B đều xảy ra' của hai biến cố A và B, kí hiệu là A ∩ B.",
+      "grade": 11
+    },
+    {
+      "id": "BIEN_CO_DOC_LAP",
+      "name": "Biến cố độc lập",
+      "type": "CONCEPT",
+      "description": "Cặp biến cố A và B được gọi là độc lập nếu việc xảy ra hay không xảy ra của biến cố này không ảnh hưởng tới xác suất xảy ra của biến cố kia.",
+      "grade": 11
+    },
+    {
+      "id": "KHOANG_GIA_TRI_MAU",
+      "name": "Không gian mẫu",
+      "type": "CONCEPT",
+      "description": "Tập hợp tất cả các kết quả có thể xảy ra của một thử nghiệm ngẫu nhiên.",
+      "grade": 11
+    },
+    {
+      "id": "TOAN_TAP",
+      "name": "Tập hợp",
+      "type": "CONCEPT",
+      "description": "Một tập hợp là một bộ sưu tập các phần tử được xác định rõ ràng.",
+      "grade": 11
+    },
+    {
+      "id": "TOAN_TAP_CON",
+      "name": "Tập con",
+      "type": "CONCEPT",
+      "description": "Một tập hợp A là tập con của tập hợp B nếu mọi phần tử của A đều thuộc B.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_XAC_DINH_BIEN_CO",
+      "name": "Phương pháp xác định biến cố",
+      "type": "METHOD",
+      "description": "Xác định biến cố bằng cách mô tả tập hợp các kết quả có thể xảy ra trong không gian mẫu.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_HOP",
+      "name": "Phương pháp xác định biến cố hợp",
+      "type": "METHOD",
+      "description": "Xác định biến cố hợp bằng cách lấy hợp của hai tập con A và B trong không gian mẫu.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_GIAO",
+      "name": "Phương pháp xác định biến cố giao",
+      "type": "METHOD",
+      "description": "Xác định biến cố giao bằng cách lấy giao của hai tập con A và B trong không gian mẫu.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_DOC_LAP",
+      "name": "Phương pháp xác định biến cố độc lập",
+      "type": "METHOD",
+      "description": "Xác định biến cố độc lập bằng cách kiểm tra xem việc xảy ra hay không xảy ra của một biến cố có ảnh hưởng đến xác suất của biến cố kia không.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "BIEN_CO_HOP",
+      "target": "TOAN_TAP_CON",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "BIEN_CO_GIAO",
+      "target": "TOAN_TAP_CON",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "BIEN_CO_HOP",
+      "target": "KHOANG_GIA_TRI_MAU",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "BIEN_CO_GIAO",
+      "target": "KHOANG_GIA_TRI_MAU",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_XAC_DINH_BIEN_CO",
+      "target": "KHOANG_GIA_TRI_MAU",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_XAC_DINH_BIEN_CO_HOP",
+      "target": "BIEN_CO_HOP",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_XAC_DINH_BIEN_CO_GIAO",
+      "target": "BIEN_CO_GIAO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_XAC_DINH_BIEN_CO_DOC_LAP",
+      "target": "BIEN_CO_DOC_LAP",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

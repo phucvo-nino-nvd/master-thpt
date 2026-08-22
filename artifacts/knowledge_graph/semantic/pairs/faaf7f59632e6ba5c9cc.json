@@ -1,0 +1,6 @@
+{
+  "left_id": "BANG_NGUYEN_HAM",
+  "right_id": "HO_NGUYEN_HAM",
+  "merge": false,
+  "rationale": "The nodes are related but distinct concepts. 'Bảng nguyên hàm' (table of antiderivatives) is a reference listing specific antiderivatives. 'Họ nguyên hàm' (family of antiderivatives) is the general concept that the antiderivative of a function is a set of functions differing by a constant. One is a specific compilation, the other is the theoretical construct."
+}

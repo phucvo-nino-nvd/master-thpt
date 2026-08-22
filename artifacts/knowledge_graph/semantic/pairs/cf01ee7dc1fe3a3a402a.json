@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node states that a line perpendicular to a plane intersects it, while the right node describes the relationship between a line and a plane both perpendicular to another line. They are different theorems about perpendicular lines and planes."
+}

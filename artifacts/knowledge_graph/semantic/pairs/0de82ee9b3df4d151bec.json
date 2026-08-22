@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_LOGARIT",
+  "right_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+  "merge": false,
+  "rationale": "Đạo hàm của hàm số lôgarit is a specific case within đạo hàm của các hàm số sơ cấp cơ bản. The right node is a general collection, the left is a specific component. They are not identical."
+}

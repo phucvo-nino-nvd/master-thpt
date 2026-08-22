@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_PHAP_TINH_TRUNG_VI",
+  "right_id": "PHUONG_PHAP_TINH_TU_PHAN_VI",
+  "merge": false,
+  "rationale": "Left node describes a method for calculating the median. Right node describes a method for calculating quartiles. They are distinct statistical methods for computing different summary statistics. They are related but not semantic duplicates."
+}

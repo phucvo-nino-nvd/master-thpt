@@ -1,0 +1,6 @@
+{
+  "left_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+  "right_id": "TINH_CHAT_DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "Different theorems: one about existence of a plane perpendicular to a line through a point, the other about a condition for a line to be perpendicular to a plane. Related but not identical."
+}

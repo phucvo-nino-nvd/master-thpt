@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "VECTO_BANG_NHAU",
+      "name": "Vectơ bằng nhau",
+      "type": "CONCEPT",
+      "description": "Hai vectơ có cùng độ dài và cùng hướng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0007",
+      "original_id": "VECTO_BANG_NHAU",
+      "canonical_id": "VECTO_BANG_NHAU",
+      "rationale": "Both occurrences describe the same mathematical concept: two vectors are equal if they have the same length and direction. The grade difference (10 vs. 12) is not a reason to split, as the core definition is identical. The slight variation in the name ('Hai vectơ bằng nhau' vs. 'Vectơ bằng nhau') refers to the same concept."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "VECTO_BANG_NHAU",
+      "canonical_id": "VECTO_BANG_NHAU",
+      "rationale": "Both occurrences describe the same mathematical concept: two vectors are equal if they have the same length and direction. The grade difference (10 vs. 12) is not a reason to split, as the core definition is identical. The slight variation in the name ('Hai vectơ bằng nhau' vs. 'Vectơ bằng nhau') refers to the same concept."
+    }
+  ]
+}

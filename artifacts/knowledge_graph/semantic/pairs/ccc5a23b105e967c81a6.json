@@ -1,0 +1,6 @@
+{
+  "left_id": "HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "The left node is the concept of a system of linear inequalities in two variables. The right node is the concept of a solution (a single ordered pair) to such an inequality. One is a system, the other is a solution to a component; they are related but not identical."
+}

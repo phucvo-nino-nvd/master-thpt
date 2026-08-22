@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_MAT_PHANG",
+      "name": "Góc giữa hai đường thẳng trong mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Góc không tù tạo bởi hai đường thẳng cắt nhau trong mặt phẳng, được xác định bằng công thức liên quan đến vectơ pháp tuyến hoặc vectơ chỉ phương."
+    },
+    {
+      "id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+      "name": "Góc giữa hai đường thẳng trong không gian",
+      "type": "CONCEPT",
+      "description": "Góc giữa hai đường thẳng trong không gian, đặc biệt xác định cho đường thẳng chéo nhau bằng góc giữa hai đường thẳng song song với chúng và cùng đi qua một điểm."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0008",
+      "original_id": "GOC_GIUA_HAI_DUONG_THANG",
+      "canonical_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_MAT_PHANG",
+      "rationale": "This occurrence describes the angle between two intersecting lines in a plane, defined using normal or direction vectors. It is a specific planar case of the general concept."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0008",
+      "original_id": "GOC_GIUA_HAI_DUONG_THANG",
+      "canonical_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+      "rationale": "This occurrence explicitly describes the angle between two skew lines in space, defined via parallel lines through a point. This is the spatial case, which is mathematically distinct from the planar case."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0006",
+      "original_id": "GOC_GIUA_HAI_DUONG_THANG",
+      "canonical_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+      "rationale": "This occurrence describes the angle between two lines in space. Its description is general but aligns with the spatial concept defined in grade 11, so it should be merged with the spatial canonical node."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_LOGARIT",
+  "right_id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_LOGARIT",
+  "merge": false,
+  "rationale": "Left is a method for solving logarithmic inequalities. Right is a method for solving logarithmic equations. They are distinct procedures for different types of problems; one is not a semantic duplicate of the other."
+}

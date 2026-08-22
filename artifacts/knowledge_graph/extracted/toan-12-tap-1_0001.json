@@ -1,0 +1,138 @@
+{
+  "chunk_id": "toan-12-tap-1:0001",
+  "nodes": [
+    {
+      "id": "HAM_SO_DONG_BIEN",
+      "name": "Hàm số đồng biến",
+      "type": "CONCEPT",
+      "description": "Hàm số được gọi là đồng biến trên một khoảng nếu giá trị của nó tăng khi biến số tăng.",
+      "grade": 12
+    },
+    {
+      "id": "HAM_SO_NGHICH_BIEN",
+      "name": "Hàm số nghịch biến",
+      "type": "CONCEPT",
+      "description": "Hàm số được gọi là nghịch biến trên một khoảng nếu giá trị của nó giảm khi biến số tăng.",
+      "grade": 12
+    },
+    {
+      "id": "HAM_SO_DON_DIEU",
+      "name": "Hàm số đơn điệu",
+      "type": "CONCEPT",
+      "description": "Hàm số được gọi là đơn điệu trên một khoảng nếu nó đồng biến hoặc nghịch biến trên khoảng đó.",
+      "grade": 12
+    },
+    {
+      "id": "BANG_BIEN_THIEN",
+      "name": "Bảng biến thiên",
+      "type": "CONCEPT",
+      "description": "Bảng thể hiện dấu của đạo hàm và sự đồng biến, nghịch biến của hàm số trên các khoảng.",
+      "grade": 12
+    },
+    {
+      "id": "DIEM_CUC_DAI",
+      "name": "Điểm cực đại",
+      "type": "CONCEPT",
+      "description": "Điểm mà giá trị của hàm số tại đó lớn hơn giá trị của hàm số trong một khoảng nhỏ xung quanh.",
+      "grade": 12
+    },
+    {
+      "id": "DIEM_CUC_TIEU",
+      "name": "Điểm cực tiểu",
+      "type": "CONCEPT",
+      "description": "Điểm mà giá trị của hàm số tại đó nhỏ hơn giá trị của hàm số trong một khoảng nhỏ xung quanh.",
+      "grade": 12
+    },
+    {
+      "id": "DIEM_CUC_TRI",
+      "name": "Điểm cực trị",
+      "type": "CONCEPT",
+      "description": "Điểm cực đại hoặc điểm cực tiểu của hàm số.",
+      "grade": 12
+    },
+    {
+      "id": "GIA_TRI_CUC_TRI",
+      "name": "Giá trị cực trị",
+      "type": "CONCEPT",
+      "description": "Giá trị của hàm số tại điểm cực trị.",
+      "grade": 12
+    },
+    {
+      "id": "DINH_LI_TINH_DON_DIEU",
+      "name": "Định lí tính đơn điệu",
+      "type": "THEOREM",
+      "description": "Nếu đạo hàm của hàm số dương trên một khoảng thì hàm số đồng biến trên khoảng đó. Nếu đạo hàm âm thì hàm số nghịch biến.",
+      "grade": 12
+    },
+    {
+      "id": "DINH_LI_TIM_CUC_TRI",
+      "name": "Định lí tìm cực trị",
+      "type": "THEOREM",
+      "description": "Nếu đạo hàm của hàm số đổi dấu từ dương sang âm tại một điểm thì đó là điểm cực đại. Nếu đổi dấu từ âm sang dương thì đó là điểm cực tiểu.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_PHAP_BANG_BIEN_THIEN",
+      "name": "Phương pháp bảng biến thiên",
+      "type": "METHOD",
+      "description": "Phương pháp sử dụng bảng biến thiên để xác định tính đơn điệu và cực trị của hàm số.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "HAM_SO_DON_DIEU",
+      "target": "HAM_SO_DONG_BIEN",
+      "relation": "IS_A",
+      "rationale": "Hàm số đồng biến là một trường hợp đặc biệt của hàm số đơn điệu."
+    },
+    {
+      "source": "HAM_SO_DON_DIEU",
+      "target": "HAM_SO_NGHICH_BIEN",
+      "relation": "IS_A",
+      "rationale": "Hàm số nghịch biến là một trường hợp đặc biệt của hàm số đơn điệu."
+    },
+    {
+      "source": "PHUONG_PHAP_BANG_BIEN_THIEN",
+      "target": "BANG_BIEN_THIEN",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp bảng biến thiên yêu cầu sử dụng bảng biến thiên."
+    },
+    {
+      "source": "PHUONG_PHAP_BANG_BIEN_THIEN",
+      "target": "DINH_LI_TINH_DON_DIEU",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp bảng biến thiên dựa trên định lí tính đơn điệu."
+    },
+    {
+      "source": "PHUONG_PHAP_BANG_BIEN_THIEN",
+      "target": "DINH_LI_TIM_CUC_TRI",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp bảng biến thiên cũng sử dụng định lí tìm cực trị."
+    },
+    {
+      "source": "DIEM_CUC_TRI",
+      "target": "DIEM_CUC_DAI",
+      "relation": "IS_A",
+      "rationale": "Điểm cực đại là một loại điểm cực trị."
+    },
+    {
+      "source": "DIEM_CUC_TRI",
+      "target": "DIEM_CUC_TIEU",
+      "relation": "IS_A",
+      "rationale": "Điểm cực tiểu là một loại điểm cực trị."
+    },
+    {
+      "source": "GIA_TRI_CUC_TRI",
+      "target": "DIEM_CUC_DAI",
+      "relation": "PART_OF",
+      "rationale": "Giá trị cực trị là giá trị của hàm số tại điểm cực đại."
+    },
+    {
+      "source": "GIA_TRI_CUC_TRI",
+      "target": "DIEM_CUC_TIEU",
+      "relation": "PART_OF",
+      "rationale": "Giá trị cực trị là giá trị của hàm số tại điểm cực tiểu."
+    }
+  ]
+}

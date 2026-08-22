@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_BAC_HAI",
+  "right_id": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "The left node is a quadratic inequality in one variable. The right node is a linear inequality in two variables. They are different types of inequalities with different forms, variables, and solution spaces."
+}

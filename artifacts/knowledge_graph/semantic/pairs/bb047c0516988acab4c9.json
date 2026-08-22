@@ -1,0 +1,6 @@
+{
+  "left_id": "MENH_DE_PHUONG_TRINH_THAM_SO",
+  "right_id": "MENH_DE_PHUONG_TRINH_TONG_QUAT",
+  "merge": false,
+  "rationale": "mệnh đề phương trình tham số (parametric equation of line) and mệnh đề phương trình tổng quát (general equation of line) are different representations of a line; they are coordinate-specific forms of the same geometric object but are distinct reusable knowledge nodes."
+}

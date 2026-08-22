@@ -1,0 +1,6 @@
+{
+  "left_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+  "right_id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node 'Mặt phẳng vuông góc với đường thẳng song song' is a theorem about planes perpendicular to a line being parallel. The right node 'Tính chất đường thẳng song song với mặt phẳng' is a theorem about a property when a line is parallel to a plane. They are distinct theorems about different geometric relationships (plane-line perpendicularity leading to parallelism vs. line-plane parallelism and intersection)."
+}

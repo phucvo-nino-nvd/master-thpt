@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_CUA_BIEN_SO",
+  "right_id": "HAM_SO_NGHICH_BIEN",
+  "merge": false,
+  "rationale": "The left node is a very general description of a function. The right node defines a specific property of a function (decreasing). One is a general concept, the other is a specific property/type."
+}

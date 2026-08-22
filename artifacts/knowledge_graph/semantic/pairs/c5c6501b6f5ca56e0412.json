@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_MU",
+  "right_id": "PHUONG_TRINH_MU_CO_BAN",
+  "merge": true,
+  "rationale": "Both nodes describe the exponential equation of the form a^x = b with the same conditions (0 < a != 1). The right node is explicitly called 'basic', but the left node's description matches the basic form. They appear to be semantic duplicates describing the same concept. MERGE."
+}

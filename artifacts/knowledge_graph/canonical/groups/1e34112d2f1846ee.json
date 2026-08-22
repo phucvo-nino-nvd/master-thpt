@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "DO_LECH_CHUAN",
+      "name": "Độ lệch chuẩn",
+      "type": "CONCEPT",
+      "description": "Căn bậc hai của phương sai, đo lường mức độ phân tán của mẫu số liệu."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0014",
+      "original_id": "DO_LECH_CHUAN",
+      "canonical_id": "DO_LECH_CHUAN",
+      "rationale": "Both occurrences describe the same mathematical concept: the standard deviation, defined as the square root of variance, measuring data dispersion. The grade difference (10 vs 12) is not a reason to split, as the core definition is consistent."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0010",
+      "original_id": "DO_LECH_CHUAN",
+      "canonical_id": "DO_LECH_CHUAN",
+      "rationale": "Both occurrences describe the same mathematical concept: the standard deviation, defined as the square root of variance, measuring data dispersion. The grade difference (10 vs 12) is not a reason to split, as the core definition is consistent."
+    }
+  ]
+}

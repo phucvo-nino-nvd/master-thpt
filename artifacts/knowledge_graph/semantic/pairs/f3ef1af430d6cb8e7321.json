@@ -1,0 +1,6 @@
+{
+  "left_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+  "right_id": "GOC_GIUA_HAI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node defines the angle between a line and a plane, while the right node defines the angle between two planes. They are distinct geometric concepts involving different mathematical objects."
+}

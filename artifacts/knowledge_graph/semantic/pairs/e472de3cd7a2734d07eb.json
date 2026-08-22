@@ -1,0 +1,6 @@
+{
+  "left_id": "HOP_HAI_TAP_HOP",
+  "right_id": "TAP_HOP_HOP",
+  "merge": true,
+  "rationale": "Both nodes define the union of two sets using the same notation (S ∪ T and A ∪ B) and the same semantic description: a set containing elements from either set. The difference in variable names (S/T vs. A/B) and phrasing ('gồm các phần tử' vs 'gồm tất cả các phần tử') is purely wording. They represent the same reusable mathematical concept."
+}

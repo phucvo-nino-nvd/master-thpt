@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+  "merge": false,
+  "rationale": "Different theorems: one is a general vector condition for perpendicular lines, the other is a specific geometric property in a triangle."
+}

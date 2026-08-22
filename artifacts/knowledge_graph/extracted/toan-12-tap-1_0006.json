@@ -1,0 +1,235 @@
+{
+  "chunk_id": "toan-12-tap-1:0006",
+  "nodes": [
+    {
+      "id": "VECTO_TRONG_KHONG_GIAN",
+      "name": "Vectơ trong không gian",
+      "type": "CONCEPT",
+      "description": "Một đoạn thẳng có hướng trong không gian, biểu diễn đại lượng có hướng và độ lớn.",
+      "grade": 12
+    },
+    {
+      "id": "DO_DAI_VECTO",
+      "name": "Độ dài vectơ",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa điểm đầu và điểm cuối của vectơ.",
+      "grade": 12
+    },
+    {
+      "id": "KY_HIEU_VECTO",
+      "name": "Kí hiệu vectơ",
+      "type": "CONCEPT",
+      "description": "Vectơ có điểm đầu A và điểm cuối B được kí hiệu là AB. Vectơ không chỉ rõ điểm đầu và cuối được kí hiệu là a, b, x, y, ...",
+      "grade": 12
+    },
+    {
+      "id": "GIA_VECTO",
+      "name": "Giá vectơ",
+      "type": "CONCEPT",
+      "description": "Đường thẳng đi qua điểm đầu và điểm cuối của một vectơ.",
+      "grade": 12
+    },
+    {
+      "id": "VECTO_KHONG",
+      "name": "Vectơ không",
+      "type": "CONCEPT",
+      "description": "Vectơ có điểm đầu và điểm cuối trùng nhau, có độ dài 0 và cùng hướng với mọi vectơ.",
+      "grade": 12
+    },
+    {
+      "id": "VECTO_CUNG_PHUONG",
+      "name": "Vectơ cùng phương",
+      "type": "CONCEPT",
+      "description": "Hai vectơ có giá song song hoặc trùng nhau.",
+      "grade": 12
+    },
+    {
+      "id": "VECTO_CUNG_HUONG",
+      "name": "Vectơ cùng hướng",
+      "type": "CONCEPT",
+      "description": "Hai vectơ cùng phương và cùng hướng.",
+      "grade": 12
+    },
+    {
+      "id": "VECTO_NGUOC_HUONG",
+      "name": "Vectơ ngược hướng",
+      "type": "CONCEPT",
+      "description": "Hai vectơ cùng phương và ngược hướng.",
+      "grade": 12
+    },
+    {
+      "id": "VECTO_BANG_NHAU",
+      "name": "Vectơ bằng nhau",
+      "type": "CONCEPT",
+      "description": "Hai vectơ có cùng độ dài và cùng hướng.",
+      "grade": 12
+    },
+    {
+      "id": "TONG_VECTO",
+      "name": "Tổng vectơ",
+      "type": "CONCEPT",
+      "description": "Vectơ AC được gọi là tổng của hai vectơ AB và BC, kí hiệu là a + b.",
+      "grade": 12
+    },
+    {
+      "id": "QUY_TAC_BA_DIEM",
+      "name": "Quy tắc ba điểm",
+      "type": "THEOREM",
+      "description": "Nếu A, B, C là ba điểm bất kì thì AB + BC = AC.",
+      "grade": 12
+    },
+    {
+      "id": "QUY_TAC_HINH_BINH_HANGH",
+      "name": "Quy tắc hình bình hành",
+      "type": "THEOREM",
+      "description": "Nếu ABCD là hình bình hành thì AB + AD = AC.",
+      "grade": 12
+    },
+    {
+      "id": "QUY_TAC_HINH_HOP",
+      "name": "Quy tắc hình hộp",
+      "type": "THEOREM",
+      "description": "Cho hình hộp ABCD.A'B'C'D' thì AB + AD + AA' = AC'.",
+      "grade": 12
+    },
+    {
+      "id": "VECTO_DOI",
+      "name": "Vectơ đối",
+      "type": "CONCEPT",
+      "description": "Vectơ có cùng độ dài và ngược hướng với vectơ a, kí hiệu là -a.",
+      "grade": 12
+    },
+    {
+      "id": "HIEU_VECTO",
+      "name": "Hiệu vectơ",
+      "type": "CONCEPT",
+      "description": "Vectơ a + (-b) được gọi là hiệu của hai vectơ a và b, kí hiệu là a - b.",
+      "grade": 12
+    },
+    {
+      "id": "TICH_SO_VOI_VECTO",
+      "name": "Tích số với vectơ",
+      "type": "CONCEPT",
+      "description": "Tích của một số thực k ≠ 0 với một vectơ a ≠ 0 là một vectơ, kí hiệu là ka, có cùng hướng với a nếu k > 0, ngược hướng nếu k < 0, độ dài bằng |k|.|a|.",
+      "grade": 12
+    },
+    {
+      "id": "GOC_GIUA_HAI_VECTO",
+      "name": "Góc giữa hai vectơ",
+      "type": "CONCEPT",
+      "description": "Góc giữa hai vectơ a và b là góc giữa hai vectơ có điểm đầu trùng nhau và tương ứng với a và b.",
+      "grade": 12
+    },
+    {
+      "id": "TICH_VO_HUONG",
+      "name": "Tích vô hướng",
+      "type": "CONCEPT",
+      "description": "Tích vô hướng của hai vectơ a và b là một số, kí hiệu là a·b, được xác định bởi công thức a·b = |a|.|b|.cos(a, b).",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "DO_DAI_VECTO",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Độ dài là một thuộc tính cơ bản của vectơ."
+    },
+    {
+      "source": "KY_HIEU_VECTO",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Kí hiệu vectơ là một phần của khái niệm vectơ."
+    },
+    {
+      "source": "GIA_VECTO",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Giá vectơ là một khái niệm liên quan đến vectơ."
+    },
+    {
+      "source": "VECTO_KHONG",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "IS_A",
+      "rationale": "Vectơ không là một trường hợp đặc biệt của vectơ."
+    },
+    {
+      "source": "VECTO_CUNG_PHUONG",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Vectơ cùng phương là một khái niệm liên quan đến vectơ."
+    },
+    {
+      "source": "VECTO_CUNG_HUONG",
+      "target": "VECTO_CUNG_PHUONG",
+      "relation": "IS_A",
+      "rationale": "Vectơ cùng hướng là một trường hợp đặc biệt của vectơ cùng phương."
+    },
+    {
+      "source": "VECTO_NGUOC_HUONG",
+      "target": "VECTO_CUNG_PHUONG",
+      "relation": "IS_A",
+      "rationale": "Vectơ ngược hướng là một trường hợp đặc biệt của vectơ cùng phương."
+    },
+    {
+      "source": "VECTO_BANG_NHAU",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Vectơ bằng nhau là một khái niệm liên quan đến vectơ."
+    },
+    {
+      "source": "TONG_VECTO",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Tổng vectơ là một phép toán cơ bản trên vectơ."
+    },
+    {
+      "source": "QUY_TAC_BA_DIEM",
+      "target": "TONG_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Quy tắc ba điểm là một quy tắc liên quan đến tổng vectơ."
+    },
+    {
+      "source": "QUY_TAC_HINH_BINH_HANGH",
+      "target": "TONG_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Quy tắc hình bình hành là một quy tắc liên quan đến tổng vectơ."
+    },
+    {
+      "source": "QUY_TAC_HINH_HOP",
+      "target": "TONG_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Quy tắc hình hộp là một quy tắc liên quan đến tổng vectơ."
+    },
+    {
+      "source": "VECTO_DOI",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Vectơ đối là một khái niệm liên quan đến vectơ."
+    },
+    {
+      "source": "HIEU_VECTO",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Hiệu vectơ là một phép toán cơ bản trên vectơ."
+    },
+    {
+      "source": "TICH_SO_VOI_VECTO",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Tích số với vectơ là một phép toán cơ bản trên vectơ."
+    },
+    {
+      "source": "GOC_GIUA_HAI_VECTO",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Góc giữa hai vectơ là một khái niệm liên quan đến vectơ."
+    },
+    {
+      "source": "TICH_VO_HUONG",
+      "target": "VECTO_TRONG_KHONG_GIAN",
+      "relation": "PART_OF",
+      "rationale": "Tích vô hướng là một phép toán cơ bản trên vectơ."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_XAC_SUAT",
+  "right_id": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC",
+  "merge": false,
+  "rationale": "General addition formula vs. special case for mutually exclusive events. One is general, the other is a special case."
+}

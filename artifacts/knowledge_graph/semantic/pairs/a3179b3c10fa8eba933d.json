@@ -1,0 +1,6 @@
+{
+  "left_id": "HE_TRUC_TOA_DO_OXY",
+  "right_id": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+  "merge": false,
+  "rationale": "The left node is the 2D coordinate system (Oxy). The right node is the 3D coordinate system in space (Oxyz). They are the same concept (coordinate system) but in different dimensional spaces (2D vs. 3D), which is a meaningful distinction per the guidelines."
+}

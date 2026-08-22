@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "SO_DO_HINH_CAY_CONCEPT",
+      "name": "Sơ đồ hình cây",
+      "type": "CONCEPT",
+      "description": "Sơ đồ minh hoạ cách phân chia trường hợp trong các bài toán đếm, giúp visual hóa và tránh bỏ sót trường hợp."
+    },
+    {
+      "id": "SO_DO_HINH_CAY_METHOD",
+      "name": "Phương pháp sơ đồ hình cây",
+      "type": "METHOD",
+      "description": "Phương pháp sử dụng sơ đồ hình cây để tính xác suất của các biến cố, bao gồm việc mô tả kết quả, tính xác suất cho biến cố độc lập, và minh họa công thức xác suất toàn phần."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0006",
+      "original_id": "SO_DO_HINH_CAY",
+      "canonical_id": "SO_DO_HINH_CAY_METHOD",
+      "rationale": "This occurrence describes a METHOD for using tree diagrams to calculate probability. It has a different mathematical purpose (a solving technique) compared to the CONCEPT of a tree diagram as a visual aid for counting."
+    },
+    {
+      "chunk_id": "toan-10-tap-2:0011",
+      "original_id": "SO_DO_HINH_CAY",
+      "canonical_id": "SO_DO_HINH_CAY_CONCEPT",
+      "rationale": "This occurrence describes a CONCEPT: a tree diagram as a visual illustration for dividing cases in counting problems. It represents a mathematical object/visual tool, distinct from the METHOD of applying it for probability calculations."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0016",
+      "original_id": "SO_DO_HINH_CAY",
+      "canonical_id": "SO_DO_HINH_CAY_METHOD",
+      "rationale": "This occurrence describes a METHOD for using tree diagrams to calculate probability for related events. It is the same reusable mathematical technique as the METHOD in grade 10, despite a grade difference. It should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0009",
+      "original_id": "SO_DO_HINH_CAY",
+      "canonical_id": "SO_DO_HINH_CAY_METHOD",
+      "rationale": "This occurrence describes a METHOD for using tree diagrams to visually model the total probability formula. It is a specific application of the same reusable tree diagram technique for probability, so it should be merged with the other METHOD nodes."
+    }
+  ]
+}

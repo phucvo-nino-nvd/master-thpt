@@ -1,0 +1,6 @@
+{
+  "left_id": "DO_DAI_VECTO",
+  "right_id": "KY_HIEU_DO_DAI_VECTO",
+  "merge": false,
+  "rationale": "The left node is the concept of vector length (magnitude). The right node is the specific notation used to denote vector length. One is the concept, the other is its symbolic representation; they are related but not identical."
+}

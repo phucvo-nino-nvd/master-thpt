@@ -1,0 +1,6 @@
+{
+  "left_id": "KHOANG_CACH",
+  "right_id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+  "merge": false,
+  "rationale": "General concept of distance vs. specific distance from a point to a line. General concept vs. special case."
+}

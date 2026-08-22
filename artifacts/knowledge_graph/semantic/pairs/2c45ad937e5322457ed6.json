@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_CAT_NHAU_TRONG_KHONG_GIAN",
+  "right_id": "DIEU_KIEN_HAI_MAT_PHANG_VUONG_GOC",
+  "merge": false,
+  "rationale": "The nodes describe different geometric conditions: one for intersecting lines in space, the other for perpendicular planes. They are distinct theorems about different spatial relationships."
+}

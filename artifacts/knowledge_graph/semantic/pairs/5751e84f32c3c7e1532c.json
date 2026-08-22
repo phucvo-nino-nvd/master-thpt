@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+  "right_id": "TINH_CHAT_TICH_HAM_SO",
+  "merge": false,
+  "rationale": "The left node states the fundamental property of antiderivatives (adding a constant), while the right node states the scalar multiplication property for antiderivatives. They are two separate basic properties of integrals."
+}

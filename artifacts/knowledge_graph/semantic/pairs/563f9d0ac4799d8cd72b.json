@@ -1,0 +1,6 @@
+{
+  "left_id": "NGHIEM_BAT_PHUONG_TRINH_LOGARIT",
+  "right_id": "NGHIEM_PHUONG_TRINH_LOGARIT",
+  "merge": false,
+  "rationale": "The left node describes the solution set for a logarithmic inequality (with conditions based on the base). The right node describes the unique solution to a logarithmic equation. One is for inequalities, the other for equations. They are related but distinct concepts."
+}

@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "VECTO_CHI_PHUONG",
+      "name": "Vectơ chỉ phương",
+      "type": "CONCEPT",
+      "description": "Vectơ khác không có giá song song hoặc trùng với một đường thẳng, dùng để xác định phương hướng của đường thẳng đó. Khái niệm áp dụng cho đường thẳng trong mặt phẳng và trong không gian."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0007",
+      "original_id": "VECTO_CHI_HUONG",
+      "canonical_id": "VECTO_CHI_PHUONG",
+      "rationale": "The occurrence describes the concept of a direction vector for a line. The name 'vectơ chỉ phương' is the standard term, and the description matches the core definition. The original ID 'VECTO_CHI_HUONG' appears to be a minor spelling variation of 'VECTO_CHI_PHUONG'. This should be merged with the other occurrences of the same concept."
+    },
+    {
+      "chunk_id": "toan-10-tap-2:0008",
+      "original_id": "VECTO_CHI_PHUONG",
+      "canonical_id": "VECTO_CHI_PHUONG",
+      "rationale": "The occurrence describes the concept of a direction vector for a line in the plane. The description aligns with the core definition. It should be merged with other occurrences of the same concept, regardless of grade."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0005",
+      "original_id": "VECTO_CHI_PHUONG",
+      "canonical_id": "VECTO_CHI_PHUONG",
+      "rationale": "The occurrence describes the concept of a direction vector for a line in space. The definition is consistent with the core concept, extending it to three dimensions. Grade differences alone are not a reason to split. The mathematical meaning is the same: a non-zero vector parallel to the line."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0006",
+      "original_id": "VECTO_CHI_PHUONG",
+      "canonical_id": "VECTO_CHI_PHUONG",
+      "rationale": "The occurrence describes the concept of a direction vector for a line in space. The description is concise but consistent with the core meaning. It should be merged with the other occurrences of the same concept."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_CHINH_TAC_HAI_DIEM",
+  "right_id": "PHUONG_TRINH_THAM_SO_HAI_DIEM",
+  "merge": false,
+  "rationale": "Both describe equations for a line through two points in 3D. The left is the canonical equation form: (x-x1)/(x2-x1) = (y-y1)/(y2-y1) = (z-z1)/(z2-z1). The right is the parametric equation form: x = x1 + (x2-x1)t, etc. They are different representations (canonical vs. parametric) of the same geometric object. According to guidelines, a general concept and a coordinate-specific representation should be kept separate, and here we have two different coordinate representations. KEEP."
+}

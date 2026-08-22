@@ -1,0 +1,6 @@
+{
+  "left_id": "BIET_THUC",
+  "right_id": "BIET_THUC_THU_GON",
+  "merge": false,
+  "rationale": "Discriminant Δ = b² - 4ac vs. reduced discriminant Δ' = b² - ac. Different formulas, used in different contexts (full quadratic vs. monic quadratic)."
+}

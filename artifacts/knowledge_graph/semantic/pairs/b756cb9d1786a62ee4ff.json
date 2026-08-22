@@ -1,0 +1,6 @@
+{
+  "left_id": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_CHEO_NHAU",
+  "right_id": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left node defines the distance between two skew lines, while the right node defines the distance between two parallel lines. These are distinct geometric concepts for different spatial relationships between lines. One is a general concept and the other is a specific case, so they should be KEPT separate."
+}

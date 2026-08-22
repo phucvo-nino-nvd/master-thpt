@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "GIOI_HAN_VO_CUC",
+      "name": "Giới hạn vô cực",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một dãy số hoặc hàm số khi giá trị của nó phát triển vô hạn (tiến ra vô cùng dương hoặc vô cùng âm)."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0015",
+      "original_id": "GIOI_HAN_VO_CUC",
+      "canonical_id": "GIOI_HAN_VO_CUC",
+      "rationale": "Both occurrences describe the general concept of an infinite limit, one for sequences and one for functions. The core mathematical knowledge is the same: a limit whose magnitude grows without bound. Grade is the same. They should be merged under the same canonical concept."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0016",
+      "original_id": "GIOI_HAN_VO_CUC",
+      "canonical_id": "GIOI_HAN_VO_CUC",
+      "rationale": "Both occurrences describe the general concept of an infinite limit, one for sequences and one for functions. The core mathematical knowledge is the same: a limit whose magnitude grows without bound. Grade is the same. They should be merged under the same canonical concept."
+    }
+  ]
+}

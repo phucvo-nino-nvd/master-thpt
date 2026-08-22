@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "DUONG_THANG_CAT_NHAU",
+      "name": "Hai đường thẳng cắt nhau",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng đồng phẳng và có một điểm chung."
+    },
+    {
+      "id": "DIEU_KIEN_DUONG_THANG_CAT_NHAU_TRONG_KHONG_GIAN",
+      "name": "Điều kiện hai đường thẳng cắt nhau trong không gian",
+      "type": "THEOREM",
+      "description": "Hai đường thẳng cắt nhau khi và chỉ khi hai vectơ chỉ phương không cùng phương và vectơ nối hai điểm thuộc hai đường thẳng vuông góc với vectơ chéo của hai vectơ chỉ phương."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0011",
+      "original_id": "DUONG_THANG_CAT_NHAU",
+      "canonical_id": "DUONG_THANG_CAT_NHAU",
+      "rationale": "This is a basic geometric CONCEPT defining intersecting lines in a plane. It is distinct from the THEOREM about the condition for lines to intersect in space."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0005",
+      "original_id": "DUONG_THANG_CAT",
+      "canonical_id": "DIEU_KIEN_DUONG_THANG_CAT_NHAU_TRONG_KHONG_GIAN",
+      "rationale": "This is a THEOREM providing a specific vector condition for two lines to intersect in three-dimensional space. Its mathematical meaning (a theorem with a proof condition) differs from the simple definitional CONCEPT, so it should be split into a separate canonical node."
+    }
+  ]
+}

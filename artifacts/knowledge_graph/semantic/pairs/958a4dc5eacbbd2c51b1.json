@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEU_THUC_TOA_DO_PHEP_TRU_VECTO",
+  "right_id": "BIEU_THUC_TOA_DO_TICH_VO_HUONG",
+  "merge": false,
+  "rationale": "The left node is the coordinate expression for vector subtraction. The right node is the coordinate formula for the dot product. They are distinct vector operations with different formulas and meanings."
+}

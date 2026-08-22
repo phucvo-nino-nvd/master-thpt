@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "counts": {
+    "node_occurrences": 812,
+    "canonical_nodes": 722,
+    "dropped_occurrences": 2,
+    "canonical_local_edges": 741
+  },
+  "errors": [],
+  "warning_counts": {
+    "suspicious_ids": 1,
+    "control_characters": 2,
+    "same_name_groups": 2,
+    "same_description_groups": 7,
+    "multi_relation_pairs": 13,
+    "reciprocal_edges": 2
+  },
+  "warnings": {
+    "suspicious_ids": [
+      {
+        "id": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN",
+        "fragment": "NHAI",
+        "possible_replacement": "NHAT"
+      }
+    ],
+    "control_characters": [
+      {
+        "id": "HAM_SO_COT",
+        "field": "description",
+        "chars": [
+          "U+007F"
+        ]
+      },
+      {
+        "id": "HAM_SO_TANG",
+        "field": "description",
+        "chars": [
+          "U+007F"
+        ]
+      }
+    ],
+    "same_name_groups": [
+      [
+        "PHUONG_TRINH_CHINH_TAC_DUONG_CONIC",
+        "PHUONG_TRINH_CHINH_TAC_DUONG_THANG"
+      ],
+      [
+        "QUY_TAC_HINH_HOP_METHOD",
+        "QUY_TAC_HINH_HOP_THEOREM"
+      ]
+    ],
+    "same_description_groups": [
+      [
+        "BIEN_CO_A",
+        "BIEN_CO_B"
+      ],
+      [
+        "CONG_THUC_THE_TICH_KHOI_HOP",
+        "CONG_THUC_THE_TICH_KHOI_LANG_TRU"
+      ],
+      [
+        "DAO_HAM_CAP_HAI",
+        "DAO_HAM_CAP_HAI_CU_HAM_SO"
+      ],
+      [
+        "DAY_SO",
+        "DAY_SO_VO_HAN"
+      ],
+      [
+        "HAM_SO_LOGARIT",
+        "HAM_SO_LOGARIT_CO_SO_A"
+      ],
+      [
+        "HAM_SO_MU",
+        "HAM_SO_MU_CO_SO_A"
+      ],
+      [
+        "NGUYEN_HAM_HAM_SO_LUY_THUA",
+        "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT"
+      ]
+    ],
+    "multi_relation_pairs": [
+      {
+        "source": "BIEU_THUC_TOA_DO_PHEP_CONG_VECTO",
+        "target": "PHEP_TOAN_VECTO",
+        "relations": [
+          "PART_OF",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "BIEU_THUC_TOA_DO_PHEP_TRU_VECTO",
+        "target": "PHEP_TOAN_VECTO",
+        "relations": [
+          "PART_OF",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "BIEU_THUC_TOA_DO_TICH_VO_HUONG",
+        "target": "TICH_VO_HUONG",
+        "relations": [
+          "PART_OF",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "CONG_THUC_DO_DAI_VECTO_KHONG_GIAN",
+        "target": "TICH_VO_HUONG",
+        "relations": [
+          "PART_OF",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "CONG_THUC_TINH_GOC_GIUA_HAI_VECTO",
+        "target": "TICH_VO_HUONG",
+        "relations": [
+          "PART_OF",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "HAM_SO_TUAN_HOAN",
+        "target": "CHU_KI",
+        "relations": [
+          "PART_OF",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "MENH_DE_KEO_THEO",
+        "target": "MENH_DE",
+        "relations": [
+          "IS_A",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "MENH_DE_PHU_DINH",
+        "target": "MENH_DE",
+        "relations": [
+          "IS_A",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "PHEP_NHAN_SO_VOI_VECTO",
+        "target": "PHEP_TOAN_VECTO",
+        "relations": [
+          "PART_OF",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "TAP_RONG",
+        "target": "TAP_HOP",
+        "relations": [
+          "IS_A",
+          "PART_OF"
+        ]
+      },
+      {
+        "source": "TOA_DO_TRONG_TAM",
+        "target": "PHEP_TOAN_VECTO",
+        "relations": [
+          "PART_OF",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "TOA_DO_TRUNG_DIEM",
+        "target": "PHEP_TOAN_VECTO",
+        "relations": [
+          "PART_OF",
+          "REQUIRES"
+        ]
+      },
+      {
+        "source": "VECTO_CUNG_HUONG",
+        "target": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+        "relations": [
+          "IS_A",
+          "REQUIRES"
+        ]
+      }
+    ],
+    "reciprocal_edges": [
+      {
+        "left": "KHOANG_BIEN_THIEN",
+        "right": "TINH_KHOANG_BIEN_THIEN",
+        "relation": "REQUIRES"
+      },
+      {
+        "left": "KHOANG_TU_PHAN_VI",
+        "right": "TINH_KHOANG_TU_PHAN_VI",
+        "relation": "REQUIRES"
+      }
+    ]
+  }
+}

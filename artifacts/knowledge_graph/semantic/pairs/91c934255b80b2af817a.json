@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "HAI_DUONG_THANG_DONG_PHANG",
+  "merge": false,
+  "rationale": "The nodes represent different concepts: 'Đường thẳng song song với mặt phẳng' (line parallel to a plane) and 'Hai đường thẳng đồng phẳng' (two coplanar lines). One describes a line-plane relation, the other a line-line relation. They are related but not identical."
+}

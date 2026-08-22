@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+  "right_id": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC",
+  "merge": false,
+  "rationale": "The left node is a theorem about a line perpendicular to a plane (condition based on two intersecting lines). The right node is a theorem about properties of two perpendicular planes. They are distinct theorems concerning perpendicularity in geometry, not semantic duplicates."
+}

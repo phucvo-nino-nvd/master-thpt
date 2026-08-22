@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_LOGARIT_CO_BAN",
+  "right_id": "PHUONG_TRINH_MU_CO_BAN",
+  "merge": false,
+  "rationale": "Left node is the basic logarithmic equation. Right node is the basic exponential equation. They are inverse equation forms but represent distinct types of equations. They are not semantic duplicates."
+}

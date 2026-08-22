@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG_FORMULA",
+  "right_id": "PHUONG_TRINH_THAM_SO_HAI_DIEM",
+  "merge": false,
+  "rationale": "The left node is the canonical equation of a line in 3D, while the right node is the parametric equation of a line through two points in 3D. They are different standard forms for representing a line, not semantic duplicates."
+}

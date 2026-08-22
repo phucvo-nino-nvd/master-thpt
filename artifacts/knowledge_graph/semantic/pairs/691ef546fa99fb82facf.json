@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_CUA_BIEN_SO",
+  "right_id": "HAM_SO_DON_DIEU",
+  "merge": false,
+  "rationale": "The nodes represent different aspects of a function. 'Hàm số của biến số' (function of a variable) is a very general description of functional dependence. 'Hàm số đơn điệu' (monotonic function) is a specific property a function may have. The latter is a subtype/property of the former, not a duplicate."
+}

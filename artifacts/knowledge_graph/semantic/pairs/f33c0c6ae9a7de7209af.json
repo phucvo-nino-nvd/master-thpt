@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+  "merge": false,
+  "rationale": "The left node is a theorem about two distinct lines perpendicular to the same plane being parallel. The right node is a theorem about the existence and uniqueness of a plane through a point perpendicular to a line. These are distinct geometric theorems."
+}

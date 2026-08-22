@@ -1,0 +1,112 @@
+{
+  "chunk_id": "toan-10-tap-1:0007",
+  "nodes": [
+    {
+      "id": "VECTO",
+      "name": "Vectơ",
+      "type": "CONCEPT",
+      "description": "Một đoạn thẳng có hướng, được xác định bởi điểm đầu và điểm cuối.",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_KHONG",
+      "name": "Vectơ-không",
+      "type": "CONCEPT",
+      "description": "Vectơ có điểm đầu và điểm cuối trùng nhau, độ dài bằng 0, cùng hướng với mọi vectơ.",
+      "grade": 10
+    },
+    {
+      "id": "DO_DAI_VECTO",
+      "name": "Độ dài của vectơ",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa điểm đầu và điểm cuối của vectơ.",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_CUNG_PHUONG",
+      "name": "Hai vectơ cùng phương",
+      "type": "CONCEPT",
+      "description": "Hai vectơ có giá (đường thẳng đi qua điểm đầu và điểm cuối) song song hoặc trùng nhau.",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_CUNG_HUONG",
+      "name": "Hai vectơ cùng hướng",
+      "type": "CONCEPT",
+      "description": "Hai vectơ cùng phương và có cùng hướng.",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_BANG_NHAU",
+      "name": "Hai vectơ bằng nhau",
+      "type": "CONCEPT",
+      "description": "Hai vectơ có cùng độ dài và cùng hướng.",
+      "grade": 10
+    },
+    {
+      "id": "KY_HIEU_VECTO",
+      "name": "Ký hiệu vectơ",
+      "type": "CONCEPT",
+      "description": "Vectơ được ký hiệu là $\\overrightarrow{AB}$ (vectơ từ A đến B) hoặc $\\vec{a}, \\vec{b}, \\vec{x}, \\vec{y}, \\dots$.",
+      "grade": 10
+    },
+    {
+      "id": "KY_HIEU_DO_DAI_VECTO",
+      "name": "Ký hiệu độ dài vectơ",
+      "type": "CONCEPT",
+      "description": "Độ dài của vectơ $\\overrightarrow{AB}$ hoặc $\\vec{a}$ được ký hiệu là $|\\overrightarrow{AB}|$ hoặc $|\\vec{a}|$.",
+      "grade": 10
+    },
+    {
+      "id": "BIEU_DIEN_DAI_LUONG_VECTO",
+      "name": "Biểu diễn đại lượng bằng vectơ",
+      "type": "CONCEPT",
+      "description": "Sử dụng vectơ để biểu diễn các đại lượng có cả hướng và độ lớn như lực, vận tốc, gia tốc.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "VECTO",
+      "target": "DO_DAI_VECTO",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "VECTO",
+      "target": "KY_HIEU_VECTO",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "VECTO",
+      "target": "VECTO_KHONG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "VECTO_CUNG_PHUONG",
+      "target": "VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "VECTO_CUNG_HUONG",
+      "target": "VECTO_CUNG_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "VECTO_BANG_NHAU",
+      "target": "VECTO_CUNG_HUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "BIEU_DIEN_DAI_LUONG_VECTO",
+      "target": "VECTO",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

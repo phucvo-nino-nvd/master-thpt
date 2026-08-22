@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_BEN_PHAI",
+  "right_id": "GIOI_HAN_TAI_VO_CUC",
+  "merge": false,
+  "rationale": "Giới hạn bên phải and Giới hạn tại vô cực are two distinct types/concepts of limits (one-sided limit at a finite point vs. limit at infinity)."
+}

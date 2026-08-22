@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_CO_B",
+  "right_id": "BIEN_CO_DOI",
+  "merge": false,
+  "rationale": "The left node 'Biến cố B' is a generic concept of an event B in probability. The right node 'Biến cố đối' is the specific concept of a complementary event. They are distinct concepts; one is a general placeholder, the other is a defined relationship between events."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_LOGARIT",
+  "right_id": "HAM_SO_MU",
+  "merge": false,
+  "rationale": "Left node is the logarithmic function. Right node is the exponential function. They are inverse functions but represent distinct mathematical objects and concepts. They are not semantic duplicates."
+}

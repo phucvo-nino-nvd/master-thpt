@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "TINH_CHAT_HAI_MAT_PHANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left node 'Điều kiện đường thẳng song song với mặt phẳng' is a theorem giving a condition for a line to be parallel to a plane. The right node 'Tính chất hai mặt phẳng song song' is a theorem about a property of two parallel planes. They are distinct theorems about parallelism in different geometric configurations (line-plane vs. plane-plane)."
+}

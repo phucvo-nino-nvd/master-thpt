@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_TIEM_CAN_DUNG",
+  "right_id": "DUONG_TIEM_CAN_XIEN",
+  "merge": false,
+  "rationale": "The left node is the concept of a vertical asymptote. The right node is the concept of an oblique (slant) asymptote. They are two distinct types of asymptotes, so KEEP."
+}

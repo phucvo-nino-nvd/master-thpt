@@ -1,0 +1,6 @@
+{
+  "left_id": "MENH_DE_DAO",
+  "right_id": "MENH_DE_KEO_THEO",
+  "merge": false,
+  "rationale": "These are distinct logical concepts: a conditional statement vs. its converse."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "GIA_TRI_LUONG_GIAC_GOC_BU_NHAU",
+  "right_id": "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU",
+  "merge": false,
+  "rationale": "These are trigonometric relations for supplementary angles (π - α) and complementary angles (π/2 - α). They are distinct formulas. One set of identities is for supplementary angles, the other for complementary angles. They are related but represent different reusable knowledge nodes."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_SIN",
+  "right_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+  "merge": false,
+  "rationale": "One is a specific derivative rule (sin x), the other is a collection of many basic derivative rules. Specific case vs. general collection."
+}

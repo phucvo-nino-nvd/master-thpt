@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "TAP_CON",
+      "name": "Tập con",
+      "type": "CONCEPT",
+      "description": "Tập hợp A là tập con của tập hợp B nếu mọi phần tử của A đều thuộc B, kí hiệu A ⊂ B."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0002",
+      "original_id": "TAP_CON",
+      "canonical_id": "TAP_CON",
+      "rationale": "Both occurrences describe the same fundamental concept of a subset. Grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0014",
+      "original_id": "TOAN_TAP_CON",
+      "canonical_id": "TAP_CON",
+      "rationale": "Both occurrences describe the same fundamental concept of a subset. The different original ID 'TOAN_TAP_CON' is merged into the more standard 'TAP_CON'."
+    }
+  ]
+}

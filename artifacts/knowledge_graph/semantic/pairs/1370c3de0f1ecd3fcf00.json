@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_COS",
+  "right_id": "DAO_HAM_CUA_HAM_SO_SIN",
+  "merge": false,
+  "rationale": "The left node is the derivative formula for the cosine function. The right node is the derivative formula for the sine function. They are distinct formulas for different trigonometric functions, even though they are related."
+}

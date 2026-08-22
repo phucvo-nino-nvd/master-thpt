@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+      "name": "phương trình tham số đường thẳng",
+      "type": "CONCEPT",
+      "description": "Hệ phương trình xác định đường thẳng (trong mặt phẳng hoặc không gian) đi qua một điểm cho trước và có vectơ chỉ phương cho trước, với một tham số tự do."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0007",
+      "original_id": "PHUONG_TRINH_THAM_SO",
+      "canonical_id": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+      "rationale": "This occurrence is a FORMULA describing the parametric equations of a line in the plane (x = x0 + at, y = y0 + bt). It is a specific mathematical representation."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0005",
+      "original_id": "PHUONG_TRINH_THAM_SO",
+      "canonical_id": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+      "rationale": "This occurrence is a CONCEPT describing the parametric equation of a line in space. While the context (space vs. plane) and type (CONCEPT vs FORMULA) differ, the core mathematical knowledge is the same: a line defined by a point and a direction vector using a parameter. Grade differences and type differences (CONCEPT vs FORMULA for the same object) are not sufficient reasons to split. They represent the same reusable mathematical idea."
+    }
+  ]
+}

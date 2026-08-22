@@ -1,0 +1,6 @@
+{
+  "left_id": "CHINH_HOP",
+  "right_id": "TO_HOP",
+  "merge": false,
+  "rationale": "Chỉnh hợp and Tổ hợp are two fundamental, distinct combinatorial concepts (ordered vs. unordered selections)."
+}

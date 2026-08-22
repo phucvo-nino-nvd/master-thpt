@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_MU",
+  "right_id": "NGUYEN_HAM_HAM_SO_MU",
+  "merge": false,
+  "rationale": "The left node 'Đạo hàm của hàm số mũ' is the derivative of exponential functions. The right node 'Nguyên hàm của hàm số mũ' is the antiderivative/integral of exponential functions. They are inverse operations (differentiation vs. integration) for the same class of functions, representing distinct mathematical knowledge."
+}

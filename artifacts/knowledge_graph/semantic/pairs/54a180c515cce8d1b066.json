@@ -1,0 +1,6 @@
+{
+  "left_id": "QUY_TAC_GIOI_HAN_VO_CUC",
+  "right_id": "QUY_TAC_TINH_GIOI_HAN",
+  "merge": false,
+  "rationale": "The left node is specifically about limits involving infinity, while the right node is about general limit rules for basic operations. The right is a broader concept that may include the left as a special case, but they are not identical. One is a specific rule within the general framework."
+}

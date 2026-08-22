@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "VECTO_DOI",
+      "name": "Vectơ đối",
+      "type": "CONCEPT",
+      "description": "Vectơ có cùng độ dài và ngược hướng với một vectơ cho trước, ký hiệu là -a."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0008",
+      "original_id": "VECTO_DOI",
+      "canonical_id": "VECTO_DOI",
+      "rationale": "Both occurrences describe the same mathematical concept: a vector with the same magnitude and opposite direction to a given vector, denoted as -a. The grade difference (10 vs. 12) and slight variation in phrasing ('vectơ ban đầu' vs 'vectơ a') do not change the core definition. They should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "VECTO_DOI",
+      "canonical_id": "VECTO_DOI",
+      "rationale": "Both occurrences describe the same mathematical concept: a vector with the same magnitude and opposite direction to a given vector, denoted as -a. The grade difference (10 vs. 12) and slight variation in phrasing ('vectơ ban đầu' vs 'vectơ a') do not change the core definition. They should be merged."
+    }
+  ]
+}

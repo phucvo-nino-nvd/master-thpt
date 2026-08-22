@@ -1,0 +1,6 @@
+{
+  "left_id": "QUAN_HE_LUONG_GIAC_GOC_BU",
+  "right_id": "QUAN_HE_SIN_COS_TAN_COT",
+  "merge": false,
+  "rationale": "Quan hệ lượng giác của hai góc bù nhau and quan hệ giữa sin, cos, tan, cot are different sets of trigonometric identities (relations for supplementary angles vs. fundamental definitions/relations). They are distinct."
+}

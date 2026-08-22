@@ -1,0 +1,6 @@
+{
+  "left_id": "NGHIEM_BAT_PHUONG_TRINH_MU",
+  "right_id": "NGHIEM_PHUONG_TRINH_MU",
+  "merge": false,
+  "rationale": "The left node describes the solution set for an exponential inequality, while the right node describes the solution for an exponential equation. They are related concepts (solutions of different types of exponential expressions) but represent distinct mathematical procedures and outcomes. One is not a duplicate of the other."
+}

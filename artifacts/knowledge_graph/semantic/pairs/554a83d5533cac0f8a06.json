@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_SAI_MAU_GHEP_NHOM_CONG_THUC_KHAC",
+  "right_id": "PHUONG_SAI_MAU_GHEP_NHOM_SAI_SO",
+  "merge": false,
+  "rationale": "The left node is an 'alternative formula' for the variance of grouped data. The right node is the 'sample variance' formula for grouped data (using n-1). They are different formulas for calculating variance, potentially for different purposes (population vs. sample). They are not semantic duplicates."
+}

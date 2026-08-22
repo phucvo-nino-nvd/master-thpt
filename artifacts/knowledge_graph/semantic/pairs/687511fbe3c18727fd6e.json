@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_CO_GIAO",
+  "right_id": "BIEN_CO_HOP",
+  "merge": false,
+  "rationale": "The left node defines the intersection of two events in probability. The right node defines the union of two events. They are two fundamental, distinct set operations applied to events. They are not the same concept."
+}

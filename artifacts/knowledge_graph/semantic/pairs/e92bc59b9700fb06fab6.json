@@ -1,0 +1,6 @@
+{
+  "left_id": "HINH_BIEU_DIEN_HINH_THANG",
+  "right_id": "HINH_BIEU_DIEN_HINH_VUONG",
+  "merge": false,
+  "rationale": "The left node describes the representation of a trapezoid in a drawing, specifying properties like parallel sides and ratio preservation. The right node describes the representation of a square (and other quadrilaterals) as a parallelogram. They are different theorems about the representation of different geometric shapes."
+}

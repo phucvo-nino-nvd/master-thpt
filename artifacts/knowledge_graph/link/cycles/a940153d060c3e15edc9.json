@@ -1,0 +1,5 @@
+{
+  "source": "HO_NGUYEN_HAM",
+  "target": "BANG_NGUYEN_HAM",
+  "reason": "The relation 'HO_NGUYEN_HAM requires BANG_NGUYEN_HAM' is incorrect. Understanding the concept of a family of antiderivatives (họ nguyên hàm) does not require prior knowledge of a summary table of common antiderivatives (bảng nguyên hàm). The table is a reference tool derived from the fundamental concept of antiderivatives and their families. The prerequisite direction should be reversed or, more accurately, no strong prerequisite relation exists here; the table is a derived application, not a prerequisite for the concept."
+}

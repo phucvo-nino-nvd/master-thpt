@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left node is a condition for a line to be parallel to a plane. The right node is a property about lines perpendicular to a plane and lines parallel to them. They describe different geometric relationships and are not semantic duplicates."
+}

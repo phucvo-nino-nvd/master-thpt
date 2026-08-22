@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_HAM_SO",
+  "right_id": "GIOI_HAN_TAI_VO_CUC",
+  "merge": false,
+  "rationale": "The left node is the general concept of 'limit of a function'. The right node is the specific concept of 'limit at infinity'. The right is a specific type/case of the general concept. A general concept and a special case should be KEPT separate."
+}

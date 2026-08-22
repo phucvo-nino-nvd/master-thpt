@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "name": "Góc giữa đường thẳng và mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Nếu đường thẳng a không vuông góc với mặt phẳng (P), thì góc giữa a và hình chiếu a' của nó trên (P) được gọi là góc giữa đường thẳng a và mặt phẳng (P)."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0010",
+      "original_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "canonical_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "rationale": "The occurrence provides a precise definition of the concept."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0006",
+      "original_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "canonical_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+      "rationale": "The occurrence refers to the same concept, albeit with a less detailed description. Grade difference is not a reason to split."
+    }
+  ]
+}

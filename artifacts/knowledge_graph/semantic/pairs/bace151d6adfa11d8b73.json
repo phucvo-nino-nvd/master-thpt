@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG_FORMULA",
+  "right_id": "PHUONG_TRINH_CHINH_TAC_HAI_DIEM",
+  "merge": false,
+  "rationale": "Both are canonical equations of a line in 3D space, but the left is the general form with a given point and direction vector, while the right is a specific form derived from two given points. The right is a special case or application of the left (where the direction vector is calculated from two points). They are related but not identical reusable knowledge; one is a specific instance of the other. KEEP."
+}

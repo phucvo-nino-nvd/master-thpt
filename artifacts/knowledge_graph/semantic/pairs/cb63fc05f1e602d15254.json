@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_TRON",
+  "right_id": "DUONG_TRON_NGOAI_TIEP",
+  "merge": false,
+  "rationale": "The left node is the general concept of a circle. The right node is a specific type of circle: 'Đường tròn ngoại tiếp' (circumcircle of a triangle). The right is a special case/application of the general concept, not a duplicate."
+}

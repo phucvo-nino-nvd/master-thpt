@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "TICH_VO_HUONG",
+      "name": "Tích vô hướng",
+      "type": "CONCEPT",
+      "description": "Tích vô hướng của hai vectơ là một số, được xác định bởi tích của độ dài hai vectơ và cosin của góc giữa chúng."
+    },
+    {
+      "id": "BIEU_THUC_TOA_DO_TICH_VO_HUONG",
+      "name": "Biểu thức tọa độ tích vô hướng",
+      "type": "FORMULA",
+      "description": "Công thức tính tích vô hướng của hai vectơ thông qua tọa độ của chúng trong hệ tọa độ Oxyz."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0011",
+      "original_id": "TICH_VO_HUONG",
+      "canonical_id": "TICH_VO_HUONG",
+      "rationale": "This occurrence defines the general concept of the dot product of two vectors in the plane (grade 10). It is the core concept."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "TICH_VO_HUONG",
+      "canonical_id": "TICH_VO_HUONG",
+      "rationale": "This occurrence defines the same general concept of the dot product of two vectors, now in the context of space (grade 12). The definition is mathematically identical in essence, only the variable names differ. Grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0008",
+      "original_id": "TICH_VO_HUONG",
+      "canonical_id": "BIEU_THUC_TOA_DO_TICH_VO_HUONG",
+      "rationale": "This occurrence is of type FORMULA and specifically describes the coordinate expression (formula) for the dot product in Oxyz. It is a specific computational aspect of the general concept, so it should be split into a separate node."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0008",
+      "original_id": "TÍCH_VÔ_HƯỚNG",
+      "canonical_id": "TICH_VO_HUONG",
+      "rationale": "This occurrence is of type CONCEPT and describes the dot product concept in the context of Oxyz. It is the same core concept as the first two occurrences, just mentioned in a different lesson context (coordinate expressions). It should be merged with the main concept node."
+    }
+  ]
+}

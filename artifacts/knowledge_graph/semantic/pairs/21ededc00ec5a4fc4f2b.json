@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+  "right_id": "TINH_CHAT_GIAO_TUYEN_CUNG_VUONG_GOC",
+  "merge": false,
+  "rationale": "Left node is a theorem about a line perpendicular to two sides of a triangle. Right node is a theorem about the intersection line of two planes both perpendicular to a third plane. They are different theorems in solid geometry."
+}

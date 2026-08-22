@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN",
+  "right_id": "GIOI_HAN_HUU_HAN",
+  "merge": false,
+  "rationale": "Left is the general concept of a limit. Right is the specific concept of a finite limit. The right is a subtype/special case of the left, so they are not semantic duplicates."
+}

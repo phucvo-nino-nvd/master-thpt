@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_COS",
+  "right_id": "CONG_THUC_CONG_TAN",
+  "merge": false,
+  "rationale": "The left node is the trigonometric addition formula for cosine, while the right node is the trigonometric addition formula for tangent. They are distinct trigonometric formulas for different functions."
+}

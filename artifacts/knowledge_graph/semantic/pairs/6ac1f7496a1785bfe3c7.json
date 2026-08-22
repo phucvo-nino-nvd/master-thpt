@@ -1,0 +1,6 @@
+{
+  "left_id": "PHEP_NHAN_VECTO_TOA_DO",
+  "right_id": "PHEP_TRU_VECTO_TOA_DO",
+  "merge": false,
+  "rationale": "The left node describes scalar multiplication of a vector by a real number in coordinates, while the right node describes vector subtraction in coordinates. They are distinct operations and formulas, representing different reusable mathematical knowledge."
+}

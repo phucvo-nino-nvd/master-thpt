@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_DONG_BIEN",
+  "right_id": "HAM_SO_NGHICH_BIEN",
+  "merge": false,
+  "rationale": "These are opposite concepts: increasing function versus decreasing function. They are related but represent fundamentally different properties of functions."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+  "merge": false,
+  "rationale": "These are different theorems. The left is a condition for a line to be parallel to a plane. The right is about the existence of a unique plane containing one line and parallel to another (skew lines). They address different geometric situations."
+}

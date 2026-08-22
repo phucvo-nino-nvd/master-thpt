@@ -1,0 +1,106 @@
+{
+  "chunk_id": "toan-10-tap-1:0013",
+  "nodes": [
+    {
+      "id": "SO_TRUNG_BINH",
+      "name": "Số trung bình",
+      "type": "CONCEPT",
+      "description": "Giá trị trung bình cộng của các số trong mẫu số liệu, đại diện cho vị trí trung tâm của mẫu.",
+      "grade": 10
+    },
+    {
+      "id": "TRUNG_VI",
+      "name": "Trung vị",
+      "type": "CONCEPT",
+      "description": "Giá trị chia đôi mẫu số liệu sắp xếp, không bị ảnh hưởng bởi giá trị bất thường.",
+      "grade": 10
+    },
+    {
+      "id": "TU_PHAN_VI",
+      "name": "Tứ phân vị",
+      "type": "CONCEPT",
+      "description": "Ba giá trị Q1, Q2, Q3 chia mẫu số liệu thành bốn phần, mỗi phần chứa 25% giá trị.",
+      "grade": 10
+    },
+    {
+      "id": "MOT",
+      "name": "Mốt",
+      "type": "CONCEPT",
+      "description": "Giá trị xuất hiện với tần số lớn nhất trong mẫu số liệu.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_TINH_TRUNG_BINH",
+      "name": "Công thức tính trung bình",
+      "type": "FORMULA",
+      "description": "Trung bình cộng của mẫu số liệu x1, x2, ..., xn là x̄ = (x1 + x2 + ... + xn)/n.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_TRUNG_BINH_BANG_TAN_SO",
+      "name": "Công thức tính trung bình bằng tần số",
+      "type": "FORMULA",
+      "description": "Trung bình cộng của mẫu số liệu dưới dạng bảng tần số là x̄ = (m1x1 + m2x2 + ... + mkxk)/n.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_TIM_TRUNG_VI",
+      "name": "Phương pháp tìm trung vị",
+      "type": "METHOD",
+      "description": "Sắp xếp mẫu số liệu, lấy giá trị chính giữa (n lẻ) hoặc trung bình của hai giá trị chính giữa (n chẵn).",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_TIM_TU_PHAN_VI",
+      "name": "Phương pháp tìm tứ phân vị",
+      "type": "METHOD",
+      "description": "Tìm Q2 (trung vị), Q1 (trung vị của nửa trái), Q3 (trung vị của nửa phải).",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_TIM_MOT",
+      "name": "Phương pháp tìm mốt",
+      "type": "METHOD",
+      "description": "Giá trị xuất hiện nhiều nhất trong mẫu số liệu.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "SO_TRUNG_BINH",
+      "target": "CONG_THUC_TINH_TRUNG_BINH",
+      "relation": "REQUIRES",
+      "rationale": "Công thức cần thiết để tính số trung bình."
+    },
+    {
+      "source": "SO_TRUNG_BINH",
+      "target": "CONG_THUC_TRUNG_BINH_BANG_TAN_SO",
+      "relation": "REQUIRES",
+      "rationale": "Công thức mở rộng cho trường hợp mẫu số liệu dưới dạng bảng tần số."
+    },
+    {
+      "source": "TRUNG_VI",
+      "target": "PHUONG_PHAP_TIM_TRUNG_VI",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp cần thiết để xác định trung vị."
+    },
+    {
+      "source": "TU_PHAN_VI",
+      "target": "PHUONG_PHAP_TIM_TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp cần thiết để xác định tứ phân vị."
+    },
+    {
+      "source": "MOT",
+      "target": "PHUONG_PHAP_TIM_MOT",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp cần thiết để xác định mốt."
+    },
+    {
+      "source": "TU_PHAN_VI",
+      "target": "TRUNG_VI",
+      "relation": "REQUIRES",
+      "rationale": "Trung vị (Q2) là một phần của tứ phân vị."
+    }
+  ]
+}

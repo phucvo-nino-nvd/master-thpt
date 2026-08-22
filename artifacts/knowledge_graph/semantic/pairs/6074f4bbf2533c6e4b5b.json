@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_NHAU",
+  "right_id": "HAI_DUONG_THANG_VUONG_GOC",
+  "merge": false,
+  "rationale": "The left node defines intersecting lines. The right node defines perpendicular lines. Perpendicular lines are a special case of intersecting lines, but the concepts are not identical. One is a general relation, the other is a specific subtype."
+}

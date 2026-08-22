@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_DX_E",
+  "right_id": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_SQRT_DX2_EX_F",
+  "merge": false,
+  "rationale": "Both are concepts describing specific forms of radical equations. The left is sqrt(ax^2+bx+c) = dx+e (radical equals a linear expression). The right is sqrt(ax^2+bx+c) = sqrt(dx^2+ex+f) (radical equals radical). They are distinct equation forms with different solution methods. They are related but not duplicates. KEEP."
+}

@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "DO_THI_HAM_SO",
+      "name": "Đồ thị hàm số",
+      "type": "CONCEPT",
+      "description": "Biểu diễn hình học của hàm số y = f(x) trên mặt phẳng tọa độ, là tập hợp tất cả các điểm (x, f(x)) với x thuộc tập xác định của hàm số."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0001",
+      "original_id": "DO_THI_HAM_SO",
+      "canonical_id": "DO_THI_HAM_SO",
+      "rationale": "All three occurrences describe the same fundamental mathematical concept: the graph of a function as a geometric representation on a coordinate plane. The descriptions are consistent across grades 10, 11, and 12, with only minor phrasing differences. Grade differences alone are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0003",
+      "original_id": "DO_THI_HAM_SO",
+      "canonical_id": "DO_THI_HAM_SO",
+      "rationale": "This occurrence describes the same concept as the others: the graph of a function. The description 'Biểu diễn hình học của một hàm số trên hệ tọa độ Oxy' is semantically equivalent to the others. It should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0003",
+      "original_id": "DO_THI_HAM_SO",
+      "canonical_id": "DO_THI_HAM_SO",
+      "rationale": "This occurrence also describes the graph of a function, using the same core definition. The lesson context ('Đường tiệm cận của đồ thị hàm số') discusses a property *of* the graph, not a different concept. Therefore, it represents the same reusable knowledge and should be merged."
+    }
+  ]
+}

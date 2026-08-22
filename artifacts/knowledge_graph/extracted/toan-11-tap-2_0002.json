@@ -1,0 +1,112 @@
+{
+  "chunk_id": "toan-11-tap-2:0002",
+  "nodes": [
+    {
+      "id": "LOGARIT",
+      "name": "Lôgarit",
+      "type": "CONCEPT",
+      "description": "Số thực α để a^α = M, với a > 0, a ≠ 1, M > 0. Kí hiệu: logₐ M.",
+      "grade": 11
+    },
+    {
+      "id": "LOGARIT_THAP_PHAN",
+      "name": "Lôgarit thập phân",
+      "type": "CONCEPT",
+      "description": "Lôgarit cơ số 10 của một số dương M, kí hiệu: log M hoặc lg M.",
+      "grade": 11
+    },
+    {
+      "id": "LOGARIT_TU_NHIEN",
+      "name": "Lôgarit tự nhiên",
+      "type": "CONCEPT",
+      "description": "Lôgarit cơ số e của một số dương M, kí hiệu: ln M.",
+      "grade": 11
+    },
+    {
+      "id": "CO_SO_LOGARIT",
+      "name": "Cơ số của lôgarit",
+      "type": "CONCEPT",
+      "description": "Số dương a ≠ 1 trong biểu thức logₐ M.",
+      "grade": 11
+    },
+    {
+      "id": "SO_E",
+      "name": "Số e",
+      "type": "CONCEPT",
+      "description": "Số vô tỉ e ≈ 2,718281828, là giới hạn của (1 + 1/x)^x khi x → ∞.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_LOGARIT",
+      "name": "Tính chất của lôgarit",
+      "type": "THEOREM",
+      "description": "Các quy tắc tính lôgarit: logₐ(MN) = logₐ M + logₐ N, logₐ(M/N) = logₐ M - logₐ N, logₐ(M^α) = α logₐ M.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_DOI_CO_SO",
+      "name": "Công thức đổi cơ số",
+      "type": "FORMULA",
+      "description": "logₐ M = (log_b M) / (log_b a), với a, b > 0, a, b ≠ 1, M > 0.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_LAI_KEP_LIEN_TUC",
+      "name": "Công thức lãi kép liên tục",
+      "type": "FORMULA",
+      "description": "A = Pe^{rt}, với P là vốn ban đầu, r là lãi suất hàng năm, t là thời gian (năm).",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_LOGARIT",
+      "name": "Phương pháp tính lôgarit bằng máy tính",
+      "type": "METHOD",
+      "description": "Sử dụng máy tính cầm tay để tính log, ln, hoặc đổi cơ số lôgarit.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "LOGARIT",
+      "target": "CO_SO_LOGARIT",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "LOGARIT_THAP_PHAN",
+      "target": "LOGARIT",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "LOGARIT_TU_NHIEN",
+      "target": "LOGARIT",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_LOGARIT",
+      "target": "LOGARIT",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_DOI_CO_SO",
+      "target": "LOGARIT",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_LAI_KEP_LIEN_TUC",
+      "target": "SO_E",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_LOGARIT",
+      "target": "LOGARIT",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

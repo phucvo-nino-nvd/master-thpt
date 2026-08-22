@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "TINH_CHAT_HAI_MAT_PHANG_SONG_SONG",
+  "merge": false,
+  "rationale": "Tính chất đường thẳng song song với mặt phẳng (property of line parallel to plane) and Tính chất hai mặt phẳng song song (property of two parallel planes) are different theorems about distinct geometric configurations."
+}

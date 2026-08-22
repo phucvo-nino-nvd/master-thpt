@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_COS",
+  "right_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+  "merge": false,
+  "rationale": "The left node is the trigonometric addition formula for cosine, while the right node is a formula for calculating the angle between two lines using vectors. They are distinct formulas used in different contexts."
+}

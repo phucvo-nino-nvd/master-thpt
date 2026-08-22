@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_MU",
+  "right_id": "HAM_SO_MU_CO_SO_A",
+  "merge": true,
+  "rationale": "Both define exponential function y = a^x with same conditions a>0, a≠1. 'Hàm số mũ' and 'Hàm số mũ cơ số a' are the same concept."
+}

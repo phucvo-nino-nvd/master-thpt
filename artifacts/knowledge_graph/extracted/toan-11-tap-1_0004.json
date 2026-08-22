@@ -1,0 +1,130 @@
+{
+  "chunk_id": "toan-11-tap-1:0004",
+  "nodes": [
+    {
+      "id": "PHUONG_TRINH_TUONG_DUONG",
+      "name": "Phương trình tương đương",
+      "type": "CONCEPT",
+      "description": "Hai phương trình được gọi là tương đương khi chúng có cùng tập nghiệm.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+      "name": "Phương trình lượng giác cơ bản",
+      "type": "CONCEPT",
+      "description": "Phương trình lượng giác có dạng cơ bản như sin x = m, cos x = m, tan x = m, cot x = m.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_SIN_X_M",
+      "name": "Phương trình sin x = m",
+      "type": "FORMULA",
+      "description": "Phương trình sin x = m có nghiệm khi và chỉ khi |m| ≤ 1. Khi đó, nghiệm có dạng x = α + k2π hoặc x = π - α + k2π, với α ∈ [-π/2, π/2] và k ∈ ℤ.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_COS_X_M",
+      "name": "Phương trình cos x = m",
+      "type": "FORMULA",
+      "description": "Phương trình cos x = m có nghiệm khi và chỉ khi |m| ≤ 1. Khi đó, nghiệm có dạng x = α + k2π hoặc x = -α + k2π, với α ∈ [0, π] và k ∈ ℤ.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_TAN_X_M",
+      "name": "Phương trình tan x = m",
+      "type": "FORMULA",
+      "description": "Phương trình tan x = m có nghiệm với mọi m. Nghiệm có dạng x = α + kπ, với α ∈ (-π/2, π/2) và k ∈ ℤ.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_COT_X_M",
+      "name": "Phương trình cot x = m",
+      "type": "FORMULA",
+      "description": "Phương trình cot x = m có nghiệm với mọi m. Nghiệm có dạng x = α + kπ, với α ∈ (0, π) và k ∈ ℤ.",
+      "grade": 11
+    },
+    {
+      "id": "PHEP_BIEN_DOI_TUONG_DUONG",
+      "name": "Phép biến đổi tương đương",
+      "type": "METHOD",
+      "description": "Các phép biến đổi như cộng, trừ, nhân, chia hai vế phương trình mà không làm thay đổi tập nghiệm.",
+      "grade": 11
+    },
+    {
+      "id": "GIAI_PHUONG_TRINH_LUONG_GIAC",
+      "name": "Giải phương trình lượng giác",
+      "type": "METHOD",
+      "description": "Sử dụng công thức nghiệm của phương trình lượng giác cơ bản để tìm tất cả các nghiệm.",
+      "grade": 11
+    },
+    {
+      "id": "SUDUNG_MAY_TINH_TIM_GOC",
+      "name": "Sử dụng máy tính cầm tay tìm góc",
+      "type": "METHOD",
+      "description": "Sử dụng các phím ngược của máy tính (sin⁻¹, cos⁻¹, tan⁻¹) để tìm số đo góc khi biết giá trị lượng giác.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+      "target": "PHUONG_TRINH_SIN_X_M",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+      "target": "PHUONG_TRINH_COS_X_M",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+      "target": "PHUONG_TRINH_TAN_X_M",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+      "target": "PHUONG_TRINH_COT_X_M",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "GIAI_PHUONG_TRINH_LUONG_GIAC",
+      "target": "PHUONG_TRINH_TUONG_DUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIAI_PHUONG_TRINH_LUONG_GIAC",
+      "target": "PHEP_BIEN_DOI_TUONG_DUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "SUDUNG_MAY_TINH_TIM_GOC",
+      "target": "PHUONG_TRINH_SIN_X_M",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "SUDUNG_MAY_TINH_TIM_GOC",
+      "target": "PHUONG_TRINH_COS_X_M",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "SUDUNG_MAY_TINH_TIM_GOC",
+      "target": "PHUONG_TRINH_TAN_X_M",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "SUDUNG_MAY_TINH_TIM_GOC",
+      "target": "PHUONG_TRINH_COT_X_M",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

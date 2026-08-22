@@ -1,0 +1,6 @@
+{
+  "left_id": "TAP_HOP_SO_NGUYEN",
+  "right_id": "TAP_HOP_SO_TU_NHIEN",
+  "merge": false,
+  "rationale": "These are distinct sets of numbers: integers (Z) and natural numbers (N). They are related (N is a subset of Z) but are different mathematical objects."
+}

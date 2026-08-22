@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left node states that two distinct lines perpendicular to the same plane are parallel. The right node states that if a line is perpendicular to a plane, then lines parallel to that line are also perpendicular to the plane. These are different theorems about the relationship between lines and planes, not semantic duplicates."
+}

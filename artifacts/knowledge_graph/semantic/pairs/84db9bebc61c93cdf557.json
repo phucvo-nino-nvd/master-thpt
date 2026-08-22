@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_NHAN_XAC_SUAT_BIEN_CO_DOC_LAP",
+  "right_id": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+  "merge": false,
+  "rationale": "The left node is the multiplication rule for probabilities of independent events. The right node is the total probability formula. These are two distinct and fundamental formulas in probability theory, used for different purposes. They are not semantic duplicates."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DO_THI_HAM_SO",
+  "right_id": "DO_THI_HAM_SO_MU",
+  "merge": false,
+  "rationale": "Left node is the general concept of the 'graph of a function'. Right node is the specific concept of the 'graph of an exponential function'. One is a general concept and the other is a specific instance. They are not semantic duplicates."
+}

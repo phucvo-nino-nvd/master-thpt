@@ -1,0 +1,6 @@
+{
+  "left_id": "KHOI_CHOP",
+  "right_id": "KHOI_CHOP_CUT_DEU",
+  "merge": false,
+  "rationale": "The left node is the general concept of a 'pyramid' (khối chóp). The right node is the specific concept of a 'truncated regular pyramid' (khối chóp cụt đều). The right is a strict subtype/special case of the left."
+}

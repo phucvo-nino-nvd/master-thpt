@@ -1,0 +1,131 @@
+{
+  "chunk_id": "toan-11-tap-2:0001",
+  "nodes": [
+    {
+      "id": "LUY_THUA_VOI_SO_MU_NGUYEN",
+      "name": "Luỹ thừa với số mũ nguyên",
+      "type": "CONCEPT",
+      "description": "Luỹ thừa của một số thực a với số mũ nguyên n, định nghĩa cho a khác 0.",
+      "grade": 11
+    },
+    {
+      "id": "LUY_THUA_VOI_SO_MU_HUU_TI",
+      "name": "Luỹ thừa với số mũ hữu tỉ",
+      "type": "CONCEPT",
+      "description": "Luỹ thừa của một số thực dương a với số mũ hữu tỉ r = m/n, định nghĩa bằng căn bậc n của a^m.",
+      "grade": 11
+    },
+    {
+      "id": "LUY_THUA_VOI_SO_MU_THUC",
+      "name": "Luỹ thừa với số mũ thực",
+      "type": "CONCEPT",
+      "description": "Luỹ thừa của một số thực dương a với số mũ vô tỉ α, định nghĩa bằng giới hạn của dãy a^r_n khi r_n xấp xỉ α.",
+      "grade": 11
+    },
+    {
+      "id": "CAN_BAC_N",
+      "name": "Căn bậc n",
+      "type": "CONCEPT",
+      "description": "Số b được gọi là căn bậc n của số a nếu b^n = a.",
+      "grade": 11
+    },
+    {
+      "id": "CAN_SO_HOC_BAC_N",
+      "name": "Căn số học bậc n",
+      "type": "CONCEPT",
+      "description": "Căn dương của một số thực dương a, kí hiệu √[n]a.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_LUY_THUA",
+      "name": "Tính chất luỹ thừa",
+      "type": "THEOREM",
+      "description": "Các tính chất cơ bản của phép tính luỹ thừa bao gồm: a^m * a^n = a^{m+n}, a^m / a^n = a^{m-n}, (a^m)^n = a^{mn}, (ab)^m = a^m b^m, (a/b)^m = a^m / b^m.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_CAN_BAC_N",
+      "name": "Tính chất căn bậc n",
+      "type": "THEOREM",
+      "description": "Các tính chất của căn bậc n bao gồm: √[n]a * √[n]b = √[n](ab), √[n]a / √[n]b = √[n](a/b), (√[n]a)^m = √[n](a^m), √[n](a^n) = |a| (khi n chẵn), √[n](√[k]a) = √[nk]a.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_LAI_KEP",
+      "name": "Công thức lãi kép",
+      "type": "FORMULA",
+      "description": "A = P(1 + r)^N, trong đó P là vốn ban đầu, r là lãi suất mỗi kì, N là số kì.",
+      "grade": 11
+    },
+    {
+      "id": "KI_HIEU_KHOA_HOC",
+      "name": "Kí hiệu khoa học",
+      "type": "CONCEPT",
+      "description": "Viết số dưới dạng a * 10^m, với 1 ≤ a < 10 và m là số nguyên.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_LUY_THUA",
+      "name": "Phương pháp tính luỹ thừa",
+      "type": "METHOD",
+      "description": "Sử dụng tính chất luỹ thừa để rút gọn và tính giá trị biểu thức.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "LUY_THUA_VOI_SO_MU_NGUYEN",
+      "target": "TINH_CHAT_LUY_THUA",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "LUY_THUA_VOI_SO_MU_HUU_TI",
+      "target": "LUY_THUA_VOI_SO_MU_NGUYEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "LUY_THUA_VOI_SO_MU_THUC",
+      "target": "LUY_THUA_VOI_SO_MU_HUU_TI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CAN_BAC_N",
+      "target": "TINH_CHAT_CAN_BAC_N",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "LUY_THUA_VOI_SO_MU_HUU_TI",
+      "target": "CAN_BAC_N",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "LUY_THUA_VOI_SO_MU_THUC",
+      "target": "TINH_CHAT_LUY_THUA",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_LAI_KEP",
+      "target": "LUY_THUA_VOI_SO_MU_NGUYEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "KI_HIEU_KHOA_HOC",
+      "target": "LUY_THUA_VOI_SO_MU_NGUYEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_LUY_THUA",
+      "target": "TINH_CHAT_LUY_THUA",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "chunk_id": "toan-11-tap-2:0007",
+  "nodes": [
+    {
+      "id": "DAO_HAM_CAP_HAI",
+      "name": "Đạo hàm cấp hai",
+      "type": "CONCEPT",
+      "description": "Đạo hàm của đạo hàm đầu tiên của một hàm số, ký hiệu là y'' hoặc f''(x).",
+      "grade": 11
+    },
+    {
+      "id": "GIA_TOC_TUC_THOI",
+      "name": "Gia tốc tức thời",
+      "type": "CONCEPT",
+      "description": "Đạo hàm của vận tốc tức thời, biểu thị sự thay đổi của vận tốc theo thời gian.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_CHUYEN_DONG",
+      "name": "Phương trình chuyển động",
+      "type": "CONCEPT",
+      "description": "Phương trình mô tả vị trí của một vật chuyển động theo thời gian.",
+      "grade": 11
+    },
+    {
+      "id": "VAN_TOC_TUC_THOI",
+      "name": "Vận tốc tức thời",
+      "type": "CONCEPT",
+      "description": "Đạo hàm của vị trí theo thời gian, biểu thị tốc độ và hướng chuyển động tại một thời điểm.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CAP_HAI_CU_HAM_SO",
+      "name": "Đạo hàm cấp hai của hàm số",
+      "type": "FORMULA",
+      "description": "Đạo hàm của đạo hàm đầu tiên của một hàm số, ký hiệu là y'' hoặc f''(x).",
+      "grade": 11
+    },
+    {
+      "id": "GIA_TOC_TUC_THOI_CU_CHUYEN_DONG",
+      "name": "Gia tốc tức thời của chuyển động",
+      "type": "FORMULA",
+      "description": "Đạo hàm cấp hai của phương trình chuyển động, biểu thị sự thay đổi của vận tốc theo thời gian.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_DAO_HAM_CAP_HAI",
+      "name": "Tính đạo hàm cấp hai",
+      "type": "METHOD",
+      "description": "Phương pháp tính đạo hàm cấp hai của một hàm số bằng cách tính đạo hàm của đạo hàm đầu tiên.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "GIA_TOC_TUC_THOI",
+      "target": "DAO_HAM_CAP_HAI",
+      "relation": "IS_A",
+      "rationale": "Gia tốc tức thời là một ứng dụng của đạo hàm cấp hai trong cơ học."
+    },
+    {
+      "source": "GIA_TOC_TUC_THOI_CU_CHUYEN_DONG",
+      "target": "DAO_HAM_CAP_HAI",
+      "relation": "IS_A",
+      "rationale": "Gia tốc tức thời của chuyển động là một ứng dụng của đạo hàm cấp hai."
+    },
+    {
+      "source": "TINH_DAO_HAM_CAP_HAI",
+      "target": "DAO_HAM_CAP_HAI",
+      "relation": "REQUIRES",
+      "rationale": "Để tính đạo hàm cấp hai, cần hiểu khái niệm đạo hàm cấp hai."
+    },
+    {
+      "source": "GIA_TOC_TUC_THOI_CU_CHUYEN_DONG",
+      "target": "PHUONG_TRINH_CHUYEN_DONG",
+      "relation": "REQUIRES",
+      "rationale": "Để tính gia tốc tức thời, cần có phương trình chuyển động."
+    },
+    {
+      "source": "VAN_TOC_TUC_THOI",
+      "target": "PHUONG_TRINH_CHUYEN_DONG",
+      "relation": "REQUIRES",
+      "rationale": "Vận tốc tức thời là đạo hàm của phương trình chuyển động."
+    },
+    {
+      "source": "GIA_TOC_TUC_THOI",
+      "target": "VAN_TOC_TUC_THOI",
+      "relation": "REQUIRES",
+      "rationale": "Gia tốc tức thời là đạo hàm của vận tốc tức thời."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_CO_HOP",
+  "right_id": "BIEN_CO_XUNG_KHAC",
+  "merge": false,
+  "rationale": "Biến cố hợp and biến cố xung khắc are distinct concepts. One is the union of events, the other describes mutually exclusive events. They are related but not identical."
+}

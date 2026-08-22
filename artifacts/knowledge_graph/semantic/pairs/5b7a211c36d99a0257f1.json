@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_HUU_HAN",
+  "right_id": "GIOI_HAN_MOT_BEN",
+  "merge": false,
+  "rationale": "Different limit concepts: finite limit vs. one-sided limit. Related but distinct types of limits."
+}

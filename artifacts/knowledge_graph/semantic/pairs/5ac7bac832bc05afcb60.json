@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_MU",
+  "right_id": "HAM_SO_MU_CO_SO_A",
+  "merge": true,
+  "rationale": "Both nodes describe the exponential function y = a^x with the same conditions (a > 0, a != 1). The names 'Hàm mũ' and 'Hàm số mũ cơ số a' are synonyms referring to the same mathematical concept. One global node can represent this without loss."
+}

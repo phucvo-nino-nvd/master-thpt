@@ -1,0 +1,6 @@
+{
+  "left_id": "HOP_HAI_TAP_HOP",
+  "right_id": "TAP_BANG_NHAU",
+  "merge": false,
+  "rationale": "Different set operations/concepts: union vs. equality of sets."
+}

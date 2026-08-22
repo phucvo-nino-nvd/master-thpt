@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "HAM_SO_DONG_BIEN",
+      "name": "Hàm số đồng biến",
+      "type": "CONCEPT",
+      "description": "Hàm số đồng biến trên một khoảng."
+    },
+    {
+      "id": "HAM_SO_TANG",
+      "name": "Hàm số tang",
+      "type": "CONCEPT",
+      "description": "Hàm số cho bằng công thức y = sin x / cos x, kí hiệu y = tan x. Tập xác định là ℝ  {π/2 + kπ | k ∈ ℤ}."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0001",
+      "original_id": "HAM_SO_TANG",
+      "canonical_id": "HAM_SO_DONG_BIEN",
+      "rationale": "This occurrence describes the concept of an increasing function. The original ID 'HAM_SO_TANG' is ambiguous and could be confused with the tangent function. The canonical name should be the standard Vietnamese term for this concept."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0003",
+      "original_id": "HAM_SO_TAN",
+      "canonical_id": "HAM_SO_TANG",
+      "rationale": "This occurrence clearly describes the trigonometric tangent function. The original ID 'HAM_SO_TAN' is a valid abbreviation, but the canonical ID should use the full standard term 'HAM_SO_TANG' to avoid confusion with the increasing function concept."
+    }
+  ]
+}

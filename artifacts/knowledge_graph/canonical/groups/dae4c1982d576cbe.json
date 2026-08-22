@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "DO_DAI_VECTO",
+      "name": "Độ dài vectơ",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa điểm đầu và điểm cuối của vectơ."
+    },
+    {
+      "id": "CONG_THUC_DO_DAI_VECTO_KHONG_GIAN",
+      "name": "Công thức độ dài vectơ trong không gian",
+      "type": "FORMULA",
+      "description": "Biểu thức tính độ dài của một vectơ trong không gian Oxyz."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0007",
+      "original_id": "DO_DAI_VECTO",
+      "canonical_id": "DO_DAI_VECTO",
+      "rationale": "This occurrence defines the concept of vector length in grade 10. It is the same core mathematical concept as the grade 12 concept occurrence."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "DO_DAI_VECTO",
+      "canonical_id": "DO_DAI_VECTO",
+      "rationale": "This occurrence defines the concept of vector length in grade 12. The description is identical to the grade 10 concept. Grade differences are not a reason to split, so it should be merged with the grade 10 concept."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0008",
+      "original_id": "DO_DAI_VECTO",
+      "canonical_id": "CONG_THUC_DO_DAI_VECTO_KHONG_GIAN",
+      "rationale": "This occurrence is a FORMULA providing the coordinate expression for calculating vector length in 3D space (Oxyz). It is a specific formula derived from the general concept. A CONCEPT and a FORMULA should normally remain separate if one is the mathematical object and the other is a formula describing it. Therefore, it should be split into a separate canonical node for the formula."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_COS",
+  "right_id": "DAO_HAM_CUA_HAM_SO_MU",
+  "merge": false,
+  "rationale": "The left node 'Đạo hàm của hàm số cos x' is a derivative rule for trigonometric cosine. The right node 'Đạo hàm của hàm số mũ' is a derivative rule for exponential functions. They are distinct derivative rules for different classes of functions."
+}

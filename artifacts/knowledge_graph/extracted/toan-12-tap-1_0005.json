@@ -1,0 +1,178 @@
+{
+  "chunk_id": "toan-12-tap-1:0005",
+  "nodes": [
+    {
+      "id": "TOC_DO_THAY_DOI_TRUNG_BINH",
+      "name": "Tốc độ thay đổi trung bình",
+      "type": "CONCEPT",
+      "description": "Tỉ số Δy/Δx = (f(x2) - f(x1))/(x2 - x1) biểu thị sự thay đổi trung bình của y đối với x trên đoạn [x1, x2].",
+      "grade": 12
+    },
+    {
+      "id": "TOC_DO_THAY_DOI_TUC_THOI",
+      "name": "Tốc độ thay đổi tức thời",
+      "type": "CONCEPT",
+      "description": "Giới hạn lim(Δx→0) (f(x2) - f(x1))/(x2 - x1) biểu thị sự thay đổi tức thời của y đối với x tại điểm x1.",
+      "grade": 12
+    },
+    {
+      "id": "DAO_HAM",
+      "name": "Đạo hàm",
+      "type": "CONCEPT",
+      "description": "Đạo hàm f'(a) biểu thị tốc độ thay đổi tức thời của đại lượng y = f(x) đối với x tại điểm x = a.",
+      "grade": 12
+    },
+    {
+      "id": "VAN_TOC_TUC_THOI",
+      "name": "Vận tốc tức thời",
+      "type": "CONCEPT",
+      "description": "Vận tốc tức thời của vật chuyển động là đạo hàm của hàm vị trí s(t) đối với thời gian t.",
+      "grade": 12
+    },
+    {
+      "id": "GIA_TOC_TUC_THOI",
+      "name": "Gia tốc tức thời",
+      "type": "CONCEPT",
+      "description": "Gia tốc tức thời là đạo hàm của vận tốc tức thời, tức là đạo hàm thứ hai của hàm vị trí s(t).",
+      "grade": 12
+    },
+    {
+      "id": "TOC_DO_PHAN_HOI_TUC_THOI",
+      "name": "Tốc độ phản ứng tức thời",
+      "type": "CONCEPT",
+      "description": "Tốc độ thay đổi tức thời của nồng độ chất tham gia phản ứng hoá học tại thời điểm t.",
+      "grade": 12
+    },
+    {
+      "id": "TOC_DO_TANG_TRUONG_TUC_THOI",
+      "name": "Tốc độ tăng trưởng tức thời",
+      "type": "CONCEPT",
+      "description": "Tốc độ thay đổi tức thời của số lượng cá thể trong quần thể động vật hoặc thực vật tại thời điểm t.",
+      "grade": 12
+    },
+    {
+      "id": "CHI_PHI_BIEN",
+      "name": "Chi phí biên",
+      "type": "CONCEPT",
+      "description": "Tốc độ thay đổi tức thời của chi phí sản xuất đối với số lượng sản phẩm, tức là đạo hàm của hàm chi phí C(x).",
+      "grade": 12
+    },
+    {
+      "id": "HAM_DOANH_THU",
+      "name": "Hàm doanh thu",
+      "type": "CONCEPT",
+      "description": "Hàm biểu thị tổng doanh thu từ bán x đơn vị sản phẩm với giá p(x) mỗi đơn vị.",
+      "grade": 12
+    },
+    {
+      "id": "HAM_DOANH_THU_BIEN",
+      "name": "Hàm doanh thu biên",
+      "type": "CONCEPT",
+      "description": "Đạo hàm của hàm doanh thu, biểu thị tốc độ thay đổi của doanh thu đối với số lượng sản phẩm bán ra.",
+      "grade": 12
+    },
+    {
+      "id": "HAM_LOI_NHUAN",
+      "name": "Hàm lợi nhuận",
+      "type": "CONCEPT",
+      "description": "Hàm biểu thị tổng lợi nhuận từ bán x đơn vị sản phẩm, tính bằng doanh thu trừ chi phí.",
+      "grade": 12
+    },
+    {
+      "id": "HAM_LOI_NHUAN_BIEN",
+      "name": "Hàm lợi nhuận biên",
+      "type": "CONCEPT",
+      "description": "Đạo hàm của hàm lợi nhuận, biểu thị tốc độ thay đổi của lợi nhuận đối với số lượng sản phẩm bán ra.",
+      "grade": 12
+    },
+    {
+      "id": "BAI_TOAN_TOI_UU_HOA",
+      "name": "Bài toán tối ưu hoá",
+      "type": "CONCEPT",
+      "description": "Bài toán tìm giá trị lớn nhất hoặc nhỏ nhất của một đại lượng Q thông qua các đại lượng khác.",
+      "grade": 12
+    },
+    {
+      "id": "QUY_TRINH_TOI_UU_HOA",
+      "name": "Quy trình tối ưu hoá",
+      "type": "METHOD",
+      "description": "Quy trình giải bài toán tối ưu hoá bao gồm: xác định đại lượng Q, biểu diễn Q qua biến x, tìm giá trị cực trị của Q(x).",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_PHAP_TIM_GIA_TRI_CUC_TRI",
+      "name": "Phương pháp tìm giá trị cực trị",
+      "type": "METHOD",
+      "description": "Sử dụng đạo hàm để tìm giá trị cực đại hoặc cực tiểu của một hàm số.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "TOC_DO_THAY_DOI_TUC_THOI",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": "Tốc độ thay đổi tức thời là một ứng dụng của đạo hàm."
+    },
+    {
+      "source": "DAO_HAM",
+      "target": "TOC_DO_THAY_DOI_TRUNG_BINH",
+      "relation": "REQUIRES",
+      "rationale": "Đạo hàm được định nghĩa dựa trên tốc độ thay đổi trung bình."
+    },
+    {
+      "source": "VAN_TOC_TUC_THOI",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": "Vận tốc tức thời là một ví dụ cụ thể của đạo hàm."
+    },
+    {
+      "source": "GIA_TOC_TUC_THOI",
+      "target": "VAN_TOC_TUC_THOI",
+      "relation": "REQUIRES",
+      "rationale": "Gia tốc tức thời là đạo hàm của vận tốc tức thời."
+    },
+    {
+      "source": "TOC_DO_PHAN_HOI_TUC_THOI",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": "Tốc độ phản ứng tức thời là một ví dụ cụ thể của đạo hàm."
+    },
+    {
+      "source": "TOC_DO_TANG_TRUONG_TUC_THOI",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": "Tốc độ tăng trưởng tức thời là một ví dụ cụ thể của đạo hàm."
+    },
+    {
+      "source": "CHI_PHI_BIEN",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": "Chi phí biên là một ví dụ cụ thể của đạo hàm."
+    },
+    {
+      "source": "HAM_DOANH_THU_BIEN",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": "Hàm doanh thu biên là đạo hàm của hàm doanh thu."
+    },
+    {
+      "source": "HAM_LOI_NHUAN_BIEN",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": "Hàm lợi nhuận biên là đạo hàm của hàm lợi nhuận."
+    },
+    {
+      "source": "BAI_TOAN_TOI_UU_HOA",
+      "target": "QUY_TRINH_TOI_UU_HOA",
+      "relation": "REQUIRES",
+      "rationale": "Quy trình tối ưu hoá là phương pháp giải bài toán tối ưu hoá."
+    },
+    {
+      "source": "QUY_TRINH_TOI_UU_HOA",
+      "target": "PHUONG_PHAP_TIM_GIA_TRI_CUC_TRI",
+      "relation": "REQUIRES",
+      "rationale": "Quy trình tối ưu hoá sử dụng phương pháp tìm giá trị cực trị."
+    }
+  ]
+}

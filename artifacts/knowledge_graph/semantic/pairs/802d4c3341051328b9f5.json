@@ -1,0 +1,6 @@
+{
+  "left_id": "HINH_LANG_TRU",
+  "right_id": "HINH_LANG_TRU_DUNG",
+  "merge": false,
+  "rationale": "The left node is the general concept of a prism, while the right node is the specific subtype of a right prism. One is a general concept, the other is a strict subtype, so they should be kept separate."
+}

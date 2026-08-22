@@ -1,0 +1,145 @@
+{
+  "chunk_id": "toan-12-tap-1:0007",
+  "nodes": [
+    {
+      "id": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+      "name": "Hệ trục toạ độ trong không gian",
+      "type": "CONCEPT",
+      "description": "Ba trục Ox, Oy, Oz đôi một vuông góc với nhau tại gốc O, cùng với các vectơ đơn vị i, j, k trên các trục.",
+      "grade": 12
+    },
+    {
+      "id": "HE_TRUC_TOA_DO_DESCARTES_VUONG_GOC",
+      "name": "Hệ trục toạ độ Descartes vuông góc",
+      "type": "CONCEPT",
+      "description": "Hệ trục toạ độ Oxyz với ba trục đôi một vuông góc với nhau tại gốc O.",
+      "grade": 12
+    },
+    {
+      "id": "GOC_TOA_DO",
+      "name": "Gốc toạ độ",
+      "type": "CONCEPT",
+      "description": "Điểm O là điểm chung của ba trục Ox, Oy, Oz trong hệ toạ độ.",
+      "grade": 12
+    },
+    {
+      "id": "MAT_PHANG_TOA_DO",
+      "name": "Mặt phẳng toạ độ",
+      "type": "CONCEPT",
+      "description": "Ba mặt phẳng (Oxy), (Oyz), (Ozx) đôi một vuông góc với nhau trong hệ toạ độ.",
+      "grade": 12
+    },
+    {
+      "id": "TOA_DO_CUA_DIEM",
+      "name": "Toạ độ của điểm",
+      "type": "CONCEPT",
+      "description": "Bộ ba số (x; y; z) duy nhất sao cho vectơ OM = xi + yj + zk, với M là điểm trong không gian.",
+      "grade": 12
+    },
+    {
+      "id": "HOANH_DO",
+      "name": "Hoành độ",
+      "type": "CONCEPT",
+      "description": "Thành phần x trong toạ độ (x; y; z) của điểm M, tương ứng với trục Ox.",
+      "grade": 12
+    },
+    {
+      "id": "TUNG_DO",
+      "name": "Tung độ",
+      "type": "CONCEPT",
+      "description": "Thành phần y trong toạ độ (x; y; z) của điểm M, tương ứng với trục Oy.",
+      "grade": 12
+    },
+    {
+      "id": "CAO_DO",
+      "name": "Cao độ",
+      "type": "CONCEPT",
+      "description": "Thành phần z trong toạ độ (x; y; z) của điểm M, tương ứng với trục Oz.",
+      "grade": 12
+    },
+    {
+      "id": "TOA_DO_CUA_VECTO",
+      "name": "Toạ độ của vectơ",
+      "type": "CONCEPT",
+      "description": "Bộ ba số (x; y; z) duy nhất sao cho vectơ a = xi + yj + zk.",
+      "grade": 12
+    },
+    {
+      "id": "VECTO_DON_VI",
+      "name": "Vectơ đơn vị",
+      "type": "CONCEPT",
+      "description": "Vectơ có độ dài bằng 1 và hướng theo trục toạ độ, ký hiệu i, j, k.",
+      "grade": 12
+    },
+    {
+      "id": "QUY_TAC_HINH_HOP",
+      "name": "Quy tắc hình hộp",
+      "type": "METHOD",
+      "description": "Phương pháp xác định toạ độ của điểm M bằng cách vẽ hình hộp chữ nhật từ gốc O đến M, sử dụng các vectơ trên trục.",
+      "grade": 12
+    },
+    {
+      "id": "THIET_LAP_TOA_DO_VECTO_THEO_TOA_DO_HAI_DAU_MUT",
+      "name": "Thiết lập toạ độ vectơ theo toạ độ hai đầu mút",
+      "type": "METHOD",
+      "description": "Với hai điểm M(xM; yM; zM) và N(xN; yN; zN), toạ độ của vectơ MN là (xN - xM; yN - yM; zN - zM).",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+      "target": "HE_TRUC_TOA_DO_DESCARTES_VUONG_GOC",
+      "relation": "IS_A",
+      "rationale": "Hệ trục toạ độ Descartes vuông góc là một loại hệ trục toạ độ trong không gian."
+    },
+    {
+      "source": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+      "target": "GOC_TOA_DO",
+      "relation": "PART_OF",
+      "rationale": "Gốc toạ độ O là một phần của hệ trục toạ độ."
+    },
+    {
+      "source": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+      "target": "MAT_PHANG_TOA_DO",
+      "relation": "PART_OF",
+      "rationale": "Mặt phẳng toạ độ là một phần của hệ trục toạ độ."
+    },
+    {
+      "source": "TOA_DO_CUA_DIEM",
+      "target": "HOANH_DO",
+      "relation": "PART_OF",
+      "rationale": "Hoành độ là một thành phần của toạ độ điểm."
+    },
+    {
+      "source": "TOA_DO_CUA_DIEM",
+      "target": "TUNG_DO",
+      "relation": "PART_OF",
+      "rationale": "Tung độ là một thành phần của toạ độ điểm."
+    },
+    {
+      "source": "TOA_DO_CUA_DIEM",
+      "target": "CAO_DO",
+      "relation": "PART_OF",
+      "rationale": "Cao độ là một thành phần của toạ độ điểm."
+    },
+    {
+      "source": "TOA_DO_CUA_VECTO",
+      "target": "VECTO_DON_VI",
+      "relation": "REQUIRES",
+      "rationale": "Khái niệm vectơ đơn vị là cơ sở để xác định toạ độ vectơ."
+    },
+    {
+      "source": "THIET_LAP_TOA_DO_VECTO_THEO_TOA_DO_HAI_DAU_MUT",
+      "target": "TOA_DO_CUA_DIEM",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp này yêu cầu hiểu về toạ độ của điểm."
+    },
+    {
+      "source": "QUY_TAC_HINH_HOP",
+      "target": "TOA_DO_CUA_DIEM",
+      "relation": "REQUIRES",
+      "rationale": "Quy tắc hình hộp là phương pháp để xác định toạ độ điểm."
+    }
+  ]
+}

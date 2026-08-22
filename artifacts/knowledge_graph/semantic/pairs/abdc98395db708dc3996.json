@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_PHAN_THUC_HUU_TI_DON_GIAN",
+  "right_id": "HAM_PHAN_THUC_HUU_TI_PHUC_ZAP",
+  "merge": false,
+  "rationale": "The left node is a simple rational function (linear/linear). The right node is a more complex rational function (quadratic/linear). One is a specific subtype of the other; they are not identical reusable knowledge nodes."
+}

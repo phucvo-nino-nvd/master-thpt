@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_COS",
+  "right_id": "DAO_HAM_CUA_HAM_SO_HOP",
+  "merge": false,
+  "rationale": "The left node is a specific derivative rule for the cosine function. The right node is the general chain rule for derivatives of composite functions. The cosine derivative can be seen as an application of the chain rule, but they are not the same reusable knowledge node; one is a specific case, the other is a general rule."
+}

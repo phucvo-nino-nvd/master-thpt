@@ -1,0 +1,6 @@
+{
+  "left_id": "XAC_DINH_MAT_PHANG_BOI_DIEM_VA_DUONG_THANG",
+  "right_id": "XAC_DINH_MAT_PHANG_BOI_HAI_DUONG_THANG_CAT_NHAU",
+  "merge": false,
+  "rationale": "Both are theorems about determining a plane, but they use different geometric conditions. One uses a point and a line not through that point. The other uses two intersecting lines. They are distinct, though related, determination criteria. One cannot replace the other without losing a meaningful distinction."
+}

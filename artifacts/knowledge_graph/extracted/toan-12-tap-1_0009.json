@@ -1,0 +1,98 @@
+{
+  "chunk_id": "toan-12-tap-1:0009",
+  "nodes": [
+    {
+      "id": "KHOANG_BIEN_THIEN",
+      "name": "Khoảng biến thiên",
+      "type": "CONCEPT",
+      "description": "Khoảng biến thiên của một mẫu số liệu là hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu. Được dùng để đo mức độ phân tán của mẫu.",
+      "grade": 12
+    },
+    {
+      "id": "KHOANG_TU_PHAN_VI",
+      "name": "Khoảng tứ phân vị",
+      "type": "CONCEPT",
+      "description": "Khoảng tứ phân vị của một mẫu số liệu là hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất. Được dùng để đo mức độ phân tán của mẫu, không bị ảnh hưởng bởi các giá trị bất thường.",
+      "grade": 12
+    },
+    {
+      "id": "TU_PHAN_VI",
+      "name": "Tứ phân vị",
+      "type": "CONCEPT",
+      "description": "Tứ phân vị thứ r (r = 1, 2, 3) của một mẫu số liệu ghép nhóm là giá trị được tính dựa trên vị trí của nó trong mẫu, sử dụng công thức xác định nhóm chứa và tính toán giá trị xấp xỉ.",
+      "grade": 12
+    },
+    {
+      "id": "MAU_SO_LIEU_GHEP_NHOM",
+      "name": "Mẫu số liệu ghép nhóm",
+      "type": "CONCEPT",
+      "description": "Mẫu số liệu được chia thành các nhóm (khoảng) và ghi nhận tần số của mỗi nhóm. Dùng để tính các số đặc trưng đo mức độ phân tán như khoảng biến thiên và khoảng tứ phân vị.",
+      "grade": 12
+    },
+    {
+      "id": "TINH_KHOANG_BIEN_THIEN",
+      "name": "Tính khoảng biến thiên",
+      "type": "METHOD",
+      "description": "Với mẫu số liệu ghép nhóm, khoảng biến thiên được tính là hiệu số giữa giới hạn trên của nhóm cuối cùng và giới hạn dưới của nhóm đầu tiên.",
+      "grade": 12
+    },
+    {
+      "id": "TINH_KHOANG_TU_PHAN_VI",
+      "name": "Tính khoảng tứ phân vị",
+      "type": "METHOD",
+      "description": "Với mẫu số liệu ghép nhóm, khoảng tứ phân vị được tính bằng hiệu số giữa tứ phân vị thứ ba (Q3) và tứ phân vị thứ nhất (Q1). Mỗi tứ phân vị được tính dựa trên công thức xác định nhóm chứa và tính toán giá trị xấp xỉ.",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_TU_PHAN_VI",
+      "name": "Công thức tính tứ phân vị",
+      "type": "FORMULA",
+      "description": "Tứ phân vị thứ r của mẫu số liệu ghép nhóm được tính theo công thức: Q_r = a_p + [(r·n/4 - (m_1 + ... + m_{p-1})) / m_p] · (a_{p+1} - a_p), trong đó [a_p; a_{p+1}) là nhóm chứa tứ phân vị thứ r.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "KHOANG_BIEN_THIEN",
+      "target": "MAU_SO_LIEU_GHEP_NHOM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "KHOANG_TU_PHAN_VI",
+      "target": "MAU_SO_LIEU_GHEP_NHOM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "KHOANG_TU_PHAN_VI",
+      "target": "TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_KHOANG_BIEN_THIEN",
+      "target": "KHOANG_BIEN_THIEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_KHOANG_TU_PHAN_VI",
+      "target": "KHOANG_TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_KHOANG_TU_PHAN_VI",
+      "target": "TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TU_PHAN_VI",
+      "target": "CONG_THUC_TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

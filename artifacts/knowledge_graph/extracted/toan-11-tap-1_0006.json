@@ -1,0 +1,104 @@
+{
+  "chunk_id": "toan-11-tap-1:0006",
+  "nodes": [
+    {
+      "id": "CAP_SO_CONG",
+      "name": "Cấp số cộng",
+      "type": "CONCEPT",
+      "description": "Một dãy số (hữu hạn hay vô hạn) trong đó kể từ số hạng thứ hai, mỗi số hạng đều bằng số hạng đứng ngay trước nó cộng với một số không đổi d (công sai).",
+      "grade": 11
+    },
+    {
+      "id": "CONG_SAI",
+      "name": "Công sai",
+      "type": "CONCEPT",
+      "description": "Số không đổi d trong định nghĩa cấp số cộng, biểu thị sự tăng hoặc giảm giữa các số hạng liên tiếp.",
+      "grade": 11
+    },
+    {
+      "id": "SO_HANG_TONG_QUAT",
+      "name": "Số hạng tổng quát",
+      "type": "CONCEPT",
+      "description": "Công thức biểu diễn số hạng thứ n của cấp số cộng theo số hạng đầu u₁ và công sai d: uₙ = u₁ + (n - 1)d.",
+      "grade": 11
+    },
+    {
+      "id": "TONG_N_SO_HANG_DAU",
+      "name": "Tổng n số hạng đầu",
+      "type": "CONCEPT",
+      "description": "Tổng của n số hạng đầu tiên của cấp số cộng, có công thức Sₙ = n/2 [2u₁ + (n - 1)d] hoặc Sₙ = n(u₁ + uₙ)/2.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_SO_HANG_TONG_QUAT",
+      "name": "Công thức số hạng tổng quát",
+      "type": "FORMULA",
+      "description": "uₙ = u₁ + (n - 1)d, biểu diễn số hạng thứ n của cấp số cộng.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_TONG_N_SO_HANG_DAU",
+      "name": "Công thức tổng n số hạng đầu",
+      "type": "FORMULA",
+      "description": "Sₙ = n/2 [2u₁ + (n - 1)d] hoặc Sₙ = n(u₁ + uₙ)/2, tính tổng n số hạng đầu của cấp số cộng.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_TONG_CAP_SO_CONG",
+      "name": "Phương pháp tính tổng cấp số cộng",
+      "type": "METHOD",
+      "description": "Sử dụng công thức Sₙ = n/2 [2u₁ + (n - 1)d] hoặc Sₙ = n(u₁ + uₙ)/2 để tính tổng n số hạng đầu của cấp số cộng.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "CAP_SO_CONG",
+      "target": "CONG_SAI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "SO_HANG_TONG_QUAT",
+      "target": "CAP_SO_CONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "SO_HANG_TONG_QUAT",
+      "target": "CONG_SAI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TONG_N_SO_HANG_DAU",
+      "target": "CAP_SO_CONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TONG_N_SO_HANG_DAU",
+      "target": "SO_HANG_TONG_QUAT",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_SO_HANG_TONG_QUAT",
+      "target": "CAP_SO_CONG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_TONG_N_SO_HANG_DAU",
+      "target": "TONG_N_SO_HANG_DAU",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_TONG_CAP_SO_CONG",
+      "target": "CONG_THUC_TONG_N_SO_HANG_DAU",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

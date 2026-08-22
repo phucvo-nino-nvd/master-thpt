@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_LIEN_TUC_HAM_TAN_COT",
+  "right_id": "TONG_HIEU_TICH_THUONG_HAM_LIEN_TUC",
+  "merge": false,
+  "rationale": "The left node is a theorem about the continuity of specific functions (tan and cot). The right node is a general theorem about the continuity of sums, differences, products, and quotients of continuous functions. One is a specific application/instance, and the other is a general operational property. They are not identical."
+}

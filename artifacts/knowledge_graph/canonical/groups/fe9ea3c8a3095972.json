@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "MAT_PHANG_TOA_DO_2D",
+      "name": "Mặt phẳng toạ độ",
+      "type": "CONCEPT",
+      "description": "Mặt phẳng hai chiều chứa hệ trục toạ độ Oxy, bao gồm trục hoành Ox và trục tung Oy vuông góc với nhau, có gốc toạ độ chung O."
+    },
+    {
+      "id": "MAT_PHANG_TOA_DO_3D",
+      "name": "Mặt phẳng toạ độ trong không gian",
+      "type": "CONCEPT",
+      "description": "Các mặt phẳng (Oxy), (Oyz), (Ozx) trong hệ trục toạ độ ba chiều Oxyz, đôi một vuông góc với nhau."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0010",
+      "original_id": "MAT_PHANG_TOA_DO",
+      "canonical_id": "MAT_PHANG_TOA_DO_2D",
+      "rationale": "The grade 10 occurrence describes the two-dimensional coordinate plane (Oxy). This is a specific concept for 2D geometry."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0007",
+      "original_id": "MAT_PHANG_TOA_DO",
+      "canonical_id": "MAT_PHANG_TOA_DO_3D",
+      "rationale": "The grade 12 occurrence describes the coordinate planes (Oxy, Oyz, Ozx) within a three-dimensional coordinate system. This is a distinct concept for 3D geometry. The mathematical context and description differ significantly from the 2D plane, warranting a split."
+    }
+  ]
+}

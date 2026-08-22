@@ -1,0 +1,92 @@
+{
+  "chunk_id": "toan-11-tap-2:0015",
+  "nodes": [
+    {
+      "id": "BIEN_CO_XUNG_KHAC",
+      "name": "Biến cố xung khắc",
+      "type": "CONCEPT",
+      "description": "Hai biến cố A và B được gọi là xung khắc nếu A và B không đồng thời xảy ra, tức là A ∩ B = ∅.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC",
+      "name": "Công thức cộng xác suất cho hai biến cố xung khắc",
+      "type": "FORMULA",
+      "description": "Nếu A và B là hai biến cố xung khắc thì P(A ∪ B) = P(A) + P(B).",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_CONG_XAC_SUAT",
+      "name": "Công thức cộng xác suất",
+      "type": "FORMULA",
+      "description": "Cho hai biến cố A và B, ta có P(A ∪ B) = P(A) + P(B) - P(AB).",
+      "grade": 11
+    },
+    {
+      "id": "BIEN_CO",
+      "name": "Biến cố",
+      "type": "CONCEPT",
+      "description": "Một sự kiện có thể xảy ra trong một thí nghiệm ngẫu nhiên.",
+      "grade": 11
+    },
+    {
+      "id": "XAC_SUAT",
+      "name": "Xác suất",
+      "type": "CONCEPT",
+      "description": "Số đo lường khả năng xảy ra của một biến cố.",
+      "grade": 11
+    },
+    {
+      "id": "BIEN_CO_HOP",
+      "name": "Biến cố hợp",
+      "type": "CONCEPT",
+      "description": "Biến cố A ∪ B xảy ra khi và chỉ khi A hoặc B hoặc cả hai xảy ra.",
+      "grade": 11
+    },
+    {
+      "id": "BIEN_CO_DOI",
+      "name": "Biến cố đối",
+      "type": "CONCEPT",
+      "description": "Biến cố đối của A, ký hiệu A̅, xảy ra khi và chỉ khi A không xảy ra.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC",
+      "target": "BIEN_CO_XUNG_KHAC",
+      "relation": "REQUIRES",
+      "rationale": "Công thức cộng xác suất cho hai biến cố xung khắc yêu cầu hiểu khái niệm biến cố xung khắc."
+    },
+    {
+      "source": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC",
+      "target": "CONG_THUC_CONG_XAC_SUAT",
+      "relation": "IS_A",
+      "rationale": "Công thức cộng xác suất cho hai biến cố xung khắc là một trường hợp đặc biệt của công thức cộng xác suất."
+    },
+    {
+      "source": "BIEN_CO_XUNG_KHAC",
+      "target": "BIEN_CO",
+      "relation": "IS_A",
+      "rationale": "Biến cố xung khắc là một loại biến cố."
+    },
+    {
+      "source": "CONG_THUC_CONG_XAC_SUAT",
+      "target": "XAC_SUAT",
+      "relation": "REQUIRES",
+      "rationale": "Công thức cộng xác suất yêu cầu hiểu khái niệm xác suất."
+    },
+    {
+      "source": "BIEN_CO_HOP",
+      "target": "BIEN_CO",
+      "relation": "IS_A",
+      "rationale": "Biến cố hợp là một loại biến cố."
+    },
+    {
+      "source": "BIEN_CO_DOI",
+      "target": "BIEN_CO",
+      "relation": "IS_A",
+      "rationale": "Biến cố đối là một loại biến cố."
+    }
+  ]
+}

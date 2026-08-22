@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left theorem is about a line perpendicular to a plane and its relation to lines parallel to the plane. The right theorem is about a line parallel to a plane and the intersection of planes. They describe different geometric properties and are not semantic duplicates."
+}

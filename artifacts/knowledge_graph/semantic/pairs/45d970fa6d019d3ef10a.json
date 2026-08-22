@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_NAM_TRONG_MAT_PHANG",
+  "right_id": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+  "merge": false,
+  "rationale": "The nodes represent different concepts. 'Đường thẳng nằm trong mặt phẳng' is a geometric relation (a line lying in a plane). 'Đường thẳng trong mặt phẳng toạ độ' refers to the representation of a line within a coordinate system. The latter is a specific representation/context for lines, not the same as the general spatial relation."
+}

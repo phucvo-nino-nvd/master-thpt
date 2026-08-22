@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_MU_CO_BAN",
+  "right_id": "PHUONG_TRINH_MU",
+  "merge": false,
+  "rationale": "Left node is 'basic exponential inequality'. Right node is 'exponential equation'. They are related concepts (both involve exponential expressions) but represent distinct mathematical objects: an inequality versus an equation. They are not semantic duplicates."
+}

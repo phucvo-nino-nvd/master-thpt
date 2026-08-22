@@ -1,0 +1,138 @@
+{
+  "chunk_id": "toan-10-tap-2:0009",
+  "nodes": [
+    {
+      "id": "DUONG_TRON",
+      "name": "đường tròn",
+      "type": "CONCEPT",
+      "description": "tập hợp các điểm trong mặt phẳng cách một điểm cố định (tâm) một khoảng cách cố định (bán kính).",
+      "grade": 10
+    },
+    {
+      "id": "TAM",
+      "name": "tâm",
+      "type": "CONCEPT",
+      "description": "điểm cố định của đường tròn mà mọi điểm trên đường tròn đều cách nó một khoảng cách bằng bán kính.",
+      "grade": 10
+    },
+    {
+      "id": "BAN_KINH",
+      "name": "bán kính",
+      "type": "CONCEPT",
+      "description": "khoảng cách từ tâm đến bất kỳ điểm nào trên đường tròn.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_DUONG_TRON",
+      "name": "phương trình đường tròn",
+      "type": "FORMULA",
+      "description": "phương trình đại số biểu diễn đường tròn trong mặt phẳng toạ độ.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_TIEP_TUYEN",
+      "name": "phương trình tiếp tuyến",
+      "type": "FORMULA",
+      "description": "phương trình đại số biểu diễn tiếp tuyến của đường tròn tại một điểm.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_DUONG_TRON_DA_THICH",
+      "name": "phương trình đường tròn đã thích",
+      "type": "FORMULA",
+      "description": "$(x - a)^2 + (y - b)^2 = R^2$ là phương trình đường tròn với tâm $(a, b)$ và bán kính $R$.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_DUONG_TRON_CHUA_THICH",
+      "name": "phương trình đường tròn chưa thích",
+      "type": "FORMULA",
+      "description": "$x^2 + y^2 - 2ax - 2by + (a^2 + b^2 - R^2) = 0$ là dạng phương trình đường tròn chưa thích.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_TIEP_TUYEN_DUONG_TRON",
+      "name": "phương trình tiếp tuyến đường tròn",
+      "type": "FORMULA",
+      "description": "$(a - x_0)(x - x_0) + (b - y_0)(y - y_0) = 0$ là phương trình tiếp tuyến của đường tròn tại điểm $(x_0, y_0)$.",
+      "grade": 10
+    },
+    {
+      "id": "LAP_PHUONG_TRINH_DUONG_TRON",
+      "name": "lập phương trình đường tròn",
+      "type": "METHOD",
+      "description": "xác định phương trình đường tròn khi biết toạ độ tâm và bán kính hoặc ba điểm thuộc đường tròn.",
+      "grade": 10
+    },
+    {
+      "id": "XAC_DINH_TAM_BAN_KINH",
+      "name": "xác định tâm và bán kính",
+      "type": "METHOD",
+      "description": "xác định tâm và bán kính của đường tròn từ phương trình của nó.",
+      "grade": 10
+    },
+    {
+      "id": "LAP_PHUONG_TRINH_TIEP_TUYEN",
+      "name": "lập phương trình tiếp tuyến",
+      "type": "METHOD",
+      "description": "xác định phương trình tiếp tuyến của đường tròn tại một điểm thuộc đường tròn.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHUONG_TRINH_DUONG_TRON_DA_THICH",
+      "target": "PHUONG_TRINH_DUONG_TRON",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_DUONG_TRON_CHUA_THICH",
+      "target": "PHUONG_TRINH_DUONG_TRON",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_TIEP_TUYEN_DUONG_TRON",
+      "target": "PHUONG_TRINH_TIEP_TUYEN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "LAP_PHUONG_TRINH_DUONG_TRON",
+      "target": "PHUONG_TRINH_DUONG_TRON",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "XAC_DINH_TAM_BAN_KINH",
+      "target": "PHUONG_TRINH_DUONG_TRON",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "LAP_PHUONG_TRINH_TIEP_TUYEN",
+      "target": "PHUONG_TRINH_TIEP_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "LAP_PHUONG_TRINH_TIEP_TUYEN",
+      "target": "PHUONG_TRINH_DUONG_TRON",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_TRON",
+      "target": "TAM",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_TRON",
+      "target": "BAN_KINH",
+      "relation": "PART_OF",
+      "rationale": null
+    }
+  ]
+}

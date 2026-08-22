@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "HAI_DUONG_THANG_VUONG_GOC",
+      "name": "Hai đường thẳng vuông góc",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng được gọi là vuông góc với nhau nếu góc giữa chúng bằng 90°."
+    },
+    {
+      "id": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS",
+      "name": "Điều kiện vuông góc của hai đường thẳng (vectơ)",
+      "type": "THEOREM",
+      "description": "Hai đường thẳng vuông góc với nhau khi và chỉ khi tích vô hướng của hai vectơ chỉ phương của chúng bằng không."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0008",
+      "original_id": "HAI_DUONG_THANG_VUONG_GOC",
+      "canonical_id": "HAI_DUONG_THANG_VUONG_GOC",
+      "rationale": "This occurrence defines the concept of perpendicular lines as lines forming a 90-degree angle. It is a fundamental geometric CONCEPT."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0005",
+      "original_id": "DUONG_THANG_VUONG_GOC",
+      "canonical_id": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS",
+      "rationale": "This occurrence states a theorem/condition for perpendicular lines in space using the dot product of direction vectors. Its mathematical meaning (a testable condition) differs from the basic definition. Therefore, it should be split into a separate THEOREM node."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_LOGARIT",
+  "right_id": "HAM_SO_LOGARIT",
+  "merge": true,
+  "rationale": "Both define logarithmic function y = logₐ x with same conditions a>0, a≠1. 'Hàm lôgarit' and 'Hàm số lôgarit' are the same concept."
+}

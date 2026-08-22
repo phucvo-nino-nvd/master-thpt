@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+  "right_id": "PHUONG_TRINH_LOGARIT_CO_BAN",
+  "merge": false,
+  "rationale": "The left node is 'basic logarithmic inequality' and the right node is 'basic logarithmic equation'. They are related concepts but represent distinct mathematical objects: an inequality versus an equation. They are not semantic duplicates. KEEP."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_TRON_NGOAI_TIEP",
+  "right_id": "NUA_DUONG_TRON_DON_VI",
+  "merge": false,
+  "rationale": "The nodes represent distinct mathematical concepts. The left node is the circumcircle of a triangle, a circle passing through all three vertices of a triangle. The right node is the upper half of a unit circle in the coordinate plane. They are related as both involve circles, but one is a general geometric construction for triangles, and the other is a specific curve (a semicircle) with a fixed radius and position used in contexts like trigonometry or coordinate geometry. They are not semantic duplicates; one cannot replace the other without losing meaningful mathematical distinctions."
+}

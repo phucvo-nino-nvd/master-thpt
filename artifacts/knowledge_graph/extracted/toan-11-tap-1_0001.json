@@ -1,0 +1,205 @@
+{
+  "chunk_id": "toan-11-tap-1:0001",
+  "nodes": [
+    {
+      "id": "GOC_LUONG_GIAC",
+      "name": "Góc lượng giác",
+      "type": "CONCEPT",
+      "description": "Góc lượng giác được xác định bởi hai tia và chuyển động quay của tia từ tia đầu đến tia cuối.",
+      "grade": 11
+    },
+    {
+      "id": "SO_DO_GOC_LUONG_GIAC",
+      "name": "Số đo của góc lượng giác",
+      "type": "CONCEPT",
+      "description": "Số đo của góc lượng giác được xác định bởi góc quay của tia từ tia đầu đến tia cuối, có thể dương hoặc âm.",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_TRON_LUONG_GIAC",
+      "name": "Đường tròn lượng giác",
+      "type": "CONCEPT",
+      "description": "Đường tròn có tâm tại gốc tọa độ, bán kính 1, được định hướng và lấy điểm (1, 0) làm điểm gốc.",
+      "grade": 11
+    },
+    {
+      "id": "GIA_TRI_LUONG_GIAC",
+      "name": "Giá trị lượng giác của góc lượng giác",
+      "type": "CONCEPT",
+      "description": "Giá trị lượng giác của góc lượng giác bao gồm sin, cos, tan, cot của góc.",
+      "grade": 11
+    },
+    {
+      "id": "HE_THUC_CHASLES",
+      "name": "Hệ thức Chasles",
+      "type": "FORMULA",
+      "description": "Với ba tia Ou, Ov, Ow bất kì, ta có sđ(Ou, Ov) + sđ(Ov, Ow) = sđ(Ou, Ow) + k360° (k ∈ ℤ).",
+      "grade": 11
+    },
+    {
+      "id": "DON_VI_DO",
+      "name": "Đơn vị độ",
+      "type": "CONCEPT",
+      "description": "Đơn vị đo góc, 1° = 1/180 góc bẹt, chia thành phút và giây.",
+      "grade": 11
+    },
+    {
+      "id": "DON_VI_RADIAN",
+      "name": "Đơn vị radian",
+      "type": "CONCEPT",
+      "description": "Đơn vị đo góc, 1 radian bằng độ dài cung tròn bằng bán kính.",
+      "grade": 11
+    },
+    {
+      "id": "QUAN_HE_DO_RADIAN",
+      "name": "Quan hệ giữa độ và radian",
+      "type": "FORMULA",
+      "description": "360° = 2π rad, 1° = π/180 rad, 1 rad = 180/π °.",
+      "grade": 11
+    },
+    {
+      "id": "DO_DAI_CUNG_TRON",
+      "name": "Độ dài cung tròn",
+      "type": "FORMULA",
+      "description": "Độ dài cung tròn l = Rα, với R là bán kính, α là số đo góc bằng radian.",
+      "grade": 11
+    },
+    {
+      "id": "SIN",
+      "name": "Sin của góc lượng giác",
+      "type": "CONCEPT",
+      "description": "Giá trị lượng giác sin α bằng tung độ của điểm M trên đường tròn lượng giác.",
+      "grade": 11
+    },
+    {
+      "id": "COS",
+      "name": "Cos của góc lượng giác",
+      "type": "CONCEPT",
+      "description": "Giá trị lượng giác cos α bằng hoành độ của điểm M trên đường tròn lượng giác.",
+      "grade": 11
+    },
+    {
+      "id": "TAN",
+      "name": "Tan của góc lượng giác",
+      "type": "CONCEPT",
+      "description": "Giá trị lượng giác tan α bằng sin α / cos α, xác định khi cos α ≠ 0.",
+      "grade": 11
+    },
+    {
+      "id": "COT",
+      "name": "Cot của góc lượng giác",
+      "type": "CONCEPT",
+      "description": "Giá trị lượng giác cot α bằng cos α / sin α, xác định khi sin α ≠ 0.",
+      "grade": 11
+    },
+    {
+      "id": "HE_THUC_CO_BAN",
+      "name": "Hệ thức lượng giác cơ bản",
+      "type": "FORMULA",
+      "description": "sin²α + cos²α = 1, 1 + tan²α = 1/cos²α, 1 + cot²α = 1/sin²α, tanα·cotα = 1.",
+      "grade": 11
+    },
+    {
+      "id": "GIA_TRI_LUONG_GIAC_GOC_DOI_NHAU",
+      "name": "Giá trị lượng giác của góc đối nhau",
+      "type": "FORMULA",
+      "description": "cos(-α) = cosα, sin(-α) = -sinα, tan(-α) = -tanα, cot(-α) = -cotα.",
+      "grade": 11
+    },
+    {
+      "id": "GIA_TRI_LUONG_GIAC_GOC_BU_NHAU",
+      "name": "Giá trị lượng giác của góc bù nhau",
+      "type": "FORMULA",
+      "description": "sin(π - α) = sinα, cos(π - α) = -cosα, tan(π - α) = -tanα, cot(π - α) = -cotα.",
+      "grade": 11
+    },
+    {
+      "id": "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU",
+      "name": "Giá trị lượng giác của góc phụ nhau",
+      "type": "FORMULA",
+      "description": "sin(π/2 - α) = cosα, cos(π/2 - α) = sinα, tan(π/2 - α) = cotα, cot(π/2 - α) = tanα.",
+      "grade": 11
+    },
+    {
+      "id": "GIA_TRI_LUONG_GIAC_GOC_HON_KEM_PI",
+      "name": "Giá trị lượng giác của góc hơn kém π",
+      "type": "FORMULA",
+      "description": "sin(π + α) = -sinα, cos(π + α) = -cosα, tan(π + α) = tanα, cot(π + α) = cotα.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "GIA_TRI_LUONG_GIAC",
+      "target": "SIN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "GIA_TRI_LUONG_GIAC",
+      "target": "COS",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "GIA_TRI_LUONG_GIAC",
+      "target": "TAN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "GIA_TRI_LUONG_GIAC",
+      "target": "COT",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "HE_THUC_CO_BAN",
+      "target": "SIN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "HE_THUC_CO_BAN",
+      "target": "COS",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "HE_THUC_CO_BAN",
+      "target": "TAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "HE_THUC_CO_BAN",
+      "target": "COT",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIA_TRI_LUONG_GIAC_GOC_DOI_NHAU",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIA_TRI_LUONG_GIAC_GOC_BU_NHAU",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIA_TRI_LUONG_GIAC_GOC_HON_KEM_PI",
+      "target": "GIA_TRI_LUONG_GIAC",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

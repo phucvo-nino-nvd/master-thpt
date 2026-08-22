@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+  "merge": false,
+  "rationale": "The left theorem: if a line is perpendicular to two sides of a triangle, it is perpendicular to the third side. The right theorem: if a line is perpendicular to a plane, then they intersect. These are completely different statements about perpendicularity. The right seems to be a basic property (a line perpendicular to a plane must intersect it), while the left is a specific theorem about triangles. They are not semantic duplicates."
+}

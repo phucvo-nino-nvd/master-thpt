@@ -1,0 +1,66 @@
+{
+  "chunk_id": "toan-11-tap-2:0008",
+  "nodes": [
+    {
+      "id": "GOC_GIUA_HAI_DUONG_THANG",
+      "name": "Góc giữa hai đường thẳng",
+      "type": "CONCEPT",
+      "description": "Góc giữa hai đường thẳng chéo nhau trong không gian, xác định bằng góc giữa hai đường thẳng song song với chúng và cùng đi qua một điểm.",
+      "grade": 11
+    },
+    {
+      "id": "HAI_DUONG_THANG_VUONG_GOC",
+      "name": "Hai đường thẳng vuông góc",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng được gọi là vuông góc với nhau nếu góc giữa chúng bằng 90°.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_COSIN",
+      "name": "Công thức cosin",
+      "type": "FORMULA",
+      "description": "Công thức liên kết độ dài các cạnh và góc trong một tam giác.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_XAC_DINH_GOC_GIUA_HAI_DUONG_THANG",
+      "name": "Phương pháp xác định góc giữa hai đường thẳng",
+      "type": "METHOD",
+      "description": "Lấy một điểm thuộc một đường thẳng và kẻ đường thẳng song song với đường thẳng còn lại qua điểm đó, sau đó tính góc giữa hai đường thẳng mới.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_CHUNG_MINH_HAI_DUONG_THANG_VUONG_GOC",
+      "name": "Phương pháp chứng minh hai đường thẳng vuông góc",
+      "type": "METHOD",
+      "description": "Chứng minh hai đường thẳng vuông góc bằng cách chứng minh góc giữa chúng bằng 90° hoặc bằng cách sử dụng tính chất của hình bình hành, hình thoi.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "GOC_GIUA_HAI_DUONG_THANG",
+      "target": "CONG_THUC_COSIN",
+      "relation": "REQUIRES",
+      "rationale": "Để tính góc giữa hai đường thẳng, có thể áp dụng công thức cosin cho các tam giác liên quan."
+    },
+    {
+      "source": "PHUONG_PHAP_XAC_DINH_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "GOC_GIUA_HAI_DUONG_THANG",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp xác định góc giữa hai đường thẳng dựa trên định nghĩa của góc giữa hai đường thẳng."
+    },
+    {
+      "source": "PHUONG_PHAP_CHUNG_MINH_HAI_DUONG_THANG_VUONG_GOC",
+      "target": "HAI_DUONG_THANG_VUONG_GOC",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp chứng minh hai đường thẳng vuông góc dựa trên định nghĩa của hai đường thẳng vuông góc."
+    },
+    {
+      "source": "HAI_DUONG_THANG_VUONG_GOC",
+      "target": "GOC_GIUA_HAI_DUONG_THANG",
+      "relation": "REQUIRES",
+      "rationale": "Định nghĩa hai đường thẳng vuông góc dựa trên góc giữa chúng."
+    }
+  ]
+}

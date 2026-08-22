@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO_BANG_NHAU",
+  "right_id": "VECTO_CUNG_HUONG",
+  "merge": false,
+  "rationale": "Left defines equality of vectors (same length and direction). Right defines vectors being in the same direction (parallel and same direction). These are distinct concepts; one is not a semantic duplicate of the other."
+}

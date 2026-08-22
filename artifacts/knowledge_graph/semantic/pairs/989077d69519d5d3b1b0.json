@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_CAT_NHAU_TRONG_KHONG_GIAN",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+  "merge": false,
+  "rationale": "The left node is a condition for two lines to intersect in space. The right node states that if a line is perpendicular to a plane, then they intersect. These are different theorems about different geometric relationships (line-line intersection vs. line-plane perpendicularity and intersection)."
+}

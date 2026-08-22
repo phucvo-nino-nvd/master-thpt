@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_TRUNG_NHAU",
+  "right_id": "HAI_DUONG_THANG_CHEO_NHAU",
+  "merge": false,
+  "rationale": "The left node describes two coincident lines, while the right node describes two skew lines. They are distinct, mutually exclusive geometric relationships between lines. They are not semantic duplicates."
+}

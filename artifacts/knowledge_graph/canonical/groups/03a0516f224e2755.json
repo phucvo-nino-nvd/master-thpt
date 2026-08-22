@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "TRUNG_BINH_CONG_MAU_SO_LIEU",
+      "name": "Trung bình cộng mẫu số liệu",
+      "type": "FORMULA",
+      "description": "Công thức tính trung bình cộng (số trung bình) của mẫu số liệu không ghép nhóm: x̄ = (x1 + x2 + ... + xn) / n."
+    },
+    {
+      "id": "TRUNG_BINH_CONG_MAU_SO_LIEU_GHOP_NHOM",
+      "name": "Trung bình cộng mẫu số liệu ghép nhóm",
+      "type": "FORMULA",
+      "description": "Công thức tính trung bình cộng (số trung bình) của mẫu số liệu đã được ghép nhóm: x̄ = (m1*x1 + m2*x2 + ... + mk*xk) / n, với xi là giá trị đại diện (thường là trung điểm) của nhóm thứ i, mi là tần số của nhóm thứ i, và n là cỡ mẫu."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0013",
+      "original_id": "CONG_THUC_TINH_TRUNG_BINH",
+      "canonical_id": "TRUNG_BINH_CONG_MAU_SO_LIEU",
+      "rationale": "This occurrence describes the arithmetic mean for a simple, ungrouped data sample. It is a fundamental formula for calculating the average."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0009",
+      "original_id": "CONG_THUC_TINH_TRUNG_BINH",
+      "canonical_id": "TRUNG_BINH_CONG_MAU_SO_LIEU_GHOP_NHOM",
+      "rationale": "This occurrence describes the formula for calculating the arithmetic mean for grouped data, which uses class midpoints and frequencies. It is a different, more specific formula than the simple average."
+    }
+  ]
+}

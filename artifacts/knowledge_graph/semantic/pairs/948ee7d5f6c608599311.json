@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_DAY_SO",
+  "right_id": "GIOI_HAN_HAM_SO",
+  "merge": false,
+  "rationale": "The left node is the limit of a sequence. The right node is the limit of a function. These are two different, though analogous, fundamental concepts in calculus. They apply to different mathematical objects (discrete sequences vs. continuous functions). They should be kept separate."
+}

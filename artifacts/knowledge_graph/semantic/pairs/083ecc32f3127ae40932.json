@@ -1,0 +1,6 @@
+{
+  "left_id": "MAT_PHANG_TOA_DO_2D",
+  "right_id": "MAT_PHANG_TOA_DO_3D",
+  "merge": false,
+  "rationale": "The left node describes the 2D coordinate plane (Oxy). The right node describes coordinate planes in 3D space (Oxy, Oyz, Ozx). They are related but distinct concepts in different dimensions. A 2D concept and its 3D analogue should be KEPT separate."
+}

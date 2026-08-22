@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_HUU_HAN",
+  "right_id": "GIOI_HAN_TAI_VO_CUC",
+  "merge": false,
+  "rationale": "Giới hạn hữu hạn and Giới hạn tại vô cực are two distinct types/concepts of limits (finite limit vs. limit at infinity)."
+}

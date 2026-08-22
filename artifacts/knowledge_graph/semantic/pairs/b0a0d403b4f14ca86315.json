@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_GIAM",
+  "right_id": "HAM_SO_NGHICH_BIEN",
+  "merge": true,
+  "rationale": "Both nodes describe a decreasing function. The left is 'ham so giam' and the right is 'ham so nghich bien', which are synonyms in Vietnamese mathematics. Both describe a function that decreases as the variable increases on an interval. They are semantic duplicates. MERGE."
+}

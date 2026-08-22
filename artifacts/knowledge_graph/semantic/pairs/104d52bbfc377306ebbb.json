@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_HINH_COT",
+  "right_id": "DUONG_HINH_TAN",
+  "merge": false,
+  "rationale": "The left node is the graph of the cotangent function, while the right node is the graph of the tangent function. They are distinct trigonometric functions with different graphs and properties."
+}

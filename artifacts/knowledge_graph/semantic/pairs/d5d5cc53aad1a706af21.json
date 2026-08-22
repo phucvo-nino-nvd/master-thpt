@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_COS_X_M",
+  "right_id": "PHUONG_TRINH_COT_X_M",
+  "merge": false,
+  "rationale": "The left node is the solution formula for the equation cos x = m, while the right node is for cot x = m. They are distinct solution sets for different trigonometric equations."
+}

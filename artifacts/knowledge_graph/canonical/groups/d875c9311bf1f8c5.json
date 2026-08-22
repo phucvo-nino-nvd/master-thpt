@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "TRUNG_VI",
+      "name": "Trung vị",
+      "type": "CONCEPT",
+      "description": "Số đặc trưng đo xu thế trung tâm, là giá trị chia đôi mẫu số liệu đã sắp xếp thành hai phần có số lượng giá trị bằng nhau."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0013",
+      "original_id": "TRUNG_VI",
+      "canonical_id": "TRUNG_VI",
+      "rationale": "Both occurrences describe the same statistical concept of the median, which divides an ordered dataset into two equal halves. The grade difference (10 vs 11) is not a reason to split, as the mathematical meaning is identical."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0009",
+      "original_id": "TRUNG_VI",
+      "canonical_id": "TRUNG_VI",
+      "rationale": "Both occurrences describe the same statistical concept of the median, which divides an ordered dataset into two equal halves. The grade difference (10 vs 11) is not a reason to split, as the mathematical meaning is identical."
+    }
+  ]
+}

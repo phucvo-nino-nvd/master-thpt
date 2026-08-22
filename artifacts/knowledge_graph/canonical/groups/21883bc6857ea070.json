@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "TONG_N_SO_HANG_DAU_CAP_SO_CONG",
+      "name": "Tổng n số hạng đầu cấp số cộng",
+      "type": "CONCEPT",
+      "description": "Tổng của n số hạng đầu tiên của một cấp số cộng. Công thức: S_n = n/2 * [2*u_1 + (n-1)*d] hoặc S_n = n*(u_1 + u_n)/2."
+    },
+    {
+      "id": "TONG_N_SO_HANG_DAU_CAP_SO_NHAN",
+      "name": "Tổng n số hạng đầu cấp số nhân",
+      "type": "CONCEPT",
+      "description": "Tổng của n số hạng đầu tiên của một cấp số nhân. Công thức: S_n = u_1 * (1 - q^n) / (1 - q) với điều kiện q khác 1."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0006",
+      "original_id": "TONG_N_SO_HANG_DAU",
+      "canonical_id": "TONG_N_SO_HANG_DAU_CAP_SO_CONG",
+      "rationale": "This occurrence describes the sum of the first n terms of an arithmetic progression, with formulas S_n = n/2 [2u_1 + (n-1)d] or S_n = n(u_1 + u_n)/2. The mathematical meaning is specific to arithmetic progressions."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0007",
+      "original_id": "TONG_N_SO_HANG_DAU",
+      "canonical_id": "TONG_N_SO_HANG_DAU_CAP_SO_NHAN",
+      "rationale": "This occurrence describes the sum of the first n terms of a geometric progression, with formula S_n = u_1 * (1 - q^n) / (1 - q) (for q != 1). The mathematical meaning is specific to geometric progressions and differs from the arithmetic progression sum."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "SO_DUNG",
+  "right_id": "SO_GAN_DUNG",
+  "merge": false,
+  "rationale": "These are complementary but opposite concepts: the exact value of a quantity vs. an approximate value of that quantity. They are distinct fundamental concepts in measurement and approximation theory."
+}

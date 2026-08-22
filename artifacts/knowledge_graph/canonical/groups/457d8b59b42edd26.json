@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "VAN_TOC_TUC_THOI",
+      "name": "Vận tốc tức thời",
+      "type": "CONCEPT",
+      "description": "Vận tốc tức thời của một vật chuyển động là đạo hàm của hàm vị trí (hoặc quãng đường) theo thời gian, biểu thị tốc độ và hướng chuyển động tại một thời điểm cụ thể."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0005",
+      "original_id": "VAN_TOC_TUC_THOI",
+      "canonical_id": "VAN_TOC_TUC_THOI",
+      "rationale": "All occurrences describe the same mathematical concept: instantaneous velocity as the derivative of position with respect to time. Grade differences (11 vs 12) are not a reason to split. The descriptions are consistent and refer to the same reusable knowledge."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0007",
+      "original_id": "VAN_TOC_TUC_THOI",
+      "canonical_id": "VAN_TOC_TUC_THOI",
+      "rationale": "This occurrence provides a more detailed description but still defines the same core concept of instantaneous velocity as the derivative of position. It should be merged with the others."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0005",
+      "original_id": "VAN_TOC_TUC_THOI",
+      "canonical_id": "VAN_TOC_TUC_THOI",
+      "rationale": "This occurrence from grade 12 defines the same concept using the same mathematical relationship (derivative of s(t) with respect to t). The grade difference does not indicate a different mathematical meaning, so it should be merged."
+    }
+  ]
+}

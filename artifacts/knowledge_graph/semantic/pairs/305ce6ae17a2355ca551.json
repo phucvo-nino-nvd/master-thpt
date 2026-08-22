@@ -1,0 +1,6 @@
+{
+  "left_id": "NGUYEN_HAM_HAM_SO_LUY_THUA",
+  "right_id": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT",
+  "merge": true,
+  "rationale": "Both nodes describe the indefinite integral (antiderivative) of the power function y = x^α, with the exact same formula and condition (α ≠ -1). The names 'Nguyên hàm của hàm số lũy thừa' and 'Nguyên hàm của hàm số lũy thừa tổng quát' refer to the same mathematical object. The description is identical. They are true semantic duplicates."
+}

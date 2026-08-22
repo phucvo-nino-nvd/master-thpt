@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN",
+      "name": "Biểu diễn miền nghiệm bất phương trình bậc nhất hai ẩn",
+      "type": "METHOD",
+      "description": "Phương pháp biểu diễn tập nghiệm của một bất phương trình hoặc hệ bất phương trình bậc nhất hai ẩn trên mặt phẳng tọa độ bằng cách vẽ đường thẳng ax + by = c và xác định nửa mặt phẳng thỏa mãn bất đẳng thức, sau đó xác định giao của các miền nếu là hệ."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0003",
+      "original_id": "BIEN_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+      "canonical_id": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN",
+      "rationale": "Both occurrences describe the same core method of representing solution sets of inequalities in the coordinate plane. The first describes the method for a single inequality, the second for a system. They are the same reusable mathematical procedure, differing only in the number of inequalities considered, which is a natural extension of the same method. Therefore, they should be merged under a single canonical ID."
+    },
+    {
+      "chunk_id": "toan-10-tap-1:0004",
+      "original_id": "BIEU_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+      "canonical_id": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN",
+      "rationale": "Both occurrences describe the same core method of representing solution sets of inequalities in the coordinate plane. The first describes the method for a single inequality, the second for a system. They are the same reusable mathematical procedure, differing only in the number of inequalities considered, which is a natural extension of the same method. Therefore, they should be merged under a single canonical ID."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_NHAU",
+  "right_id": "DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The nodes describe two distinct and mutually exclusive positional relationships between lines in a plane: intersecting lines and parallel lines. They are different concepts."
+}

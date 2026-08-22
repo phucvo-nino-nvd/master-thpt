@@ -1,0 +1,6 @@
+{
+  "left_id": "TONG_N_SO_HANG_DAU_CAP_SO_CONG",
+  "right_id": "TONG_N_SO_HANG_DAU_CAP_SO_NHAN",
+  "merge": false,
+  "rationale": "The left is the sum of the first n terms of an arithmetic sequence. The right is the sum of the first n terms of a geometric sequence. They are distinct formulas for different types of sequences. They are related but represent different mathematical objects. KEEP."
+}

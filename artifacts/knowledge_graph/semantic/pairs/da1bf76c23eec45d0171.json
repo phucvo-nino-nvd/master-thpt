@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "DIEU_KIEN_HAI_MAT_PHANG_SONG_SONG",
+  "merge": false,
+  "rationale": "Left node is a theorem giving the condition for a line to be parallel to a plane. Right node is a theorem giving the condition for two planes to be parallel. They are distinct theorems about parallelism in different dimensions. They are not semantic duplicates."
+}

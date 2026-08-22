@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_CO_DOI",
+  "right_id": "BIEN_CO_XUNG_KHAC",
+  "merge": false,
+  "rationale": "Biến cố đối và biến cố xung khắc are distinct concepts. The former is the complement of a single event, the latter describes two events that cannot occur simultaneously. They are related but not identical."
+}

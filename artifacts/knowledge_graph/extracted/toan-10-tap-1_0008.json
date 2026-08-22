@@ -1,0 +1,197 @@
+{
+  "chunk_id": "toan-10-tap-1:0008",
+  "nodes": [
+    {
+      "id": "VECTO",
+      "name": "vectơ",
+      "type": "CONCEPT",
+      "description": "Đại lượng có cả độ lớn và hướng trong không gian.",
+      "grade": 10
+    },
+    {
+      "id": "PHEP_CONG_VECTO",
+      "name": "phép cộng vectơ",
+      "type": "METHOD",
+      "description": "Phép toán kết hợp hai vectơ thành một vectơ mới bằng cách sử dụng quy tắc ba điểm hoặc quy tắc hình bình hành.",
+      "grade": 10
+    },
+    {
+      "id": "TONG_HAI_VECTO",
+      "name": "tổng của hai vectơ",
+      "type": "CONCEPT",
+      "description": "Vectơ được định nghĩa bằng cách lấy một điểm A, vẽ vectơ AB = a và BC = b, thì vectơ AC = a + b.",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_DOI",
+      "name": "vectơ đối",
+      "type": "CONCEPT",
+      "description": "Vectơ có cùng độ dài và ngược hướng với vectơ ban đầu, ký hiệu là -a.",
+      "grade": 10
+    },
+    {
+      "id": "PHEP_TRU_VECTO",
+      "name": "phép trừ vectơ",
+      "type": "METHOD",
+      "description": "Phép toán lấy hiệu của hai vectơ bằng cách cộng vectơ ban đầu với vectơ đối của vectơ bị trừ.",
+      "grade": 10
+    },
+    {
+      "id": "HIEU_HAI_VECTO",
+      "name": "hiệu của hai vectơ",
+      "type": "CONCEPT",
+      "description": "Vectơ được định nghĩa bằng cách lấy vectơ a và trừ vectơ b, ký hiệu là a - b.",
+      "grade": 10
+    },
+    {
+      "id": "QUY_TAC_BA_DIEM",
+      "name": "quy tắc ba điểm",
+      "type": "THEOREM",
+      "description": "Với ba điểm bất kì A, B, C, ta có AB + BC = AC.",
+      "grade": 10
+    },
+    {
+      "id": "QUY_TAC_HINH_BINH_HANG",
+      "name": "quy tắc hình bình hành",
+      "type": "THEOREM",
+      "description": "Nếu ABCD là hình bình hành thì AB + AD = AC.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_GIAO_HOAN",
+      "name": "tính chất giao hoán",
+      "type": "THEOREM",
+      "description": "Với ba vectơ a, b, c tuỳ ý, a + b = b + a.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_KET_HOP",
+      "name": "tính chất kết hợp",
+      "type": "THEOREM",
+      "description": "Với ba vectơ a, b, c tuỳ ý, (a + b) + c = a + (b + c).",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_VECTO_KHONG",
+      "name": "tính chất của vectơ không",
+      "type": "THEOREM",
+      "description": "Với bất kì vectơ a, a + 0 = 0 + a = a.",
+      "grade": 10
+    },
+    {
+      "id": "QUY_TAC_HIEU",
+      "name": "quy tắc hiệu",
+      "type": "THEOREM",
+      "description": "Với ba điểm O, M, N tuỳ ý, ta có MN = ON - OM.",
+      "grade": 10
+    },
+    {
+      "id": "TRUNG_DIEM_DUONG_THANG",
+      "name": "trung điểm của đoạn thẳng",
+      "type": "CONCEPT",
+      "description": "Điểm I là trung điểm của đoạn thẳng AB nếu và chỉ nếu IA + IB = 0.",
+      "grade": 10
+    },
+    {
+      "id": "TRONG_TAM_TAM_GIAC",
+      "name": "trọng tâm của tam giác",
+      "type": "CONCEPT",
+      "description": "Điểm G là trọng tâm của tam giác ABC nếu và chỉ nếu GA + GB + GC = 0.",
+      "grade": 10
+    },
+    {
+      "id": "TONG_HOP_LUC",
+      "name": "tổng hợp lực",
+      "type": "METHOD",
+      "description": "Phép cộng vectơ được dùng để tổng hợp các lực tác động lên một chất điểm.",
+      "grade": 10
+    },
+    {
+      "id": "TONG_HOP_VAN_TOC",
+      "name": "tổng hợp vận tốc",
+      "type": "METHOD",
+      "description": "Phép cộng vectơ được dùng để tổng hợp vận tốc của một vật di chuyển trong môi trường có dòng nước.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHEP_CONG_VECTO",
+      "target": "TONG_HAI_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Phép cộng vectơ bao gồm việc định nghĩa tổng của hai vectơ."
+    },
+    {
+      "source": "PHEP_CONG_VECTO",
+      "target": "QUY_TAC_BA_DIEM",
+      "relation": "REQUIRES",
+      "rationale": "Quy tắc ba điểm là cơ sở để thực hiện phép cộng vectơ."
+    },
+    {
+      "source": "PHEP_CONG_VECTO",
+      "target": "QUY_TAC_HINH_BINH_HANG",
+      "relation": "REQUIRES",
+      "rationale": "Quy tắc hình bình hành là một phương pháp cụ thể của phép cộng vectơ."
+    },
+    {
+      "source": "PHEP_CONG_VECTO",
+      "target": "TINH_CHAT_GIAO_HOAN",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất giao hoán là một tính chất cơ bản của phép cộng vectơ."
+    },
+    {
+      "source": "PHEP_CONG_VECTO",
+      "target": "TINH_CHAT_KET_HOP",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất kết hợp là một tính chất cơ bản của phép cộng vectơ."
+    },
+    {
+      "source": "PHEP_CONG_VECTO",
+      "target": "TINH_CHAT_VECTO_KHONG",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất của vectơ không là một tính chất cơ bản của phép cộng vectơ."
+    },
+    {
+      "source": "PHEP_TRU_VECTO",
+      "target": "HIEU_HAI_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Phép trừ vectơ bao gồm việc định nghĩa hiệu của hai vectơ."
+    },
+    {
+      "source": "PHEP_TRU_VECTO",
+      "target": "VECTO_DOI",
+      "relation": "REQUIRES",
+      "rationale": "Phép trừ vectơ sử dụng khái niệm vectơ đối."
+    },
+    {
+      "source": "PHEP_TRU_VECTO",
+      "target": "QUY_TAC_HIEU",
+      "relation": "REQUIRES",
+      "rationale": "Quy tắc hiệu là cơ sở để thực hiện phép trừ vectơ."
+    },
+    {
+      "source": "TONG_HOP_LUC",
+      "target": "PHEP_CONG_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Tổng hợp lực sử dụng phép cộng vectơ."
+    },
+    {
+      "source": "TONG_HOP_VAN_TOC",
+      "target": "PHEP_CONG_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Tổng hợp vận tốc sử dụng phép cộng vectơ."
+    },
+    {
+      "source": "TRUNG_DIEM_DUONG_THANG",
+      "target": "PHEP_CONG_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Định nghĩa trung điểm của đoạn thẳng sử dụng phép cộng vectơ."
+    },
+    {
+      "source": "TRONG_TAM_TAM_GIAC",
+      "target": "PHEP_CONG_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Định nghĩa trọng tâm của tam giác sử dụng phép cộng vectơ."
+    }
+  ]
+}

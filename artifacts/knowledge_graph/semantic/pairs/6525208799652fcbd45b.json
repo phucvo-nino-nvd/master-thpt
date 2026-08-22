@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_CO_GIAO",
+  "right_id": "BIEN_CO_XUNG_KHAC",
+  "merge": false,
+  "rationale": "Biến cố giao and Biến cố xung khắc are distinct concepts. One defines the intersection of events, the other defines mutually exclusive events. They are related but not identical."
+}

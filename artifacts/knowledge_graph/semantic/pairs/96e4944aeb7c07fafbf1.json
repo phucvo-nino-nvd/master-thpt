@@ -1,0 +1,6 @@
+{
+  "left_id": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT",
+  "right_id": "NGUYEN_HAM_HAM_SO_MU",
+  "merge": false,
+  "rationale": "Nguyên hàm của hàm số lũy thừa tổng quát and nguyên hàm của hàm số mũ are formulas for different function families (power functions vs. exponential functions). They are distinct mathematical objects."
+}

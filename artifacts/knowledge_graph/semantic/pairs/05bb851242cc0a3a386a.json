@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_CAN",
+  "right_id": "DIEU_KIEN_DU",
+  "merge": false,
+  "rationale": "The left node is 'necessary condition' and the right node is 'sufficient condition'. They are related logical concepts but are not the same; they represent different roles in an implication. They are not semantic duplicates."
+}

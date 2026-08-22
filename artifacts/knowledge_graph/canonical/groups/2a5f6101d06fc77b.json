@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "TINH_KHOANG_BIEN_THIEN",
+      "name": "Tính khoảng biến thiên",
+      "type": "METHOD",
+      "description": "Phương pháp tính độ phân tán của mẫu số liệu bằng hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất. Đối với số liệu không ghép nhóm, khoảng biến thiên là hiệu số giữa giá trị lớn nhất và nhỏ nhất. Đối với số liệu ghép nhóm, khoảng biến thiên là hiệu số giữa giới hạn trên của nhóm cuối cùng và giới hạn dưới của nhóm đầu tiên."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0014",
+      "original_id": "TINH_KHOANG_BIEN_THIEN",
+      "canonical_id": "TINH_KHOANG_BIEN_THIEN",
+      "rationale": "Both occurrences describe the same method for calculating the range of a data set. The grade 10 description is for ungrouped data, while the grade 12 description is for grouped data. This is a natural extension of the same concept to a more complex data type, not a different mathematical method. Therefore, they should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0009",
+      "original_id": "TINH_KHOANG_BIEN_THIEN",
+      "canonical_id": "TINH_KHOANG_BIEN_THIEN",
+      "rationale": "Both occurrences describe the same method for calculating the range of a data set. The grade 10 description is for ungrouped data, while the grade 12 description is for grouped data. This is a natural extension of the same concept to a more complex data type, not a different mathematical method. Therefore, they should be merged."
+    }
+  ]
+}

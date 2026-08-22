@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_NGHICH_BIEN",
+  "right_id": "KHOANG_NGHICH_BIEN",
+  "merge": false,
+  "rationale": "The left node defines a decreasing function. The right node defines a decreasing interval of a function. One is a property of the entire function, the other is a property of a specific interval. They are related but not identical concepts."
+}

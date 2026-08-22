@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_MU",
+  "right_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+  "merge": false,
+  "rationale": "The left node is the derivative formula for exponential functions. The right node is a collection of derivative formulas for basic elementary functions, which includes exponential functions. The left is a subset/component of the right. A specific formula and a general collection containing it should be KEPT separate."
+}

@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "GIOI_HAN_HAM_SO",
+      "name": "Giới hạn của hàm số",
+      "type": "CONCEPT",
+      "description": "Khái niệm về giới hạn của một hàm số khi biến số tiến gần một giá trị xác định hoặc vô cực."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0016",
+      "original_id": "GIOI_HAN_HAM_SO",
+      "canonical_id": "GIOI_HAN_HAM_SO",
+      "rationale": "Both occurrences describe the same core mathematical concept: the limit of a function as the variable approaches a specific value or infinity. The grade difference (11 vs 12) is not a reason to split, as the knowledge is reusable and identical in meaning."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0003",
+      "original_id": "GIOI_HAN_HAM_SO",
+      "canonical_id": "GIOI_HAN_HAM_SO",
+      "rationale": "Both occurrences describe the same core mathematical concept: the limit of a function as the variable approaches a specific value or infinity. The grade difference (11 vs 12) is not a reason to split, as the knowledge is reusable and identical in meaning."
+    }
+  ]
+}

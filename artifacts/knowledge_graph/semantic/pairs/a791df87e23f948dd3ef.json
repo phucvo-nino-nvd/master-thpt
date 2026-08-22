@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_TONG_N_SO_HANG_DAU",
+  "right_id": "SO_HANG_TONG_QUAT_CAP_SO_CONG",
+  "merge": false,
+  "rationale": "These are distinct formulas for an arithmetic sequence: the general term formula vs. the sum of the first n terms formula."
+}

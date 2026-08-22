@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_THE_TICH_KHOI_CHOP",
+  "right_id": "CONG_THUC_THE_TICH_KHOI_LANG_TRU",
+  "merge": false,
+  "rationale": "Left is the volume formula for a pyramid. Right is the volume formula for a prism. They are distinct formulas for different geometric solids; one is not a semantic duplicate of the other."
+}

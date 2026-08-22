@@ -1,0 +1,6 @@
+{
+  "left_id": "COS",
+  "right_id": "COT",
+  "merge": false,
+  "rationale": "These are distinct trigonometric functions (cosine vs. cotangent), representing different mathematical objects."
+}

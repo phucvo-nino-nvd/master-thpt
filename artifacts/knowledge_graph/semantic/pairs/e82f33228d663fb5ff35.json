@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+  "right_id": "PHUONG_TRINH_LOGARIT",
+  "merge": false,
+  "rationale": "Left is the concept of a basic logarithmic inequality. Right is the concept of a logarithmic equation. They are distinct types of mathematical statements; one is not a semantic duplicate of the other."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "HINH_LANG_TRU",
+  "right_id": "HINH_LANG_TRU_DEU",
+  "merge": false,
+  "rationale": "The left node is the general concept of a prism. The right node is the specific concept of a regular prism (right prism with regular polygonal base). A general concept and its strict subtype should be kept separate."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DO_DAI_VECTO",
+  "right_id": "GIA_VECTO",
+  "merge": false,
+  "rationale": "The left node defines the magnitude/length of a vector. The right node defines the line containing a vector (its support). They are distinct attributes of a vector."
+}

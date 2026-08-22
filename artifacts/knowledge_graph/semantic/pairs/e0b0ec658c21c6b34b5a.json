@@ -1,0 +1,6 @@
+{
+  "left_id": "QUY_TAC_CONG",
+  "right_id": "QUY_TAC_NHAN",
+  "merge": false,
+  "rationale": "These are two fundamental, distinct counting principles: the Addition Rule (for mutually exclusive choices) and the Multiplication Rule (for sequential independent choices). They are related as basic combinatorial rules but are different methods used in different scenarios."
+}

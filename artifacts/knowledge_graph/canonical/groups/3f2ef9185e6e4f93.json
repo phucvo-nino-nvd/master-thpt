@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "HAM_SO",
+      "name": "Hàm số",
+      "type": "CONCEPT",
+      "description": "Mối quan hệ giữa hai tập hợp số, trong đó mỗi phần tử của tập xác định được ánh xạ duy nhất vào một phần tử của tập giá trị."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0001",
+      "original_id": "HAM_SO",
+      "canonical_id": "HAM_SO",
+      "rationale": "Occurrence describes the fundamental concept of a function as a relation between two sets. This is the same core mathematical knowledge as the other occurrences."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0002",
+      "original_id": "HAM_SO",
+      "canonical_id": "HAM_SO",
+      "rationale": "Occurrence describes the fundamental concept of a function as a relation between two sets. This is the same core mathematical knowledge as the other occurrences. Grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0003",
+      "original_id": "HAM_SO",
+      "canonical_id": "HAM_SO",
+      "rationale": "Occurrence describes the fundamental concept of a function as a relation between two sets, represented by y = f(x). This is the same core mathematical knowledge as the other occurrences. The notation y = f(x) is a standard representation and does not change the underlying concept."
+    }
+  ]
+}

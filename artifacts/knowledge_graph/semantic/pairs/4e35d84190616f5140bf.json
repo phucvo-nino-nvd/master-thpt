@@ -1,0 +1,6 @@
+{
+  "left_id": "HIEU_HAI_VECTO",
+  "right_id": "HIEU_VECTO",
+  "merge": true,
+  "rationale": "Both nodes define the concept of the difference/subtraction of two vectors. The descriptions are semantically identical: 'hiệu của hai vectơ' defined as a - b, and 'Hiệu vectơ' defined as a + (-b) which is equivalent to a - b. They represent exactly the same reusable mathematical knowledge."
+}

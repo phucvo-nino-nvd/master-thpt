@@ -1,0 +1,6 @@
+{
+  "left_id": "NGUYEN_HAM_HAM_SO_LN",
+  "right_id": "NGUYEN_HAM_HAM_SO_LUONG_GIAC",
+  "merge": false,
+  "rationale": "The left node is a formula for the antiderivative of the natural logarithm function. The right node is a collection of formulas for antiderivatives of trigonometric functions. They represent different families of integral formulas and are not semantic duplicates."
+}

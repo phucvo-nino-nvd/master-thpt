@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "merge": false,
+  "rationale": "These are two distinct theorems about the relative positions of lines and planes. One gives a condition for parallelism, the other gives a condition involving perpendicularity. They are not the same."
+}

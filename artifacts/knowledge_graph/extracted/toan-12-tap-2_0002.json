@@ -1,0 +1,170 @@
+{
+  "chunk_id": "toan-12-tap-2:0002",
+  "nodes": [
+    {
+      "id": "TICH_PHAN",
+      "name": "Tích phân",
+      "type": "CONCEPT",
+      "description": "Hiệu số F(b) - F(a) của một nguyên hàm F(x) của hàm số liên tục f(x) trên đoạn [a, b], kí hiệu ∫ₐᵇ f(x) dx.",
+      "grade": 12
+    },
+    {
+      "id": "HAM_SO_DUOI_DAU_TICH_PHAN",
+      "name": "Hàm số dưới dấu tích phân",
+      "type": "CONCEPT",
+      "description": "Hàm số f(x) trong biểu thức dưới dấu tích phân ∫ₐᵇ f(x) dx.",
+      "grade": 12
+    },
+    {
+      "id": "CAN_DUOI",
+      "name": "Cận dưới",
+      "type": "CONCEPT",
+      "description": "Giới hạn dưới a của tích phân ∫ₐᵇ f(x) dx.",
+      "grade": 12
+    },
+    {
+      "id": "CAN_TRUOC",
+      "name": "Cận trên",
+      "type": "CONCEPT",
+      "description": "Giới hạn trên b của tích phân ∫ₐᵇ f(x) dx.",
+      "grade": 12
+    },
+    {
+      "id": "DINH_LI_TICH_PHAN",
+      "name": "Định lí tích phân",
+      "type": "THEOREM",
+      "description": "Nếu f(x) liên tục và không âm trên [a, b], thì diện tích hình thang cong giới hạn bởi y = f(x), trục hoành và x = a, x = b bằng ∫ₐᵇ f(x) dx = F(b) - F(a), F(x) là nguyên hàm của f(x).",
+      "grade": 12
+    },
+    {
+      "id": "Y_NGHI_A_HINH_HOC_CUA_TICH_PHAN",
+      "name": "Ý nghĩa hình học của tích phân",
+      "type": "THEOREM",
+      "description": "Nếu f(x) liên tục và không âm trên [a, b], thì ∫ₐᵇ f(x) dx bằng diện tích hình thang cong giới hạn bởi y = f(x), trục hoành và x = a, x = b.",
+      "grade": 12
+    },
+    {
+      "id": "TINH_CHAT_TICH_PHAN",
+      "name": "Tính chất của tích phân",
+      "type": "THEOREM",
+      "description": "Các tính chất cơ bản của tích phân bao gồm tính chất về hằng số, tính chất cộng, tính chất trừ và tính chất phân đoạn.",
+      "grade": 12
+    },
+    {
+      "id": "TINH_CHAT_HANG_SO",
+      "name": "Tính chất về hằng số",
+      "type": "THEOREM",
+      "description": "∫ₐᵇ kf(x) dx = k ∫ₐᵇ f(x) dx, k là hằng số.",
+      "grade": 12
+    },
+    {
+      "id": "TINH_CHAT_CONG",
+      "name": "Tính chất cộng",
+      "type": "THEOREM",
+      "description": "∫ₐᵇ [f(x) + g(x)] dx = ∫ₐᵇ f(x) dx + ∫ₐᵇ g(x) dx.",
+      "grade": 12
+    },
+    {
+      "id": "TINH_CHAT_TRU",
+      "name": "Tính chất trừ",
+      "type": "THEOREM",
+      "description": "∫ₐᵇ [f(x) - g(x)] dx = ∫ₐᵇ f(x) dx - ∫ₐᵇ g(x) dx.",
+      "grade": 12
+    },
+    {
+      "id": "TINH_CHAT_PHAN_DOAN",
+      "name": "Tính chất phân đoạn",
+      "type": "THEOREM",
+      "description": "∫ₐᵇ f(x) dx = ∫ₐᶜ f(x) dx + ∫ᶜᵇ f(x) dx, a < c < b.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_PHAP_TICH_PHAN",
+      "name": "Phương pháp tính tích phân",
+      "type": "METHOD",
+      "description": "Sử dụng nguyên hàm của hàm số dưới dấu tích phân để tính giá trị tích phân.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_PHAP_TICH_PHAN_HINH_HOC",
+      "name": "Phương pháp tích phân hình học",
+      "type": "METHOD",
+      "description": "Sử dụng ý nghĩa hình học của tích phân để tính diện tích hình thang cong.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "TICH_PHAN",
+      "target": "HAM_SO_DUOI_DAU_TICH_PHAN",
+      "relation": "PART_OF",
+      "rationale": "Hàm số dưới dấu tích phân là thành phần của biểu thức tích phân."
+    },
+    {
+      "source": "TICH_PHAN",
+      "target": "CAN_DUOI",
+      "relation": "PART_OF",
+      "rationale": "Cận dưới là thành phần của biểu thức tích phân."
+    },
+    {
+      "source": "TICH_PHAN",
+      "target": "CAN_TRUOC",
+      "relation": "PART_OF",
+      "rationale": "Cận trên là thành phần của biểu thức tích phân."
+    },
+    {
+      "source": "DINH_LI_TICH_PHAN",
+      "target": "TICH_PHAN",
+      "relation": "REQUIRES",
+      "rationale": "Định lí tích phân yêu cầu khái niệm tích phân."
+    },
+    {
+      "source": "Y_NGHI_A_HINH_HOC_CUA_TICH_PHAN",
+      "target": "TICH_PHAN",
+      "relation": "REQUIRES",
+      "rationale": "Ý nghĩa hình học của tích phân yêu cầu khái niệm tích phân."
+    },
+    {
+      "source": "TINH_CHAT_TICH_PHAN",
+      "target": "TICH_PHAN",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất của tích phân yêu cầu khái niệm tích phân."
+    },
+    {
+      "source": "TINH_CHAT_HANG_SO",
+      "target": "TINH_CHAT_TICH_PHAN",
+      "relation": "PART_OF",
+      "rationale": "Tính chất về hằng số là một phần của tính chất tích phân."
+    },
+    {
+      "source": "TINH_CHAT_CONG",
+      "target": "TINH_CHAT_TICH_PHAN",
+      "relation": "PART_OF",
+      "rationale": "Tính chất cộng là một phần của tính chất tích phân."
+    },
+    {
+      "source": "TINH_CHAT_TRU",
+      "target": "TINH_CHAT_TICH_PHAN",
+      "relation": "PART_OF",
+      "rationale": "Tính chất trừ là một phần của tính chất tích phân."
+    },
+    {
+      "source": "TINH_CHAT_PHAN_DOAN",
+      "target": "TINH_CHAT_TICH_PHAN",
+      "relation": "PART_OF",
+      "rationale": "Tính chất phân đoạn là một phần của tính chất tích phân."
+    },
+    {
+      "source": "PHUONG_PHAP_TICH_PHAN",
+      "target": "TICH_PHAN",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tính tích phân yêu cầu khái niệm tích phân."
+    },
+    {
+      "source": "PHUONG_PHAP_TICH_PHAN_HINH_HOC",
+      "target": "TICH_PHAN",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tích phân hình học yêu cầu khái niệm tích phân."
+    }
+  ]
+}

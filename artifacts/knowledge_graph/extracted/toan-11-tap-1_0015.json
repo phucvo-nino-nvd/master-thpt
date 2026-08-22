@@ -1,0 +1,138 @@
+{
+  "chunk_id": "toan-11-tap-1:0015",
+  "nodes": [
+    {
+      "id": "GIOI_HAN_DAY_SO",
+      "name": "Giới hạn của dãy số",
+      "type": "CONCEPT",
+      "description": "Khái niệm về giới hạn của một dãy số khi số hạng n dần tới dương vô cực.",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_HUU_HAN",
+      "name": "Giới hạn hữu hạn",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một dãy số khi giá trị của dãy số hội tụ về một số hữu hạn.",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_VO_CUC",
+      "name": "Giới hạn vô cực",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một dãy số khi giá trị của dãy số phát triển vô hạn.",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_LA_0",
+      "name": "Giới hạn là 0",
+      "type": "CONCEPT",
+      "description": "Dãy số có giới hạn là 0 khi giá trị tuyệt đối của các số hạng có thể nhỏ hơn một số dương bé tùy ý khi n đủ lớn.",
+      "grade": 11
+    },
+    {
+      "id": "GIOI_HAN_LA_A",
+      "name": "Giới hạn là a",
+      "type": "CONCEPT",
+      "description": "Dãy số có giới hạn là số thực a khi giới hạn của (u_n - a) là 0.",
+      "grade": 11
+    },
+    {
+      "id": "PHEP_TOAN_GIOI_HAN",
+      "name": "Các phép toán giới hạn",
+      "type": "CONCEPT",
+      "description": "Quy tắc tính giới hạn cho phép cộng, trừ, nhân, chia và căn bậc hai của dãy số.",
+      "grade": 11
+    },
+    {
+      "id": "CAP_SO_NHAN_LUI_VO_HANH",
+      "name": "Cấp số nhân lùi vô hạn",
+      "type": "CONCEPT",
+      "description": "Cấp số nhân vô hạn với công bội q có giá trị tuyệt đối nhỏ hơn 1.",
+      "grade": 11
+    },
+    {
+      "id": "TONG_CAP_SO_NHAN_LUI_VO_HANH",
+      "name": "Tổng của cấp số nhân lùi vô hạn",
+      "type": "FORMULA",
+      "description": "Tổng của cấp số nhân lùi vô hạn (u_n) với công bội q là u1/(1 - q) khi |q| < 1.",
+      "grade": 11
+    },
+    {
+      "id": "NGHICH_LI_ZENO",
+      "name": "Nghịch lí Zeno",
+      "type": "CONCEPT",
+      "description": "Nghịch lí về việc Achilles không thể đuổi kịp rùa do quá trình phân chia vô hạn.",
+      "grade": 11
+    },
+    {
+      "id": "QUY_TAC_TINH_GIOI_HAN",
+      "name": "Quy tắc tính giới hạn",
+      "type": "THEOREM",
+      "description": "Quy tắc tính giới hạn cho phép cộng, trừ, nhân, chia và căn bậc hai của dãy số.",
+      "grade": 11
+    },
+    {
+      "id": "QUY_TAC_GIOI_HAN_VO_CUC",
+      "name": "Quy tắc giới hạn vô cực",
+      "type": "THEOREM",
+      "description": "Quy tắc tính giới hạn khi một hoặc cả hai dãy số có giới hạn vô cực.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "GIOI_HAN_DAY_SO",
+      "target": "GIOI_HAN_HUU_HAN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_DAY_SO",
+      "target": "GIOI_HAN_VO_CUC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_HUU_HAN",
+      "target": "GIOI_HAN_LA_0",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_HUU_HAN",
+      "target": "GIOI_HAN_LA_A",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_DAY_SO",
+      "target": "PHEP_TOAN_GIOI_HAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHEP_TOAN_GIOI_HAN",
+      "target": "QUY_TAC_TINH_GIOI_HAN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "GIOI_HAN_VO_CUC",
+      "target": "QUY_TAC_GIOI_HAN_VO_CUC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CAP_SO_NHAN_LUI_VO_HANH",
+      "target": "TONG_CAP_SO_NHAN_LUI_VO_HANH",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "NGHICH_LI_ZENO",
+      "target": "GIOI_HAN_DAY_SO",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

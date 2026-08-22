@@ -1,0 +1,229 @@
+{
+  "chunk_id": "toan-11-tap-2:0004",
+  "nodes": [
+    {
+      "id": "PHUONG_TRINH_MU",
+      "name": "Phương trình mũ",
+      "type": "CONCEPT",
+      "description": "Phương trình có dạng a^x = b (với 0 < a ≠ 1).",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_MU_CO_BAN",
+      "name": "Phương trình mũ cơ bản",
+      "type": "CONCEPT",
+      "description": "Phương trình mũ có dạng a^x = b (với 0 < a ≠ 1).",
+      "grade": 11
+    },
+    {
+      "id": "NGHIEM_PHUONG_TRINH_MU",
+      "name": "Nghiệm phương trình mũ",
+      "type": "CONCEPT",
+      "description": "Nếu b > 0 thì nghiệm duy nhất x = logₐ b. Nếu b ≤ 0 thì vô nghiệm.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_MU",
+      "name": "Phương pháp giải phương trình mũ",
+      "type": "METHOD",
+      "description": "Đưa về cùng cơ số: a^u = a^v ⇔ u = v (với 0 < a ≠ 1).",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_LOGARIT",
+      "name": "Phương trình lôgarit",
+      "type": "CONCEPT",
+      "description": "Phương trình có dạng logₐ x = b (với 0 < a ≠ 1).",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_LOGARIT_CO_BAN",
+      "name": "Phương trình lôgarit cơ bản",
+      "type": "CONCEPT",
+      "description": "Phương trình lôgarit có dạng logₐ x = b (với 0 < a ≠ 1).",
+      "grade": 11
+    },
+    {
+      "id": "NGHIEM_PHUONG_TRINH_LOGARIT",
+      "name": "Nghiệm phương trình lôgarit",
+      "type": "CONCEPT",
+      "description": "Nghiệm duy nhất x = a^b.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_LOGARIT",
+      "name": "Phương pháp giải phương trình lôgarit",
+      "type": "METHOD",
+      "description": "Đưa về cùng cơ số: logₐ u = logₐ v ⇔ u = v (với u, v > 0 và 0 < a ≠ 1).",
+      "grade": 11
+    },
+    {
+      "id": "BAT_PHUONG_TRINH_MU",
+      "name": "Bất phương trình mũ",
+      "type": "CONCEPT",
+      "description": "Bất phương trình có dạng a^x > b (hoặc các dạng tương tự) với a > 0, a ≠ 1.",
+      "grade": 11
+    },
+    {
+      "id": "BAT_PHUONG_TRINH_MU_CO_BAN",
+      "name": "Bất phương trình mũ cơ bản",
+      "type": "CONCEPT",
+      "description": "Bất phương trình mũ có dạng a^x > b (hoặc các dạng tương tự) với a > 0, a ≠ 1.",
+      "grade": 11
+    },
+    {
+      "id": "NGHIEM_BAT_PHUONG_TRINH_MU",
+      "name": "Nghiệm bất phương trình mũ",
+      "type": "CONCEPT",
+      "description": "Nếu b > 0 thì nghiệm phụ thuộc vào a: nếu a > 1 thì x > logₐ b, nếu 0 < a < 1 thì x < logₐ b.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_MU",
+      "name": "Phương pháp giải bất phương trình mũ",
+      "type": "METHOD",
+      "description": "So sánh số mũ: a^u > a^v ⇔ u > v nếu a > 1, hoặc u < v nếu 0 < a < 1.",
+      "grade": 11
+    },
+    {
+      "id": "BAT_PHUONG_TRINH_LOGARIT",
+      "name": "Bất phương trình lôgarit",
+      "type": "CONCEPT",
+      "description": "Bất phương trình có dạng logₐ x > b (hoặc các dạng tương tự) với a > 0, a ≠ 1.",
+      "grade": 11
+    },
+    {
+      "id": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+      "name": "Bất phương trình lôgarit cơ bản",
+      "type": "CONCEPT",
+      "description": "Bất phương trình lôgarit có dạng logₐ x > b (hoặc các dạng tương tự) với a > 0, a ≠ 1.",
+      "grade": 11
+    },
+    {
+      "id": "NGHIEM_BAT_PHUONG_TRINH_LOGARIT",
+      "name": "Nghiệm bất phương trình lôgarit",
+      "type": "CONCEPT",
+      "description": "Nếu a > 1 thì x > a^b. Nếu 0 < a < 1 thì 0 < x < a^b.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_LOGARIT",
+      "name": "Phương pháp giải bất phương trình lôgarit",
+      "type": "METHOD",
+      "description": "So sánh đối số: logₐ u > logₐ v ⇔ u > v > 0 nếu a > 1, hoặc 0 < u < v nếu 0 < a < 1.",
+      "grade": 11
+    },
+    {
+      "id": "HAM_MU",
+      "name": "Hàm mũ",
+      "type": "CONCEPT",
+      "description": "Hàm số có dạng y = a^x (với a > 0, a ≠ 1).",
+      "grade": 11
+    },
+    {
+      "id": "HAM_LOGARIT",
+      "name": "Hàm lôgarit",
+      "type": "CONCEPT",
+      "description": "Hàm số có dạng y = logₐ x (với a > 0, a ≠ 1).",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHUONG_TRINH_MU",
+      "target": "PHUONG_TRINH_MU_CO_BAN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_LOGARIT",
+      "target": "PHUONG_TRINH_LOGARIT_CO_BAN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "BAT_PHUONG_TRINH_MU",
+      "target": "BAT_PHUONG_TRINH_MU_CO_BAN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "BAT_PHUONG_TRINH_LOGARIT",
+      "target": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "NGHIEM_PHUONG_TRINH_MU",
+      "target": "PHUONG_TRINH_MU_CO_BAN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "NGHIEM_PHUONG_TRINH_LOGARIT",
+      "target": "PHUONG_TRINH_LOGARIT_CO_BAN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "NGHIEM_BAT_PHUONG_TRINH_MU",
+      "target": "BAT_PHUONG_TRINH_MU_CO_BAN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "NGHIEM_BAT_PHUONG_TRINH_LOGARIT",
+      "target": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_GIAI_PHUONG_TRINH_MU",
+      "target": "PHUONG_TRINH_MU_CO_BAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_GIAI_PHUONG_TRINH_LOGARIT",
+      "target": "PHUONG_TRINH_LOGARIT_CO_BAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_MU",
+      "target": "BAT_PHUONG_TRINH_MU_CO_BAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_LOGARIT",
+      "target": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_MU_CO_BAN",
+      "target": "HAM_MU",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_LOGARIT_CO_BAN",
+      "target": "HAM_LOGARIT",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "BAT_PHUONG_TRINH_MU_CO_BAN",
+      "target": "HAM_MU",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+      "target": "HAM_LOGARIT",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

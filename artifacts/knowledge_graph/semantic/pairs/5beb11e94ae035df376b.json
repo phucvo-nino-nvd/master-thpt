@@ -1,0 +1,6 @@
+{
+  "left_id": "TAP_HOP",
+  "right_id": "TAP_HOP_HOP",
+  "merge": false,
+  "rationale": "Left node is the general concept of a 'set'. Right node is the specific concept of a 'union of sets'. One is a general concept and the other is a specific operation defined on sets. They are not semantic duplicates."
+}

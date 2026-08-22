@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+  "right_id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node is a theorem about lines parallel to a line perpendicular to a plane. The right node is a property of a line parallel to a plane and the intersection of planes. They describe different theorems, so KEEP."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The nodes represent two distinct and opposite spatial relations between a line and a plane: parallelism and perpendicularity. They are not semantic duplicates."
+}

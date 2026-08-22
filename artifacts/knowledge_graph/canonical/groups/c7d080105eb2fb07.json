@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "TOA_DO_VECTO_TRONG_MP",
+      "name": "Toạ độ vectơ trong mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Cặp số (x; y) duy nhất biểu diễn một vectơ trong mặt phẳng toạ độ Oxy, với vectơ = x*i + y*j, trong đó i, j là các vectơ đơn vị trên các trục."
+    },
+    {
+      "id": "TOA_DO_VECTO_TRONG_KG",
+      "name": "Toạ độ vectơ trong không gian",
+      "type": "CONCEPT",
+      "description": "Bộ ba số (x; y; z) duy nhất biểu diễn một vectơ trong không gian toạ độ Oxyz, với vectơ = x*i + y*j + z*k, trong đó i, j, k là các vectơ đơn vị trên các trục."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0010",
+      "original_id": "TOA_DO_CUA_VECTO",
+      "canonical_id": "TOA_DO_VECTO_TRONG_MP",
+      "rationale": "This occurrence defines the coordinates of a vector in the plane (2D). The description specifies a pair of numbers (x0; y0) and uses basis vectors i and j for the Oxy plane."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0007",
+      "original_id": "TOA_DO_CUA_VECTO",
+      "canonical_id": "TOA_DO_VECTO_TRONG_KG",
+      "rationale": "This occurrence defines the coordinates of a vector in space (3D). The description specifies a triple of numbers (x; y; z) and uses basis vectors i, j, k. This is a different mathematical concept from the 2D version, as the dimension and underlying space differ."
+    }
+  ]
+}

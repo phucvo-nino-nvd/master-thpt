@@ -1,0 +1,113 @@
+{
+  "chunk_id": "toan-11-tap-2:0013",
+  "nodes": [
+    {
+      "id": "THE_TICH",
+      "name": "Thể tích",
+      "type": "CONCEPT",
+      "description": "Khái niệm đo sự chiếm chỗ của vật thể trong không gian",
+      "grade": 11
+    },
+    {
+      "id": "KHOI_HOP",
+      "name": "Khối hộp",
+      "type": "CONCEPT",
+      "description": "Phần không gian được giới hạn bởi hình hộp",
+      "grade": 11
+    },
+    {
+      "id": "KHOI_LANG_TRU",
+      "name": "Khối lăng trụ",
+      "type": "CONCEPT",
+      "description": "Phần không gian được giới hạn bởi hình lăng trụ",
+      "grade": 11
+    },
+    {
+      "id": "KHOI_CHOP",
+      "name": "Khối chóp",
+      "type": "CONCEPT",
+      "description": "Phần không gian được giới hạn bởi hình chóp",
+      "grade": 11
+    },
+    {
+      "id": "KHOI_CHOP_CUT_DEU",
+      "name": "Khối chóp cụt đều",
+      "type": "CONCEPT",
+      "description": "Phần không gian được giới hạn bởi hình chóp cụt đều",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_THE_TICH_KHOI_HOP",
+      "name": "Công thức thể tích khối hộp",
+      "type": "FORMULA",
+      "description": "V = h · S (h là chiều cao, S là diện tích đáy)",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_THE_TICH_KHOI_LANG_TRU",
+      "name": "Công thức thể tích khối lăng trụ",
+      "type": "FORMULA",
+      "description": "V = h · S (h là chiều cao, S là diện tích đáy)",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_THE_TICH_KHOI_CHOP",
+      "name": "Công thức thể tích khối chóp",
+      "type": "FORMULA",
+      "description": "V = (1/3) · h · S (h là chiều cao, S là diện tích đáy)",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_THE_TICH_KHOI_CHOP_CUT_DEU",
+      "name": "Công thức thể tích khối chóp cụt đều",
+      "type": "FORMULA",
+      "description": "V = (1/3) · h · (S + S' + √(S·S')) (h là chiều cao, S và S' là diện tích đáy lớn và bé)",
+      "grade": 11
+    },
+    {
+      "id": "THE_TICH_KHOI_TU_DIEN",
+      "name": "Thể tích khối tứ diện",
+      "type": "FORMULA",
+      "description": "V = (1/6) · a · b · c (a, b, c là độ dài các cạnh vuông góc nhau)",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "CONG_THUC_THE_TICH_KHOI_HOP",
+      "target": "THE_TICH",
+      "relation": "PART_OF",
+      "rationale": "Công thức thể tích khối hộp là một phần của khái niệm thể tích"
+    },
+    {
+      "source": "CONG_THUC_THE_TICH_KHOI_LANG_TRU",
+      "target": "THE_TICH",
+      "relation": "PART_OF",
+      "rationale": "Công thức thể tích khối lăng trụ là một phần của khái niệm thể tích"
+    },
+    {
+      "source": "CONG_THUC_THE_TICH_KHOI_CHOP",
+      "target": "THE_TICH",
+      "relation": "PART_OF",
+      "rationale": "Công thức thể tích khối chóp là một phần của khái niệm thể tích"
+    },
+    {
+      "source": "CONG_THUC_THE_TICH_KHOI_CHOP_CUT_DEU",
+      "target": "THE_TICH",
+      "relation": "PART_OF",
+      "rationale": "Công thức thể tích khối chóp cụt đều là một phần của khái niệm thể tích"
+    },
+    {
+      "source": "THE_TICH_KHOI_TU_DIEN",
+      "target": "CONG_THUC_THE_TICH_KHOI_CHOP",
+      "relation": "IS_A",
+      "rationale": "Thể tích khối tứ diện là một trường hợp đặc biệt của công thức thể tích khối chóp"
+    },
+    {
+      "source": "CONG_THUC_THE_TICH_KHOI_CHOP_CUT_DEU",
+      "target": "CONG_THUC_THE_TICH_KHOI_CHOP",
+      "relation": "REQUIRES",
+      "rationale": "Công thức thể tích khối chóp cụt đều yêu cầu hiểu công thức thể tích khối chóp"
+    }
+  ]
+}

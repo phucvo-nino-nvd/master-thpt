@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_NHAU",
+  "right_id": "DUONG_VUONG_GOC_CHUNG",
+  "merge": false,
+  "rationale": "The left node 'Hai đường thẳng cắt nhau' is the concept of two intersecting lines. The right node 'Đường vuông góc chung' is the concept of a common perpendicular line for two skew lines. They describe different geometric relationships (intersecting vs. skew lines with a common perpendicular)."
+}

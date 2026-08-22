@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_TRUNG_BINH_BANG_TAN_SO",
+  "right_id": "TRUNG_BINH_CONG_MAU_SO_LIEU_GHOP_NHOM",
+  "merge": false,
+  "rationale": "Both nodes describe the same formula for calculating the arithmetic mean (average) using frequencies. The left: 'x̄ = (m1x1 + m2x2 + ... + mkxk)/n'. The right: 'x̄ = (m1*x1 + m2*x2 + ... + mk*xk) / n', with xi as representative value (often midpoint) and mi as frequency. The right provides more context (grouped data, representative value), but the core reusable mathematical formula is identical. The additional description in the right node is explanatory and does not represent a different mathematical object or formula. One global node describing the weighted average formula can replace both."
+}

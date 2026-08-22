@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left node describes the relationship between a line and a plane both perpendicular to another line. The right node describes that two distinct planes perpendicular to the same line are parallel. They are related but distinct theorems about perpendicularity and parallelism."
+}

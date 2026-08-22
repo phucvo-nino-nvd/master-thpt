@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_MU",
+  "right_id": "DAO_HAM_CUA_HAM_SO_SIN",
+  "merge": false,
+  "rationale": "The left node is the derivative rule for exponential functions. The right node is the derivative rule for the sine function. They are distinct derivative rules for different function types, not semantic duplicates."
+}

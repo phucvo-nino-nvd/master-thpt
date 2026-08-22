@@ -1,0 +1,177 @@
+{
+  "chunk_id": "toan-11-tap-2:0005",
+  "nodes": [
+    {
+      "id": "DAO_HAM_TAI_MOT_DIEM",
+      "name": "Đạo hàm tại một điểm",
+      "type": "CONCEPT",
+      "description": "Giới hạn hữu hạn của tỉ số phân biệt khi biến thay đổi về một điểm xác định.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_TRONG_MOT_KHOANG",
+      "name": "Đạo hàm trên một khoảng",
+      "type": "CONCEPT",
+      "description": "Hàm số có đạo hàm tại mọi điểm trong một khoảng.",
+      "grade": 11
+    },
+    {
+      "id": "HE_SO_GOC_TIEP_TUYEN",
+      "name": "Hệ số góc của tiếp tuyến",
+      "type": "CONCEPT",
+      "description": "Giới hạn của hệ số góc của cát tuyến khi điểm Q di chuyển về điểm P.",
+      "grade": 11
+    },
+    {
+      "id": "VAN_TOC_TUC_THOI",
+      "name": "Vận tốc tức thời",
+      "type": "CONCEPT",
+      "description": "Đạo hàm của hàm vị trí theo thời gian.",
+      "grade": 11
+    },
+    {
+      "id": "TOC_DO_BIEN_DOI_TUC_THOI",
+      "name": "Tốc độ biến đổi tức thời",
+      "type": "CONCEPT",
+      "description": "Đạo hàm của một hàm số tại một điểm.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_TIEP_TUYEN",
+      "name": "Phương trình tiếp tuyến",
+      "type": "FORMULA",
+      "description": "Phương trình đường thẳng đi qua điểm P(x₀, y₀) với hệ số góc bằng đạo hàm tại điểm đó.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM",
+      "name": "Đạo hàm",
+      "type": "CONCEPT",
+      "description": "Giới hạn của tỉ số phân biệt khi biến thay đổi về một điểm.",
+      "grade": 11
+    },
+    {
+      "id": "TICH_PHAN",
+      "name": "Tích phân",
+      "type": "CONCEPT",
+      "description": "Khái niệm liên quan đến đạo hàm, nhưng không được đề cập trong đoạn văn.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_TRINH_CHUYEN_DONG",
+      "name": "Phương trình chuyển động",
+      "type": "CONCEPT",
+      "description": "Hàm vị trí của vật chuyển động theo thời gian.",
+      "grade": 11
+    },
+    {
+      "id": "VAN_TOC_TRUNG_BINH",
+      "name": "Vận tốc trung bình",
+      "type": "CONCEPT",
+      "description": "Tỉ số phân biệt của quãng đường và thời gian trong một khoảng thời gian.",
+      "grade": 11
+    },
+    {
+      "id": "CUONG_DO_TRUNG_BINH",
+      "name": "Cường độ trung bình",
+      "type": "CONCEPT",
+      "description": "Tỉ số phân biệt của điện lượng và thời gian trong một khoảng thời gian.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_DAO_HAM_BANG_DINH_NGHI",
+      "name": "Tính đạo hàm bằng định nghĩa",
+      "type": "METHOD",
+      "description": "Phương pháp tính đạo hàm bằng cách tính giới hạn của tỉ số phân biệt.",
+      "grade": 11
+    },
+    {
+      "id": "TIM_HE_SO_GOC_TIEP_TUYEN",
+      "name": "Tìm hệ số góc của tiếp tuyến",
+      "type": "METHOD",
+      "description": "Phương pháp tìm hệ số góc của tiếp tuyến bằng cách tính đạo hàm tại điểm đó.",
+      "grade": 11
+    },
+    {
+      "id": "VIET_PHUONG_TRINH_TIEP_TUYEN",
+      "name": "Viết phương trình tiếp tuyến",
+      "type": "METHOD",
+      "description": "Phương pháp viết phương trình tiếp tuyến bằng cách sử dụng đạo hàm tại điểm đó.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "DAO_HAM_TAI_MOT_DIEM",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DAO_HAM_TRONG_MOT_KHOANG",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "HE_SO_GOC_TIEP_TUYEN",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "VAN_TOC_TUC_THOI",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TOC_DO_BIEN_DOI_TUC_THOI",
+      "target": "DAO_HAM",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_TRINH_TIEP_TUYEN",
+      "target": "DAO_HAM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_DAO_HAM_BANG_DINH_NGHI",
+      "target": "DAO_HAM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TIM_HE_SO_GOC_TIEP_TUYEN",
+      "target": "DAO_HAM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "VIET_PHUONG_TRINH_TIEP_TUYEN",
+      "target": "DAO_HAM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "VAN_TOC_TUC_THOI",
+      "target": "PHUONG_TRINH_CHUYEN_DONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "VAN_TOC_TRUNG_BINH",
+      "target": "PHUONG_TRINH_CHUYEN_DONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CUONG_DO_TRUNG_BINH",
+      "target": "PHUONG_TRINH_CHUYEN_DONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

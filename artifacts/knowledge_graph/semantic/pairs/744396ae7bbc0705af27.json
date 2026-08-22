@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "right_id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+  "merge": false,
+  "rationale": "Different theorems about lines and planes. One deals with perpendicularity, the other with parallel lines and planes containing them."
+}

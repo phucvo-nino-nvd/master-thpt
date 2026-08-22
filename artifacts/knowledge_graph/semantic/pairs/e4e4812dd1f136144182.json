@@ -1,0 +1,6 @@
+{
+  "left_id": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "Left node is the concept of the 'solution region of a linear inequality in two variables'. Right node is the concept of a 'solution of a system of linear inequalities in two variables'. One describes a region, the other describes a point satisfying multiple conditions. They are related but distinct concepts. They are not semantic duplicates."
+}

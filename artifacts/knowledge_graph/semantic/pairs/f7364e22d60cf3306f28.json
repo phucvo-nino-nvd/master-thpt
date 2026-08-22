@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG",
+  "right_id": "CONG_THUC_TINH_GOC_GIUA_HAI_VECTO",
+  "merge": false,
+  "rationale": "The formula for the angle between two planes (based on normal vectors) and the formula for the angle between two vectors are distinct. They apply to different geometric objects (planes vs. vectors) and have different mathematical expressions. They are not semantic duplicates."
+}

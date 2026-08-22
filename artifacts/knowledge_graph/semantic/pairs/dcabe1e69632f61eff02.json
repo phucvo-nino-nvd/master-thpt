@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_THAM_SO_DUONG_THANG_FORMULA",
+  "right_id": "PHUONG_TRINH_THAM_SO_HAI_DIEM",
+  "merge": false,
+  "rationale": "The left is the general parametric equation of a line (given a point and direction vector). The right is a specific form of the parametric equation when the line is defined by two points. The two-point form is a special case of the general form with the direction vector derived from the two points. They are related but not identical; the general form is more reusable."
+}

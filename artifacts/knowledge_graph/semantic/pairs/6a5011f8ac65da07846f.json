@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_CAT_NHAU_TRONG_KHONG_GIAN",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "merge": false,
+  "rationale": "Left node is a condition for two lines to intersect in space. Right node is a theorem about two distinct lines perpendicular to the same plane being parallel. They are different theorems about lines in space (intersection vs. parallelism condition)."
+}

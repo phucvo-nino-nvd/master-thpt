@@ -1,0 +1,6 @@
+{
+  "left_id": "DAY_SO_BI_CHAN_DUOI",
+  "right_id": "DAY_SO_BI_CHAN_TREN",
+  "merge": false,
+  "rationale": "These define two distinct properties of sequences: bounded below and bounded above. They are complementary aspects of boundedness but are different reusable concepts. One is not a duplicate of the other."
+}

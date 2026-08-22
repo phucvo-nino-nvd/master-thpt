@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "TRUC_DOI_XUNG",
+      "name": "Trục đối xứng",
+      "type": "CONCEPT",
+      "description": "Đường thẳng mà đồ thị của một hàm số đối xứng qua đó."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0002",
+      "original_id": "TRUC_DOI_XUNG",
+      "canonical_id": "TRUC_DOI_XUNG",
+      "rationale": "Both occurrences describe the same mathematical concept: an axis of symmetry for a function's graph. The grade 10 description is specific to parabolas, while the grade 12 description is general, but the core concept is identical and reusable."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0004",
+      "original_id": "TRUC_DOI_XUNG",
+      "canonical_id": "TRUC_DOI_XUNG",
+      "rationale": "Both occurrences describe the same mathematical concept: an axis of symmetry for a function's graph. The grade -specific context does not change the fundamental knowledge node."
+    }
+  ]
+}

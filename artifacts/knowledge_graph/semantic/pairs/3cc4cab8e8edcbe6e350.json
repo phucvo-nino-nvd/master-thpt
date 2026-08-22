@@ -1,0 +1,6 @@
+{
+  "left_id": "XAC_SUAT_CO_DIEU_KIEN",
+  "right_id": "XAC_SUAT_DIEU_KIEN",
+  "merge": true,
+  "rationale": "Both nodes define conditional probability: the probability of event A given event B has occurred, denoted P(A|B). The names 'Xác suất có điều kiện' and 'Xác suất điều kiện' are synonyms. The descriptions are semantically identical. They represent the same mathematical concept."
+}

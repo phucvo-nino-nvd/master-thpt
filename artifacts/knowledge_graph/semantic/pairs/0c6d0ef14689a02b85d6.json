@@ -1,0 +1,6 @@
+{
+  "left_id": "HINH_BIEU_DIEN_HINH_TRON",
+  "right_id": "HINH_BIEU_DIEN_HINH_VUONG",
+  "merge": false,
+  "rationale": "The left node describes the representation of a circle (which is an ellipse), while the right node describes the representation of a square, rectangle, rhombus, and parallelogram (which is a parallelogram). They are distinct theorems about the representation of different geometric shapes."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_TAI_MOT_DIEM",
+  "right_id": "GIOI_HAN_HAM_SO",
+  "merge": false,
+  "rationale": "Left node is the derivative at a point, defined via a limit. Right node is the general concept of the limit of a function. The derivative uses the limit concept but is a distinct, more specific concept. They are not semantic duplicates."
+}

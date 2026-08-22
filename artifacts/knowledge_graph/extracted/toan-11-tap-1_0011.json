@@ -1,0 +1,86 @@
+{
+  "chunk_id": "toan-11-tap-1:0011",
+  "nodes": [
+    {
+      "id": "HAI_DUONG_THANG_DONG_PHANG",
+      "name": "Hai đường thẳng đồng phẳng",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng nằm cùng trong một mặt phẳng",
+      "grade": 11
+    },
+    {
+      "id": "HAI_DUONG_THANG_CHEO_NHAU",
+      "name": "Hai đường thẳng chéo nhau",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng không cùng nằm trong bất kì mặt phẳng nào",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_CAT_NHAU",
+      "name": "Hai đường thẳng cắt nhau",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng đồng phẳng và có một điểm chung",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_SONG_SONG",
+      "name": "Hai đường thẳng song song",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng đồng phẳng và không có điểm chung",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_TRUNG_NHAU",
+      "name": "Hai đường thẳng trùng nhau",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng đồng phẳng và tất cả các điểm của chúng giống nhau",
+      "grade": 11
+    },
+    {
+      "id": "DINH_LY_VE_BA_DUONG_GIAO_TUYEN",
+      "name": "Định lý về ba đường giao tuyến",
+      "type": "THEOREM",
+      "description": "Nếu ba mặt phẳng đôi một cắt nhau theo ba giao tuyến phân biệt thì ba giao tuyến đó đồng quy hoặc đôi một song song với nhau",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_XAC_DINH_GIAO_TUYEN",
+      "name": "Phương pháp xác định giao tuyến",
+      "type": "METHOD",
+      "description": "Sử dụng tính chất của hai đường thẳng song song để xác định giao tuyến của hai mặt phẳng",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "DUONG_THANG_SONG_SONG",
+      "target": "HAI_DUONG_THANG_DONG_PHANG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_CAT_NHAU",
+      "target": "HAI_DUONG_THANG_DONG_PHANG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_TRUNG_NHAU",
+      "target": "HAI_DUONG_THANG_DONG_PHANG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "HAI_DUONG_THANG_CHEO_NHAU",
+      "target": "DUONG_THANG_SONG_SONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_XAC_DINH_GIAO_TUYEN",
+      "target": "DINH_LY_VE_BA_DUONG_GIAO_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

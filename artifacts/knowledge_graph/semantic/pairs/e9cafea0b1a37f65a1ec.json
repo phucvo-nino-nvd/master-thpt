@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+  "merge": false,
+  "rationale": "The left node is a theorem about the relationship between a line and a plane both perpendicular to another line. The right node is a theorem about the existence of a unique plane through a point perpendicular to a given line. They state different geometric facts and are not semantic duplicates."
+}

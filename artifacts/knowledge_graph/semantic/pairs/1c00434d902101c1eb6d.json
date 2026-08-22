@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_THUOC_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "merge": false,
+  "rationale": "Đường thẳng thuộc mặt phẳng and đường thẳng vuông góc với mặt phẳng và mặt phẳng are different theorems about line-plane relationships (containment vs. perpendicularity condition). They are distinct."
+}

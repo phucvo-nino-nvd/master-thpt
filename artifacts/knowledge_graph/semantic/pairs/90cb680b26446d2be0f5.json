@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_LOGARIT_CO_SO_A",
+  "right_id": "HAM_SO_MU",
+  "merge": false,
+  "rationale": "The left node 'Hàm số lôgarit cơ số a' is the logarithmic function. The right node 'Hàm số mũ' is the exponential function. They are inverse functions of each other, representing distinct mathematical concepts and objects."
+}

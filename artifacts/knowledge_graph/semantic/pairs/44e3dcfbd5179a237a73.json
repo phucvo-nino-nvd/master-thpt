@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM",
+  "right_id": "DAO_HAM_TAI_MOT_DIEM",
+  "merge": false,
+  "rationale": "The left node is the general concept of 'derivative', while the right node is the specific concept of 'derivative at a point'. The right node is a component or specific instance of the general concept. According to guidelines, a general concept and a more specific case should be KEPT separate."
+}

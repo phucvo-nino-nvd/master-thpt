@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "QUY_TAC_NHAN",
+      "name": "Quy tắc nhân",
+      "type": "METHOD",
+      "description": "Quy tắc đếm số cách thực hiện một công việc có nhiều công đoạn nối tiếp nhau, độc lập với nhau. Nếu công đoạn 1 có m₁ cách và với mỗi cách của công đoạn 1, công đoạn 2 có m₂ cách, thì tổng số cách là m₁ × m₂."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0011",
+      "original_id": "QUY_TAC_NHAN",
+      "canonical_id": "QUY_TAC_NHAN",
+      "rationale": "Both occurrences describe the same fundamental counting principle (multiplication rule) for sequential, independent tasks. The descriptions are consistent and complementary, not contradictory."
+    },
+    {
+      "chunk_id": "toan-10-tap-2:0012",
+      "original_id": "QUY_TAC_NHAN",
+      "canonical_id": "QUY_TAC_NHAN",
+      "rationale": "Both occurrences describe the same fundamental counting principle (multiplication rule) for sequential, independent tasks. The descriptions are consistent and complementary, not contradictory."
+    }
+  ]
+}

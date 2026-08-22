@@ -1,0 +1,144 @@
+{
+  "chunk_id": "toan-11-tap-1:0017",
+  "nodes": [
+    {
+      "id": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+      "name": "Hàm số liên tục tại một điểm",
+      "type": "CONCEPT",
+      "description": "Hàm số f(x) liên tục tại điểm x₀ nếu giới hạn khi x tiến về x₀ bằng f(x₀).",
+      "grade": 11
+    },
+    {
+      "id": "HAM_SO_GIAN_DOAN",
+      "name": "Hàm số gián đoạn",
+      "type": "CONCEPT",
+      "description": "Hàm số không liên tục tại một điểm được gọi là gián đoạn tại điểm đó.",
+      "grade": 11
+    },
+    {
+      "id": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+      "name": "Hàm số liên tục trên một khoảng",
+      "type": "CONCEPT",
+      "description": "Hàm số liên tục tại mọi điểm trong khoảng (a, b).",
+      "grade": 11
+    },
+    {
+      "id": "HAM_SO_LIEN_TUC_TREN_MOT_DOAN",
+      "name": "Hàm số liên tục trên một đoạn",
+      "type": "CONCEPT",
+      "description": "Hàm số liên tục trên khoảng (a, b) và giới hạn hai phía tại a và b bằng giá trị hàm tại đó.",
+      "grade": 11
+    },
+    {
+      "id": "TONG_HIEU_TICH_THUONG_HAM_LIEN_TUC",
+      "name": "Tính liên tục của tổng, hiệu, tích, thương",
+      "type": "THEOREM",
+      "description": "Nếu hai hàm số liên tục tại x₀, thì tổng, hiệu, tích của chúng cũng liên tục tại x₀. Thương liên tục nếu mẫu khác 0 tại x₀.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_LIEN_TUC_HAM_DA_THUC",
+      "name": "Tính liên tục của hàm đa thức",
+      "type": "THEOREM",
+      "description": "Hàm đa thức liên tục trên toàn bộ R.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_LIEN_TUC_HAM_SIN_COS",
+      "name": "Tính liên tục của hàm sin và cos",
+      "type": "THEOREM",
+      "description": "Hàm sin x và cos x liên tục trên toàn bộ R.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_LIEN_TUC_HAM_TAN_COT",
+      "name": "Tính liên tục của hàm tan và cot",
+      "type": "THEOREM",
+      "description": "Hàm tan x và cot x liên tục trên tập xác định của chúng.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_LIEN_TUC_HAM_CAN",
+      "name": "Tính liên tục của hàm căn",
+      "type": "THEOREM",
+      "description": "Hàm √x liên tục trên tập xác định của nó.",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_LIEN_TUC_HAM_PHAN_THUC",
+      "name": "Tính liên tục của hàm phân thức",
+      "type": "THEOREM",
+      "description": "Hàm phân thức hữu tỉ liên tục trên tập xác định của nó.",
+      "grade": 11
+    },
+    {
+      "id": "NGUYEN_LY_TON_TAI_NGHIEM",
+      "name": "Nguyên lý tồn tại nghiệm",
+      "type": "THEOREM",
+      "description": "Nếu f liên tục trên [a, b] và f(a)f(b) < 0, thì tồn tại c ∈ (a, b) sao cho f(c) = 0.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+      "target": "HAM_SO_GIAN_DOAN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+      "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "HAM_SO_LIEN_TUC_TREN_MOT_DOAN",
+      "target": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TONG_HIEU_TICH_THUONG_HAM_LIEN_TUC",
+      "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_LIEN_TUC_HAM_DA_THUC",
+      "target": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_LIEN_TUC_HAM_SIN_COS",
+      "target": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_LIEN_TUC_HAM_TAN_COT",
+      "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_LIEN_TUC_HAM_CAN",
+      "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_LIEN_TUC_HAM_PHAN_THUC",
+      "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "NGUYEN_LY_TON_TAI_NGHIEM",
+      "target": "HAM_SO_LIEN_TUC_TREN_MOT_DOAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

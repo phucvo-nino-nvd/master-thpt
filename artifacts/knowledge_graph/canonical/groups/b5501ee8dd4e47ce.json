@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "QUY_TAC_HINH_HOP_THEOREM",
+      "name": "Quy tắc hình hộp",
+      "type": "THEOREM",
+      "description": "Cho hình hộp ABCD.A'B'C'D' thì AB + AD + AA' = AC'."
+    },
+    {
+      "id": "QUY_TAC_HINH_HOP_METHOD",
+      "name": "Quy tắc hình hộp",
+      "type": "METHOD",
+      "description": "Phương pháp xác định toạ độ của điểm M bằng cách vẽ hình hộp chữ nhật từ gốc O đến M, sử dụng các vectơ trên trục."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "QUY_TAC_HINH_HOP",
+      "canonical_id": "QUY_TAC_HINH_HOP_THEOREM",
+      "rationale": "This occurrence describes a specific vector identity theorem for a parallelepiped, a geometric result."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0007",
+      "original_id": "QUY_TAC_HINH_HOP",
+      "canonical_id": "QUY_TAC_HINH_HOP_METHOD",
+      "rationale": "This occurrence describes a coordinate determination method using a rectangular box construction, a procedural technique. The mathematical meaning (theorem vs. method) differs, requiring a split."
+    }
+  ]
+}

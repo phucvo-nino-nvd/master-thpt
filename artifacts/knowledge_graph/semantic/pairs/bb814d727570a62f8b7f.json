@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_BANG_BIEU_DO",
+  "right_id": "HAM_SO_BANG_CONG_THUC",
+  "merge": false,
+  "rationale": "Different ways of defining a function: by graph vs. by formula. Related but distinct concepts."
+}

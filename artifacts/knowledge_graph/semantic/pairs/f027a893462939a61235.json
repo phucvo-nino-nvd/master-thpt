@@ -1,0 +1,6 @@
+{
+  "left_id": "HINH_CHOP_CUT_DEU",
+  "right_id": "HINH_CHOP_DEU",
+  "merge": false,
+  "rationale": "The left node 'Hình chóp cụt đều' is a truncated regular pyramid, while the right node 'Hình chóp đều' is a regular pyramid. One is a special case or derivative shape of the other (a truncated version). They are related as a general shape and a specific transformation/derived shape, not identical."
+}

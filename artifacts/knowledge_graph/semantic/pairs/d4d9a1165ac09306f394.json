@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_THE_TICH_KHOI_CHOP",
+  "right_id": "CONG_THUC_THE_TICH_KHOI_CHOP_CUT_DEU",
+  "merge": false,
+  "rationale": "The left node is the volume formula for a general pyramid. The right node is the volume formula for a truncated regular pyramid (frustum). The latter is a special case of a more complex shape. The formulas are different. One is a general concept, the other is a specific special case. They are not semantic duplicates."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_VUONG_GOC_HAI_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "merge": false,
+  "rationale": "Left node is a condition for two planes to be perpendicular. Right node is a theorem about two distinct lines perpendicular to the same plane being parallel. They are different theorems about perpendicularity in different contexts (planes vs. lines and planes)."
+}

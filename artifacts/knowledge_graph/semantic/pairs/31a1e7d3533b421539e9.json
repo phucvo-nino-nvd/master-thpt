@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO_DOI",
+  "right_id": "VECTO_NGUOC_HUONG",
+  "merge": false,
+  "rationale": "Left (opposite vector) is a specific vector defined relative to another. Right describes a relationship (opposite direction) between two vectors. They are related but distinct concepts."
+}

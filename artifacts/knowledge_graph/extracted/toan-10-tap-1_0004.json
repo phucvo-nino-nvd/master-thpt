@@ -1,0 +1,60 @@
+{
+  "chunk_id": "toan-10-tap-1:0004",
+  "nodes": [
+    {
+      "id": "HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "name": "Hệ bất phương trình bậc nhất hai ẩn",
+      "type": "CONCEPT",
+      "description": "Một hệ gồm hai hay nhiều bất phương trình bậc nhất hai ẩn.",
+      "grade": 10
+    },
+    {
+      "id": "NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "name": "Nghiệm của hệ bất phương trình bậc nhất hai ẩn",
+      "type": "CONCEPT",
+      "description": "Cặp số (x₀, y₀) là nghiệm của hệ bất phương trình bậc nhất hai ẩn khi nó đồng thời là nghiệm của tất cả các bất phương trình trong hệ.",
+      "grade": 10
+    },
+    {
+      "id": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "name": "Miền nghiệm của hệ bất phương trình bậc nhất hai ẩn",
+      "type": "CONCEPT",
+      "description": "Tập hợp các điểm có toạ độ là nghiệm của hệ bất phương trình bậc nhất hai ẩn trên mặt phẳng toạ độ.",
+      "grade": 10
+    },
+    {
+      "id": "BIEU_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+      "name": "Biểu diễn miền nghiệm trong mặt phẳng toạ độ",
+      "type": "METHOD",
+      "description": "Xác định miền nghiệm của mỗi bất phương trình trong hệ và lấy giao của các miền nghiệm đó.",
+      "grade": 10
+    },
+    {
+      "id": "GIATRI_LON_NHAT_NHO_NHAT_CUA_BIEU_THUC",
+      "name": "Giá trị lớn nhất/nho nhất của biểu thức",
+      "type": "THEOREM",
+      "description": "Giá trị lớn nhất (hoặc nhỏ nhất) của biểu thức F(x, y) = ax + by, với (x, y) thuộc miền đa giác, đạt được tại một trong các đỉnh của đa giác.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "target": "HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "BIEU_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+      "target": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "GIATRI_LON_NHAT_NHO_NHAT_CUA_BIEU_THUC",
+      "target": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

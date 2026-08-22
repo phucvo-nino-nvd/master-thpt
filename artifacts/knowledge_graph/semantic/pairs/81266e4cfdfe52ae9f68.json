@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_DONG_BIEN",
+  "right_id": "HAM_SO_DON_DIEU",
+  "merge": false,
+  "rationale": "Right (monotonic function) is a general concept encompassing both increasing and decreasing functions. Left (increasing function) is a specific case. One is a subtype of the other."
+}

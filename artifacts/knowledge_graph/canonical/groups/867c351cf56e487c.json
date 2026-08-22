@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "name": "Khoảng cách từ điểm đến đường thẳng",
+      "type": "CONCEPT",
+      "description": "Khoảng cách từ một điểm đến một đường thẳng, là khoảng cách ngắn nhất từ điểm đó tới mọi điểm trên đường thẳng, bằng khoảng cách từ điểm đó đến hình chiếu vuông góc của nó trên đường thẳng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0008",
+      "original_id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "canonical_id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "rationale": "Both occurrences describe the same fundamental geometric concept: the distance from a point to a line. The grade 10 description is general ('shortest distance'), while the grade 11 description provides a more precise definition using projection. This is a natural progression of the same concept across grades, not a difference in mathematical meaning."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0012",
+      "original_id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "canonical_id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "rationale": "Both occurrences describe the same fundamental geometric concept: the distance from a point to a line. The grade 11 description provides a more precise definition (distance to the projection point) which is consistent with and refines the general concept introduced in grade 10. They represent the same reusable knowledge."
+    }
+  ]
+}

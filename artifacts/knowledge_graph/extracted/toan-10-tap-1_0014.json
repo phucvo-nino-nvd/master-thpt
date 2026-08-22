@@ -1,0 +1,126 @@
+{
+  "chunk_id": "toan-10-tap-1:0014",
+  "nodes": [
+    {
+      "id": "KHOANG_BIEN_THIEN",
+      "name": "Khoảng biến thiên",
+      "type": "CONCEPT",
+      "description": "Hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu số liệu.",
+      "grade": 10
+    },
+    {
+      "id": "KHOANG_TU_PHAN_VI",
+      "name": "Khoảng tứ phân vị",
+      "type": "CONCEPT",
+      "description": "Hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất, đo độ phân tán của 50% số liệu chính giữa của mẫu số liệu.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_SAI",
+      "name": "Phương sai",
+      "type": "CONCEPT",
+      "description": "Giá trị tính bằng tổng bình phương độ lệch của từng giá trị so với giá trị trung bình, chia cho số lượng giá trị.",
+      "grade": 10
+    },
+    {
+      "id": "DO_LECH_CHUAN",
+      "name": "Độ lệch chuẩn",
+      "type": "CONCEPT",
+      "description": "Căn bậc hai của phương sai, đo độ phân tán của mẫu số liệu.",
+      "grade": 10
+    },
+    {
+      "id": "GIATRI_BAT_THUONG",
+      "name": "Giá trị bất thường",
+      "type": "CONCEPT",
+      "description": "Giá trị lớn hơn Q3 + 1.5 * ΔQ hoặc bé hơn Q1 - 1.5 * ΔQ trong mẫu số liệu.",
+      "grade": 10
+    },
+    {
+      "id": "BIEU_DO_HOP",
+      "name": "Biểu đồ hộp",
+      "type": "CONCEPT",
+      "description": "Biểu đồ thống kê dùng để phát hiện giá trị bất thường trong mẫu số liệu.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_KHOANG_BIEN_THIEN",
+      "name": "Tính khoảng biến thiên",
+      "type": "METHOD",
+      "description": "Tính hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu số liệu.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_KHOANG_TU_PHAN_VI",
+      "name": "Tính khoảng tứ phân vị",
+      "type": "METHOD",
+      "description": "Tính hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_PHUONG_SAI",
+      "name": "Tính phương sai",
+      "type": "METHOD",
+      "description": "Tính tổng bình phương độ lệch của từng giá trị so với giá trị trung bình, chia cho số lượng giá trị.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_DO_LECH_CHUAN",
+      "name": "Tính độ lệch chuẩn",
+      "type": "METHOD",
+      "description": "Tính căn bậc hai của phương sai.",
+      "grade": 10
+    },
+    {
+      "id": "PHAT_HIEN_GIATRI_BAT_THUONG",
+      "name": "Phát hiện giá trị bất thường",
+      "type": "METHOD",
+      "description": "Sử dụng biểu đồ hộp để phát hiện giá trị bất thường trong mẫu số liệu.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "KHOANG_BIEN_THIEN",
+      "target": "TINH_KHOANG_BIEN_THIEN",
+      "relation": "REQUIRES",
+      "rationale": "Khoảng biến thiên là một khái niệm, phương pháp tính khoảng biến thiên là một thủ tục."
+    },
+    {
+      "source": "KHOANG_TU_PHAN_VI",
+      "target": "TINH_KHOANG_TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": "Khoảng tứ phân vị là một khái niệm, phương pháp tính khoảng tứ phân vị là một thủ tục."
+    },
+    {
+      "source": "PHUONG_SAI",
+      "target": "TINH_PHUONG_SAI",
+      "relation": "REQUIRES",
+      "rationale": "Phương sai là một khái niệm, phương pháp tính phương sai là một thủ tục."
+    },
+    {
+      "source": "DO_LECH_CHUAN",
+      "target": "TINH_DO_LECH_CHUAN",
+      "relation": "REQUIRES",
+      "rationale": "Độ lệch chuẩn là một khái niệm, phương pháp tính độ lệch chuẩn là một thủ tục."
+    },
+    {
+      "source": "GIATRI_BAT_THUONG",
+      "target": "PHAT_HIEN_GIATRI_BAT_THUONG",
+      "relation": "REQUIRES",
+      "rationale": "Giá trị bất thường là một khái niệm, phương pháp phát hiện giá trị bất thường là một thủ tục."
+    },
+    {
+      "source": "PHAT_HIEN_GIATRI_BAT_THUONG",
+      "target": "BIEU_DO_HOP",
+      "relation": "REQUIRES",
+      "rationale": "Phát hiện giá trị bất thường sử dụng biểu đồ hộp."
+    },
+    {
+      "source": "KHOANG_TU_PHAN_VI",
+      "target": "BIEU_DO_HOP",
+      "relation": "REQUIRES",
+      "rationale": "Khoảng tứ phân vị là thành phần quan trọng trong biểu đồ hộp."
+    }
+  ]
+}

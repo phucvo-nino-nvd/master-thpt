@@ -1,0 +1,184 @@
+{
+  "chunk_id": "toan-10-tap-2:0001",
+  "nodes": [
+    {
+      "id": "HAM_SO",
+      "name": "Hàm số",
+      "type": "CONCEPT",
+      "description": "Mối quan hệ giữa hai tập hợp số, trong đó mỗi phần tử của tập xác định được ánh xạ duy nhất vào một phần tử của tập giá trị.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_XAC_DINH",
+      "name": "Tập xác định",
+      "type": "CONCEPT",
+      "description": "Tập hợp tất cả các giá trị của biến số mà hàm số được định nghĩa.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_GIA_TRI",
+      "name": "Tập giá trị",
+      "type": "CONCEPT",
+      "description": "Tập hợp tất cả các giá trị của hàm số được nhận được từ tập xác định.",
+      "grade": 10
+    },
+    {
+      "id": "DO_THI_HAM_SO",
+      "name": "Đồ thị của hàm số",
+      "type": "CONCEPT",
+      "description": "Tập hợp tất cả các điểm (x, f(x)) trên mặt phẳng toạ độ với x thuộc tập xác định.",
+      "grade": 10
+    },
+    {
+      "id": "HAM_SO_DONG_BIEN",
+      "name": "Hàm số đồng biến",
+      "type": "CONCEPT",
+      "description": "Hàm số mà giá trị tăng khi biến số tăng trên một khoảng.",
+      "grade": 10
+    },
+    {
+      "id": "HAM_SO_NGHICH_BIEN",
+      "name": "Hàm số nghịch biến",
+      "type": "CONCEPT",
+      "description": "Hàm số mà giá trị giảm khi biến số tăng trên một khoảng.",
+      "grade": 10
+    },
+    {
+      "id": "HAM_SO_BANG_BANG",
+      "name": "Hàm số được cho bằng bảng",
+      "type": "CONCEPT",
+      "description": "Hàm số được định nghĩa thông qua một bảng ánh xạ giữa biến số và giá trị.",
+      "grade": 10
+    },
+    {
+      "id": "HAM_SO_BANG_CONG_THUC",
+      "name": "Hàm số được cho bằng công thức",
+      "type": "CONCEPT",
+      "description": "Hàm số được định nghĩa thông qua một công thức toán học.",
+      "grade": 10
+    },
+    {
+      "id": "HAM_SO_BANG_BIEU_DO",
+      "name": "Hàm số được cho bằng biểu đồ",
+      "type": "CONCEPT",
+      "description": "Hàm số được định nghĩa thông qua một biểu đồ đồ họa.",
+      "grade": 10
+    },
+    {
+      "id": "BIEN_SO",
+      "name": "Biến số",
+      "type": "CONCEPT",
+      "description": "Đại lượng thay đổi mà hàm số phụ thuộc vào.",
+      "grade": 10
+    },
+    {
+      "id": "HAM_SO_CUA_BIEN_SO",
+      "name": "Hàm số của biến số",
+      "type": "CONCEPT",
+      "description": "Giá trị phụ thuộc vào biến số.",
+      "grade": 10
+    },
+    {
+      "id": "HAM_SO_TANG",
+      "name": "Hàm số tăng",
+      "type": "CONCEPT",
+      "description": "Hàm số đồng biến trên một khoảng.",
+      "grade": 10
+    },
+    {
+      "id": "HAM_SO_GIAM",
+      "name": "Hàm số giảm",
+      "type": "CONCEPT",
+      "description": "Hàm số nghịch biến trên một khoảng.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_TIEN_DIEN",
+      "name": "Công thức tính tiền điện",
+      "type": "FORMULA",
+      "description": "Công thức mô tả sự phụ thuộc của số tiền phải trả vào lượng điện tiêu thụ.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_VE_DO_THI",
+      "name": "Phương pháp vẽ đồ thị hàm số",
+      "type": "METHOD",
+      "description": "Phương pháp vẽ đồ thị của hàm số dựa trên tập xác định và công thức.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "HAM_SO",
+      "target": "TAP_XAC_DINH",
+      "relation": "REQUIRES",
+      "rationale": "Hàm số được định nghĩa trên một tập xác định."
+    },
+    {
+      "source": "HAM_SO",
+      "target": "TAP_GIA_TRI",
+      "relation": "REQUIRES",
+      "rationale": "Hàm số ánh xạ tập xác định vào tập giá trị."
+    },
+    {
+      "source": "HAM_SO",
+      "target": "DO_THI_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "Đồ thị của hàm số được xây dựng từ tập xác định và tập giá trị."
+    },
+    {
+      "source": "HAM_SO_DONG_BIEN",
+      "target": "HAM_SO",
+      "relation": "IS_A",
+      "rationale": "Hàm số đồng biến là một loại hàm số."
+    },
+    {
+      "source": "HAM_SO_NGHICH_BIEN",
+      "target": "HAM_SO",
+      "relation": "IS_A",
+      "rationale": "Hàm số nghịch biến là một loại hàm số."
+    },
+    {
+      "source": "HAM_SO_BANG_BANG",
+      "target": "HAM_SO",
+      "relation": "IS_A",
+      "rationale": "Hàm số được cho bằng bảng là một cách biểu diễn hàm số."
+    },
+    {
+      "source": "HAM_SO_BANG_CONG_THUC",
+      "target": "HAM_SO",
+      "relation": "IS_A",
+      "rationale": "Hàm số được cho bằng công thức là một cách biểu diễn hàm số."
+    },
+    {
+      "source": "HAM_SO_BANG_BIEU_DO",
+      "target": "HAM_SO",
+      "relation": "IS_A",
+      "rationale": "Hàm số được cho bằng biểu đồ là một cách biểu diễn hàm số."
+    },
+    {
+      "source": "HAM_SO_TANG",
+      "target": "HAM_SO_DONG_BIEN",
+      "relation": "IS_A",
+      "rationale": "Hàm số tăng là một loại hàm số đồng biến."
+    },
+    {
+      "source": "HAM_SO_GIAM",
+      "target": "HAM_SO_NGHICH_BIEN",
+      "relation": "IS_A",
+      "rationale": "Hàm số giảm là một loại hàm số nghịch biến."
+    },
+    {
+      "source": "CONG_THUC_TIEN_DIEN",
+      "target": "HAM_SO",
+      "relation": "IS_A",
+      "rationale": "Công thức tính tiền điện là một ví dụ về hàm số."
+    },
+    {
+      "source": "PHUONG_PHAP_VE_DO_THI",
+      "target": "DO_THI_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp vẽ đồ thị hàm số yêu cầu hiểu về đồ thị của hàm số."
+    }
+  ]
+}

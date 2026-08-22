@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node states a condition for a line to be parallel to a plane. The right node states a property that holds when a line is parallel to a plane. They are related but distinct statements: one is a criterion, the other is a consequence. Therefore, they are not semantic duplicates."
+}

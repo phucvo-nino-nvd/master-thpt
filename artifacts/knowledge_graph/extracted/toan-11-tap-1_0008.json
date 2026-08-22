@@ -1,0 +1,92 @@
+{
+  "chunk_id": "toan-11-tap-1:0008",
+  "nodes": [
+    {
+      "id": "MAU_SO_LIEU_GHEP_NHOM",
+      "name": "Mẫu số liệu ghép nhóm",
+      "type": "CONCEPT",
+      "description": "Mẫu số liệu biểu diễn dưới dạng bảng tần số của các nhóm số liệu, mỗi nhóm được định nghĩa bởi một khoảng giá trị.",
+      "grade": 11
+    },
+    {
+      "id": "NHOM_SO_LIEU",
+      "name": "Nhóm số liệu",
+      "type": "CONCEPT",
+      "description": "Tập hợp các giá trị số liệu được ghép nhóm theo một tiêu chí xác định, thường biểu diễn dưới dạng khoảng [a; b).",
+      "grade": 11
+    },
+    {
+      "id": "BANG_THONG_KE",
+      "name": "Bảng thống kê",
+      "type": "CONCEPT",
+      "description": "Bảng biểu diễn tần số của các nhóm số liệu trong mẫu số liệu ghép nhóm.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_GHEP_NHOM",
+      "name": "Phương pháp ghép nhóm",
+      "type": "METHOD",
+      "description": "Phương pháp chuyển đổi mẫu số liệu không ghép nhóm sang mẫu số liệu ghép nhóm bằng cách chia miền giá trị thành các nhóm và đếm tần số.",
+      "grade": 11
+    },
+    {
+      "id": "DO_DAI_NHOM",
+      "name": "Độ dài nhóm",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa đầu mút trái và đầu mút phải của một nhóm số liệu, tính bằng b - a trong khoảng [a; b).",
+      "grade": 11
+    },
+    {
+      "id": "KHOANG_BIEN_THIEN",
+      "name": "Khoảng biến thiên",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa giá trị lớn nhất và nhỏ nhất trong mẫu số liệu.",
+      "grade": 11
+    },
+    {
+      "id": "CHI_SO_BMI",
+      "name": "Chỉ số BMI",
+      "type": "CONCEPT",
+      "description": "Chỉ số đo cân nặng lý tưởng so với chiều cao, tính bằng công thức w/h² (w là cân nặng kg, h là chiều cao m).",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "MAU_SO_LIEU_GHEP_NHOM",
+      "target": "NHOM_SO_LIEU",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "MAU_SO_LIEU_GHEP_NHOM",
+      "target": "BANG_THONG_KE",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_GHEP_NHOM",
+      "target": "NHOM_SO_LIEU",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_GHEP_NHOM",
+      "target": "DO_DAI_NHOM",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_GHEP_NHOM",
+      "target": "KHOANG_BIEN_THIEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CHI_SO_BMI",
+      "target": "MAU_SO_LIEU_GHEP_NHOM",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

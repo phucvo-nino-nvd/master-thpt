@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+  "merge": false,
+  "rationale": "Different theorems about a line perpendicular to a plane: one about intersecting, the other about parallel lines. They are not the same reusable knowledge."
+}

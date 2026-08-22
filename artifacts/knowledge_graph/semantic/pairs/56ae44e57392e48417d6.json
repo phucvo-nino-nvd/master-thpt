@@ -1,0 +1,6 @@
+{
+  "left_id": "QUY_TAC_TINH_GIOI_HAN",
+  "right_id": "QUY_TAC_TINH_GIOI_HAN_THUONG",
+  "merge": false,
+  "rationale": "The left node is the general 'rules for calculating limits' (sum, difference, product, quotient). The right node is a specific rule for 'calculating the limit of a quotient' under special conditions (involving infinity or zero). The right is a specific case or component of the broader left concept."
+}

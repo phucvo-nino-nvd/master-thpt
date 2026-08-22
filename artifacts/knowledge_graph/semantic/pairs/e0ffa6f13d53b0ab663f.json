@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_BEN_PHAI",
+  "right_id": "GIOI_HAN_VO_CUC",
+  "merge": false,
+  "rationale": "Left node is the right-hand limit. Right node is the limit at infinity. They are distinct types of limits (one-sided limit vs. limit at infinity). They are not semantic duplicates."
+}

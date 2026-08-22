@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEM_CUC_TIEU",
+  "right_id": "DIEM_CUC_TRI",
+  "merge": false,
+  "rationale": "A specific type of critical point (local minimum) vs the general concept of a critical point (local extremum). One is a strict subtype of the other. KEEP."
+}

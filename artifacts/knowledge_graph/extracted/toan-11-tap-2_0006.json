@@ -1,0 +1,90 @@
+{
+  "chunk_id": "toan-11-tap-2:0006",
+  "nodes": [
+    {
+      "id": "DAO_HAM_CUA_TONG_HIEU",
+      "name": "Đạo hàm của tổng, hiệu",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của tổng và hiệu hai hoặc nhiều hàm số.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_TICH_THUONG",
+      "name": "Đạo hàm của tích, thương",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của tích và thương hai hàm số.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_HAM_SO_HOP",
+      "name": "Đạo hàm của hàm số hợp",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của hàm số hợp y = f(g(x)).",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+      "name": "Đạo hàm của các hàm số sơ cấp cơ bản",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của các hàm số cơ bản như x^n, √x, sin x, cos x, tan x, cot x, e^x, a^x, ln x, log_a x.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_HAM_SO_MU",
+      "name": "Đạo hàm của hàm số mũ",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của hàm số mũ e^x và a^x.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_HAM_SO_LOGARIT",
+      "name": "Đạo hàm của hàm số lôgarit",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của hàm số lôgarit ln x và log_a x.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_HAM_SO_SIN",
+      "name": "Đạo hàm của hàm số sin x",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của hàm số sin x và hàm số hợp sin u.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_HAM_SO_COS",
+      "name": "Đạo hàm của hàm số cos x",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của hàm số cos x và hàm số hợp cos u.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_HAM_SO_TAN_COT",
+      "name": "Đạo hàm của hàm số tan x và cot x",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của hàm số tan x, cot x và các hàm số hợp tương ứng.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_HAM_SO_X_N",
+      "name": "Đạo hàm của hàm số y = x^n",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của hàm số y = x^n với n ∈ ℕ*.",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM_CUA_HAM_SO_SQRT_X",
+      "name": "Đạo hàm của hàm số y = √x",
+      "type": "FORMULA",
+      "description": "Quy tắc tính đạo hàm của hàm số y = √x trên khoảng (0, +∞).",
+      "grade": 11
+    },
+    {
+      "id": "DAO_HAM",
+      "name": "Đạo hàm",
+      "type": "CONCEPT",
+      "description": "Khái niệm về đạo hàm của một hàm số.",
+      "grade": 11
+    }
+  ],
+  "edges": []
+}

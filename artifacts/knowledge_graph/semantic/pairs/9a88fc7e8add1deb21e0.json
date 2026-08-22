@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO",
+  "right_id": "VECTO_TRONG_KHONG_GIAN",
+  "merge": false,
+  "rationale": "Left is the general concept of a vector. Right is the concept of a vector in space. The right is a specific context (3D) of the left. According to guidelines, a general concept and its specific case in a different dimensional space should be KEPT separate."
+}

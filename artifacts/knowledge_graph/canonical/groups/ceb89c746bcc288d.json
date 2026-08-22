@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "CONG_THUC_NHAN_XAC_SUAT_BIEN_CO_DOC_LAP",
+      "name": "Công thức nhân xác suất cho biến cố độc lập",
+      "type": "FORMULA",
+      "description": "Công thức tính xác suất của giao hai biến cố độc lập A và B: P(AB) = P(A) * P(B)."
+    },
+    {
+      "id": "CONG_THUC_NHAN_XAC_SUAT_TONG_QUAT",
+      "name": "Công thức nhân xác suất tổng quát",
+      "type": "FORMULA",
+      "description": "Công thức tính xác suất của giao hai biến cố bất kỳ: P(AB) = P(B) * P(A|B), với P(B) > 0."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0016",
+      "original_id": "CONG_THUC_NHAN_XAC_SUAT",
+      "canonical_id": "CONG_THUC_NHAN_XAC_SUAT_BIEN_CO_DOC_LAP",
+      "rationale": "This occurrence describes the multiplication formula for independent events: P(AB) = P(A) * P(B). It is a specific case of the general multiplication rule."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0008",
+      "original_id": "CONG_THUC_NHAN_XAC_SUAT",
+      "canonical_id": "CONG_THUC_NHAN_XAC_SUAT_TONG_QUAT",
+      "rationale": "This occurrence describes the general multiplication formula for probability: P(AB) = P(B) * P(A|B). It applies to any two events, not just independent ones. The mathematical meaning differs from the independent case, requiring a split."
+    }
+  ]
+}

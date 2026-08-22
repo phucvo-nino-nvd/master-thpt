@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "TINH_KHOANG_TU_PHAN_VI",
+      "name": "Tính khoảng tứ phân vị",
+      "type": "METHOD",
+      "description": "Phương pháp tính khoảng tứ phân vị (IQR) bằng hiệu số giữa tứ phân vị thứ ba (Q3) và tứ phân vị thứ nhất (Q1). Đối với dữ liệu đơn giản, IQR = Q3 - Q1. Đối với dữ liệu ghép nhóm, cần xác định nhóm chứa mỗi tứ phân vị và tính giá trị xấp xỉ trước khi lấy hiệu."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0014",
+      "original_id": "TINH_KHOANG_TU_PHAN_VI",
+      "canonical_id": "TINH_KHOANG_TU_PHAN_VI",
+      "rationale": "Both occurrences describe the method for calculating the interquartile range (IQR) as the difference between the third quartile (Q3) and the first quartile (Q1). The grade 12 description provides more detail for grouped data, but this is an extension of the same core method, not a different mathematical procedure. Therefore, they should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0009",
+      "original_id": "TINH_KHOANG_TU_PHAN_VI",
+      "canonical_id": "TINH_KHOANG_TU_PHAN_VI",
+      "rationale": "Both occurrences describe the method for calculating the interquartile range (IQR) as the difference between the third quartile (Q3) and the first quartile (Q1). The grade 12 description provides more detail for grouped data, but this is an extension of the same core method, not a different mathematical procedure. Therefore, they should be merged."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_TONG_QUAT",
+  "right_id": "PHUONG_TRINH_TONG_QUAT_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node is the general equation of a line in 2D (ax+by+c=0), while the right node is the general equation of a plane in 3D (Ax+By+Cz+D=0). They are analogous formulas for different dimensional objects."
+}

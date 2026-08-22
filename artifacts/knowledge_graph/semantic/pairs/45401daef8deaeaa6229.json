@@ -1,0 +1,6 @@
+{
+  "left_id": "NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "Solution of a single linear inequality in two variables vs. solution of a system of such inequalities. One is a component of the other."
+}

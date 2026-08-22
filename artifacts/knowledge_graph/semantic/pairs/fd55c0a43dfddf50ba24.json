@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_NAM_TRONG_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node defines a line lying in a plane. The right node defines a line perpendicular to a plane. These are distinct spatial relationships between lines and planes."
+}

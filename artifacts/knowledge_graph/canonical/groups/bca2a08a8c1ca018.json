@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "GOC_GIUA_HAI_VECTO",
+      "name": "Góc giữa hai vectơ",
+      "type": "CONCEPT",
+      "description": "Góc giữa hai vectơ không phải vectơ không, là góc giữa hai vectơ có điểm đầu trùng nhau."
+    },
+    {
+      "id": "CONG_THUC_TINH_GOC_GIUA_HAI_VECTO",
+      "name": "Công thức tính góc giữa hai vectơ",
+      "type": "FORMULA",
+      "description": "Biểu thức tính góc giữa hai vectơ dựa trên tọa độ của chúng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0011",
+      "original_id": "GOC_GIUA_HAI_VECTO",
+      "canonical_id": "GOC_GIUA_HAI_VECTO",
+      "rationale": "This occurrence defines the concept of the angle between two vectors in the plane (grade 10). It is the core concept."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "GOC_GIUA_HAI_VECTO",
+      "canonical_id": "GOC_GIUA_HAI_VECTO",
+      "rationale": "This occurrence defines the concept of the angle between two vectors in space (grade 12). The definition is conceptually the same as in grade 10 (angle between two vectors with a common origin), just extended to 3D. Grade differences alone are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0008",
+      "original_id": "GOC_GIUA_VECTO",
+      "canonical_id": "CONG_THUC_TINH_GOC_GIUA_HAI_VECTO",
+      "rationale": "This occurrence is a FORMULA for calculating the angle between two vectors using coordinates. It is a different type of knowledge (FORMULA vs. CONCEPT) and represents a specific computational method. It should be split from the concept node."
+    }
+  ]
+}

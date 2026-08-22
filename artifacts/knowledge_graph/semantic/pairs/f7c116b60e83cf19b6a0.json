@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_SONG_SONG",
+  "right_id": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "Left is the concept of two parallel lines. Right is the concept of a line parallel to a plane. They are distinct geometric relationships; one is not a semantic duplicate of the other."
+}

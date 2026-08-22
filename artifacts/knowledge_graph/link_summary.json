@@ -1,0 +1,233 @@
+{
+  "clean_nodes": 703,
+  "local_edges_input": 734,
+  "local_node_pairs": 690,
+  "candidate_pairs": 2731,
+  "final_edges": 815,
+  "local_supported_edges": 453,
+  "inferred_edges": 362,
+  "relations": {
+    "IS_A": 161,
+    "PART_OF": 76,
+    "REQUIRES": 565,
+    "SUBSET_OF": 13
+  },
+  "embedding_model": "openai/text-embedding-3-small",
+  "link_model": "deepseek/deepseek-v3.2",
+  "top_k": 10,
+  "min_similarity": 0.72,
+  "decision_cache_hits": 2731,
+  "decision_cache_misses": 0,
+  "rejected_none": 1826,
+  "rejected_ambiguous": 66,
+  "decisions": {
+    "AMBIGUOUS": 66,
+    "NONE": 1826,
+    "left_is_a_right": 58,
+    "left_part_of_right": 43,
+    "left_requires_right": 192,
+    "left_subset_of_right": 9,
+    "right_is_a_left": 103,
+    "right_part_of_left": 33,
+    "right_requires_left": 397,
+    "right_subset_of_left": 4
+  },
+  "cycle_resolutions": 1,
+  "cycle_resolution_cache_hits": 1,
+  "cycle_resolution_cache_misses": 0,
+  "removed_cycle_edges": [
+    {
+      "source": "HO_NGUYEN_HAM",
+      "target": "BANG_NGUYEN_HAM",
+      "relation": "REQUIRES",
+      "reason": "The relation 'HO_NGUYEN_HAM requires BANG_NGUYEN_HAM' is incorrect. Understanding the concept of a family of antiderivatives (họ nguyên hàm) does not require prior knowledge of a summary table of common antiderivatives (bảng nguyên hàm). The table is a reference tool derived from the fundamental concept of antiderivatives and their families. The prerequisite direction should be reversed or, more accurately, no strong prerequisite relation exists here; the table is a derived application, not a prerequisite for the concept."
+    }
+  ],
+  "grade_invalid_requires_removed": 23,
+  "removed_grade_edges": [
+    {
+      "source": "BIEN_CO_DOI",
+      "target": "BIEN_CO_A",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 12"
+    },
+    {
+      "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "CONG_THUC_CONG_COS",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "CONG_THUC_CONG_SIN",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "CONG_THUC_COSIN",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "COS_ALPHA",
+      "target": "COS",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "DAO_HAM_TAI_MOT_DIEM",
+      "target": "GIOI_HAN",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 11, target in grade 12"
+    },
+    {
+      "source": "GIAO_DIEM_CUA_HAI_DUONG_THANG",
+      "target": "DUONG_THANG_CAT_NHAU",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "GIATRI_LON_NHAT_NHO_NHAT_CUA_BIEU_THUC",
+      "target": "GIA_TRI_LON_NHAT",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 12"
+    },
+    {
+      "source": "GIOI_HAN_LA_0",
+      "target": "GIOI_HAN",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 11, target in grade 12"
+    },
+    {
+      "source": "KHOANG_NGHICH_BIEN",
+      "target": "CHIEU_BIEN_THIEN",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 11, target in grade 12"
+    },
+    {
+      "source": "KHOANG_TU_PHAN_VI",
+      "target": "CONG_THUC_TINH_TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "METHOD_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "CONG_THUC_TINH_GOC_GIUA_HAI_VECTO",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 12"
+    },
+    {
+      "source": "NGUYEN_LI_XAC_SUAT_BE",
+      "target": "XAC_SUAT",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "PHEP_TOAN_GIOI_HAN",
+      "target": "GIOI_HAN",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 11, target in grade 12"
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_GIOI_HAN",
+      "target": "GIOI_HAN",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 11, target in grade 12"
+    },
+    {
+      "source": "PHUONG_PHAP_VE_DO_THI",
+      "target": "KHAO_SAT_HAM_PHAN_THUC_HUU_TI",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 12"
+    },
+    {
+      "source": "SIN_ALPHA",
+      "target": "GIA_TRI_LUONG_GIAC_GOC_DOI_NHAU",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "SIN_ALPHA",
+      "target": "HE_THUC_CO_BAN",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC",
+      "target": "DIEU_KIEN_VUONG_GOC_HAI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 11, target in grade 12"
+    },
+    {
+      "source": "TINH_KHOANG_TU_PHAN_VI",
+      "target": "PHUONG_PHAP_TINH_TU_PHAN_VI",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "TINH_PHUONG_SAI",
+      "target": "PHUONG_PHAP_TINH_SO_TRUNG_BINH",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 11"
+    },
+    {
+      "source": "XAC_DINH_MAT_PHANG_BOI_HAI_DUONG_THANG_CAT_NHAU",
+      "target": "DIEU_KIEN_DUONG_THANG_CAT_NHAU_TRONG_KHONG_GIAN",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 11, target in grade 12"
+    },
+    {
+      "source": "XAC_SUAT_BIEN_CO_DOI",
+      "target": "BIEN_CO_A",
+      "relation": "REQUIRES",
+      "rationale": null,
+      "source_chunks": [],
+      "reason": "grade leak: source introduced in grade 10, target in grade 12"
+    }
+  ]
+}

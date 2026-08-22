@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_COS",
+  "right_id": "HAM_SO_COT",
+  "merge": false,
+  "rationale": "Left node is the 'cosine function'. Right node is the 'cotangent function'. They are distinct trigonometric functions with different definitions and properties. They are not semantic duplicates."
+}

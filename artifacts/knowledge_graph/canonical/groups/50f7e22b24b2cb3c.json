@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "VECTO",
+      "name": "Vectơ",
+      "type": "CONCEPT",
+      "description": "Một đại lượng toán học có độ lớn và hướng, thường được biểu diễn bằng một đoạn thẳng có hướng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0007",
+      "original_id": "VECTO",
+      "canonical_id": "VECTO",
+      "rationale": "This occurrence defines a vector as a directed line segment, which is the core concept. It is a valid and standard definition."
+    },
+    {
+      "chunk_id": "toan-10-tap-1:0008",
+      "original_id": "VECTO",
+      "canonical_id": "VECTO",
+      "rationale": "This occurrence defines a vector as a quantity with magnitude and direction, which is another standard, equivalent description of the same mathematical concept. It should be merged with the first."
+    },
+    {
+      "chunk_id": "toan-10-tap-1:0009",
+      "original_id": "VEC_TO",
+      "canonical_id": "VECTO",
+      "rationale": "This occurrence defines a vector as a mathematical object with length and direction. The original ID 'VEC_TO' is a minor typographical variation of 'VECTO'. The description is consistent with the same core concept. It should be merged."
+    }
+  ]
+}

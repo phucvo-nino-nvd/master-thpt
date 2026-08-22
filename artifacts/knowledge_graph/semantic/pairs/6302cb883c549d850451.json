@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_SQRT_X",
+  "right_id": "DAO_HAM_CUA_HAM_SO_X_N",
+  "merge": false,
+  "rationale": "Different derivative formulas: derivative of sqrt(x) vs derivative of x^n. They are related but represent distinct rules; one is a special case of the other but not identical."
+}

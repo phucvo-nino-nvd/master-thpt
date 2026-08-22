@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_DO_DAI_VECTO_KHONG_GIAN",
+  "right_id": "DO_DAI_VECTO_TOA_DO",
+  "merge": false,
+  "rationale": "2D vector length formula vs. 3D vector length formula. Different dimensional spaces."
+}

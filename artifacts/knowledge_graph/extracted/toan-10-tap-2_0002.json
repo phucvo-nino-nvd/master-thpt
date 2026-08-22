@@ -1,0 +1,124 @@
+{
+  "chunk_id": "toan-10-tap-2:0002",
+  "nodes": [
+    {
+      "id": "HAM_SO_BAC_HAI",
+      "name": "Hàm số bậc hai",
+      "type": "CONCEPT",
+      "description": "Hàm số cho bởi công thức y = ax² + bx + c, trong đó a, b, c là hằng số và a ≠ 0.",
+      "grade": 10
+    },
+    {
+      "id": "BANG_GIA_TRI",
+      "name": "Bảng giá trị",
+      "type": "CONCEPT",
+      "description": "Bảng liệt kê các giá trị của hàm số tại các điểm xác định.",
+      "grade": 10
+    },
+    {
+      "id": "PARABOLA",
+      "name": "Parabola",
+      "type": "CONCEPT",
+      "description": "Đồ thị của hàm số bậc hai.",
+      "grade": 10
+    },
+    {
+      "id": "DINH",
+      "name": "Đỉnh",
+      "type": "CONCEPT",
+      "description": "Điểm đặc biệt trên đồ thị parabola có toạ độ I(-b/2a; -Δ/4a).",
+      "grade": 10
+    },
+    {
+      "id": "TRUC_DOI_XUNG",
+      "name": "Trục đối xứng",
+      "type": "CONCEPT",
+      "description": "Đường thẳng x = -b/2a, là trục đối xứng của đồ thị parabola.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_HAM_SO_BAC_HAI",
+      "name": "Công thức hàm số bậc hai",
+      "type": "FORMULA",
+      "description": "y = ax² + bx + c, trong đó a, b, c là hằng số và a ≠ 0.",
+      "grade": 10
+    },
+    {
+      "id": "DINH_DA_THUC",
+      "name": "Đỉnh dạng đẳng thức",
+      "type": "FORMULA",
+      "description": "y = a(x + b/2a)² - Δ/4a, với Δ = b² - 4ac.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_VE_DO_THI_HAM_SO_BAC_HAI",
+      "name": "Phương pháp vẽ đồ thị hàm số bậc hai",
+      "type": "METHOD",
+      "description": "1. Xác định toạ độ đỉnh I(-b/2a; -Δ/4a); 2. Vẽ trục đối xứng x = -b/2a; 3. Xác định các giao điểm với trục tung, trục hoành; 4. Vẽ parabola.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_HAM_SO_BAC_HAI",
+      "name": "Tính chất hàm số bậc hai",
+      "type": "THEOREM",
+      "description": "Nếu a > 0, hàm số nghịch biến trên (-∞; -b/2a) và đồng biến trên (-b/2a; +∞), giá trị nhỏ nhất là -Δ/4a. Nếu a < 0, hàm số đồng biến trên (-∞; -b/2a) và nghịch biến trên (-b/2a; +∞), giá trị lớn nhất là -Δ/4a.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "HAM_SO_BAC_HAI",
+      "target": "CONG_THUC_HAM_SO_BAC_HAI",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "HAM_SO_BAC_HAI",
+      "target": "BANG_GIA_TRI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "HAM_SO_BAC_HAI",
+      "target": "PARABOLA",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PARABOLA",
+      "target": "DINH",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "PARABOLA",
+      "target": "TRUC_DOI_XUNG",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "HAM_SO_BAC_HAI",
+      "target": "DINH_DA_THUC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_VE_DO_THI_HAM_SO_BAC_HAI",
+      "target": "DINH",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_VE_DO_THI_HAM_SO_BAC_HAI",
+      "target": "TRUC_DOI_XUNG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TINH_CHAT_HAM_SO_BAC_HAI",
+      "target": "HAM_SO_BAC_HAI",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

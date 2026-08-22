@@ -1,0 +1,91 @@
+{
+  "chunk_id": "toan-12-tap-2:0009",
+  "nodes": [
+    {
+      "id": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+      "name": "Công thức xác suất toàn phần",
+      "type": "FORMULA",
+      "description": "Công thức tính xác suất của một biến cố B bằng cách phân tích qua các biến cố A và không A.",
+      "grade": 12
+    },
+    {
+      "id": "SO_DO_HINH_CAY",
+      "name": "Sơ đồ hình cây",
+      "type": "METHOD",
+      "description": "Phương pháp mô tả trực quan công thức xác suất toàn phần bằng cách sử dụng hình cây.",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_BAYES",
+      "name": "Công thức Bayes",
+      "type": "FORMULA",
+      "description": "Công thức tính xác suất điều kiện P(A|B) dựa trên xác suất trước P(A) và xác suất điều kiện P(B|A).",
+      "grade": 12
+    },
+    {
+      "id": "BIEN_CO_SO",
+      "name": "Biến cố",
+      "type": "CONCEPT",
+      "description": "Một sự kiện có thể xảy ra hoặc không xảy ra trong một thí nghiệm ngẫu nhiên.",
+      "grade": 12
+    },
+    {
+      "id": "XAC_SUAT_DIEU_KIEN",
+      "name": "Xác suất điều kiện",
+      "type": "CONCEPT",
+      "description": "Xác suất của một biến cố A xảy ra với điều kiện biến cố B đã xảy ra, ký hiệu P(A|B).",
+      "grade": 12
+    },
+    {
+      "id": "XAC_SUAT_TOAN_PHAN",
+      "name": "Xác suất toàn phần",
+      "type": "CONCEPT",
+      "description": "Xác suất của một biến cố B bằng tổng xác suất của B xảy ra qua tất cả các biến cố A và không A.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+      "target": "BIEN_CO_SO",
+      "relation": "REQUIRES",
+      "rationale": "Công thức xác suất toàn phần sử dụng các biến cố A và B."
+    },
+    {
+      "source": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+      "target": "XAC_SUAT_DIEU_KIEN",
+      "relation": "REQUIRES",
+      "rationale": "Công thức xác suất toàn phần sử dụng xác suất điều kiện P(B|A) và P(B|¬A)."
+    },
+    {
+      "source": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+      "target": "XAC_SUAT_TOAN_PHAN",
+      "relation": "IS_A",
+      "rationale": "Công thức xác suất toàn phần là một công thức đặc biệt của xác suất toàn phần."
+    },
+    {
+      "source": "SO_DO_HINH_CAY",
+      "target": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+      "relation": "REQUIRES",
+      "rationale": "Sơ đồ hình cây là phương pháp mô tả công thức xác suất toàn phần."
+    },
+    {
+      "source": "CONG_THUC_BAYES",
+      "target": "BIEN_CO_SO",
+      "relation": "REQUIRES",
+      "rationale": "Công thức Bayes sử dụng các biến cố A và B."
+    },
+    {
+      "source": "CONG_THUC_BAYES",
+      "target": "XAC_SUAT_DIEU_KIEN",
+      "relation": "REQUIRES",
+      "rationale": "Công thức Bayes sử dụng xác suất điều kiện P(A|B) và P(B|A)."
+    },
+    {
+      "source": "CONG_THUC_BAYES",
+      "target": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+      "relation": "REQUIRES",
+      "rationale": "Công thức Bayes dựa trên công thức xác suất toàn phần."
+    }
+  ]
+}

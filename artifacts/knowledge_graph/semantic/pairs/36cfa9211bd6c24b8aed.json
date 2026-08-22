@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "merge": false,
+  "rationale": "Đường thẳng vuông góc với hai cạnh của tam giác and Đường thẳng vuông góc với mặt phẳng phân biệt are two different theorems about perpendicularity in geometry. One concerns a line perpendicular to two sides of a triangle, the other concerns two lines perpendicular to a plane. They are not the same knowledge."
+}

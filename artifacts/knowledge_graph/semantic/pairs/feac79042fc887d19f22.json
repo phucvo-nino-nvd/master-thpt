@@ -1,0 +1,6 @@
+{
+  "left_id": "LUY_THUA_VOI_SO_MU_HUU_TI",
+  "right_id": "LUY_THUA_VOI_SO_MU_THUC",
+  "merge": false,
+  "rationale": "Luỹ thừa với số mũ hữu tỉ and Luỹ thừa với số mũ thực are two related but distinct concepts in exponentiation. One is defined for rational exponents, the other extends the definition to real exponents. The latter is a generalization of the former, so they are not semantic duplicates."
+}

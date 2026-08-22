@@ -1,0 +1,6 @@
+{
+  "left_id": "PHAN_TU",
+  "right_id": "TAP_HOP",
+  "merge": false,
+  "rationale": "The left node is the concept of an 'element', and the right node is the concept of a 'set'. An element is a constituent of a set. These are foundational but distinct concepts in set theory; one is a component of the other."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+  "right_id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "Mặt phẳng chứa đường thẳng song song với đường thẳng khác and Tính chất đường thẳng song song với mặt phẳng are two different theorems about lines and planes. One concerns the existence of a plane containing a line parallel to another, the other concerns the intersection property when a line is parallel to a plane. They are distinct."
+}

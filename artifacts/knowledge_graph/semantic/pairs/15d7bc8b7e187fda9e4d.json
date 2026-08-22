@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_THUOC_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+  "merge": false,
+  "rationale": "The left node is a theorem about a line lying in a plane if it has two points in the plane. The right node is a theorem about a line perpendicular to two sides of a triangle being perpendicular to the third side. These are different geometric theorems about different properties (containment vs. perpendicularity in a triangle)."
+}

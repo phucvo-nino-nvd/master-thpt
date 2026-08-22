@@ -1,0 +1,6 @@
+{
+  "left_id": "SIN",
+  "right_id": "TAN",
+  "merge": false,
+  "rationale": "The left node defines the sine of an angle, while the right node defines the tangent of an angle. They are distinct trigonometric functions, not semantic duplicates."
+}

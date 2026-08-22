@@ -1,0 +1,125 @@
+{
+  "chunk_id": "toan-12-tap-1:0010",
+  "nodes": [
+    {
+      "id": "PHUONG_SAI",
+      "name": "Phương sai",
+      "type": "CONCEPT",
+      "description": "Đo lường mức độ phân tán của mẫu số liệu xung quanh số trung bình.",
+      "grade": 12
+    },
+    {
+      "id": "DO_LECH_CHUAN",
+      "name": "Độ lệch chuẩn",
+      "type": "CONCEPT",
+      "description": "Căn bậc hai của phương sai, đo lường mức độ phân tán của mẫu số liệu.",
+      "grade": 12
+    },
+    {
+      "id": "MAU_SO_LIEU_GHEP_NHOM",
+      "name": "Mẫu số liệu ghép nhóm",
+      "type": "CONCEPT",
+      "description": "Mẫu số liệu được chia thành các nhóm có tần số tương ứng.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_SAI_MAU_GHEP_NHOM",
+      "name": "Phương sai của mẫu số liệu ghép nhóm",
+      "type": "FORMULA",
+      "description": "Được tính theo công thức: s² = (1/n) * Σ(m_i * (x_i - x̄)²), trong đó x_i là giá trị đại diện của nhóm, x̄ là số trung bình của mẫu.",
+      "grade": 12
+    },
+    {
+      "id": "DO_LECH_CHUAN_MAU_GHEP_NHOM",
+      "name": "Độ lệch chuẩn của mẫu số liệu ghép nhóm",
+      "type": "FORMULA",
+      "description": "Căn bậc hai của phương sai của mẫu số liệu ghép nhóm: s = √s².",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_SAI_MAU_GHEP_NHOM_CONG_THUC_KHAC",
+      "name": "Công thức khác cho phương sai của mẫu số liệu ghép nhóm",
+      "type": "FORMULA",
+      "description": "s² = (1/n) * Σ(m_i * x_i²) - x̄².",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_SAI_MAU_GHEP_NHOM_SAI_SO",
+      "name": "Phương sai của mẫu số liệu ghép nhóm sai số",
+      "type": "FORMULA",
+      "description": "Được tính theo công thức: ŝ² = (1/(n-1)) * Σ(m_i * (x_i - x̄)²).",
+      "grade": 12
+    },
+    {
+      "id": "DO_LECH_CHUAN_MAU_GHEP_NHOM_SAI_SO",
+      "name": "Độ lệch chuẩn của mẫu số liệu ghép nhóm sai số",
+      "type": "FORMULA",
+      "description": "Căn bậc hai của phương sai sai số: ŝ = √ŝ².",
+      "grade": 12
+    },
+    {
+      "id": "HE_SO_BIEN_THIEN",
+      "name": "Hệ số biến thiên",
+      "type": "CONCEPT",
+      "description": "Được tính theo công thức CV = s/x̄, dùng để so sánh độ phân tán của hai mẫu số liệu khi đơn vị đo hoặc giá trị trung bình khác nhau.",
+      "grade": 12
+    },
+    {
+      "id": "TINH_PHUONG_SAI_DO_LECH_CHUAN",
+      "name": "Tính phương sai và độ lệch chuẩn",
+      "type": "METHOD",
+      "description": "Sử dụng công thức phương sai và độ lệch chuẩn để tính toán cho mẫu số liệu ghép nhóm.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHUONG_SAI_MAU_GHEP_NHOM",
+      "target": "PHUONG_SAI",
+      "relation": "IS_A",
+      "rationale": "Phương sai của mẫu số liệu ghép nhóm là một loại phương sai."
+    },
+    {
+      "source": "DO_LECH_CHUAN_MAU_GHEP_NHOM",
+      "target": "DO_LECH_CHUAN",
+      "relation": "IS_A",
+      "rationale": "Độ lệch chuẩn của mẫu số liệu ghép nhóm là một loại độ lệch chuẩn."
+    },
+    {
+      "source": "PHUONG_SAI_MAU_GHEP_NHOM_CONG_THUC_KHAC",
+      "target": "PHUONG_SAI_MAU_GHEP_NHOM",
+      "relation": "IS_A",
+      "rationale": "Công thức khác cho phương sai của mẫu số liệu ghép nhóm là một công thức tính phương sai."
+    },
+    {
+      "source": "PHUONG_SAI_MAU_GHEP_NHOM_SAI_SO",
+      "target": "PHUONG_SAI_MAU_GHEP_NHOM",
+      "relation": "IS_A",
+      "rationale": "Phương sai sai số là một loại phương sai của mẫu số liệu ghép nhóm."
+    },
+    {
+      "source": "DO_LECH_CHUAN_MAU_GHEP_NHOM_SAI_SO",
+      "target": "DO_LECH_CHUAN_MAU_GHEP_NHOM",
+      "relation": "IS_A",
+      "rationale": "Độ lệch chuẩn sai số là một loại độ lệch chuẩn của mẫu số liệu ghép nhóm."
+    },
+    {
+      "source": "TINH_PHUONG_SAI_DO_LECH_CHUAN",
+      "target": "PHUONG_SAI_MAU_GHEP_NHOM",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tính phương sai và độ lệch chuẩn yêu cầu công thức phương sai của mẫu số liệu ghép nhóm."
+    },
+    {
+      "source": "TINH_PHUONG_SAI_DO_LECH_CHUAN",
+      "target": "DO_LECH_CHUAN_MAU_GHEP_NHOM",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tính phương sai và độ lệch chuẩn yêu cầu công thức độ lệch chuẩn của mẫu số liệu ghép nhóm."
+    },
+    {
+      "source": "HE_SO_BIEN_THIEN",
+      "target": "DO_LECH_CHUAN",
+      "relation": "REQUIRES",
+      "rationale": "Hệ số biến thiên yêu cầu độ lệch chuẩn."
+    }
+  ]
+}

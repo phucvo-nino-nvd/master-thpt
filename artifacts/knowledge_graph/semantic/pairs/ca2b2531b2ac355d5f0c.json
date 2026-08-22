@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_SAI_MAU_GHEP_NHOM",
+  "right_id": "PHUONG_SAI_MAU_GHEP_NHOM_SAI_SO",
+  "merge": false,
+  "rationale": "The left node gives the formula for sample variance of grouped data using divisor n. The right node gives a formula for sample variance of grouped data using divisor (n-1), often associated with an unbiased estimator or correction. The formulas differ (1/n vs 1/(n-1)). They represent different statistical measures or estimators, not the same reusable knowledge."
+}

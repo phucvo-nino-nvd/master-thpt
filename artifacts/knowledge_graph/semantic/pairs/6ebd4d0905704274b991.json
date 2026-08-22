@@ -1,0 +1,6 @@
+{
+  "left_id": "GIAI_THUAT_TINH_HOAN_VI",
+  "right_id": "GIAI_THUAT_TINH_TO_HOP",
+  "merge": false,
+  "rationale": "The left node describes an algorithm for calculating permutations (n!), while the right node describes an algorithm for calculating combinations (C_n^k). They are distinct computational methods for different combinatorial objects, not semantic duplicates."
+}

@@ -1,0 +1,99 @@
+{
+  "chunk_id": "toan-12-tap-2:0004",
+  "nodes": [
+    {
+      "id": "VECTO_PHAP_TUYEN",
+      "name": "Vectơ pháp tuyến",
+      "type": "CONCEPT",
+      "description": "Vectơ vuông góc với mặt phẳng",
+      "grade": 12
+    },
+    {
+      "id": "CAP_VECTO_CHI_PHUONG",
+      "name": "Cặp vectơ chỉ phương",
+      "type": "CONCEPT",
+      "description": "Hai vectơ không cùng phương và nằm trong hoặc song song với mặt phẳng",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_TRINH_TONG_QUAT_MAT_PHANG",
+      "name": "Phương trình tổng quát của mặt phẳng",
+      "type": "FORMULA",
+      "description": "Phương trình dạng Ax + By + Cz + D = 0, trong đó A, B, C không đồng thời bằng 0",
+      "grade": 12
+    },
+    {
+      "id": "KHOANG_CACH_DEN_MAT_PHANG",
+      "name": "Khoảng cách từ một điểm đến một mặt phẳng",
+      "type": "FORMULA",
+      "description": "Công thức tính khoảng cách từ điểm M(x0, y0, z0) đến mặt phẳng P: Ax + By + Cz + D = 0",
+      "grade": 12
+    },
+    {
+      "id": "TICH_CO_HUONG",
+      "name": "Tích có hướng",
+      "type": "CONCEPT",
+      "description": "Tích có hướng của hai vectơ u = (a, b, c) và v = (a', b', c') là vectơ n = (bc' - b'c, ca' - c'a, ab' - a'b)",
+      "grade": 12
+    },
+    {
+      "id": "MAT_PHANG_VUONG_GOC",
+      "name": "Hai mặt phẳng vuông góc",
+      "type": "THEOREM",
+      "description": "Hai mặt phẳng vuông góc với nhau khi và chỉ khi vectơ pháp tuyến của chúng vuông góc",
+      "grade": 12
+    },
+    {
+      "id": "MAT_PHANG_SONG_SONG",
+      "name": "Hai mặt phẳng song song",
+      "type": "THEOREM",
+      "description": "Hai mặt phẳng song song với nhau khi và chỉ khi vectơ pháp tuyến của chúng song song",
+      "grade": 12
+    },
+    {
+      "id": "LAP_PHUONG_TRINH_MAT_PHANG",
+      "name": "Lập phương trình mặt phẳng",
+      "type": "METHOD",
+      "description": "Phương pháp lập phương trình mặt phẳng dựa trên một điểm và vectơ pháp tuyến hoặc cặp vectơ chỉ phương",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHUONG_TRINH_TONG_QUAT_MAT_PHANG",
+      "target": "VECTO_PHAP_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": "Phương trình tổng quát của mặt phẳng yêu cầu khái niệm vectơ pháp tuyến"
+    },
+    {
+      "source": "KHOANG_CACH_DEN_MAT_PHANG",
+      "target": "PHUONG_TRINH_TONG_QUAT_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": "Công thức khoảng cách từ điểm đến mặt phẳng yêu cầu phương trình tổng quát của mặt phẳng"
+    },
+    {
+      "source": "TICH_CO_HUONG",
+      "target": "CAP_VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Tích có hướng được sử dụng để tìm vectơ pháp tuyến từ cặp vectơ chỉ phương"
+    },
+    {
+      "source": "LAP_PHUONG_TRINH_MAT_PHANG",
+      "target": "TICH_CO_HUONG",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp lập phương trình mặt phẳng sử dụng tích có hướng để tìm vectơ pháp tuyến"
+    },
+    {
+      "source": "MAT_PHANG_VUONG_GOC",
+      "target": "VECTO_PHAP_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": "Điều kiện hai mặt phẳng vuông góc yêu cầu khái niệm vectơ pháp tuyến"
+    },
+    {
+      "source": "MAT_PHANG_SONG_SONG",
+      "target": "VECTO_PHAP_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": "Điều kiện hai mặt phảng song song yêu cầu khái niệm vectơ pháp tuyến"
+    }
+  ]
+}

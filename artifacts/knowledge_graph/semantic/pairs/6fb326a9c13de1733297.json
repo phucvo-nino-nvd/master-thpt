@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+  "right_id": "DAO_HAM_CUA_HAM_SO_TAN_COT",
+  "merge": false,
+  "rationale": "The left node is a collection of derivative formulas for basic elementary functions, which includes tan x and cot x. The right node specifically focuses on derivatives of tan x and cot x. The right is a subset/special case of the left, so they should be kept separate."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_THUOC_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "merge": false,
+  "rationale": "The left node states a condition for a line to lie entirely within a plane. The right node states that two distinct lines perpendicular to the same plane are parallel. They are different theorems about lines and planes."
+}

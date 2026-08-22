@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEM_CUC_DAI",
+  "right_id": "DIEM_CUC_TRI",
+  "merge": false,
+  "rationale": "The left node is 'local maximum point', a specific type of extremum. The right node is 'extremum point', the general category encompassing both local maxima and minima. The left is a strict subtype of the right. A general concept and its subtype should be KEPT separate."
+}

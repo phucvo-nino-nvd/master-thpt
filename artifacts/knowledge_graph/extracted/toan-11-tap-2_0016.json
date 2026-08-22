@@ -1,0 +1,53 @@
+{
+  "chunk_id": "toan-11-tap-2:0016",
+  "nodes": [
+    {
+      "id": "BIEN_CO_DO_CHA",
+      "name": "biến cố độc lập",
+      "type": "CONCEPT",
+      "description": "Hai biến cố A và B được gọi là độc lập nếu xác suất của biến cố giao P(AB) bằng tích xác suất của từng biến cố P(A) * P(B).",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_NHAN_XAC_SUAT",
+      "name": "công thức nhân xác suất cho hai biến cố độc lập",
+      "type": "FORMULA",
+      "description": "Với hai biến cố độc lập A và B, công thức P(AB) = P(A) * P(B).",
+      "grade": 11
+    },
+    {
+      "id": "SO_DO_HINH_CAY",
+      "name": "sơ đồ hình cây",
+      "type": "METHOD",
+      "description": "Phương pháp sử dụng sơ đồ hình cây để tính xác suất của các biến cố liên quan.",
+      "grade": 11
+    },
+    {
+      "id": "BIEN_CO_GIAO",
+      "name": "biến cố giao",
+      "type": "CONCEPT",
+      "description": "Biến cố giao của hai biến cố A và B là biến cố xảy ra khi cả hai biến cố A và B xảy ra cùng một lúc.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "CONG_THUC_NHAN_XAC_SUAT",
+      "target": "BIEN_CO_DO_CHA",
+      "relation": "REQUIRES",
+      "rationale": "Công thức nhân xác suất cho hai biến cố độc lập yêu cầu hiểu khái niệm biến cố độc lập."
+    },
+    {
+      "source": "SO_DO_HINH_CAY",
+      "target": "BIEN_CO_GIAO",
+      "relation": "REQUIRES",
+      "rationale": "Sử dụng sơ đồ hình cây để tính xác suất của biến cố giao."
+    },
+    {
+      "source": "CONG_THUC_NHAN_XAC_SUAT",
+      "target": "BIEN_CO_GIAO",
+      "relation": "REQUIRES",
+      "rationale": "Công thức nhân xác suất cho hai biến cố độc lập liên quan đến xác suất của biến cố giao."
+    }
+  ]
+}

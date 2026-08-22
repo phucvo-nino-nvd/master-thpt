@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEU_THUC_TOA_DO_TICH_VO_HUONG",
+  "right_id": "CONG_THUC_TOA_DO_TICH_VO_HUONG",
+  "merge": false,
+  "rationale": "Biểu thức tọa độ tích vô hướng (Oxyz, 3D) and công thức toạ độ của tích vô hướng (2D) are coordinate formulas in different dimensions. According to the rule, they should be kept separate."
+}

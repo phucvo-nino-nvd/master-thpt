@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "GIA_TOC_TUC_THOI",
+      "name": "Gia tốc tức thời",
+      "type": "CONCEPT",
+      "description": "Gia tốc tức thời là đạo hàm của vận tốc tức thời, tức là đạo hàm thứ hai của hàm vị trí s(t)."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0007",
+      "original_id": "GIA_TOC_TUC_THOI",
+      "canonical_id": "GIA_TOC_TUC_THOI",
+      "rationale": "Both occurrences describe the same concept: instantaneous acceleration as the derivative of instantaneous velocity. The grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0005",
+      "original_id": "GIA_TOC_TUC_THOI",
+      "canonical_id": "GIA_TOC_TUC_THOI",
+      "rationale": "Both occurrences describe the same concept: instantaneous acceleration as the derivative of instantaneous velocity. The grade difference is not a reason to split."
+    }
+  ]
+}

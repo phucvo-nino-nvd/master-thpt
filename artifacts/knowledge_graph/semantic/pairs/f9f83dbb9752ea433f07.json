@@ -1,0 +1,6 @@
+{
+  "left_id": "GIA_TRI_LUONG_GIAC_GOC_BU_NHAU",
+  "right_id": "QUAN_HE_LUONG_GIAC_GOC_BU",
+  "merge": true,
+  "rationale": "Both nodes describe the same trigonometric relationships for supplementary angles. The left uses radians (π - α) and the right uses degrees (180° - α), but they express the exact same mathematical identities (sin(supplement) = sin α, cos(supplement) = -cos α, etc.). The difference is purely in the unit of measurement. They are semantic duplicates."
+}

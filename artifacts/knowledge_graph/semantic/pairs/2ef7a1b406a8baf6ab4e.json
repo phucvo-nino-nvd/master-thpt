@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_HINH_COT",
+  "right_id": "DUONG_HINH_SIN",
+  "merge": false,
+  "rationale": "The left node is the graph of the cotangent function. The right node is the graph of the sine function. They are graphs of different trigonometric functions."
+}

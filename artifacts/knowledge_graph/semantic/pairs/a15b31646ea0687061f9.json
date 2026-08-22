@@ -1,0 +1,6 @@
+{
+  "left_id": "TAP_GIA_TRI_HAM_SO_LOGARIT",
+  "right_id": "TAP_XAC_DINH_HAM_SO_LOGARIT",
+  "merge": false,
+  "rationale": "Left node is the 'range of a logarithmic function'. Right node is the 'domain of a logarithmic function'. They describe different aspects (output vs. input) of the same function but are distinct concepts. They are not semantic duplicates."
+}

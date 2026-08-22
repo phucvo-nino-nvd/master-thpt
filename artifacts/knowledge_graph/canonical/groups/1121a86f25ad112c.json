@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "PHUONG_SAI",
+      "name": "Phương sai",
+      "type": "CONCEPT",
+      "description": "Đo lường mức độ phân tán của mẫu số liệu xung quanh số trung bình, tính bằng tổng bình phương độ lệch của từng giá trị so với giá trị trung bình, chia cho số lượng giá trị."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0014",
+      "original_id": "PHUONG_SAI",
+      "canonical_id": "PHUONG_SAI",
+      "rationale": "Both occurrences describe the same mathematical concept of variance, which measures the dispersion of data around the mean. The grade difference (10 vs 12) is not a reason to split, as the core definition is consistent."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0010",
+      "original_id": "PHUONG_SAI",
+      "canonical_id": "PHUONG_SAI",
+      "rationale": "Both occurrences describe the same mathematical concept of variance, which measures the dispersion of data around the mean. The grade difference (10 vs 12) is not a reason to split, as the core definition is consistent."
+    }
+  ]
+}

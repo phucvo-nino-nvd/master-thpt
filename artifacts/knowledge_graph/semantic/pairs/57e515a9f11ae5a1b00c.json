@@ -1,0 +1,6 @@
+{
+  "left_id": "NGHIEM_PHUONG_TRINH_LOGARIT",
+  "right_id": "PHUONG_TRINH_LOGARIT",
+  "merge": false,
+  "rationale": "The left node is the concept of the solution (x = a^b) to a logarithmic equation. The right node is the concept of the logarithmic equation itself (log_a x = b). One is the solution, the other is the equation. They are related but not identical."
+}

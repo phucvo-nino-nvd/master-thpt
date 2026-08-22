@@ -1,0 +1,6 @@
+{
+  "left_id": "DINH_LI_COSIN",
+  "right_id": "DINH_LI_SIN",
+  "merge": false,
+  "rationale": "These are two distinct theorems in trigonometry: the Law of Cosines and the Law of Sines. They provide different relationships between sides and angles of a triangle."
+}

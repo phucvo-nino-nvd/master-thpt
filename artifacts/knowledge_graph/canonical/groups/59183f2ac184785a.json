@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "QUY_TAC_BA_DIEM",
+      "name": "Quy tắc ba điểm",
+      "type": "THEOREM",
+      "description": "Với ba điểm bất kì A, B, C, ta có AB + BC = AC."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0008",
+      "original_id": "QUY_TAC_BA_DIEM",
+      "canonical_id": "QUY_TAC_BA_DIEM",
+      "rationale": "Both occurrences describe the same fundamental vector theorem: for any three points A, B, C, the vector sum AB + BC equals AC. The descriptions are mathematically identical despite minor phrasing differences and grade levels (10 vs 12)."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "QUY_TAC_BA_DIEM",
+      "canonical_id": "QUY_TAC_BA_DIEM",
+      "rationale": "Both occurrences describe the same fundamental vector theorem: for any three points A, B, C, the vector sum AB + BC equals AC. The descriptions are mathematically identical despite minor phrasing differences and grade levels (10 vs 12)."
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "chunk_id": "toan-11-tap-1:0007",
+  "nodes": [
+    {
+      "id": "CAP_SO_NHAN",
+      "name": "Cấp số nhân",
+      "type": "CONCEPT",
+      "description": "Một dãy số (hữu hạn hay vô hạn) trong đó kể từ số hạng thứ hai, mỗi số hạng đều là tích của số hạng đứng ngay trước nó với một số không đổi q (công bội).",
+      "grade": 11
+    },
+    {
+      "id": "CONG_BOI",
+      "name": "Công bội",
+      "type": "CONCEPT",
+      "description": "Số không đổi q trong định nghĩa cấp số nhân, dùng để tính số hạng tiếp theo từ số hạng trước đó.",
+      "grade": 11
+    },
+    {
+      "id": "SO_HANG_TONG_QUAT",
+      "name": "Số hạng tổng quát",
+      "type": "CONCEPT",
+      "description": "Công thức xác định số hạng thứ n của cấp số nhân: u_n = u_1 * q^(n-1).",
+      "grade": 11
+    },
+    {
+      "id": "TONG_N_SO_HANG_DAU",
+      "name": "Tổng n số hạng đầu",
+      "type": "CONCEPT",
+      "description": "Tổng của n số hạng đầu tiên của cấp số nhân, tính bằng công thức S_n = u_1 * (1 - q^n) / (1 - q) (khi q ≠ 1).",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_CAP_SO_NHAN",
+      "name": "Công thức cấp số nhân",
+      "type": "FORMULA",
+      "description": "u_n = u_1 * q^(n-1) với n ≥ 2.",
+      "grade": 11
+    },
+    {
+      "id": "CONG_THUC_TONG_CAP_SO_NHAN",
+      "name": "Công thức tổng cấp số nhân",
+      "type": "FORMULA",
+      "description": "S_n = u_1 * (1 - q^n) / (1 - q) (khi q ≠ 1).",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_TONG_CAP_SO_NHAN",
+      "name": "Phương pháp tính tổng cấp số nhân",
+      "type": "METHOD",
+      "description": "Phương pháp xây dựng công thức tổng bằng cách biểu diễn tổng, nhân với q, rồi trừ để loại bỏ các số hạng.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "CAP_SO_NHAN",
+      "target": "CONG_BOI",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "SO_HANG_TONG_QUAT",
+      "target": "CAP_SO_NHAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "TONG_N_SO_HANG_DAU",
+      "target": "CAP_SO_NHAN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_CAP_SO_NHAN",
+      "target": "CAP_SO_NHAN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_TONG_CAP_SO_NHAN",
+      "target": "TONG_N_SO_HANG_DAU",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_TONG_CAP_SO_NHAN",
+      "target": "TONG_N_SO_HANG_DAU",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

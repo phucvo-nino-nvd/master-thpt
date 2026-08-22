@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEU_THUC_TOA_DO_PHEP_CONG_VECTO",
+  "right_id": "BIEU_THUC_TOA_DO_PHEP_TRU_VECTO",
+  "merge": false,
+  "rationale": "Biểu thức tọa độ phép cộng vectơ and biểu thức tọa độ phép trừ vectơ are two different coordinate formulas for vector addition and subtraction. They are distinct operations and formulas."
+}

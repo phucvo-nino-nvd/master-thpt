@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_DUONG_TRON_DA_THICH",
+  "right_id": "PHUONG_TRINH_TIEP_TUYEN_DUONG_TRON",
+  "merge": false,
+  "rationale": "Left node is the standard equation of a circle. Right node is the equation of a tangent line to a circle. They are distinct formulas representing different geometric objects (the circle itself vs. a line tangent to it)."
+}

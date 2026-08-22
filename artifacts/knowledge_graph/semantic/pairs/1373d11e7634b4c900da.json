@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node describes a line perpendicular to a plane implying lines parallel to that line are also perpendicular to the plane. The right node describes a line perpendicular to a plane implying it is perpendicular to every line parallel to the plane. These are related but distinct statements about perpendicularity conditions involving lines and planes. One is about lines parallel to the original line, the other is about lines parallel to the plane. They are not semantic duplicates."
+}

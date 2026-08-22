@@ -1,0 +1,79 @@
+{
+  "chunk_id": "toan-10-tap-2:0011",
+  "nodes": [
+    {
+      "id": "QUY_TAC_CONG",
+      "name": "Quy tắc cộng",
+      "type": "METHOD",
+      "description": "Quy tắc đếm số cách thực hiện một công việc có nhiều phương án rời nhau, không phụ thuộc vào nhau. Nếu phương án 1 có n₁ cách và phương án 2 có n₂ cách, thì tổng số cách là n₁ + n₂.",
+      "grade": 10
+    },
+    {
+      "id": "QUY_TAC_NHAN",
+      "name": "Quy tắc nhân",
+      "type": "METHOD",
+      "description": "Quy tắc đếm số cách thực hiện một công việc có nhiều công đoạn nối tiếp nhau, độc lập với nhau. Nếu công đoạn 1 có m₁ cách và với mỗi cách của công đoạn 1, công đoạn 2 có m₂ cách, thì tổng số cách là m₁ × m₂.",
+      "grade": 10
+    },
+    {
+      "id": "SO_DO_HINH_CAY",
+      "name": "Sơ đồ hình cây",
+      "type": "CONCEPT",
+      "description": "Sơ đồ minh hoạ cách phân chia trường hợp trong các bài toán đếm, giúp visual hóa và tránh bỏ sót trường hợp.",
+      "grade": 10
+    },
+    {
+      "id": "BAI_TOAN_DEM",
+      "name": "Bài toán đếm",
+      "type": "CONCEPT",
+      "description": "Bài toán xác định số cách thực hiện một công việc hoặc số phân tử của một tập hợp.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_HOP_HOP",
+      "name": "Tập hợp hợp",
+      "type": "CONCEPT",
+      "description": "Tập hợp gồm tất cả các phần tử thuộc tập A hoặc tập B, ký hiệu A ∪ B.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_HOP_GIAO",
+      "name": "Tập hợp giao",
+      "type": "CONCEPT",
+      "description": "Tập hợp gồm tất cả các phần tử thuộc cả tập A và tập B, ký hiệu A ∩ B.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "QUY_TAC_CONG",
+      "target": "BAI_TOAN_DEM",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "QUY_TAC_NHAN",
+      "target": "BAI_TOAN_DEM",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "SO_DO_HINH_CAY",
+      "target": "BAI_TOAN_DEM",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "QUY_TAC_CONG",
+      "target": "TAP_HOP_HOP",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "QUY_TAC_CONG",
+      "target": "TAP_HOP_GIAO",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

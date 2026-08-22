@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC",
+  "right_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_4",
+  "merge": false,
+  "rationale": "General binomial expansion formula vs a specific case (degree 4). One is a general concept, the other a strict special case. KEEP."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_DAY_SO",
+  "right_id": "GIOI_HAN_TAI_VO_CUC",
+  "merge": false,
+  "rationale": "Giới hạn của dãy số and giới hạn tại vô cực are related but distinct concepts. The first is about limits of sequences, the second about limits of functions at infinity. One is a special case or a related concept, not a duplicate."
+}

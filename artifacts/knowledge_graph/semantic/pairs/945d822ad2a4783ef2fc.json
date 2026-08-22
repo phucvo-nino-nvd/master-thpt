@@ -1,0 +1,6 @@
+{
+  "left_id": "KHOANG_CACH_GIUA_DUONG_THANG_MAT_PHANG_SONG_SONG",
+  "right_id": "KHOANG_CACH_GIUA_HAI_MAT_PHANG_SONG_SONG",
+  "merge": false,
+  "rationale": "Left is the distance between a line and a parallel plane. Right is the distance between two parallel planes. They are distinct geometric configurations and concepts; one is not a semantic duplicate of the other."
+}

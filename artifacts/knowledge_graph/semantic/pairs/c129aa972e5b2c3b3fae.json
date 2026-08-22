@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_MU",
+  "right_id": "NGHIEM_BAT_PHUONG_TRINH_MU",
+  "merge": false,
+  "rationale": "The left node defines an exponential inequality. The right node describes the solution set (or method to find it) for such an inequality. One is a concept, the other is its property/application. They are related but not identical."
+}

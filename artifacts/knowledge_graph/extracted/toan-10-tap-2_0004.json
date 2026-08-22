@@ -1,0 +1,53 @@
+{
+  "chunk_id": "toan-10-tap-2:0004",
+  "nodes": [
+    {
+      "id": "PHUONG_TRINH_CHUA_CAN",
+      "name": "Phương trình chứa căn",
+      "type": "CONCEPT",
+      "description": "Phương trình có chứa biểu thức căn bậc hai.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_SQRT_DX2_EX_F",
+      "name": "Phương trình dạng √(ax² + bx + c) = √(dx² + ex + f)",
+      "type": "CONCEPT",
+      "description": "Phương trình có hai vế là căn bậc hai của đa thức bậc hai.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_DX_E",
+      "name": "Phương trình dạng √(ax² + bx + c) = dx + e",
+      "type": "CONCEPT",
+      "description": "Phương trình có một vế là căn bậc hai của đa thức bậc hai và vế kia là đa thức bậc nhất.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_CHUA_CAN",
+      "name": "Phương pháp giải phương trình chứa căn",
+      "type": "METHOD",
+      "description": "Bình phương hai vế phương trình để khử căn, giải phương trình bậc hai nhận được, rồi thử lại nghiệm để loại bỏ nghiệm ngoại lai.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_SQRT_DX2_EX_F",
+      "target": "PHUONG_TRINH_CHUA_CAN",
+      "relation": "IS_A",
+      "rationale": "Phương trình dạng √(ax² + bx + c) = √(dx² + ex + f) là một loại phương trình chứa căn."
+    },
+    {
+      "source": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_DX_E",
+      "target": "PHUONG_TRINH_CHUA_CAN",
+      "relation": "IS_A",
+      "rationale": "Phương trình dạng √(ax² + bx + c) = dx + e là một loại phương trình chứa căn."
+    },
+    {
+      "source": "PHUONG_PHAP_GIAI_PHUONG_TRINH_CHUA_CAN",
+      "target": "PHUONG_TRINH_CHUA_CAN",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp giải phương trình chứa căn yêu cầu hiểu về phương trình chứa căn."
+    }
+  ]
+}

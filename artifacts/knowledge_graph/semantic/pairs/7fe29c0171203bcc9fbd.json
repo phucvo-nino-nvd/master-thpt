@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS",
+  "right_id": "TINH_CHAT_DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "Left node is a condition for two lines to be perpendicular (using vectors). Right node is a property of a line perpendicular to a plane. They are different theorems about perpendicularity in different geometric configurations (line-line vs. line-plane)."
+}

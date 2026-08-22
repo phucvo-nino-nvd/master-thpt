@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_CONG",
+  "right_id": "TINH_CHAT_TONG_HAM_SO",
+  "merge": false,
+  "rationale": "Both nodes express the additive property of integrals/antiderivatives. The left: '∫ₐᵇ [f(x) + g(x)] dx = ∫ₐᵇ f(x) dx + ∫ₐᵇ g(x) dx.' The right: '∫[f(x) + g(x)] dx = ∫f(x) dx + ∫g(x) dx.' and the corresponding statement for antiderivatives. The right node includes the antiderivative statement, but the core reusable mathematical property for the integral is the same. The integral additive property is a specific instance of the linearity property. They represent the same fundamental additive rule for integration. One global node about the additive property of integrals can encompass both descriptions."
+}

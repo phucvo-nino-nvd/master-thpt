@@ -1,0 +1,6 @@
+{
+  "left_id": "KHOANG_CACH_GIUA_DUONG_THANG_MAT_PHANG_SONG_SONG",
+  "right_id": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left node defines the distance between a line and a parallel plane. The right node defines the distance between two parallel lines. These are distinct distance concepts involving different geometric objects (line-plane vs. line-line)."
+}

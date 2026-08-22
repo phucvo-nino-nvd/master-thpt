@@ -1,0 +1,138 @@
+{
+  "chunk_id": "toan-11-tap-2:0012",
+  "nodes": [
+    {
+      "id": "KHOANG_CACH",
+      "name": "Khoảng cách",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa các đối tượng điểm, đường thẳng, mặt phẳng trong không gian.",
+      "grade": 11
+    },
+    {
+      "id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "name": "Khoảng cách từ điểm đến đường thẳng",
+      "type": "CONCEPT",
+      "description": "Khoảng cách từ một điểm M đến đường thẳng a, kí hiệu d(M, a), là khoảng cách giữa M và hình chiếu H của M trên a.",
+      "grade": 11
+    },
+    {
+      "id": "KHOANG_CACH_TU_DIEM_DEN_MAT_PHANG",
+      "name": "Khoảng cách từ điểm đến mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Khoảng cách từ một điểm M đến mặt phẳng (P), kí hiệu d(M, (P)), là khoảng cách giữa M và hình chiếu H của M trên (P).",
+      "grade": 11
+    },
+    {
+      "id": "KHOANG_CACH_GIUA_DUONG_THANG_MAT_PHANG_SONG_SONG",
+      "name": "Khoảng cách giữa đường thẳng và mặt phẳng song song",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa đường thẳng a và mặt phẳng (P) song song với a, kí hiệu d(a, (P)), là khoảng cách từ một điểm bất kì trên a đến (P).",
+      "grade": 11
+    },
+    {
+      "id": "KHOANG_CACH_GIUA_HAI_MAT_PHANG_SONG_SONG",
+      "name": "Khoảng cách giữa hai mặt phẳng song song",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa hai mặt phẳng song song (P) và (Q), kí hiệu d((P), (Q)), là khoảng cách từ một điểm bất kì thuộc mặt phẳng này đến mặt phẳng kia.",
+      "grade": 11
+    },
+    {
+      "id": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_SONG_SONG",
+      "name": "Khoảng cách giữa hai đường thẳng song song",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa hai đường thẳng song song m và n, kí hiệu d(m, n), là khoảng cách từ một điểm thuộc đường thẳng này đến đường thẳng kia.",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_VUONG_GOC_CHUNG",
+      "name": "Đường vuông góc chung",
+      "type": "CONCEPT",
+      "description": "Đường thẳng cắt hai đường thẳng chéo nhau a, b và vuông góc với cả hai đường thẳng đó.",
+      "grade": 11
+    },
+    {
+      "id": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_CHEO_NHAU",
+      "name": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "type": "CONCEPT",
+      "description": "Độ dài đoạn thẳng MN, nơi MN vuông góc với cả hai đường thẳng chéo nhau a và b.",
+      "grade": 11
+    },
+    {
+      "id": "CHIEU_CAO_HINH_CHOP",
+      "name": "Chiều cao hình chóp",
+      "type": "CONCEPT",
+      "description": "Khoảng cách từ đỉnh đến mặt phẳng chứa mặt đáy của hình chóp.",
+      "grade": 11
+    },
+    {
+      "id": "CHIEU_CAO_HINH_LANG_TRU",
+      "name": "Chiều cao hình lăng trụ",
+      "type": "CONCEPT",
+      "description": "Khoảng cách giữa hai đáy của hình lăng trụ.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TINH_KHOANG_CACH",
+      "name": "Phương pháp tính khoảng cách",
+      "type": "METHOD",
+      "description": "Sử dụng hình chiếu vuông góc để xác định khoảng cách giữa các đối tượng trong không gian.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "target": "KHOANG_CACH",
+      "relation": "IS_A",
+      "rationale": "Khoảng cách từ điểm đến đường thẳng là một loại đặc biệt của khoảng cách."
+    },
+    {
+      "source": "KHOANG_CACH_TU_DIEM_DEN_MAT_PHANG",
+      "target": "KHOANG_CACH",
+      "relation": "IS_A",
+      "rationale": "Khoảng cách từ điểm đến mặt phẳng là một loại đặc biệt của khoảng cách."
+    },
+    {
+      "source": "KHOANG_CACH_GIUA_DUONG_THANG_MAT_PHANG_SONG_SONG",
+      "target": "KHOANG_CACH",
+      "relation": "IS_A",
+      "rationale": "Khoảng cách giữa đường thẳng và mặt phẳng song song là một loại đặc biệt của khoảng cách."
+    },
+    {
+      "source": "KHOANG_CACH_GIUA_HAI_MAT_PHANG_SONG_SONG",
+      "target": "KHOANG_CACH",
+      "relation": "IS_A",
+      "rationale": "Khoảng cách giữa hai mặt phẳng song song là một loại đặc biệt của khoảng cách."
+    },
+    {
+      "source": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_SONG_SONG",
+      "target": "KHOANG_CACH",
+      "relation": "IS_A",
+      "rationale": "Khoảng cách giữa hai đường thẳng song song là một loại đặc biệt của khoảng cách."
+    },
+    {
+      "source": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_CHEO_NHAU",
+      "target": "KHOANG_CACH",
+      "relation": "IS_A",
+      "rationale": "Khoảng cách giữa hai đường thẳng chéo nhau là một loại đặc biệt của khoảng cách."
+    },
+    {
+      "source": "CHIEU_CAO_HINH_CHOP",
+      "target": "KHOANG_CACH",
+      "relation": "IS_A",
+      "rationale": "Chiều cao hình chóp là một loại đặc biệt của khoảng cách."
+    },
+    {
+      "source": "CHIEU_CAO_HINH_LANG_TRU",
+      "target": "KHOANG_CACH",
+      "relation": "IS_A",
+      "rationale": "Chiều cao hình lăng trụ là một loại đặc biệt của khoảng cách."
+    },
+    {
+      "source": "PHUONG_PHAP_TINH_KHOANG_CACH",
+      "target": "KHOANG_CACH",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tính khoảng cách yêu cầu hiểu về khái niệm khoảng cách."
+    }
+  ]
+}

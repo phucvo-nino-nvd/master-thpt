@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left theorem states: if a line is perpendicular to two sides of a triangle, it is perpendicular to the third side. The right theorem states: if a line is perpendicular to a plane, then lines parallel to it are also perpendicular to that plane. These are different theorems about perpendicularity in different contexts (triangle sides vs. plane)."
+}

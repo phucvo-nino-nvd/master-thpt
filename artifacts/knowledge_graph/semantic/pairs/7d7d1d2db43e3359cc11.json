@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "merge": false,
+  "rationale": "The nodes are different theorems about spatial relations. One gives a condition for a line to be parallel to a plane. The other states that two distinct lines perpendicular to the same plane are parallel. They express different mathematical statements."
+}

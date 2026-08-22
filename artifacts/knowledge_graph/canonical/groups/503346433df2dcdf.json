@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "PHEP_CONG_VECTO",
+      "name": "Phép cộng vectơ",
+      "type": "METHOD",
+      "description": "Phương pháp kết hợp hai vectơ thành một vectơ mới bằng quy tắc ba điểm hoặc quy tắc hình bình hành."
+    },
+    {
+      "id": "BIEU_THUC_TOA_DO_PHEP_CONG_VECTO",
+      "name": "Biểu thức tọa độ phép cộng vectơ",
+      "type": "FORMULA",
+      "description": "Công thức tính tọa độ của tổng hai vectơ trong không gian Oxyz."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0008",
+      "original_id": "PHEP_CONG_VECTO",
+      "canonical_id": "PHEP_CONG_VECTO",
+      "rationale": "This occurrence describes the general method of vector addition, including geometric rules like the triangle and parallelogram rules. It is a METHOD node."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0008",
+      "original_id": "PHÉP_CỘNG_VECTO",
+      "canonical_id": "BIEU_THUC_TOA_DO_PHEP_CONG_VECTO",
+      "rationale": "This occurrence specifically describes the coordinate expression (formula) for vector addition in 3D space (Oxyz). It is a FORMULA node representing a specific computational aspect, distinct from the general geometric method. Therefore, it should be split into a separate canonical node."
+    }
+  ]
+}

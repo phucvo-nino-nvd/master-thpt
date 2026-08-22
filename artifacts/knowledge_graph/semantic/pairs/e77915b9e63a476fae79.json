@@ -1,0 +1,6 @@
+{
+  "left_id": "KHOANG_DONG_BIEN",
+  "right_id": "KHOANG_NGHICH_BIEN",
+  "merge": false,
+  "rationale": "The left node defines an interval where a function is increasing, while the right node defines an interval where a function is decreasing. They are opposite, related concepts, not identical."
+}

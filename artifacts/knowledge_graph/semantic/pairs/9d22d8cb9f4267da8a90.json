@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS",
+  "right_id": "DIEU_KIEN_VUONG_GOC_HAI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node is the condition for perpendicularity of two lines (using direction vectors). The right node is the condition for perpendicularity of two planes (using normal vectors). They are analogous theorems but apply to different geometric objects (lines vs. planes). They represent distinct mathematical knowledge. KEEP."
+}

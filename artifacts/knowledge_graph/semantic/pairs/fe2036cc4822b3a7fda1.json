@@ -1,0 +1,6 @@
+{
+  "left_id": "GIA_TRI_LON_NHAT",
+  "right_id": "GIA_TRI_NHO_NHAT",
+  "merge": false,
+  "rationale": "Two distinct concepts: maximum value vs minimum value. They are not the same reusable knowledge."
+}

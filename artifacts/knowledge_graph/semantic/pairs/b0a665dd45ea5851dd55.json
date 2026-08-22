@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_TIEM_CAN_DUNG",
+  "right_id": "DUONG_TIEM_CAN_NGANG",
+  "merge": false,
+  "rationale": "The left node is the concept of a 'vertical asymptote'. The right node is the concept of a 'horizontal asymptote'. They are distinct types of asymptotes defined by different limit conditions."
+}

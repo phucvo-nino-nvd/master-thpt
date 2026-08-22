@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CAP_SO_NHAN",
+  "right_id": "CONG_THUC_TONG_CAP_SO_NHAN",
+  "merge": false,
+  "rationale": "The left node is the formula for the general term of a geometric sequence. The right node is the formula for the sum of the first n terms of a geometric sequence. They are related but distinct formulas for different quantities (term vs. sum). One is not a semantic duplicate of the other."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "QUAN_HE_LUONG_GIAC_GOC_BU",
+  "right_id": "QUAN_HE_LUONG_GIAC_GOC_PHU",
+  "merge": false,
+  "rationale": "The nodes describe trigonometric relations for supplementary angles (180° - α) and complementary angles (90° - α). They are distinct mathematical relationships. One is a property of supplementary angles, the other of complementary angles. They are related but not the same reusable knowledge."
+}

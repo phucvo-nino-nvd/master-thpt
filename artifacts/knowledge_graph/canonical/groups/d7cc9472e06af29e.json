@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "TO_HOP",
+      "name": "Tổ hợp",
+      "type": "CONCEPT",
+      "description": "Số cách chọn k phần tử từ n phần tử mà không quan tâm đến thứ tự (0 ≤ k ≤ n)."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0012",
+      "original_id": "TO_HOP",
+      "canonical_id": "TO_HOP",
+      "rationale": "Both occurrences describe the same mathematical concept: the number of ways to choose k elements from n elements without regard to order. The descriptions are consistent, and grade differences are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-10-tap-2:0013",
+      "original_id": "TO_HOP",
+      "canonical_id": "TO_HOP",
+      "rationale": "Both occurrences describe the same mathematical concept: the number of ways to choose k elements from n elements without regard to order. The descriptions are consistent, and grade differences are not a reason to split."
+    }
+  ]
+}

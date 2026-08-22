@@ -1,0 +1,6 @@
+{
+  "left_id": "KHAO_SAT_HAM_BAC_BA",
+  "right_id": "KHAO_SAT_HAM_PHAN_THUC_HUU_TI",
+  "merge": false,
+  "rationale": "The left node describes the method for investigating cubic functions. The right node describes the method for investigating simple rational functions. They are specific applications of a general investigation scheme to different function classes, not identical reusable knowledge."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_DAY_SO",
+  "right_id": "GIOI_HAN_LA_0",
+  "merge": false,
+  "rationale": "The left node is the general concept of the limit of a sequence. The right node is the specific concept of a sequence having limit 0. One is a general concept and the other is a special case, so KEEP."
+}

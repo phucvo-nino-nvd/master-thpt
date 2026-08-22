@@ -1,0 +1,6 @@
+{
+  "left_id": "NGUYEN_HAM_HAM_SO_LN",
+  "right_id": "NGUYEN_HAM_HAM_SO_MU",
+  "merge": false,
+  "rationale": "The left node gives the antiderivative formula for the natural log function, while the right node gives antiderivative formulas for exponential functions. They are distinct formulas for different function families."
+}

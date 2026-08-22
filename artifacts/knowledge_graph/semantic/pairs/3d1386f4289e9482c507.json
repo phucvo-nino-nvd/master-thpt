@@ -1,0 +1,6 @@
+{
+  "left_id": "DAY_SO_BI_CHAN",
+  "right_id": "DAY_SO_BI_CHAN_DUOI",
+  "merge": false,
+  "rationale": "The left node defines a bounded sequence (bounded above and below). The right node defines a sequence bounded below only. The right node is a specific type (a component/property) of the general concept. One is a general concept, the other is a strict subtype (bounded below). They are not identical."
+}

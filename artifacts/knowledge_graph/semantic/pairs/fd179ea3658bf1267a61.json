@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_BAC_HAI",
+  "right_id": "TAM_THUC_BAC_HAI",
+  "merge": false,
+  "rationale": "Related but distinct: a quadratic function vs a quadratic expression. They are not the same reusable knowledge node."
+}

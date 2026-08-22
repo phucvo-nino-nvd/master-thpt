@@ -1,0 +1,183 @@
+{
+  "chunk_id": "toan-11-tap-1:0005",
+  "nodes": [
+    {
+      "id": "DAY_SO",
+      "name": "Dãy số",
+      "type": "CONCEPT",
+      "description": "Mỗi hàm số xác định trên tập các số nguyên dương được gọi là một dãy số vô hạn.",
+      "grade": 11
+    },
+    {
+      "id": "DAY_SO_VO_HAN",
+      "name": "Dãy số vô hạn",
+      "type": "CONCEPT",
+      "description": "Mỗi hàm số xác định trên tập các số nguyên dương được gọi là một dãy số vô hạn.",
+      "grade": 11
+    },
+    {
+      "id": "DAY_SO_HUU_HAN",
+      "name": "Dãy số hữu hạn",
+      "type": "CONCEPT",
+      "description": "Mỗi hàm số xác định trên tập hữu hạn {1, 2, ..., m} được gọi là một dãy số hữu hạn.",
+      "grade": 11
+    },
+    {
+      "id": "SO_HANG_DAU",
+      "name": "Số hạng đầu",
+      "type": "CONCEPT",
+      "description": "Số hạng đầu tiên của một dãy số.",
+      "grade": 11
+    },
+    {
+      "id": "SO_HANG_TONG_QUAT",
+      "name": "Số hạng tổng quát",
+      "type": "CONCEPT",
+      "description": "Số hạng thứ n của một dãy số, thường được biểu diễn bằng công thức u_n.",
+      "grade": 11
+    },
+    {
+      "id": "SO_HANG_CUOI",
+      "name": "Số hạng cuối",
+      "type": "CONCEPT",
+      "description": "Số hạng cuối cùng của một dãy số hữu hạn.",
+      "grade": 11
+    },
+    {
+      "id": "DAY_SO_TANG",
+      "name": "Dãy số tăng",
+      "type": "CONCEPT",
+      "description": "Dãy số (u_n) được gọi là dãy số tăng nếu u_{n+1} > u_n với mọi n ∈ ℕ*.",
+      "grade": 11
+    },
+    {
+      "id": "DAY_SO_GIAM",
+      "name": "Dãy số giảm",
+      "type": "CONCEPT",
+      "description": "Dãy số (u_n) được gọi là dãy số giảm nếu u_{n+1} < u_n với mọi n ∈ ℕ*.",
+      "grade": 11
+    },
+    {
+      "id": "DAY_SO_BI_CHAN",
+      "name": "Dãy số bị chặn",
+      "type": "CONCEPT",
+      "description": "Dãy số (u_n) bị chặn nếu tồn tại m, M sao cho m ≤ u_n ≤ M với mọi n ∈ ℕ*.",
+      "grade": 11
+    },
+    {
+      "id": "DAY_SO_BI_CHAN_TREN",
+      "name": "Dãy số bị chặn trên",
+      "type": "CONCEPT",
+      "description": "Dãy số (u_n) bị chặn trên nếu tồn tại M sao cho u_n ≤ M với mọi n ∈ ℕ*.",
+      "grade": 11
+    },
+    {
+      "id": "DAY_SO_BI_CHAN_DUOI",
+      "name": "Dãy số bị chặn dưới",
+      "type": "CONCEPT",
+      "description": "Dãy số (u_n) bị chặn dưới nếu tồn tại m sao cho u_n ≥ m với mọi n ∈ ℕ*.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_MO_TA",
+      "name": "Phương pháp mô tả",
+      "type": "METHOD",
+      "description": "Phương pháp cho một dãy số bằng cách mô tả tính chất của các số hạng.",
+      "grade": 11
+    },
+    {
+      "id": "PHUONG_PHAP_TRUY_HOI",
+      "name": "Phương pháp truy hồi",
+      "type": "METHOD",
+      "description": "Phương pháp cho một dãy số bằng cách biểu diễn số hạng thứ n qua số hạng (hay vài số hạng) đứng trước nó.",
+      "grade": 11
+    },
+    {
+      "id": "HE_THUC_TRUY_HOI",
+      "name": "Hệ thức truy hồi",
+      "type": "FORMULA",
+      "description": "Hệ thức biểu thị số hạng thứ n của dãy số qua số hạng (hay vài số hạng) đứng trước nó.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "DAY_SO_VO_HAN",
+      "target": "DAY_SO",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DAY_SO_HUU_HAN",
+      "target": "DAY_SO",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "SO_HANG_DAU",
+      "target": "DAY_SO",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "SO_HANG_TONG_QUAT",
+      "target": "DAY_SO",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "SO_HANG_CUOI",
+      "target": "DAY_SO_HUU_HAN",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "DAY_SO_TANG",
+      "target": "DAY_SO",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DAY_SO_GIAM",
+      "target": "DAY_SO",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DAY_SO_BI_CHAN",
+      "target": "DAY_SO",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DAY_SO_BI_CHAN_TREN",
+      "target": "DAY_SO_BI_CHAN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "DAY_SO_BI_CHAN_DUOI",
+      "target": "DAY_SO_BI_CHAN",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_MO_TA",
+      "target": "DAY_SO",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "PHUONG_PHAP_TRUY_HOI",
+      "target": "DAY_SO",
+      "relation": "PART_OF",
+      "rationale": null
+    },
+    {
+      "source": "HE_THUC_TRUY_HOI",
+      "target": "PHUONG_PHAP_TRUY_HOI",
+      "relation": "PART_OF",
+      "rationale": null
+    }
+  ]
+}

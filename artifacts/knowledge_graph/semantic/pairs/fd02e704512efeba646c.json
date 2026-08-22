@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_COT_X_M",
+  "right_id": "PHUONG_TRINH_TAN_X_M",
+  "merge": false,
+  "rationale": "The left node is the formula for cot x = m, and the right node is the formula for tan x = m. They are distinct trigonometric equations with different solution sets and properties. They are related but not semantic duplicates."
+}

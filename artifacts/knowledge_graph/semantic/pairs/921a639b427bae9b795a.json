@@ -1,0 +1,6 @@
+{
+  "left_id": "TRUNG_BINH_CONG_MAU_SO_LIEU",
+  "right_id": "TRUNG_BINH_CONG_MAU_SO_LIEU_GHOP_NHOM",
+  "merge": false,
+  "rationale": "Both are formulas for the arithmetic mean, but the left is for ungrouped data and the right is for grouped data. The right is a generalization or adaptation for a different data structure. They are related but represent different computational forms for different contexts. KEEP."
+}

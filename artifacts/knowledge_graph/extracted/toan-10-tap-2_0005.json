@@ -1,0 +1,99 @@
+{
+  "chunk_id": "toan-10-tap-2:0005",
+  "nodes": [
+    {
+      "id": "PHEP_THU_NGAU_NHIEN",
+      "name": "Phép thử ngẫu nhiên",
+      "type": "CONCEPT",
+      "description": "Một thí nghiệm hoặc hành động mà kết quả của nó không thể biết trước khi thực hiện.",
+      "grade": 10
+    },
+    {
+      "id": "KHOANG_GIA_TRI_MAU",
+      "name": "Không gian mẫu",
+      "type": "CONCEPT",
+      "description": "Tập hợp tất cả các kết quả có thể khi thực hiện phép thử ngẫu nhiên.",
+      "grade": 10
+    },
+    {
+      "id": "BIEN_CO",
+      "name": "Biến cố",
+      "type": "CONCEPT",
+      "description": "Một tập con của không gian mẫu, bao gồm tất cả các kết quả thuận lợi cho biến cố đó.",
+      "grade": 10
+    },
+    {
+      "id": "BIEN_CO_DOI",
+      "name": "Biến cố đối",
+      "type": "CONCEPT",
+      "description": "Biến cố 'E không xảy ra', được kí hiệu là E̅. Nếu E là tập con của không gian mẫu Ω, thì E̅ là phần bù của E trong Ω.",
+      "grade": 10
+    },
+    {
+      "id": "DINH_NGHI_CU_DIEN_XAC_SUAT",
+      "name": "Định nghĩa cổ điển của xác suất",
+      "type": "CONCEPT",
+      "description": "Xác suất của biến cố E bằng tỉ số giữa số kết quả thuận lợi của E và số kết quả có thể của phép thử.",
+      "grade": 10
+    },
+    {
+      "id": "NGUYEN_LI_XAC_SUAT_BE",
+      "name": "Nguyên lí xác suất bé",
+      "type": "CONCEPT",
+      "description": "Nếu một biến cố có xác suất rất bé, thì trong một phép thử biến cố đó sẽ không xảy ra.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_XAC_SUAT_CO_DIEN",
+      "name": "Công thức xác suất cổ điển",
+      "type": "FORMULA",
+      "description": "P(E) = n(E) / n(Ω), trong đó n(Ω) là số phần tử của không gian mẫu, n(E) là số phần tử của biến cố E.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_DEM_KET_QUA",
+      "name": "Phương pháp đếm kết quả",
+      "type": "METHOD",
+      "description": "Đếm số phần tử của không gian mẫu và số phần tử của biến cố bằng cách liệt kê tất cả các phần tử của hai tập hợp này.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "BIEN_CO",
+      "target": "KHOANG_GIA_TRI_MAU",
+      "relation": "SUBSET_OF",
+      "rationale": "Biến cố là tập con của không gian mẫu."
+    },
+    {
+      "source": "BIEN_CO_DOI",
+      "target": "BIEN_CO",
+      "relation": "IS_A",
+      "rationale": "Biến cố đối là một loại biến cố đặc biệt."
+    },
+    {
+      "source": "DINH_NGHI_CU_DIEN_XAC_SUAT",
+      "target": "KHOANG_GIA_TRI_MAU",
+      "relation": "REQUIRES",
+      "rationale": "Định nghĩa cổ điển của xác suất yêu cầu hiểu không gian mẫu."
+    },
+    {
+      "source": "DINH_NGHI_CU_DIEN_XAC_SUAT",
+      "target": "BIEN_CO",
+      "relation": "REQUIRES",
+      "rationale": "Định nghĩa cổ điển của xác suất yêu cầu hiểu biến cố."
+    },
+    {
+      "source": "CONG_THUC_XAC_SUAT_CO_DIEN",
+      "target": "DINH_NGHI_CU_DIEN_XAC_SUAT",
+      "relation": "IS_A",
+      "rationale": "Công thức xác suất cổ điển là một phần của định nghĩa cổ điển của xác suất."
+    },
+    {
+      "source": "PHUONG_PHAP_DEM_KET_QUA",
+      "target": "CONG_THUC_XAC_SUAT_CO_DIEN",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp đếm kết quả được sử dụng để tính toán công thức xác suất cổ điển."
+    }
+  ]
+}

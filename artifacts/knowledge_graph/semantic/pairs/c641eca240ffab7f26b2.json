@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_MAT_PHANG",
+  "right_id": "DUONG_THANG_CAT_NHAU",
+  "merge": false,
+  "rationale": "Đường thẳng cắt mặt phẳng and hai đường thẳng cắt nhau describe different geometric relationships (line-plane intersection vs. line-line intersection). They are distinct concepts."
+}

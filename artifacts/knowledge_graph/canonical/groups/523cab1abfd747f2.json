@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "SO_HANG_TONG_QUAT_DAY_SO",
+      "name": "Số hạng tổng quát của dãy số",
+      "type": "CONCEPT",
+      "description": "Số hạng thứ n của một dãy số, thường được ký hiệu là u_n, biểu diễn phần tử tại vị trí n trong dãy."
+    },
+    {
+      "id": "SO_HANG_TONG_QUAT_CAP_SO_CONG",
+      "name": "Số hạng tổng quát của cấp số cộng",
+      "type": "FORMULA",
+      "description": "Công thức tính số hạng thứ n của một cấp số cộng: u_n = u_1 + (n - 1)d, với u_1 là số hạng đầu và d là công sai."
+    },
+    {
+      "id": "SO_HANG_TONG_QUAT_CAP_SO_NHAN",
+      "name": "Số hạng tổng quát của cấp số nhân",
+      "type": "FORMULA",
+      "description": "Công thức tính số hạng thứ n của một cấp số nhân: u_n = u_1 * q^(n-1), với u_1 là số hạng đầu và q là công bội."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0005",
+      "original_id": "SO_HANG_TONG_QUAT",
+      "canonical_id": "SO_HANG_TONG_QUAT_DAY_SO",
+      "rationale": "This occurrence describes the general term of a generic sequence, which is a fundamental concept distinct from the specific formulas for arithmetic or geometric sequences."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0006",
+      "original_id": "SO_HANG_TONG_QUAT",
+      "canonical_id": "SO_HANG_TONG_QUAT_CAP_SO_CONG",
+      "rationale": "This occurrence specifically defines the general term formula for an arithmetic sequence (u_n = u_1 + (n-1)d). Its mathematical meaning is specific and differs from the generic concept and the geometric sequence formula."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0007",
+      "original_id": "SO_HANG_TONG_QUAT",
+      "canonical_id": "SO_HANG_TONG_QUAT_CAP_SO_NHAN",
+      "rationale": "This occurrence specifically defines the general term formula for a geometric sequence (u_n = u_1 * q^(n-1)). Its mathematical meaning is specific and differs from the generic concept and the arithmetic sequence formula."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEU_THUC_TOA_DO_PHEP_CONG_VECTO",
+  "right_id": "BIEU_THUC_TOA_DO_TICH_VO_HUONG",
+  "merge": false,
+  "rationale": "The coordinate expression for vector addition and the coordinate expression for dot product are distinct operations in vector algebra. They represent different mathematical concepts and cannot be merged."
+}

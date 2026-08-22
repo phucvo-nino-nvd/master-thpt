@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "KHOANG_BIEN_THIEN",
+      "name": "Khoảng biến thiên",
+      "type": "CONCEPT",
+      "description": "Khoảng biến thiên của một mẫu số liệu là hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu. Được dùng để đo mức độ phân tán của mẫu."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0014",
+      "original_id": "KHOANG_BIEN_THIEN",
+      "canonical_id": "KHOANG_BIEN_THIEN",
+      "rationale": "The occurrence describes the concept of 'range' in statistics as the difference between maximum and minimum values in a data sample. This is the same mathematical concept across grades 10, 11, and 12. Grade differences alone are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0008",
+      "original_id": "KHOANG_BIEN_THIEN",
+      "canonical_id": "KHOANG_BIEN_THIEN",
+      "rationale": "The occurrence describes the same concept of 'range' in statistics, defined as the distance between the maximum and minimum values. The description is consistent with the grade 10 and 12 definitions, representing the same reusable mathematical knowledge."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0009",
+      "original_id": "KHOANG_BIEN_THIEN",
+      "canonical_id": "KHOANG_BIEN_THIEN",
+      "rationale": "The occurrence provides a more detailed description of the 'range', explicitly stating it is used to measure the dispersion of a data sample. The core definition (difference between max and min) remains identical to the other occurrences, so they should be merged."
+    }
+  ]
+}

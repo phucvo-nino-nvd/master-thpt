@@ -1,0 +1,6 @@
+{
+  "left_id": "XAC_SUAT",
+  "right_id": "XAC_SUAT_BIEN_CO_DOI",
+  "merge": false,
+  "rationale": "Left node is the general concept of 'probability'. Right node appears to be a specific application or calculation involving 'probability of a pair of events' (though the description is slightly ambiguous, it seems related to complementary events). One is a general concept and the other is a specific application or rule. They are not semantic duplicates."
+}

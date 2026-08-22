@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "GIOI_HAN_HUU_HAN",
+      "name": "Giới hạn hữu hạn",
+      "type": "CONCEPT",
+      "description": "Giới hạn của một đối tượng toán học (dãy số, hàm số) khi giá trị của nó hội tụ về một số hữu hạn."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0015",
+      "original_id": "GIOI_HAN_HUU_HAN",
+      "canonical_id": "GIOI_HAN_HUU_HAN",
+      "rationale": "Both occurrences describe the same core mathematical concept of a finite limit, differing only in the domain (sequence vs. function). The grade is the same. The concept is reusable and identical in essence."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0016",
+      "original_id": "GIOI_HAN_HUU_HAN",
+      "canonical_id": "GIOI_HAN_HUU_HAN",
+      "rationale": "Both occurrences describe the same core mathematical concept of a finite limit, differing only in the domain (sequence vs. function). The grade is the same. The concept is reusable and identical in essence."
+    }
+  ]
+}

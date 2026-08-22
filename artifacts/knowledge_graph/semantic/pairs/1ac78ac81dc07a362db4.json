@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO",
+  "right_id": "VECTO_NGUOC_HUONG",
+  "merge": false,
+  "rationale": "The left node is the general concept of a vector, while the right node is the specific concept of opposite-direction vectors. One is a general concept, the other is a specific property/relation, so they should be kept separate."
+}

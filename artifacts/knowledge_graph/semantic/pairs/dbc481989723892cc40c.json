@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_MAT_CAU",
+  "right_id": "PHUONG_TRINH_MAT_CAU_TUONG_DUONG",
+  "merge": false,
+  "rationale": "The left node is the standard form equation of a sphere. The right node is the general form equation and the condition for it to represent a sphere. The right node contains additional mathematical content (the equivalence condition). They are related representations but not identical knowledge nodes."
+}

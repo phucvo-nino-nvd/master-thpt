@@ -1,0 +1,6 @@
+{
+  "left_id": "LUY_THUA_VOI_SO_MU_NGUYEN",
+  "right_id": "LUY_THUA_VOI_SO_MU_THUC",
+  "merge": false,
+  "rationale": "Luỹ thừa với số mũ nguyên (integer exponent) and Luỹ thừa với số mũ thực (real exponent) are distinct concepts; one is a special case/generalization of the other."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "BAN_KINH",
+  "right_id": "BAN_KINH_MAT_CAU",
+  "merge": false,
+  "rationale": "The left node defines the radius of a circle (2D). The right node defines the radius of a sphere (3D). They are analogous concepts but belong to different dimensional spaces (circle vs. sphere)."
+}

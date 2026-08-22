@@ -1,0 +1,119 @@
+{
+  "chunk_id": "toan-12-tap-1:0003",
+  "nodes": [
+    {
+      "id": "DUONG_TIEM_CAN_NGANG",
+      "name": "đường tiệm cận ngang",
+      "type": "CONCEPT",
+      "description": "đường thẳng y = y₀ gọi là đường tiệm cận ngang của đồ thị hàm số y = f(x) nếu lim_{x→±∞} f(x) = y₀",
+      "grade": 12
+    },
+    {
+      "id": "DUONG_TIEM_CAN_DUNG",
+      "name": "đường tiệm cận đứng",
+      "type": "CONCEPT",
+      "description": "đường thẳng x = x₀ gọi là đường tiệm cận đứng của đồ thị hàm số y = f(x) nếu lim_{x→x₀±} f(x) = ±∞",
+      "grade": 12
+    },
+    {
+      "id": "DUONG_TIEM_CAN_XIEN",
+      "name": "đường tiệm cận xiên",
+      "type": "CONCEPT",
+      "description": "đường thẳng y = ax + b (a ≠ 0) gọi là đường tiệm cận xiên của đồ thị hàm số y = f(x) nếu lim_{x→±∞} [f(x) - (ax + b)] = 0",
+      "grade": 12
+    },
+    {
+      "id": "HAM_SO",
+      "name": "hàm số",
+      "type": "CONCEPT",
+      "description": "mối quan hệ giữa hai tập hợp số, biểu diễn bởi y = f(x)",
+      "grade": 12
+    },
+    {
+      "id": "DO_THI_HAM_SO",
+      "name": "đồ thị hàm số",
+      "type": "CONCEPT",
+      "description": "biểu diễn hình học của hàm số y = f(x) trên mặt phẳng tọa độ",
+      "grade": 12
+    },
+    {
+      "id": "PHAN_TICH_HAM_SO",
+      "name": "phân tích hàm số",
+      "type": "METHOD",
+      "description": "phương pháp phân tích cấu trúc của hàm số để tìm tiệm cận",
+      "grade": 12
+    },
+    {
+      "id": "TIM_TIEM_CAN_NGANG",
+      "name": "tìm tiệm cận ngang",
+      "type": "METHOD",
+      "description": "tính giới hạn của hàm số khi x→±∞ để xác định đường tiệm cận ngang",
+      "grade": 12
+    },
+    {
+      "id": "TIM_TIEM_CAN_DUNG",
+      "name": "tìm tiệm cận đứng",
+      "type": "METHOD",
+      "description": "tính giới hạn của hàm số khi x→x₀± để xác định đường tiệm cận đứng",
+      "grade": 12
+    },
+    {
+      "id": "TIM_TIEM_CAN_XIEN",
+      "name": "tìm tiệm cận xiên",
+      "type": "METHOD",
+      "description": "tính giới hạn của [f(x) - (ax + b)] khi x→±∞ để xác định đường tiệm cận xiên",
+      "grade": 12
+    },
+    {
+      "id": "GIOI_HAN_HAM_SO",
+      "name": "giới hạn hàm số",
+      "type": "CONCEPT",
+      "description": "giá trị mà hàm số tiếp cận khi biến số tiếp cận một giá trị xác định",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "DUONG_TIEM_CAN_NGANG",
+      "target": "DO_THI_HAM_SO",
+      "relation": "PART_OF",
+      "rationale": "đường tiệm cận ngang là một phần cấu trúc của đồ thị hàm số"
+    },
+    {
+      "source": "DUONG_TIEM_CAN_DUNG",
+      "target": "DO_THI_HAM_SO",
+      "relation": "PART_OF",
+      "rationale": "đường tiệm cận đứng là một phần cấu trúc của đồ thị hàm số"
+    },
+    {
+      "source": "DUONG_TIEM_CAN_XIEN",
+      "target": "DO_THI_HAM_SO",
+      "relation": "PART_OF",
+      "rationale": "đường tiệm cận xiên là một phần cấu trúc của đồ thị hàm số"
+    },
+    {
+      "source": "TIM_TIEM_CAN_NGANG",
+      "target": "GIOI_HAN_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "tìm tiệm cận ngang yêu cầu kiến thức về giới hạn hàm số"
+    },
+    {
+      "source": "TIM_TIEM_CAN_DUNG",
+      "target": "GIOI_HAN_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "tìm tiệm cận đứng yêu cầu kiến thức về giới hạn hàm số"
+    },
+    {
+      "source": "TIM_TIEM_CAN_XIEN",
+      "target": "GIOI_HAN_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "tìm tiệm cận xiên yêu cầu kiến thức về giới hạn hàm số"
+    },
+    {
+      "source": "PHAN_TICH_HAM_SO",
+      "target": "TIM_TIEM_CAN_XIEN",
+      "relation": "REQUIRES",
+      "rationale": "phân tích hàm số là bước chuẩn bị để tìm tiệm cận xiên"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "CAN_DUOI",
+  "right_id": "CAN_TRUOC",
+  "merge": false,
+  "rationale": "Cận dưới (lower limit) and Cận trên (upper limit) of a definite integral are two distinct parts of the integral notation. They are related but not the same concept."
+}

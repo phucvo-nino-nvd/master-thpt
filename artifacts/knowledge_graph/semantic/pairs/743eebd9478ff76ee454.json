@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN",
+  "right_id": "GIOI_HAN_HAM_SO",
+  "merge": true,
+  "rationale": "Left is the general concept of a limit. Right is the concept of the limit of a function. The right is a specific application/type of the left. They are related but not semantic duplicates; the general concept and its specific application should be KEPT separate."
+}

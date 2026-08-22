@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_COS",
+  "right_id": "CONG_THUC_COSIN",
+  "merge": false,
+  "rationale": "Left refers to trigonometric addition formulas for cosine (e.g., cos(A±B)). Right refers to the law of cosines in a triangle. They are distinct trigonometric formulas with different purposes and applications; one is not a semantic duplicate of the other."
+}

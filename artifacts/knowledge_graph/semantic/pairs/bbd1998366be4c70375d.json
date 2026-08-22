@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+  "right_id": "BAT_PHUONG_TRINH_MU_CO_BAN",
+  "merge": false,
+  "rationale": "The left node is the concept of a basic logarithmic inequality. The right node is the concept of a basic exponential inequality. They are distinct types of transcendental inequalities, involving different functions (logarithm vs. exponential)."
+}

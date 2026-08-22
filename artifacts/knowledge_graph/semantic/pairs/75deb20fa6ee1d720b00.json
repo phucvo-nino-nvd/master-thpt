@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+  "right_id": "DAO_HAM_CUA_HAM_SO_SQRT_X",
+  "merge": false,
+  "rationale": "The left node is a general collection of derivative rules for basic elementary functions. The right node is a specific rule for the function y = sqrt(x). The right is a special case/component of the left. Therefore, they are not semantic duplicates."
+}

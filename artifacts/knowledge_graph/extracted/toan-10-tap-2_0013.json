@@ -1,0 +1,86 @@
+{
+  "chunk_id": "toan-10-tap-2:0013",
+  "nodes": [
+    {
+      "id": "KHAI_TRIEN_NHI_THUC_NEWTON",
+      "name": "Khai triển nhị thức Newton",
+      "type": "METHOD",
+      "description": "Phương pháp khai triển (a + b)^n bằng cách sử dụng tổ hợp và hệ số nhị thức.",
+      "grade": 10
+    },
+    {
+      "id": "NHI_THUC",
+      "name": "Nhị thức",
+      "type": "CONCEPT",
+      "description": "Biểu thức đa thức có hai hạng tử, có dạng (a + b).",
+      "grade": 10
+    },
+    {
+      "id": "SO_MU",
+      "name": "Số mũ",
+      "type": "CONCEPT",
+      "description": "Số chỉ định số lần một số nhân với chính nó.",
+      "grade": 10
+    },
+    {
+      "id": "TO_HOP",
+      "name": "Tổ hợp",
+      "type": "CONCEPT",
+      "description": "Số cách chọn k phần tử từ n phần tử không phân biệt thứ tự.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_KHAI_TRIEN_NHI_THUC",
+      "name": "Công thức khai triển nhị thức",
+      "type": "FORMULA",
+      "description": "Công thức tổng quát cho khai triển (a + b)^n.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_4",
+      "name": "Công thức khai triển nhị thức bậc 4",
+      "type": "FORMULA",
+      "description": "Khai triển (a + b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_5",
+      "name": "Công thức khai triển nhị thức bậc 5",
+      "type": "FORMULA",
+      "description": "Khai triển (a + b)^5 = a^5 + 5a^4b + 10a^3b^2 + 10a^2b^3 + 5ab^4 + b^5.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "KHAI_TRIEN_NHI_THUC_NEWTON",
+      "target": "NHI_THUC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "KHAI_TRIEN_NHI_THUC_NEWTON",
+      "target": "SO_MU",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "KHAI_TRIEN_NHI_THUC_NEWTON",
+      "target": "TO_HOP",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_4",
+      "target": "CONG_THUC_KHAI_TRIEN_NHI_THUC",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_5",
+      "target": "CONG_THUC_KHAI_TRIEN_NHI_THUC",
+      "relation": "IS_A",
+      "rationale": null
+    }
+  ]
+}

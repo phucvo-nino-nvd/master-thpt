@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_COS",
+  "right_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+  "merge": false,
+  "rationale": "The left node 'Đạo hàm của hàm số cos x' is a specific derivative rule for the cosine function. The right node 'Đạo hàm của các hàm số sơ cấp cơ bản' is a collection of derivative rules for basic functions, which includes cosine. The left is a specific case/component of the right. They are related but not identical; one is a subset of the other."
+}

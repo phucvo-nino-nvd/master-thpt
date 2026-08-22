@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_CHINH_TAC_DUONG_CONIC",
+  "right_id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG",
+  "merge": false,
+  "rationale": "Both nodes have the same name 'Phương trình chính tắc', but the left node describes the canonical equation for a conic section (2D), while the right node describes the canonical equation for a line in space (3D). They represent different mathematical objects."
+}

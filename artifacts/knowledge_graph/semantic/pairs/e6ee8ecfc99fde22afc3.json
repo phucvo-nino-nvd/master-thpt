@@ -1,0 +1,6 @@
+{
+  "left_id": "MENH_DE_KEO_THEO",
+  "right_id": "MENH_DE_TUONG_DUONG",
+  "merge": false,
+  "rationale": "These are two distinct logical connectives: 'implication' (if P then Q) and 'equivalence' (P if and only if Q). They have different truth conditions and meanings. They are related but fundamental separate concepts in logic."
+}

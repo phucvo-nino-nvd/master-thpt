@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO_BANG_NHAU",
+  "right_id": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+  "merge": false,
+  "rationale": "The left node is the concept of equal vectors, while the right node is the concept of collinear vectors. They are distinct properties/relations between vectors."
+}

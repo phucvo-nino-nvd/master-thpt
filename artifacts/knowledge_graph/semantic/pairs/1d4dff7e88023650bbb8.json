@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_HAI_MAT_PHANG_VUONG_GOC",
+  "right_id": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC",
+  "merge": false,
+  "rationale": "The left node states a condition for two planes to be perpendicular. The right node states a property that holds when two planes are already perpendicular. They are related but distinct statements: one is a criterion, the other is a consequence. Therefore, they are not semantic duplicates."
+}

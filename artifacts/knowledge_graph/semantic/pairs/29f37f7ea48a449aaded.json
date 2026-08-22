@@ -1,0 +1,6 @@
+{
+  "left_id": "HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "The left node is the concept of a system of linear inequalities in two variables. The right node is the concept of the solution region (feasible region) of such a system. One is the system itself, the other is its solution set. They are related but not identical; the solution region is a property/consequence of the system."
+}

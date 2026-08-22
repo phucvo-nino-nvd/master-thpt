@@ -1,0 +1,6 @@
+{
+  "left_id": "CAP_SO_CONG",
+  "right_id": "CAP_SO_NHAN",
+  "merge": false,
+  "rationale": "Arithmetic progression vs. geometric progression. They are distinct concepts, one adds a constant difference, the other multiplies by a constant ratio."
+}

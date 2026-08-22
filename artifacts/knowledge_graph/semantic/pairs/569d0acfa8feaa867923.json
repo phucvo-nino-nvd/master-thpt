@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN",
+  "right_id": "GIOI_HAN_VO_CUC",
+  "merge": false,
+  "rationale": "The left node is the general concept of a limit. The right node is the specific concept of an infinite limit (where the function value grows without bound). The general concept and a specific type of limit should be kept separate."
+}

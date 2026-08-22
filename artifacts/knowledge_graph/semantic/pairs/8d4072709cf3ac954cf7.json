@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_DUONG_THANG_CAT_NHAU_TRONG_KHONG_GIAN",
+  "right_id": "DIEU_KIEN_VUONG_GOC_HAI_MAT_PHANG",
+  "merge": false,
+  "rationale": "Different theorems: condition for two lines intersecting in space vs condition for two planes being perpendicular. They are not semantic duplicates."
+}

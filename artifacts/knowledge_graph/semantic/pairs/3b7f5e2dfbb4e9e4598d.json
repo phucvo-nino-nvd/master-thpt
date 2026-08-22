@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_SO",
+  "right_id": "HAM_SO_DONG_BIEN",
+  "merge": false,
+  "rationale": "The left node is the concept of a 'variable'. The right node is the concept of an 'increasing function'. A variable is a fundamental concept, while an increasing function is a property of a function involving variables. They are related but not identical; one is a component used in defining the other."
+}

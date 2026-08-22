@@ -1,0 +1,231 @@
+{
+  "chunk_id": "toan-10-tap-2:0008",
+  "nodes": [
+    {
+      "id": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+      "name": "Đường thẳng trong mặt phẳng toạ độ",
+      "type": "CONCEPT",
+      "description": "Đường thẳng được đại diện bởi phương trình đại số trong mặt phẳng toạ độ.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_DUONG_THANG",
+      "name": "Phương trình đường thẳng",
+      "type": "CONCEPT",
+      "description": "Phương trình đại số đại diện cho một đường thẳng trong mặt phẳng toạ độ.",
+      "grade": 10
+    },
+    {
+      "id": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+      "name": "Vị trí tương đối giữa hai đường thẳng",
+      "type": "CONCEPT",
+      "description": "Quan hệ giữa hai đường thẳng trong mặt phẳng toạ độ, bao gồm cắt nhau, song song, trùng nhau, vuông góc.",
+      "grade": 10
+    },
+    {
+      "id": "GIAO_DIEM_CUA_HAI_DUONG_THANG",
+      "name": "Giao điểm của hai đường thẳng",
+      "type": "CONCEPT",
+      "description": "Điểm chung của hai đường thẳng cắt nhau, là nghiệm của hệ phương trình tương ứng.",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_CHI_PHUONG",
+      "name": "Vectơ chỉ phương",
+      "type": "CONCEPT",
+      "description": "Vectơ có cùng hướng với đường thẳng, dùng để xác định phương hướng của đường thẳng.",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_PHAP_TUYEN",
+      "name": "Vectơ pháp tuyến",
+      "type": "CONCEPT",
+      "description": "Vectơ vuông góc với đường thẳng, dùng để xác định phương hướng của đường thẳng.",
+      "grade": 10
+    },
+    {
+      "id": "GOC_GIUA_HAI_DUONG_THANG",
+      "name": "Góc giữa hai đường thẳng",
+      "type": "CONCEPT",
+      "description": "Góc không tù tạo bởi hai đường thẳng cắt nhau, được xác định bằng công thức liên quan đến vectơ pháp tuyến hoặc vectơ chỉ phương.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "name": "Công thức tính góc giữa hai đường thẳng",
+      "type": "FORMULA",
+      "description": "Công thức tính góc giữa hai đường thẳng dựa trên vectơ pháp tuyến hoặc vectơ chỉ phương.",
+      "grade": 10
+    },
+    {
+      "id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "name": "Khoảng cách từ điểm đến đường thẳng",
+      "type": "CONCEPT",
+      "description": "Khoảng cách ngắn nhất từ một điểm đến một đường thẳng trong mặt phẳng toạ độ.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_TINH_KHOANG_CACH",
+      "name": "Công thức tính khoảng cách từ điểm đến đường thẳng",
+      "type": "FORMULA",
+      "description": "Công thức tính khoảng cách từ điểm M(x₀, y₀) đến đường thẳng ax + by + c = 0.",
+      "grade": 10
+    },
+    {
+      "id": "METHOD_TIM_GIAO_DIEM",
+      "name": "Phương pháp tìm giao điểm của hai đường thẳng",
+      "type": "METHOD",
+      "description": "Giải hệ phương trình của hai đường thẳng để tìm giao điểm.",
+      "grade": 10
+    },
+    {
+      "id": "METHOD_XAC_DINH_VI_TRI_TUONG_DOI",
+      "name": "Phương pháp xác định vị trí tương đối giữa hai đường thẳng",
+      "type": "METHOD",
+      "description": "Sử dụng vectơ chỉ phương hoặc vectơ pháp tuyến để xác định vị trí tương đối giữa hai đường thẳng.",
+      "grade": 10
+    },
+    {
+      "id": "METHOD_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "name": "Phương pháp tính góc giữa hai đường thẳng",
+      "type": "METHOD",
+      "description": "Sử dụng công thức liên quan đến vectơ pháp tuyến hoặc vectơ chỉ phương để tính góc giữa hai đường thẳng.",
+      "grade": 10
+    },
+    {
+      "id": "METHOD_TINH_KHOANG_CACH",
+      "name": "Phương pháp tính khoảng cách từ điểm đến đường thẳng",
+      "type": "METHOD",
+      "description": "Áp dụng công thức khoảng cách từ điểm đến đường thẳng để tính toán.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+      "target": "PHUONG_TRINH_DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "Phương trình đường thẳng là một phần của đại diện đại số cho đường thẳng trong mặt phẳng toạ độ."
+    },
+    {
+      "source": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+      "target": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+      "relation": "PART_OF",
+      "rationale": "Vị trí tương đối giữa hai đường thẳng là một khái niệm liên quan đến đường thẳng trong mặt phẳng toạ độ."
+    },
+    {
+      "source": "GIAO_DIEM_CUA_HAI_DUONG_THANG",
+      "target": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "Giao điểm của hai đường thẳng là một phần của việc xác định vị trí tương đối giữa hai đường thẳng."
+    },
+    {
+      "source": "VECTO_CHI_PHUONG",
+      "target": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+      "relation": "PART_OF",
+      "rationale": "Vectơ chỉ phương là một phần của đại diện đại số cho đường thẳng trong mặt phẳng toạ độ."
+    },
+    {
+      "source": "VECTO_PHAP_TUYEN",
+      "target": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+      "relation": "PART_OF",
+      "rationale": "Vectơ pháp tuyến là một phần của đại diện đại số cho đường thẳng trong mặt phẳng toạ độ."
+    },
+    {
+      "source": "GOC_GIUA_HAI_DUONG_THANG",
+      "target": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "Góc giữa hai đường thẳng là một phần của việc xác định vị trí tương đối giữa hai đường thẳng."
+    },
+    {
+      "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "GOC_GIUA_HAI_DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "Công thức tính góc giữa hai đường thẳng là một phần của khái niệm góc giữa hai đường thẳng."
+    },
+    {
+      "source": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "target": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+      "relation": "PART_OF",
+      "rationale": "Khoảng cách từ điểm đến đường thẳng là một phần của đại diện đại số cho đường thẳng trong mặt phẳng toạ độ."
+    },
+    {
+      "source": "CONG_THUC_TINH_KHOANG_CACH",
+      "target": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "Công thức tính khoảng cách từ điểm đến đường thẳng là một phần của khái niệm khoảng cách từ điểm đến đường thẳng."
+    },
+    {
+      "source": "METHOD_TIM_GIAO_DIEM",
+      "target": "GIAO_DIEM_CUA_HAI_DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "Phương pháp tìm giao điểm của hai đường thẳng là một phần của khái niệm giao điểm của hai đường thẳng."
+    },
+    {
+      "source": "METHOD_XAC_DINH_VI_TRI_TUONG_DOI",
+      "target": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "Phương pháp xác định vị trí tương đối giữa hai đường thẳng là một phần của khái niệm vị trí tương đối giữa hai đường thẳng."
+    },
+    {
+      "source": "METHOD_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "GOC_GIUA_HAI_DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "Phương pháp tính góc giữa hai đường thẳng là một phần của khái niệm góc giữa hai đường thẳng."
+    },
+    {
+      "source": "METHOD_TINH_KHOANG_CACH",
+      "target": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "Phương pháp tính khoảng cách từ điểm đến đường thẳng là một phần của khái niệm khoảng cách từ điểm đến đường thẳng."
+    },
+    {
+      "source": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Vị trí tương đối giữa hai đường thẳng yêu cầu kiến thức về vectơ chỉ phương."
+    },
+    {
+      "source": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+      "target": "VECTO_PHAP_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": "Vị trí tương đối giữa hai đường thẳng yêu cầu kiến thức về vectơ pháp tuyến."
+    },
+    {
+      "source": "GOC_GIUA_HAI_DUONG_THANG",
+      "target": "VECTO_PHAP_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": "Góc giữa hai đường thẳng yêu cầu kiến thức về vectơ pháp tuyến."
+    },
+    {
+      "source": "GOC_GIUA_HAI_DUONG_THANG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Góc giữa hai đường thẳng yêu cầu kiến thức về vectơ chỉ phương."
+    },
+    {
+      "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "VECTO_PHAP_TUYEN",
+      "relation": "REQUIRES",
+      "rationale": "Công thức tính góc giữa hai đường thẳng yêu cầu kiến thức về vectơ pháp tuyến."
+    },
+    {
+      "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+      "target": "VECTO_CHI_PHUONG",
+      "relation": "REQUIRES",
+      "rationale": "Công thức tính góc giữa hai đường thẳng yêu cầu kiến thức về vectơ chỉ phương."
+    },
+    {
+      "source": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+      "target": "PHUONG_TRINH_DUONG_THANG",
+      "relation": "REQUIRES",
+      "rationale": "Khoảng cách từ điểm đến đường thẳng yêu cầu kiến thức về phương trình đường thẳng."
+    },
+    {
+      "source": "CONG_THUC_TINH_KHOANG_CACH",
+      "target": "PHUONG_TRINH_DUONG_THANG",
+      "relation": "REQUIRES",
+      "rationale": "Công thức tính khoảng cách từ điểm đến đường thẳng yêu cầu kiến thức về phương trình đường thẳng."
+    }
+  ]
+}

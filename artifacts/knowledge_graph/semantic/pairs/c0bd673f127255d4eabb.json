@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEM_KHONG_THUOC_MAT_PHANG",
+  "right_id": "DIEM_THUOC_MAT_PHANG",
+  "merge": false,
+  "rationale": "These are complementary but opposite concepts: a point belonging to a plane vs. a point not belonging to a plane. They are distinct basic relations in geometry, not semantic duplicates."
+}

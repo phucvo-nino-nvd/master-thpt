@@ -1,0 +1,130 @@
+{
+  "chunk_id": "toan-10-tap-2:0003",
+  "nodes": [
+    {
+      "id": "TAM_THUC_BAC_HAI",
+      "name": "Tam thức bậc hai",
+      "type": "CONCEPT",
+      "description": "Biểu thức có dạng ax² + bx + c với a, b, c là số thực và a ≠ 0.",
+      "grade": 10
+    },
+    {
+      "id": "DAU_CUA_TAM_THUC_BAC_HAI",
+      "name": "Dấu của tam thức bậc hai",
+      "type": "CONCEPT",
+      "description": "Dấu của tam thức bậc hai phụ thuộc vào hệ số a và biệt thức Δ.",
+      "grade": 10
+    },
+    {
+      "id": "BIET_THUC",
+      "name": "Biệt thức",
+      "type": "CONCEPT",
+      "description": "Δ = b² - 4ac, dùng để xác định dấu của tam thức bậc hai.",
+      "grade": 10
+    },
+    {
+      "id": "BIET_THUC_THU_GON",
+      "name": "Biệt thức thu gọn",
+      "type": "CONCEPT",
+      "description": "Δ' = b² - ac, dùng để xác định dấu của tam thức bậc hai.",
+      "grade": 10
+    },
+    {
+      "id": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+      "name": "Định lí về dấu tam thức bậc hai",
+      "type": "THEOREM",
+      "description": "Mối quan hệ giữa dấu của tam thức bậc hai và dấu của hệ số a trong từng trường hợp của Δ.",
+      "grade": 10
+    },
+    {
+      "id": "BAT_PHUONG_TRINH_BAC_HAI",
+      "name": "Bất phương trình bậc hai",
+      "type": "CONCEPT",
+      "description": "Bất phương trình có dạng ax² + bx + c > 0, ax² + bx + c ≥ 0, ax² + bx + c < 0, hoặc ax² + bx + c ≤ 0 với a, b, c là số thực và a ≠ 0.",
+      "grade": 10
+    },
+    {
+      "id": "NGHIEM_BAT_PHUONG_TRINH",
+      "name": "Nghiệm của bất phương trình",
+      "type": "CONCEPT",
+      "description": "Số thực x₀ gọi là nghiệm của bất phương trình bậc hai nếu thỏa mãn bất phương trình.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_NGHIEM_BAT_PHUONG_TRINH",
+      "name": "Tập nghiệm của bất phương trình",
+      "type": "CONCEPT",
+      "description": "Tập hợp gồm tất cả các nghiệm của bất phương trình bậc hai.",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_BAC_HAI",
+      "name": "Phương pháp giải bất phương trình bậc hai",
+      "type": "METHOD",
+      "description": "Giải bất phương trình bậc hai bằng cách xét dấu của tam thức bậc hai.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "DAU_CUA_TAM_THUC_BAC_HAI",
+      "target": "TAM_THUC_BAC_HAI",
+      "relation": "REQUIRES",
+      "rationale": "Dấu của tam thức bậc hai phụ thuộc vào tam thức bậc hai."
+    },
+    {
+      "source": "DAU_CUA_TAM_THUC_BAC_HAI",
+      "target": "BIET_THUC",
+      "relation": "REQUIRES",
+      "rationale": "Dấu của tam thức bậc hai phụ thuộc vào biệt thức."
+    },
+    {
+      "source": "DAU_CUA_TAM_THUC_BAC_HAI",
+      "target": "BIET_THUC_THU_GON",
+      "relation": "REQUIRES",
+      "rationale": "Dấu của tam thức bậc hai cũng có thể phụ thuộc vào biệt thức thu gọn."
+    },
+    {
+      "source": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+      "target": "TAM_THUC_BAC_HAI",
+      "relation": "REQUIRES",
+      "rationale": "Định lí về dấu tam thức bậc hai áp dụng cho tam thức bậc hai."
+    },
+    {
+      "source": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+      "target": "BIET_THUC",
+      "relation": "REQUIRES",
+      "rationale": "Định lí về dấu tam thức bậc hai sử dụng biệt thức."
+    },
+    {
+      "source": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+      "target": "BIET_THUC_THU_GON",
+      "relation": "REQUIRES",
+      "rationale": "Định lí về dấu tam thức bậc hai cũng có thể sử dụng biệt thức thu gọn."
+    },
+    {
+      "source": "BAT_PHUONG_TRINH_BAC_HAI",
+      "target": "TAM_THUC_BAC_HAI",
+      "relation": "REQUIRES",
+      "rationale": "Bất phương trình bậc hai liên quan đến tam thức bậc hai."
+    },
+    {
+      "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_BAC_HAI",
+      "target": "TAM_THUC_BAC_HAI",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp giải bất phương trình bậc hai sử dụng tam thức bậc hai."
+    },
+    {
+      "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_BAC_HAI",
+      "target": "DAU_CUA_TAM_THUC_BAC_HAI",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp giải bất phương trình bậc hai sử dụng dấu của tam thức bậc hai."
+    },
+    {
+      "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_BAC_HAI",
+      "target": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp giải bất phương trình bậc hai sử dụng định lí về dấu tam thức bậc hai."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "TRONG_TAM_TAM_GIAC",
+      "name": "Trọng tâm tam giác",
+      "type": "CONCEPT",
+      "description": "Điểm G là trọng tâm của tam giác ABC nếu và chỉ nếu GA + GB + GC = 0."
+    },
+    {
+      "id": "TOA_DO_TRONG_TAM_TAM_GIAC",
+      "name": "Tọa độ trọng tâm tam giác",
+      "type": "FORMULA",
+      "description": "Trọng tâm G của tam giác ABC có tọa độ ((xA + xB + xC)/3; (yA + yB + yC)/3)."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0008",
+      "original_id": "TRONG_TAM_TAM_GIAC",
+      "canonical_id": "TRONG_TAM_TAM_GIAC",
+      "rationale": "This occurrence defines the concept of the centroid of a triangle using a vector condition. It is a valid CONCEPT definition."
+    },
+    {
+      "chunk_id": "toan-10-tap-1:0010",
+      "original_id": "TRONG_TAM_TAM_GIAC",
+      "canonical_id": "TOA_DO_TRONG_TAM_TAM_GIAC",
+      "rationale": "This occurrence provides the coordinate formula for the centroid. It is a distinct FORMULA, not the concept itself. Therefore, it should be split into a separate canonical node."
+    }
+  ]
+}

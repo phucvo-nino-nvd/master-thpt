@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_HUU_HAN",
+  "right_id": "GIOI_HAN_LA_A",
+  "merge": false,
+  "rationale": "The left node is the general concept of a finite limit. The right node is a specific definition for the limit of a sequence being a particular real number 'a'. The right is a specific case or definition within the general concept."
+}

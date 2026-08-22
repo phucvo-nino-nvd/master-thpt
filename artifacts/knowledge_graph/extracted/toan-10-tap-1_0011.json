@@ -1,0 +1,118 @@
+{
+  "chunk_id": "toan-10-tap-1:0011",
+  "nodes": [
+    {
+      "id": "GOC_GIUA_HAI_VECTO",
+      "name": "Góc giữa hai vectơ",
+      "type": "CONCEPT",
+      "description": "Số đo góc giữa hai vectơ không phải vectơ không, kí hiệu là (u, v).",
+      "grade": 10
+    },
+    {
+      "id": "TICH_VO_HUONG",
+      "name": "Tích vô hướng",
+      "type": "CONCEPT",
+      "description": "Tích vô hướng của hai vectơ u và v là một số, kí hiệu là u·v, được xác định bởi công thức u·v = |u|·|v|·cos(u, v).",
+      "grade": 10
+    },
+    {
+      "id": "TICH_VO_HUONG_VUONG_GOC",
+      "name": "Tích vô hướng và vuông góc",
+      "type": "THEOREM",
+      "description": "Hai vectơ u và v vuông góc với nhau khi và chỉ khi u·v = 0.",
+      "grade": 10
+    },
+    {
+      "id": "BINH_PHUONG_VO_HUONG",
+      "name": "Bình phương vô hướng",
+      "type": "CONCEPT",
+      "description": "Bình phương vô hướng của một vectơ u là u·u, được viết là u² và bằng bình phương độ dài của vectơ đó.",
+      "grade": 10
+    },
+    {
+      "id": "CONG_THUC_TOA_DO_TICH_VO_HUONG",
+      "name": "Công thức toạ độ của tích vô hướng",
+      "type": "FORMULA",
+      "description": "Tích vô hướng của hai vectơ u = (x; y) và v = (x'; y') được tính theo công thức u·v = xx' + yy'.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_TICH_VO_HUONG",
+      "name": "Tính chất của tích vô hướng",
+      "type": "THEOREM",
+      "description": "Tích vô hướng có tính chất giao hoán, phân phối đối với phép cộng và tương thích với phép nhân số thực.",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_VUONG_GOC",
+      "name": "Tính chất vuông góc",
+      "type": "THEOREM",
+      "description": "Hai vectơ u và v vuông góc với nhau khi và chỉ khi xx' + yy' = 0, với u = (x; y) và v = (x'; y').",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_BINH_PHUONG_VO_HUONG",
+      "name": "Tính chất bình phương vô hướng",
+      "type": "THEOREM",
+      "description": "Bình phương vô hướng của vectơ u = (x; y) là u² = x² + y².",
+      "grade": 10
+    },
+    {
+      "id": "TINH_CHAT_COS_GOC",
+      "name": "Tính chất cos góc",
+      "type": "THEOREM",
+      "description": "Nếu u ≠ 0 và v ≠ 0, thì cos(u, v) = (u·v) / (|u|·|v|) = (xx' + yy') / (√(x² + y²)·√(x'² + y'²)).",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "TICH_VO_HUONG",
+      "target": "GOC_GIUA_HAI_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Tích vô hướng được định nghĩa dựa trên góc giữa hai vectơ."
+    },
+    {
+      "source": "TICH_VO_HUONG_VUONG_GOC",
+      "target": "TICH_VO_HUONG",
+      "relation": "REQUIRES",
+      "rationale": "Định lý về tích vô hướng và vuông góc dựa trên định nghĩa của tích vô hướng."
+    },
+    {
+      "source": "BINH_PHUONG_VO_HUONG",
+      "target": "TICH_VO_HUONG",
+      "relation": "REQUIRES",
+      "rationale": "Bình phương vô hướng là một trường hợp đặc biệt của tích vô hướng."
+    },
+    {
+      "source": "CONG_THUC_TOA_DO_TICH_VO_HUONG",
+      "target": "TICH_VO_HUONG",
+      "relation": "REQUIRES",
+      "rationale": "Công thức toạ độ của tích vô hướng là một cách tính cụ thể của tích vô hướng."
+    },
+    {
+      "source": "TINH_CHAT_TICH_VO_HUONG",
+      "target": "TICH_VO_HUONG",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất của tích vô hướng dựa trên định nghĩa của tích vô hướng."
+    },
+    {
+      "source": "TINH_CHAT_VUONG_GOC",
+      "target": "CONG_THUC_TOA_DO_TICH_VO_HUONG",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất vuông góc dựa trên công thức toạ độ của tích vô hướng."
+    },
+    {
+      "source": "TINH_CHAT_BINH_PHUONG_VO_HUONG",
+      "target": "BINH_PHUONG_VO_HUONG",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất bình phương vô hướng dựa trên định nghĩa của bình phương vô hướng."
+    },
+    {
+      "source": "TINH_CHAT_COS_GOC",
+      "target": "TICH_VO_HUONG",
+      "relation": "REQUIRES",
+      "rationale": "Tính chất cos góc dựa trên định nghĩa của tích vô hướng."
+    }
+  ]
+}

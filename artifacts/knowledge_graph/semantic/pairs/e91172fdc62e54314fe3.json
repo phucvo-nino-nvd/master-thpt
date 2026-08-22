@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "right_id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+  "merge": false,
+  "rationale": "Different theorems about distinct geometric configurations: one about two lines perpendicular to a plane, the other about a plane containing a line parallel to another line. They are not semantic duplicates."
+}

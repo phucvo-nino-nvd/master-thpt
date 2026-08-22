@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "DUONG_THANG_SONG_SONG",
+      "name": "Hai đường thẳng song song",
+      "type": "CONCEPT",
+      "description": "Hai đường thẳng đồng phẳng và không có điểm chung."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0011",
+      "original_id": "DUONG_THANG_SONG_SONG",
+      "canonical_id": "DUONG_THANG_SONG_SONG",
+      "rationale": "This is the core definition of parallel lines as a concept."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0005",
+      "original_id": "DUONG_THANG_SONG",
+      "canonical_id": "DUONG_THANG_SONG_SONG",
+      "rationale": "This describes a theorem/condition for parallel lines in space, which is a specific property/result about the same core concept. Grade difference is not a reason to split. The theorem is a property of the concept."
+    }
+  ]
+}

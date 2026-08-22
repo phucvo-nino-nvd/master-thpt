@@ -1,0 +1,6 @@
+{
+  "left_id": "NGHIEM_BAT_PHUONG_TRINH",
+  "right_id": "NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "The left node is the concept of a solution to a quadratic inequality, while the right node is the concept of a solution to a system of linear inequalities in two variables. They are distinct concepts related to different types of inequalities."
+}

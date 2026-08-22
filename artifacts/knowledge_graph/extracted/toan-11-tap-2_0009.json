@@ -1,0 +1,138 @@
+{
+  "chunk_id": "toan-11-tap-2:0009",
+  "nodes": [
+    {
+      "id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "name": "Đường thẳng vuông góc với mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Đường thẳng vuông góc với mọi đường thẳng nằm trong mặt phẳng",
+      "grade": 11
+    },
+    {
+      "id": "MAT_PHANG_TRUNG_TRUC",
+      "name": "Mặt phẳng trung trực",
+      "type": "CONCEPT",
+      "description": "Mặt phẳng đi qua trung điểm của đoạn thẳng và vuông góc với đường thẳng đó",
+      "grade": 11
+    },
+    {
+      "id": "TINH_CHAT_DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "name": "Tính chất đường thẳng vuông góc với mặt phẳng",
+      "type": "THEOREM",
+      "description": "Nếu một đường thẳng vuông góc với hai đường thẳng cắt nhau thuộc cùng một mặt phẳng thì nó vuông góc với mặt phẳng đó",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+      "name": "Đường thẳng vuông góc với mặt phẳng cắt nhau",
+      "type": "THEOREM",
+      "description": "Nếu đường thẳng vuông góc với mặt phẳng thì chúng có cắt nhau",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+      "name": "Đường thẳng vuông góc với hai cạnh của tam giác",
+      "type": "THEOREM",
+      "description": "Nếu một đường thẳng vuông góc với hai cạnh của một tam giác thì đường thẳng đó vuông góc với cạnh còn lại",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+      "name": "Đường thẳng vuông góc với mặt phẳng song song",
+      "type": "THEOREM",
+      "description": "Nếu đường thẳng vuông góc với mặt phẳng thì các đường thẳng song song với đường thẳng đó cũng vuông góc với mặt phẳng",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+      "name": "Đường thẳng vuông góc với mặt phẳng phân biệt",
+      "type": "THEOREM",
+      "description": "Hai đường thẳng phân biệt cùng vuông góc với một mặt phẳng thì song song với nhau",
+      "grade": 11
+    },
+    {
+      "id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+      "name": "Mặt phẳng vuông góc với đường thẳng",
+      "type": "THEOREM",
+      "description": "Có duy nhất một mặt phẳng đi qua một điểm cho trước và vuông góc với một đường thẳng cho trước",
+      "grade": 11
+    },
+    {
+      "id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+      "name": "Mặt phẳng vuông góc với đường thẳng song song",
+      "type": "THEOREM",
+      "description": "Hai mặt phẳng phân biệt cùng vuông góc với một đường thẳng thì song song với nhau",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+      "name": "Đường thẳng vuông góc với mặt phẳng song song với mặt phẳng",
+      "type": "THEOREM",
+      "description": "Nếu đường thẳng vuông góc với mặt phẳng thì nó vuông góc với mọi đường thẳng song song với mặt phẳng",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+      "name": "Đường thẳng vuông góc với mặt phẳng và mặt phẳng",
+      "type": "THEOREM",
+      "description": "Nếu đường thẳng và mặt phẳng cùng vuông góc với một đường thẳng thì đường thẳng nằm trong mặt phẳng hoặc song song với mặt phẳng",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "target": "TINH_CHAT_DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "target": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "target": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+      "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

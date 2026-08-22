@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_DUONG_TRON_CHUA_THICH",
+  "right_id": "PHUONG_TRINH_DUONG_TRON_DA_THICH",
+  "merge": false,
+  "rationale": "phương trình đường tròn chưa thích (expanded form) and phương trình đường tròn đã thích (standard form) are different algebraic forms of the circle equation; they are representations of the same geometric object but are distinct formula nodes."
+}

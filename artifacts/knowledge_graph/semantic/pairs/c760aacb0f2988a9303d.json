@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_MU",
+  "right_id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_MU",
+  "merge": false,
+  "rationale": "Left describes a method for solving exponential inequalities, right for solving exponential equations. They are related but distinct procedures."
+}

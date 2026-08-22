@@ -1,0 +1,6 @@
+{
+  "left_id": "GIAO_HAI_TAP_HOP",
+  "right_id": "TAP_HOP_GIAO",
+  "merge": true,
+  "rationale": "Both describe the same mathematical concept: the intersection of two sets. Descriptions are semantically identical despite slight wording differences."
+}

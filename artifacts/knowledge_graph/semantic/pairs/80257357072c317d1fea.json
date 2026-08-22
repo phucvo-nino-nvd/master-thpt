@@ -1,0 +1,6 @@
+{
+  "left_id": "HIEU_HAI_TAP_HOP",
+  "right_id": "TAP_HOP",
+  "merge": false,
+  "rationale": "The left node is the concept of the set difference operation. The right node is the general concept of a set. The set difference is an operation defined on sets. One is an operation, the other is the fundamental object. They are not identical."
+}

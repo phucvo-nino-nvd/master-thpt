@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_COS_X_M",
+  "right_id": "PHUONG_TRINH_TAN_X_M",
+  "merge": false,
+  "rationale": "The left node is the formula/solution for cos x = m. The right node is for tan x = m. They are distinct trigonometric equations, so KEEP."
+}

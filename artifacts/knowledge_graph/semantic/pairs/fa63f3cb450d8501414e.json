@@ -1,0 +1,6 @@
+{
+  "left_id": "SAI_SO_TUONG_DOI",
+  "right_id": "SAI_SO_TUYET_DOI",
+  "merge": false,
+  "rationale": "The left node is the concept of 'relative error'. The right node is the concept of 'absolute error'. They are distinct but related concepts in error measurement."
+}

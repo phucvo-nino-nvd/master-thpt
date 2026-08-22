@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_CAT_MAT_PHANG",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node defines the concept of a line intersecting a plane. The right node defines the concept of a line perpendicular to a plane. A perpendicular line is a special case of an intersecting line, but they are distinct concepts with different definitions and properties."
+}

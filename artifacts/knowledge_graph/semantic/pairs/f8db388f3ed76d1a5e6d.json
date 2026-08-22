@@ -1,0 +1,6 @@
+{
+  "left_id": "TAP_HOP_GIAO",
+  "right_id": "TAP_HOP_HOP",
+  "merge": false,
+  "rationale": "These are two distinct set operations: intersection (A ∩ B) and union (A ∪ B). They are related but represent different fundamental operations in set theory. They are not the same reusable knowledge."
+}

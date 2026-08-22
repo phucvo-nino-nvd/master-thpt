@@ -1,0 +1,6 @@
+{
+  "left_id": "BIEN_CO_A",
+  "right_id": "BIEN_CO_DOI",
+  "merge": false,
+  "rationale": "A generic event A vs the concept of a complementary event. They are related but not identical; one is a general concept, the other a specific property/relation."
+}

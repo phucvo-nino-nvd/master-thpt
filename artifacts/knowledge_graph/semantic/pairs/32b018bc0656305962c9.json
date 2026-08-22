@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_MU",
+  "right_id": "DAO_HAM_CUA_TONG_HIEU",
+  "merge": false,
+  "rationale": "The left node 'Đạo hàm của hàm số mũ' is a formula/rule for the derivative of exponential functions. The right node 'Đạo hàm của tổng, hiệu' is a formula/rule for the derivative of sums and differences. They are distinct derivative rules for different types of functions/operations."
+}

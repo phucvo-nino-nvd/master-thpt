@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_LIEN_TUC_HAM_PHAN_THUC",
+  "right_id": "TINH_CHAT_LIEN_TUC_HAM_TAN_COT",
+  "merge": false,
+  "rationale": "The left node states the continuity of rational functions, while the right node states the continuity of tangent and cotangent functions. They are separate theorems about the continuity of different function classes."
+}

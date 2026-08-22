@@ -1,0 +1,6 @@
+{
+  "left_id": "HINH_HOP",
+  "right_id": "HINH_HOP_DUNG",
+  "merge": false,
+  "rationale": "The left node is 'Hình hộp' (parallelepiped/box), a general concept. The right node is 'Hình hộp đứng' (right/rectangular prism), which is a specific subtype where lateral edges are perpendicular to the base. A general concept and its strict subtype should be kept separate."
+}

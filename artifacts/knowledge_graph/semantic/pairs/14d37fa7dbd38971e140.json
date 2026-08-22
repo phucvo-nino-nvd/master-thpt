@@ -1,0 +1,6 @@
+{
+  "left_id": "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU",
+  "right_id": "QUAN_HE_LUONG_GIAC_GOC_BU",
+  "merge": false,
+  "rationale": "The left node gives trigonometric formulas for complementary angles (sum to pi/2). The right node gives formulas for supplementary angles (sum to pi). They are two different sets of trigonometric identities for different angle relationships. They are not the same reusable knowledge."
+}

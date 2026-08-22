@@ -1,0 +1,6 @@
+{
+  "left_id": "HO_NGUYEN_HAM",
+  "right_id": "NGUYEN_HAM",
+  "merge": false,
+  "rationale": "The left node is the concept of a family of antiderivatives (F(x)+C), while the right node is the concept of an antiderivative itself (F(x)). One is a set containing the other; they are related but not identical."
+}

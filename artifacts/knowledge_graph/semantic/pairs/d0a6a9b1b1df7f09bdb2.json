@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+  "merge": false,
+  "rationale": "The left node describes a property of a line perpendicular to a plane (it is perpendicular to every line parallel to that plane). The right node states the existence and uniqueness of a plane through a point perpendicular to a given line. These are distinct geometric theorems about different relationships (line-plane vs. plane-line)."
+}

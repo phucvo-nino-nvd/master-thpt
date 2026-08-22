@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_BIEN_DOI_TICH_THANH_TONG",
+  "right_id": "CONG_THUC_BIEN_DOI_TONG_THANH_TICH",
+  "merge": false,
+  "rationale": "These are two different sets of trigonometric identities. One transforms products into sums, the other transforms sums into products. They are inverse operations. They are related but represent distinct reusable formula groups."
+}

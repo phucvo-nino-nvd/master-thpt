@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_NHAN_XAC_SUAT_BIEN_CO_DOC_LAP",
+  "right_id": "CONG_THUC_NHAN_XAC_SUAT_TONG_QUAT",
+  "merge": false,
+  "rationale": "The left formula is the special case for independent events (P(AB) = P(A)*P(B)). The right is the general multiplication rule (P(AB) = P(B)*P(A|B)). The independent case is a specific application of the general rule when P(A|B)=P(A). They are related but not identical; the general rule contains additional conditional probability content."
+}

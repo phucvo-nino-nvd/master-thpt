@@ -1,0 +1,163 @@
+{
+  "chunk_id": "toan-12-tap-2:0001",
+  "nodes": [
+    {
+      "id": "NGUYEN_HAM",
+      "name": "Nguyên hàm",
+      "type": "CONCEPT",
+      "description": "Hàm số F(x) được gọi là nguyên hàm của hàm số f(x) trên khoảng K nếu F'(x) = f(x) với mọi x thuộc K.",
+      "grade": 12
+    },
+    {
+      "id": "HO_NGUYEN_HAM",
+      "name": "Họ nguyên hàm",
+      "type": "CONCEPT",
+      "description": "Tập các nguyên hàm của một hàm số, có dạng F(x) + C (C là hằng số).",
+      "grade": 12
+    },
+    {
+      "id": "BANG_NGUYEN_HAM",
+      "name": "Bảng nguyên hàm",
+      "type": "CONCEPT",
+      "description": "Bảng tổng kết các nguyên hàm của các hàm số thường gặp.",
+      "grade": 12
+    },
+    {
+      "id": "NGUYEN_HAM_HAM_SO_LUY_THUA",
+      "name": "Nguyên hàm của hàm số lũy thừa",
+      "type": "FORMULA",
+      "description": "Nguyên hàm của hàm số lũy thừa y = x^α (α ∈ ℝ) là ∫x^α dx = x^(α+1)/(α+1) + C (α ≠ -1).",
+      "grade": 12
+    },
+    {
+      "id": "NGUYEN_HAM_HAM_SO_LN",
+      "name": "Nguyên hàm của hàm số ln",
+      "type": "FORMULA",
+      "description": "Nguyên hàm của hàm số ln|x| là ∫(1/x) dx = ln|x| + C.",
+      "grade": 12
+    },
+    {
+      "id": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT",
+      "name": "Nguyên hàm của hàm số lũy thừa tổng quát",
+      "type": "FORMULA",
+      "description": "Nguyên hàm của hàm số lũy thừa y = x^α (α ∈ ℝ) là ∫x^α dx = x^(α+1)/(α+1) + C (α ≠ -1).",
+      "grade": 12
+    },
+    {
+      "id": "NGUYEN_HAM_HAM_SO_LUONG_GIAC",
+      "name": "Nguyên hàm của hàm số lượng giác",
+      "type": "FORMULA",
+      "description": "Nguyên hàm của các hàm số lượng giác: ∫cos x dx = sin x + C, ∫sin x dx = -cos x + C, ∫(1/cos²x) dx = tan x + C, ∫(1/sin²x) dx = -cot x + C.",
+      "grade": 12
+    },
+    {
+      "id": "NGUYEN_HAM_HAM_SO_MU",
+      "name": "Nguyên hàm của hàm số mũ",
+      "type": "FORMULA",
+      "description": "Nguyên hàm của hàm số mũ: ∫e^x dx = e^x + C, ∫a^x dx = a^x/ln a + C (0 < a ≠ 1).",
+      "grade": 12
+    },
+    {
+      "id": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+      "name": "Tính chất cơ bản của nguyên hàm",
+      "type": "THEOREM",
+      "description": "Nếu F(x) là nguyên hàm của f(x) trên K, thì với mỗi hằng số C, F(x) + C cũng là nguyên hàm của f(x) trên K. Mọi nguyên hàm của f(x) trên K đều có dạng F(x) + C.",
+      "grade": 12
+    },
+    {
+      "id": "TINH_CHAT_TICH_HAM_SO",
+      "name": "Tính chất tích hàm số",
+      "type": "THEOREM",
+      "description": "Nếu F(x) là nguyên hàm của f(x) trên K, thì với mỗi hằng số k ≠ 0, kF(x) là nguyên hàm của kf(x) trên K. ∫kf(x) dx = k∫f(x) dx (k ≠ 0).",
+      "grade": 12
+    },
+    {
+      "id": "TINH_CHAT_TONG_HAM_SO",
+      "name": "Tính chất tổng hàm số",
+      "type": "THEOREM",
+      "description": "Nếu F(x) và G(x) là nguyên hàm của f(x) và g(x) trên K, thì F(x) + G(x) là nguyên hàm của f(x) + g(x) trên K. ∫[f(x) + g(x)] dx = ∫f(x) dx + ∫g(x) dx.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_PHAP_TIM_NGUYEN_HAM",
+      "name": "Phương pháp tìm nguyên hàm",
+      "type": "METHOD",
+      "description": "Để tìm nguyên hàm của một hàm số, ta tìm một hàm số F(x) sao cho F'(x) = f(x), sau đó thêm hằng số C vào kết quả.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "NGUYEN_HAM",
+      "target": "HO_NGUYEN_HAM",
+      "relation": "REQUIRES",
+      "rationale": "Học về nguyên hàm trước khi học về họ nguyên hàm."
+    },
+    {
+      "source": "NGUYEN_HAM",
+      "target": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+      "relation": "REQUIRES",
+      "rationale": "Học về nguyên hàm trước khi học về tính chất cơ bản của nguyên hàm."
+    },
+    {
+      "source": "NGUYEN_HAM",
+      "target": "TINH_CHAT_TICH_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "Học về nguyên hàm trước khi học về tính chất tích hàm số."
+    },
+    {
+      "source": "NGUYEN_HAM",
+      "target": "TINH_CHAT_TONG_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "Học về nguyên hàm trước khi học về tính chất tổng hàm số."
+    },
+    {
+      "source": "NGUYEN_HAM",
+      "target": "PHUONG_PHAP_TIM_NGUYEN_HAM",
+      "relation": "REQUIRES",
+      "rationale": "Học về nguyên hàm trước khi học phương pháp tìm nguyên hàm."
+    },
+    {
+      "source": "HO_NGUYEN_HAM",
+      "target": "BANG_NGUYEN_HAM",
+      "relation": "REQUIRES",
+      "rationale": "Học về họ nguyên hàm trước khi học bảng nguyên hàm."
+    },
+    {
+      "source": "NGUYEN_HAM_HAM_SO_LUY_THUA",
+      "target": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT",
+      "relation": "IS_A",
+      "rationale": "Nguyên hàm của hàm số lũy thừa là một trường hợp đặc biệt của nguyên hàm của hàm số lũy thừa tổng quát."
+    },
+    {
+      "source": "NGUYEN_HAM_HAM_SO_LN",
+      "target": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT",
+      "relation": "IS_A",
+      "rationale": "Nguyên hàm của hàm số ln là một trường hợp đặc biệt của nguyên hàm của hàm số lũy thừa tổng quát."
+    },
+    {
+      "source": "NGUYEN_HAM_HAM_SO_LUONG_GIAC",
+      "target": "NGUYEN_HAM",
+      "relation": "IS_A",
+      "rationale": "Nguyên hàm của hàm số lượng giác là một loại nguyên hàm."
+    },
+    {
+      "source": "NGUYEN_HAM_HAM_SO_MU",
+      "target": "NGUYEN_HAM",
+      "relation": "IS_A",
+      "rationale": "Nguyên hàm của hàm số mũ là một loại nguyên hàm."
+    },
+    {
+      "source": "TINH_CHAT_TICH_HAM_SO",
+      "target": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+      "relation": "IS_A",
+      "rationale": "Tính chất tích hàm số là một tính chất cơ bản của nguyên hàm."
+    },
+    {
+      "source": "TINH_CHAT_TONG_HAM_SO",
+      "target": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+      "relation": "IS_A",
+      "rationale": "Tính chất tổng hàm số là một tính chất cơ bản của nguyên hàm."
+    }
+  ]
+}

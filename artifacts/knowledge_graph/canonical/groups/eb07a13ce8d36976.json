@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "KHOANG_TU_PHAN_VI",
+      "name": "Khoảng tứ phân vị",
+      "type": "CONCEPT",
+      "description": "Hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất, dùng để đo độ phân tán của 50% số liệu chính giữa của mẫu số liệu. Không bị ảnh hưởng bởi các giá trị bất thường."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0014",
+      "original_id": "KHOANG_TU_PHAN_VI",
+      "canonical_id": "KHOANG_TU_PHAN_VI",
+      "rationale": "Both occurrences describe the same statistical concept: the interquartile range, defined as the difference between the third and first quartiles, used to measure the dispersion of the central 50% of data. The grade difference (10 vs 12) is not a reason to split, as the mathematical meaning is identical. The descriptions are consistent, with the 12th-grade description adding a note about robustness to outliers, which is a property of the same concept."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0009",
+      "original_id": "KHOANG_TU_PHAN_VI",
+      "canonical_id": "KHOANG_TU_PHAN_VI",
+      "rationale": "Both occurrences describe the same statistical concept: the interquartile range, defined as the difference between the third and first quartiles, used to measure the dispersion of the central 50% of data. The grade difference (10 vs 12) is not a reason to split, as the mathematical meaning is identical. The descriptions are consistent, with the 12th-grade description adding a note about robustness to outliers, which is a property of the same concept."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "HIEU_HAI_VECTO",
+  "right_id": "TONG_HAI_VECTO",
+  "merge": false,
+  "rationale": "These are two distinct vector operations: vector addition and vector subtraction. They are fundamental, related but opposite operations. One cannot replace the other without losing a meaningful mathematical distinction."
+}

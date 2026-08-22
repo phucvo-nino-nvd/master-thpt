@@ -1,0 +1,6 @@
+{
+  "left_id": "BANG_THONG_KE",
+  "right_id": "MAU_SO_LIEU_GHEP_NHOM",
+  "merge": false,
+  "rationale": "The left node is a 'statistical table', a tool for representation. The right node is 'grouped data', a type of data structure. They are related concepts (a table is used to present grouped data) but are not the same mathematical object. One is a representation format, the other is the data itself."
+}

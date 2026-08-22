@@ -1,0 +1,6 @@
+{
+  "left_id": "DAY_SO",
+  "right_id": "DAY_SO_HUU_HAN",
+  "merge": false,
+  "rationale": "Dãy số (infinite sequence) is a general concept; Dãy số hữu hạn (finite sequence) is a strict subtype. KEEP for general vs. special case."
+}

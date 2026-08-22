@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_CHAN",
+  "right_id": "HAM_SO_LE",
+  "merge": false,
+  "rationale": "The left node defines an even function. The right node defines an odd function. They are distinct, complementary properties of functions."
+}

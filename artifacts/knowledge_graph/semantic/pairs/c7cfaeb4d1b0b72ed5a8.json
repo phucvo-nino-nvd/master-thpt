@@ -1,0 +1,6 @@
+{
+  "left_id": "COS",
+  "right_id": "SIN",
+  "merge": false,
+  "rationale": "Left node is the 'cosine of an angle'. Right node is the 'sine of an angle'. They are distinct trigonometric ratios. They are not semantic duplicates."
+}

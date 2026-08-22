@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "TAP_GIA_TRI",
+      "name": "Tập giá trị",
+      "type": "CONCEPT",
+      "description": "Tập hợp tất cả các giá trị mà một hàm số có thể nhận được, được xác định từ tập xác định của nó."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0001",
+      "original_id": "TAP_GIA_TRI",
+      "canonical_id": "TAP_GIA_TRI",
+      "rationale": "The occurrence describes the concept of the range of a function, which is a fundamental concept in mathematics. The description in grade 10 ('Tập hợp tất cả các giá trị của hàm số được nhận được từ tập xác định.') is consistent with the general definition."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0003",
+      "original_id": "TAP_GIA_TRI",
+      "canonical_id": "TAP_GIA_TRI",
+      "rationale": "The occurrence describes the same fundamental concept of the range of a function. The description in grade 11 ('Tập tất cả các giá trị mà hàm số có thể nhận.') is semantically identical to the grade 10 description, just phrased differently. Grade differences alone are not a reason to split."
+    }
+  ]
+}

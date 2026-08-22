@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_CAN",
+  "right_id": "DIEU_KIEN_CAN_VA_DU",
+  "merge": false,
+  "rationale": "The left node is the concept of 'necessary condition'. The right node is the concept of 'necessary and sufficient condition'. One is a component of the other, but they are distinct logical concepts."
+}

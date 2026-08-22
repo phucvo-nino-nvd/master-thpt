@@ -1,0 +1,6 @@
+{
+  "left_id": "KY_HIEU_VECTO",
+  "right_id": "TONG_VECTO",
+  "merge": false,
+  "rationale": "The left node is the notation for vectors. The right node is the concept of vector addition. These are different aspects of vector theory: one is about symbolic representation, the other is an operation. They are related but not semantic duplicates."
+}

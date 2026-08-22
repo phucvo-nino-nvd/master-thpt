@@ -1,0 +1,6 @@
+{
+  "left_id": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "Related but distinct concepts: solution region of a system of inequalities vs a single solution of an inequality. They are not identical."
+}

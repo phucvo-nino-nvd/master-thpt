@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_MU",
+  "right_id": "HAM_SO_MU",
+  "merge": true,
+  "rationale": "Both nodes define the exponential function: y = a^x, with the same conditions a > 0, a ≠ 1. 'Hàm mũ' and 'Hàm số mũ' are common synonyms for the same mathematical concept. The descriptions are identical. They are semantic duplicates."
+}

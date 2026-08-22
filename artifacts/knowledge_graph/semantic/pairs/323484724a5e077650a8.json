@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_HANG_SO",
+  "right_id": "TINH_CHAT_TICH_HAM_SO",
+  "merge": false,
+  "rationale": "The left node describes a property of the definite integral with a constant factor. The right node describes a property of the indefinite integral (antiderivative) with a constant factor. While mathematically related, one is about definite integrals and the other about antiderivatives. They are not exactly the same reusable knowledge node; one could be seen as a consequence or application of the other in a specific context. Therefore, KEEP."
+}

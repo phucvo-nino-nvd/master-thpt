@@ -1,0 +1,6 @@
+{
+  "left_id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+  "right_id": "TINH_CHAT_HAI_MAT_PHANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left node is a theorem about a plane containing one line and parallel to another (for skew lines). The right node is a property of two parallel planes and a line contained in one. They describe different geometric configurations and are not semantic duplicates, so KEEP."
+}

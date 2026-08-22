@@ -1,0 +1,6 @@
+{
+  "left_id": "METHOD_TINH_GOC_GIUA_HAI_DUONG_THANG",
+  "right_id": "PHUONG_PHAP_XAC_DINH_GOC_GIUA_HAI_DUONG_THANG",
+  "merge": false,
+  "rationale": "The left node describes a method using normal or direction vectors to calculate the angle between two lines. The right node describes a geometric construction method (drawing parallel lines) to determine the angle. These are different methodological approaches to the same goal, not identical knowledge nodes."
+}

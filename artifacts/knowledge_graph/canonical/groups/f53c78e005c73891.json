@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "BIEN_CO",
+      "name": "Biến cố",
+      "type": "CONCEPT",
+      "description": "Một tập con của không gian mẫu, đại diện cho một sự kiện có thể xảy ra trong một thí nghiệm ngẫu nhiên."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0005",
+      "original_id": "BIEN_CO",
+      "canonical_id": "BIEN_CO",
+      "rationale": "Occurrence describes a basic concept of an event as a subset of the sample space. This is the core definition of a random event in probability theory."
+    },
+    {
+      "chunk_id": "toan-10-tap-2:0006",
+      "original_id": "BIEN_CO",
+      "canonical_id": "BIEN_CO",
+      "rationale": "Occurrence describes the same core concept of an event as a subset of the sample space, representing a possible outcome. Grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0015",
+      "original_id": "BIEN_CO",
+      "canonical_id": "BIEN_CO",
+      "rationale": "Occurrence describes the same core concept of an event as something that can occur in a random experiment. The description is consistent with the fundamental probability concept."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0009",
+      "original_id": "BIEN_CO_SO",
+      "canonical_id": "BIEN_CO",
+      "rationale": "Occurrence describes the same fundamental concept of a random event, despite the slightly different original ID 'BIEN_CO_SO'. The mathematical meaning is identical to the other 'BIEN_CO' occurrences."
+    }
+  ]
+}

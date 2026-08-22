@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG_FORMULA",
+  "right_id": "PHUONG_TRINH_THAM_SO_DUONG_THANG_FORMULA",
+  "merge": false,
+  "rationale": "Both nodes describe equations for a line in 3D space, but one is the canonical form and the other is the parametric form. They are different but equivalent representations of the same geometric object. According to the guidelines, a general coordinate-free theorem and its coordinate-specific form should be kept separate, and these are different coordinate representations. They are not semantic duplicates as they are distinct formula types, so KEEP."
+}

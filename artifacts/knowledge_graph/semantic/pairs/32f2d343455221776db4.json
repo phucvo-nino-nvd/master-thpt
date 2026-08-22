@@ -1,0 +1,6 @@
+{
+  "left_id": "GIA_TRI_LUONG_GIAC_GOC_DOI_NHAU",
+  "right_id": "QUAN_HE_LUONG_GIAC_GOC_BU",
+  "merge": false,
+  "rationale": "The left node describes trigonometric values of opposite angles (cos(-α) = cosα, sin(-α) = -sinα, etc.), while the right node describes trigonometric relations of supplementary angles (sin(180° - α) = sin α, cos(180° - α) = -cos α, etc.). They are distinct mathematical relationships for different angle pairs, not semantic duplicates."
+}

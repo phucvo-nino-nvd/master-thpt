@@ -1,0 +1,6 @@
+{
+  "left_id": "TAP_CON",
+  "right_id": "TAP_HOP",
+  "merge": false,
+  "rationale": "Left node is the concept of a subset. Right node is the concept of a set. They are related (a subset is defined in terms of a set) but are distinct mathematical concepts. One is not a duplicate of the other."
+}

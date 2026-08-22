@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+  "right_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+  "merge": false,
+  "rationale": "Both are theorems about lines perpendicular to planes. The left states: two distinct lines perpendicular to the same plane are parallel. The right states: if a line and a plane are both perpendicular to the same line, then the line lies in the plane or is parallel to the plane. They are different theorems with different hypotheses and conclusions. They are related but not semantic duplicates. KEEP."
+}

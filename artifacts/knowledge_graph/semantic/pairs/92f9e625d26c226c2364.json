@@ -1,0 +1,6 @@
+{
+  "left_id": "TONG_HAI_VECTO",
+  "right_id": "TONG_VECTO",
+  "merge": true,
+  "rationale": "Both nodes define the sum of two vectors. The left describes it as a vector defined by taking point A, drawing vectors AB = a and BC = b, then AC = a + b. The right describes AC as the sum of AB and BC, denoted a + b. The descriptions are semantically identical, both defining the same concept of vector addition. MERGE."
+}

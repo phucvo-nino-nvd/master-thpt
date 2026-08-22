@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_MU",
+  "right_id": "DAO_HAM_CUA_TICH_THUONG",
+  "merge": false,
+  "rationale": "The left node is the derivative rule for exponential functions. The right node is the product/quotient rule for derivatives. They are distinct derivative rules."
+}

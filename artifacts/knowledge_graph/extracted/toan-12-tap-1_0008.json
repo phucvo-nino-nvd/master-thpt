@@ -1,0 +1,173 @@
+{
+  "chunk_id": "toan-12-tap-1:0008",
+  "nodes": [
+    {
+      "id": "PHÉP_CỘNG_VECTO",
+      "name": "Phép cộng hai vectơ",
+      "type": "FORMULA",
+      "description": "Biểu thức toạ độ của phép cộng hai vectơ trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "PHÉP_TRỪ_VECTO",
+      "name": "Phép trừ hai vectơ",
+      "type": "FORMULA",
+      "description": "Biểu thức toạ độ của phép trừ hai vectơ trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "PHÉP_NHÂN_SO_VỚI_VECTO",
+      "name": "Phép nhân một số với một vectơ",
+      "type": "FORMULA",
+      "description": "Biểu thức toạ độ của phép nhân một số với một vectơ trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "TOA_DO_TRUNG_DIEM",
+      "name": "Toạ độ trung điểm đoạn thẳng",
+      "type": "FORMULA",
+      "description": "Biểu thức toạ độ của trung điểm đoạn thẳng AB trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "TOA_DO_TRONG_TAM",
+      "name": "Toạ độ trọng tâm tam giác",
+      "type": "FORMULA",
+      "description": "Biểu thức toạ độ của trọng tâm tam giác ABC trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "TICH_VO_HUONG",
+      "name": "Tích vô hướng hai vectơ",
+      "type": "FORMULA",
+      "description": "Biểu thức toạ độ của tích vô hướng hai vectơ trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "DO_DAI_VECTO",
+      "name": "Độ dài vectơ",
+      "type": "FORMULA",
+      "description": "Biểu thức tính độ dài của một vectơ trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "GOC_GIUA_VECTO",
+      "name": "Góc giữa hai vectơ",
+      "type": "FORMULA",
+      "description": "Biểu thức tính góc giữa hai vectơ trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "PHÉP_TOÁN_VECTO",
+      "name": "Phép toán vectơ",
+      "type": "CONCEPT",
+      "description": "Các phép toán cơ bản trên vectơ trong không gian Oxyz.",
+      "grade": 12
+    },
+    {
+      "id": "TÍCH_VÔ_HƯỚNG",
+      "name": "Tích vô hướng",
+      "type": "CONCEPT",
+      "description": "Tích vô hướng của hai vectơ trong không gian Oxyz.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHÉP_CỘNG_VECTO",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Phép cộng hai vectơ là một phần của các phép toán vectơ."
+    },
+    {
+      "source": "PHÉP_TRỪ_VECTO",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Phép trừ hai vectơ là một phần của các phép toán vectơ."
+    },
+    {
+      "source": "PHÉP_NHÂN_SO_VỚI_VECTO",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Phép nhân một số với một vectơ là một phần của các phép toán vectơ."
+    },
+    {
+      "source": "TOA_DO_TRUNG_DIEM",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Toạ độ trung điểm đoạn thẳng là một phần của các phép toán vectơ."
+    },
+    {
+      "source": "TOA_DO_TRONG_TAM",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "PART_OF",
+      "rationale": "Toạ độ trọng tâm tam giác là một phần của các phép toán vectơ."
+    },
+    {
+      "source": "TICH_VO_HUONG",
+      "target": "TÍCH_VÔ_HƯỚNG",
+      "relation": "PART_OF",
+      "rationale": "Biểu thức toạ độ của tích vô hướng là một phần của tích vô hướng."
+    },
+    {
+      "source": "DO_DAI_VECTO",
+      "target": "TÍCH_VÔ_HƯỚNG",
+      "relation": "PART_OF",
+      "rationale": "Biểu thức tính độ dài vectơ là một phần của tích vô hướng."
+    },
+    {
+      "source": "GOC_GIUA_VECTO",
+      "target": "TÍCH_VÔ_HƯỚNG",
+      "relation": "PART_OF",
+      "rationale": "Biểu thức tính góc giữa hai vectơ là một phần của tích vô hướng."
+    },
+    {
+      "source": "PHÉP_CỘNG_VECTO",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Phép cộng hai vectơ yêu cầu hiểu các phép toán vectơ."
+    },
+    {
+      "source": "PHÉP_TRỪ_VECTO",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Phép trừ hai vectơ yêu cầu hiểu các phép toán vectơ."
+    },
+    {
+      "source": "PHÉP_NHÂN_SO_VỚI_VECTO",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Phép nhân một số với một vectơ yêu cầu hiểu các phép toán vectơ."
+    },
+    {
+      "source": "TOA_DO_TRUNG_DIEM",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Toạ độ trung điểm đoạn thẳng yêu cầu hiểu các phép toán vectơ."
+    },
+    {
+      "source": "TOA_DO_TRONG_TAM",
+      "target": "PHÉP_TOÁN_VECTO",
+      "relation": "REQUIRES",
+      "rationale": "Toạ độ trọng tâm tam giác yêu cầu hiểu các phép toán vectơ."
+    },
+    {
+      "source": "TICH_VO_HUONG",
+      "target": "TÍCH_VÔ_HƯỚNG",
+      "relation": "REQUIRES",
+      "rationale": "Biểu thức toạ độ của tích vô hướng yêu cầu hiểu tích vô hướng."
+    },
+    {
+      "source": "DO_DAI_VECTO",
+      "target": "TÍCH_VÔ_HƯỚNG",
+      "relation": "REQUIRES",
+      "rationale": "Biểu thức tính độ dài vectơ yêu cầu hiểu tích vô hướng."
+    },
+    {
+      "source": "GOC_GIUA_VECTO",
+      "target": "TÍCH_VÔ_HƯỚNG",
+      "relation": "REQUIRES",
+      "rationale": "Biểu thức tính góc giữa hai vectơ yêu cầu hiểu tích vô hướng."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC",
+  "right_id": "CONG_THUC_NHAN_XAC_SUAT_TONG_QUAT",
+  "merge": false,
+  "rationale": "The left node 'Công thức cộng xác suất cho hai biến cố xung khắc' is the addition rule for mutually exclusive events. The right node 'Công thức nhân xác suất tổng quát' is the general multiplication rule for probability. They are distinct probability formulas for different operations (addition vs. multiplication) and under different conditions (mutual exclusivity vs. general conditional probability)."
+}

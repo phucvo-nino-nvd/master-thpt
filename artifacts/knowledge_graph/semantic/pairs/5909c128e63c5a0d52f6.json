@@ -1,0 +1,6 @@
+{
+  "left_id": "NGUYEN_HAM_HAM_SO_LN",
+  "right_id": "NGUYEN_HAM_HAM_SO_LUY_THUA",
+  "merge": false,
+  "rationale": "The left node is the antiderivative formula for the natural logarithm function, while the right node is the antiderivative formula for power functions. They are distinct antiderivative formulas for different function types."
+}

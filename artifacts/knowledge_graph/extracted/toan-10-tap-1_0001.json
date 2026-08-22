@@ -1,0 +1,181 @@
+{
+  "chunk_id": "toan-10-tap-1:0001",
+  "nodes": [
+    {
+      "id": "MENH_DE",
+      "name": "Mệnh đề",
+      "type": "CONCEPT",
+      "description": "Một khẳng định có tính đúng hoặc sai. Mỗi mệnh đề phải hoặc đúng hoặc sai.",
+      "grade": 10
+    },
+    {
+      "id": "MENH_DE_TOAN_HOC",
+      "name": "Mệnh đề toán học",
+      "type": "CONCEPT",
+      "description": "Mệnh đề liên quan đến toán học.",
+      "grade": 10
+    },
+    {
+      "id": "MENH_DE_CHUA_BIEN",
+      "name": "Mệnh đề chứa biến",
+      "type": "CONCEPT",
+      "description": "Mệnh đề chứa biến mà tính đúng sai phụ thuộc vào giá trị của biến.",
+      "grade": 10
+    },
+    {
+      "id": "MENH_DE_PHU_DINH",
+      "name": "Mệnh đề phủ định",
+      "type": "CONCEPT",
+      "description": "Mệnh đề phủ định của một mệnh đề P, kí hiệu là P̅. Nếu P đúng thì P̅ sai và ngược lại.",
+      "grade": 10
+    },
+    {
+      "id": "MENH_DE_KEO_THEO",
+      "name": "Mệnh đề kéo theo",
+      "type": "CONCEPT",
+      "description": "Mệnh đề có dạng 'Nếu P thì Q', kí hiệu là P ⇒ Q.",
+      "grade": 10
+    },
+    {
+      "id": "MENH_DE_DAO",
+      "name": "Mệnh đề đảo",
+      "type": "CONCEPT",
+      "description": "Mệnh đề đảo của mệnh đề P ⇒ Q là Q ⇒ P.",
+      "grade": 10
+    },
+    {
+      "id": "MENH_DE_TUONG_DUONG",
+      "name": "Mệnh đề tương đương",
+      "type": "CONCEPT",
+      "description": "Mệnh đề có dạng 'P nếu và chỉ nếu Q', kí hiệu là P ⇔ Q.",
+      "grade": 10
+    },
+    {
+      "id": "DIEU_KIEN_CAN",
+      "name": "Điều kiện cần",
+      "type": "CONCEPT",
+      "description": "Q là điều kiện cần để có P nếu P ⇒ Q.",
+      "grade": 10
+    },
+    {
+      "id": "DIEU_KIEN_DU",
+      "name": "Điều kiện đủ",
+      "type": "CONCEPT",
+      "description": "P là điều kiện đủ để có Q nếu P ⇒ Q.",
+      "grade": 10
+    },
+    {
+      "id": "DIEU_KIEN_CAN_VA_DU",
+      "name": "Điều kiện cần và đủ",
+      "type": "CONCEPT",
+      "description": "P là điều kiện cần và đủ để có Q nếu P ⇔ Q.",
+      "grade": 10
+    },
+    {
+      "id": "KI_HIEU_FORALL",
+      "name": "Kí hiệu ∀",
+      "type": "CONCEPT",
+      "description": "Kí hiệu đọc là 'với mọi'.",
+      "grade": 10
+    },
+    {
+      "id": "KI_HIEU_EXISTS",
+      "name": "Kí hiệu ∃",
+      "type": "CONCEPT",
+      "description": "Kí hiệu đọc là 'tồn tại'.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "MENH_DE_PHU_DINH",
+      "target": "MENH_DE",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_KEO_THEO",
+      "target": "MENH_DE",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_DAO",
+      "target": "MENH_DE",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_TUONG_DUONG",
+      "target": "MENH_DE",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_TOAN_HOC",
+      "target": "MENH_DE",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_CHUA_BIEN",
+      "target": "MENH_DE",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_PHU_DINH",
+      "target": "MENH_DE",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_KEO_THEO",
+      "target": "MENH_DE",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_DAO",
+      "target": "MENH_DE_KEO_THEO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_TUONG_DUONG",
+      "target": "MENH_DE_KEO_THEO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DIEU_KIEN_CAN",
+      "target": "MENH_DE_KEO_THEO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DIEU_KIEN_DU",
+      "target": "MENH_DE_KEO_THEO",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DIEU_KIEN_CAN_VA_DU",
+      "target": "MENH_DE_TUONG_DUONG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_CHUA_BIEN",
+      "target": "KI_HIEU_FORALL",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MENH_DE_CHUA_BIEN",
+      "target": "KI_HIEU_EXISTS",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

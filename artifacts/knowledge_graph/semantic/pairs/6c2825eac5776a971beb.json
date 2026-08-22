@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_LIEN_TUC_HAM_CAN",
+  "right_id": "TINH_CHAT_LIEN_TUC_HAM_TAN_COT",
+  "merge": false,
+  "rationale": "Both are theorems about continuity of specific function types. One is for the square root function, the other is for the tangent and cotangent functions. They are separate properties of distinct function families, not the same reusable knowledge node."
+}

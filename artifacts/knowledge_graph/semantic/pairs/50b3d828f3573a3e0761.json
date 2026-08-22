@@ -1,0 +1,6 @@
+{
+  "left_id": "PHUONG_TRINH_DUONG_THANG",
+  "right_id": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+  "merge": false,
+  "rationale": "Left node is the general concept of the equation of a line. Right node is a specific form of that equation (parametric equation). They are related but represent different forms/representations of the same underlying object. The parametric form is a specific method, not the same reusable knowledge node as the general concept."
+}

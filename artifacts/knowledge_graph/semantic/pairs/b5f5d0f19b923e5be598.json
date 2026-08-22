@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+  "right_id": "CONG_THUC_TINH_GOC_GIUA_HAI_VECTO",
+  "merge": false,
+  "rationale": "Left is a formula for the angle between two lines (using direction or normal vectors). Right is a formula for the angle between two vectors (using their coordinates). They represent different mathematical objects (lines vs. vectors) and are not semantic duplicates."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_GIAO_HOAN",
+  "right_id": "TINH_CHAT_KET_HOP",
+  "merge": false,
+  "rationale": "The left is the commutative property of vector addition (a+b = b+a). The right is the associative property ((a+b)+c = a+(b+c)). They are distinct properties of vector addition. They are related but not duplicates. KEEP."
+}

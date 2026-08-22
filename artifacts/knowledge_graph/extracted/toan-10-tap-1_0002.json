@@ -1,0 +1,208 @@
+{
+  "chunk_id": "toan-10-tap-1:0002",
+  "nodes": [
+    {
+      "id": "TAP_HOP",
+      "name": "Tập hợp",
+      "type": "CONCEPT",
+      "description": "Một tập hợp là một bộ các phần tử được xác định rõ ràng.",
+      "grade": 10
+    },
+    {
+      "id": "PHAN_TU",
+      "name": "Phần tử",
+      "type": "CONCEPT",
+      "description": "Một phần tử là một đối tượng thuộc tập hợp.",
+      "grade": 10
+    },
+    {
+      "id": "TOA_DO_VEN",
+      "name": "Biểu đồ Ven",
+      "type": "CONCEPT",
+      "description": "Hình phẳng được bao quanh bởi một đường kín để minh họa tập hợp.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_RONG",
+      "name": "Tập rỗng",
+      "type": "CONCEPT",
+      "description": "Tập hợp không chứa phần tử nào, kí hiệu là ∅.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_CON",
+      "name": "Tập con",
+      "type": "CONCEPT",
+      "description": "Tập hợp T là tập con của S nếu mọi phần tử của T đều là phần tử của S, kí hiệu T ⊂ S.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_BANG_NHAU",
+      "name": "Hai tập hợp bằng nhau",
+      "type": "CONCEPT",
+      "description": "Hai tập hợp S và T bằng nhau nếu mỗi phần tử của T cũng là phần tử của S và ngược lại, kí hiệu S = T.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_HOP_SO_TU_NHIEN",
+      "name": "Tập hợp số tự nhiên",
+      "type": "CONCEPT",
+      "description": "Tập hợp các số tự nhiên, kí hiệu là ℕ = {0; 1; 2; 3; 4; ...}.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_HOP_SO_NGUYEN",
+      "name": "Tập hợp số nguyên",
+      "type": "CONCEPT",
+      "description": "Tập hợp các số nguyên, kí hiệu là ℤ = {...; -3; -2; -1; 0; 1; 2; 3; ...}.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_HOP_SO_HUU_TI",
+      "name": "Tập hợp số hữu tỉ",
+      "type": "CONCEPT",
+      "description": "Tập hợp các số hữu tỉ, kí hiệu là ℚ, gồm các số viết được dưới dạng phân số a/b, với a, b ∈ ℤ, b ≠ 0.",
+      "grade": 10
+    },
+    {
+      "id": "TAP_HOP_SO_THUC",
+      "name": "Tập hợp số thực",
+      "type": "CONCEPT",
+      "description": "Tập hợp các số thực, kí hiệu là ℝ, gồm các số hữu tỉ và các số vô tỉ.",
+      "grade": 10
+    },
+    {
+      "id": "KHOANG",
+      "name": "Khoảng",
+      "type": "CONCEPT",
+      "description": "Một tập con của tập số thực ℝ, kí hiệu [a, b], (a, b), [a, b), (a, b].",
+      "grade": 10
+    },
+    {
+      "id": "GIAO_HAI_TAP_HOP",
+      "name": "Giao của hai tập hợp",
+      "type": "CONCEPT",
+      "description": "Tập hợp gồm các phần tử thuộc cả hai tập hợp S và T, kí hiệu S ∩ T.",
+      "grade": 10
+    },
+    {
+      "id": "HOP_HAI_TAP_HOP",
+      "name": "Hợp của hai tập hợp",
+      "type": "CONCEPT",
+      "description": "Tập hợp gồm các phần tử thuộc tập hợp S hoặc thuộc tập hợp T, kí hiệu S ∪ T.",
+      "grade": 10
+    },
+    {
+      "id": "HIEU_HAI_TAP_HOP",
+      "name": "Hiệu của hai tập hợp",
+      "type": "CONCEPT",
+      "description": "Tập hợp gồm các phần tử thuộc S nhưng không thuộc T, kí hiệu S \\(T).",
+      "grade": 10
+    },
+    {
+      "id": "PHAN_BU",
+      "name": "Phần bù",
+      "type": "CONCEPT",
+      "description": "Nếu T ⊂ S thì S \\(T) được gọi là phần bù của T trong S, kí hiệu C_S T.",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "TAP_CON",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TAP_BANG_NHAU",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TAP_RONG",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TAP_HOP_SO_TU_NHIEN",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TAP_HOP_SO_NGUYEN",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TAP_HOP_SO_HUU_TI",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TAP_HOP_SO_THUC",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "KHOANG",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "GIAO_HAI_TAP_HOP",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "HOP_HAI_TAP_HOP",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "HIEU_HAI_TAP_HOP",
+      "target": "TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "PHAN_BU",
+      "target": "HIEU_HAI_TAP_HOP",
+      "relation": "IS_A",
+      "rationale": null
+    },
+    {
+      "source": "TAP_HOP_SO_TU_NHIEN",
+      "target": "TAP_HOP_SO_NGUYEN",
+      "relation": "SUBSET_OF",
+      "rationale": null
+    },
+    {
+      "source": "TAP_HOP_SO_NGUYEN",
+      "target": "TAP_HOP_SO_HUU_TI",
+      "relation": "SUBSET_OF",
+      "rationale": null
+    },
+    {
+      "source": "TAP_HOP_SO_HUU_TI",
+      "target": "TAP_HOP_SO_THUC",
+      "relation": "SUBSET_OF",
+      "rationale": null
+    },
+    {
+      "source": "TAP_RONG",
+      "target": "TAP_HOP",
+      "relation": "PART_OF",
+      "rationale": null
+    }
+  ]
+}

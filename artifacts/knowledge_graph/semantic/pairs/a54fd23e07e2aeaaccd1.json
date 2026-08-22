@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_NAM_TRONG_MAT_PHANG",
+  "right_id": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "Đường thẳng nằm trong mặt phẳng and đường thẳng song song với mặt phẳng describe mutually exclusive positional relationships (contained vs. parallel). They are distinct concepts."
+}

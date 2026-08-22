@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "PHUONG_TRINH_CHINH_TAC_DUONG_CONIC",
+      "name": "Phương trình chính tắc",
+      "type": "CONCEPT",
+      "description": "Phương trình đại số mô tả đường conic."
+    },
+    {
+      "id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG",
+      "name": "Phương trình chính tắc",
+      "type": "CONCEPT",
+      "description": "Hệ phương trình dưới dạng phân số bằng nhau xác định đường thẳng đi qua một điểm và có vectơ chỉ phương."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0010",
+      "original_id": "PHUONG_TRINH_CHINH_TAC",
+      "canonical_id": "PHUONG_TRINH_CHINH_TAC_DUONG_CONIC",
+      "rationale": "This occurrence describes the canonical equation for conic sections, which is a different mathematical concept from the canonical equation for a line in space. They share the same Vietnamese term but have distinct mathematical meanings and applications, requiring a split."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0005",
+      "original_id": "PHUONG_TRINH_CHINH_TAC",
+      "canonical_id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG",
+      "rationale": "This occurrence describes the canonical equation for a line in space, defined by a point and a direction vector. It is a different mathematical concept from the canonical equation for conics, necessitating a split into a separate canonical node."
+    }
+  ]
+}

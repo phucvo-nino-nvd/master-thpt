@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN",
+  "right_id": "GIOI_HAN_MOT_BEN",
+  "merge": false,
+  "rationale": "The left node is the general concept of a limit. The right node is the specific concept of a one-sided limit. The one-sided limit is a special case or subtype of the general limit concept. They should be kept separate."
+}

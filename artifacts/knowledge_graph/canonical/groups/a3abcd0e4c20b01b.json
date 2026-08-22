@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "DAO_HAM",
+      "name": "Đạo hàm",
+      "type": "CONCEPT",
+      "description": "Khái niệm đạo hàm của một hàm số tại một điểm, được định nghĩa là giới hạn của tỉ số phân biệt (hoặc tỉ lệ biến thiên) khi biến số tiến tới điểm đó, biểu thị tốc độ biến thiên tức thời của hàm số."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0005",
+      "original_id": "DAO_HAM",
+      "canonical_id": "DAO_HAM",
+      "rationale": "Occurrence describes the concept of derivative as a limit, which is the core mathematical definition. It should be merged with other occurrences describing the same concept."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0006",
+      "original_id": "DAO_HAM",
+      "canonical_id": "DAO_HAM",
+      "rationale": "Occurrence describes the concept of the derivative of a function, which is the same core mathematical concept. Grade difference is not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0002",
+      "original_id": "DAO_HAM",
+      "canonical_id": "DAO_HAM",
+      "rationale": "Occurrence provides a definition of the derivative at a point as a limit, consistent with the core concept. Should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0004",
+      "original_id": "DAO_HAM",
+      "canonical_id": "DAO_HAM",
+      "rationale": "Occurrence describes the derivative as a term for the rate of change of a function, which is an interpretation of the same core concept. Should be merged."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0005",
+      "original_id": "DAO_HAM",
+      "canonical_id": "DAO_HAM",
+      "rationale": "Occurrence describes the derivative f'(a) as representing the instantaneous rate of change, which is a key property/interpretation of the same core concept. Should be merged."
+    }
+  ]
+}

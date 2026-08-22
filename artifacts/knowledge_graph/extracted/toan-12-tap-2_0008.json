@@ -1,0 +1,80 @@
+{
+  "chunk_id": "toan-12-tap-2:0008",
+  "nodes": [
+    {
+      "id": "XAC_SUAT_CO_DIEU_KIEN",
+      "name": "Xác suất có điều kiện",
+      "type": "CONCEPT",
+      "description": "Xác suất của một biến cố A, tính trong điều kiện biết rằng biến cố B đã xảy ra, ký hiệu P(A|B).",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_NHAN_XAC_SUAT",
+      "name": "Công thức nhân xác suất",
+      "type": "FORMULA",
+      "description": "P(AB) = P(B) * P(A|B) với P(B) > 0.",
+      "grade": 12
+    },
+    {
+      "id": "BANG_DU_LIEU_THONG_KE_2X2",
+      "name": "Bảng dữ liệu thống kê 2×2",
+      "type": "CONCEPT",
+      "description": "Bảng thống kê với 2 dòng và 2 cột, thường dùng để phân tích mối quan hệ giữa hai biến cố.",
+      "grade": 12
+    },
+    {
+      "id": "BIEN_CO_A",
+      "name": "Biến cố A",
+      "type": "CONCEPT",
+      "description": "Một biến cố trong xác suất, thường được định nghĩa trong ngữ cảnh của bài toán.",
+      "grade": 12
+    },
+    {
+      "id": "BIEN_CO_B",
+      "name": "Biến cố B",
+      "type": "CONCEPT",
+      "description": "Một biến cố trong xác suất, thường được định nghĩa trong ngữ cảnh của bài toán.",
+      "grade": 12
+    },
+    {
+      "id": "BIEN_CO_DO_THI",
+      "name": "Biến cố độc lập",
+      "type": "CONCEPT",
+      "description": "Hai biến cố A và B là độc lập nếu P(AB) = P(A) * P(B).",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_PHAP_HINH_CAY",
+      "name": "Phương pháp hình cây",
+      "type": "METHOD",
+      "description": "Phương pháp mô tả trực quan các biến cố và xác suất liên quan bằng sơ đồ hình cây.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "XAC_SUAT_CO_DIEU_KIEN",
+      "target": "CONG_THUC_NHAN_XAC_SUAT",
+      "relation": "REQUIRES",
+      "rationale": "Xác suất có điều kiện là khái niệm cơ bản để hiểu và áp dụng công thức nhân xác suất."
+    },
+    {
+      "source": "CONG_THUC_NHAN_XAC_SUAT",
+      "target": "BIEN_CO_DO_THI",
+      "relation": "REQUIRES",
+      "rationale": "Công thức nhân xác suất có thể được mở rộng hoặc đơn giản hóa khi biết hai biến cố độc lập."
+    },
+    {
+      "source": "PHUONG_PHAP_HINH_CAY",
+      "target": "XAC_SUAT_CO_DIEU_KIEN",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp hình cây thường được sử dụng để giải thích và tính toán xác suất có điều kiện."
+    },
+    {
+      "source": "BANG_DU_LIEU_THONG_KE_2X2",
+      "target": "XAC_SUAT_CO_DIEU_KIEN",
+      "relation": "REQUIRES",
+      "rationale": "Bảng dữ liệu thống kê 2×2 thường được sử dụng để tính toán và phân tích xác suất có điều kiện."
+    }
+  ]
+}

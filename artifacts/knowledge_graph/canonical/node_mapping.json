@@ -1,0 +1,4874 @@
+[
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "MENH_DE",
+    "original_name": "Mệnh đề",
+    "canonical_id": "MENH_DE"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "MENH_DE_TOAN_HOC",
+    "original_name": "Mệnh đề toán học",
+    "canonical_id": "MENH_DE_TOAN_HOC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "MENH_DE_CHUA_BIEN",
+    "original_name": "Mệnh đề chứa biến",
+    "canonical_id": "MENH_DE_CHUA_BIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "MENH_DE_PHU_DINH",
+    "original_name": "Mệnh đề phủ định",
+    "canonical_id": "MENH_DE_PHU_DINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "MENH_DE_KEO_THEO",
+    "original_name": "Mệnh đề kéo theo",
+    "canonical_id": "MENH_DE_KEO_THEO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "MENH_DE_DAO",
+    "original_name": "Mệnh đề đảo",
+    "canonical_id": "MENH_DE_DAO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "MENH_DE_TUONG_DUONG",
+    "original_name": "Mệnh đề tương đương",
+    "canonical_id": "MENH_DE_TUONG_DUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "DIEU_KIEN_CAN",
+    "original_name": "Điều kiện cần",
+    "canonical_id": "DIEU_KIEN_CAN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "DIEU_KIEN_DU",
+    "original_name": "Điều kiện đủ",
+    "canonical_id": "DIEU_KIEN_DU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "DIEU_KIEN_CAN_VA_DU",
+    "original_name": "Điều kiện cần và đủ",
+    "canonical_id": "DIEU_KIEN_CAN_VA_DU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "KI_HIEU_FORALL",
+    "original_name": "Kí hiệu ∀",
+    "canonical_id": "KI_HIEU_FORALL"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0001",
+    "original_id": "KI_HIEU_EXISTS",
+    "original_name": "Kí hiệu ∃",
+    "canonical_id": "KI_HIEU_EXISTS"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "TAP_HOP",
+    "original_name": "Tập hợp",
+    "canonical_id": "TAP_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "PHAN_TU",
+    "original_name": "Phần tử",
+    "canonical_id": "PHAN_TU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "TOA_DO_VEN",
+    "original_name": "Biểu đồ Ven",
+    "canonical_id": "TOA_DO_VEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "TAP_RONG",
+    "original_name": "Tập rỗng",
+    "canonical_id": "TAP_RONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "TAP_CON",
+    "original_name": "Tập con",
+    "canonical_id": "TAP_CON"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "TAP_BANG_NHAU",
+    "original_name": "Hai tập hợp bằng nhau",
+    "canonical_id": "TAP_BANG_NHAU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "TAP_HOP_SO_TU_NHIEN",
+    "original_name": "Tập hợp số tự nhiên",
+    "canonical_id": "TAP_HOP_SO_TU_NHIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "TAP_HOP_SO_NGUYEN",
+    "original_name": "Tập hợp số nguyên",
+    "canonical_id": "TAP_HOP_SO_NGUYEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "TAP_HOP_SO_HUU_TI",
+    "original_name": "Tập hợp số hữu tỉ",
+    "canonical_id": "TAP_HOP_SO_HUU_TI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "TAP_HOP_SO_THUC",
+    "original_name": "Tập hợp số thực",
+    "canonical_id": "TAP_HOP_SO_THUC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "KHOANG",
+    "original_name": "Khoảng",
+    "canonical_id": "KHOANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "GIAO_HAI_TAP_HOP",
+    "original_name": "Giao của hai tập hợp",
+    "canonical_id": "GIAO_HAI_TAP_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "HOP_HAI_TAP_HOP",
+    "original_name": "Hợp của hai tập hợp",
+    "canonical_id": "HOP_HAI_TAP_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "HIEU_HAI_TAP_HOP",
+    "original_name": "Hiệu của hai tập hợp",
+    "canonical_id": "HIEU_HAI_TAP_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0002",
+    "original_id": "PHAN_BU",
+    "original_name": "Phần bù",
+    "canonical_id": "PHAN_BU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0003",
+    "original_id": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "original_name": "Bất phương trình bậc nhất hai ẩn",
+    "canonical_id": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0003",
+    "original_id": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "original_name": "Miền nghiệm của bất phương trình bậc nhất hai ẩn",
+    "canonical_id": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0003",
+    "original_id": "NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "original_name": "Nghiệm của bất phương trình bậc nhất hai ẩn",
+    "canonical_id": "NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0003",
+    "original_id": "BIEN_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+    "original_name": "Biểu diễn miền nghiệm trong mặt phẳng toạ độ",
+    "canonical_id": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0003",
+    "original_id": "DUONG_THANG_BAT_PHUONG_TRINH",
+    "original_name": "Đường thẳng bất phương trình",
+    "canonical_id": "DUONG_THANG_BAT_PHUONG_TRINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0003",
+    "original_id": "NHA_MAT_PHANG_BAT_PHUONG_TRINH",
+    "original_name": "Nửa mặt phẳng bất phương trình",
+    "canonical_id": "NHA_MAT_PHANG_BAT_PHUONG_TRINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0004",
+    "original_id": "HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "original_name": "Hệ bất phương trình bậc nhất hai ẩn",
+    "canonical_id": "HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0004",
+    "original_id": "NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "original_name": "Nghiệm của hệ bất phương trình bậc nhất hai ẩn",
+    "canonical_id": "NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0004",
+    "original_id": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "original_name": "Miền nghiệm của hệ bất phương trình bậc nhất hai ẩn",
+    "canonical_id": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0004",
+    "original_id": "BIEU_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+    "original_name": "Biểu diễn miền nghiệm trong mặt phẳng toạ độ",
+    "canonical_id": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0004",
+    "original_id": "GIATRI_LON_NHAT_NHO_NHAT_CUA_BIEU_THUC",
+    "original_name": "Giá trị lớn nhất/nho nhất của biểu thức",
+    "canonical_id": "GIATRI_LON_NHAT_NHO_NHAT_CUA_BIEU_THUC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "GIA_TRI_LUONG_GIAC",
+    "original_name": "Giá trị lượng giác",
+    "canonical_id": "GIA_TRI_LUONG_GIAC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "NUA_DUONG_TRON_DON_VI",
+    "original_name": "Nửa đường tròn đơn vị",
+    "canonical_id": "NUA_DUONG_TRON_DON_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "SIN_ALPHA",
+    "original_name": "sin α",
+    "canonical_id": "SIN_ALPHA"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "COS_ALPHA",
+    "original_name": "cos α",
+    "canonical_id": "COS_ALPHA"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "TAN_ALPHA",
+    "original_name": "tan α",
+    "canonical_id": "TAN_ALPHA"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "COT_ALPHA",
+    "original_name": "cot α",
+    "canonical_id": "COT_ALPHA"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "QUAN_HE_SIN_COS_TAN_COT",
+    "original_name": "Quan hệ giữa sin, cos, tan, cot",
+    "canonical_id": "QUAN_HE_SIN_COS_TAN_COT"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "GIA_TRI_LUONG_GIAC_CAC_GOC_DAC_BIET",
+    "original_name": "Giá trị lượng giác của các góc đặc biệt",
+    "canonical_id": "GIA_TRI_LUONG_GIAC_CAC_GOC_DAC_BIET"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "HAI_GOC_BU_NHAU",
+    "original_name": "Hai góc bù nhau",
+    "canonical_id": "HAI_GOC_BU_NHAU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "QUAN_HE_LUONG_GIAC_GOC_BU",
+    "original_name": "Quan hệ lượng giác của hai góc bù nhau",
+    "canonical_id": "QUAN_HE_LUONG_GIAC_GOC_BU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "HAI_GOC_PHU_NHAU",
+    "original_name": "Hai góc phụ nhau",
+    "canonical_id": "HAI_GOC_PHU_NHAU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0005",
+    "original_id": "QUAN_HE_LUONG_GIAC_GOC_PHU",
+    "original_name": "Quan hệ lượng giác của hai góc phụ nhau",
+    "canonical_id": "QUAN_HE_LUONG_GIAC_GOC_PHU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0006",
+    "original_id": "DINH_LI_COSIN",
+    "original_name": "Định lí côsin",
+    "canonical_id": "DINH_LI_COSIN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0006",
+    "original_id": "DINH_LI_SIN",
+    "original_name": "Định lí sin",
+    "canonical_id": "DINH_LI_SIN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0006",
+    "original_id": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+    "original_name": "Công thức tính diện tích tam giác",
+    "canonical_id": "CONG_THUC_DIEN_TICH_TAM_GIAC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0006",
+    "original_id": "GIAI_TAM_GIAC",
+    "original_name": "Giải tam giác",
+    "canonical_id": "GIAI_TAM_GIAC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0006",
+    "original_id": "TAM_GIAC",
+    "original_name": "Tam giác",
+    "canonical_id": "TAM_GIAC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0006",
+    "original_id": "DUONG_TRON_NGOAI_TIEP",
+    "original_name": "Đường tròn ngoại tiếp",
+    "canonical_id": "DUONG_TRON_NGOAI_TIEP"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0006",
+    "original_id": "DUONG_TRON_NOI_TIEP",
+    "original_name": "Đường tròn nội tiếp",
+    "canonical_id": "DUONG_TRON_NOI_TIEP"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0006",
+    "original_id": "CONG_THUC_HERON",
+    "original_name": "Công thức Heron",
+    "canonical_id": "CONG_THUC_HERON"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0007",
+    "original_id": "VECTO",
+    "original_name": "Vectơ",
+    "canonical_id": "VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0007",
+    "original_id": "VECTO_KHONG",
+    "original_name": "Vectơ-không",
+    "canonical_id": "VECTO_KHONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0007",
+    "original_id": "DO_DAI_VECTO",
+    "original_name": "Độ dài của vectơ",
+    "canonical_id": "DO_DAI_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0007",
+    "original_id": "VECTO_CUNG_PHUONG",
+    "original_name": "Hai vectơ cùng phương",
+    "canonical_id": "VECTO_CUNG_PHUONG_DINH_NGHIA"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0007",
+    "original_id": "VECTO_CUNG_HUONG",
+    "original_name": "Hai vectơ cùng hướng",
+    "canonical_id": "VECTO_CUNG_HUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0007",
+    "original_id": "VECTO_BANG_NHAU",
+    "original_name": "Hai vectơ bằng nhau",
+    "canonical_id": "VECTO_BANG_NHAU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0007",
+    "original_id": "KY_HIEU_VECTO",
+    "original_name": "Ký hiệu vectơ",
+    "canonical_id": "KY_HIEU_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0007",
+    "original_id": "KY_HIEU_DO_DAI_VECTO",
+    "original_name": "Ký hiệu độ dài vectơ",
+    "canonical_id": "KY_HIEU_DO_DAI_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0007",
+    "original_id": "BIEU_DIEN_DAI_LUONG_VECTO",
+    "original_name": "Biểu diễn đại lượng bằng vectơ",
+    "canonical_id": "BIEU_DIEN_DAI_LUONG_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "VECTO",
+    "original_name": "vectơ",
+    "canonical_id": "VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "PHEP_CONG_VECTO",
+    "original_name": "phép cộng vectơ",
+    "canonical_id": "PHEP_CONG_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "TONG_HAI_VECTO",
+    "original_name": "tổng của hai vectơ",
+    "canonical_id": "TONG_HAI_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "VECTO_DOI",
+    "original_name": "vectơ đối",
+    "canonical_id": "VECTO_DOI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "PHEP_TRU_VECTO",
+    "original_name": "phép trừ vectơ",
+    "canonical_id": "PHEP_TRU_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "HIEU_HAI_VECTO",
+    "original_name": "hiệu của hai vectơ",
+    "canonical_id": "HIEU_HAI_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "QUY_TAC_BA_DIEM",
+    "original_name": "quy tắc ba điểm",
+    "canonical_id": "QUY_TAC_BA_DIEM"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "QUY_TAC_HINH_BINH_HANG",
+    "original_name": "quy tắc hình bình hành",
+    "canonical_id": "QUY_TAC_HINH_BINH_HANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "TINH_CHAT_GIAO_HOAN",
+    "original_name": "tính chất giao hoán",
+    "canonical_id": "TINH_CHAT_GIAO_HOAN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "TINH_CHAT_KET_HOP",
+    "original_name": "tính chất kết hợp",
+    "canonical_id": "TINH_CHAT_KET_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "TINH_CHAT_VECTO_KHONG",
+    "original_name": "tính chất của vectơ không",
+    "canonical_id": "TINH_CHAT_VECTO_KHONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "QUY_TAC_HIEU",
+    "original_name": "quy tắc hiệu",
+    "canonical_id": "QUY_TAC_HIEU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "TRUNG_DIEM_DUONG_THANG",
+    "original_name": "trung điểm của đoạn thẳng",
+    "canonical_id": "TRUNG_DIEM_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "TRONG_TAM_TAM_GIAC",
+    "original_name": "trọng tâm của tam giác",
+    "canonical_id": "TRONG_TAM_TAM_GIAC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "TONG_HOP_LUC",
+    "original_name": "tổng hợp lực",
+    "canonical_id": "TONG_HOP_LUC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0008",
+    "original_id": "TONG_HOP_VAN_TOC",
+    "original_name": "tổng hợp vận tốc",
+    "canonical_id": "TONG_HOP_VAN_TOC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0009",
+    "original_id": "TICH_VECTO_VOI_SO",
+    "original_name": "Tích của một vectơ với một số",
+    "canonical_id": "TICH_VECTO_VOI_SO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0009",
+    "original_id": "TINH_CHAT_TICH_VECTO_VOI_SO",
+    "original_name": "Tính chất của phép nhân vectơ với một số",
+    "canonical_id": "TINH_CHAT_TICH_VECTO_VOI_SO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0009",
+    "original_id": "PHAN_TICH_VECTO",
+    "original_name": "Phân tích vectơ",
+    "canonical_id": "PHAN_TICH_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0009",
+    "original_id": "DIEU_KIEN_TRUNG_DIEM",
+    "original_name": "Điều kiện trung điểm",
+    "canonical_id": "DIEU_KIEN_TRUNG_DIEM"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0009",
+    "original_id": "DIEU_KIEN_TRONG_TAM",
+    "original_name": "Điều kiện trọng tâm",
+    "canonical_id": "DIEU_KIEN_TRONG_TAM"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0009",
+    "original_id": "DIEU_KIEN_KHOI_TAM",
+    "original_name": "Điều kiện khối tâm",
+    "canonical_id": "DIEU_KIEN_KHOI_TAM"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0009",
+    "original_id": "VEC_TO",
+    "original_name": "Vectơ",
+    "canonical_id": "VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0009",
+    "original_id": "SO_THUC",
+    "original_name": "Số thực",
+    "canonical_id": "SO_THUC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "MAT_PHANG_TOA_DO",
+    "original_name": "Mặt phẳng toạ độ",
+    "canonical_id": "MAT_PHANG_TOA_DO_2D"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "TOA_DO_CUA_VECTO",
+    "original_name": "Toạ độ của vectơ",
+    "canonical_id": "TOA_DO_VECTO_TRONG_MP"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "VECTO_DON_VI",
+    "original_name": "Vectơ đơn vị",
+    "canonical_id": "VECTO_DON_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "HE_TRUC_TOA_DO_OXY",
+    "original_name": "Hệ trục toạ độ Oxy",
+    "canonical_id": "HE_TRUC_TOA_DO_OXY"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "PHEP_CONG_VECTO_TOA_DO",
+    "original_name": "Phép cộng vectơ theo toạ độ",
+    "canonical_id": "PHEP_CONG_VECTO_TOA_DO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "PHEP_TRU_VECTO_TOA_DO",
+    "original_name": "Phép trừ vectơ theo toạ độ",
+    "canonical_id": "PHEP_TRU_VECTO_TOA_DO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "PHEP_NHAN_VECTO_TOA_DO",
+    "original_name": "Phép nhân vectơ theo toạ độ",
+    "canonical_id": "PHEP_NHAN_VECTO_TOA_DO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "DO_DAI_VECTO_TOA_DO",
+    "original_name": "Độ dài vectơ theo toạ độ",
+    "canonical_id": "DO_DAI_VECTO_TOA_DO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "TOA_DO_VECTO_MN",
+    "original_name": "Toạ độ vectơ MN",
+    "canonical_id": "TOA_DO_VECTO_MN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "KHOANG_CACH_HAI_DIEM",
+    "original_name": "Khoảng cách hai điểm",
+    "canonical_id": "KHOANG_CACH_HAI_DIEM"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "TRUNG_DIEM_DOAN_THANG",
+    "original_name": "Trung điểm đoạn thẳng",
+    "canonical_id": "TRUNG_DIEM_DOAN_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "TRONG_TAM_TAM_GIAC",
+    "original_name": "Trọng tâm tam giác",
+    "canonical_id": "TOA_DO_TRONG_TAM_TAM_GIAC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "VECTO_CUNG_PHUONG",
+    "original_name": "Vectơ cùng phương",
+    "canonical_id": "VECTO_CUNG_PHUONG_DIEU_KIEN_TOA_DO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "DIEU_KIEN_THANG_HANG",
+    "original_name": "Điều kiện thẳng hàng",
+    "canonical_id": "DIEU_KIEN_THANG_HANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0010",
+    "original_id": "PHUONG_PHAP_TIM_VI_TRI_BAO",
+    "original_name": "Phương pháp tìm vị trí bão",
+    "canonical_id": "PHUONG_PHAP_TIM_VI_TRI_BAO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0011",
+    "original_id": "GOC_GIUA_HAI_VECTO",
+    "original_name": "Góc giữa hai vectơ",
+    "canonical_id": "GOC_GIUA_HAI_VECTO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0011",
+    "original_id": "TICH_VO_HUONG",
+    "original_name": "Tích vô hướng",
+    "canonical_id": "TICH_VO_HUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0011",
+    "original_id": "TICH_VO_HUONG_VUONG_GOC",
+    "original_name": "Tích vô hướng và vuông góc",
+    "canonical_id": "TICH_VO_HUONG_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0011",
+    "original_id": "BINH_PHUONG_VO_HUONG",
+    "original_name": "Bình phương vô hướng",
+    "canonical_id": "BINH_PHUONG_VO_HUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0011",
+    "original_id": "CONG_THUC_TOA_DO_TICH_VO_HUONG",
+    "original_name": "Công thức toạ độ của tích vô hướng",
+    "canonical_id": "CONG_THUC_TOA_DO_TICH_VO_HUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0011",
+    "original_id": "TINH_CHAT_TICH_VO_HUONG",
+    "original_name": "Tính chất của tích vô hướng",
+    "canonical_id": "TINH_CHAT_TICH_VO_HUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0011",
+    "original_id": "TINH_CHAT_VUONG_GOC",
+    "original_name": "Tính chất vuông góc",
+    "canonical_id": "TINH_CHAT_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0011",
+    "original_id": "TINH_CHAT_BINH_PHUONG_VO_HUONG",
+    "original_name": "Tính chất bình phương vô hướng",
+    "canonical_id": "TINH_CHAT_BINH_PHUONG_VO_HUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0011",
+    "original_id": "TINH_CHAT_COS_GOC",
+    "original_name": "Tính chất cos góc",
+    "canonical_id": "TINH_CHAT_COS_GOC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0012",
+    "original_id": "SO_GAN_DUNG",
+    "original_name": "Số gần đúng",
+    "canonical_id": "SO_GAN_DUNG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0012",
+    "original_id": "SO_DUNG",
+    "original_name": "Số đúng",
+    "canonical_id": "SO_DUNG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0012",
+    "original_id": "SAI_SO_TUYET_DOI",
+    "original_name": "Sai số tuyệt đối",
+    "canonical_id": "SAI_SO_TUYET_DOI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0012",
+    "original_id": "DO_CHINH_XAC",
+    "original_name": "Độ chính xác",
+    "canonical_id": "DO_CHINH_XAC"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0012",
+    "original_id": "SAI_SO_TUONG_DOI",
+    "original_name": "Sai số tương đối",
+    "canonical_id": "SAI_SO_TUONG_DOI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0012",
+    "original_id": "SO_QUY_TRON",
+    "original_name": "Số quy tròn",
+    "canonical_id": "SO_QUY_TRON"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0012",
+    "original_id": "QUY_TAC_LAM_TRON",
+    "original_name": "Quy tắc làm tròn",
+    "canonical_id": "QUY_TAC_LAM_TRON"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0013",
+    "original_id": "SO_TRUNG_BINH",
+    "original_name": "Số trung bình",
+    "canonical_id": "SO_TRUNG_BINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0013",
+    "original_id": "TRUNG_VI",
+    "original_name": "Trung vị",
+    "canonical_id": "TRUNG_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0013",
+    "original_id": "TU_PHAN_VI",
+    "original_name": "Tứ phân vị",
+    "canonical_id": "TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0013",
+    "original_id": "MOT",
+    "original_name": "Mốt",
+    "canonical_id": "MOT"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0013",
+    "original_id": "CONG_THUC_TINH_TRUNG_BINH",
+    "original_name": "Công thức tính trung bình",
+    "canonical_id": "TRUNG_BINH_CONG_MAU_SO_LIEU"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0013",
+    "original_id": "CONG_THUC_TRUNG_BINH_BANG_TAN_SO",
+    "original_name": "Công thức tính trung bình bằng tần số",
+    "canonical_id": "CONG_THUC_TRUNG_BINH_BANG_TAN_SO"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0013",
+    "original_id": "PHUONG_PHAP_TIM_TRUNG_VI",
+    "original_name": "Phương pháp tìm trung vị",
+    "canonical_id": "PHUONG_PHAP_TIM_TRUNG_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0013",
+    "original_id": "PHUONG_PHAP_TIM_TU_PHAN_VI",
+    "original_name": "Phương pháp tìm tứ phân vị",
+    "canonical_id": "PHUONG_PHAP_TIM_TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0013",
+    "original_id": "PHUONG_PHAP_TIM_MOT",
+    "original_name": "Phương pháp tìm mốt",
+    "canonical_id": "PHUONG_PHAP_TIM_MOT"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "KHOANG_BIEN_THIEN",
+    "original_name": "Khoảng biến thiên",
+    "canonical_id": "KHOANG_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "KHOANG_TU_PHAN_VI",
+    "original_name": "Khoảng tứ phân vị",
+    "canonical_id": "KHOANG_TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "PHUONG_SAI",
+    "original_name": "Phương sai",
+    "canonical_id": "PHUONG_SAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "DO_LECH_CHUAN",
+    "original_name": "Độ lệch chuẩn",
+    "canonical_id": "DO_LECH_CHUAN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "GIATRI_BAT_THUONG",
+    "original_name": "Giá trị bất thường",
+    "canonical_id": "GIATRI_BAT_THUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "BIEU_DO_HOP",
+    "original_name": "Biểu đồ hộp",
+    "canonical_id": "BIEU_DO_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "TINH_KHOANG_BIEN_THIEN",
+    "original_name": "Tính khoảng biến thiên",
+    "canonical_id": "TINH_KHOANG_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "TINH_KHOANG_TU_PHAN_VI",
+    "original_name": "Tính khoảng tứ phân vị",
+    "canonical_id": "TINH_KHOANG_TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "TINH_PHUONG_SAI",
+    "original_name": "Tính phương sai",
+    "canonical_id": "TINH_PHUONG_SAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "TINH_DO_LECH_CHUAN",
+    "original_name": "Tính độ lệch chuẩn",
+    "canonical_id": "TINH_DO_LECH_CHUAN"
+  },
+  {
+    "chunk_id": "toan-10-tap-1:0014",
+    "original_id": "PHAT_HIEN_GIATRI_BAT_THUONG",
+    "original_name": "Phát hiện giá trị bất thường",
+    "canonical_id": "PHAT_HIEN_GIATRI_BAT_THUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "HAM_SO",
+    "original_name": "Hàm số",
+    "canonical_id": "HAM_SO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "TAP_XAC_DINH",
+    "original_name": "Tập xác định",
+    "canonical_id": "TAP_XAC_DINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "TAP_GIA_TRI",
+    "original_name": "Tập giá trị",
+    "canonical_id": "TAP_GIA_TRI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "DO_THI_HAM_SO",
+    "original_name": "Đồ thị của hàm số",
+    "canonical_id": "DO_THI_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "HAM_SO_DONG_BIEN",
+    "original_name": "Hàm số đồng biến",
+    "canonical_id": "HAM_SO_DONG_BIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "HAM_SO_NGHICH_BIEN",
+    "original_name": "Hàm số nghịch biến",
+    "canonical_id": "HAM_SO_NGHICH_BIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "HAM_SO_BANG_BANG",
+    "original_name": "Hàm số được cho bằng bảng",
+    "canonical_id": "HAM_SO_BANG_BANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "HAM_SO_BANG_CONG_THUC",
+    "original_name": "Hàm số được cho bằng công thức",
+    "canonical_id": "HAM_SO_BANG_CONG_THUC"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "HAM_SO_BANG_BIEU_DO",
+    "original_name": "Hàm số được cho bằng biểu đồ",
+    "canonical_id": "HAM_SO_BANG_BIEU_DO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "BIEN_SO",
+    "original_name": "Biến số",
+    "canonical_id": "BIEN_SO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "HAM_SO_CUA_BIEN_SO",
+    "original_name": "Hàm số của biến số",
+    "canonical_id": "HAM_SO_CUA_BIEN_SO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "HAM_SO_TANG",
+    "original_name": "Hàm số tăng",
+    "canonical_id": "HAM_SO_DONG_BIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "HAM_SO_GIAM",
+    "original_name": "Hàm số giảm",
+    "canonical_id": "HAM_SO_GIAM"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "CONG_THUC_TIEN_DIEN",
+    "original_name": "Công thức tính tiền điện",
+    "canonical_id": "CONG_THUC_TIEN_DIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0001",
+    "original_id": "PHUONG_PHAP_VE_DO_THI",
+    "original_name": "Phương pháp vẽ đồ thị hàm số",
+    "canonical_id": "PHUONG_PHAP_VE_DO_THI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0002",
+    "original_id": "HAM_SO_BAC_HAI",
+    "original_name": "Hàm số bậc hai",
+    "canonical_id": "HAM_SO_BAC_HAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0002",
+    "original_id": "BANG_GIA_TRI",
+    "original_name": "Bảng giá trị",
+    "canonical_id": "BANG_GIA_TRI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0002",
+    "original_id": "PARABOLA",
+    "original_name": "Parabola",
+    "canonical_id": "PARABOLA"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0002",
+    "original_id": "DINH",
+    "original_name": "Đỉnh",
+    "canonical_id": "DINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0002",
+    "original_id": "TRUC_DOI_XUNG",
+    "original_name": "Trục đối xứng",
+    "canonical_id": "TRUC_DOI_XUNG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0002",
+    "original_id": "CONG_THUC_HAM_SO_BAC_HAI",
+    "original_name": "Công thức hàm số bậc hai",
+    "canonical_id": "CONG_THUC_HAM_SO_BAC_HAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0002",
+    "original_id": "DINH_DA_THUC",
+    "original_name": "Đỉnh dạng đẳng thức",
+    "canonical_id": "DINH_DA_THUC"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0002",
+    "original_id": "PHUONG_PHAP_VE_DO_THI_HAM_SO_BAC_HAI",
+    "original_name": "Phương pháp vẽ đồ thị hàm số bậc hai",
+    "canonical_id": "PHUONG_PHAP_VE_DO_THI_HAM_SO_BAC_HAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0002",
+    "original_id": "TINH_CHAT_HAM_SO_BAC_HAI",
+    "original_name": "Tính chất hàm số bậc hai",
+    "canonical_id": "TINH_CHAT_HAM_SO_BAC_HAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0003",
+    "original_id": "TAM_THUC_BAC_HAI",
+    "original_name": "Tam thức bậc hai",
+    "canonical_id": "TAM_THUC_BAC_HAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0003",
+    "original_id": "DAU_CUA_TAM_THUC_BAC_HAI",
+    "original_name": "Dấu của tam thức bậc hai",
+    "canonical_id": "DAU_CUA_TAM_THUC_BAC_HAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0003",
+    "original_id": "BIET_THUC",
+    "original_name": "Biệt thức",
+    "canonical_id": "BIET_THUC"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0003",
+    "original_id": "BIET_THUC_THU_GON",
+    "original_name": "Biệt thức thu gọn",
+    "canonical_id": "BIET_THUC_THU_GON"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0003",
+    "original_id": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+    "original_name": "Định lí về dấu tam thức bậc hai",
+    "canonical_id": "DINH_LI_DAU_TAM_THUC_BAC_HAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0003",
+    "original_id": "BAT_PHUONG_TRINH_BAC_HAI",
+    "original_name": "Bất phương trình bậc hai",
+    "canonical_id": "BAT_PHUONG_TRINH_BAC_HAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0003",
+    "original_id": "NGHIEM_BAT_PHUONG_TRINH",
+    "original_name": "Nghiệm của bất phương trình",
+    "canonical_id": "NGHIEM_BAT_PHUONG_TRINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0003",
+    "original_id": "TAP_NGHIEM_BAT_PHUONG_TRINH",
+    "original_name": "Tập nghiệm của bất phương trình",
+    "canonical_id": "TAP_NGHIEM_BAT_PHUONG_TRINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0003",
+    "original_id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_BAC_HAI",
+    "original_name": "Phương pháp giải bất phương trình bậc hai",
+    "canonical_id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_BAC_HAI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0004",
+    "original_id": "PHUONG_TRINH_CHUA_CAN",
+    "original_name": "Phương trình chứa căn",
+    "canonical_id": "PHUONG_TRINH_CHUA_CAN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0004",
+    "original_id": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_SQRT_DX2_EX_F",
+    "original_name": "Phương trình dạng √(ax² + bx + c) = √(dx² + ex + f)",
+    "canonical_id": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_SQRT_DX2_EX_F"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0004",
+    "original_id": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_DX_E",
+    "original_name": "Phương trình dạng √(ax² + bx + c) = dx + e",
+    "canonical_id": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_DX_E"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0004",
+    "original_id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_CHUA_CAN",
+    "original_name": "Phương pháp giải phương trình chứa căn",
+    "canonical_id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_CHUA_CAN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0005",
+    "original_id": "PHEP_THU_NGAU_NHIEN",
+    "original_name": "Phép thử ngẫu nhiên",
+    "canonical_id": "PHEP_THU_NGAU_NHIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0005",
+    "original_id": "KHOANG_GIA_TRI_MAU",
+    "original_name": "Không gian mẫu",
+    "canonical_id": "KHONG_GIAN_MAU"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0005",
+    "original_id": "BIEN_CO",
+    "original_name": "Biến cố",
+    "canonical_id": "BIEN_CO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0005",
+    "original_id": "BIEN_CO_DOI",
+    "original_name": "Biến cố đối",
+    "canonical_id": "BIEN_CO_DOI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0005",
+    "original_id": "DINH_NGHI_CU_DIEN_XAC_SUAT",
+    "original_name": "Định nghĩa cổ điển của xác suất",
+    "canonical_id": "DINH_NGHI_CU_DIEN_XAC_SUAT"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0005",
+    "original_id": "NGUYEN_LI_XAC_SUAT_BE",
+    "original_name": "Nguyên lí xác suất bé",
+    "canonical_id": "NGUYEN_LI_XAC_SUAT_BE"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0005",
+    "original_id": "CONG_THUC_XAC_SUAT_CO_DIEN",
+    "original_name": "Công thức xác suất cổ điển",
+    "canonical_id": "CONG_THUC_XAC_SUAT_CO_DIEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0005",
+    "original_id": "PHUONG_PHAP_DEM_KET_QUA",
+    "original_name": "Phương pháp đếm kết quả",
+    "canonical_id": "PHUONG_PHAP_DEM_KET_QUA"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0006",
+    "original_id": "XAC_SUAT_BIEN_CO_DOI",
+    "original_name": "Xác suất của biến cố đôi",
+    "canonical_id": "XAC_SUAT_BIEN_CO_DOI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0006",
+    "original_id": "PHUONG_PHAP_TO_HOP",
+    "original_name": "Phương pháp tổ hợp",
+    "canonical_id": "PHUONG_PHAP_TO_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0006",
+    "original_id": "SO_DO_HINH_CAY",
+    "original_name": "Sơ đồ hình cây",
+    "canonical_id": "SO_DO_HINH_CAY_METHOD"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0006",
+    "original_id": "CONG_THUC_XAC_SUAT_BIEN_CO_DOI",
+    "original_name": "Công thức xác suất của biến cố đối",
+    "canonical_id": "CONG_THUC_XAC_SUAT_BIEN_CO_DOI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0006",
+    "original_id": "BIEN_CO_DOI",
+    "original_name": "Biến cố đôi",
+    "canonical_id": null
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0006",
+    "original_id": "KHOANG_GIAN_MAU",
+    "original_name": "Không gian mẫu",
+    "canonical_id": "KHONG_GIAN_MAU"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0006",
+    "original_id": "BIEN_CO",
+    "original_name": "Biến cố",
+    "canonical_id": "BIEN_CO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0007",
+    "original_id": "DUONG_THANG",
+    "original_name": "đường thẳng",
+    "canonical_id": "DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0007",
+    "original_id": "VECTO_PHAP_TUYEN",
+    "original_name": "vectơ pháp tuyến",
+    "canonical_id": "VECTO_PHAP_TUYEN_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0007",
+    "original_id": "VECTO_CHI_HUONG",
+    "original_name": "vectơ chỉ phương",
+    "canonical_id": "VECTO_CHI_PHUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0007",
+    "original_id": "PHUONG_TRINH_TONG_QUAT",
+    "original_name": "phương trình tổng quát",
+    "canonical_id": "PHUONG_TRINH_TONG_QUAT"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0007",
+    "original_id": "PHUONG_TRINH_THAM_SO",
+    "original_name": "phương trình tham số",
+    "canonical_id": "PHUONG_TRINH_THAM_SO_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0007",
+    "original_id": "MENH_DE_PHUONG_TRINH_TONG_QUAT",
+    "original_name": "mệnh đề phương trình tổng quát",
+    "canonical_id": "MENH_DE_PHUONG_TRINH_TONG_QUAT"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0007",
+    "original_id": "MENH_DE_PHUONG_TRINH_THAM_SO",
+    "original_name": "mệnh đề phương trình tham số",
+    "canonical_id": "MENH_DE_PHUONG_TRINH_THAM_SO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0007",
+    "original_id": "PHUONG_PHAP_LAP_PHUONG_TRINH_TONG_QUAT",
+    "original_name": "phương pháp lập phương trình tổng quát",
+    "canonical_id": "PHUONG_PHAP_LAP_PHUONG_TRINH_TONG_QUAT"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0007",
+    "original_id": "PHUONG_PHAP_LAP_PHUONG_TRINH_THAM_SO",
+    "original_name": "phương pháp lập phương trình tham số",
+    "canonical_id": "PHUONG_PHAP_LAP_PHUONG_TRINH_THAM_SO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+    "original_name": "Đường thẳng trong mặt phẳng toạ độ",
+    "canonical_id": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "PHUONG_TRINH_DUONG_THANG",
+    "original_name": "Phương trình đường thẳng",
+    "canonical_id": "PHUONG_TRINH_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+    "original_name": "Vị trí tương đối giữa hai đường thẳng",
+    "canonical_id": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "GIAO_DIEM_CUA_HAI_DUONG_THANG",
+    "original_name": "Giao điểm của hai đường thẳng",
+    "canonical_id": "GIAO_DIEM_CUA_HAI_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "VECTO_CHI_PHUONG",
+    "original_name": "Vectơ chỉ phương",
+    "canonical_id": "VECTO_CHI_PHUONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "VECTO_PHAP_TUYEN",
+    "original_name": "Vectơ pháp tuyến",
+    "canonical_id": "VECTO_PHAP_TUYEN_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "GOC_GIUA_HAI_DUONG_THANG",
+    "original_name": "Góc giữa hai đường thẳng",
+    "canonical_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+    "original_name": "Công thức tính góc giữa hai đường thẳng",
+    "canonical_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+    "original_name": "Khoảng cách từ điểm đến đường thẳng",
+    "canonical_id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "CONG_THUC_TINH_KHOANG_CACH",
+    "original_name": "Công thức tính khoảng cách từ điểm đến đường thẳng",
+    "canonical_id": "CONG_THUC_TINH_KHOANG_CACH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "METHOD_TIM_GIAO_DIEM",
+    "original_name": "Phương pháp tìm giao điểm của hai đường thẳng",
+    "canonical_id": "METHOD_TIM_GIAO_DIEM"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "METHOD_XAC_DINH_VI_TRI_TUONG_DOI",
+    "original_name": "Phương pháp xác định vị trí tương đối giữa hai đường thẳng",
+    "canonical_id": "METHOD_XAC_DINH_VI_TRI_TUONG_DOI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "METHOD_TINH_GOC_GIUA_HAI_DUONG_THANG",
+    "original_name": "Phương pháp tính góc giữa hai đường thẳng",
+    "canonical_id": "METHOD_TINH_GOC_GIUA_HAI_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0008",
+    "original_id": "METHOD_TINH_KHOANG_CACH",
+    "original_name": "Phương pháp tính khoảng cách từ điểm đến đường thẳng",
+    "canonical_id": "METHOD_TINH_KHOANG_CACH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "DUONG_TRON",
+    "original_name": "đường tròn",
+    "canonical_id": "DUONG_TRON"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "TAM",
+    "original_name": "tâm",
+    "canonical_id": "TAM"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "BAN_KINH",
+    "original_name": "bán kính",
+    "canonical_id": "BAN_KINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "PHUONG_TRINH_DUONG_TRON",
+    "original_name": "phương trình đường tròn",
+    "canonical_id": "PHUONG_TRINH_DUONG_TRON"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "PHUONG_TRINH_TIEP_TUYEN",
+    "original_name": "phương trình tiếp tuyến",
+    "canonical_id": "PHUONG_TRINH_TIEP_TUYEN_DUONG_TRON"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "PHUONG_TRINH_DUONG_TRON_DA_THICH",
+    "original_name": "phương trình đường tròn đã thích",
+    "canonical_id": "PHUONG_TRINH_DUONG_TRON_DA_THICH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "PHUONG_TRINH_DUONG_TRON_CHUA_THICH",
+    "original_name": "phương trình đường tròn chưa thích",
+    "canonical_id": "PHUONG_TRINH_DUONG_TRON_CHUA_THICH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "PHUONG_TRINH_TIEP_TUYEN_DUONG_TRON",
+    "original_name": "phương trình tiếp tuyến đường tròn",
+    "canonical_id": "PHUONG_TRINH_TIEP_TUYEN_DUONG_TRON"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "LAP_PHUONG_TRINH_DUONG_TRON",
+    "original_name": "lập phương trình đường tròn",
+    "canonical_id": "LAP_PHUONG_TRINH_DUONG_TRON"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "XAC_DINH_TAM_BAN_KINH",
+    "original_name": "xác định tâm và bán kính",
+    "canonical_id": "XAC_DINH_TAM_BAN_KINH"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0009",
+    "original_id": "LAP_PHUONG_TRINH_TIEP_TUYEN",
+    "original_name": "lập phương trình tiếp tuyến",
+    "canonical_id": "LAP_PHUONG_TRINH_TIEP_TUYEN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "DUONG_CONIC",
+    "original_name": "Đường conic",
+    "canonical_id": "DUONG_CONIC"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "ELIP",
+    "original_name": "Elip",
+    "canonical_id": "ELIP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "TIEU_DIEM",
+    "original_name": "Tiêu điểm",
+    "canonical_id": "TIEU_DIEM"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "TIEU_CU",
+    "original_name": "Tiêu cự",
+    "canonical_id": "TIEU_CU"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "PHUONG_TRINH_CHINH_TAC",
+    "original_name": "Phương trình chính tắc",
+    "canonical_id": "PHUONG_TRINH_CHINH_TAC_DUONG_CONIC"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "DUONG_CHUAN",
+    "original_name": "Đường chuẩn",
+    "canonical_id": "DUONG_CHUAN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "THAM_SO_TIEU",
+    "original_name": "Tham số tiêu",
+    "canonical_id": "THAM_SO_TIEU"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "PHUONG_TRINH_ELIP",
+    "original_name": "Phương trình chính tắc của elip",
+    "canonical_id": "PHUONG_TRINH_ELIP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "PHUONG_TRINH_HYPEBOL",
+    "original_name": "Phương trình chính tắc của hypebol",
+    "canonical_id": "PHUONG_TRINH_HYPEBOL"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "PHUONG_TRINH_PARABOL",
+    "original_name": "Phương trình chính tắc của parabol",
+    "canonical_id": "PHUONG_TRINH_PARABOL"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "HYPEBOL",
+    "original_name": "Hypebol",
+    "canonical_id": "HYPEBOL"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "PARABOL",
+    "original_name": "Parabol",
+    "canonical_id": "PARABOL"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "TINH_CHAT_QUANG_HOC",
+    "original_name": "Tính chất quang học",
+    "canonical_id": "TINH_CHAT_QUANG_HOC"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0010",
+    "original_id": "UNG_DUNG_CONIC",
+    "original_name": "Ứng dụng của ba đường conic",
+    "canonical_id": "UNG_DUNG_CONIC"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0011",
+    "original_id": "QUY_TAC_CONG",
+    "original_name": "Quy tắc cộng",
+    "canonical_id": "QUY_TAC_CONG"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0011",
+    "original_id": "QUY_TAC_NHAN",
+    "original_name": "Quy tắc nhân",
+    "canonical_id": "QUY_TAC_NHAN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0011",
+    "original_id": "SO_DO_HINH_CAY",
+    "original_name": "Sơ đồ hình cây",
+    "canonical_id": "SO_DO_HINH_CAY_CONCEPT"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0011",
+    "original_id": "BAI_TOAN_DEM",
+    "original_name": "Bài toán đếm",
+    "canonical_id": "BAI_TOAN_DEM"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0011",
+    "original_id": "TAP_HOP_HOP",
+    "original_name": "Tập hợp hợp",
+    "canonical_id": "TAP_HOP_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0011",
+    "original_id": "TAP_HOP_GIAO",
+    "original_name": "Tập hợp giao",
+    "canonical_id": "TAP_HOP_GIAO"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "HOAN_VI",
+    "original_name": "Hoán vị",
+    "canonical_id": "HOAN_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "CHINH_HOP",
+    "original_name": "Chỉnh hợp",
+    "canonical_id": "CHINH_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "TO_HOP",
+    "original_name": "Tổ hợp",
+    "canonical_id": "TO_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "CONG_THUC_HOAN_VI",
+    "original_name": "Công thức hoán vị",
+    "canonical_id": "CONG_THUC_HOAN_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "CONG_THUC_CHINH_HOP",
+    "original_name": "Công thức chỉnh hợp",
+    "canonical_id": "CONG_THUC_CHINH_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "CONG_THUC_TO_HOP",
+    "original_name": "Công thức tổ hợp",
+    "canonical_id": "CONG_THUC_TO_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "QUY_TAC_NHAN",
+    "original_name": "Quy tắc nhân",
+    "canonical_id": "QUY_TAC_NHAN"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "GIAI_THUAT_TINH_HOAN_VI",
+    "original_name": "Giải thuật tính hoán vị",
+    "canonical_id": "GIAI_THUAT_TINH_HOAN_VI"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "GIAI_THUAT_TINH_CHINH_HOP",
+    "original_name": "Giải thuật tính chỉnh hợp",
+    "canonical_id": "GIAI_THUAT_TINH_CHINH_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0012",
+    "original_id": "GIAI_THUAT_TINH_TO_HOP",
+    "original_name": "Giải thuật tính tổ hợp",
+    "canonical_id": "GIAI_THUAT_TINH_TO_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0013",
+    "original_id": "KHAI_TRIEN_NHI_THUC_NEWTON",
+    "original_name": "Khai triển nhị thức Newton",
+    "canonical_id": "KHAI_TRIEN_NHI_THUC_NEWTON"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0013",
+    "original_id": "NHI_THUC",
+    "original_name": "Nhị thức",
+    "canonical_id": "NHI_THUC"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0013",
+    "original_id": "SO_MU",
+    "original_name": "Số mũ",
+    "canonical_id": "SO_MU"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0013",
+    "original_id": "TO_HOP",
+    "original_name": "Tổ hợp",
+    "canonical_id": "TO_HOP"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0013",
+    "original_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC",
+    "original_name": "Công thức khai triển nhị thức",
+    "canonical_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0013",
+    "original_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_4",
+    "original_name": "Công thức khai triển nhị thức bậc 4",
+    "canonical_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_4"
+  },
+  {
+    "chunk_id": "toan-10-tap-2:0013",
+    "original_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_5",
+    "original_name": "Công thức khai triển nhị thức bậc 5",
+    "canonical_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_5"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "GOC_LUONG_GIAC",
+    "original_name": "Góc lượng giác",
+    "canonical_id": "GOC_LUONG_GIAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "SO_DO_GOC_LUONG_GIAC",
+    "original_name": "Số đo của góc lượng giác",
+    "canonical_id": "SO_DO_GOC_LUONG_GIAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "DUONG_TRON_LUONG_GIAC",
+    "original_name": "Đường tròn lượng giác",
+    "canonical_id": "DUONG_TRON_LUONG_GIAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "GIA_TRI_LUONG_GIAC",
+    "original_name": "Giá trị lượng giác của góc lượng giác",
+    "canonical_id": "GIA_TRI_LUONG_GIAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "HE_THUC_CHASLES",
+    "original_name": "Hệ thức Chasles",
+    "canonical_id": "HE_THUC_CHASLES"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "DON_VI_DO",
+    "original_name": "Đơn vị độ",
+    "canonical_id": "DON_VI_DO"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "DON_VI_RADIAN",
+    "original_name": "Đơn vị radian",
+    "canonical_id": "DON_VI_RADIAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "QUAN_HE_DO_RADIAN",
+    "original_name": "Quan hệ giữa độ và radian",
+    "canonical_id": "QUAN_HE_DO_RADIAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "DO_DAI_CUNG_TRON",
+    "original_name": "Độ dài cung tròn",
+    "canonical_id": "DO_DAI_CUNG_TRON"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "SIN",
+    "original_name": "Sin của góc lượng giác",
+    "canonical_id": "SIN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "COS",
+    "original_name": "Cos của góc lượng giác",
+    "canonical_id": "COS"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "TAN",
+    "original_name": "Tan của góc lượng giác",
+    "canonical_id": "TAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "COT",
+    "original_name": "Cot của góc lượng giác",
+    "canonical_id": "COT"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "HE_THUC_CO_BAN",
+    "original_name": "Hệ thức lượng giác cơ bản",
+    "canonical_id": "HE_THUC_CO_BAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "GIA_TRI_LUONG_GIAC_GOC_DOI_NHAU",
+    "original_name": "Giá trị lượng giác của góc đối nhau",
+    "canonical_id": "GIA_TRI_LUONG_GIAC_GOC_DOI_NHAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "GIA_TRI_LUONG_GIAC_GOC_BU_NHAU",
+    "original_name": "Giá trị lượng giác của góc bù nhau",
+    "canonical_id": "GIA_TRI_LUONG_GIAC_GOC_BU_NHAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU",
+    "original_name": "Giá trị lượng giác của góc phụ nhau",
+    "canonical_id": "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0001",
+    "original_id": "GIA_TRI_LUONG_GIAC_GOC_HON_KEM_PI",
+    "original_name": "Giá trị lượng giác của góc hơn kém π",
+    "canonical_id": "GIA_TRI_LUONG_GIAC_GOC_HON_KEM_PI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0002",
+    "original_id": "CONG_THUC_CONG",
+    "original_name": "Công thức cộng",
+    "canonical_id": "CONG_THUC_CONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0002",
+    "original_id": "CONG_THUC_CONG_COS",
+    "original_name": "Công thức cộng cosin",
+    "canonical_id": "CONG_THUC_CONG_COS"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0002",
+    "original_id": "CONG_THUC_CONG_SIN",
+    "original_name": "Công thức cộng sin",
+    "canonical_id": "CONG_THUC_CONG_SIN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0002",
+    "original_id": "CONG_THUC_CONG_TAN",
+    "original_name": "Công thức cộng tan",
+    "canonical_id": "CONG_THUC_CONG_TAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0002",
+    "original_id": "CONG_THUC_NHAN_DOI",
+    "original_name": "Công thức nhân đôi",
+    "canonical_id": "CONG_THUC_NHAN_DOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0002",
+    "original_id": "CONG_THUC_BIEN_DOI_TICH_THANH_TONG",
+    "original_name": "Công thức biến đổi tích thành tổng",
+    "canonical_id": "CONG_THUC_BIEN_DOI_TICH_THANH_TONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0002",
+    "original_id": "CONG_THUC_BIEN_DOI_TONG_THANH_TICH",
+    "original_name": "Công thức biến đổi tổng thành tích",
+    "canonical_id": "CONG_THUC_BIEN_DOI_TONG_THANH_TICH"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0002",
+    "original_id": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+    "original_name": "Phương pháp biến đổi lượng giác",
+    "canonical_id": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "HAM_SO_SIN",
+    "original_name": "Hàm số sin",
+    "canonical_id": "HAM_SO_SIN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "HAM_SO_COS",
+    "original_name": "Hàm số cos",
+    "canonical_id": "HAM_SO_COS"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "HAM_SO_TAN",
+    "original_name": "Hàm số tang",
+    "canonical_id": "HAM_SO_TANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "HAM_SO_COT",
+    "original_name": "Hàm số cotang",
+    "canonical_id": "HAM_SO_COT"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "HAM_SO_CHAN",
+    "original_name": "Hàm số chẵn",
+    "canonical_id": "HAM_SO_CHAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "HAM_SO_LE",
+    "original_name": "Hàm số lẻ",
+    "canonical_id": "HAM_SO_LE"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "HAM_SO_TUAN_HOAN",
+    "original_name": "Hàm số tuần hoàn",
+    "canonical_id": "HAM_SO_TUAN_HOAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "CHU_KI",
+    "original_name": "Chu kì",
+    "canonical_id": "CHU_KI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "DO_THI_HAM_SO",
+    "original_name": "Đồ thị hàm số",
+    "canonical_id": "DO_THI_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "TAP_GIA_TRI",
+    "original_name": "Tập giá trị",
+    "canonical_id": "TAP_GIA_TRI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "KHOANG_DONG_BIEN",
+    "original_name": "Khoảng đồng biến",
+    "canonical_id": "KHOANG_DONG_BIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "KHOANG_NGHICH_BIEN",
+    "original_name": "Khoảng nghịch biến",
+    "canonical_id": "KHOANG_NGHICH_BIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "DUONG_HINH_SIN",
+    "original_name": "Đường hình sin",
+    "canonical_id": "DUONG_HINH_SIN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "DUONG_HINH_COS",
+    "original_name": "Đường hình cos",
+    "canonical_id": "DUONG_HINH_COS"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "DUONG_HINH_TAN",
+    "original_name": "Đường hình tan",
+    "canonical_id": "DUONG_HINH_TAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "DUONG_HINH_COT",
+    "original_name": "Đường hình cot",
+    "canonical_id": "DUONG_HINH_COT"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "TINH_CHAT_HAM_SO",
+    "original_name": "Tính chất hàm số",
+    "canonical_id": "TINH_CHAT_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "PHUONG_TRINH_DAO_DONG",
+    "original_name": "Phương trình dao động điều hoà",
+    "canonical_id": "PHUONG_TRINH_DAO_DONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "BIEN_DO_DAO_DONG",
+    "original_name": "Biên độ dao động",
+    "canonical_id": "BIEN_DO_DAO_DONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "PHA_DAO_DONG",
+    "original_name": "Pha dao động",
+    "canonical_id": "PHA_DAO_DONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "PHA_BAN_DAU",
+    "original_name": "Pha ban đầu",
+    "canonical_id": "PHA_BAN_DAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0003",
+    "original_id": "CHU_KI_DAO_DONG",
+    "original_name": "Chu kì dao động",
+    "canonical_id": "CHU_KI_DAO_DONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0004",
+    "original_id": "PHUONG_TRINH_TUONG_DUONG",
+    "original_name": "Phương trình tương đương",
+    "canonical_id": "PHUONG_TRINH_TUONG_DUONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0004",
+    "original_id": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+    "original_name": "Phương trình lượng giác cơ bản",
+    "canonical_id": "PHUONG_TRINH_LUONG_GIAC_CO_BAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0004",
+    "original_id": "PHUONG_TRINH_SIN_X_M",
+    "original_name": "Phương trình sin x = m",
+    "canonical_id": "PHUONG_TRINH_SIN_X_M"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0004",
+    "original_id": "PHUONG_TRINH_COS_X_M",
+    "original_name": "Phương trình cos x = m",
+    "canonical_id": "PHUONG_TRINH_COS_X_M"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0004",
+    "original_id": "PHUONG_TRINH_TAN_X_M",
+    "original_name": "Phương trình tan x = m",
+    "canonical_id": "PHUONG_TRINH_TAN_X_M"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0004",
+    "original_id": "PHUONG_TRINH_COT_X_M",
+    "original_name": "Phương trình cot x = m",
+    "canonical_id": "PHUONG_TRINH_COT_X_M"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0004",
+    "original_id": "PHEP_BIEN_DOI_TUONG_DUONG",
+    "original_name": "Phép biến đổi tương đương",
+    "canonical_id": "PHEP_BIEN_DOI_TUONG_DUONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0004",
+    "original_id": "GIAI_PHUONG_TRINH_LUONG_GIAC",
+    "original_name": "Giải phương trình lượng giác",
+    "canonical_id": "GIAI_PHUONG_TRINH_LUONG_GIAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0004",
+    "original_id": "SUDUNG_MAY_TINH_TIM_GOC",
+    "original_name": "Sử dụng máy tính cầm tay tìm góc",
+    "canonical_id": "SUDUNG_MAY_TINH_TIM_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "DAY_SO",
+    "original_name": "Dãy số",
+    "canonical_id": "DAY_SO"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "DAY_SO_VO_HAN",
+    "original_name": "Dãy số vô hạn",
+    "canonical_id": "DAY_SO_VO_HAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "DAY_SO_HUU_HAN",
+    "original_name": "Dãy số hữu hạn",
+    "canonical_id": "DAY_SO_HUU_HAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "SO_HANG_DAU",
+    "original_name": "Số hạng đầu",
+    "canonical_id": "SO_HANG_DAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "SO_HANG_TONG_QUAT",
+    "original_name": "Số hạng tổng quát",
+    "canonical_id": "SO_HANG_TONG_QUAT_DAY_SO"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "SO_HANG_CUOI",
+    "original_name": "Số hạng cuối",
+    "canonical_id": "SO_HANG_CUOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "DAY_SO_TANG",
+    "original_name": "Dãy số tăng",
+    "canonical_id": "DAY_SO_TANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "DAY_SO_GIAM",
+    "original_name": "Dãy số giảm",
+    "canonical_id": "DAY_SO_GIAM"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "DAY_SO_BI_CHAN",
+    "original_name": "Dãy số bị chặn",
+    "canonical_id": "DAY_SO_BI_CHAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "DAY_SO_BI_CHAN_TREN",
+    "original_name": "Dãy số bị chặn trên",
+    "canonical_id": "DAY_SO_BI_CHAN_TREN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "DAY_SO_BI_CHAN_DUOI",
+    "original_name": "Dãy số bị chặn dưới",
+    "canonical_id": "DAY_SO_BI_CHAN_DUOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "PHUONG_PHAP_MO_TA",
+    "original_name": "Phương pháp mô tả",
+    "canonical_id": "PHUONG_PHAP_MO_TA"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "PHUONG_PHAP_TRUY_HOI",
+    "original_name": "Phương pháp truy hồi",
+    "canonical_id": "PHUONG_PHAP_TRUY_HOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0005",
+    "original_id": "HE_THUC_TRUY_HOI",
+    "original_name": "Hệ thức truy hồi",
+    "canonical_id": "HE_THUC_TRUY_HOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0006",
+    "original_id": "CAP_SO_CONG",
+    "original_name": "Cấp số cộng",
+    "canonical_id": "CAP_SO_CONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0006",
+    "original_id": "CONG_SAI",
+    "original_name": "Công sai",
+    "canonical_id": "CONG_SAI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0006",
+    "original_id": "SO_HANG_TONG_QUAT",
+    "original_name": "Số hạng tổng quát",
+    "canonical_id": "SO_HANG_TONG_QUAT_CAP_SO_CONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0006",
+    "original_id": "TONG_N_SO_HANG_DAU",
+    "original_name": "Tổng n số hạng đầu",
+    "canonical_id": "TONG_N_SO_HANG_DAU_CAP_SO_CONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0006",
+    "original_id": "CONG_THUC_SO_HANG_TONG_QUAT",
+    "original_name": "Công thức số hạng tổng quát",
+    "canonical_id": "CONG_THUC_SO_HANG_TONG_QUAT"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0006",
+    "original_id": "CONG_THUC_TONG_N_SO_HANG_DAU",
+    "original_name": "Công thức tổng n số hạng đầu",
+    "canonical_id": "CONG_THUC_TONG_N_SO_HANG_DAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0006",
+    "original_id": "PHUONG_PHAP_TINH_TONG_CAP_SO_CONG",
+    "original_name": "Phương pháp tính tổng cấp số cộng",
+    "canonical_id": "PHUONG_PHAP_TINH_TONG_CAP_SO_CONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0007",
+    "original_id": "CAP_SO_NHAN",
+    "original_name": "Cấp số nhân",
+    "canonical_id": "CAP_SO_NHAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0007",
+    "original_id": "CONG_BOI",
+    "original_name": "Công bội",
+    "canonical_id": "CONG_BOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0007",
+    "original_id": "SO_HANG_TONG_QUAT",
+    "original_name": "Số hạng tổng quát",
+    "canonical_id": "SO_HANG_TONG_QUAT_CAP_SO_NHAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0007",
+    "original_id": "TONG_N_SO_HANG_DAU",
+    "original_name": "Tổng n số hạng đầu",
+    "canonical_id": "TONG_N_SO_HANG_DAU_CAP_SO_NHAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0007",
+    "original_id": "CONG_THUC_CAP_SO_NHAN",
+    "original_name": "Công thức cấp số nhân",
+    "canonical_id": "CONG_THUC_CAP_SO_NHAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0007",
+    "original_id": "CONG_THUC_TONG_CAP_SO_NHAN",
+    "original_name": "Công thức tổng cấp số nhân",
+    "canonical_id": "CONG_THUC_TONG_CAP_SO_NHAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0007",
+    "original_id": "PHUONG_PHAP_TINH_TONG_CAP_SO_NHAN",
+    "original_name": "Phương pháp tính tổng cấp số nhân",
+    "canonical_id": "PHUONG_PHAP_TINH_TONG_CAP_SO_NHAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0008",
+    "original_id": "MAU_SO_LIEU_GHEP_NHOM",
+    "original_name": "Mẫu số liệu ghép nhóm",
+    "canonical_id": "MAU_SO_LIEU_GHEP_NHOM"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0008",
+    "original_id": "NHOM_SO_LIEU",
+    "original_name": "Nhóm số liệu",
+    "canonical_id": "NHOM_SO_LIEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0008",
+    "original_id": "BANG_THONG_KE",
+    "original_name": "Bảng thống kê",
+    "canonical_id": "BANG_THONG_KE"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0008",
+    "original_id": "PHUONG_PHAP_GHEP_NHOM",
+    "original_name": "Phương pháp ghép nhóm",
+    "canonical_id": "PHUONG_PHAP_GHEP_NHOM"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0008",
+    "original_id": "DO_DAI_NHOM",
+    "original_name": "Độ dài nhóm",
+    "canonical_id": "DO_DAI_NHOM"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0008",
+    "original_id": "KHOANG_BIEN_THIEN",
+    "original_name": "Khoảng biến thiên",
+    "canonical_id": "KHOANG_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0008",
+    "original_id": "CHI_SO_BMI",
+    "original_name": "Chỉ số BMI",
+    "canonical_id": "CHI_SO_BMI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "SO_TRUNG_BINH",
+    "original_name": "Số trung bình",
+    "canonical_id": "SO_TRUNG_BINH"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "TRUNG_VI",
+    "original_name": "Trung vị",
+    "canonical_id": "TRUNG_VI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "TU_PHAN_VI",
+    "original_name": "Tứ phân vị",
+    "canonical_id": "TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "MOT",
+    "original_name": "Mốt",
+    "canonical_id": "MOT"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "MAU_SO_LIEU_GHEP_NHOM",
+    "original_name": "Mẫu số liệu ghép nhóm",
+    "canonical_id": "MAU_SO_LIEU_GHEP_NHOM"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "CONG_THUC_TINH_TRUNG_BINH",
+    "original_name": "Công thức tính trung bình",
+    "canonical_id": "TRUNG_BINH_CONG_MAU_SO_LIEU_GHOP_NHOM"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "CONG_THUC_TINH_TRUNG_VI",
+    "original_name": "Công thức tính trung vị",
+    "canonical_id": "CONG_THUC_TINH_TRUNG_VI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "CONG_THUC_TINH_TU_PHAN_VI",
+    "original_name": "Công thức tính tứ phân vị",
+    "canonical_id": "CONG_THUC_TINH_TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "CONG_THUC_TINH_MOT",
+    "original_name": "Công thức tính mốt",
+    "canonical_id": "CONG_THUC_TINH_MOT"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "PHUONG_PHAP_TINH_SO_TRUNG_BINH",
+    "original_name": "Phương pháp tính số trung bình",
+    "canonical_id": "PHUONG_PHAP_TINH_SO_TRUNG_BINH"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "PHUONG_PHAP_TINH_TRUNG_VI",
+    "original_name": "Phương pháp tính trung vị",
+    "canonical_id": "PHUONG_PHAP_TINH_TRUNG_VI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "PHUONG_PHAP_TINH_TU_PHAN_VI",
+    "original_name": "Phương pháp tính tứ phân vị",
+    "canonical_id": "PHUONG_PHAP_TINH_TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0009",
+    "original_id": "PHUONG_PHAP_TINH_MOT",
+    "original_name": "Phương pháp tính mốt",
+    "canonical_id": "PHUONG_PHAP_TINH_MOT"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "MAT_PHANG",
+    "original_name": "Mặt phẳng",
+    "canonical_id": "MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "DIEM_THUOC_MAT_PHANG",
+    "original_name": "Điểm thuộc mặt phẳng",
+    "canonical_id": "DIEM_THUOC_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "DIEM_KHONG_THUOC_MAT_PHANG",
+    "original_name": "Điểm không thuộc mặt phẳng",
+    "canonical_id": "DIEM_KHONG_THUOC_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "CAC_DIEM_DONG_PHANG",
+    "original_name": "Các điểm đồng phẳng",
+    "canonical_id": "CAC_DIEM_DONG_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "CAC_DIEM_KHONG_DONG_PHANG",
+    "original_name": "Các điểm không đồng phẳng",
+    "canonical_id": "CAC_DIEM_KHONG_DONG_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+    "original_name": "Giao tuyến của hai mặt phẳng",
+    "canonical_id": "GIAO_TUYEN_CUA_HAI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "HINH_CHOP",
+    "original_name": "Hình chóp",
+    "canonical_id": "HINH_CHOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "HINH_TU_DIEN",
+    "original_name": "Hình tứ diện",
+    "canonical_id": "HINH_TU_DIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "DUONG_THANG_DI_QUA_HAI_DIEM",
+    "original_name": "Đường thẳng đi qua hai điểm",
+    "canonical_id": "DUONG_THANG_DI_QUA_HAI_DIEM"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "MAT_PHANG_DI_QUA_BA_DIEM_KHONG_THANG_HANG",
+    "original_name": "Mặt phẳng đi qua ba điểm không thẳng hàng",
+    "canonical_id": "MAT_PHANG_DI_QUA_BA_DIEM_KHONG_THANG_HANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "DUONG_THANG_THUOC_MAT_PHANG",
+    "original_name": "Đường thẳng thuộc mặt phẳng",
+    "canonical_id": "DUONG_THANG_THUOC_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "XAC_DINH_MAT_PHANG_BOI_DIEM_VA_DUONG_THANG",
+    "original_name": "Xác định mặt phẳng bởi điểm và đường thẳng",
+    "canonical_id": "XAC_DINH_MAT_PHANG_BOI_DIEM_VA_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "XAC_DINH_MAT_PHANG_BOI_HAI_DUONG_THANG_CAT_NHAU",
+    "original_name": "Xác định mặt phẳng bởi hai đường thẳng cắt nhau",
+    "canonical_id": "XAC_DINH_MAT_PHANG_BOI_HAI_DUONG_THANG_CAT_NHAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0010",
+    "original_id": "XAC_DINH_GIAO_DIEM_CUA_DUONG_THANG_VA_MAT_PHANG",
+    "original_name": "Xác định giao điểm của đường thẳng và mặt phẳng",
+    "canonical_id": "XAC_DINH_GIAO_DIEM_CUA_DUONG_THANG_VA_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0011",
+    "original_id": "HAI_DUONG_THANG_DONG_PHANG",
+    "original_name": "Hai đường thẳng đồng phẳng",
+    "canonical_id": "HAI_DUONG_THANG_DONG_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0011",
+    "original_id": "HAI_DUONG_THANG_CHEO_NHAU",
+    "original_name": "Hai đường thẳng chéo nhau",
+    "canonical_id": "HAI_DUONG_THANG_CHEO_NHAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0011",
+    "original_id": "DUONG_THANG_CAT_NHAU",
+    "original_name": "Hai đường thẳng cắt nhau",
+    "canonical_id": "DUONG_THANG_CAT_NHAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0011",
+    "original_id": "DUONG_THANG_SONG_SONG",
+    "original_name": "Hai đường thẳng song song",
+    "canonical_id": "DUONG_THANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0011",
+    "original_id": "DUONG_THANG_TRUNG_NHAU",
+    "original_name": "Hai đường thẳng trùng nhau",
+    "canonical_id": "DUONG_THANG_TRUNG_NHAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0011",
+    "original_id": "DINH_LY_VE_BA_DUONG_GIAO_TUYEN",
+    "original_name": "Định lý về ba đường giao tuyến",
+    "canonical_id": "DINH_LY_VE_BA_DUONG_GIAO_TUYEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0011",
+    "original_id": "PHUONG_PHAP_XAC_DINH_GIAO_TUYEN",
+    "original_name": "Phương pháp xác định giao tuyến",
+    "canonical_id": "PHUONG_PHAP_XAC_DINH_GIAO_TUYEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0012",
+    "original_id": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "original_name": "Đường thẳng song song với mặt phẳng",
+    "canonical_id": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0012",
+    "original_id": "DUONG_THANG_CAT_MAT_PHANG",
+    "original_name": "Đường thẳng cắt mặt phẳng",
+    "canonical_id": "DUONG_THANG_CAT_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0012",
+    "original_id": "DUONG_THANG_NAM_TRONG_MAT_PHANG",
+    "original_name": "Đường thẳng nằm trong mặt phẳng",
+    "canonical_id": "DUONG_THANG_NAM_TRONG_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0012",
+    "original_id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "original_name": "Điều kiện đường thẳng song song với mặt phẳng",
+    "canonical_id": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0012",
+    "original_id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "original_name": "Tính chất đường thẳng song song với mặt phẳng",
+    "canonical_id": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0012",
+    "original_id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+    "original_name": "Mặt phẳng chứa đường thẳng song song với đường thẳng khác",
+    "canonical_id": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0013",
+    "original_id": "HAI_MAT_PHANG_SONG_SONG",
+    "original_name": "Hai mặt phẳng song song",
+    "canonical_id": "HAI_MAT_PHANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0013",
+    "original_id": "DIEU_KIEN_HAI_MAT_PHANG_SONG_SONG",
+    "original_name": "Điều kiện hai mặt phẳng song song",
+    "canonical_id": "DIEU_KIEN_HAI_MAT_PHANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0013",
+    "original_id": "TINH_CHAT_HAI_MAT_PHANG_SONG_SONG",
+    "original_name": "Tính chất hai mặt phẳng song song",
+    "canonical_id": "TINH_CHAT_HAI_MAT_PHANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0013",
+    "original_id": "DINH_LI_THALES_TRONG_KHONG_GIAN",
+    "original_name": "Định lí Thalès trong không gian",
+    "canonical_id": "DINH_LI_THALES_TRONG_KHONG_GIAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0013",
+    "original_id": "HINH_LANG_TRU",
+    "original_name": "Hình lăng trụ",
+    "canonical_id": "HINH_LANG_TRU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0013",
+    "original_id": "HINH_HOP",
+    "original_name": "Hình hộp",
+    "canonical_id": "HINH_HOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0013",
+    "original_id": "TINH_CHAT_HINH_HOP",
+    "original_name": "Tính chất hình hộp",
+    "canonical_id": "TINH_CHAT_HINH_HOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "PHEP_CHIEU_SONG_SONG",
+    "original_name": "Phép chiếu song song",
+    "canonical_id": "PHEP_CHIEU_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "HINH_CHIEU",
+    "original_name": "Hình chiếu",
+    "canonical_id": "HINH_CHIEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "PHUONG_CHIEU",
+    "original_name": "Phương chiếu",
+    "canonical_id": "PHUONG_CHIEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "MAT_PHANG_CHIEU",
+    "original_name": "Mặt phẳng chiếu",
+    "canonical_id": "MAT_PHANG_CHIEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "TINH_CHAT_PHEP_CHIEU_SONG_SONG",
+    "original_name": "Tính chất phép chiếu song song",
+    "canonical_id": "TINH_CHAT_PHEP_CHIEU_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "HINH_BIEU_DIEN",
+    "original_name": "Hình biểu diễn",
+    "canonical_id": "HINH_BIEU_DIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "HINH_BIEU_DIEN_TAM_GIAC",
+    "original_name": "Hình biểu diễn của tam giác",
+    "canonical_id": "HINH_BIEU_DIEN_TAM_GIAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "HINH_BIEU_DIEN_HINH_VUONG",
+    "original_name": "Hình biểu diễn của hình vuông",
+    "canonical_id": "HINH_BIEU_DIEN_HINH_VUONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "HINH_BIEU_DIEN_HINH_THANG",
+    "original_name": "Hình biểu diễn của hình thang",
+    "canonical_id": "HINH_BIEU_DIEN_HINH_THANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "HINH_BIEU_DIEN_HINH_TRON",
+    "original_name": "Hình biểu diễn của hình tròn",
+    "canonical_id": "HINH_BIEU_DIEN_HINH_TRON"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "XAC_DINH_HINH_CHIEU",
+    "original_name": "Xác định hình chiếu",
+    "canonical_id": "XAC_DINH_HINH_CHIEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0014",
+    "original_id": "VE_HINH_BIEU_DIEN",
+    "original_name": "Vẽ hình biểu diễn",
+    "canonical_id": "VE_HINH_BIEU_DIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "GIOI_HAN_DAY_SO",
+    "original_name": "Giới hạn của dãy số",
+    "canonical_id": "GIOI_HAN_DAY_SO"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "GIOI_HAN_HUU_HAN",
+    "original_name": "Giới hạn hữu hạn",
+    "canonical_id": "GIOI_HAN_HUU_HAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "GIOI_HAN_VO_CUC",
+    "original_name": "Giới hạn vô cực",
+    "canonical_id": "GIOI_HAN_VO_CUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "GIOI_HAN_LA_0",
+    "original_name": "Giới hạn là 0",
+    "canonical_id": "GIOI_HAN_LA_0"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "GIOI_HAN_LA_A",
+    "original_name": "Giới hạn là a",
+    "canonical_id": "GIOI_HAN_LA_A"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "PHEP_TOAN_GIOI_HAN",
+    "original_name": "Các phép toán giới hạn",
+    "canonical_id": "PHEP_TOAN_GIOI_HAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "CAP_SO_NHAN_LUI_VO_HANH",
+    "original_name": "Cấp số nhân lùi vô hạn",
+    "canonical_id": "CAP_SO_NHAN_LUI_VO_HANH"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "TONG_CAP_SO_NHAN_LUI_VO_HANH",
+    "original_name": "Tổng của cấp số nhân lùi vô hạn",
+    "canonical_id": "TONG_CAP_SO_NHAN_LUI_VO_HANH"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "NGHICH_LI_ZENO",
+    "original_name": "Nghịch lí Zeno",
+    "canonical_id": "NGHICH_LI_ZENO"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "QUY_TAC_TINH_GIOI_HAN",
+    "original_name": "Quy tắc tính giới hạn",
+    "canonical_id": "QUY_TAC_TINH_GIOI_HAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0015",
+    "original_id": "QUY_TAC_GIOI_HAN_VO_CUC",
+    "original_name": "Quy tắc giới hạn vô cực",
+    "canonical_id": "QUY_TAC_GIOI_HAN_VO_CUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "GIOI_HAN_HAM_SO",
+    "original_name": "Giới hạn của hàm số",
+    "canonical_id": "GIOI_HAN_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "GIOI_HAN_HUU_HAN",
+    "original_name": "Giới hạn hữu hạn",
+    "canonical_id": "GIOI_HAN_HUU_HAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "GIOI_HAN_TAI_VO_CUC",
+    "original_name": "Giới hạn tại vô cực",
+    "canonical_id": "GIOI_HAN_TAI_VO_CUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "GIOI_HAN_VO_CUC",
+    "original_name": "Giới hạn vô cực",
+    "canonical_id": "GIOI_HAN_VO_CUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "GIOI_HAN_MOT_BEN",
+    "original_name": "Giới hạn một bên",
+    "canonical_id": "GIOI_HAN_MOT_BEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "GIOI_HAN_BEN_PHAI",
+    "original_name": "Giới hạn bên phải",
+    "canonical_id": "GIOI_HAN_BEN_PHAI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "GIOI_HAN_BEN_TRAI",
+    "original_name": "Giới hạn bên trái",
+    "canonical_id": "GIOI_HAN_BEN_TRAI"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "QUY_TAC_TINH_GIOI_HAN",
+    "original_name": "Quy tắc tính giới hạn",
+    "canonical_id": "QUY_TAC_TINH_GIOI_HAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "QUY_TAC_TINH_GIOI_HAN_TICH",
+    "original_name": "Quy tắc tính giới hạn của tích",
+    "canonical_id": "QUY_TAC_TINH_GIOI_HAN_TICH"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "QUY_TAC_TINH_GIOI_HAN_THUONG",
+    "original_name": "Quy tắc tính giới hạn của thương",
+    "canonical_id": "QUY_TAC_TINH_GIOI_HAN_THUONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0016",
+    "original_id": "PHUONG_PHAP_TINH_GIOI_HAN",
+    "original_name": "Phương pháp tính giới hạn",
+    "canonical_id": "PHUONG_PHAP_TINH_GIOI_HAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+    "original_name": "Hàm số liên tục tại một điểm",
+    "canonical_id": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "HAM_SO_GIAN_DOAN",
+    "original_name": "Hàm số gián đoạn",
+    "canonical_id": "HAM_SO_GIAN_DOAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+    "original_name": "Hàm số liên tục trên một khoảng",
+    "canonical_id": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "HAM_SO_LIEN_TUC_TREN_MOT_DOAN",
+    "original_name": "Hàm số liên tục trên một đoạn",
+    "canonical_id": "HAM_SO_LIEN_TUC_TREN_MOT_DOAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "TONG_HIEU_TICH_THUONG_HAM_LIEN_TUC",
+    "original_name": "Tính liên tục của tổng, hiệu, tích, thương",
+    "canonical_id": "TONG_HIEU_TICH_THUONG_HAM_LIEN_TUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "TINH_CHAT_LIEN_TUC_HAM_DA_THUC",
+    "original_name": "Tính liên tục của hàm đa thức",
+    "canonical_id": "TINH_CHAT_LIEN_TUC_HAM_DA_THUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "TINH_CHAT_LIEN_TUC_HAM_SIN_COS",
+    "original_name": "Tính liên tục của hàm sin và cos",
+    "canonical_id": "TINH_CHAT_LIEN_TUC_HAM_SIN_COS"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "TINH_CHAT_LIEN_TUC_HAM_TAN_COT",
+    "original_name": "Tính liên tục của hàm tan và cot",
+    "canonical_id": "TINH_CHAT_LIEN_TUC_HAM_TAN_COT"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "TINH_CHAT_LIEN_TUC_HAM_CAN",
+    "original_name": "Tính liên tục của hàm căn",
+    "canonical_id": "TINH_CHAT_LIEN_TUC_HAM_CAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "TINH_CHAT_LIEN_TUC_HAM_PHAN_THUC",
+    "original_name": "Tính liên tục của hàm phân thức",
+    "canonical_id": "TINH_CHAT_LIEN_TUC_HAM_PHAN_THUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-1:0017",
+    "original_id": "NGUYEN_LY_TON_TAI_NGHIEM",
+    "original_name": "Nguyên lý tồn tại nghiệm",
+    "canonical_id": "NGUYEN_LY_TON_TAI_NGHIEM"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "LUY_THUA_VOI_SO_MU_NGUYEN",
+    "original_name": "Luỹ thừa với số mũ nguyên",
+    "canonical_id": "LUY_THUA_VOI_SO_MU_NGUYEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "LUY_THUA_VOI_SO_MU_HUU_TI",
+    "original_name": "Luỹ thừa với số mũ hữu tỉ",
+    "canonical_id": "LUY_THUA_VOI_SO_MU_HUU_TI"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "LUY_THUA_VOI_SO_MU_THUC",
+    "original_name": "Luỹ thừa với số mũ thực",
+    "canonical_id": "LUY_THUA_VOI_SO_MU_THUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "CAN_BAC_N",
+    "original_name": "Căn bậc n",
+    "canonical_id": "CAN_BAC_N"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "CAN_SO_HOC_BAC_N",
+    "original_name": "Căn số học bậc n",
+    "canonical_id": "CAN_SO_HOC_BAC_N"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "TINH_CHAT_LUY_THUA",
+    "original_name": "Tính chất luỹ thừa",
+    "canonical_id": "TINH_CHAT_LUY_THUA"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "TINH_CHAT_CAN_BAC_N",
+    "original_name": "Tính chất căn bậc n",
+    "canonical_id": "TINH_CHAT_CAN_BAC_N"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "CONG_THUC_LAI_KEP",
+    "original_name": "Công thức lãi kép",
+    "canonical_id": "CONG_THUC_LAI_KEP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "KI_HIEU_KHOA_HOC",
+    "original_name": "Kí hiệu khoa học",
+    "canonical_id": "KI_HIEU_KHOA_HOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0001",
+    "original_id": "PHUONG_PHAP_TINH_LUY_THUA",
+    "original_name": "Phương pháp tính luỹ thừa",
+    "canonical_id": "PHUONG_PHAP_TINH_LUY_THUA"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0002",
+    "original_id": "LOGARIT",
+    "original_name": "Lôgarit",
+    "canonical_id": "LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0002",
+    "original_id": "LOGARIT_THAP_PHAN",
+    "original_name": "Lôgarit thập phân",
+    "canonical_id": "LOGARIT_THAP_PHAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0002",
+    "original_id": "LOGARIT_TU_NHIEN",
+    "original_name": "Lôgarit tự nhiên",
+    "canonical_id": "LOGARIT_TU_NHIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0002",
+    "original_id": "CO_SO_LOGARIT",
+    "original_name": "Cơ số của lôgarit",
+    "canonical_id": "CO_SO_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0002",
+    "original_id": "SO_E",
+    "original_name": "Số e",
+    "canonical_id": "SO_E"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0002",
+    "original_id": "TINH_CHAT_LOGARIT",
+    "original_name": "Tính chất của lôgarit",
+    "canonical_id": "TINH_CHAT_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0002",
+    "original_id": "CONG_THUC_DOI_CO_SO",
+    "original_name": "Công thức đổi cơ số",
+    "canonical_id": "CONG_THUC_DOI_CO_SO"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0002",
+    "original_id": "CONG_THUC_LAI_KEP_LIEN_TUC",
+    "original_name": "Công thức lãi kép liên tục",
+    "canonical_id": "CONG_THUC_LAI_KEP_LIEN_TUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0002",
+    "original_id": "PHUONG_PHAP_TINH_LOGARIT",
+    "original_name": "Phương pháp tính lôgarit bằng máy tính",
+    "canonical_id": "PHUONG_PHAP_TINH_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "HAM_SO_MU",
+    "original_name": "Hàm số mũ",
+    "canonical_id": "HAM_SO_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "HAM_SO_MU_CO_SO_A",
+    "original_name": "Hàm số mũ cơ số a",
+    "canonical_id": "HAM_SO_MU_CO_SO_A"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "TAP_XAC_DINH_HAM_SO_MU",
+    "original_name": "Tập xác định của hàm số mũ",
+    "canonical_id": "TAP_XAC_DINH_HAM_SO_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "TAP_GIA_TRI_HAM_SO_MU",
+    "original_name": "Tập giá trị của hàm số mũ",
+    "canonical_id": "TAP_GIA_TRI_HAM_SO_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "TINH_CHAT_BIEN_THIEN_HAM_SO_MU",
+    "original_name": "Tính chất biến thiên của hàm số mũ",
+    "canonical_id": "TINH_CHAT_BIEN_THIEN_HAM_SO_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "DO_THI_HAM_SO_MU",
+    "original_name": "Đồ thị của hàm số mũ",
+    "canonical_id": "DO_THI_HAM_SO_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "HAM_SO_LOGARIT",
+    "original_name": "Hàm số lôgarit",
+    "canonical_id": "HAM_SO_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "HAM_SO_LOGARIT_CO_SO_A",
+    "original_name": "Hàm số lôgarit cơ số a",
+    "canonical_id": "HAM_SO_LOGARIT_CO_SO_A"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "TAP_XAC_DINH_HAM_SO_LOGARIT",
+    "original_name": "Tập xác định của hàm số lôgarit",
+    "canonical_id": "TAP_XAC_DINH_HAM_SO_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "TAP_GIA_TRI_HAM_SO_LOGARIT",
+    "original_name": "Tập giá trị của hàm số lôgarit",
+    "canonical_id": "TAP_GIA_TRI_HAM_SO_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "TINH_CHAT_BIEN_THIEN_HAM_SO_LOGARIT",
+    "original_name": "Tính chất biến thiên của hàm số lôgarit",
+    "canonical_id": "TINH_CHAT_BIEN_THIEN_HAM_SO_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "DO_THI_HAM_SO_LOGARIT",
+    "original_name": "Đồ thị của hàm số lôgarit",
+    "canonical_id": "DO_THI_HAM_SO_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0003",
+    "original_id": "CONG_THUC_TANG_TRUONG_MU",
+    "original_name": "Công thức tăng trưởng mũ",
+    "canonical_id": "CONG_THUC_TANG_TRUONG_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "PHUONG_TRINH_MU",
+    "original_name": "Phương trình mũ",
+    "canonical_id": "PHUONG_TRINH_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "PHUONG_TRINH_MU_CO_BAN",
+    "original_name": "Phương trình mũ cơ bản",
+    "canonical_id": "PHUONG_TRINH_MU_CO_BAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "NGHIEM_PHUONG_TRINH_MU",
+    "original_name": "Nghiệm phương trình mũ",
+    "canonical_id": "NGHIEM_PHUONG_TRINH_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_MU",
+    "original_name": "Phương pháp giải phương trình mũ",
+    "canonical_id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "PHUONG_TRINH_LOGARIT",
+    "original_name": "Phương trình lôgarit",
+    "canonical_id": "PHUONG_TRINH_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "PHUONG_TRINH_LOGARIT_CO_BAN",
+    "original_name": "Phương trình lôgarit cơ bản",
+    "canonical_id": "PHUONG_TRINH_LOGARIT_CO_BAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "NGHIEM_PHUONG_TRINH_LOGARIT",
+    "original_name": "Nghiệm phương trình lôgarit",
+    "canonical_id": "NGHIEM_PHUONG_TRINH_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_LOGARIT",
+    "original_name": "Phương pháp giải phương trình lôgarit",
+    "canonical_id": "PHUONG_PHAP_GIAI_PHUONG_TRINH_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "BAT_PHUONG_TRINH_MU",
+    "original_name": "Bất phương trình mũ",
+    "canonical_id": "BAT_PHUONG_TRINH_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "BAT_PHUONG_TRINH_MU_CO_BAN",
+    "original_name": "Bất phương trình mũ cơ bản",
+    "canonical_id": "BAT_PHUONG_TRINH_MU_CO_BAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "NGHIEM_BAT_PHUONG_TRINH_MU",
+    "original_name": "Nghiệm bất phương trình mũ",
+    "canonical_id": "NGHIEM_BAT_PHUONG_TRINH_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_MU",
+    "original_name": "Phương pháp giải bất phương trình mũ",
+    "canonical_id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "BAT_PHUONG_TRINH_LOGARIT",
+    "original_name": "Bất phương trình lôgarit",
+    "canonical_id": "BAT_PHUONG_TRINH_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+    "original_name": "Bất phương trình lôgarit cơ bản",
+    "canonical_id": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "NGHIEM_BAT_PHUONG_TRINH_LOGARIT",
+    "original_name": "Nghiệm bất phương trình lôgarit",
+    "canonical_id": "NGHIEM_BAT_PHUONG_TRINH_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_LOGARIT",
+    "original_name": "Phương pháp giải bất phương trình lôgarit",
+    "canonical_id": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "HAM_MU",
+    "original_name": "Hàm mũ",
+    "canonical_id": "HAM_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0004",
+    "original_id": "HAM_LOGARIT",
+    "original_name": "Hàm lôgarit",
+    "canonical_id": "HAM_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "DAO_HAM_TAI_MOT_DIEM",
+    "original_name": "Đạo hàm tại một điểm",
+    "canonical_id": "DAO_HAM_TAI_MOT_DIEM"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "DAO_HAM_TRONG_MOT_KHOANG",
+    "original_name": "Đạo hàm trên một khoảng",
+    "canonical_id": "DAO_HAM_TRONG_MOT_KHOANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "HE_SO_GOC_TIEP_TUYEN",
+    "original_name": "Hệ số góc của tiếp tuyến",
+    "canonical_id": "HE_SO_GOC_TIEP_TUYEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "VAN_TOC_TUC_THOI",
+    "original_name": "Vận tốc tức thời",
+    "canonical_id": "VAN_TOC_TUC_THOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "TOC_DO_BIEN_DOI_TUC_THOI",
+    "original_name": "Tốc độ biến đổi tức thời",
+    "canonical_id": "TOC_DO_BIEN_DOI_TUC_THOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "PHUONG_TRINH_TIEP_TUYEN",
+    "original_name": "Phương trình tiếp tuyến",
+    "canonical_id": "PHUONG_TRINH_TIEP_TUYEN_DO_THI_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "DAO_HAM",
+    "original_name": "Đạo hàm",
+    "canonical_id": "DAO_HAM"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "TICH_PHAN",
+    "original_name": "Tích phân",
+    "canonical_id": null
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "PHUONG_TRINH_CHUYEN_DONG",
+    "original_name": "Phương trình chuyển động",
+    "canonical_id": "PHUONG_TRINH_CHUYEN_DONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "VAN_TOC_TRUNG_BINH",
+    "original_name": "Vận tốc trung bình",
+    "canonical_id": "VAN_TOC_TRUNG_BINH"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "CUONG_DO_TRUNG_BINH",
+    "original_name": "Cường độ trung bình",
+    "canonical_id": "CUONG_DO_TRUNG_BINH"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "TINH_DAO_HAM_BANG_DINH_NGHI",
+    "original_name": "Tính đạo hàm bằng định nghĩa",
+    "canonical_id": "TINH_DAO_HAM_BANG_DINH_NGHI"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "TIM_HE_SO_GOC_TIEP_TUYEN",
+    "original_name": "Tìm hệ số góc của tiếp tuyến",
+    "canonical_id": "TIM_HE_SO_GOC_TIEP_TUYEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0005",
+    "original_id": "VIET_PHUONG_TRINH_TIEP_TUYEN",
+    "original_name": "Viết phương trình tiếp tuyến",
+    "canonical_id": "VIET_PHUONG_TRINH_TIEP_TUYEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_TONG_HIEU",
+    "original_name": "Đạo hàm của tổng, hiệu",
+    "canonical_id": "DAO_HAM_CUA_TONG_HIEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_TICH_THUONG",
+    "original_name": "Đạo hàm của tích, thương",
+    "canonical_id": "DAO_HAM_CUA_TICH_THUONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_HAM_SO_HOP",
+    "original_name": "Đạo hàm của hàm số hợp",
+    "canonical_id": "DAO_HAM_CUA_HAM_SO_HOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN",
+    "original_name": "Đạo hàm của các hàm số sơ cấp cơ bản",
+    "canonical_id": "DAO_HAM_CUA_HAM_SO_SO_CAP_CO_BAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_HAM_SO_MU",
+    "original_name": "Đạo hàm của hàm số mũ",
+    "canonical_id": "DAO_HAM_CUA_HAM_SO_MU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_HAM_SO_LOGARIT",
+    "original_name": "Đạo hàm của hàm số lôgarit",
+    "canonical_id": "DAO_HAM_CUA_HAM_SO_LOGARIT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_HAM_SO_SIN",
+    "original_name": "Đạo hàm của hàm số sin x",
+    "canonical_id": "DAO_HAM_CUA_HAM_SO_SIN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_HAM_SO_COS",
+    "original_name": "Đạo hàm của hàm số cos x",
+    "canonical_id": "DAO_HAM_CUA_HAM_SO_COS"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_HAM_SO_TAN_COT",
+    "original_name": "Đạo hàm của hàm số tan x và cot x",
+    "canonical_id": "DAO_HAM_CUA_HAM_SO_TAN_COT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_HAM_SO_X_N",
+    "original_name": "Đạo hàm của hàm số y = x^n",
+    "canonical_id": "DAO_HAM_CUA_HAM_SO_X_N"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM_CUA_HAM_SO_SQRT_X",
+    "original_name": "Đạo hàm của hàm số y = √x",
+    "canonical_id": "DAO_HAM_CUA_HAM_SO_SQRT_X"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0006",
+    "original_id": "DAO_HAM",
+    "original_name": "Đạo hàm",
+    "canonical_id": "DAO_HAM"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0007",
+    "original_id": "DAO_HAM_CAP_HAI",
+    "original_name": "Đạo hàm cấp hai",
+    "canonical_id": "DAO_HAM_CAP_HAI"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0007",
+    "original_id": "GIA_TOC_TUC_THOI",
+    "original_name": "Gia tốc tức thời",
+    "canonical_id": "GIA_TOC_TUC_THOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0007",
+    "original_id": "PHUONG_TRINH_CHUYEN_DONG",
+    "original_name": "Phương trình chuyển động",
+    "canonical_id": "PHUONG_TRINH_CHUYEN_DONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0007",
+    "original_id": "VAN_TOC_TUC_THOI",
+    "original_name": "Vận tốc tức thời",
+    "canonical_id": "VAN_TOC_TUC_THOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0007",
+    "original_id": "DAO_HAM_CAP_HAI_CU_HAM_SO",
+    "original_name": "Đạo hàm cấp hai của hàm số",
+    "canonical_id": "DAO_HAM_CAP_HAI_CU_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0007",
+    "original_id": "GIA_TOC_TUC_THOI_CU_CHUYEN_DONG",
+    "original_name": "Gia tốc tức thời của chuyển động",
+    "canonical_id": "GIA_TOC_TUC_THOI_CU_CHUYEN_DONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0007",
+    "original_id": "TINH_DAO_HAM_CAP_HAI",
+    "original_name": "Tính đạo hàm cấp hai",
+    "canonical_id": "TINH_DAO_HAM_CAP_HAI"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0008",
+    "original_id": "GOC_GIUA_HAI_DUONG_THANG",
+    "original_name": "Góc giữa hai đường thẳng",
+    "canonical_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0008",
+    "original_id": "HAI_DUONG_THANG_VUONG_GOC",
+    "original_name": "Hai đường thẳng vuông góc",
+    "canonical_id": "HAI_DUONG_THANG_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0008",
+    "original_id": "CONG_THUC_COSIN",
+    "original_name": "Công thức cosin",
+    "canonical_id": "CONG_THUC_COSIN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0008",
+    "original_id": "PHUONG_PHAP_XAC_DINH_GOC_GIUA_HAI_DUONG_THANG",
+    "original_name": "Phương pháp xác định góc giữa hai đường thẳng",
+    "canonical_id": "PHUONG_PHAP_XAC_DINH_GOC_GIUA_HAI_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0008",
+    "original_id": "PHUONG_PHAP_CHUNG_MINH_HAI_DUONG_THANG_VUONG_GOC",
+    "original_name": "Phương pháp chứng minh hai đường thẳng vuông góc",
+    "canonical_id": "PHUONG_PHAP_CHUNG_MINH_HAI_DUONG_THANG_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "original_name": "Đường thẳng vuông góc với mặt phẳng",
+    "canonical_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "MAT_PHANG_TRUNG_TRUC",
+    "original_name": "Mặt phẳng trung trực",
+    "canonical_id": "MAT_PHANG_TRUNG_TRUC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "TINH_CHAT_DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "original_name": "Tính chất đường thẳng vuông góc với mặt phẳng",
+    "canonical_id": "TINH_CHAT_DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+    "original_name": "Đường thẳng vuông góc với mặt phẳng cắt nhau",
+    "canonical_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+    "original_name": "Đường thẳng vuông góc với hai cạnh của tam giác",
+    "canonical_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+    "original_name": "Đường thẳng vuông góc với mặt phẳng song song",
+    "canonical_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+    "original_name": "Đường thẳng vuông góc với mặt phẳng phân biệt",
+    "canonical_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+    "original_name": "Mặt phẳng vuông góc với đường thẳng",
+    "canonical_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+    "original_name": "Mặt phẳng vuông góc với đường thẳng song song",
+    "canonical_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+    "original_name": "Đường thẳng vuông góc với mặt phẳng song song với mặt phẳng",
+    "canonical_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0009",
+    "original_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+    "original_name": "Đường thẳng vuông góc với mặt phẳng và mặt phẳng",
+    "canonical_id": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0010",
+    "original_id": "PHEP_CHIEU_VUONG_GOC",
+    "original_name": "Phép chiếu vuông góc",
+    "canonical_id": "PHEP_CHIEU_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0010",
+    "original_id": "HINH_CHIEU_VUONG_GOC",
+    "original_name": "Hình chiếu vuông góc",
+    "canonical_id": "HINH_CHIEU_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0010",
+    "original_id": "DINH_LI_BA_DUONG_VUONG_GOC",
+    "original_name": "Định lí ba đường vuông góc",
+    "canonical_id": "DINH_LI_BA_DUONG_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0010",
+    "original_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+    "original_name": "Góc giữa đường thẳng và mặt phẳng",
+    "canonical_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "GOC_GIUA_HAI_MAT_PHANG",
+    "original_name": "Góc giữa hai mặt phẳng",
+    "canonical_id": "GOC_GIUA_HAI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "HAI_MAT_PHANG_VUONG_GOC",
+    "original_name": "Hai mặt phẳng vuông góc",
+    "canonical_id": "HAI_MAT_PHANG_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "GOC_NHI_DIEN",
+    "original_name": "Góc nhị diện",
+    "canonical_id": "GOC_NHI_DIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "GOC_PHANG_CUA_GOC_NHI_DIEN",
+    "original_name": "Góc phẳng của góc nhị diện",
+    "canonical_id": "GOC_PHANG_CUA_GOC_NHI_DIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "HINH_LANG_TRU_DUNG",
+    "original_name": "Hình lăng trụ đứng",
+    "canonical_id": "HINH_LANG_TRU_DUNG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "HINH_LANG_TRU_DEU",
+    "original_name": "Hình lăng trụ đều",
+    "canonical_id": "HINH_LANG_TRU_DEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "HINH_HOP_DUNG",
+    "original_name": "Hình hộp đứng",
+    "canonical_id": "HINH_HOP_DUNG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "HINH_HOP_CHU_NHAT",
+    "original_name": "Hình hộp chữ nhật",
+    "canonical_id": "HINH_HOP_CHU_NHAT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "HINH_LAP_PHUONG",
+    "original_name": "Hình lập phương",
+    "canonical_id": "HINH_LAP_PHUONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "HINH_CHOP_DEU",
+    "original_name": "Hình chóp đều",
+    "canonical_id": "HINH_CHOP_DEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "HINH_CHOP_CUT_DEU",
+    "original_name": "Hình chóp cụt đều",
+    "canonical_id": "HINH_CHOP_CUT_DEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "DIEU_KIEN_HAI_MAT_PHANG_VUONG_GOC",
+    "original_name": "Điều kiện hai mặt phẳng vuông góc",
+    "canonical_id": "DIEU_KIEN_HAI_MAT_PHANG_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC",
+    "original_name": "Tính chất hai mặt phẳng vuông góc",
+    "canonical_id": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "TINH_CHAT_GIAO_TUYEN_CUNG_VUONG_GOC",
+    "original_name": "Tính chất giao tuyến cùng vuông góc",
+    "canonical_id": "TINH_CHAT_GIAO_TUYEN_CUNG_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0011",
+    "original_id": "CHUYEN_DOI_GOC_NHI_DIEN",
+    "original_name": "Chuyển đổi góc nhị diện",
+    "canonical_id": "CHUYEN_DOI_GOC_NHI_DIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "KHOANG_CACH",
+    "original_name": "Khoảng cách",
+    "canonical_id": "KHOANG_CACH"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+    "original_name": "Khoảng cách từ điểm đến đường thẳng",
+    "canonical_id": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "KHOANG_CACH_TU_DIEM_DEN_MAT_PHANG",
+    "original_name": "Khoảng cách từ điểm đến mặt phẳng",
+    "canonical_id": "KHOANG_CACH_TU_DIEM_DEN_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "KHOANG_CACH_GIUA_DUONG_THANG_MAT_PHANG_SONG_SONG",
+    "original_name": "Khoảng cách giữa đường thẳng và mặt phẳng song song",
+    "canonical_id": "KHOANG_CACH_GIUA_DUONG_THANG_MAT_PHANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "KHOANG_CACH_GIUA_HAI_MAT_PHANG_SONG_SONG",
+    "original_name": "Khoảng cách giữa hai mặt phẳng song song",
+    "canonical_id": "KHOANG_CACH_GIUA_HAI_MAT_PHANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_SONG_SONG",
+    "original_name": "Khoảng cách giữa hai đường thẳng song song",
+    "canonical_id": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "DUONG_VUONG_GOC_CHUNG",
+    "original_name": "Đường vuông góc chung",
+    "canonical_id": "DUONG_VUONG_GOC_CHUNG"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_CHEO_NHAU",
+    "original_name": "Khoảng cách giữa hai đường thẳng chéo nhau",
+    "canonical_id": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_CHEO_NHAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "CHIEU_CAO_HINH_CHOP",
+    "original_name": "Chiều cao hình chóp",
+    "canonical_id": "CHIEU_CAO_HINH_CHOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "CHIEU_CAO_HINH_LANG_TRU",
+    "original_name": "Chiều cao hình lăng trụ",
+    "canonical_id": "CHIEU_CAO_HINH_LANG_TRU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0012",
+    "original_id": "PHUONG_PHAP_TINH_KHOANG_CACH",
+    "original_name": "Phương pháp tính khoảng cách",
+    "canonical_id": "PHUONG_PHAP_TINH_KHOANG_CACH"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "THE_TICH",
+    "original_name": "Thể tích",
+    "canonical_id": "THE_TICH"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "KHOI_HOP",
+    "original_name": "Khối hộp",
+    "canonical_id": "KHOI_HOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "KHOI_LANG_TRU",
+    "original_name": "Khối lăng trụ",
+    "canonical_id": "KHOI_LANG_TRU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "KHOI_CHOP",
+    "original_name": "Khối chóp",
+    "canonical_id": "KHOI_CHOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "KHOI_CHOP_CUT_DEU",
+    "original_name": "Khối chóp cụt đều",
+    "canonical_id": "KHOI_CHOP_CUT_DEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "CONG_THUC_THE_TICH_KHOI_HOP",
+    "original_name": "Công thức thể tích khối hộp",
+    "canonical_id": "CONG_THUC_THE_TICH_KHOI_HOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "CONG_THUC_THE_TICH_KHOI_LANG_TRU",
+    "original_name": "Công thức thể tích khối lăng trụ",
+    "canonical_id": "CONG_THUC_THE_TICH_KHOI_LANG_TRU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "CONG_THUC_THE_TICH_KHOI_CHOP",
+    "original_name": "Công thức thể tích khối chóp",
+    "canonical_id": "CONG_THUC_THE_TICH_KHOI_CHOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "CONG_THUC_THE_TICH_KHOI_CHOP_CUT_DEU",
+    "original_name": "Công thức thể tích khối chóp cụt đều",
+    "canonical_id": "CONG_THUC_THE_TICH_KHOI_CHOP_CUT_DEU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0013",
+    "original_id": "THE_TICH_KHOI_TU_DIEN",
+    "original_name": "Thể tích khối tứ diện",
+    "canonical_id": "THE_TICH_KHOI_TU_DIEN"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "BIEN_CO_HOP",
+    "original_name": "Biến cố hợp",
+    "canonical_id": "BIEN_CO_HOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "BIEN_CO_GIAO",
+    "original_name": "Biến cố giao",
+    "canonical_id": "BIEN_CO_GIAO"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "BIEN_CO_DOC_LAP",
+    "original_name": "Biến cố độc lập",
+    "canonical_id": "BIEN_CO_DOC_LAP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "KHOANG_GIA_TRI_MAU",
+    "original_name": "Không gian mẫu",
+    "canonical_id": "KHONG_GIAN_MAU"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "TOAN_TAP",
+    "original_name": "Tập hợp",
+    "canonical_id": "TAP_HOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "TOAN_TAP_CON",
+    "original_name": "Tập con",
+    "canonical_id": "TAP_CON"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO",
+    "original_name": "Phương pháp xác định biến cố",
+    "canonical_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_HOP",
+    "original_name": "Phương pháp xác định biến cố hợp",
+    "canonical_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_HOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_GIAO",
+    "original_name": "Phương pháp xác định biến cố giao",
+    "canonical_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_GIAO"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0014",
+    "original_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_DOC_LAP",
+    "original_name": "Phương pháp xác định biến cố độc lập",
+    "canonical_id": "PHUONG_PHAP_XAC_DINH_BIEN_CO_DOC_LAP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0015",
+    "original_id": "BIEN_CO_XUNG_KHAC",
+    "original_name": "Biến cố xung khắc",
+    "canonical_id": "BIEN_CO_XUNG_KHAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0015",
+    "original_id": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC",
+    "original_name": "Công thức cộng xác suất cho hai biến cố xung khắc",
+    "canonical_id": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0015",
+    "original_id": "CONG_THUC_CONG_XAC_SUAT",
+    "original_name": "Công thức cộng xác suất",
+    "canonical_id": "CONG_THUC_CONG_XAC_SUAT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0015",
+    "original_id": "BIEN_CO",
+    "original_name": "Biến cố",
+    "canonical_id": "BIEN_CO"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0015",
+    "original_id": "XAC_SUAT",
+    "original_name": "Xác suất",
+    "canonical_id": "XAC_SUAT"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0015",
+    "original_id": "BIEN_CO_HOP",
+    "original_name": "Biến cố hợp",
+    "canonical_id": "BIEN_CO_HOP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0015",
+    "original_id": "BIEN_CO_DOI",
+    "original_name": "Biến cố đối",
+    "canonical_id": "BIEN_CO_DOI"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0016",
+    "original_id": "BIEN_CO_DO_CHA",
+    "original_name": "biến cố độc lập",
+    "canonical_id": "BIEN_CO_DOC_LAP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0016",
+    "original_id": "CONG_THUC_NHAN_XAC_SUAT",
+    "original_name": "công thức nhân xác suất cho hai biến cố độc lập",
+    "canonical_id": "CONG_THUC_NHAN_XAC_SUAT_BIEN_CO_DOC_LAP"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0016",
+    "original_id": "SO_DO_HINH_CAY",
+    "original_name": "sơ đồ hình cây",
+    "canonical_id": "SO_DO_HINH_CAY_METHOD"
+  },
+  {
+    "chunk_id": "toan-11-tap-2:0016",
+    "original_id": "BIEN_CO_GIAO",
+    "original_name": "biến cố giao",
+    "canonical_id": "BIEN_CO_GIAO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "HAM_SO_DONG_BIEN",
+    "original_name": "Hàm số đồng biến",
+    "canonical_id": "HAM_SO_DONG_BIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "HAM_SO_NGHICH_BIEN",
+    "original_name": "Hàm số nghịch biến",
+    "canonical_id": "HAM_SO_NGHICH_BIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "HAM_SO_DON_DIEU",
+    "original_name": "Hàm số đơn điệu",
+    "canonical_id": "HAM_SO_DON_DIEU"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "BANG_BIEN_THIEN",
+    "original_name": "Bảng biến thiên",
+    "canonical_id": "BANG_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "DIEM_CUC_DAI",
+    "original_name": "Điểm cực đại",
+    "canonical_id": "DIEM_CUC_DAI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "DIEM_CUC_TIEU",
+    "original_name": "Điểm cực tiểu",
+    "canonical_id": "DIEM_CUC_TIEU"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "DIEM_CUC_TRI",
+    "original_name": "Điểm cực trị",
+    "canonical_id": "DIEM_CUC_TRI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "GIA_TRI_CUC_TRI",
+    "original_name": "Giá trị cực trị",
+    "canonical_id": "GIA_TRI_CUC_TRI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "DINH_LI_TINH_DON_DIEU",
+    "original_name": "Định lí tính đơn điệu",
+    "canonical_id": "DINH_LI_TINH_DON_DIEU"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "DINH_LI_TIM_CUC_TRI",
+    "original_name": "Định lí tìm cực trị",
+    "canonical_id": "DINH_LI_TIM_CUC_TRI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0001",
+    "original_id": "PHUONG_PHAP_BANG_BIEN_THIEN",
+    "original_name": "Phương pháp bảng biến thiên",
+    "canonical_id": "PHUONG_PHAP_BANG_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0002",
+    "original_id": "GIA_TRI_LON_NHAT",
+    "original_name": "giá trị lớn nhất",
+    "canonical_id": "GIA_TRI_LON_NHAT"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0002",
+    "original_id": "GIA_TRI_NHO_NHAT",
+    "original_name": "giá trị nhỏ nhất",
+    "canonical_id": "GIA_TRI_NHO_NHAT"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0002",
+    "original_id": "HAM_SO",
+    "original_name": "hàm số",
+    "canonical_id": "HAM_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0002",
+    "original_id": "DAO_HAM",
+    "original_name": "đạo hàm",
+    "canonical_id": "DAO_HAM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0002",
+    "original_id": "BANG_BIEN_THIEN",
+    "original_name": "bảng biến thiên",
+    "canonical_id": "BANG_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0002",
+    "original_id": "PHUONG_PHAP_TIM_GIA_TRI_LON_NHAT_NHO_NHAT",
+    "original_name": "phương pháp tìm giá trị lớn nhất và nhỏ nhất",
+    "canonical_id": "PHUONG_PHAP_TIM_GIA_TRI_LON_NHAT_NHO_NHAT"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0002",
+    "original_id": "CONG_THUC_THE_TICH_HOP",
+    "original_name": "công thức thể tích hộp",
+    "canonical_id": "CONG_THUC_THE_TICH_HOP"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "DUONG_TIEM_CAN_NGANG",
+    "original_name": "đường tiệm cận ngang",
+    "canonical_id": "DUONG_TIEM_CAN_NGANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "DUONG_TIEM_CAN_DUNG",
+    "original_name": "đường tiệm cận đứng",
+    "canonical_id": "DUONG_TIEM_CAN_DUNG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "DUONG_TIEM_CAN_XIEN",
+    "original_name": "đường tiệm cận xiên",
+    "canonical_id": "DUONG_TIEM_CAN_XIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "HAM_SO",
+    "original_name": "hàm số",
+    "canonical_id": "HAM_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "DO_THI_HAM_SO",
+    "original_name": "đồ thị hàm số",
+    "canonical_id": "DO_THI_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "PHAN_TICH_HAM_SO",
+    "original_name": "phân tích hàm số",
+    "canonical_id": "PHAN_TICH_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "TIM_TIEM_CAN_NGANG",
+    "original_name": "tìm tiệm cận ngang",
+    "canonical_id": "TIM_TIEM_CAN_NGANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "TIM_TIEM_CAN_DUNG",
+    "original_name": "tìm tiệm cận đứng",
+    "canonical_id": "TIM_TIEM_CAN_DUNG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "TIM_TIEM_CAN_XIEN",
+    "original_name": "tìm tiệm cận xiên",
+    "canonical_id": "TIM_TIEM_CAN_XIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0003",
+    "original_id": "GIOI_HAN_HAM_SO",
+    "original_name": "giới hạn hàm số",
+    "canonical_id": "GIOI_HAN_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "CHIEU_BIEN_THIEN",
+    "original_name": "Chiều biến thiên",
+    "canonical_id": "CHIEU_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "BANG_BIEN_THIEN",
+    "original_name": "Bảng biến thiên",
+    "canonical_id": "BANG_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "CUC_TRI",
+    "original_name": "Cực trị",
+    "canonical_id": "CUC_TRI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "TIEM_CAN",
+    "original_name": "Tiệm cận",
+    "canonical_id": "TIEM_CAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "DO_THI",
+    "original_name": "Đồ thị",
+    "canonical_id": "DO_THI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "TAM_DOI_XUNG",
+    "original_name": "Tâm đối xứng",
+    "canonical_id": "TAM_DOI_XUNG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "TRUC_DOI_XUNG",
+    "original_name": "Trục đối xứng",
+    "canonical_id": "TRUC_DOI_XUNG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "SO_DO_KHAO_SAT_HAM_SO",
+    "original_name": "Sơ đồ khảo sát hàm số",
+    "canonical_id": "SO_DO_KHAO_SAT_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "KHAO_SAT_HAM_BAC_BA",
+    "original_name": "Khảo sát hàm số bậc ba",
+    "canonical_id": "KHAO_SAT_HAM_BAC_BA"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "KHAO_SAT_HAM_PHAN_THUC_HUU_TI",
+    "original_name": "Khảo sát hàm số phân thức hữu tỉ",
+    "canonical_id": "KHAO_SAT_HAM_PHAN_THUC_HUU_TI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "HAM_PHAN_THUC_HUU_TI_DON_GIAN",
+    "original_name": "Hàm số phân thức hữu tỉ đơn giản",
+    "canonical_id": "HAM_PHAN_THUC_HUU_TI_DON_GIAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "HAM_PHAN_THUC_HUU_TI_PHUC_ZAP",
+    "original_name": "Hàm số phân thức hữu tỉ phức tạp",
+    "canonical_id": "HAM_PHAN_THUC_HUU_TI_PHUC_ZAP"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "DAO_HAM",
+    "original_name": "Đạo hàm",
+    "canonical_id": "DAO_HAM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "GIOI_HAN",
+    "original_name": "Giới hạn",
+    "canonical_id": "GIOI_HAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "TAP_XAC_DINH",
+    "original_name": "Tập xác định",
+    "canonical_id": "TAP_XAC_DINH"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0004",
+    "original_id": "KHAO_SAT_CHI_PHI_TRUNG_BINH",
+    "original_name": "Khảo sát chi phí trung bình",
+    "canonical_id": "KHAO_SAT_CHI_PHI_TRUNG_BINH"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "TOC_DO_THAY_DOI_TRUNG_BINH",
+    "original_name": "Tốc độ thay đổi trung bình",
+    "canonical_id": "TOC_DO_THAY_DOI_TRUNG_BINH"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "TOC_DO_THAY_DOI_TUC_THOI",
+    "original_name": "Tốc độ thay đổi tức thời",
+    "canonical_id": "TOC_DO_THAY_DOI_TUC_THOI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "DAO_HAM",
+    "original_name": "Đạo hàm",
+    "canonical_id": "DAO_HAM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "VAN_TOC_TUC_THOI",
+    "original_name": "Vận tốc tức thời",
+    "canonical_id": "VAN_TOC_TUC_THOI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "GIA_TOC_TUC_THOI",
+    "original_name": "Gia tốc tức thời",
+    "canonical_id": "GIA_TOC_TUC_THOI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "TOC_DO_PHAN_HOI_TUC_THOI",
+    "original_name": "Tốc độ phản ứng tức thời",
+    "canonical_id": "TOC_DO_PHAN_HOI_TUC_THOI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "TOC_DO_TANG_TRUONG_TUC_THOI",
+    "original_name": "Tốc độ tăng trưởng tức thời",
+    "canonical_id": "TOC_DO_TANG_TRUONG_TUC_THOI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "CHI_PHI_BIEN",
+    "original_name": "Chi phí biên",
+    "canonical_id": "CHI_PHI_BIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "HAM_DOANH_THU",
+    "original_name": "Hàm doanh thu",
+    "canonical_id": "HAM_DOANH_THU"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "HAM_DOANH_THU_BIEN",
+    "original_name": "Hàm doanh thu biên",
+    "canonical_id": "HAM_DOANH_THU_BIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "HAM_LOI_NHUAN",
+    "original_name": "Hàm lợi nhuận",
+    "canonical_id": "HAM_LOI_NHUAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "HAM_LOI_NHUAN_BIEN",
+    "original_name": "Hàm lợi nhuận biên",
+    "canonical_id": "HAM_LOI_NHUAN_BIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "BAI_TOAN_TOI_UU_HOA",
+    "original_name": "Bài toán tối ưu hoá",
+    "canonical_id": "BAI_TOAN_TOI_UU_HOA"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "QUY_TRINH_TOI_UU_HOA",
+    "original_name": "Quy trình tối ưu hoá",
+    "canonical_id": "QUY_TRINH_TOI_UU_HOA"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0005",
+    "original_id": "PHUONG_PHAP_TIM_GIA_TRI_CUC_TRI",
+    "original_name": "Phương pháp tìm giá trị cực trị",
+    "canonical_id": "PHUONG_PHAP_TIM_GIA_TRI_CUC_TRI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "VECTO_TRONG_KHONG_GIAN",
+    "original_name": "Vectơ trong không gian",
+    "canonical_id": "VECTO_TRONG_KHONG_GIAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "DO_DAI_VECTO",
+    "original_name": "Độ dài vectơ",
+    "canonical_id": "DO_DAI_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "KY_HIEU_VECTO",
+    "original_name": "Kí hiệu vectơ",
+    "canonical_id": "KY_HIEU_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "GIA_VECTO",
+    "original_name": "Giá vectơ",
+    "canonical_id": "GIA_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "VECTO_KHONG",
+    "original_name": "Vectơ không",
+    "canonical_id": "VECTO_KHONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "VECTO_CUNG_PHUONG",
+    "original_name": "Vectơ cùng phương",
+    "canonical_id": "VECTO_CUNG_PHUONG_DINH_NGHIA"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "VECTO_CUNG_HUONG",
+    "original_name": "Vectơ cùng hướng",
+    "canonical_id": "VECTO_CUNG_HUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "VECTO_NGUOC_HUONG",
+    "original_name": "Vectơ ngược hướng",
+    "canonical_id": "VECTO_NGUOC_HUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "VECTO_BANG_NHAU",
+    "original_name": "Vectơ bằng nhau",
+    "canonical_id": "VECTO_BANG_NHAU"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "TONG_VECTO",
+    "original_name": "Tổng vectơ",
+    "canonical_id": "TONG_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "QUY_TAC_BA_DIEM",
+    "original_name": "Quy tắc ba điểm",
+    "canonical_id": "QUY_TAC_BA_DIEM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "QUY_TAC_HINH_BINH_HANGH",
+    "original_name": "Quy tắc hình bình hành",
+    "canonical_id": "QUY_TAC_HINH_BINH_HANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "QUY_TAC_HINH_HOP",
+    "original_name": "Quy tắc hình hộp",
+    "canonical_id": "QUY_TAC_HINH_HOP_THEOREM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "VECTO_DOI",
+    "original_name": "Vectơ đối",
+    "canonical_id": "VECTO_DOI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "HIEU_VECTO",
+    "original_name": "Hiệu vectơ",
+    "canonical_id": "HIEU_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "TICH_SO_VOI_VECTO",
+    "original_name": "Tích số với vectơ",
+    "canonical_id": "TICH_SO_VOI_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "GOC_GIUA_HAI_VECTO",
+    "original_name": "Góc giữa hai vectơ",
+    "canonical_id": "GOC_GIUA_HAI_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0006",
+    "original_id": "TICH_VO_HUONG",
+    "original_name": "Tích vô hướng",
+    "canonical_id": "TICH_VO_HUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+    "original_name": "Hệ trục toạ độ trong không gian",
+    "canonical_id": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "HE_TRUC_TOA_DO_DESCARTES_VUONG_GOC",
+    "original_name": "Hệ trục toạ độ Descartes vuông góc",
+    "canonical_id": "HE_TRUC_TOA_DO_DESCARTES_VUONG_GOC"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "GOC_TOA_DO",
+    "original_name": "Gốc toạ độ",
+    "canonical_id": "GOC_TOA_DO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "MAT_PHANG_TOA_DO",
+    "original_name": "Mặt phẳng toạ độ",
+    "canonical_id": "MAT_PHANG_TOA_DO_3D"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "TOA_DO_CUA_DIEM",
+    "original_name": "Toạ độ của điểm",
+    "canonical_id": "TOA_DO_CUA_DIEM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "HOANH_DO",
+    "original_name": "Hoành độ",
+    "canonical_id": "HOANH_DO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "TUNG_DO",
+    "original_name": "Tung độ",
+    "canonical_id": "TUNG_DO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "CAO_DO",
+    "original_name": "Cao độ",
+    "canonical_id": "CAO_DO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "TOA_DO_CUA_VECTO",
+    "original_name": "Toạ độ của vectơ",
+    "canonical_id": "TOA_DO_VECTO_TRONG_KG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "VECTO_DON_VI",
+    "original_name": "Vectơ đơn vị",
+    "canonical_id": "VECTO_DON_VI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "QUY_TAC_HINH_HOP",
+    "original_name": "Quy tắc hình hộp",
+    "canonical_id": "QUY_TAC_HINH_HOP_METHOD"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0007",
+    "original_id": "THIET_LAP_TOA_DO_VECTO_THEO_TOA_DO_HAI_DAU_MUT",
+    "original_name": "Thiết lập toạ độ vectơ theo toạ độ hai đầu mút",
+    "canonical_id": "THIET_LAP_TOA_DO_VECTO_THEO_TOA_DO_HAI_DAU_MUT"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "PHÉP_CỘNG_VECTO",
+    "original_name": "Phép cộng hai vectơ",
+    "canonical_id": "BIEU_THUC_TOA_DO_PHEP_CONG_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "PHÉP_TRỪ_VECTO",
+    "original_name": "Phép trừ hai vectơ",
+    "canonical_id": "BIEU_THUC_TOA_DO_PHEP_TRU_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "PHÉP_NHÂN_SO_VỚI_VECTO",
+    "original_name": "Phép nhân một số với một vectơ",
+    "canonical_id": "PHEP_NHAN_SO_VOI_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "TOA_DO_TRUNG_DIEM",
+    "original_name": "Toạ độ trung điểm đoạn thẳng",
+    "canonical_id": "TOA_DO_TRUNG_DIEM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "TOA_DO_TRONG_TAM",
+    "original_name": "Toạ độ trọng tâm tam giác",
+    "canonical_id": "TOA_DO_TRONG_TAM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "TICH_VO_HUONG",
+    "original_name": "Tích vô hướng hai vectơ",
+    "canonical_id": "BIEU_THUC_TOA_DO_TICH_VO_HUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "DO_DAI_VECTO",
+    "original_name": "Độ dài vectơ",
+    "canonical_id": "CONG_THUC_DO_DAI_VECTO_KHONG_GIAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "GOC_GIUA_VECTO",
+    "original_name": "Góc giữa hai vectơ",
+    "canonical_id": "CONG_THUC_TINH_GOC_GIUA_HAI_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "PHÉP_TOÁN_VECTO",
+    "original_name": "Phép toán vectơ",
+    "canonical_id": "PHEP_TOAN_VECTO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0008",
+    "original_id": "TÍCH_VÔ_HƯỚNG",
+    "original_name": "Tích vô hướng",
+    "canonical_id": "TICH_VO_HUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0009",
+    "original_id": "KHOANG_BIEN_THIEN",
+    "original_name": "Khoảng biến thiên",
+    "canonical_id": "KHOANG_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0009",
+    "original_id": "KHOANG_TU_PHAN_VI",
+    "original_name": "Khoảng tứ phân vị",
+    "canonical_id": "KHOANG_TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0009",
+    "original_id": "TU_PHAN_VI",
+    "original_name": "Tứ phân vị",
+    "canonical_id": "TU_PHAN_VI_MAU_GHOP_NHOM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0009",
+    "original_id": "MAU_SO_LIEU_GHEP_NHOM",
+    "original_name": "Mẫu số liệu ghép nhóm",
+    "canonical_id": "MAU_SO_LIEU_GHEP_NHOM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0009",
+    "original_id": "TINH_KHOANG_BIEN_THIEN",
+    "original_name": "Tính khoảng biến thiên",
+    "canonical_id": "TINH_KHOANG_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0009",
+    "original_id": "TINH_KHOANG_TU_PHAN_VI",
+    "original_name": "Tính khoảng tứ phân vị",
+    "canonical_id": "TINH_KHOANG_TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0009",
+    "original_id": "CONG_THUC_TU_PHAN_VI",
+    "original_name": "Công thức tính tứ phân vị",
+    "canonical_id": "CONG_THUC_TINH_TU_PHAN_VI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "PHUONG_SAI",
+    "original_name": "Phương sai",
+    "canonical_id": "PHUONG_SAI"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "DO_LECH_CHUAN",
+    "original_name": "Độ lệch chuẩn",
+    "canonical_id": "DO_LECH_CHUAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "MAU_SO_LIEU_GHEP_NHOM",
+    "original_name": "Mẫu số liệu ghép nhóm",
+    "canonical_id": "MAU_SO_LIEU_GHEP_NHOM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "PHUONG_SAI_MAU_GHEP_NHOM",
+    "original_name": "Phương sai của mẫu số liệu ghép nhóm",
+    "canonical_id": "PHUONG_SAI_MAU_GHEP_NHOM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "DO_LECH_CHUAN_MAU_GHEP_NHOM",
+    "original_name": "Độ lệch chuẩn của mẫu số liệu ghép nhóm",
+    "canonical_id": "DO_LECH_CHUAN_MAU_GHEP_NHOM"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "PHUONG_SAI_MAU_GHEP_NHOM_CONG_THUC_KHAC",
+    "original_name": "Công thức khác cho phương sai của mẫu số liệu ghép nhóm",
+    "canonical_id": "PHUONG_SAI_MAU_GHEP_NHOM_CONG_THUC_KHAC"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "PHUONG_SAI_MAU_GHEP_NHOM_SAI_SO",
+    "original_name": "Phương sai của mẫu số liệu ghép nhóm sai số",
+    "canonical_id": "PHUONG_SAI_MAU_GHEP_NHOM_SAI_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "DO_LECH_CHUAN_MAU_GHEP_NHOM_SAI_SO",
+    "original_name": "Độ lệch chuẩn của mẫu số liệu ghép nhóm sai số",
+    "canonical_id": "DO_LECH_CHUAN_MAU_GHEP_NHOM_SAI_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "HE_SO_BIEN_THIEN",
+    "original_name": "Hệ số biến thiên",
+    "canonical_id": "HE_SO_BIEN_THIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-1:0010",
+    "original_id": "TINH_PHUONG_SAI_DO_LECH_CHUAN",
+    "original_name": "Tính phương sai và độ lệch chuẩn",
+    "canonical_id": "TINH_PHUONG_SAI_DO_LECH_CHUAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "NGUYEN_HAM",
+    "original_name": "Nguyên hàm",
+    "canonical_id": "NGUYEN_HAM"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "HO_NGUYEN_HAM",
+    "original_name": "Họ nguyên hàm",
+    "canonical_id": "HO_NGUYEN_HAM"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "BANG_NGUYEN_HAM",
+    "original_name": "Bảng nguyên hàm",
+    "canonical_id": "BANG_NGUYEN_HAM"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "NGUYEN_HAM_HAM_SO_LUY_THUA",
+    "original_name": "Nguyên hàm của hàm số lũy thừa",
+    "canonical_id": "NGUYEN_HAM_HAM_SO_LUY_THUA"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "NGUYEN_HAM_HAM_SO_LN",
+    "original_name": "Nguyên hàm của hàm số ln",
+    "canonical_id": "NGUYEN_HAM_HAM_SO_LN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT",
+    "original_name": "Nguyên hàm của hàm số lũy thừa tổng quát",
+    "canonical_id": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "NGUYEN_HAM_HAM_SO_LUONG_GIAC",
+    "original_name": "Nguyên hàm của hàm số lượng giác",
+    "canonical_id": "NGUYEN_HAM_HAM_SO_LUONG_GIAC"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "NGUYEN_HAM_HAM_SO_MU",
+    "original_name": "Nguyên hàm của hàm số mũ",
+    "canonical_id": "NGUYEN_HAM_HAM_SO_MU"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+    "original_name": "Tính chất cơ bản của nguyên hàm",
+    "canonical_id": "TINH_CHAT_CO_BAN_NGUYEN_HAM"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "TINH_CHAT_TICH_HAM_SO",
+    "original_name": "Tính chất tích hàm số",
+    "canonical_id": "TINH_CHAT_TICH_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "TINH_CHAT_TONG_HAM_SO",
+    "original_name": "Tính chất tổng hàm số",
+    "canonical_id": "TINH_CHAT_TONG_HAM_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0001",
+    "original_id": "PHUONG_PHAP_TIM_NGUYEN_HAM",
+    "original_name": "Phương pháp tìm nguyên hàm",
+    "canonical_id": "PHUONG_PHAP_TIM_NGUYEN_HAM"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "TICH_PHAN",
+    "original_name": "Tích phân",
+    "canonical_id": "TICH_PHAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "HAM_SO_DUOI_DAU_TICH_PHAN",
+    "original_name": "Hàm số dưới dấu tích phân",
+    "canonical_id": "HAM_SO_DUOI_DAU_TICH_PHAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "CAN_DUOI",
+    "original_name": "Cận dưới",
+    "canonical_id": "CAN_DUOI"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "CAN_TRUOC",
+    "original_name": "Cận trên",
+    "canonical_id": "CAN_TRUOC"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "DINH_LI_TICH_PHAN",
+    "original_name": "Định lí tích phân",
+    "canonical_id": "DINH_LI_TICH_PHAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "Y_NGHI_A_HINH_HOC_CUA_TICH_PHAN",
+    "original_name": "Ý nghĩa hình học của tích phân",
+    "canonical_id": "Y_NGHI_A_HINH_HOC_CUA_TICH_PHAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "TINH_CHAT_TICH_PHAN",
+    "original_name": "Tính chất của tích phân",
+    "canonical_id": "TINH_CHAT_TICH_PHAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "TINH_CHAT_HANG_SO",
+    "original_name": "Tính chất về hằng số",
+    "canonical_id": "TINH_CHAT_HANG_SO"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "TINH_CHAT_CONG",
+    "original_name": "Tính chất cộng",
+    "canonical_id": "TINH_CHAT_CONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "TINH_CHAT_TRU",
+    "original_name": "Tính chất trừ",
+    "canonical_id": "TINH_CHAT_TRU"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "TINH_CHAT_PHAN_DOAN",
+    "original_name": "Tính chất phân đoạn",
+    "canonical_id": "TINH_CHAT_PHAN_DOAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "PHUONG_PHAP_TICH_PHAN",
+    "original_name": "Phương pháp tính tích phân",
+    "canonical_id": "PHUONG_PHAP_TICH_PHAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0002",
+    "original_id": "PHUONG_PHAP_TICH_PHAN_HINH_HOC",
+    "original_name": "Phương pháp tích phân hình học",
+    "canonical_id": "PHUONG_PHAP_TICH_PHAN_HINH_HOC"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "DIEN_TICH_HINH_PHANG",
+    "original_name": "Diện tích hình phẳng",
+    "canonical_id": "DIEN_TICH_HINH_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "CONG_THUC_DIEN_TICH_HINH_PHANG",
+    "original_name": "Công thức diện tích hình phẳng",
+    "canonical_id": "CONG_THUC_DIEN_TICH_HINH_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+    "original_name": "Diện tích giới hạn bởi hai đồ thị",
+    "canonical_id": "DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "CONG_THUC_DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+    "original_name": "Công thức diện tích giới hạn bởi hai đồ thị",
+    "canonical_id": "CONG_THUC_DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "THE_TICH_VAT_THE",
+    "original_name": "Thể tích vật thể",
+    "canonical_id": "THE_TICH_VAT_THE"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "CONG_THUC_THE_TICH_VAT_THE",
+    "original_name": "Công thức thể tích vật thể",
+    "canonical_id": "CONG_THUC_THE_TICH_VAT_THE"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "KHOI_TRON_XOAY",
+    "original_name": "Khối tròn xoay",
+    "canonical_id": "KHOI_TRON_XOAY"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "CONG_THUC_THE_TICH_KHOI_TRON_XOAY",
+    "original_name": "Công thức thể tích khối tròn xoay",
+    "canonical_id": "CONG_THUC_THE_TICH_KHOI_TRON_XOAY"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "PHUONG_PHAP_TICH_PHAN_TINH_DIEN_TICH",
+    "original_name": "Phương pháp tích phân tính diện tích",
+    "canonical_id": "PHUONG_PHAP_TICH_PHAN_TINH_DIEN_TICH"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0003",
+    "original_id": "PHUONG_PHAP_TICH_PHAN_TINH_THE_TICH",
+    "original_name": "Phương pháp tích phân tính thể tích",
+    "canonical_id": "PHUONG_PHAP_TICH_PHAN_TINH_THE_TICH"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0004",
+    "original_id": "VECTO_PHAP_TUYEN",
+    "original_name": "Vectơ pháp tuyến",
+    "canonical_id": "VECTO_PHAP_TUYEN_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0004",
+    "original_id": "CAP_VECTO_CHI_PHUONG",
+    "original_name": "Cặp vectơ chỉ phương",
+    "canonical_id": "CAP_VECTO_CHI_PHUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0004",
+    "original_id": "PHUONG_TRINH_TONG_QUAT_MAT_PHANG",
+    "original_name": "Phương trình tổng quát của mặt phẳng",
+    "canonical_id": "PHUONG_TRINH_TONG_QUAT_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0004",
+    "original_id": "KHOANG_CACH_DEN_MAT_PHANG",
+    "original_name": "Khoảng cách từ một điểm đến một mặt phẳng",
+    "canonical_id": "KHOANG_CACH_DEN_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0004",
+    "original_id": "TICH_CO_HUONG",
+    "original_name": "Tích có hướng",
+    "canonical_id": "TICH_CO_HUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0004",
+    "original_id": "MAT_PHANG_VUONG_GOC",
+    "original_name": "Hai mặt phẳng vuông góc",
+    "canonical_id": "DIEU_KIEN_VUONG_GOC_HAI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0004",
+    "original_id": "MAT_PHANG_SONG_SONG",
+    "original_name": "Hai mặt phẳng song song",
+    "canonical_id": "HAI_MAT_PHANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0004",
+    "original_id": "LAP_PHUONG_TRINH_MAT_PHANG",
+    "original_name": "Lập phương trình mặt phẳng",
+    "canonical_id": "LAP_PHUONG_TRINH_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "VECTO_CHI_PHUONG",
+    "original_name": "Vectơ chỉ phương",
+    "canonical_id": "VECTO_CHI_PHUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "PHUONG_TRINH_THAM_SO",
+    "original_name": "Phương trình tham số",
+    "canonical_id": "PHUONG_TRINH_THAM_SO_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "PHUONG_TRINH_CHINH_TAC",
+    "original_name": "Phương trình chính tắc",
+    "canonical_id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "DUONG_THANG_VUONG_GOC",
+    "original_name": "Hai đường thẳng vuông góc",
+    "canonical_id": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "DUONG_THANG_SONG",
+    "original_name": "Hai đường thẳng song song",
+    "canonical_id": "DUONG_THANG_SONG_SONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "DUONG_THANG_TRUNG",
+    "original_name": "Hai đường thẳng trùng nhau",
+    "canonical_id": "DUONG_THANG_TRUNG_NHAU"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "DUONG_THANG_CAT",
+    "original_name": "Hai đường thẳng cắt nhau",
+    "canonical_id": "DIEU_KIEN_DUONG_THANG_CAT_NHAU_TRONG_KHONG_GIAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "DUONG_THANG_CHEO",
+    "original_name": "Hai đường thẳng chéo nhau",
+    "canonical_id": "HAI_DUONG_THANG_CHEO_NHAU"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+    "original_name": "Phương trình tham số của đường thẳng",
+    "canonical_id": "PHUONG_TRINH_THAM_SO_DUONG_THANG_FORMULA"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG",
+    "original_name": "Phương trình chính tắc của đường thẳng",
+    "canonical_id": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG_FORMULA"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "PHUONG_TRINH_THAM_SO_HAI_DIEM",
+    "original_name": "Phương trình tham số của đường thẳng đi qua hai điểm",
+    "canonical_id": "PHUONG_TRINH_THAM_SO_HAI_DIEM"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "PHUONG_TRINH_CHINH_TAC_HAI_DIEM",
+    "original_name": "Phương trình chính tắc của đường thẳng đi qua hai điểm",
+    "canonical_id": "PHUONG_TRINH_CHINH_TAC_HAI_DIEM"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0005",
+    "original_id": "VI_TRI_TUONG_DOI_DUONG_THANG",
+    "original_name": "Vị trí tương đối giữa hai đường thẳng",
+    "canonical_id": "PHUONG_PHAP_XAC_DINH_VI_TRI_TUONG_DOI_HAI_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0006",
+    "original_id": "GOC_GIUA_HAI_DUONG_THANG",
+    "original_name": "Góc giữa hai đường thẳng",
+    "canonical_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0006",
+    "original_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+    "original_name": "Góc giữa đường thẳng và mặt phẳng",
+    "canonical_id": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0006",
+    "original_id": "GOC_GIUA_HAI_MAT_PHANG",
+    "original_name": "Góc giữa hai mặt phẳng",
+    "canonical_id": "GOC_GIUA_HAI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0006",
+    "original_id": "VECTO_CHI_PHUONG",
+    "original_name": "Vectơ chỉ phương",
+    "canonical_id": "VECTO_CHI_PHUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0006",
+    "original_id": "VECTO_PHAP_TUYEN",
+    "original_name": "Vectơ pháp tuyến",
+    "canonical_id": "VECTO_PHAP_TUYEN_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0006",
+    "original_id": "CONG_THUC_GOC_GIUA_HAI_DUONG_THANG",
+    "original_name": "Công thức tính góc giữa hai đường thẳng",
+    "canonical_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0006",
+    "original_id": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+    "original_name": "Công thức tính góc giữa đường thẳng và mặt phẳng",
+    "canonical_id": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0006",
+    "original_id": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG",
+    "original_name": "Công thức tính góc giữa hai mặt phẳng",
+    "canonical_id": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "PHUONG_TRINH_MAT_CAU",
+    "original_name": "Phương trình mặt cầu",
+    "canonical_id": "PHUONG_TRINH_MAT_CAU"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "TAM_MAT_CAU",
+    "original_name": "Tâm mặt cầu",
+    "canonical_id": "TAM_MAT_CAU"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "BAN_KINH_MAT_CAU",
+    "original_name": "Bán kính mặt cầu",
+    "canonical_id": "BAN_KINH_MAT_CAU"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "DUONG_KINH_MAT_CAU",
+    "original_name": "Đường kính mặt cầu",
+    "canonical_id": "DUONG_KINH_MAT_CAU"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "PHUONG_TRINH_MAT_CAU_TUONG_DUONG",
+    "original_name": "Phương trình mặt cầu tương đương",
+    "canonical_id": "PHUONG_TRINH_MAT_CAU_TUONG_DUONG"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "TOA_DO_TRONG_KHONG_GIAN",
+    "original_name": "Toạ độ trong không gian",
+    "canonical_id": "TOA_DO_TRONG_KHONG_GIAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "KHOANG_CACH_TRONG_KHONG_GIAN",
+    "original_name": "Khoảng cách trong không gian",
+    "canonical_id": "KHOANG_CACH_TRONG_KHONG_GIAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "KHOANG_CACH_TRONG_THUC_TE",
+    "original_name": "Khoảng cách trên thực tế",
+    "canonical_id": "KHOANG_CACH_TRONG_THUC_TE"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "VI_DO_KINH_DO",
+    "original_name": "Vĩ độ và kinh độ",
+    "canonical_id": "VI_DO_KINH_DO"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0007",
+    "original_id": "PHUONG_TRINH_MAT_CAU_TRAI_DAT",
+    "original_name": "Phương trình mặt cầu Trái Đất",
+    "canonical_id": "PHUONG_TRINH_MAT_CAU_TRAI_DAT"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0008",
+    "original_id": "XAC_SUAT_CO_DIEU_KIEN",
+    "original_name": "Xác suất có điều kiện",
+    "canonical_id": "XAC_SUAT_CO_DIEU_KIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0008",
+    "original_id": "CONG_THUC_NHAN_XAC_SUAT",
+    "original_name": "Công thức nhân xác suất",
+    "canonical_id": "CONG_THUC_NHAN_XAC_SUAT_TONG_QUAT"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0008",
+    "original_id": "BANG_DU_LIEU_THONG_KE_2X2",
+    "original_name": "Bảng dữ liệu thống kê 2×2",
+    "canonical_id": "BANG_DU_LIEU_THONG_KE_2X2"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0008",
+    "original_id": "BIEN_CO_A",
+    "original_name": "Biến cố A",
+    "canonical_id": "BIEN_CO_A"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0008",
+    "original_id": "BIEN_CO_B",
+    "original_name": "Biến cố B",
+    "canonical_id": "BIEN_CO_B"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0008",
+    "original_id": "BIEN_CO_DO_THI",
+    "original_name": "Biến cố độc lập",
+    "canonical_id": "BIEN_CO_DOC_LAP"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0008",
+    "original_id": "PHUONG_PHAP_HINH_CAY",
+    "original_name": "Phương pháp hình cây",
+    "canonical_id": "PHUONG_PHAP_HINH_CAY"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0009",
+    "original_id": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+    "original_name": "Công thức xác suất toàn phần",
+    "canonical_id": "CONG_THUC_XAC_SUAT_TOAN_PHAN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0009",
+    "original_id": "SO_DO_HINH_CAY",
+    "original_name": "Sơ đồ hình cây",
+    "canonical_id": "SO_DO_HINH_CAY_METHOD"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0009",
+    "original_id": "CONG_THUC_BAYES",
+    "original_name": "Công thức Bayes",
+    "canonical_id": "CONG_THUC_BAYES"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0009",
+    "original_id": "BIEN_CO_SO",
+    "original_name": "Biến cố",
+    "canonical_id": "BIEN_CO"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0009",
+    "original_id": "XAC_SUAT_DIEU_KIEN",
+    "original_name": "Xác suất điều kiện",
+    "canonical_id": "XAC_SUAT_DIEU_KIEN"
+  },
+  {
+    "chunk_id": "toan-12-tap-2:0009",
+    "original_id": "XAC_SUAT_TOAN_PHAN",
+    "original_name": "Xác suất toàn phần",
+    "canonical_id": "XAC_SUAT_TOAN_PHAN"
+  }
+]

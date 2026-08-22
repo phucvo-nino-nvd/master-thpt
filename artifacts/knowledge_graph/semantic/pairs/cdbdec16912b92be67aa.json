@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_LIEN_TUC_HAM_CAN",
+  "right_id": "TINH_CHAT_LIEN_TUC_HAM_DA_THUC",
+  "merge": false,
+  "rationale": "These are two separate theorems about the continuity of specific function types: the square root function and polynomial functions. They are both instances of continuous functions but are distinct statements about different function families."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_XAC_SUAT_BIEN_CO_DOI",
+  "right_id": "CONG_THUC_XAC_SUAT_CO_DIEN",
+  "merge": false,
+  "rationale": "The nodes are two different probability formulas. One is the formula for the probability of a complementary event: P(not E) = 1 - P(E). The other is the classical definition of probability: P(E) = favorable outcomes / total outcomes. They are distinct formulas representing different rules."
+}

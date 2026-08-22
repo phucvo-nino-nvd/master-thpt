@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "HAI_MAT_PHANG_SONG_SONG",
+      "name": "Hai mặt phẳng song song",
+      "type": "CONCEPT",
+      "description": "Hai mặt phẳng được gọi là song song nếu chúng không có điểm chung. Một điều kiện để hai mặt phẳng song song là vectơ pháp tuyến của chúng song song."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-1:0013",
+      "original_id": "HAI_MAT_PHANG_SONG_SONG",
+      "canonical_id": "HAI_MAT_PHANG_SONG_SONG",
+      "rationale": "This occurrence defines the concept of two parallel planes. It is a core definition."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0004",
+      "original_id": "MAT_PHANG_SONG_SONG",
+      "canonical_id": "HAI_MAT_PHANG_SONG_SONG",
+      "rationale": "This occurrence states a theorem (a condition) for two planes to be parallel. It describes a property of the same core concept 'Hai mặt phẳng song song'. Grade difference is not a reason to split. The original ID differs but the mathematical knowledge is the same concept, just presented as a theorem in a later grade. They should be merged under the CONCEPT type, as the theorem is a property inherent to the concept."
+    }
+  ]
+}

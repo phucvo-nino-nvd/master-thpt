@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "The left node defines a linear inequality in two variables. The right node defines a system of such inequalities. One is a single object, the other is a collection of such objects. They are related but distinct concepts."
+}

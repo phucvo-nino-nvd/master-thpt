@@ -1,0 +1,6 @@
+{
+  "left_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left node states the existence and uniqueness of a plane through a point perpendicular to a line. The right node states that two distinct planes perpendicular to the same line are parallel. These are different theorems about plane-line perpendicularity."
+}

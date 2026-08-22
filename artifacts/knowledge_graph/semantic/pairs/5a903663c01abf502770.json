@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG",
+  "right_id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+  "merge": false,
+  "rationale": "The left node is a formula for the angle between two planes, based on their normal vectors. The right node is a formula for the angle between two lines, based on their direction vectors or normal vectors. They calculate angles between different geometric objects (planes vs lines). They are distinct reusable formulas."
+}

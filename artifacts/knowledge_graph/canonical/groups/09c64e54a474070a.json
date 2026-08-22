@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "BIEN_CO_DOI",
+      "name": "Biến cố đối",
+      "type": "CONCEPT",
+      "description": "Biến cố đối của một biến cố A, ký hiệu là A̅, là biến cố xảy ra khi và chỉ khi A không xảy ra. Nếu A là tập con của không gian mẫu Ω, thì A̅ là phần bù của A trong Ω."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0005",
+      "original_id": "BIEN_CO_DOI",
+      "canonical_id": "BIEN_CO_DOI",
+      "rationale": "This occurrence correctly defines the complementary event concept with proper notation and set-theoretic description. It is the standard definition."
+    },
+    {
+      "chunk_id": "toan-10-tap-2:0006",
+      "original_id": "BIEN_CO_DOI",
+      "canonical_id": null,
+      "rationale": "This occurrence has a different name ('Biến cố đôi' meaning 'pair event') and a vague description about 'two related events' and calculation rules. It does not match the standard definition of a complementary event ('Biến cố đối'). It appears to be a potential error or hallucination and should be dropped."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0015",
+      "original_id": "BIEN_CO_DOI",
+      "canonical_id": "BIEN_CO_DOI",
+      "rationale": "This occurrence correctly defines the complementary event concept with the same core meaning and notation as the first occurrence, despite being from a different grade. Grade difference is not a reason to split."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+  "right_id": "CONG_THUC_DIEN_TICH_HINH_PHANG",
+  "merge": false,
+  "rationale": "Both are formulas for the area of a plane region. The left is for the area between two curves: S = integral from a to b of |f(x)-g(x)| dx. The right is for the area between a curve and the x-axis: S = integral from a to b of |f(x)| dx. The right is a special case of the left (when g(x)=0). They are related but not identical; one is a generalization of the other. KEEP."
+}

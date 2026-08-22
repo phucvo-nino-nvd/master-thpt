@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO_CUNG_HUONG",
+  "right_id": "VECTO_DOI",
+  "merge": false,
+  "rationale": "The left node defines vectors having the same direction. The right node defines the opposite vector. These are distinct vector properties; one describes alignment, the other describes a specific opposing relationship."
+}

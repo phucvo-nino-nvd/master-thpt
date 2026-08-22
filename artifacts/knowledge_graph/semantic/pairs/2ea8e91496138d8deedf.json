@@ -1,0 +1,6 @@
+{
+  "left_id": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+  "right_id": "NGHIEM_BAT_PHUONG_TRINH_LOGARIT",
+  "merge": false,
+  "rationale": "The left node defines the basic form of a logarithmic inequality. The right node provides the specific solution conditions for such an inequality. One is a definition/form, the other is a solution method/consequence. They are related but not identical reusable knowledge."
+}

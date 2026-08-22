@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "PHEP_TRU_VECTO",
+      "name": "phép trừ vectơ",
+      "type": "METHOD",
+      "description": "Phép toán lấy hiệu của hai vectơ bằng cách cộng vectơ ban đầu với vectơ đối của vectơ bị trừ."
+    },
+    {
+      "id": "BIEU_THUC_TOA_DO_PHEP_TRU_VECTO",
+      "name": "biểu thức tọa độ phép trừ vectơ",
+      "type": "FORMULA",
+      "description": "Biểu thức toạ độ của phép trừ hai vectơ trong không gian Oxyz."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0008",
+      "original_id": "PHEP_TRU_VECTO",
+      "canonical_id": "PHEP_TRU_VECTO",
+      "rationale": "This occurrence describes the vector subtraction operation as a method. It is a core mathematical operation."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0008",
+      "original_id": "PHÉP_TRỪ_VECTO",
+      "canonical_id": "BIEU_THUC_TOA_DO_PHEP_TRU_VECTO",
+      "rationale": "This occurrence specifically describes the coordinate formula for vector subtraction in 3D space (Oxyz). It is a specific formula derived from the general operation, representing different reusable knowledge (a formula vs. a method). Therefore, it should be split into a separate node."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "chunk_id": "toan-10-tap-2:0007",
+  "nodes": [
+    {
+      "id": "DUONG_THANG",
+      "name": "đường thẳng",
+      "type": "CONCEPT",
+      "description": "tập hợp điểm được xác định bởi tính chất đặc trưng của các điểm thuộc đường thẳng đó",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_PHAP_TUYEN",
+      "name": "vectơ pháp tuyến",
+      "type": "CONCEPT",
+      "description": "vectơ khác không vuông góc với đường thẳng",
+      "grade": 10
+    },
+    {
+      "id": "VECTO_CHI_HUONG",
+      "name": "vectơ chỉ phương",
+      "type": "CONCEPT",
+      "description": "vectơ khác không song song hoặc trùng với đường thẳng",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_TONG_QUAT",
+      "name": "phương trình tổng quát",
+      "type": "FORMULA",
+      "description": "phương trình dạng ax + by + c = 0 (a, b không đồng thời bằng 0) biểu diễn đường thẳng",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_TRINH_THAM_SO",
+      "name": "phương trình tham số",
+      "type": "FORMULA",
+      "description": "hệ phương trình x = x0 + at, y = y0 + bt biểu diễn đường thẳng với t là tham số",
+      "grade": 10
+    },
+    {
+      "id": "MENH_DE_PHUONG_TRINH_TONG_QUAT",
+      "name": "mệnh đề phương trình tổng quát",
+      "type": "THEOREM",
+      "description": "đường thẳng đi qua điểm A(x0, y0) và có vectơ pháp tuyến n(a, b) thỏa mãn phương trình ax + by + c = 0 với c = -ax0 - by0",
+      "grade": 10
+    },
+    {
+      "id": "MENH_DE_PHUONG_TRINH_THAM_SO",
+      "name": "mệnh đề phương trình tham số",
+      "type": "THEOREM",
+      "description": "đường thẳng đi qua điểm A(x0, y0) và có vectơ chỉ phương u(a, b) thỏa mãn hệ phương trình x = x0 + at, y = y0 + bt",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_LAP_PHUONG_TRINH_TONG_QUAT",
+      "name": "phương pháp lập phương trình tổng quát",
+      "type": "METHOD",
+      "description": "lập phương trình tổng quát của đường thẳng khi biết một điểm và vectơ pháp tuyến",
+      "grade": 10
+    },
+    {
+      "id": "PHUONG_PHAP_LAP_PHUONG_TRINH_THAM_SO",
+      "name": "phương pháp lập phương trình tham số",
+      "type": "METHOD",
+      "description": "lập phương trình tham số của đường thẳng khi biết một điểm và vectơ chỉ phương",
+      "grade": 10
+    }
+  ],
+  "edges": [
+    {
+      "source": "PHUONG_TRINH_TONG_QUAT",
+      "target": "DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "phương trình tổng quát là một cách biểu diễn của đường thẳng"
+    },
+    {
+      "source": "PHUONG_TRINH_THAM_SO",
+      "target": "DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "phương trình tham số là một cách biểu diễn khác của đường thẳng"
+    },
+    {
+      "source": "MENH_DE_PHUONG_TRINH_TONG_QUAT",
+      "target": "PHUONG_TRINH_TONG_QUAT",
+      "relation": "REQUIRES",
+      "rationale": "mệnh đề phương trình tổng quát giải thích phương trình tổng quát"
+    },
+    {
+      "source": "MENH_DE_PHUONG_TRINH_THAM_SO",
+      "target": "PHUONG_TRINH_THAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "mệnh đề phương trình tham số giải thích phương trình tham số"
+    },
+    {
+      "source": "PHUONG_PHAP_LAP_PHUONG_TRINH_TONG_QUAT",
+      "target": "PHUONG_TRINH_TONG_QUAT",
+      "relation": "REQUIRES",
+      "rationale": "phương pháp lập phương trình tổng quát dựa trên phương trình tổng quát"
+    },
+    {
+      "source": "PHUONG_PHAP_LAP_PHUONG_TRINH_THAM_SO",
+      "target": "PHUONG_TRINH_THAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "phương pháp lập phương trình tham số dựa trên phương trình tham số"
+    },
+    {
+      "source": "VECTO_PHAP_TUYEN",
+      "target": "DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "vectơ pháp tuyến là một thành phần xác định đường thẳng"
+    },
+    {
+      "source": "VECTO_CHI_HUONG",
+      "target": "DUONG_THANG",
+      "relation": "PART_OF",
+      "rationale": "vectơ chỉ phương là một thành phần xác định đường thẳng"
+    },
+    {
+      "source": "VECTO_CHI_HUONG",
+      "target": "VECTO_PHAP_TUYEN",
+      "relation": "IS_A",
+      "rationale": "vectơ chỉ phương và vectơ pháp tuyến là hai loại vectơ khác nhau"
+    }
+  ]
+}

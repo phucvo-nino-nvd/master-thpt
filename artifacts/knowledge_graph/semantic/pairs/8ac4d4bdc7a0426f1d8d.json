@@ -1,0 +1,6 @@
+{
+  "left_id": "DAO_HAM_CUA_HAM_SO_COS",
+  "right_id": "DAO_HAM_CUA_HAM_SO_TAN_COT",
+  "merge": false,
+  "rationale": "The left node provides the derivative formula for the cosine function. The right node provides derivative formulas for the tangent and cotangent functions. They are distinct derivative rules for different trigonometric functions. They are related but not semantic duplicates."
+}

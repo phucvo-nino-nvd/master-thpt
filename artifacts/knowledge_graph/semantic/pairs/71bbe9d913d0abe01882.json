@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_MOT_BEN",
+  "right_id": "GIOI_HAN_VO_CUC",
+  "merge": false,
+  "rationale": "The nodes represent different types of limits: 'Giới hạn một bên' (one-sided limit) and 'Giới hạn vô cực' (limit at infinity). They are related concepts within the topic of limits but are distinct mathematical ideas."
+}

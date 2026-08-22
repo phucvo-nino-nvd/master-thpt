@@ -1,0 +1,1204 @@
+{
+  "source_url": "https://toanmath.com/toanmath-pdf/de-chinh-thuc-ky-thi-tot-nghiep-thpt-nam-2026-mon-toan.pdf",
+  "title": "Đề chính thức kỳ thi tốt nghiệp THPT năm 2026 môn Toán - TOANMATH.com",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Cho cấp số cộng $(u_n)$ có $u_1 = 5$ và công sai $d = -1$. Giá trị của $u_2$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "4."
+        },
+        {
+          "label": "B",
+          "content": "-5."
+        },
+        {
+          "label": "C",
+          "content": "5."
+        },
+        {
+          "label": "D",
+          "content": "-4."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn A.\n\nLời giải: Cặp số cộng $(u_n)$ có số hạng đầu $u_1 = 5$ và công sai $d = -1$.\n\nGiá trị của $u_2$ được tính theo công thức: $u_2 = u_1 + d = 5 + (-1) = 4$.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/10",
+          "page": 0,
+          "bbox": [
+            69.0,
+            247.0,
+            753.0,
+            276.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/11",
+          "page": 0,
+          "bbox": [
+            69.0,
+            280.0,
+            886.0,
+            305.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Cho các hàm số $y = f(x)$ và $y = g(x)$ có đạo hàm trên tập số thực R thỏa mãn $f'(x) = x$ và $g'(x) = x^2$. Đạo hàm của hàm số $y = f(x) + g(x)$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$3x$."
+        },
+        {
+          "label": "B",
+          "content": "$1 + x^2$."
+        },
+        {
+          "label": "C",
+          "content": "$x + x^2$."
+        },
+        {
+          "label": "D",
+          "content": "$1 + 2x$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn C.\n\nLời giải: Đạo hàm của tổng hai hàm số bằng tổng các đạo hàm:\n\n$$y' = (f(x) + g(x))' = f'(x) + g'(x) = x + x^2.$$",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/12",
+          "page": 0,
+          "bbox": [
+            69.0,
+            305.0,
+            1001.0,
+            371.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/13",
+          "page": 0,
+          "bbox": [
+            69.0,
+            375.0,
+            913.0,
+            402.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Cho $\\int f(x)dx = \\sin x + C$. Phát biểu nào sau đây là đúng?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\int [3 + f(x)]dx = 3x + \\cos x + C$."
+        },
+        {
+          "label": "B",
+          "content": "$\\int [3 + f(x)]dx = 3x + \\sin x + C$."
+        },
+        {
+          "label": "C",
+          "content": "$\\int [3 + f(x)]dx = 3x - \\cos x + C$."
+        },
+        {
+          "label": "D",
+          "content": "$\\int [3 + f(x)]dx = 3x - \\sin x + C$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn B.\n\nLời giải: Ta có:\n\n$$\\int [3 + f(x)] dx = \\int 3 dx + \\int f(x) dx = 3x + \\sin x + C.$$",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/14",
+          "page": 0,
+          "bbox": [
+            69.0,
+            400.0,
+            632.0,
+            434.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/15",
+          "page": 0,
+          "bbox": [
+            69.0,
+            439.0,
+            875.0,
+            511.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "4",
+      "type": "multiple_choice",
+      "content": "Nghiệm của phương trình $\\log_3(x-1) = 1$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$x = 2$."
+        },
+        {
+          "label": "B",
+          "content": "$x = 3$."
+        },
+        {
+          "label": "C",
+          "content": "$x = 5$."
+        },
+        {
+          "label": "D",
+          "content": "$x = 4$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn D.\n\nLời giải: Điều kiện xác định: $x - 1 > 0 \\Leftrightarrow x > 1$.\n\nPhương trình cho tương đương với: $x - 1 = 3^1 \\Leftrightarrow x = 4$ (thỏa mãn điều kiện).",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/16",
+          "page": 0,
+          "bbox": [
+            69.0,
+            516.0,
+            510.0,
+            544.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/17",
+          "page": 0,
+          "bbox": [
+            69.0,
+            547.0,
+            910.0,
+            572.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "5",
+      "type": "multiple_choice",
+      "content": "Trong không gian với hệ tọa độ Oxyz, cho hai điểm $A(1;5;1)$ và $B(3;3;1)$. Vector AB có tọa độ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(2;-2;0)$."
+        },
+        {
+          "label": "B",
+          "content": "$(-2;2;0)$."
+        },
+        {
+          "label": "C",
+          "content": "$(4;8;2)$."
+        },
+        {
+          "label": "D",
+          "content": "$(2;4;1)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn A.\n\nLời giải: Tọa độ của vectơ $\\overrightarrow{AB}$ được tính bằng tọa độ điểm $B$ trừ tọa độ điểm $A$:\n\n$$\\overrightarrow{AB} = (3 - 1; 3 - 5; 1 - 1) = (2; -2; 0).$$",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/18",
+          "page": 0,
+          "bbox": [
+            69.0,
+            575.0,
+            992.0,
+            602.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/19",
+          "page": 0,
+          "bbox": [
+            69.0,
+            606.0,
+            926.0,
+            636.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "6",
+      "type": "multiple_choice",
+      "content": "Cho hai biến ngẫu độc lập A và B có xác suất thỏa mãn $P(A) = 0,5$ và $P(B) = 0,4$. Giá trị của $P(AB)$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "0,8."
+        },
+        {
+          "label": "B",
+          "content": "0,1."
+        },
+        {
+          "label": "C",
+          "content": "0,9."
+        },
+        {
+          "label": "D",
+          "content": "0,2."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn D.\n\nLời giải: Vì hai biến số $A$ và $B$ độc lập nên ta có công thức nhân xác suất:\n\n$$P(AB) = P(A) \\cdot P(B) = 0,5 \\cdot 0,4 = 0,2.$$",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/20",
+          "page": 0,
+          "bbox": [
+            69.0,
+            641.0,
+            1001.0,
+            697.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/21",
+          "page": 0,
+          "bbox": [
+            69.0,
+            697.0,
+            894.0,
+            721.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "7",
+      "type": "multiple_choice",
+      "content": "Cho hình lập phương $ABCD.A'B'C'D'$ (xem hình dưới). Vector nào sau đây bằng vector AB?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$AA'$."
+        },
+        {
+          "label": "B",
+          "content": "$D'C'$."
+        },
+        {
+          "label": "C",
+          "content": "CD."
+        },
+        {
+          "label": "D",
+          "content": "AD."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "9b2de8a7f1d09170ac0cab11f5bd2408_img.jpg",
+          "path": "images/9b2de8a7f1d09170ac0cab11f5bd2408_img.jpg",
+          "page": 0,
+          "bbox": [
+            457.0,
+            756.0,
+            611.0,
+            903.0
+          ],
+          "alt": "A 3D diagram of a cube ABCD.A'B'C'D' with vertices labeled."
+        }
+      ],
+      "solution": "Chọn B.\n\nLời giải: Dựa vào hình vẽ hình lập phương $ABCD.A'B'C'D'$, các vectơ bằng với vectơ $\\overrightarrow{AB}$ là các vectơ cùng hướng và cùng độ dài với nó, bao gồm: $\\overrightarrow{DC}$, $\\overrightarrow{A'B'}$, và $\\overrightarrow{D'C'}$. Do đó chọn $\\overrightarrow{D'C'}$.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/22",
+          "page": 0,
+          "bbox": [
+            69.0,
+            725.0,
+            950.0,
+            755.0
+          ]
+        },
+        {
+          "id": "/page/0/Picture/23",
+          "page": 0,
+          "bbox": [
+            457.0,
+            756.0,
+            611.0,
+            903.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/24",
+          "page": 0,
+          "bbox": [
+            69.0,
+            909.0,
+            894.0,
+            937.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "8",
+      "type": "multiple_choice",
+      "content": "Cặp số nào sau đây là nghiệm của hệ bất phương trình $\\{ x + y - 3 < 0, x - y + 1 > 0 \\}$?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(1;0)$."
+        },
+        {
+          "label": "B",
+          "content": "$(0;2)$."
+        },
+        {
+          "label": "C",
+          "content": "$(-1;1)$."
+        },
+        {
+          "label": "D",
+          "content": "$(1;2)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn A.\n\nLời giải: Thay tọa độ các điểm vào hệ bất phương trình $\\begin{cases} x + y - 3 < 0 \\\\ x - y + 1 > 0 \\end{cases}$:\n\nVới cặp số $(1; 0)$: $\\begin{cases} 1+0-3=-2<0 \\\\ 1-0+1=2>0 \\end{cases}$ (Thỏa mãn).",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/25",
+          "page": 0,
+          "bbox": [
+            69.0,
+            942.0,
+            744.0,
+            1001.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/26",
+          "page": 0,
+          "bbox": [
+            69.0,
+            1001.0,
+            910.0,
+            1031.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "9",
+      "type": "multiple_choice",
+      "content": "Hàm số $F(x) = 4x^3$ là một nguyên hàm của hàm số nào sau đây?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$f_2(x) = 3x^2$."
+        },
+        {
+          "label": "B",
+          "content": "$f_3(x) = 12x^2$."
+        },
+        {
+          "label": "C",
+          "content": "$f_1(x) = x^4$."
+        },
+        {
+          "label": "D",
+          "content": "$f_4(x) = 4x^4$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn B.\n\nLời giải: Hàm số $F(x) = 4x^3$ là một nguyên hàm của hàm số $f(x)$ nếu $F'(x) = f(x)$.\n\nTa có: $F'(x) = (4x^3)' = 12x^2$. Do đó $F(x)$ là một nguyên hàm của hàm số $f_3(x) = 12x^2$.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/27",
+          "page": 0,
+          "bbox": [
+            69.0,
+            1035.0,
+            702.0,
+            1065.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/28",
+          "page": 0,
+          "bbox": [
+            69.0,
+            1068.0,
+            971.0,
+            1098.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "10",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = (ax + b) / (cx + d) (c \\neq 0, ad - bc \\neq 0)$ có bảng biến thiên như hình dưới đây:\n\nĐường tiệm cận ngang của đồ thị hàm số đã cho có phương trình là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$y = -2$."
+        },
+        {
+          "label": "B",
+          "content": "$x = -2$."
+        },
+        {
+          "label": "C",
+          "content": "$x = 1$."
+        },
+        {
+          "label": "D",
+          "content": "$y = 1$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "f1b4edc2eba01ae2aa8f41324e17d140_img.jpg",
+          "path": "images/f1b4edc2eba01ae2aa8f41324e17d140_img.jpg",
+          "page": 0,
+          "bbox": [
+            361.0,
+            1157.0,
+            712.0,
+            1291.0
+          ],
+          "alt": "A sign chart (bảng biến thiên) for a rational function with vertical asymptote at x=1 and horizontal asymptote at y=-2."
+        }
+      ],
+      "solution": "Chọn A.\n\nLời giải: Dựa vào bảng biến thiên, ta thấy khi $x \\rightarrow -\\infty$ hoặc $x \\rightarrow +\\infty$ thì $y \\rightarrow -2$.\n\nDo đó, đường tiệm cận ngang của đồ thị hàm số có phương trình là $y = -2$.",
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/29",
+          "page": 0,
+          "bbox": [
+            69.0,
+            1105.0,
+            851.0,
+            1157.0
+          ]
+        },
+        {
+          "id": "/page/0/Figure/30",
+          "page": 0,
+          "bbox": [
+            361.0,
+            1157.0,
+            712.0,
+            1291.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/31",
+          "page": 0,
+          "bbox": [
+            69.0,
+            1298.0,
+            654.0,
+            1328.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/32",
+          "page": 0,
+          "bbox": [
+            69.0,
+            1328.0,
+            904.0,
+            1357.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "11",
+      "type": "multiple_choice",
+      "content": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1$ và công bội $q$ với $u_1 \\neq 0, q > 1$. Số hạng $u_4$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$u_4 = u_1 \\cdot q^3$."
+        },
+        {
+          "label": "B",
+          "content": "$u_4 = u_1 \\cdot q^4$."
+        },
+        {
+          "label": "C",
+          "content": "$u_4 = u_1 + 3q$."
+        },
+        {
+          "label": "D",
+          "content": "$u_4 = u_1 + 4q$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn A.\n\nLời giải: Công thức tổng quát của cấp số nhân là $u_n = u_1 \\cdot q^{n-1}$.\n\nVới $n = 4$, ta có số hạng $u_4 = u_1 \\cdot q^3$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/0",
+          "page": 1,
+          "bbox": [
+            61.0,
+            72.0,
+            893.0,
+            103.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/1",
+          "page": 1,
+          "bbox": [
+            61.0,
+            106.0,
+            961.0,
+            136.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "12",
+      "type": "multiple_choice",
+      "content": "Khảo sát thời gian (đơn vị: phút) học trực tuyến trong một ngày của 42 học sinh, người ta thu được mẫu số liệu ghép nhóm như sau:\n\n| Thời gian học trực tuyến | $[10;20)$ | $[20;30)$ | $[30;40)$ | $[40;50)$ | $[50;60)$ | $[60;70)$ |\n| --- | --- | --- | --- | --- | --- | --- |\n| Số học sinh | 4 | 8 | 14 | 7 | 4 | 5 |\n\nTrung vị của mẫu số liệu trên thuộc nhóm nào sau đây?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$[30;40)$."
+        },
+        {
+          "label": "B",
+          "content": "$[40;50)$."
+        },
+        {
+          "label": "C",
+          "content": "$[60;70)$."
+        },
+        {
+          "label": "D",
+          "content": "$[50;60)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": "Chọn A.\n\nLời giải: Tổng số học sinh là $n = 42$. Vị trí của trung vị là giá trị trung bình của số hạng thứ 21 và thứ 22 trong mẫu số liệu đã sắp xếp.\n\nTần số tích lũy đến nhóm $[10; 20)$ là: 4.\n\nTần số tích lũy đến nhóm $[20; 30)$ là: $4 + 8 = 12$.\n\nTần số tích lũy đến nhóm $[30; 40)$ là: $12 + 14 = 26$.\n\nVì $12 < 21 \\leq 26$ và $12 < 22 \\leq 26$ nên cả hai số hạng này đều thuộc vào nhóm $[30; 40)$. Vậy trung vị của mẫu số liệu thuộc nhóm $[30; 40)$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/2",
+          "page": 1,
+          "bbox": [
+            61.0,
+            138.0,
+            998.0,
+            186.0
+          ]
+        },
+        {
+          "id": "/page/1/Table/3",
+          "page": 1,
+          "bbox": [
+            93.0,
+            192.0,
+            966.0,
+            256.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/4",
+          "page": 1,
+          "bbox": [
+            61.0,
+            267.0,
+            539.0,
+            292.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/5",
+          "page": 1,
+          "bbox": [
+            61.0,
+            292.0,
+            931.0,
+            319.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Nhằm đưa ra cảnh báo sớm về tình trạng sức khỏe của cư dân, người ta sử dụng một ứng dụng trí tuệ nhân tạo để sàng lọc nguy cơ mắc bệnh dựa trên hồ sơ y tế được lưu trữ. Khi phát hiện nguy cơ mắc bệnh, ứng dụng này sẽ gửi cảnh báo để giúp người dân đi khám bệnh kịp thời. Người ta dùng ứng dụng này để tẩm soát nguy cơ mắc một loại bệnh.\n\nKết quả thu được khi quét thử nghiệm hồ sơ y tế của 10000 người như sau: Có 1000 người nhận được cảnh báo và 9000 người còn lại không nhận được cảnh báo từ ứng dụng. Trong số 1000 người nhận được cảnh báo thì có 700 người có bệnh và 300 người không có bệnh. Trong số 9000 người không nhận được cảnh báo thì có 100 người có bệnh và 8900 người không có bệnh.\n\nChọn ngẫu nhiên một người trong số 10000 người nói trên.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Xác suất để người đó không nhận được cảnh báo từ ứng dụng bằng 0,9.",
+          "solution": "ĐÚNG: Xác suất người đó không nhận được cảnh báo là: $P(\\bar{W}) = \\frac{9000}{10000} = 0,9$."
+        },
+        {
+          "label": "b",
+          "content": "Xác suất để người đó không có bệnh, biết rằng người đó không nhận được cảnh báo từ ứng dụng, lớn hơn 0,98.",
+          "solution": "ĐÚNG: Xác suất người đó không có bệnh, biết rằng họ không nhận được cảnh báo là:\n\n$$P(\\bar{D} | \\bar{W}) = \\frac{8900}{9000} = \\frac{89}{90} \\approx 0,9889 > 0,98.$$"
+        },
+        {
+          "label": "c",
+          "content": "Xác suất để người đó không có bệnh bằng 0,9.",
+          "solution": "SAI: Xác suất người đó không có bệnh là: $P(\\bar{D}) = \\frac{9200}{10000} = 0,92 \\neq 0,9$."
+        },
+        {
+          "label": "d",
+          "content": "Xác suất để người đó không nhận được cảnh báo từ ứng dụng, biết rằng người đó không có bệnh, nhỏ hơn 0,95.",
+          "solution": "SAI: Xác suất không nhận cảnh báo, biết rằng không có bệnh là:\n\n$$P(\\bar{W} | \\bar{D}) = \\frac{8900}{9200} = \\frac{89}{92} \\approx 0,9674 > 0,95.$$"
+        }
+      ],
+      "images": [],
+      "solution": "Tóm tắt dữ liệu qua bảng tần số:\n\n| | Nhận cảnh báo (W) | Không nhận cảnh báo (W) | Tổng số |\n| --- | --- | --- | --- |\n| Có bệnh ($D$) | 700 | 100 | 800 |\n| Không bệnh ($\\bar{D}$) | 300 | 8900 | 9200 |\n| Tổng số | 1000 | 9000 | 10000 |",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/7",
+          "page": 1,
+          "bbox": [
+            61.0,
+            375.0,
+            1000.0,
+            480.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/8",
+          "page": 1,
+          "bbox": [
+            61.0,
+            482.0,
+            1000.0,
+            590.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/9",
+          "page": 1,
+          "bbox": [
+            61.0,
+            592.0,
+            584.0,
+            617.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/10",
+          "page": 1,
+          "bbox": [
+            61.0,
+            618.0,
+            987.0,
+            727.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Cho hàm số $f(x) = \\frac{1}{3}x^3 - 5x^2 + 9x + 8$.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Hàm số đã cho có đạo hàm là $f'(x) = x^2 - 10x + 9$.",
+          "solution": "ĐÚNG: Đạo hàm của hàm số là: $f'(x) = x^2 - 10x + 9$."
+        },
+        {
+          "label": "b",
+          "content": "Phương trình $f'(x) = 0$ có tập nghiệm là $S = \\{1; 9\\}$.",
+          "solution": "ĐÚNG: Giải phương trình $f'(x) = 0 \\Leftrightarrow x^2 - 10x + 9 = 0 \\Leftrightarrow x = 1$ hoặc $x = 9$. Vậy tập nghiệm $S = \\{1; 9\\}$."
+        },
+        {
+          "label": "c",
+          "content": "Hàm số đã cho nghịch biến trên khoảng $(1; 9)$.",
+          "solution": "ĐÚNG: Trong khoảng $(1; 9)$, ta có $f'(x) < 0$ nên hàm số nghịch biến trên khoảng $(1; 9)$."
+        },
+        {
+          "label": "d",
+          "content": "Giá trị cực tiểu của hàm số đã cho bằng $\\frac{37}{3}$.",
+          "solution": "SAI: Điểm cực tiểu của hàm số đạt tại $x = 9$. Giá trị cực tiểu tương ứng là:\n\n$$f(9) = \\frac{1}{3}(9)^3 - 5(9)^2 + 9(9) + 8 = 243 - 405 + 81 + 8 = -73.$$\n\nCòn giá trị $f(1) = \\frac{37}{3}$ chính là giá trị cực đại của hàm số."
+        }
+      ],
+      "images": [],
+      "solution": "Cho hàm số $f(x) = \\frac{1}{3}x^3 - 5x^2 + 9x + 8$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/11",
+          "page": 1,
+          "bbox": [
+            61.0,
+            728.0,
+            474.0,
+            776.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/12",
+          "page": 1,
+          "bbox": [
+            61.0,
+            779.0,
+            543.0,
+            931.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "3",
+      "type": "true_false",
+      "content": "Một hệ thống pin năng lượng mặt trời gồm các tấm pin được kết nối với một bộ lưu trữ điện. Trong thời gian mặt trời chiếu sáng của một ngày, năng lượng điện thu được từ các tấm pin được lưu trong bộ lưu trữ điện. Gọi $F(t)$ là năng lượng điện (kWh) lưu trữ được kể từ thời điểm hệ thống bắt đầu hoạt động đến thời điểm $t$, trong đó $t$ là thời gian tính theo giờ ($0 \\leq t \\leq 12$) và thời điểm hệ thống bắt đầu hoạt động ứng với $t = 0$. Biết rằng $F(0) = 0$.\n\nTốc độ lưu trữ năng lượng điện (kW) của hệ thống này là hàm số $f(t) = F'(t)$ với $0 \\leq t \\leq 12$. Số liệu ghi nhận được ở một ngày cụ thể trong năm cho thấy $f(t) = -0,3t^2 + 3,6t$ với $0 \\leq t \\leq 12$.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "$F(t) = -0,1t^3 + 1,8t^2$ với $0 \\leq t \\leq 12$.",
+          "solution": "ĐÚNG: Hàm số năng lượng tích lũy là:\n\n$$F(t) = \\int (-0,3t^2 + 3,6t) dt = -0,1t^3 + 1,8t^2 + C. \\text{ Vì } F(0) = 0 \\Rightarrow C = 0 \\Rightarrow F(t) = -0,1t^3 + 1,8t^2.$$"
+        },
+        {
+          "label": "b",
+          "content": "Năng lượng điện (kWh) lưu trữ được kể từ thời điểm $t = a$ đến thời điểm $t = b$ ($0 \\leq a < b \\leq 12$) là $\\int_a^b f(t) dt$.",
+          "solution": "ĐÚNG: Theo ý nghĩa hình học và định lý cơ bản của tích phân, năng lượng điện lưu trữ được từ thời điểm $t = a$ đến $t = b$ bằng $\\int_a^b f(t) dt$."
+        },
+        {
+          "label": "c",
+          "content": "Năng lượng điện lưu trữ được kể từ thời điểm $t = 1$ đến thời điểm $t = 4$ nhỏ hơn 20,6 kWh.",
+          "solution": "SAI: Năng lượng điện tích lũy từ $t = 1$ đến $t = 4$ là:\n\n$$\\Delta F = F(4) - F(1) = [-0,1(4)^3 + 1,8(4)^2] - [-0,1(1)^3 + 1,8(1)^2] = 22,4 - 1,7 = 20,7 \\text{ kWh} > 20,6 \\text{ kWh}.$$"
+        },
+        {
+          "label": "d",
+          "content": "Năng lượng điện lưu trữ được kể từ thời điểm $t = 1$ đến thời điểm $t = 7$ gấp hai lần năng lượng điện lưu trữ được kể từ thời điểm $t = 1$ đến thời điểm $t = 4$.",
+          "solution": "SAI: Năng lượng điện tích lũy từ $t = 1$ đến $t = 7$ là:\n\n$$F(7) - F(1) = \\left[ -0,1(7)^3 + 1,8(7)^2 \\right] - 1,7 = 53,9 - 1,7 = 52,2 \\text{ kWh}.$$\n\nTa thấy $\\frac{52,2}{20,7} \\approx 2,52 \\neq 2$ (không gấp hai lần)."
+        }
+      ],
+      "images": [],
+      "solution": "Tốc độ lưu trữ năng lượng: $f(t) = F'(t) = -0,3t^2 + 3,6t$ với $F(0) = 0$.",
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/13",
+          "page": 1,
+          "bbox": [
+            61.0,
+            933.0,
+            1000.0,
+            1074.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/14",
+          "page": 1,
+          "bbox": [
+            61.0,
+            1077.0,
+            1000.0,
+            1141.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/15",
+          "page": 1,
+          "bbox": [
+            61.0,
+            1144.0,
+            1000.0,
+            1322.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "4",
+      "type": "true_false",
+      "content": "Trong không gian xét hệ tọa độ $Oxyz$ có một đơn vị dài trên các trục tương ứng với 10 mét trên thực tế. Một mục tiêu cần được bảo vệ có vị trí ở gốc tọa độ $O$. Người ta thiết lập một vành đai bảo vệ quanh mục tiêu theo một đường tròn tâm $O$ có bán kính bằng 7 đơn vị (tương ứng 70 mét trên thực tế) nằm trong mặt phẳng $(Oxy)$. Một máy bay không người lái (được coi như một hạt) bay theo một đường thẳng từ vị trí $M(5;10;4)$ đến vị trí $N(14;-2;4)$. Tại mỗi vị trí của máy bay, khoảng cách từ máy bay đến vành đai bảo vệ là độ dài ngắn nhất của các đoạn thẳng nối từ vị trí đó đến một điểm bất kì trên vành đai.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "$\\overline{MN} = (9; -12; 0)$.",
+          "solution": "ĐÚNG: $\\overrightarrow{MN} = (14 - 5; -2 - 10; 4 - 4) = (9; -12; 0)$."
+        },
+        {
+          "label": "b",
+          "content": "Phương trình tham số của đường thẳng $MN$ là\n$$\\begin{cases} $x = 5 + 3t$ \\\\ $y = 10 - 4t$ \\\\ $z = 0$ \\end{cases} \\text{ với } t \\in \\mathbb{R}.$$",
+          "solution": "SAI: Đường thẳng $MN$ đi qua $M(5;10;4)$ và có vectơ chỉ phương $\\vec{u} = \\frac{1}{3}\\overrightarrow{MN} = (3; -4; 0)$. Phương trình tham số đúng phải là:\n\n$$\\begin{cases} x = 5 + 3t \\\\ y = 10 - 4t \\quad (t \\in \\mathbb{R}) \\\\ z = 4 \\end{cases}$$\n\nĐề bài viết thành $z = 0$ là sai."
+        },
+        {
+          "label": "c",
+          "content": "Trong quá trình bay từ $M$ đến $N$, khoảng cách ngắn nhất từ máy bay đến vành đai bảo vệ là 50 mét.",
+          "solution": "ĐÚNG: Gọi $Q(x; y; 4)$ là một điểm bất kỳ trên đường thẳng $MN$. Khoảng cách từ $Q$ đến một điểm $P(x_p; y_p; 0)$ trên đường tròn vành đai là:\n\n$QP = \\sqrt{(x - x_p)^2 + (y - y_p)^2 + 4^2}$. Để khoảng cách này ngắn nhất, hình chiếu $Q'(x; y; 0)$ của $Q$ xuống mặt phẳng $(Oxy)$ phải có khoảng cách đến đường tròn ngắn nhất.\n\nTọa độ của $Q'$ nằm trên đoạn thẳng có phương trình hình chiếu: $x = 5 + 3t, y = 10 - 4t$.\n\nKhoảng cách từ $Q'$ đến gốc tọa độ $O$ là:\n\n$$OQ' = \\sqrt{(5 + 3t)^2 + (10 - 4t)^2} = \\sqrt{25t^2 - 50t + 125} = \\sqrt{25(t - 1)^2 + 100}.$$\n\nGiá trị nhỏ nhất của $OQ'$ đạt được tại $t = 1 \\Rightarrow OQ'_{\\min} = 10$.\n\nKhoảng cách ngắn nhất từ $Q'$ tới đường tròn bán kính $R = 7$ là: $10 - 7 = 3$ đơn vị.\n\nVậy khoảng cách ngắn nhất từ máy bay đến vành đai là: $d_{\\min} = \\sqrt{3^2 + 4^2} = 5$ đơn vị dài.\n\nĐổi ra thực tế: $5 \\times 10 = 50$ mét."
+        },
+        {
+          "label": "d",
+          "content": "Trong quá trình bay từ $M$ đến $N$, khoảng cách từ máy bay đến vành đai bảo vệ là ngắn nhất khi máy bay ở vị trí có tọa độ là $(8; 6; 4)$.",
+          "solution": "ĐÚNG: Khoảng cách đạt giá trị nhỏ nhất tại $t = 1$. Thay $t = 1$ vào phương trình đường thẳng ta được tọa độ máy bay lúc này là: $x = 5 + 3(1) = 8$; $y = 10 - 4(1) = 6$; $z = 4$. Vậy vị trí đó là $(8; 6; 4)$."
+        }
+      ],
+      "images": [],
+      "solution": "Trong không gian $Oxyz$, đường thẳng $MN$ nối từ $M(5;10;4)$ đến $N(14;-2;4)$. Vành đai bảo vệ là đường tròn tâm $O$ bán kính $R = 7$ thuộc mặt phẳng $(Oxy)$ ($z = 0$).",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/0",
+          "page": 2,
+          "bbox": [
+            64.0,
+            71.0,
+            995.0,
+            237.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/1",
+          "page": 2,
+          "bbox": [
+            64.0,
+            238.0,
+            244.0,
+            268.0
+          ]
+        },
+        {
+          "id": "/page/2/Equation/2",
+          "page": 2,
+          "bbox": [
+            64.0,
+            273.0,
+            709.0,
+            359.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/3",
+          "page": 2,
+          "bbox": [
+            64.0,
+            362.0,
+            967.0,
+            390.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/4",
+          "page": 2,
+          "bbox": [
+            64.0,
+            390.0,
+            995.0,
+            446.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Cho hình lập phương $ABCD.MNPQ$ có cạnh bằng 6. Gọi $E$ là trung điểm của đoạn thẳng $AB$. Khoảng cách từ điểm $P$ đến mặt phẳng $(MED)$ bằng bao nhiêu (không làm tròn kết quả các phép tính trung gian, chỉ làm tròn kết quả cuối cùng đến hàng phần trăm)?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Bài toán: Tìm khoảng cách từ điểm $P$ đến mặt phẳng $(MED)$ của hình lập phương $ABCD.MNPQ$ cạnh bằng 6.\n\nLời giải: Cho hệ trục tọa độ $Oxyz$ có gốc trùng với đỉnh $D(0;0;0)$. Tia $Dx$ trùng với $DA$, tia $Dy$ trùng với $DC$, tia $Dz$ trùng với $DQ$.\n\nKhi đó tọa độ các điểm là:\n\n$$D(0;0;0), A(6;0;0), B(6;6;0), C(0;6;0), M(6;0;6), P(0;6;6).$$\n\nVì $E$ là trung điểm của $AB$ nên $E(6;3;0)$.\n\nTa tìm phương trình mặt phẳng $(MED)$:\n\n$$\\overrightarrow{DM} = (6;0;6), \\overrightarrow{DE} = (6;3;0).$$\n\nVector pháp tuyến của mặt phẳng $(MED)$ là: $\\vec{n} = \\frac{1}{18}(\\overrightarrow{DM} \\times \\overrightarrow{DE}) = (-1;2;1) \\parallel (1;-2;-1)$.\n\nPhương trình mặt phẳng $(MED)$ đi qua $D(0;0;0)$ là: $x - 2y - z = 0$.\n\nKhoảng cách từ điểm $P(0;6;6)$ đến mặt phẳng $(MED)$ là:\n\n$$d(P, (MED)) = \\frac{|0 - 2(6) - 6|}{\\sqrt{1^2 + (-2)^2 + (-1)^2}} = \\frac{18}{\\sqrt{6}} = 3\\sqrt{6} \\approx 7,35$$\n\nKết quả: 7,35",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/6",
+          "page": 2,
+          "bbox": [
+            64.0,
+            474.0,
+            995.0,
+            560.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "2",
+      "type": "short_answer",
+      "content": "Trong một trò chơi bạn Bình cần vượt qua một thử thách. Theo yêu cầu của thử thách, Bình cần điền tất cả 15 số thuộc tập hợp $\\{0; 1; 2; 3; 4; 5; 6; 7; 8; 10; 11; 12; 15; 16; 20\\}$ vào 15 ô vuông trong hình dưới thỏa mãn đồng thời ba điều kiện sau:\n\n– Mỗi ô điền đúng một số và mỗi số chỉ được sử dụng một lần;\n\n– Hiệu hai số ở hai ô bất kì khác nhau trên cùng một hàng không chia hết cho 5;\n\n– Hiệu hai số ở hai ô bất kì khác nhau trên cùng một cột không chia hết cho 5.\n\nHai cách điền gọi là giống nhau nếu số điền ở mỗi ô tương ứng trong 15 ô là giống nhau (không tính đến thứ tự điền các số vào 15 ô vuông). Gọi $H$ là số cách điền khác nhau để bạn Bình vượt qua được thử thách. Giá trị của $\\frac{H}{30}$ bằng bao nhiêu?",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "3547d8dc1ba9bc8e4bbec26b5724549d_img.jpg",
+          "path": "images/3547d8dc1ba9bc8e4bbec26b5724549d_img.jpg",
+          "page": 2,
+          "bbox": [
+            336.0,
+            813.0,
+            737.0,
+            1142.0
+          ],
+          "alt": "A 5x5 grid of squares arranged in a staircase pattern. Row 1 has 5 squares, Row 2 has 4, Row 3 has 3, Row 4 has 2, and Row 5 has 1 square. The rows are labeled 'Hàng 1' to 'Hàng 5' from bottom to top, and the columns are labeled 'Cột 1' to 'Cột 5' from left to right."
+        }
+      ],
+      "solution": "Bài toán: Tìm số cách xếp $H$ để hiệu các số trong các hàng và các cột không chia hết cho 5. Tính $\\frac{H}{30}$.\n\nLời giải: Tập hợp gồm 15 số phân loại theo số dư khi chia cho 5:\n\nDư 0: $\\{0, 5, 10, 15, 20\\}$ (5 số)\n\nDư 1: $\\{1, 6, 11, 16\\}$ (4 số)\n\nDư 2: $\\{2, 7, 12\\}$ (3 số)\n\nDư 3: $\\{3, 8\\}$ (2 số)\n\nDư 4: $\\{4\\}$ (1 số)\n\nĐiều kiện bài toán yêu cầu các ô cùng hàng hoặc cùng cột phải có số dư khác nhau khi chia cho 5.\n\nDo cấu trúc của bảng có dạng hình bậc thang giảm dần (Hàng 1 có 5 ô, Hàng 2 có 4 ô, ..., Hàng 5 có 1 ô; và tương tự với các cột), cách sắp xếp các nhóm số dư vào cấu trúc này là duy nhất (mỗi hàng/cột kích thước $k$ chứa đúng các số dư có tần suất xuất hiện tương ứng).\n\nSố cách xếp các số thực tế vào các vị trí cố định của nhóm số dư tương ứng là:\n\n$$H = 5! \\cdot 4! \\cdot 3! \\cdot 2! \\cdot 1! = 120 \\cdot 24 \\cdot 6 \\cdot 2 \\cdot 1 = 34560 \\text{ cách.}$$\n\nGiá trị cần tìm là: $\\frac{H}{30} = \\frac{34560}{30} = 1152$.\n\nKết quả: 1152",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/7",
+          "page": 2,
+          "bbox": [
+            64.0,
+            559.0,
+            995.0,
+            641.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/8",
+          "page": 2,
+          "bbox": [
+            128.0,
+            639.0,
+            822.0,
+            715.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/9",
+          "page": 2,
+          "bbox": [
+            64.0,
+            713.0,
+            995.0,
+            816.0
+          ]
+        },
+        {
+          "id": "/page/2/Figure/10",
+          "page": 2,
+          "bbox": [
+            336.0,
+            813.0,
+            737.0,
+            1142.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "3",
+      "type": "short_answer",
+      "content": "Để chế tác một hạt cườm, người ta lấy một khối vật thể có dạng một khối tròn xoay được tạo thành khi quay hình phẳng giới hạn bởi trục $Ox$ và nửa trên của elip $\\frac{x^2}{1,5^2} + \\frac{y^2}{1^2} = 1$ (một đơn vị dài trên mỗi trục tọa độ tương ứng với một xăng-ti-mét trong thực tế) quanh trục $Ox$; sau đó khoan dọc theo trục xoay (xem hình dưới). Lỗ khoan có dạng hình trụ với bán kính $0,2cm$ và có trục nằm trên trục xoay. Phần còn lại sau khi khoan là hạt cườm, có dạng một khối tròn xoay.\n\nThể tích của hạt cườm đó bằng bao nhiêu xăng-ti-mét khối (không làm tròn kết quả các phép tính trung gian, chỉ làm tròn kết quả cuối cùng đến hàng phần trăm)?\n\nLưu ý: Các kích thước trong hình minh họa có thể không đúng tỉ lệ thực tế.",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "5d92d5c9cc01a262b0389d138caa9aea_img.jpg",
+          "path": "images/5d92d5c9cc01a262b0389d138caa9aea_img.jpg",
+          "page": 3,
+          "bbox": [
+            51.0,
+            75.0,
+            1018.0,
+            283.0
+          ],
+          "alt": "Three diagrams illustrating the rotation of an ellipse. The first diagram shows an ellipse centered at the origin O of a Cartesian coordinate system with x and y axes. The ellipse has a semi-major axis of 1 and a semi-minor axis of 0.2. It is labeled with 'Bán kính lỗ khoan 0,2' (Hole radius 0.2), 'Mũi khoan' (Drill bit), and 'Trục xoay' (Rotation axis). The equation of the ellipse is given as x^2/(1.5^2) + y^2/1^2 = 1. The second diagram shows the same ellipse rotated 90 degrees counter-clockwise. The third diagram shows the ellipse rotated 180 degrees, with the equation y = 0.2 shown on the x-axis."
+        }
+      ],
+      "solution": "Bài toán: Tính thể tích hạt cườm sinh bởi elip xoay quanh trục $Ox$ và khoét lỗ hình trụ bán kính $0,2$ cm.\n\nLời giải: Phương trình nửa trên elip là $y = \\sqrt{1 - \\frac{x^2}{1,5^2}}$.\n\nĐường giới hạn của lỗ khoan là đường thẳng $y = 0,2$.\n\nGiao điểm của lỗ khoan và elip được xác định bởi phương trình:\n\n$$0,2 = \\sqrt{1 - \\frac{x^2}{2,25}} \\Leftrightarrow 0,04 = 1 - \\frac{x^2}{2,25} \\Leftrightarrow x^2 = 2,25 \\cdot 0,96 = 2,16 \\Leftrightarrow x = \\pm \\sqrt{2,16}$$\n\nThể tích khối tròn xoay còn lại của hạt cườm tính theo công thức tích phân:\n\n$$V = \\pi \\int_{-\\sqrt{2,16}}^{\\sqrt{2,16}} (y_{\\text{elip}}^2 - y_{\\text{trụ}}^2) dx = \\pi \\int_{-\\sqrt{2,16}}^{\\sqrt{2,16}} \\left( 1 - \\frac{x^2}{2,25} - 0,04 \\right) dx$$\n\n$$V = \\pi \\int_{-\\sqrt{2,16}}^{\\sqrt{2,16}} \\left( 0,96 - \\frac{x^2}{2,25} \\right) dx = \\pi \\left[ 0,96x - \\frac{x^3}{6,75} \\right]_{-\\sqrt{2,16}}^{\\sqrt{2,16}}$$\n\n$$V = 2\\pi \\sqrt{2,16} \\left( 0,96 - \\frac{2,16}{6,75} \\right) = 2\\pi \\sqrt{2,16} \\cdot 0,64 = 1,28\\pi \\sqrt{2,16} \\approx 5,91 \\text{ cm}^3$$\n\nKết quả: 5,91",
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/11",
+          "page": 2,
+          "bbox": [
+            64.0,
+            1160.0,
+            995.0,
+            1331.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/12",
+          "page": 2,
+          "bbox": [
+            64.0,
+            1328.0,
+            992.0,
+            1380.0
+          ]
+        },
+        {
+          "id": "/page/3/Figure/0",
+          "page": 3,
+          "bbox": [
+            51.0,
+            75.0,
+            1018.0,
+            283.0
+          ]
+        },
+        {
+          "id": "/page/3/Text/1",
+          "page": 3,
+          "bbox": [
+            188.0,
+            283.0,
+            871.0,
+            311.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "4",
+      "type": "short_answer",
+      "content": "Một khung hình trang trí có dạng một đa giác đều 12 cạnh $A_1A_2\\dots A_{12}$ (xem hình dưới) được gắn cố định trên một trần nhà. Bạn Dũng có 12 bóng đèn gồm bốn bóng màu đỏ và tám bóng màu xanh, có công suất đôi một khác nhau. Bạn Dũng lắp ngẫu nhiên 12 bóng đèn trên vào 12 đỉnh $A_1, A_2, \\dots, A_{12}$ sao cho mỗi đỉnh có đúng một bóng đèn. Gọi $P$ là xác suất để mỗi hình vuông (có bốn đỉnh là các đỉnh của đa giác đã cho) đều có ít nhất một bóng đèn màu đỏ. Giá trị của $3190P$ bằng bao nhiêu?",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "16d86083b7ebdc40c0647a1d3d46ace7_img.jpg",
+          "path": "images/16d86083b7ebdc40c0647a1d3d46ace7_img.jpg",
+          "page": 3,
+          "bbox": [
+            368.0,
+            445.0,
+            674.0,
+            721.0
+          ],
+          "alt": "A regular 12-sided polygon with vertices labeled A1 through A12 in a clockwise direction starting from the top vertex."
+        }
+      ],
+      "solution": "Bài toán: Tính giá trị $3190P$ với $P$ là xác suất để 3 hình vuông tạo bởi các đỉnh của đa giác đều 12 cạnh đều có ít nhất một bóng đèn màu đỏ.\n\nLời giải: Đa giác đều 12 đỉnh tạo ra đúng 3 hình vuông phân biệt và không giao nhau về đỉnh, mỗi hình vuông chứa đúng 4 đỉnh.\n\nĐể mỗi hình vuông đều chứa ít nhất một bóng màu đỏ trong tổng số 4 bóng đỏ, theo nguyên lý Dirichlet, số lượng bóng đỏ phân bổ vào 3 hình vuông phải là một hoán vị của bộ số $(2, 1, 1)$.\n\nSố cách chọn một hình vuông có 2 bóng đỏ: $\\binom{3}{1} = 3$ cách.\n\nSố cách chọn vị trí cho 2 bóng đỏ trong hình vuông đó: $\\binom{4}{2} = 6$ cách.\n\nSố cách chọn vị trí cho 1 bóng đỏ ở hình vuông thứ hai: $\\binom{4}{1} = 4$ cách.\n\nSố cách chọn vị trí cho 1 bóng đỏ ở hình vuông thứ ba: $\\binom{4}{1} = 4$ cách.\n\nTổng số cách xếp thuận lợi cho biển cổ là: $N_A = 3 \\cdot 6 \\cdot 4 \\cdot 4 = 288$ cách.\n\nTổng số cách chọn 4 vị trí ngẫu nhiên bất kỳ từ 12 đinh để đặt bóng đỏ là: $N_\\Omega = \\binom{12}{4} = 495$ cách.\n\nXác suất biển cổ là: $P = \\frac{288}{495} = \\frac{32}{55}$.\n\nGiá trị cần tìm: $3190P = 3190 \\cdot \\frac{32}{55} = 1856$.\n\nKết quả: 1856",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/2",
+          "page": 3,
+          "bbox": [
+            43.0,
+            310.0,
+            1028.0,
+            446.0
+          ]
+        },
+        {
+          "id": "/page/3/Picture/3",
+          "page": 3,
+          "bbox": [
+            368.0,
+            445.0,
+            674.0,
+            721.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "5",
+      "type": "short_answer",
+      "content": "Một nông trại cung cấp rau quả cho siêu thị A với số liệu bán hàng của bốn ngày trong tuần được ghi lại trong bảng sau:\n\n| Ngày | Số ki-lô-gam | Tổng số tiền (nghìn đồng) | | |\n| --- | --- | --- | --- | --- |\n| Rau muống | Bí xanh | Cà chua | | |\n| Thứ Tư | 19 | 14 | 10 | 600 |\n| Thứ Năm | 20 | 12 | 8 | 540 |\n| Thứ Sáu | 25 | 12 | 7 | 570 |\n| Thứ Bảy | 50 | 25 | 20 | ? |\n\nBiết rằng đơn giá theo ki-lô-gam của mỗi loại rau quả trong bảng trên là không đổi. Tổng số tiền nông trại thu được ở ngày thứ Bảy từ ba loại rau quả trên khi cung cấp cho siêu thị A là bao nhiêu nghìn đồng?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Bài toán: Tính tổng số tiền thu được vào ngày Thứ Bảy.\n\nLời giải: Gọi $x, y, z$ lần lượt là đơn giá một kg của rau muống, bí xanh và cà chua (đơn vị: nghìn đồng/kg).\n\nDựa vào bảng số liệu, ta có hệ phương trình tuyến tính:\n\n$$\\begin{cases} 19x + 14y + 10z = 600 \\\\ 20x + 12y + 8z = 540 \\\\ 25x + 12y + 7z = 570 \\end{cases}$$\n\nGiải hệ phương trình trên bằng phương pháp bấm máy tính hoặc Gauss, ta thu được đơn giá các loại quả:\n\n$$x = 10, \\quad y = 15, \\quad z = 20.$$\n\nSố tiền thu được của ngày Thứ Bảy là:\n\n$$T = 50x + 25y + 20z = 50(10) + 25(15) + 20(20) = 500 + 375 + 400 = 1275 \\text{ nghìn đồng}$$\n\nKết quả: 1275",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/4",
+          "page": 3,
+          "bbox": [
+            45.0,
+            721.0,
+            1025.0,
+            774.0
+          ]
+        },
+        {
+          "id": "/page/3/Table/5",
+          "page": 3,
+          "bbox": [
+            173.0,
+            780.0,
+            872.0,
+            963.0
+          ]
+        },
+        {
+          "id": "/page/3/Text/6",
+          "page": 3,
+          "bbox": [
+            45.0,
+            973.0,
+            1023.0,
+            1026.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "6",
+      "type": "short_answer",
+      "content": "Một công ty nông sản có công suất chế biến không quá 200 tấn nguyên liệu một tháng. Nếu công ty chế biến $x$ tấn nguyên liệu trong một tháng ($1 \\leq x \\leq 200$) thì chi phí sản xuất và doanh thu lần lượt là $C(x) = 0,001x^3 + 30x + 10$ (triệu đồng) và $R(x) = 60x$ (triệu đồng). Lợi nhuận lớn nhất mà công ty đạt được trong một tháng là bao nhiêu triệu đồng?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": "Bài toán: Tìm lợi nhuận lớn nhất của công ty nông sản khi chế biến $x$ tấn nguyên liệu ($1 \\leq x \\leq 200$).\n\nLời giải: Hàm số biểu diễn lợi nhuận của doanh nghiệp trong một tháng là:\n\n$$P(x) = R(x) - C(x) = 60x - (0,001x^3 + 30x + 10) = -0,001x^3 + 30x - 10$$\n\nTìm giá trị lớn nhất của hàm số $P(x)$ trên đoạn $[1; 200]$:\n\n$$\\text{Đạo hàm: } P'(x) = -0,003x^2 + 30.$$\n\n$$\\text{Cho } P'(x) = 0 \\Leftrightarrow -0,003x^2 + 30 = 0 \\Leftrightarrow x^2 = 10000 \\Leftrightarrow x = 100 \\text{ (do } x \\in [1; 200]).$$\n\nTính giá trị tại các điểm biên và điểm cực trị:\n\n$$P(1) \\approx 19,999$$\n\n$$P(100) = -0,001(100)^3 + 30(100) - 10 = -1000 + 3000 - 10 = 1990 \\text{ triệu đồng.}$$\n\n$$P(200) = -0,001(200)^3 + 30(200) - 10 = -8000 + 6000 - 10 = -2010$$\n\nSo sánh các giá trị, ta thấy lợi nhuận lớn nhất đạt được là 1990 triệu đồng khi công ty chế biến 100 tấn nguyên liệu.\n\nKết quả: 1990\n\n_____ HẾT _____",
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/7",
+          "page": 3,
+          "bbox": [
+            45.0,
+            1023.0,
+            1023.0,
+            1139.0
+          ]
+        }
+      ]
+    }
+  ]
+}

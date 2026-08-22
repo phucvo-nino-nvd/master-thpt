@@ -1,0 +1,6 @@
+{
+  "left_id": "METHOD_TINH_GOC_GIUA_HAI_DUONG_THANG",
+  "right_id": "METHOD_XAC_DINH_VI_TRI_TUONG_DOI",
+  "merge": false,
+  "rationale": "The left node is a method for calculating an angle. The right node is a method for determining relative position (parallel, intersecting, skew). They are related but distinct methods."
+}

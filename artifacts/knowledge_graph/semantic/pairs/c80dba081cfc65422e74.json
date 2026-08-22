@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_HAI_MAT_PHANG_SONG_SONG",
+  "right_id": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+  "merge": false,
+  "rationale": "The left node is a condition for two planes to be parallel based on containing intersecting lines. The right node is a condition for two planes to be parallel based on both being perpendicular to a line. They are distinct theorems providing different sufficient conditions."
+}

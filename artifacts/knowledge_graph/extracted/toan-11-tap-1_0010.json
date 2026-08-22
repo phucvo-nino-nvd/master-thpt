@@ -1,0 +1,189 @@
+{
+  "chunk_id": "toan-11-tap-1:0010",
+  "nodes": [
+    {
+      "id": "MAT_PHANG",
+      "name": "Mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Đối tượng hình học không gian không có bề dày và không giới hạn, có thể được biểu diễn bằng hình bình hành hoặc góc.",
+      "grade": 11
+    },
+    {
+      "id": "DIEM_THUOC_MAT_PHANG",
+      "name": "Điểm thuộc mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Điểm nằm trên mặt phẳng, kí hiệu A ∈ (P).",
+      "grade": 11
+    },
+    {
+      "id": "DIEM_KHONG_THUOC_MAT_PHANG",
+      "name": "Điểm không thuộc mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Điểm không nằm trên mặt phẳng, kí hiệu B ∉ (P).",
+      "grade": 11
+    },
+    {
+      "id": "CAC_DIEM_DONG_PHANG",
+      "name": "Các điểm đồng phẳng",
+      "type": "CONCEPT",
+      "description": "Những điểm cùng thuộc một mặt phẳng.",
+      "grade": 11
+    },
+    {
+      "id": "CAC_DIEM_KHONG_DONG_PHANG",
+      "name": "Các điểm không đồng phẳng",
+      "type": "CONCEPT",
+      "description": "Những điểm không cùng thuộc một mặt phẳng.",
+      "grade": 11
+    },
+    {
+      "id": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+      "name": "Giao tuyến của hai mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Đường thẳng chung của hai mặt phẳng phân biệt, kí hiệu d = (P) ∩ (Q).",
+      "grade": 11
+    },
+    {
+      "id": "HINH_CHOP",
+      "name": "Hình chóp",
+      "type": "CONCEPT",
+      "description": "Hình gồm n tam giác SA₁A₂, ..., SAₙA₁ và đa giác A₁A₂...Aₙ, kí hiệu S.A₁A₂...Aₙ.",
+      "grade": 11
+    },
+    {
+      "id": "HINH_TU_DIEN",
+      "name": "Hình tứ diện",
+      "type": "CONCEPT",
+      "description": "Hình gồm bốn tam giác ABC, ACD, ABD, BCD, kí hiệu ABCD.",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_DI_QUA_HAI_DIEM",
+      "name": "Đường thẳng đi qua hai điểm",
+      "type": "THEOREM",
+      "description": "Có một và chỉ một đường thẳng đi qua hai điểm phân biệt.",
+      "grade": 11
+    },
+    {
+      "id": "MAT_PHANG_DI_QUA_BA_DIEM_KHONG_THANG_HANG",
+      "name": "Mặt phẳng đi qua ba điểm không thẳng hàng",
+      "type": "THEOREM",
+      "description": "Có một và chỉ một mặt phẳng đi qua ba điểm không thẳng hàng.",
+      "grade": 11
+    },
+    {
+      "id": "DUONG_THANG_THUOC_MAT_PHANG",
+      "name": "Đường thẳng thuộc mặt phẳng",
+      "type": "THEOREM",
+      "description": "Nếu một đường thẳng có hai điểm phân biệt thuộc một mặt phẳng thì tất cả các điểm của đường thẳng đều thuộc mặt phẳng đó.",
+      "grade": 11
+    },
+    {
+      "id": "XAC_DINH_MAT_PHANG_BOI_DIEM_VA_DUONG_THANG",
+      "name": "Xác định mặt phẳng bởi điểm và đường thẳng",
+      "type": "THEOREM",
+      "description": "Một mặt phẳng được hoàn toàn xác định khi biết nó đi qua một điểm và chứa một đường thẳng không đi qua điểm đó.",
+      "grade": 11
+    },
+    {
+      "id": "XAC_DINH_MAT_PHANG_BOI_HAI_DUONG_THANG_CAT_NHAU",
+      "name": "Xác định mặt phẳng bởi hai đường thẳng cắt nhau",
+      "type": "THEOREM",
+      "description": "Một mặt phẳng được hoàn toàn xác định khi biết nó chứa hai đường thẳng cắt nhau.",
+      "grade": 11
+    },
+    {
+      "id": "XAC_DINH_GIAO_DIEM_CUA_DUONG_THANG_VA_MAT_PHANG",
+      "name": "Xác định giao điểm của đường thẳng và mặt phẳng",
+      "type": "METHOD",
+      "description": "Để xác định giao điểm của một đường thẳng và một mặt phẳng, ta có thể tìm giao điểm của đường thẳng đó với một đường thẳng nằm trong mặt phẳng đã cho.",
+      "grade": 11
+    }
+  ],
+  "edges": [
+    {
+      "source": "MAT_PHANG",
+      "target": "DIEM_THUOC_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MAT_PHANG",
+      "target": "DIEM_KHONG_THUOC_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MAT_PHANG",
+      "target": "CAC_DIEM_DONG_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MAT_PHANG",
+      "target": "CAC_DIEM_KHONG_DONG_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MAT_PHANG",
+      "target": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MAT_PHANG",
+      "target": "HINH_CHOP",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MAT_PHANG",
+      "target": "HINH_TU_DIEN",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_DI_QUA_HAI_DIEM",
+      "target": "MAT_PHANG_DI_QUA_BA_DIEM_KHONG_THANG_HANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "MAT_PHANG_DI_QUA_BA_DIEM_KHONG_THANG_HANG",
+      "target": "DUONG_THANG_THUOC_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "DUONG_THANG_THUOC_MAT_PHANG",
+      "target": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+      "target": "XAC_DINH_MAT_PHANG_BOI_DIEM_VA_DUONG_THANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+      "target": "XAC_DINH_MAT_PHANG_BOI_HAI_DUONG_THANG_CAT_NHAU",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "XAC_DINH_MAT_PHANG_BOI_DIEM_VA_DUONG_THANG",
+      "target": "XAC_DINH_GIAO_DIEM_CUA_DUONG_THANG_VA_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    },
+    {
+      "source": "XAC_DINH_MAT_PHANG_BOI_HAI_DUONG_THANG_CAT_NHAU",
+      "target": "XAC_DINH_GIAO_DIEM_CUA_DUONG_THANG_VA_MAT_PHANG",
+      "relation": "REQUIRES",
+      "rationale": null
+    }
+  ]
+}

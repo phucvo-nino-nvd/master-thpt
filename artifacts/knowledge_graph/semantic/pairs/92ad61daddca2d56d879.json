@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_THE_TICH_KHOI_HOP",
+  "right_id": "CONG_THUC_THE_TICH_KHOI_LANG_TRU",
+  "merge": false,
+  "rationale": "Công thức thể tích khối hộp and Công thức thể tích khối lăng trụ share the same formula V = h * S, but they apply to different geometric objects (a rectangular prism/box vs. a general prism). The formula is a general principle, but the nodes are tied to specific objects, making them distinct reusable knowledge nodes."
+}

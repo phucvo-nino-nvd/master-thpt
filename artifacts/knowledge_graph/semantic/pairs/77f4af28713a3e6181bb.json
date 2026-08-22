@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_CONG",
+  "right_id": "TINH_CHAT_PHAN_DOAN",
+  "merge": false,
+  "rationale": "These are two distinct properties of the definite integral: the additive property and the interval partition property. They are different theorems/properties."
+}

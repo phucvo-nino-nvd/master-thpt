@@ -1,0 +1,113 @@
+{
+  "chunk_id": "toan-12-tap-2:0003",
+  "nodes": [
+    {
+      "id": "DIEN_TICH_HINH_PHANG",
+      "name": "Diện tích hình phẳng",
+      "type": "CONCEPT",
+      "description": "Diện tích của một hình phẳng giới hạn bởi đồ thị hàm số, trục hoành và hai đường thẳng x = a, x = b.",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_DIEN_TICH_HINH_PHANG",
+      "name": "Công thức diện tích hình phẳng",
+      "type": "FORMULA",
+      "description": "Diện tích S của hình phẳng giới hạn bởi đồ thị của hàm số f(x) liên tục, trục hoành và hai đường thẳng x = a, x = b (a < b) được tính bằng công thức S = ∫ₐᵇ |f(x)| dx.",
+      "grade": 12
+    },
+    {
+      "id": "DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+      "name": "Diện tích giới hạn bởi hai đồ thị",
+      "type": "CONCEPT",
+      "description": "Diện tích của hình phẳng giới hạn bởi đồ thị của hai hàm số f(x), g(x) liên tục trên đoạn [a, b] và hai đường thẳng x = a, x = b.",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+      "name": "Công thức diện tích giới hạn bởi hai đồ thị",
+      "type": "FORMULA",
+      "description": "Diện tích S của hình phẳng giới hạn bởi đồ thị của hai hàm số f(x), g(x) liên tục trên đoạn [a, b] và hai đường thẳng x = a, x = b được tính bằng công thức S = ∫ₐᵇ |f(x) - g(x)| dx.",
+      "grade": 12
+    },
+    {
+      "id": "THE_TICH_VAT_THE",
+      "name": "Thể tích vật thể",
+      "type": "CONCEPT",
+      "description": "Thể tích của một vật thể trong không gian Oxyz giới hạn bởi hai mặt phẳng vuông góc với trục Ox tại x = a, x = b.",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_THE_TICH_VAT_THE",
+      "name": "Công thức thể tích vật thể",
+      "type": "FORMULA",
+      "description": "Thể tích V của phần vật thể B giới hạn bởi hai mặt phẳng vuông góc với trục Ox tại x = a, x = b được tính bằng công thức V = ∫ₐᵇ S(x) dx, trong đó S(x) là diện tích mặt cắt tại x.",
+      "grade": 12
+    },
+    {
+      "id": "KHOI_TRON_XOAY",
+      "name": "Khối tròn xoay",
+      "type": "CONCEPT",
+      "description": "Hình khối sinh ra khi quay hình phẳng giới hạn bởi đồ thị hàm số y = f(x), trục hoành và hai đường thẳng x = a, x = b xung quanh trục hoành.",
+      "grade": 12
+    },
+    {
+      "id": "CONG_THUC_THE_TICH_KHOI_TRON_XOAY",
+      "name": "Công thức thể tích khối tròn xoay",
+      "type": "FORMULA",
+      "description": "Thể tích V của khối tròn xoay sinh ra khi quay hình phẳng giới hạn bởi đồ thị hàm số y = f(x), trục hoành và hai đường thẳng x = a, x = b xung quanh trục hoành được tính bằng công thức V = π ∫ₐᵇ f²(x) dx.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_PHAP_TICH_PHAN_TINH_DIEN_TICH",
+      "name": "Phương pháp tích phân tính diện tích",
+      "type": "METHOD",
+      "description": "Sử dụng tích phân để tính diện tích của hình phẳng giới hạn bởi đồ thị hàm số, trục hoành và hai đường thẳng x = a, x = b.",
+      "grade": 12
+    },
+    {
+      "id": "PHUONG_PHAP_TICH_PHAN_TINH_THE_TICH",
+      "name": "Phương pháp tích phân tính thể tích",
+      "type": "METHOD",
+      "description": "Sử dụng tích phân để tính thể tích của vật thể trong không gian giới hạn bởi hai mặt phẳng vuông góc với trục Ox tại x = a, x = b.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "DIEN_TICH_HINH_PHANG",
+      "target": "CONG_THUC_DIEN_TICH_HINH_PHANG",
+      "relation": "REQUIRES",
+      "rationale": "Để tính diện tích hình phẳng, cần sử dụng công thức tích phân."
+    },
+    {
+      "source": "DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+      "target": "CONG_THUC_DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+      "relation": "REQUIRES",
+      "rationale": "Để tính diện tích giới hạn bởi hai đồ thị, cần sử dụng công thức tích phân tương ứng."
+    },
+    {
+      "source": "THE_TICH_VAT_THE",
+      "target": "CONG_THUC_THE_TICH_VAT_THE",
+      "relation": "REQUIRES",
+      "rationale": "Để tính thể tích vật thể, cần sử dụng công thức tích phân."
+    },
+    {
+      "source": "KHOI_TRON_XOAY",
+      "target": "CONG_THUC_THE_TICH_KHOI_TRON_XOAY",
+      "relation": "REQUIRES",
+      "rationale": "Để tính thể tích khối tròn xoay, cần sử dụng công thức tích phân."
+    },
+    {
+      "source": "PHUONG_PHAP_TICH_PHAN_TINH_DIEN_TICH",
+      "target": "CONG_THUC_DIEN_TICH_HINH_PHANG",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tích phân tính diện tích yêu cầu công thức diện tích hình phẳng."
+    },
+    {
+      "source": "PHUONG_PHAP_TICH_PHAN_TINH_THE_TICH",
+      "target": "CONG_THUC_THE_TICH_VAT_THE",
+      "relation": "REQUIRES",
+      "rationale": "Phương pháp tích phân tính thể tích yêu cầu công thức thể tích vật thể."
+    }
+  ]
+}

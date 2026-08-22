@@ -1,0 +1,6 @@
+{
+  "left_id": "SO_THUC",
+  "right_id": "TAP_HOP_SO_THUC",
+  "merge": false,
+  "rationale": "The left node is the concept of a real number, while the right node is the concept of the set of real numbers. One is an element, the other is the set. They are related but distinct mathematical objects."
+}

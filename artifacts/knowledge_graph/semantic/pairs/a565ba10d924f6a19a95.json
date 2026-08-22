@@ -1,0 +1,6 @@
+{
+  "left_id": "TOA_DO_TRONG_TAM",
+  "right_id": "TOA_DO_TRONG_TAM_TAM_GIAC",
+  "merge": false,
+  "rationale": "Coordinate formula for centroid of a triangle in 3D space (Oxyz) vs in the plane (2D). Different dimensional spaces. KEEP."
+}

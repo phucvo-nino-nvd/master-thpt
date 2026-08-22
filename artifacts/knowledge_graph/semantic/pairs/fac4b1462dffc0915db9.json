@@ -1,0 +1,6 @@
+{
+  "left_id": "HOANH_DO",
+  "right_id": "TUNG_DO",
+  "merge": false,
+  "rationale": "Left node is the x-coordinate. Right node is the y-coordinate. They are distinct components of a coordinate system. They are not semantic duplicates."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_TIEM_CAN_NGANG",
+  "right_id": "DUONG_TIEM_CAN_XIEN",
+  "merge": false,
+  "rationale": "The left node defines a horizontal asymptote. The right node defines an oblique (slant) asymptote. They are two distinct types of asymptotes with different defining conditions. They are related but not semantic duplicates."
+}

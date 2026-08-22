@@ -1,0 +1,6 @@
+{
+  "left_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_MAT_PHANG",
+  "right_id": "GOC_GIUA_HAI_VECTO",
+  "merge": false,
+  "rationale": "The left node defines the angle between two lines in a plane. The right node defines the angle between two vectors. While the angle between lines can be defined via their direction vectors, the concepts themselves are different: one is a geometric configuration in a plane, the other is an operation on vectors. They should be kept separate."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "HAI_GOC_BU_NHAU",
+  "right_id": "HAI_GOC_PHU_NHAU",
+  "merge": false,
+  "rationale": "The left node defines 'supplementary angles' (sum to 180°). The right node defines 'complementary angles' (sum to 90°). They are distinct angle relationships."
+}

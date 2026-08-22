@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "HAM_SO_NGHICH_BIEN",
+      "name": "Hàm số nghịch biến",
+      "type": "CONCEPT",
+      "description": "Hàm số mà giá trị giảm khi biến số tăng trên một khoảng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0001",
+      "original_id": "HAM_SO_NGHICH_BIEN",
+      "canonical_id": "HAM_SO_NGHICH_BIEN",
+      "rationale": "Both occurrences describe the same mathematical concept: a function decreasing as its variable increases over an interval. The descriptions are consistent across grades 10 and 12. Grade differences alone are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0001",
+      "original_id": "HAM_SO_NGHICH_BIEN",
+      "canonical_id": "HAM_SO_NGHICH_BIEN",
+      "rationale": "Both occurrences describe the same mathematical concept: a function decreasing as its variable increases over an interval. The descriptions are consistent across grades 10 and 12. Grade differences alone are not a reason to split."
+    }
+  ]
+}

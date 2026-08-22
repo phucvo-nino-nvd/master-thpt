@@ -1,0 +1,6 @@
+{
+  "left_id": "CAC_DIEM_DONG_PHANG",
+  "right_id": "CAC_DIEM_KHONG_DONG_PHANG",
+  "merge": false,
+  "rationale": "Các điểm đồng phẳng (coplanar points) and Các điểm không đồng phẳng (non-coplanar points) are complementary but distinct concepts describing the spatial relationship of points."
+}

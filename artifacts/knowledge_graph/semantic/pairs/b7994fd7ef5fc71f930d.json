@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_4",
+  "right_id": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_5",
+  "merge": false,
+  "rationale": "The binomial expansion formulas for degree 4 and degree 5 are distinct formulas representing different polynomial identities. They are specific cases of the general binomial theorem but are not semantic duplicates of each other."
+}

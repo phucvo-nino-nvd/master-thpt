@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_SO_HANG_TONG_QUAT",
+  "right_id": "CONG_THUC_TONG_N_SO_HANG_DAU",
+  "merge": false,
+  "rationale": "Công thức số hạng tổng quát and Công thức tổng n số hạng đầu are two different formulas for an arithmetic sequence. One finds the nth term, the other finds the sum of the first n terms. They are distinct."
+}

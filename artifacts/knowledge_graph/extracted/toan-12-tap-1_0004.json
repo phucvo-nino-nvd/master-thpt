@@ -1,0 +1,173 @@
+{
+  "chunk_id": "toan-12-tap-1:0004",
+  "nodes": [
+    {
+      "id": "CHIEU_BIEN_THIEN",
+      "name": "Chiều biến thiên",
+      "type": "CONCEPT",
+      "description": "Thuộc tính của hàm số mô tả sự tăng hoặc giảm của giá trị hàm theo biến độc lập.",
+      "grade": 12
+    },
+    {
+      "id": "BANG_BIEN_THIEN",
+      "name": "Bảng biến thiên",
+      "type": "CONCEPT",
+      "description": "Bảng tổng hợp các thông tin về biến thiên, cực trị, giới hạn và tiệm cận của hàm số.",
+      "grade": 12
+    },
+    {
+      "id": "CUC_TRI",
+      "name": "Cực trị",
+      "type": "CONCEPT",
+      "description": "Giá trị lớn nhất hoặc nhỏ nhất của hàm số trong một khoảng hoặc toàn bộ tập xác định.",
+      "grade": 12
+    },
+    {
+      "id": "TIEM_CAN",
+      "name": "Tiệm cận",
+      "type": "CONCEPT",
+      "description": "Đường thẳng hoặc đường cong mà đồ thị hàm số tiếp cận khi biến độc lập tiến về vô cực hoặc một điểm đặc biệt.",
+      "grade": 12
+    },
+    {
+      "id": "DO_THI",
+      "name": "Đồ thị",
+      "type": "CONCEPT",
+      "description": "Biểu diễn hình học của hàm số trên mặt phẳng tọa độ.",
+      "grade": 12
+    },
+    {
+      "id": "TAM_DOI_XUNG",
+      "name": "Tâm đối xứng",
+      "type": "CONCEPT",
+      "description": "Điểm trung tâm của đồ thị hàm số mà đồ thị đối xứng quanh điểm này.",
+      "grade": 12
+    },
+    {
+      "id": "TRUC_DOI_XUNG",
+      "name": "Trục đối xứng",
+      "type": "CONCEPT",
+      "description": "Đường thẳng mà đồ thị hàm số đối xứng quanh đường thẳng này.",
+      "grade": 12
+    },
+    {
+      "id": "SO_DO_KHAO_SAT_HAM_SO",
+      "name": "Sơ đồ khảo sát hàm số",
+      "type": "METHOD",
+      "description": "Phương pháp tổng quát để khảo sát và vẽ đồ thị hàm số bao gồm tìm tập xác định, xét chiều biến thiên, tìm cực trị, tìm tiệm cận, lập bảng biến thiên, vẽ đồ thị.",
+      "grade": 12
+    },
+    {
+      "id": "KHAO_SAT_HAM_BAC_BA",
+      "name": "Khảo sát hàm số bậc ba",
+      "type": "METHOD",
+      "description": "Áp dụng sơ đồ khảo sát hàm số cho các hàm số bậc ba để tìm tập xác định, chiều biến thiên, cực trị, tiệm cận, lập bảng biến thiên và vẽ đồ thị.",
+      "grade": 12
+    },
+    {
+      "id": "KHAO_SAT_HAM_PHAN_THUC_HUU_TI",
+      "name": "Khảo sát hàm số phân thức hữu tỉ",
+      "type": "METHOD",
+      "description": "Áp dụng sơ đồ khảo sát hàm số cho các hàm số phân thức hữu tỉ đơn giản để tìm tập xác định, chiều biến thiên, cực trị, tiệm cận, lập bảng biến thiên và vẽ đồ thị.",
+      "grade": 12
+    },
+    {
+      "id": "HAM_PHAN_THUC_HUU_TI_DON_GIAN",
+      "name": "Hàm số phân thức hữu tỉ đơn giản",
+      "type": "CONCEPT",
+      "description": "Hàm số có dạng y = (ax + b)/(cx + d) với c ≠ 0 và ad - bc ≠ 0.",
+      "grade": 12
+    },
+    {
+      "id": "HAM_PHAN_THUC_HUU_TI_PHUC_ZAP",
+      "name": "Hàm số phân thức hữu tỉ phức tạp",
+      "type": "CONCEPT",
+      "description": "Hàm số có dạng y = (ax² + bx + c)/(px + q) với a ≠ 0, p ≠ 0 và đa thức tử không chia hết cho đa thức mẫu.",
+      "grade": 12
+    },
+    {
+      "id": "DAO_HAM",
+      "name": "Đạo hàm",
+      "type": "CONCEPT",
+      "description": "Thuật ngữ mô tả tốc độ biến thiên của hàm số.",
+      "grade": 12
+    },
+    {
+      "id": "GIOI_HAN",
+      "name": "Giới hạn",
+      "type": "CONCEPT",
+      "description": "Giá trị mà hàm số tiếp cận khi biến độc lập tiến về một giá trị đặc biệt hoặc vô cực.",
+      "grade": 12
+    },
+    {
+      "id": "TAP_XAC_DINH",
+      "name": "Tập xác định",
+      "type": "CONCEPT",
+      "description": "Tập tất cả các giá trị biến độc lập mà hàm số được định nghĩa.",
+      "grade": 12
+    },
+    {
+      "id": "KHAO_SAT_CHI_PHI_TRUNG_BINH",
+      "name": "Khảo sát chi phí trung bình",
+      "type": "METHOD",
+      "description": "Phương pháp phân tích và vẽ đồ thị của hàm chi phí trung bình để nghiên cứu sự biến thiên và giới hạn của nó.",
+      "grade": 12
+    }
+  ],
+  "edges": [
+    {
+      "source": "SO_DO_KHAO_SAT_HAM_SO",
+      "target": "TAP_XAC_DINH",
+      "relation": "REQUIRES",
+      "rationale": "Sơ đồ khảo sát hàm số yêu cầu xác định tập xác định trước khi tiến hành các bước khác."
+    },
+    {
+      "source": "SO_DO_KHAO_SAT_HAM_SO",
+      "target": "CHIEU_BIEN_THIEN",
+      "relation": "REQUIRES",
+      "rationale": "Sơ đồ khảo sát hàm số yêu cầu phân tích chiều biến thiên của hàm số."
+    },
+    {
+      "source": "SO_DO_KHAO_SAT_HAM_SO",
+      "target": "CUC_TRI",
+      "relation": "REQUIRES",
+      "rationale": "Sơ đồ khảo sát hàm số yêu cầu tìm các cực trị của hàm số."
+    },
+    {
+      "source": "SO_DO_KHAO_SAT_HAM_SO",
+      "target": "TIEM_CAN",
+      "relation": "REQUIRES",
+      "rationale": "Sơ đồ khảo sát hàm số yêu cầu tìm các tiệm cận của hàm số."
+    },
+    {
+      "source": "SO_DO_KHAO_SAT_HAM_SO",
+      "target": "BANG_BIEN_THIEN",
+      "relation": "REQUIRES",
+      "rationale": "Sơ đồ khảo sát hàm số yêu cầu lập bảng biến thiên của hàm số."
+    },
+    {
+      "source": "SO_DO_KHAO_SAT_HAM_SO",
+      "target": "DO_THI",
+      "relation": "REQUIRES",
+      "rationale": "Sơ đồ khảo sát hàm số yêu cầu vẽ đồ thị của hàm số."
+    },
+    {
+      "source": "KHAO_SAT_HAM_BAC_BA",
+      "target": "SO_DO_KHAO_SAT_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "Khảo sát hàm số bậc ba yêu cầu sử dụng sơ đồ khảo sát hàm số."
+    },
+    {
+      "source": "KHAO_SAT_HAM_PHAN_THUC_HUU_TI",
+      "target": "SO_DO_KHAO_SAT_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "Khảo sát hàm số phân thức hữu tỉ yêu cầu sử dụng sơ đồ khảo sát hàm số."
+    },
+    {
+      "source": "KHAO_SAT_CHI_PHI_TRUNG_BINH",
+      "target": "SO_DO_KHAO_SAT_HAM_SO",
+      "relation": "REQUIRES",
+      "rationale": "Khảo sát chi phí trung bình yêu cầu sử dụng sơ đồ khảo sát hàm số."
+    }
+  ]
+}

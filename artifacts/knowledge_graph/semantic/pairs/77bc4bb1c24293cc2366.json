@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_SO_HANG_TONG_QUAT",
+  "right_id": "SO_HANG_TONG_QUAT_CAP_SO_CONG",
+  "merge": true,
+  "rationale": "Both nodes describe the general term formula for an arithmetic sequence: u_n = u_1 + (n-1)d. The descriptions are semantically identical. MERGE."
+}

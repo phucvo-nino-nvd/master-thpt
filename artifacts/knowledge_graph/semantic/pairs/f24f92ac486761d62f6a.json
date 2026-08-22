@@ -1,0 +1,6 @@
+{
+  "left_id": "TIM_TIEM_CAN_NGANG",
+  "right_id": "TIM_TIEM_CAN_XIEN",
+  "merge": false,
+  "rationale": "These are distinct methods for finding different types of asymptotes (horizontal vs. oblique)."
+}

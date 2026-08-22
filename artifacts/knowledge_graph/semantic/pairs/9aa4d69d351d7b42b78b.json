@@ -1,0 +1,6 @@
+{
+  "left_id": "GIAO_HAI_TAP_HOP",
+  "right_id": "TAP_BANG_NHAU",
+  "merge": false,
+  "rationale": "The left node is the concept of the intersection of two sets. The right node is the concept of set equality. These are distinct set-theoretic concepts."
+}

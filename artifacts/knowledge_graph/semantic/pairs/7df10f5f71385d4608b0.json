@@ -1,0 +1,6 @@
+{
+  "left_id": "HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "right_id": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+  "merge": false,
+  "rationale": "The left node is the concept of a system of linear inequalities in two variables. The right node is the concept of the solution region (a set of points) for a single such inequality. They are related concepts but represent different mathematical objects (a system vs. a solution set)."
+}

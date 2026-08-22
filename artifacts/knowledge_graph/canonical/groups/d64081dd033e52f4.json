@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "BIEN_CO_DOC_LAP",
+      "name": "Biến cố độc lập",
+      "type": "CONCEPT",
+      "description": "Hai biến cố A và B được gọi là độc lập. Điều này có nghĩa là việc xảy ra hay không xảy ra của biến cố này không ảnh hưởng tới xác suất xảy ra của biến cố kia. Một định nghĩa tương đương là xác suất của biến cố giao bằng tích xác suất của từng biến cố: P(AB) = P(A) * P(B)."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-11-tap-2:0014",
+      "original_id": "BIEN_CO_DOC_LAP",
+      "canonical_id": "BIEN_CO_DOC_LAP",
+      "rationale": "This occurrence provides the definition of independent events in terms of one event not affecting the probability of the other. It is a core concept of independence."
+    },
+    {
+      "chunk_id": "toan-11-tap-2:0016",
+      "original_id": "BIEN_CO_DO_CHA",
+      "canonical_id": "BIEN_CO_DOC_LAP",
+      "rationale": "This occurrence provides an equivalent, operational definition of independent events using the multiplication rule P(AB) = P(A) * P(B). It describes the same mathematical concept as the first occurrence, despite the different original ID and slightly different phrasing. Grade is the same (11)."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0008",
+      "original_id": "BIEN_CO_DO_THI",
+      "canonical_id": "BIEN_CO_DOC_LAP",
+      "rationale": "This occurrence provides the same operational definition (P(AB) = P(A) * P(B)) for independent events, consistent with the second occurrence. The grade difference (12 vs 11) is not a reason to split, as the mathematical concept is identical."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_TRUNG_NHAU",
+  "right_id": "HAI_DUONG_THANG_DONG_PHANG",
+  "merge": false,
+  "rationale": "Hai đường thẳng trùng nhau and Hai đường thẳng đồng phẳng are related concepts. Trùng nhau is a specific case of đồng phẳng, but they are not identical. One is a stricter condition."
+}

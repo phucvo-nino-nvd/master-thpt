@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_CAN_VA_DU",
+  "right_id": "DIEU_KIEN_DU",
+  "merge": false,
+  "rationale": "The left node defines 'necessary and sufficient condition' (P ⇔ Q). The right node defines 'sufficient condition' (P ⇒ Q). The right node is a component/weaker version of the left. One is a general concept, the other is a specific type of condition. They are not identical."
+}

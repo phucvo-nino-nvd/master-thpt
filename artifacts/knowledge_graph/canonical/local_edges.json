@@ -1,0 +1,7307 @@
+[
+  {
+    "source": "BAI_TOAN_TOI_UU_HOA",
+    "target": "QUY_TRINH_TOI_UU_HOA",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Quy trình tối ưu hoá là phương pháp giải bài toán tối ưu hoá."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "BANG_DU_LIEU_THONG_KE_2X2",
+    "target": "XAC_SUAT_CO_DIEU_KIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Bảng dữ liệu thống kê 2×2 thường được sử dụng để tính toán và phân tích xác suất có điều kiện."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0008"
+    ]
+  },
+  {
+    "source": "BAT_PHUONG_TRINH_BAC_HAI",
+    "target": "TAM_THUC_BAC_HAI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Bất phương trình bậc hai liên quan đến tam thức bậc hai."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "target": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0003"
+    ]
+  },
+  {
+    "source": "BAT_PHUONG_TRINH_LOGARIT",
+    "target": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+    "target": "HAM_LOGARIT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "BAT_PHUONG_TRINH_MU",
+    "target": "BAT_PHUONG_TRINH_MU_CO_BAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "BAT_PHUONG_TRINH_MU_CO_BAN",
+    "target": "HAM_MU",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "BIEN_CO",
+    "target": "KHONG_GIAN_MAU",
+    "relation": "SUBSET_OF",
+    "rationales": [
+      "Biến cố là tập con của không gian mẫu."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0005"
+    ]
+  },
+  {
+    "source": "BIEN_CO_DOI",
+    "target": "BIEN_CO",
+    "relation": "IS_A",
+    "rationales": [
+      "Biến cố đối là một loại biến cố đặc biệt.",
+      "Biến cố đối là một loại biến cố."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0005",
+      "toan-11-tap-2:0015"
+    ]
+  },
+  {
+    "source": "BIEN_CO_GIAO",
+    "target": "KHONG_GIAN_MAU",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0014"
+    ]
+  },
+  {
+    "source": "BIEN_CO_GIAO",
+    "target": "TAP_CON",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0014"
+    ]
+  },
+  {
+    "source": "BIEN_CO_HOP",
+    "target": "BIEN_CO",
+    "relation": "IS_A",
+    "rationales": [
+      "Biến cố hợp là một loại biến cố."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0015"
+    ]
+  },
+  {
+    "source": "BIEN_CO_HOP",
+    "target": "KHONG_GIAN_MAU",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0014"
+    ]
+  },
+  {
+    "source": "BIEN_CO_HOP",
+    "target": "TAP_CON",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0014"
+    ]
+  },
+  {
+    "source": "BIEN_CO_XUNG_KHAC",
+    "target": "BIEN_CO",
+    "relation": "IS_A",
+    "rationales": [
+      "Biến cố xung khắc là một loại biến cố."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0015"
+    ]
+  },
+  {
+    "source": "BIEN_DO_DAO_DONG",
+    "target": "PHUONG_TRINH_DAO_DONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "BIEU_DIEN_DAI_LUONG_VECTO",
+    "target": "VECTO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0007"
+    ]
+  },
+  {
+    "source": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN",
+    "target": "DUONG_THANG_BAT_PHUONG_TRINH",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0003"
+    ]
+  },
+  {
+    "source": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN",
+    "target": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0004"
+    ]
+  },
+  {
+    "source": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN",
+    "target": "NHA_MAT_PHANG_BAT_PHUONG_TRINH",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0003"
+    ]
+  },
+  {
+    "source": "BIEU_THUC_TOA_DO_PHEP_CONG_VECTO",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phép cộng hai vectơ là một phần của các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "BIEU_THUC_TOA_DO_PHEP_CONG_VECTO",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phép cộng hai vectơ yêu cầu hiểu các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "BIEU_THUC_TOA_DO_PHEP_TRU_VECTO",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phép trừ hai vectơ là một phần của các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "BIEU_THUC_TOA_DO_PHEP_TRU_VECTO",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phép trừ hai vectơ yêu cầu hiểu các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "BIEU_THUC_TOA_DO_TICH_VO_HUONG",
+    "target": "TICH_VO_HUONG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Biểu thức toạ độ của tích vô hướng là một phần của tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "BIEU_THUC_TOA_DO_TICH_VO_HUONG",
+    "target": "TICH_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Biểu thức toạ độ của tích vô hướng yêu cầu hiểu tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "BINH_PHUONG_VO_HUONG",
+    "target": "TICH_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Bình phương vô hướng là một trường hợp đặc biệt của tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0011"
+    ]
+  },
+  {
+    "source": "CAN_BAC_N",
+    "target": "TINH_CHAT_CAN_BAC_N",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0001"
+    ]
+  },
+  {
+    "source": "CAP_SO_CONG",
+    "target": "CONG_SAI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0006"
+    ]
+  },
+  {
+    "source": "CAP_SO_NHAN",
+    "target": "CONG_BOI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0007"
+    ]
+  },
+  {
+    "source": "CAP_SO_NHAN_LUI_VO_HANH",
+    "target": "TONG_CAP_SO_NHAN_LUI_VO_HANH",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0015"
+    ]
+  },
+  {
+    "source": "CHIEU_CAO_HINH_CHOP",
+    "target": "KHOANG_CACH",
+    "relation": "IS_A",
+    "rationales": [
+      "Chiều cao hình chóp là một loại đặc biệt của khoảng cách."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0012"
+    ]
+  },
+  {
+    "source": "CHIEU_CAO_HINH_LANG_TRU",
+    "target": "KHOANG_CACH",
+    "relation": "IS_A",
+    "rationales": [
+      "Chiều cao hình lăng trụ là một loại đặc biệt của khoảng cách."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0012"
+    ]
+  },
+  {
+    "source": "CHINH_HOP",
+    "target": "CONG_THUC_CHINH_HOP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0012"
+    ]
+  },
+  {
+    "source": "CHINH_HOP",
+    "target": "QUY_TAC_NHAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0012"
+    ]
+  },
+  {
+    "source": "CHI_PHI_BIEN",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Chi phí biên là một ví dụ cụ thể của đạo hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "CHI_SO_BMI",
+    "target": "MAU_SO_LIEU_GHEP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0008"
+    ]
+  },
+  {
+    "source": "CHUYEN_DOI_GOC_NHI_DIEN",
+    "target": "GOC_NHI_DIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp chuyển đổi góc nhị diện dựa trên khái niệm góc nhị diện."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "CHU_KI_DAO_DONG",
+    "target": "PHUONG_TRINH_DAO_DONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "CONG_THUC_BAYES",
+    "target": "BIEN_CO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức Bayes sử dụng các biến cố A và B."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0009"
+    ]
+  },
+  {
+    "source": "CONG_THUC_BAYES",
+    "target": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức Bayes dựa trên công thức xác suất toàn phần."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0009"
+    ]
+  },
+  {
+    "source": "CONG_THUC_BAYES",
+    "target": "XAC_SUAT_DIEU_KIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức Bayes sử dụng xác suất điều kiện P(A|B) và P(B|A)."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0009"
+    ]
+  },
+  {
+    "source": "CONG_THUC_BIEN_DOI_TICH_THANH_TONG",
+    "target": "CONG_THUC_CONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_BIEN_DOI_TONG_THANH_TICH",
+    "target": "CONG_THUC_CONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CAP_SO_NHAN",
+    "target": "CAP_SO_NHAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0007"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CHINH_HOP",
+    "target": "CONG_THUC_TO_HOP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0012"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CONG",
+    "target": "CONG_THUC_CONG_COS",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CONG",
+    "target": "CONG_THUC_CONG_SIN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CONG",
+    "target": "CONG_THUC_CONG_TAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CONG_COS",
+    "target": "CONG_THUC_CONG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CONG_SIN",
+    "target": "CONG_THUC_CONG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CONG_TAN",
+    "target": "CONG_THUC_CONG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CONG_XAC_SUAT",
+    "target": "XAC_SUAT",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức cộng xác suất yêu cầu hiểu khái niệm xác suất."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0015"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC",
+    "target": "BIEN_CO_XUNG_KHAC",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức cộng xác suất cho hai biến cố xung khắc yêu cầu hiểu khái niệm biến cố xung khắc."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0015"
+    ]
+  },
+  {
+    "source": "CONG_THUC_CONG_XAC_SUAT_CHO_HAI_BIEN_CO_XUNG_KHAC",
+    "target": "CONG_THUC_CONG_XAC_SUAT",
+    "relation": "IS_A",
+    "rationales": [
+      "Công thức cộng xác suất cho hai biến cố xung khắc là một trường hợp đặc biệt của công thức cộng xác suất."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0015"
+    ]
+  },
+  {
+    "source": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+    "target": "DINH_LI_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+    "target": "DUONG_TRON_NGOAI_TIEP",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+    "target": "DUONG_TRON_NOI_TIEP",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+    "target": "TAM_GIAC",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_DOI_CO_SO",
+    "target": "LOGARIT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_DO_DAI_VECTO_KHONG_GIAN",
+    "target": "TICH_VO_HUONG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Biểu thức tính độ dài vectơ là một phần của tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "CONG_THUC_DO_DAI_VECTO_KHONG_GIAN",
+    "target": "TICH_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Biểu thức tính độ dài vectơ yêu cầu hiểu tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+    "target": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-2:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-2:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+    "target": "VECTO_PHAP_TUYEN_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-2:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG",
+    "target": "GOC_GIUA_HAI_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-2:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG",
+    "target": "VECTO_PHAP_TUYEN_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-2:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_HERON",
+    "target": "CONG_THUC_DIEN_TICH_TAM_GIAC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_HERON",
+    "target": "DINH_LI_COSIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_HOAN_VI",
+    "target": "CONG_THUC_CHINH_HOP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0012"
+    ]
+  },
+  {
+    "source": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_4",
+    "target": "CONG_THUC_KHAI_TRIEN_NHI_THUC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0013"
+    ]
+  },
+  {
+    "source": "CONG_THUC_KHAI_TRIEN_NHI_THUC_BAC_5",
+    "target": "CONG_THUC_KHAI_TRIEN_NHI_THUC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0013"
+    ]
+  },
+  {
+    "source": "CONG_THUC_LAI_KEP",
+    "target": "LUY_THUA_VOI_SO_MU_NGUYEN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0001"
+    ]
+  },
+  {
+    "source": "CONG_THUC_LAI_KEP_LIEN_TUC",
+    "target": "SO_E",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_NHAN_DOI",
+    "target": "CONG_THUC_CONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_NHAN_XAC_SUAT_BIEN_CO_DOC_LAP",
+    "target": "BIEN_CO_DOC_LAP",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức nhân xác suất cho hai biến cố độc lập yêu cầu hiểu khái niệm biến cố độc lập."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0016"
+    ]
+  },
+  {
+    "source": "CONG_THUC_NHAN_XAC_SUAT_BIEN_CO_DOC_LAP",
+    "target": "BIEN_CO_GIAO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức nhân xác suất cho hai biến cố độc lập liên quan đến xác suất của biến cố giao."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0016"
+    ]
+  },
+  {
+    "source": "CONG_THUC_NHAN_XAC_SUAT_TONG_QUAT",
+    "target": "BIEN_CO_DOC_LAP",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức nhân xác suất có thể được mở rộng hoặc đơn giản hóa khi biết hai biến cố độc lập."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0008"
+    ]
+  },
+  {
+    "source": "CONG_THUC_SO_HANG_TONG_QUAT",
+    "target": "CAP_SO_CONG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TANG_TRUONG_MU",
+    "target": "HAM_SO_MU",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "CONG_THUC_THE_TICH_HOP",
+    "target": "PHUONG_PHAP_TIM_GIA_TRI_LON_NHAT_NHO_NHAT",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức thể tích hộp được sử dụng trong phương pháp tìm giá trị lớn nhất và nhỏ nhất."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0002"
+    ]
+  },
+  {
+    "source": "CONG_THUC_THE_TICH_KHOI_CHOP",
+    "target": "THE_TICH",
+    "relation": "PART_OF",
+    "rationales": [
+      "Công thức thể tích khối chóp là một phần của khái niệm thể tích"
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0013"
+    ]
+  },
+  {
+    "source": "CONG_THUC_THE_TICH_KHOI_CHOP_CUT_DEU",
+    "target": "CONG_THUC_THE_TICH_KHOI_CHOP",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức thể tích khối chóp cụt đều yêu cầu hiểu công thức thể tích khối chóp"
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0013"
+    ]
+  },
+  {
+    "source": "CONG_THUC_THE_TICH_KHOI_CHOP_CUT_DEU",
+    "target": "THE_TICH",
+    "relation": "PART_OF",
+    "rationales": [
+      "Công thức thể tích khối chóp cụt đều là một phần của khái niệm thể tích"
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0013"
+    ]
+  },
+  {
+    "source": "CONG_THUC_THE_TICH_KHOI_HOP",
+    "target": "THE_TICH",
+    "relation": "PART_OF",
+    "rationales": [
+      "Công thức thể tích khối hộp là một phần của khái niệm thể tích"
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0013"
+    ]
+  },
+  {
+    "source": "CONG_THUC_THE_TICH_KHOI_LANG_TRU",
+    "target": "THE_TICH",
+    "relation": "PART_OF",
+    "rationales": [
+      "Công thức thể tích khối lăng trụ là một phần của khái niệm thể tích"
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0013"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TIEN_DIEN",
+    "target": "HAM_SO",
+    "relation": "IS_A",
+    "rationales": [
+      "Công thức tính tiền điện là một ví dụ về hàm số."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+    "target": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-2:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+    "target": "GOC_GIUA_HAI_DUONG_THANG_TRONG_MAT_PHANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Công thức tính góc giữa hai đường thẳng là một phần của khái niệm góc giữa hai đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức tính góc giữa hai đường thẳng yêu cầu kiến thức về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008",
+      "toan-12-tap-2:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+    "target": "VECTO_PHAP_TUYEN_DUONG_THANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức tính góc giữa hai đường thẳng yêu cầu kiến thức về vectơ pháp tuyến."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_GOC_GIUA_HAI_VECTO",
+    "target": "TICH_VO_HUONG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Biểu thức tính góc giữa hai vectơ là một phần của tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_GOC_GIUA_HAI_VECTO",
+    "target": "TICH_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Biểu thức tính góc giữa hai vectơ yêu cầu hiểu tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_KHOANG_CACH",
+    "target": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Công thức tính khoảng cách từ điểm đến đường thẳng là một phần của khái niệm khoảng cách từ điểm đến đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_KHOANG_CACH",
+    "target": "PHUONG_TRINH_DUONG_THANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức tính khoảng cách từ điểm đến đường thẳng yêu cầu kiến thức về phương trình đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_MOT",
+    "target": "MOT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_TRUNG_VI",
+    "target": "TRUNG_VI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TINH_TU_PHAN_VI",
+    "target": "TU_PHAN_VI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TOA_DO_TICH_VO_HUONG",
+    "target": "TICH_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức toạ độ của tích vô hướng là một cách tính cụ thể của tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0011"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TONG_CAP_SO_NHAN",
+    "target": "TONG_N_SO_HANG_DAU_CAP_SO_NHAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0007"
+    ]
+  },
+  {
+    "source": "CONG_THUC_TONG_N_SO_HANG_DAU",
+    "target": "TONG_N_SO_HANG_DAU_CAP_SO_CONG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0006"
+    ]
+  },
+  {
+    "source": "CONG_THUC_XAC_SUAT_CO_DIEN",
+    "target": "DINH_NGHI_CU_DIEN_XAC_SUAT",
+    "relation": "IS_A",
+    "rationales": [
+      "Công thức xác suất cổ điển là một phần của định nghĩa cổ điển của xác suất."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0005"
+    ]
+  },
+  {
+    "source": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+    "target": "BIEN_CO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức xác suất toàn phần sử dụng các biến cố A và B."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0009"
+    ]
+  },
+  {
+    "source": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+    "target": "XAC_SUAT_DIEU_KIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức xác suất toàn phần sử dụng xác suất điều kiện P(B|A) và P(B|¬A)."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0009"
+    ]
+  },
+  {
+    "source": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+    "target": "XAC_SUAT_TOAN_PHAN",
+    "relation": "IS_A",
+    "rationales": [
+      "Công thức xác suất toàn phần là một công thức đặc biệt của xác suất toàn phần."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0009"
+    ]
+  },
+  {
+    "source": "COS_ALPHA",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0005"
+    ]
+  },
+  {
+    "source": "COT_ALPHA",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0005"
+    ]
+  },
+  {
+    "source": "CUONG_DO_TRUNG_BINH",
+    "target": "PHUONG_TRINH_CHUYEN_DONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "DAO_HAM",
+    "target": "TOC_DO_THAY_DOI_TRUNG_BINH",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Đạo hàm được định nghĩa dựa trên tốc độ thay đổi trung bình."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "DAO_HAM_TAI_MOT_DIEM",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "DAO_HAM_TRONG_MOT_KHOANG",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "DAU_CUA_TAM_THUC_BAC_HAI",
+    "target": "BIET_THUC",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Dấu của tam thức bậc hai phụ thuộc vào biệt thức."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DAU_CUA_TAM_THUC_BAC_HAI",
+    "target": "BIET_THUC_THU_GON",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Dấu của tam thức bậc hai cũng có thể phụ thuộc vào biệt thức thu gọn."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DAU_CUA_TAM_THUC_BAC_HAI",
+    "target": "TAM_THUC_BAC_HAI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Dấu của tam thức bậc hai phụ thuộc vào tam thức bậc hai."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DAY_SO_BI_CHAN",
+    "target": "DAY_SO",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "DAY_SO_BI_CHAN_DUOI",
+    "target": "DAY_SO_BI_CHAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "DAY_SO_BI_CHAN_TREN",
+    "target": "DAY_SO_BI_CHAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "DAY_SO_GIAM",
+    "target": "DAY_SO",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "DAY_SO_HUU_HAN",
+    "target": "DAY_SO",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "DAY_SO_TANG",
+    "target": "DAY_SO",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "DAY_SO_VO_HAN",
+    "target": "DAY_SO",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "DIEM_CUC_TRI",
+    "target": "DIEM_CUC_DAI",
+    "relation": "IS_A",
+    "rationales": [
+      "Điểm cực đại là một loại điểm cực trị."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0001"
+    ]
+  },
+  {
+    "source": "DIEM_CUC_TRI",
+    "target": "DIEM_CUC_TIEU",
+    "relation": "IS_A",
+    "rationales": [
+      "Điểm cực tiểu là một loại điểm cực trị."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0001"
+    ]
+  },
+  {
+    "source": "DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+    "target": "CONG_THUC_DIEN_TICH_GIOI_HAN_BOI_HAI_DO_THI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Để tính diện tích giới hạn bởi hai đồ thị, cần sử dụng công thức tích phân tương ứng."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DIEN_TICH_HINH_PHANG",
+    "target": "CONG_THUC_DIEN_TICH_HINH_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Để tính diện tích hình phẳng, cần sử dụng công thức tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_CAN",
+    "target": "MENH_DE_KEO_THEO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_CAN_VA_DU",
+    "target": "MENH_DE_TUONG_DUONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_DU",
+    "target": "MENH_DE_KEO_THEO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_DUONG_THANG_CAT_NHAU_TRONG_KHONG_GIAN",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Điều kiện hai đường thẳng cắt nhau yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0012"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_HAI_MAT_PHANG_SONG_SONG",
+    "target": "HAI_MAT_PHANG_SONG_SONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0013"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_KHOI_TAM",
+    "target": "DIEU_KIEN_TRONG_TAM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0009"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_KHOI_TAM",
+    "target": "VECTO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0009"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_THANG_HANG",
+    "target": "VECTO_CUNG_PHUONG_DIEU_KIEN_TOA_DO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_TRONG_TAM",
+    "target": "VECTO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0009"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_TRUNG_DIEM",
+    "target": "VECTO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0009"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_VUONG_GOC_DUONG_THANG_VECTORS",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Điều kiện hai đường thẳng vuông góc yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "DIEU_KIEN_VUONG_GOC_HAI_MAT_PHANG",
+    "target": "VECTO_PHAP_TUYEN_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Điều kiện hai mặt phẳng vuông góc yêu cầu khái niệm vectơ pháp tuyến"
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0004"
+    ]
+  },
+  {
+    "source": "DINH_LI_BA_DUONG_VUONG_GOC",
+    "target": "PHEP_CHIEU_VUONG_GOC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0010"
+    ]
+  },
+  {
+    "source": "DINH_LI_COSIN",
+    "target": "TAM_GIAC",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+    "target": "BIET_THUC",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định lí về dấu tam thức bậc hai sử dụng biệt thức."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+    "target": "BIET_THUC_THU_GON",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định lí về dấu tam thức bậc hai cũng có thể sử dụng biệt thức thu gọn."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+    "target": "TAM_THUC_BAC_HAI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định lí về dấu tam thức bậc hai áp dụng cho tam thức bậc hai."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DINH_LI_SIN",
+    "target": "DUONG_TRON_NGOAI_TIEP",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "DINH_LI_SIN",
+    "target": "TAM_GIAC",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "DINH_LI_THALES_TRONG_KHONG_GIAN",
+    "target": "HAI_MAT_PHANG_SONG_SONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0013"
+    ]
+  },
+  {
+    "source": "DINH_LI_TICH_PHAN",
+    "target": "TICH_PHAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định lí tích phân yêu cầu khái niệm tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "DINH_NGHI_CU_DIEN_XAC_SUAT",
+    "target": "BIEN_CO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định nghĩa cổ điển của xác suất yêu cầu hiểu biến cố."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0005"
+    ]
+  },
+  {
+    "source": "DINH_NGHI_CU_DIEN_XAC_SUAT",
+    "target": "KHONG_GIAN_MAU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định nghĩa cổ điển của xác suất yêu cầu hiểu không gian mẫu."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0005"
+    ]
+  },
+  {
+    "source": "DO_CHINH_XAC",
+    "target": "SAI_SO_TUYET_DOI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Độ chính xác liên quan đến giới hạn của sai số tuyệt đối."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0012"
+    ]
+  },
+  {
+    "source": "DO_DAI_VECTO",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Độ dài là một thuộc tính cơ bản của vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "DO_DAI_VECTO_TOA_DO",
+    "target": "TOA_DO_VECTO_TRONG_MP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "DO_LECH_CHUAN",
+    "target": "TINH_DO_LECH_CHUAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Độ lệch chuẩn là một khái niệm, phương pháp tính độ lệch chuẩn là một thủ tục."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0014"
+    ]
+  },
+  {
+    "source": "DO_LECH_CHUAN_MAU_GHEP_NHOM",
+    "target": "DO_LECH_CHUAN",
+    "relation": "IS_A",
+    "rationales": [
+      "Độ lệch chuẩn của mẫu số liệu ghép nhóm là một loại độ lệch chuẩn."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0010"
+    ]
+  },
+  {
+    "source": "DO_LECH_CHUAN_MAU_GHEP_NHOM_SAI_SO",
+    "target": "DO_LECH_CHUAN_MAU_GHEP_NHOM",
+    "relation": "IS_A",
+    "rationales": [
+      "Độ lệch chuẩn sai số là một loại độ lệch chuẩn của mẫu số liệu ghép nhóm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0010"
+    ]
+  },
+  {
+    "source": "DO_THI_HAM_SO",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DO_THI_HAM_SO",
+    "target": "HAM_SO_COT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DO_THI_HAM_SO",
+    "target": "HAM_SO_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DO_THI_HAM_SO",
+    "target": "HAM_SO_TANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DO_THI_HAM_SO_LOGARIT",
+    "target": "HAM_SO_LOGARIT",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DO_THI_HAM_SO_MU",
+    "target": "HAM_SO_MU",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "DUONG_HINH_COS",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DUONG_HINH_COT",
+    "target": "HAM_SO_COT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DUONG_HINH_SIN",
+    "target": "HAM_SO_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DUONG_HINH_TAN",
+    "target": "HAM_SO_TANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_CAT_NHAU",
+    "target": "HAI_DUONG_THANG_DONG_PHANG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0011"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_DI_QUA_HAI_DIEM",
+    "target": "MAT_PHANG_DI_QUA_BA_DIEM_KHONG_THANG_HANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_SONG_SONG",
+    "target": "HAI_DUONG_THANG_DONG_PHANG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0011"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_SONG_SONG",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Điều kiện hai đường thẳng song song yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_CAT_MAT_PHANG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0012"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_NAM_TRONG_MAT_PHANG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0012"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_THUOC_MAT_PHANG",
+    "target": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+    "target": "PHUONG_TRINH_DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phương trình đường thẳng là một phần của đại diện đại số cho đường thẳng trong mặt phẳng toạ độ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_TRUNG_NHAU",
+    "target": "HAI_DUONG_THANG_DONG_PHANG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0011"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_TRUNG_NHAU",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Điều kiện hai đường thẳng trùng nhau yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_CAT_NHAU",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_PHAN_BIET",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_SONG_SONG_VOI_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG_VA_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "target": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "target": "MAT_PHANG_VUONG_GOC_VOI_DUONG_THANG_SONG_SONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "target": "TINH_CHAT_DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_TIEM_CAN_DUNG",
+    "target": "DO_THI_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [
+      "đường tiệm cận đứng là một phần cấu trúc của đồ thị hàm số"
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DUONG_TIEM_CAN_NGANG",
+    "target": "DO_THI_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [
+      "đường tiệm cận ngang là một phần cấu trúc của đồ thị hàm số"
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DUONG_TIEM_CAN_XIEN",
+    "target": "DO_THI_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [
+      "đường tiệm cận xiên là một phần cấu trúc của đồ thị hàm số"
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0003"
+    ]
+  },
+  {
+    "source": "DUONG_TRON",
+    "target": "BAN_KINH",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0009"
+    ]
+  },
+  {
+    "source": "DUONG_TRON",
+    "target": "TAM",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0009"
+    ]
+  },
+  {
+    "source": "ELIP",
+    "target": "DUONG_CONIC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "GIAI_PHUONG_TRINH_LUONG_GIAC",
+    "target": "PHEP_BIEN_DOI_TUONG_DUONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "GIAI_PHUONG_TRINH_LUONG_GIAC",
+    "target": "PHUONG_TRINH_TUONG_DUONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "GIAI_TAM_GIAC",
+    "target": "DINH_LI_COSIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "GIAI_TAM_GIAC",
+    "target": "DINH_LI_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "GIAI_TAM_GIAC",
+    "target": "TAM_GIAC",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0006"
+    ]
+  },
+  {
+    "source": "GIAO_DIEM_CUA_HAI_DUONG_THANG",
+    "target": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Giao điểm của hai đường thẳng là một phần của việc xác định vị trí tương đối giữa hai đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "GIAO_HAI_TAP_HOP",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+    "target": "XAC_DINH_MAT_PHANG_BOI_DIEM_VA_DUONG_THANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+    "target": "XAC_DINH_MAT_PHANG_BOI_HAI_DUONG_THANG_CAT_NHAU",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "GIATRI_BAT_THUONG",
+    "target": "PHAT_HIEN_GIATRI_BAT_THUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Giá trị bất thường là một khái niệm, phương pháp phát hiện giá trị bất thường là một thủ tục."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0014"
+    ]
+  },
+  {
+    "source": "GIATRI_LON_NHAT_NHO_NHAT_CUA_BIEU_THUC",
+    "target": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0004"
+    ]
+  },
+  {
+    "source": "GIA_TOC_TUC_THOI",
+    "target": "DAO_HAM_CAP_HAI",
+    "relation": "IS_A",
+    "rationales": [
+      "Gia tốc tức thời là một ứng dụng của đạo hàm cấp hai trong cơ học."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0007"
+    ]
+  },
+  {
+    "source": "GIA_TOC_TUC_THOI",
+    "target": "VAN_TOC_TUC_THOI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Gia tốc tức thời là đạo hàm của vận tốc tức thời."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0007",
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "GIA_TOC_TUC_THOI_CU_CHUYEN_DONG",
+    "target": "DAO_HAM_CAP_HAI",
+    "relation": "IS_A",
+    "rationales": [
+      "Gia tốc tức thời của chuyển động là một ứng dụng của đạo hàm cấp hai."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0007"
+    ]
+  },
+  {
+    "source": "GIA_TOC_TUC_THOI_CU_CHUYEN_DONG",
+    "target": "PHUONG_TRINH_CHUYEN_DONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Để tính gia tốc tức thời, cần có phương trình chuyển động."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0007"
+    ]
+  },
+  {
+    "source": "GIA_TRI_CUC_TRI",
+    "target": "DIEM_CUC_DAI",
+    "relation": "PART_OF",
+    "rationales": [
+      "Giá trị cực trị là giá trị của hàm số tại điểm cực đại."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_CUC_TRI",
+    "target": "DIEM_CUC_TIEU",
+    "relation": "PART_OF",
+    "rationales": [
+      "Giá trị cực trị là giá trị của hàm số tại điểm cực tiểu."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LON_NHAT",
+    "target": "HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Giá trị lớn nhất là một khái niệm liên quan đến hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0002"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC",
+    "target": "COS",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC",
+    "target": "COT",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC",
+    "target": "NUA_DUONG_TRON_DON_VI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0005"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC",
+    "target": "SIN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC",
+    "target": "TAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC_CAC_GOC_DAC_BIET",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0005"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC_GOC_BU_NHAU",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC_GOC_DOI_NHAU",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC_GOC_HON_KEM_PI",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "GIA_TRI_NHO_NHAT",
+    "target": "HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Giá trị nhỏ nhất là một khái niệm liên quan đến hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0002"
+    ]
+  },
+  {
+    "source": "GIA_VECTO",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Giá vectơ là một khái niệm liên quan đến vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_DAY_SO",
+    "target": "GIOI_HAN_HUU_HAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0015"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_DAY_SO",
+    "target": "GIOI_HAN_VO_CUC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0015"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_DAY_SO",
+    "target": "PHEP_TOAN_GIOI_HAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0015"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_HAM_SO",
+    "target": "GIOI_HAN_HUU_HAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0016"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_HAM_SO",
+    "target": "GIOI_HAN_MOT_BEN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0016"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_HAM_SO",
+    "target": "GIOI_HAN_TAI_VO_CUC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0016"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_HAM_SO",
+    "target": "GIOI_HAN_VO_CUC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0016"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_HUU_HAN",
+    "target": "GIOI_HAN_LA_0",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0015"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_HUU_HAN",
+    "target": "GIOI_HAN_LA_A",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0015"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_MOT_BEN",
+    "target": "GIOI_HAN_BEN_PHAI",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0016"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_MOT_BEN",
+    "target": "GIOI_HAN_BEN_TRAI",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0016"
+    ]
+  },
+  {
+    "source": "GIOI_HAN_VO_CUC",
+    "target": "QUY_TAC_GIOI_HAN_VO_CUC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0015"
+    ]
+  },
+  {
+    "source": "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG",
+    "target": "PHEP_CHIEU_VUONG_GOC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0010"
+    ]
+  },
+  {
+    "source": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+    "target": "CONG_THUC_COSIN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Để tính góc giữa hai đường thẳng, có thể áp dụng công thức cosin cho các tam giác liên quan."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0008"
+    ]
+  },
+  {
+    "source": "GOC_GIUA_HAI_DUONG_THANG_TRONG_MAT_PHANG",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Góc giữa hai đường thẳng yêu cầu kiến thức về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "GOC_GIUA_HAI_DUONG_THANG_TRONG_MAT_PHANG",
+    "target": "VECTO_PHAP_TUYEN_DUONG_THANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Góc giữa hai đường thẳng yêu cầu kiến thức về vectơ pháp tuyến."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "GOC_GIUA_HAI_DUONG_THANG_TRONG_MAT_PHANG",
+    "target": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Góc giữa hai đường thẳng là một phần của việc xác định vị trí tương đối giữa hai đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "GOC_GIUA_HAI_VECTO",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Góc giữa hai vectơ là một khái niệm liên quan đến vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "GOC_PHANG_CUA_GOC_NHI_DIEN",
+    "target": "GOC_NHI_DIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Để định nghĩa góc phẳng của góc nhị diện, cần hiểu khái niệm góc nhị diện."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "HAI_DUONG_THANG_CHEO_NHAU",
+    "target": "DUONG_THANG_SONG_SONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0011"
+    ]
+  },
+  {
+    "source": "HAI_DUONG_THANG_CHEO_NHAU",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Điều kiện hai đường thẳng chéo nhau yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "HAI_DUONG_THANG_VUONG_GOC",
+    "target": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định nghĩa hai đường thẳng vuông góc dựa trên góc giữa chúng."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0008"
+    ]
+  },
+  {
+    "source": "HAI_MAT_PHANG_SONG_SONG",
+    "target": "VECTO_PHAP_TUYEN_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Điều kiện hai mặt phảng song song yêu cầu khái niệm vectơ pháp tuyến"
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0004"
+    ]
+  },
+  {
+    "source": "HAI_MAT_PHANG_VUONG_GOC",
+    "target": "GOC_GIUA_HAI_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Để định nghĩa hai mặt phẳng vuông góc, cần hiểu khái niệm góc giữa hai mặt phẳng."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "HAM_DOANH_THU_BIEN",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm doanh thu biên là đạo hàm của hàm doanh thu."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "HAM_LOI_NHUAN_BIEN",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm lợi nhuận biên là đạo hàm của hàm lợi nhuận."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "HAM_SO",
+    "target": "DO_THI_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Đồ thị của hàm số được xây dựng từ tập xác định và tập giá trị."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO",
+    "target": "TAP_GIA_TRI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hàm số ánh xạ tập xác định vào tập giá trị."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO",
+    "target": "TAP_XAC_DINH",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hàm số được định nghĩa trên một tập xác định."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO_BAC_HAI",
+    "target": "BANG_GIA_TRI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0002"
+    ]
+  },
+  {
+    "source": "HAM_SO_BAC_HAI",
+    "target": "CONG_THUC_HAM_SO_BAC_HAI",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0002"
+    ]
+  },
+  {
+    "source": "HAM_SO_BAC_HAI",
+    "target": "DINH_DA_THUC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0002"
+    ]
+  },
+  {
+    "source": "HAM_SO_BAC_HAI",
+    "target": "PARABOLA",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0002"
+    ]
+  },
+  {
+    "source": "HAM_SO_BANG_BANG",
+    "target": "HAM_SO",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm số được cho bằng bảng là một cách biểu diễn hàm số."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO_BANG_BIEU_DO",
+    "target": "HAM_SO",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm số được cho bằng biểu đồ là một cách biểu diễn hàm số."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO_BANG_CONG_THUC",
+    "target": "HAM_SO",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm số được cho bằng công thức là một cách biểu diễn hàm số."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO_COS",
+    "target": "DO_THI_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COS",
+    "target": "DUONG_HINH_COS",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COS",
+    "target": "HAM_SO_CHAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COS",
+    "target": "HAM_SO_TUAN_HOAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COS",
+    "target": "KHOANG_DONG_BIEN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COS",
+    "target": "TAP_GIA_TRI",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COS",
+    "target": "TINH_CHAT_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COT",
+    "target": "DO_THI_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COT",
+    "target": "DUONG_HINH_COT",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COT",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COT",
+    "target": "HAM_SO_LE",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COT",
+    "target": "HAM_SO_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COT",
+    "target": "HAM_SO_TUAN_HOAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COT",
+    "target": "KHOANG_NGHICH_BIEN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COT",
+    "target": "TAP_GIA_TRI",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_COT",
+    "target": "TINH_CHAT_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_DONG_BIEN",
+    "target": "HAM_SO",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm số đồng biến là một loại hàm số."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO_DON_DIEU",
+    "target": "HAM_SO_DONG_BIEN",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm số đồng biến là một trường hợp đặc biệt của hàm số đơn điệu."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO_DON_DIEU",
+    "target": "HAM_SO_NGHICH_BIEN",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm số nghịch biến là một trường hợp đặc biệt của hàm số đơn điệu."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO_GIAM",
+    "target": "HAM_SO_NGHICH_BIEN",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm số giảm là một loại hàm số nghịch biến."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+    "target": "HAM_SO_GIAN_DOAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "HAM_SO_LIEN_TUC_TREN_MOT_DOAN",
+    "target": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+    "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "HAM_SO_LOGARIT_CO_SO_A",
+    "target": "HAM_SO_LOGARIT",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_MU_CO_SO_A",
+    "target": "HAM_SO_MU",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_NGHICH_BIEN",
+    "target": "HAM_SO",
+    "relation": "IS_A",
+    "rationales": [
+      "Hàm số nghịch biến là một loại hàm số."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HAM_SO_SIN",
+    "target": "DO_THI_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_SIN",
+    "target": "DUONG_HINH_SIN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_SIN",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_SIN",
+    "target": "HAM_SO_LE",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_SIN",
+    "target": "HAM_SO_TUAN_HOAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_SIN",
+    "target": "KHOANG_DONG_BIEN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_SIN",
+    "target": "TAP_GIA_TRI",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_SIN",
+    "target": "TINH_CHAT_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TANG",
+    "target": "DO_THI_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TANG",
+    "target": "DUONG_HINH_TAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TANG",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TANG",
+    "target": "HAM_SO_LE",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TANG",
+    "target": "HAM_SO_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TANG",
+    "target": "HAM_SO_TUAN_HOAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TANG",
+    "target": "KHOANG_DONG_BIEN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TANG",
+    "target": "TAP_GIA_TRI",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TANG",
+    "target": "TINH_CHAT_HAM_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TUAN_HOAN",
+    "target": "CHU_KI",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HAM_SO_TUAN_HOAN",
+    "target": "CHU_KI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "HE_SO_BIEN_THIEN",
+    "target": "DO_LECH_CHUAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hệ số biến thiên yêu cầu độ lệch chuẩn."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0010"
+    ]
+  },
+  {
+    "source": "HE_SO_GOC_TIEP_TUYEN",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "HE_THUC_CO_BAN",
+    "target": "COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "HE_THUC_CO_BAN",
+    "target": "COT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "HE_THUC_CO_BAN",
+    "target": "SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "HE_THUC_CO_BAN",
+    "target": "TAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0001"
+    ]
+  },
+  {
+    "source": "HE_THUC_TRUY_HOI",
+    "target": "PHUONG_PHAP_TRUY_HOI",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "HE_TRUC_TOA_DO_OXY",
+    "target": "VECTO_DON_VI",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+    "target": "GOC_TOA_DO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Gốc toạ độ O là một phần của hệ trục toạ độ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0007"
+    ]
+  },
+  {
+    "source": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+    "target": "HE_TRUC_TOA_DO_DESCARTES_VUONG_GOC",
+    "relation": "IS_A",
+    "rationales": [
+      "Hệ trục toạ độ Descartes vuông góc là một loại hệ trục toạ độ trong không gian."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0007"
+    ]
+  },
+  {
+    "source": "HE_TRUC_TOA_DO_TRONG_KHONG_GIAN",
+    "target": "MAT_PHANG_TOA_DO_3D",
+    "relation": "PART_OF",
+    "rationales": [
+      "Mặt phẳng toạ độ là một phần của hệ trục toạ độ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0007"
+    ]
+  },
+  {
+    "source": "HIEU_HAI_TAP_HOP",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "HIEU_VECTO",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Hiệu vectơ là một phép toán cơ bản trên vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "HINH_BIEU_DIEN",
+    "target": "PHEP_CHIEU_SONG_SONG",
+    "relation": "IS_A",
+    "rationales": [
+      "Hình biểu diễn là một loại hình chiếu song song"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "HINH_BIEU_DIEN_HINH_THANG",
+    "target": "HINH_BIEU_DIEN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Hình biểu diễn của hình thang là một phần của hình biểu diễn"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "HINH_BIEU_DIEN_HINH_TRON",
+    "target": "HINH_BIEU_DIEN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Hình biểu diễn của hình tròn là một phần của hình biểu diễn"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "HINH_BIEU_DIEN_HINH_VUONG",
+    "target": "HINH_BIEU_DIEN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Hình biểu diễn của hình vuông là một phần của hình biểu diễn"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "HINH_BIEU_DIEN_TAM_GIAC",
+    "target": "HINH_BIEU_DIEN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Hình biểu diễn của tam giác là một phần của hình biểu diễn"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "HINH_CHOP_CUT_DEU",
+    "target": "HINH_CHOP_DEU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hình chóp cụt đều được tạo thành từ hình chóp đều."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "HINH_CHOP_DEU",
+    "target": "HAI_MAT_PHANG_VUONG_GOC",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hình chóp đều được định nghĩa dựa trên khái niệm hai mặt phẳng vuông góc."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "HINH_HOP",
+    "target": "HINH_LANG_TRU",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0013"
+    ]
+  },
+  {
+    "source": "HINH_HOP_CHU_NHAT",
+    "target": "HINH_HOP_DUNG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hình hộp chữ nhật là một trường hợp đặc biệt của hình hộp đứng."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "HINH_HOP_DUNG",
+    "target": "HINH_LANG_TRU_DUNG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hình hộp đứng là một trường hợp đặc biệt của hình lăng trụ đứng."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "HINH_LANG_TRU",
+    "target": "HAI_MAT_PHANG_SONG_SONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0013"
+    ]
+  },
+  {
+    "source": "HINH_LANG_TRU_DEU",
+    "target": "HINH_LANG_TRU_DUNG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hình lăng trụ đều là một trường hợp đặc biệt của hình lăng trụ đứng."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "HINH_LANG_TRU_DUNG",
+    "target": "HAI_MAT_PHANG_VUONG_GOC",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hình lăng trụ đứng được định nghĩa dựa trên khái niệm hai mặt phẳng vuông góc."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "HINH_LAP_PHUONG",
+    "target": "HINH_HOP_CHU_NHAT",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hình lập phương là một trường hợp đặc biệt của hình hộp chữ nhật."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "HOAN_VI",
+    "target": "CHINH_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0012"
+    ]
+  },
+  {
+    "source": "HOAN_VI",
+    "target": "CONG_THUC_HOAN_VI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0012"
+    ]
+  },
+  {
+    "source": "HOP_HAI_TAP_HOP",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "HO_NGUYEN_HAM",
+    "target": "BANG_NGUYEN_HAM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Học về họ nguyên hàm trước khi học bảng nguyên hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "HYPEBOL",
+    "target": "DUONG_CONIC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "KHAI_TRIEN_NHI_THUC_NEWTON",
+    "target": "NHI_THUC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0013"
+    ]
+  },
+  {
+    "source": "KHAI_TRIEN_NHI_THUC_NEWTON",
+    "target": "SO_MU",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0013"
+    ]
+  },
+  {
+    "source": "KHAI_TRIEN_NHI_THUC_NEWTON",
+    "target": "TO_HOP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0013"
+    ]
+  },
+  {
+    "source": "KHAO_SAT_CHI_PHI_TRUNG_BINH",
+    "target": "SO_DO_KHAO_SAT_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khảo sát chi phí trung bình yêu cầu sử dụng sơ đồ khảo sát hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0004"
+    ]
+  },
+  {
+    "source": "KHAO_SAT_HAM_BAC_BA",
+    "target": "SO_DO_KHAO_SAT_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khảo sát hàm số bậc ba yêu cầu sử dụng sơ đồ khảo sát hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0004"
+    ]
+  },
+  {
+    "source": "KHAO_SAT_HAM_PHAN_THUC_HUU_TI",
+    "target": "SO_DO_KHAO_SAT_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khảo sát hàm số phân thức hữu tỉ yêu cầu sử dụng sơ đồ khảo sát hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0004"
+    ]
+  },
+  {
+    "source": "KHOANG",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "KHOANG_BIEN_THIEN",
+    "target": "MAU_SO_LIEU_GHEP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-1:0009"
+    ]
+  },
+  {
+    "source": "KHOANG_BIEN_THIEN",
+    "target": "TINH_KHOANG_BIEN_THIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khoảng biến thiên là một khái niệm, phương pháp tính khoảng biến thiên là một thủ tục."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0014"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_DEN_MAT_PHANG",
+    "target": "PHUONG_TRINH_TONG_QUAT_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức khoảng cách từ điểm đến mặt phẳng yêu cầu phương trình tổng quát của mặt phẳng"
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0004"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_GIUA_DUONG_THANG_MAT_PHANG_SONG_SONG",
+    "target": "KHOANG_CACH",
+    "relation": "IS_A",
+    "rationales": [
+      "Khoảng cách giữa đường thẳng và mặt phẳng song song là một loại đặc biệt của khoảng cách."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0012"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_CHEO_NHAU",
+    "target": "KHOANG_CACH",
+    "relation": "IS_A",
+    "rationales": [
+      "Khoảng cách giữa hai đường thẳng chéo nhau là một loại đặc biệt của khoảng cách."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0012"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_GIUA_HAI_DUONG_THANG_SONG_SONG",
+    "target": "KHOANG_CACH",
+    "relation": "IS_A",
+    "rationales": [
+      "Khoảng cách giữa hai đường thẳng song song là một loại đặc biệt của khoảng cách."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0012"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_GIUA_HAI_MAT_PHANG_SONG_SONG",
+    "target": "KHOANG_CACH",
+    "relation": "IS_A",
+    "rationales": [
+      "Khoảng cách giữa hai mặt phẳng song song là một loại đặc biệt của khoảng cách."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0012"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_HAI_DIEM",
+    "target": "TOA_DO_VECTO_MN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_TRONG_THUC_TE",
+    "target": "PHUONG_TRINH_MAT_CAU_TRAI_DAT",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khoảng cách trên thực tế sử dụng phương trình mặt cầu Trái Đất."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0007"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_TRONG_THUC_TE",
+    "target": "VI_DO_KINH_DO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khoảng cách trên thực tế yêu cầu định nghĩa vĩ độ và kinh độ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0007"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+    "target": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Khoảng cách từ điểm đến đường thẳng là một phần của đại diện đại số cho đường thẳng trong mặt phẳng toạ độ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+    "target": "KHOANG_CACH",
+    "relation": "IS_A",
+    "rationales": [
+      "Khoảng cách từ điểm đến đường thẳng là một loại đặc biệt của khoảng cách."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0012"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+    "target": "PHUONG_TRINH_DUONG_THANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khoảng cách từ điểm đến đường thẳng yêu cầu kiến thức về phương trình đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "KHOANG_CACH_TU_DIEM_DEN_MAT_PHANG",
+    "target": "KHOANG_CACH",
+    "relation": "IS_A",
+    "rationales": [
+      "Khoảng cách từ điểm đến mặt phẳng là một loại đặc biệt của khoảng cách."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0012"
+    ]
+  },
+  {
+    "source": "KHOANG_DONG_BIEN",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "KHOANG_DONG_BIEN",
+    "target": "HAM_SO_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "KHOANG_DONG_BIEN",
+    "target": "HAM_SO_TANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "KHOANG_NGHICH_BIEN",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "KHOANG_NGHICH_BIEN",
+    "target": "HAM_SO_COT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "KHOANG_NGHICH_BIEN",
+    "target": "HAM_SO_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "KHOANG_TU_PHAN_VI",
+    "target": "BIEU_DO_HOP",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khoảng tứ phân vị là thành phần quan trọng trong biểu đồ hộp."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0014"
+    ]
+  },
+  {
+    "source": "KHOANG_TU_PHAN_VI",
+    "target": "MAU_SO_LIEU_GHEP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-1:0009"
+    ]
+  },
+  {
+    "source": "KHOANG_TU_PHAN_VI",
+    "target": "TINH_KHOANG_TU_PHAN_VI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khoảng tứ phân vị là một khái niệm, phương pháp tính khoảng tứ phân vị là một thủ tục."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0014"
+    ]
+  },
+  {
+    "source": "KHOANG_TU_PHAN_VI",
+    "target": "TU_PHAN_VI_MAU_GHOP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-1:0009"
+    ]
+  },
+  {
+    "source": "KHOI_TRON_XOAY",
+    "target": "CONG_THUC_THE_TICH_KHOI_TRON_XOAY",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Để tính thể tích khối tròn xoay, cần sử dụng công thức tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0003"
+    ]
+  },
+  {
+    "source": "KI_HIEU_KHOA_HOC",
+    "target": "LUY_THUA_VOI_SO_MU_NGUYEN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0001"
+    ]
+  },
+  {
+    "source": "KY_HIEU_VECTO",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Kí hiệu vectơ là một phần của khái niệm vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "LAP_PHUONG_TRINH_DUONG_TRON",
+    "target": "PHUONG_TRINH_DUONG_TRON",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0009"
+    ]
+  },
+  {
+    "source": "LAP_PHUONG_TRINH_MAT_PHANG",
+    "target": "TICH_CO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp lập phương trình mặt phẳng sử dụng tích có hướng để tìm vectơ pháp tuyến"
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0004"
+    ]
+  },
+  {
+    "source": "LAP_PHUONG_TRINH_TIEP_TUYEN",
+    "target": "PHUONG_TRINH_DUONG_TRON",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0009"
+    ]
+  },
+  {
+    "source": "LAP_PHUONG_TRINH_TIEP_TUYEN",
+    "target": "PHUONG_TRINH_TIEP_TUYEN_DUONG_TRON",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0009"
+    ]
+  },
+  {
+    "source": "LOGARIT",
+    "target": "CO_SO_LOGARIT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0002"
+    ]
+  },
+  {
+    "source": "LOGARIT_THAP_PHAN",
+    "target": "LOGARIT",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0002"
+    ]
+  },
+  {
+    "source": "LOGARIT_TU_NHIEN",
+    "target": "LOGARIT",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0002"
+    ]
+  },
+  {
+    "source": "LUY_THUA_VOI_SO_MU_HUU_TI",
+    "target": "CAN_BAC_N",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0001"
+    ]
+  },
+  {
+    "source": "LUY_THUA_VOI_SO_MU_HUU_TI",
+    "target": "LUY_THUA_VOI_SO_MU_NGUYEN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0001"
+    ]
+  },
+  {
+    "source": "LUY_THUA_VOI_SO_MU_NGUYEN",
+    "target": "TINH_CHAT_LUY_THUA",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0001"
+    ]
+  },
+  {
+    "source": "LUY_THUA_VOI_SO_MU_THUC",
+    "target": "LUY_THUA_VOI_SO_MU_HUU_TI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0001"
+    ]
+  },
+  {
+    "source": "LUY_THUA_VOI_SO_MU_THUC",
+    "target": "TINH_CHAT_LUY_THUA",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0001"
+    ]
+  },
+  {
+    "source": "MAT_PHANG",
+    "target": "CAC_DIEM_DONG_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "MAT_PHANG",
+    "target": "CAC_DIEM_KHONG_DONG_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "MAT_PHANG",
+    "target": "DIEM_KHONG_THUOC_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "MAT_PHANG",
+    "target": "DIEM_THUOC_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "MAT_PHANG",
+    "target": "GIAO_TUYEN_CUA_HAI_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "MAT_PHANG",
+    "target": "HINH_CHOP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "MAT_PHANG",
+    "target": "HINH_TU_DIEN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "MAT_PHANG_CHUA_DUONG_THANG_SONG_SONG_VOI_DUONG_THANG_KHAC",
+    "target": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0012"
+    ]
+  },
+  {
+    "source": "MAT_PHANG_DI_QUA_BA_DIEM_KHONG_THANG_HANG",
+    "target": "DUONG_THANG_THUOC_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "MAT_PHANG_TOA_DO_2D",
+    "target": "HE_TRUC_TOA_DO_OXY",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "MAU_SO_LIEU_GHEP_NHOM",
+    "target": "BANG_THONG_KE",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0008"
+    ]
+  },
+  {
+    "source": "MAU_SO_LIEU_GHEP_NHOM",
+    "target": "NHOM_SO_LIEU",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0008"
+    ]
+  },
+  {
+    "source": "MENH_DE_CHUA_BIEN",
+    "target": "KI_HIEU_EXISTS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_CHUA_BIEN",
+    "target": "KI_HIEU_FORALL",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_CHUA_BIEN",
+    "target": "MENH_DE",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_DAO",
+    "target": "MENH_DE",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_DAO",
+    "target": "MENH_DE_KEO_THEO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_KEO_THEO",
+    "target": "MENH_DE",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_KEO_THEO",
+    "target": "MENH_DE",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_PHUONG_TRINH_THAM_SO",
+    "target": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "mệnh đề phương trình tham số giải thích phương trình tham số"
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0007"
+    ]
+  },
+  {
+    "source": "MENH_DE_PHUONG_TRINH_TONG_QUAT",
+    "target": "PHUONG_TRINH_TONG_QUAT",
+    "relation": "REQUIRES",
+    "rationales": [
+      "mệnh đề phương trình tổng quát giải thích phương trình tổng quát"
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0007"
+    ]
+  },
+  {
+    "source": "MENH_DE_PHU_DINH",
+    "target": "MENH_DE",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_PHU_DINH",
+    "target": "MENH_DE",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_TOAN_HOC",
+    "target": "MENH_DE",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_TUONG_DUONG",
+    "target": "MENH_DE",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "MENH_DE_TUONG_DUONG",
+    "target": "MENH_DE_KEO_THEO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0001"
+    ]
+  },
+  {
+    "source": "METHOD_TIM_GIAO_DIEM",
+    "target": "GIAO_DIEM_CUA_HAI_DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phương pháp tìm giao điểm của hai đường thẳng là một phần của khái niệm giao điểm của hai đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "METHOD_TINH_GOC_GIUA_HAI_DUONG_THANG",
+    "target": "GOC_GIUA_HAI_DUONG_THANG_TRONG_MAT_PHANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phương pháp tính góc giữa hai đường thẳng là một phần của khái niệm góc giữa hai đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "METHOD_TINH_KHOANG_CACH",
+    "target": "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phương pháp tính khoảng cách từ điểm đến đường thẳng là một phần của khái niệm khoảng cách từ điểm đến đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "METHOD_XAC_DINH_VI_TRI_TUONG_DOI",
+    "target": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phương pháp xác định vị trí tương đối giữa hai đường thẳng là một phần của khái niệm vị trí tương đối giữa hai đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "target": "BIEU_DIEN_MIEN_NGHIEM_BAT_PHUONG_TRINH_BAC_NHAI_AN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0003"
+    ]
+  },
+  {
+    "source": "MIEN_NGHIEM_CUA_HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "target": "HE_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0004"
+    ]
+  },
+  {
+    "source": "MOT",
+    "target": "MAU_SO_LIEU_GHEP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "MOT",
+    "target": "PHUONG_PHAP_TIM_MOT",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp cần thiết để xác định mốt."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0013"
+    ]
+  },
+  {
+    "source": "NGHICH_LI_ZENO",
+    "target": "GIOI_HAN_DAY_SO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0015"
+    ]
+  },
+  {
+    "source": "NGHIEM_BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "target": "BAT_PHUONG_TRINH_BAC_NHAT_HAI_AN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0003"
+    ]
+  },
+  {
+    "source": "NGHIEM_BAT_PHUONG_TRINH_LOGARIT",
+    "target": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "NGHIEM_BAT_PHUONG_TRINH_MU",
+    "target": "BAT_PHUONG_TRINH_MU_CO_BAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "NGHIEM_PHUONG_TRINH_LOGARIT",
+    "target": "PHUONG_TRINH_LOGARIT_CO_BAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "NGHIEM_PHUONG_TRINH_MU",
+    "target": "PHUONG_TRINH_MU_CO_BAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "NGUYEN_HAM",
+    "target": "HO_NGUYEN_HAM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Học về nguyên hàm trước khi học về họ nguyên hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "NGUYEN_HAM",
+    "target": "PHUONG_PHAP_TIM_NGUYEN_HAM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Học về nguyên hàm trước khi học phương pháp tìm nguyên hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "NGUYEN_HAM",
+    "target": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Học về nguyên hàm trước khi học về tính chất cơ bản của nguyên hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "NGUYEN_HAM",
+    "target": "TINH_CHAT_TICH_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Học về nguyên hàm trước khi học về tính chất tích hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "NGUYEN_HAM",
+    "target": "TINH_CHAT_TONG_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Học về nguyên hàm trước khi học về tính chất tổng hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "NGUYEN_HAM_HAM_SO_LN",
+    "target": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT",
+    "relation": "IS_A",
+    "rationales": [
+      "Nguyên hàm của hàm số ln là một trường hợp đặc biệt của nguyên hàm của hàm số lũy thừa tổng quát."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "NGUYEN_HAM_HAM_SO_LUONG_GIAC",
+    "target": "NGUYEN_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Nguyên hàm của hàm số lượng giác là một loại nguyên hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "NGUYEN_HAM_HAM_SO_LUY_THUA",
+    "target": "NGUYEN_HAM_HAM_SO_LUY_THUA_TONG_QUAT",
+    "relation": "IS_A",
+    "rationales": [
+      "Nguyên hàm của hàm số lũy thừa là một trường hợp đặc biệt của nguyên hàm của hàm số lũy thừa tổng quát."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "NGUYEN_HAM_HAM_SO_MU",
+    "target": "NGUYEN_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Nguyên hàm của hàm số mũ là một loại nguyên hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "NGUYEN_LY_TON_TAI_NGHIEM",
+    "target": "HAM_SO_LIEN_TUC_TREN_MOT_DOAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "PARABOL",
+    "target": "DUONG_CONIC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "PARABOLA",
+    "target": "DINH",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0002"
+    ]
+  },
+  {
+    "source": "PARABOLA",
+    "target": "TRUC_DOI_XUNG",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0002"
+    ]
+  },
+  {
+    "source": "PHAN_BU",
+    "target": "HIEU_HAI_TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "PHAN_TICH_HAM_SO",
+    "target": "TIM_TIEM_CAN_XIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "phân tích hàm số là bước chuẩn bị để tìm tiệm cận xiên"
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0003"
+    ]
+  },
+  {
+    "source": "PHAN_TICH_VECTO",
+    "target": "VECTO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0009"
+    ]
+  },
+  {
+    "source": "PHAT_HIEN_GIATRI_BAT_THUONG",
+    "target": "BIEU_DO_HOP",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phát hiện giá trị bất thường sử dụng biểu đồ hộp."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0014"
+    ]
+  },
+  {
+    "source": "PHA_BAN_DAU",
+    "target": "PHUONG_TRINH_DAO_DONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "PHA_DAO_DONG",
+    "target": "PHUONG_TRINH_DAO_DONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "PHEP_CHIEU_SONG_SONG",
+    "target": "HINH_CHIEU",
+    "relation": "PART_OF",
+    "rationales": [
+      "Hình chiếu là kết quả của phép chiếu song song"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "PHEP_CHIEU_SONG_SONG",
+    "target": "MAT_PHANG_CHIEU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Mặt phẳng chiếu là yếu tố cần thiết để thực hiện phép chiếu song song"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "PHEP_CHIEU_SONG_SONG",
+    "target": "PHUONG_CHIEU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương chiếu là yếu tố cần thiết để thực hiện phép chiếu song song"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "PHEP_CHIEU_VUONG_GOC",
+    "target": "HINH_CHIEU_VUONG_GOC",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0010"
+    ]
+  },
+  {
+    "source": "PHEP_CONG_VECTO",
+    "target": "QUY_TAC_BA_DIEM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Quy tắc ba điểm là cơ sở để thực hiện phép cộng vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_CONG_VECTO",
+    "target": "QUY_TAC_HINH_BINH_HANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Quy tắc hình bình hành là một phương pháp cụ thể của phép cộng vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_CONG_VECTO",
+    "target": "TINH_CHAT_GIAO_HOAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất giao hoán là một tính chất cơ bản của phép cộng vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_CONG_VECTO",
+    "target": "TINH_CHAT_KET_HOP",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất kết hợp là một tính chất cơ bản của phép cộng vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_CONG_VECTO",
+    "target": "TINH_CHAT_VECTO_KHONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất của vectơ không là một tính chất cơ bản của phép cộng vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_CONG_VECTO",
+    "target": "TONG_HAI_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phép cộng vectơ bao gồm việc định nghĩa tổng của hai vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_CONG_VECTO_TOA_DO",
+    "target": "TOA_DO_VECTO_TRONG_MP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "PHEP_NHAN_SO_VOI_VECTO",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phép nhân một số với một vectơ là một phần của các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_NHAN_SO_VOI_VECTO",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phép nhân một số với một vectơ yêu cầu hiểu các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_NHAN_VECTO_TOA_DO",
+    "target": "TOA_DO_VECTO_TRONG_MP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "PHEP_TOAN_GIOI_HAN",
+    "target": "QUY_TAC_TINH_GIOI_HAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0015"
+    ]
+  },
+  {
+    "source": "PHEP_TRU_VECTO",
+    "target": "HIEU_HAI_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Phép trừ vectơ bao gồm việc định nghĩa hiệu của hai vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_TRU_VECTO",
+    "target": "QUY_TAC_HIEU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Quy tắc hiệu là cơ sở để thực hiện phép trừ vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_TRU_VECTO",
+    "target": "VECTO_DOI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phép trừ vectơ sử dụng khái niệm vectơ đối."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHEP_TRU_VECTO_TOA_DO",
+    "target": "TOA_DO_VECTO_TRONG_MP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_BANG_BIEN_THIEN",
+    "target": "BANG_BIEN_THIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp bảng biến thiên yêu cầu sử dụng bảng biến thiên."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0001"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_BANG_BIEN_THIEN",
+    "target": "DINH_LI_TIM_CUC_TRI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp bảng biến thiên cũng sử dụng định lí tìm cực trị."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0001"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_BANG_BIEN_THIEN",
+    "target": "DINH_LI_TINH_DON_DIEU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp bảng biến thiên dựa trên định lí tính đơn điệu."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0001"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+    "target": "CONG_THUC_BIEN_DOI_TICH_THANH_TONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+    "target": "CONG_THUC_BIEN_DOI_TONG_THANH_TICH",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+    "target": "CONG_THUC_CONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_BIEN_DOI_LUONG_GIAC",
+    "target": "CONG_THUC_NHAN_DOI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_CHUNG_MINH_HAI_DUONG_THANG_VUONG_GOC",
+    "target": "HAI_DUONG_THANG_VUONG_GOC",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp chứng minh hai đường thẳng vuông góc dựa trên định nghĩa của hai đường thẳng vuông góc."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0008"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_DEM_KET_QUA",
+    "target": "CONG_THUC_XAC_SUAT_CO_DIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp đếm kết quả được sử dụng để tính toán công thức xác suất cổ điển."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GHEP_NHOM",
+    "target": "DO_DAI_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GHEP_NHOM",
+    "target": "KHOANG_BIEN_THIEN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GHEP_NHOM",
+    "target": "NHOM_SO_LIEU",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0008"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_BAC_HAI",
+    "target": "DAU_CUA_TAM_THUC_BAC_HAI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp giải bất phương trình bậc hai sử dụng dấu của tam thức bậc hai."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_BAC_HAI",
+    "target": "DINH_LI_DAU_TAM_THUC_BAC_HAI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp giải bất phương trình bậc hai sử dụng định lí về dấu tam thức bậc hai."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_BAC_HAI",
+    "target": "TAM_THUC_BAC_HAI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp giải bất phương trình bậc hai sử dụng tam thức bậc hai."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_LOGARIT",
+    "target": "BAT_PHUONG_TRINH_LOGARIT_CO_BAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GIAI_BAT_PHUONG_TRINH_MU",
+    "target": "BAT_PHUONG_TRINH_MU_CO_BAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GIAI_PHUONG_TRINH_CHUA_CAN",
+    "target": "PHUONG_TRINH_CHUA_CAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp giải phương trình chứa căn yêu cầu hiểu về phương trình chứa căn."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GIAI_PHUONG_TRINH_LOGARIT",
+    "target": "PHUONG_TRINH_LOGARIT_CO_BAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_GIAI_PHUONG_TRINH_MU",
+    "target": "PHUONG_TRINH_MU_CO_BAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_HINH_CAY",
+    "target": "XAC_SUAT_CO_DIEU_KIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp hình cây thường được sử dụng để giải thích và tính toán xác suất có điều kiện."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0008"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_LAP_PHUONG_TRINH_THAM_SO",
+    "target": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "phương pháp lập phương trình tham số dựa trên phương trình tham số"
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0007"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_LAP_PHUONG_TRINH_TONG_QUAT",
+    "target": "PHUONG_TRINH_TONG_QUAT",
+    "relation": "REQUIRES",
+    "rationales": [
+      "phương pháp lập phương trình tổng quát dựa trên phương trình tổng quát"
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0007"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_MO_TA",
+    "target": "DAY_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TICH_PHAN",
+    "target": "TICH_PHAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tính tích phân yêu cầu khái niệm tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TICH_PHAN_HINH_HOC",
+    "target": "TICH_PHAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tích phân hình học yêu cầu khái niệm tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TICH_PHAN_TINH_DIEN_TICH",
+    "target": "CONG_THUC_DIEN_TICH_HINH_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tích phân tính diện tích yêu cầu công thức diện tích hình phẳng."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TICH_PHAN_TINH_THE_TICH",
+    "target": "CONG_THUC_THE_TICH_VAT_THE",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tích phân tính thể tích yêu cầu công thức thể tích vật thể."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TIM_GIA_TRI_LON_NHAT_NHO_NHAT",
+    "target": "BANG_BIEN_THIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tìm giá trị lớn nhất và nhỏ nhất yêu cầu lập bảng biến thiên."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TIM_GIA_TRI_LON_NHAT_NHO_NHAT",
+    "target": "DAO_HAM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tìm giá trị lớn nhất và nhỏ nhất yêu cầu sử dụng đạo hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TIM_VI_TRI_BAO",
+    "target": "VECTO_CUNG_PHUONG_DIEU_KIEN_TOA_DO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_GIOI_HAN",
+    "target": "QUY_TAC_TINH_GIOI_HAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0016"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_GIOI_HAN",
+    "target": "QUY_TAC_TINH_GIOI_HAN_THUONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0016"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_GIOI_HAN",
+    "target": "QUY_TAC_TINH_GIOI_HAN_TICH",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0016"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_KHOANG_CACH",
+    "target": "KHOANG_CACH",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tính khoảng cách yêu cầu hiểu về khái niệm khoảng cách."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0012"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_LOGARIT",
+    "target": "LOGARIT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_LUY_THUA",
+    "target": "TINH_CHAT_LUY_THUA",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0001"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_MOT",
+    "target": "CONG_THUC_TINH_MOT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_SO_TRUNG_BINH",
+    "target": "TRUNG_BINH_CONG_MAU_SO_LIEU_GHOP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_TONG_CAP_SO_CONG",
+    "target": "CONG_THUC_TONG_N_SO_HANG_DAU",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0006"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_TONG_CAP_SO_NHAN",
+    "target": "TONG_N_SO_HANG_DAU_CAP_SO_NHAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0007"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_TRUNG_VI",
+    "target": "CONG_THUC_TINH_TRUNG_VI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TINH_TU_PHAN_VI",
+    "target": "CONG_THUC_TINH_TU_PHAN_VI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TO_HOP",
+    "target": "KHONG_GIAN_MAU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tổ hợp yêu cầu hiểu về không gian mẫu."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0006"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_TRUY_HOI",
+    "target": "DAY_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_VE_DO_THI",
+    "target": "DO_THI_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp vẽ đồ thị hàm số yêu cầu hiểu về đồ thị của hàm số."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0001"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_VE_DO_THI_HAM_SO_BAC_HAI",
+    "target": "DINH",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_VE_DO_THI_HAM_SO_BAC_HAI",
+    "target": "TRUC_DOI_XUNG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0002"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_XAC_DINH_BIEN_CO",
+    "target": "KHONG_GIAN_MAU",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0014"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_XAC_DINH_BIEN_CO_DOC_LAP",
+    "target": "BIEN_CO_DOC_LAP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0014"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_XAC_DINH_BIEN_CO_GIAO",
+    "target": "BIEN_CO_GIAO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0014"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_XAC_DINH_BIEN_CO_HOP",
+    "target": "BIEN_CO_HOP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0014"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_XAC_DINH_GIAO_TUYEN",
+    "target": "DINH_LY_VE_BA_DUONG_GIAO_TUYEN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0011"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_XAC_DINH_GOC_GIUA_HAI_DUONG_THANG",
+    "target": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp xác định góc giữa hai đường thẳng dựa trên định nghĩa của góc giữa hai đường thẳng."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0008"
+    ]
+  },
+  {
+    "source": "PHUONG_PHAP_XAC_DINH_VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp xác định vị trí tương đối giữa hai đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_SAI",
+    "target": "TINH_PHUONG_SAI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương sai là một khái niệm, phương pháp tính phương sai là một thủ tục."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0014"
+    ]
+  },
+  {
+    "source": "PHUONG_SAI_MAU_GHEP_NHOM",
+    "target": "PHUONG_SAI",
+    "relation": "IS_A",
+    "rationales": [
+      "Phương sai của mẫu số liệu ghép nhóm là một loại phương sai."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0010"
+    ]
+  },
+  {
+    "source": "PHUONG_SAI_MAU_GHEP_NHOM_CONG_THUC_KHAC",
+    "target": "PHUONG_SAI_MAU_GHEP_NHOM",
+    "relation": "IS_A",
+    "rationales": [
+      "Công thức khác cho phương sai của mẫu số liệu ghép nhóm là một công thức tính phương sai."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0010"
+    ]
+  },
+  {
+    "source": "PHUONG_SAI_MAU_GHEP_NHOM_SAI_SO",
+    "target": "PHUONG_SAI_MAU_GHEP_NHOM",
+    "relation": "IS_A",
+    "rationales": [
+      "Phương sai sai số là một loại phương sai của mẫu số liệu ghép nhóm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0010"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình chính tắc của đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_CHINH_TAC_DUONG_THANG_FORMULA",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình chính tắc của đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_CHINH_TAC_HAI_DIEM",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình chính tắc của đường thẳng đi qua hai điểm yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_DX_E",
+    "target": "PHUONG_TRINH_CHUA_CAN",
+    "relation": "IS_A",
+    "rationales": [
+      "Phương trình dạng √(ax² + bx + c) = dx + e là một loại phương trình chứa căn."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_DANG_SQRT_AX2_BX_C_SQRT_DX2_EX_F",
+    "target": "PHUONG_TRINH_CHUA_CAN",
+    "relation": "IS_A",
+    "rationales": [
+      "Phương trình dạng √(ax² + bx + c) = √(dx² + ex + f) là một loại phương trình chứa căn."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_DAO_DONG",
+    "target": "BIEN_DO_DAO_DONG",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_DAO_DONG",
+    "target": "CHU_KI_DAO_DONG",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_DAO_DONG",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_DAO_DONG",
+    "target": "PHA_BAN_DAU",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_DAO_DONG",
+    "target": "PHA_DAO_DONG",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_DUONG_TRON_CHUA_THICH",
+    "target": "PHUONG_TRINH_DUONG_TRON",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0009"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_DUONG_TRON_DA_THICH",
+    "target": "PHUONG_TRINH_DUONG_TRON",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0009"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_ELIP",
+    "target": "ELIP",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_HYPEBOL",
+    "target": "HYPEBOL",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_LOGARIT",
+    "target": "PHUONG_TRINH_LOGARIT_CO_BAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_LOGARIT_CO_BAN",
+    "target": "HAM_LOGARIT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+    "target": "PHUONG_TRINH_COS_X_M",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+    "target": "PHUONG_TRINH_COT_X_M",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+    "target": "PHUONG_TRINH_SIN_X_M",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_LUONG_GIAC_CO_BAN",
+    "target": "PHUONG_TRINH_TAN_X_M",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_MAT_CAU",
+    "target": "BAN_KINH_MAT_CAU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình mặt cầu yêu cầu định nghĩa bán kính mặt cầu."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0007"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_MAT_CAU",
+    "target": "TAM_MAT_CAU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình mặt cầu yêu cầu định nghĩa tâm mặt cầu."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0007"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_MAT_CAU",
+    "target": "TOA_DO_TRONG_KHONG_GIAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình mặt cầu sử dụng hệ toạ độ trong không gian."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0007"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_MAT_CAU_TUONG_DUONG",
+    "target": "PHUONG_TRINH_MAT_CAU",
+    "relation": "IS_A",
+    "rationales": [
+      "Phương trình mặt cầu tương đương là một dạng đặc biệt của phương trình mặt cầu."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0007"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_MU",
+    "target": "PHUONG_TRINH_MU_CO_BAN",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_MU_CO_BAN",
+    "target": "HAM_MU",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0004"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_PARABOL",
+    "target": "PARABOL",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+    "target": "DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "phương trình tham số là một cách biểu diễn khác của đường thẳng"
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0007"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_THAM_SO_DUONG_THANG",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình tham số của đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_THAM_SO_DUONG_THANG_FORMULA",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình tham số của đường thẳng yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_THAM_SO_HAI_DIEM",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình tham số của đường thẳng đi qua hai điểm yêu cầu hiểu về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_TIEP_TUYEN_DO_THI_HAM_SO",
+    "target": "DAO_HAM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_TONG_QUAT",
+    "target": "DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "phương trình tổng quát là một cách biểu diễn của đường thẳng"
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0007"
+    ]
+  },
+  {
+    "source": "PHUONG_TRINH_TONG_QUAT_MAT_PHANG",
+    "target": "VECTO_PHAP_TUYEN_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương trình tổng quát của mặt phẳng yêu cầu khái niệm vectơ pháp tuyến"
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0004"
+    ]
+  },
+  {
+    "source": "QUAN_HE_LUONG_GIAC_GOC_BU",
+    "target": "HAI_GOC_BU_NHAU",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0005"
+    ]
+  },
+  {
+    "source": "QUAN_HE_LUONG_GIAC_GOC_PHU",
+    "target": "HAI_GOC_PHU_NHAU",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0005"
+    ]
+  },
+  {
+    "source": "QUAN_HE_SIN_COS_TAN_COT",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0005"
+    ]
+  },
+  {
+    "source": "QUY_TAC_BA_DIEM",
+    "target": "TONG_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Quy tắc ba điểm là một quy tắc liên quan đến tổng vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "QUY_TAC_CONG",
+    "target": "BAI_TOAN_DEM",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0011"
+    ]
+  },
+  {
+    "source": "QUY_TAC_CONG",
+    "target": "TAP_HOP_GIAO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0011"
+    ]
+  },
+  {
+    "source": "QUY_TAC_CONG",
+    "target": "TAP_HOP_HOP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0011"
+    ]
+  },
+  {
+    "source": "QUY_TAC_HINH_BINH_HANG",
+    "target": "TONG_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Quy tắc hình bình hành là một quy tắc liên quan đến tổng vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "QUY_TAC_HINH_HOP_METHOD",
+    "target": "TOA_DO_CUA_DIEM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Quy tắc hình hộp là phương pháp để xác định toạ độ điểm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0007"
+    ]
+  },
+  {
+    "source": "QUY_TAC_HINH_HOP_THEOREM",
+    "target": "TONG_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Quy tắc hình hộp là một quy tắc liên quan đến tổng vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "QUY_TAC_NHAN",
+    "target": "BAI_TOAN_DEM",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0011"
+    ]
+  },
+  {
+    "source": "QUY_TRINH_TOI_UU_HOA",
+    "target": "PHUONG_PHAP_TIM_GIA_TRI_CUC_TRI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Quy trình tối ưu hoá sử dụng phương pháp tìm giá trị cực trị."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "SAI_SO_TUONG_DOI",
+    "target": "SAI_SO_TUYET_DOI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sai số tương đối được tính từ sai số tuyệt đối."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0012"
+    ]
+  },
+  {
+    "source": "SAI_SO_TUYET_DOI",
+    "target": "SO_GAN_DUNG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sai số tuyệt đối được định nghĩa dựa trên số gần đúng và số đúng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0012"
+    ]
+  },
+  {
+    "source": "SIN_ALPHA",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0005"
+    ]
+  },
+  {
+    "source": "SO_DO_HINH_CAY_CONCEPT",
+    "target": "BAI_TOAN_DEM",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0011"
+    ]
+  },
+  {
+    "source": "SO_DO_HINH_CAY_METHOD",
+    "target": "BIEN_CO_GIAO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sử dụng sơ đồ hình cây để tính xác suất của biến cố giao."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0016"
+    ]
+  },
+  {
+    "source": "SO_DO_HINH_CAY_METHOD",
+    "target": "CONG_THUC_XAC_SUAT_TOAN_PHAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sơ đồ hình cây là phương pháp mô tả công thức xác suất toàn phần."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0009"
+    ]
+  },
+  {
+    "source": "SO_DO_HINH_CAY_METHOD",
+    "target": "KHONG_GIAN_MAU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sơ đồ hình cây yêu cầu hiểu về không gian mẫu."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0006"
+    ]
+  },
+  {
+    "source": "SO_DO_KHAO_SAT_HAM_SO",
+    "target": "BANG_BIEN_THIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sơ đồ khảo sát hàm số yêu cầu lập bảng biến thiên của hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0004"
+    ]
+  },
+  {
+    "source": "SO_DO_KHAO_SAT_HAM_SO",
+    "target": "CHIEU_BIEN_THIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sơ đồ khảo sát hàm số yêu cầu phân tích chiều biến thiên của hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0004"
+    ]
+  },
+  {
+    "source": "SO_DO_KHAO_SAT_HAM_SO",
+    "target": "CUC_TRI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sơ đồ khảo sát hàm số yêu cầu tìm các cực trị của hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0004"
+    ]
+  },
+  {
+    "source": "SO_DO_KHAO_SAT_HAM_SO",
+    "target": "DO_THI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sơ đồ khảo sát hàm số yêu cầu vẽ đồ thị của hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0004"
+    ]
+  },
+  {
+    "source": "SO_DO_KHAO_SAT_HAM_SO",
+    "target": "TAP_XAC_DINH",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sơ đồ khảo sát hàm số yêu cầu xác định tập xác định trước khi tiến hành các bước khác."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0004"
+    ]
+  },
+  {
+    "source": "SO_DO_KHAO_SAT_HAM_SO",
+    "target": "TIEM_CAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Sơ đồ khảo sát hàm số yêu cầu tìm các tiệm cận của hàm số."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0004"
+    ]
+  },
+  {
+    "source": "SO_GAN_DUNG",
+    "target": "SO_DUNG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Số gần đúng là xấp xỉ của số đúng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0012"
+    ]
+  },
+  {
+    "source": "SO_HANG_CUOI",
+    "target": "DAY_SO_HUU_HAN",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "SO_HANG_DAU",
+    "target": "DAY_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "SO_HANG_TONG_QUAT_CAP_SO_CONG",
+    "target": "CAP_SO_CONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0006"
+    ]
+  },
+  {
+    "source": "SO_HANG_TONG_QUAT_CAP_SO_CONG",
+    "target": "CONG_SAI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0006"
+    ]
+  },
+  {
+    "source": "SO_HANG_TONG_QUAT_CAP_SO_NHAN",
+    "target": "CAP_SO_NHAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0007"
+    ]
+  },
+  {
+    "source": "SO_HANG_TONG_QUAT_DAY_SO",
+    "target": "DAY_SO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0005"
+    ]
+  },
+  {
+    "source": "SO_QUY_TRON",
+    "target": "QUY_TAC_LAM_TRON",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Số quy tròn được tạo ra bằng cách áp dụng quy tắc làm tròn."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0012"
+    ]
+  },
+  {
+    "source": "SO_TRUNG_BINH",
+    "target": "CONG_THUC_TRUNG_BINH_BANG_TAN_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức mở rộng cho trường hợp mẫu số liệu dưới dạng bảng tần số."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0013"
+    ]
+  },
+  {
+    "source": "SO_TRUNG_BINH",
+    "target": "MAU_SO_LIEU_GHEP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "SO_TRUNG_BINH",
+    "target": "TRUNG_BINH_CONG_MAU_SO_LIEU",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Công thức cần thiết để tính số trung bình."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0013"
+    ]
+  },
+  {
+    "source": "SUDUNG_MAY_TINH_TIM_GOC",
+    "target": "PHUONG_TRINH_COS_X_M",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "SUDUNG_MAY_TINH_TIM_GOC",
+    "target": "PHUONG_TRINH_COT_X_M",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "SUDUNG_MAY_TINH_TIM_GOC",
+    "target": "PHUONG_TRINH_SIN_X_M",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "SUDUNG_MAY_TINH_TIM_GOC",
+    "target": "PHUONG_TRINH_TAN_X_M",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0004"
+    ]
+  },
+  {
+    "source": "TAN_ALPHA",
+    "target": "GIA_TRI_LUONG_GIAC",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0005"
+    ]
+  },
+  {
+    "source": "TAP_BANG_NHAU",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_CON",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_GIA_TRI",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TAP_GIA_TRI",
+    "target": "HAM_SO_COT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TAP_GIA_TRI",
+    "target": "HAM_SO_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TAP_GIA_TRI",
+    "target": "HAM_SO_TANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TAP_GIA_TRI_HAM_SO_LOGARIT",
+    "target": "HAM_SO_LOGARIT",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "TAP_GIA_TRI_HAM_SO_MU",
+    "target": "HAM_SO_MU",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "TAP_HOP_SO_HUU_TI",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_HOP_SO_HUU_TI",
+    "target": "TAP_HOP_SO_THUC",
+    "relation": "SUBSET_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_HOP_SO_NGUYEN",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_HOP_SO_NGUYEN",
+    "target": "TAP_HOP_SO_HUU_TI",
+    "relation": "SUBSET_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_HOP_SO_THUC",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_HOP_SO_TU_NHIEN",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_HOP_SO_TU_NHIEN",
+    "target": "TAP_HOP_SO_NGUYEN",
+    "relation": "SUBSET_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_RONG",
+    "target": "TAP_HOP",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_RONG",
+    "target": "TAP_HOP",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0002"
+    ]
+  },
+  {
+    "source": "TAP_XAC_DINH_HAM_SO_LOGARIT",
+    "target": "HAM_SO_LOGARIT",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "TAP_XAC_DINH_HAM_SO_MU",
+    "target": "HAM_SO_MU",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "THE_TICH_KHOI_TU_DIEN",
+    "target": "CONG_THUC_THE_TICH_KHOI_CHOP",
+    "relation": "IS_A",
+    "rationales": [
+      "Thể tích khối tứ diện là một trường hợp đặc biệt của công thức thể tích khối chóp"
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0013"
+    ]
+  },
+  {
+    "source": "THE_TICH_VAT_THE",
+    "target": "CONG_THUC_THE_TICH_VAT_THE",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Để tính thể tích vật thể, cần sử dụng công thức tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0003"
+    ]
+  },
+  {
+    "source": "THIET_LAP_TOA_DO_VECTO_THEO_TOA_DO_HAI_DAU_MUT",
+    "target": "TOA_DO_CUA_DIEM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp này yêu cầu hiểu về toạ độ của điểm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0007"
+    ]
+  },
+  {
+    "source": "TICH_CO_HUONG",
+    "target": "CAP_VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tích có hướng được sử dụng để tìm vectơ pháp tuyến từ cặp vectơ chỉ phương"
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0004"
+    ]
+  },
+  {
+    "source": "TICH_PHAN",
+    "target": "CAN_DUOI",
+    "relation": "PART_OF",
+    "rationales": [
+      "Cận dưới là thành phần của biểu thức tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TICH_PHAN",
+    "target": "CAN_TRUOC",
+    "relation": "PART_OF",
+    "rationales": [
+      "Cận trên là thành phần của biểu thức tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TICH_PHAN",
+    "target": "HAM_SO_DUOI_DAU_TICH_PHAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Hàm số dưới dấu tích phân là thành phần của biểu thức tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TICH_SO_VOI_VECTO",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Tích số với vectơ là một phép toán cơ bản trên vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "TICH_VECTO_VOI_SO",
+    "target": "SO_THUC",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0009"
+    ]
+  },
+  {
+    "source": "TICH_VECTO_VOI_SO",
+    "target": "VECTO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0009"
+    ]
+  },
+  {
+    "source": "TICH_VO_HUONG",
+    "target": "GOC_GIUA_HAI_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tích vô hướng được định nghĩa dựa trên góc giữa hai vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0011"
+    ]
+  },
+  {
+    "source": "TICH_VO_HUONG",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Tích vô hướng là một phép toán cơ bản trên vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "TICH_VO_HUONG_VUONG_GOC",
+    "target": "TICH_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định lý về tích vô hướng và vuông góc dựa trên định nghĩa của tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0011"
+    ]
+  },
+  {
+    "source": "TIM_HE_SO_GOC_TIEP_TUYEN",
+    "target": "DAO_HAM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "TIM_TIEM_CAN_DUNG",
+    "target": "GIOI_HAN_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "tìm tiệm cận đứng yêu cầu kiến thức về giới hạn hàm số"
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TIM_TIEM_CAN_NGANG",
+    "target": "GIOI_HAN_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "tìm tiệm cận ngang yêu cầu kiến thức về giới hạn hàm số"
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TIM_TIEM_CAN_XIEN",
+    "target": "GIOI_HAN_HAM_SO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "tìm tiệm cận xiên yêu cầu kiến thức về giới hạn hàm số"
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_BIEN_THIEN_HAM_SO_LOGARIT",
+    "target": "HAM_SO_LOGARIT",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_BIEN_THIEN_HAM_SO_MU",
+    "target": "HAM_SO_MU",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0003"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_BINH_PHUONG_VO_HUONG",
+    "target": "BINH_PHUONG_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất bình phương vô hướng dựa trên định nghĩa của bình phương vô hướng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0011"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_CONG",
+    "target": "TINH_CHAT_TICH_PHAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Tính chất cộng là một phần của tính chất tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_COS_GOC",
+    "target": "TICH_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất cos góc dựa trên định nghĩa của tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0011"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "target": "DUONG_THANG_SONG_SONG_VOI_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0012"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_GIAO_TUYEN_CUNG_VUONG_GOC",
+    "target": "HAI_MAT_PHANG_VUONG_GOC",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất giao tuyến cùng vuông góc dựa trên định nghĩa hai mặt phẳng vuông góc."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_HAI_MAT_PHANG_SONG_SONG",
+    "target": "HAI_MAT_PHANG_SONG_SONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0013"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_HAI_MAT_PHANG_VUONG_GOC",
+    "target": "HAI_MAT_PHANG_VUONG_GOC",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất hai mặt phẳng vuông góc dựa trên định nghĩa hai mặt phẳng vuông góc."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0011"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_HAM_SO",
+    "target": "HAM_SO_COS",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_HAM_SO",
+    "target": "HAM_SO_COT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_HAM_SO",
+    "target": "HAM_SO_SIN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_HAM_SO",
+    "target": "HAM_SO_TANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0003"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_HAM_SO_BAC_HAI",
+    "target": "HAM_SO_BAC_HAI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_HANG_SO",
+    "target": "TINH_CHAT_TICH_PHAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Tính chất về hằng số là một phần của tính chất tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_HINH_HOP",
+    "target": "HINH_HOP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0013"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_LIEN_TUC_HAM_CAN",
+    "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_LIEN_TUC_HAM_DA_THUC",
+    "target": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_LIEN_TUC_HAM_PHAN_THUC",
+    "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_LIEN_TUC_HAM_SIN_COS",
+    "target": "HAM_SO_LIEN_TUC_TREN_MOT_KHOANG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_LIEN_TUC_HAM_TAN_COT",
+    "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_LOGARIT",
+    "target": "LOGARIT",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_PHAN_DOAN",
+    "target": "TINH_CHAT_TICH_PHAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Tính chất phân đoạn là một phần của tính chất tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_PHEP_CHIEU_SONG_SONG",
+    "target": "PHEP_CHIEU_SONG_SONG",
+    "relation": "PART_OF",
+    "rationales": [
+      "Tính chất là một phần của phép chiếu song song"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_QUANG_HOC",
+    "target": "ELIP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_QUANG_HOC",
+    "target": "HYPEBOL",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_QUANG_HOC",
+    "target": "PARABOL",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_TICH_HAM_SO",
+    "target": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Tính chất tích hàm số là một tính chất cơ bản của nguyên hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_TICH_PHAN",
+    "target": "TICH_PHAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất của tích phân yêu cầu khái niệm tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_TICH_VECTO_VOI_SO",
+    "target": "TICH_VECTO_VOI_SO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0009"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_TICH_VO_HUONG",
+    "target": "TICH_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất của tích vô hướng dựa trên định nghĩa của tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0011"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_TONG_HAM_SO",
+    "target": "TINH_CHAT_CO_BAN_NGUYEN_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Tính chất tổng hàm số là một tính chất cơ bản của nguyên hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0001"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_TRU",
+    "target": "TINH_CHAT_TICH_PHAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Tính chất trừ là một phần của tính chất tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  },
+  {
+    "source": "TINH_CHAT_VUONG_GOC",
+    "target": "CONG_THUC_TOA_DO_TICH_VO_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tính chất vuông góc dựa trên công thức toạ độ của tích vô hướng."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0011"
+    ]
+  },
+  {
+    "source": "TINH_DAO_HAM_BANG_DINH_NGHI",
+    "target": "DAO_HAM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "TINH_DAO_HAM_CAP_HAI",
+    "target": "DAO_HAM_CAP_HAI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Để tính đạo hàm cấp hai, cần hiểu khái niệm đạo hàm cấp hai."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0007"
+    ]
+  },
+  {
+    "source": "TINH_KHOANG_BIEN_THIEN",
+    "target": "KHOANG_BIEN_THIEN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-1:0009"
+    ]
+  },
+  {
+    "source": "TINH_KHOANG_TU_PHAN_VI",
+    "target": "KHOANG_TU_PHAN_VI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-1:0009"
+    ]
+  },
+  {
+    "source": "TINH_KHOANG_TU_PHAN_VI",
+    "target": "TU_PHAN_VI_MAU_GHOP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-1:0009"
+    ]
+  },
+  {
+    "source": "TINH_PHUONG_SAI_DO_LECH_CHUAN",
+    "target": "DO_LECH_CHUAN_MAU_GHEP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tính phương sai và độ lệch chuẩn yêu cầu công thức độ lệch chuẩn của mẫu số liệu ghép nhóm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0010"
+    ]
+  },
+  {
+    "source": "TINH_PHUONG_SAI_DO_LECH_CHUAN",
+    "target": "PHUONG_SAI_MAU_GHEP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp tính phương sai và độ lệch chuẩn yêu cầu công thức phương sai của mẫu số liệu ghép nhóm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0010"
+    ]
+  },
+  {
+    "source": "TOA_DO_CUA_DIEM",
+    "target": "CAO_DO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Cao độ là một thành phần của toạ độ điểm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0007"
+    ]
+  },
+  {
+    "source": "TOA_DO_CUA_DIEM",
+    "target": "HOANH_DO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Hoành độ là một thành phần của toạ độ điểm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0007"
+    ]
+  },
+  {
+    "source": "TOA_DO_CUA_DIEM",
+    "target": "TUNG_DO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Tung độ là một thành phần của toạ độ điểm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0007"
+    ]
+  },
+  {
+    "source": "TOA_DO_TRONG_TAM",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Toạ độ trọng tâm tam giác là một phần của các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "TOA_DO_TRONG_TAM",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Toạ độ trọng tâm tam giác yêu cầu hiểu các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "TOA_DO_TRONG_TAM_TAM_GIAC",
+    "target": "TOA_DO_VECTO_TRONG_MP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "TOA_DO_TRUNG_DIEM",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Toạ độ trung điểm đoạn thẳng là một phần của các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "TOA_DO_TRUNG_DIEM",
+    "target": "PHEP_TOAN_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Toạ độ trung điểm đoạn thẳng yêu cầu hiểu các phép toán vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0008"
+    ]
+  },
+  {
+    "source": "TOA_DO_VECTO_MN",
+    "target": "TOA_DO_VECTO_TRONG_MP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "TOA_DO_VECTO_TRONG_KG",
+    "target": "VECTO_DON_VI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Khái niệm vectơ đơn vị là cơ sở để xác định toạ độ vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0007"
+    ]
+  },
+  {
+    "source": "TOA_DO_VECTO_TRONG_MP",
+    "target": "VECTO_DON_VI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "TOC_DO_BIEN_DOI_TUC_THOI",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "TOC_DO_PHAN_HOI_TUC_THOI",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Tốc độ phản ứng tức thời là một ví dụ cụ thể của đạo hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "TOC_DO_TANG_TRUONG_TUC_THOI",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Tốc độ tăng trưởng tức thời là một ví dụ cụ thể của đạo hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "TOC_DO_THAY_DOI_TUC_THOI",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Tốc độ thay đổi tức thời là một ứng dụng của đạo hàm."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "TONG_HIEU_TICH_THUONG_HAM_LIEN_TUC",
+    "target": "HAM_SO_LIEN_TUC_TAI_MOT_DIEM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0017"
+    ]
+  },
+  {
+    "source": "TONG_HOP_LUC",
+    "target": "PHEP_CONG_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tổng hợp lực sử dụng phép cộng vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "TONG_HOP_VAN_TOC",
+    "target": "PHEP_CONG_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Tổng hợp vận tốc sử dụng phép cộng vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "TONG_N_SO_HANG_DAU_CAP_SO_CONG",
+    "target": "CAP_SO_CONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0006"
+    ]
+  },
+  {
+    "source": "TONG_N_SO_HANG_DAU_CAP_SO_CONG",
+    "target": "SO_HANG_TONG_QUAT_CAP_SO_CONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0006"
+    ]
+  },
+  {
+    "source": "TONG_N_SO_HANG_DAU_CAP_SO_NHAN",
+    "target": "CAP_SO_NHAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0007"
+    ]
+  },
+  {
+    "source": "TONG_VECTO",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Tổng vectơ là một phép toán cơ bản trên vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "TO_HOP",
+    "target": "CONG_THUC_TO_HOP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0012"
+    ]
+  },
+  {
+    "source": "TO_HOP",
+    "target": "QUY_TAC_NHAN",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0012"
+    ]
+  },
+  {
+    "source": "TRONG_TAM_TAM_GIAC",
+    "target": "PHEP_CONG_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định nghĩa trọng tâm của tam giác sử dụng phép cộng vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "TRUNG_BINH_CONG_MAU_SO_LIEU_GHOP_NHOM",
+    "target": "SO_TRUNG_BINH",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "TRUNG_DIEM_DOAN_THANG",
+    "target": "TOA_DO_VECTO_TRONG_MP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "TRUNG_DIEM_DUONG_THANG",
+    "target": "PHEP_CONG_VECTO",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Định nghĩa trung điểm của đoạn thẳng sử dụng phép cộng vectơ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0008"
+    ]
+  },
+  {
+    "source": "TRUNG_VI",
+    "target": "MAU_SO_LIEU_GHEP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "TRUNG_VI",
+    "target": "PHUONG_PHAP_TIM_TRUNG_VI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp cần thiết để xác định trung vị."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0013"
+    ]
+  },
+  {
+    "source": "TU_PHAN_VI",
+    "target": "MAU_SO_LIEU_GHEP_NHOM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0009"
+    ]
+  },
+  {
+    "source": "TU_PHAN_VI",
+    "target": "PHUONG_PHAP_TIM_TU_PHAN_VI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phương pháp cần thiết để xác định tứ phân vị."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0013"
+    ]
+  },
+  {
+    "source": "TU_PHAN_VI",
+    "target": "TRUNG_VI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Trung vị (Q2) là một phần của tứ phân vị."
+    ],
+    "source_chunks": [
+      "toan-10-tap-1:0013"
+    ]
+  },
+  {
+    "source": "TU_PHAN_VI_MAU_GHOP_NHOM",
+    "target": "CONG_THUC_TINH_TU_PHAN_VI",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-12-tap-1:0009"
+    ]
+  },
+  {
+    "source": "UNG_DUNG_CONIC",
+    "target": "ELIP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "UNG_DUNG_CONIC",
+    "target": "HYPEBOL",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "UNG_DUNG_CONIC",
+    "target": "PARABOL",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0010"
+    ]
+  },
+  {
+    "source": "VAN_TOC_TRUNG_BINH",
+    "target": "PHUONG_TRINH_CHUYEN_DONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "VAN_TOC_TUC_THOI",
+    "target": "DAO_HAM",
+    "relation": "IS_A",
+    "rationales": [
+      "Vận tốc tức thời là một ví dụ cụ thể của đạo hàm."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0005",
+      "toan-12-tap-1:0005"
+    ]
+  },
+  {
+    "source": "VAN_TOC_TUC_THOI",
+    "target": "PHUONG_TRINH_CHUYEN_DONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Vận tốc tức thời là đạo hàm của phương trình chuyển động."
+    ],
+    "source_chunks": [
+      "toan-11-tap-2:0005",
+      "toan-11-tap-2:0007"
+    ]
+  },
+  {
+    "source": "VECTO",
+    "target": "DO_DAI_VECTO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0007"
+    ]
+  },
+  {
+    "source": "VECTO",
+    "target": "KY_HIEU_VECTO",
+    "relation": "PART_OF",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0007"
+    ]
+  },
+  {
+    "source": "VECTO",
+    "target": "VECTO_KHONG",
+    "relation": "IS_A",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0007"
+    ]
+  },
+  {
+    "source": "VECTO_BANG_NHAU",
+    "target": "VECTO_CUNG_HUONG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0007"
+    ]
+  },
+  {
+    "source": "VECTO_BANG_NHAU",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Vectơ bằng nhau là một khái niệm liên quan đến vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "VECTO_CHI_PHUONG",
+    "target": "DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "vectơ chỉ phương là một thành phần xác định đường thẳng"
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0007"
+    ]
+  },
+  {
+    "source": "VECTO_CHI_PHUONG",
+    "target": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Vectơ chỉ phương là một phần của đại diện đại số cho đường thẳng trong mặt phẳng toạ độ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "VECTO_CHI_PHUONG",
+    "target": "VECTO_PHAP_TUYEN_DUONG_THANG",
+    "relation": "IS_A",
+    "rationales": [
+      "vectơ chỉ phương và vectơ pháp tuyến là hai loại vectơ khác nhau"
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0007"
+    ]
+  },
+  {
+    "source": "VECTO_CUNG_HUONG",
+    "target": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+    "relation": "IS_A",
+    "rationales": [
+      "Vectơ cùng hướng là một trường hợp đặc biệt của vectơ cùng phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "VECTO_CUNG_HUONG",
+    "target": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0007"
+    ]
+  },
+  {
+    "source": "VECTO_CUNG_PHUONG_DIEU_KIEN_TOA_DO",
+    "target": "TOA_DO_VECTO_TRONG_MP",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0010"
+    ]
+  },
+  {
+    "source": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+    "target": "VECTO",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-1:0007"
+    ]
+  },
+  {
+    "source": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Vectơ cùng phương là một khái niệm liên quan đến vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "VECTO_DOI",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "PART_OF",
+    "rationales": [
+      "Vectơ đối là một khái niệm liên quan đến vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "VECTO_KHONG",
+    "target": "VECTO_TRONG_KHONG_GIAN",
+    "relation": "IS_A",
+    "rationales": [
+      "Vectơ không là một trường hợp đặc biệt của vectơ."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "VECTO_NGUOC_HUONG",
+    "target": "VECTO_CUNG_PHUONG_DINH_NGHIA",
+    "relation": "IS_A",
+    "rationales": [
+      "Vectơ ngược hướng là một trường hợp đặc biệt của vectơ cùng phương."
+    ],
+    "source_chunks": [
+      "toan-12-tap-1:0006"
+    ]
+  },
+  {
+    "source": "VECTO_PHAP_TUYEN_DUONG_THANG",
+    "target": "DUONG_THANG",
+    "relation": "PART_OF",
+    "rationales": [
+      "vectơ pháp tuyến là một thành phần xác định đường thẳng"
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0007"
+    ]
+  },
+  {
+    "source": "VECTO_PHAP_TUYEN_DUONG_THANG",
+    "target": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Vectơ pháp tuyến là một phần của đại diện đại số cho đường thẳng trong mặt phẳng toạ độ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "VE_HINH_BIEU_DIEN",
+    "target": "HINH_BIEU_DIEN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Hình biểu diễn là nền tảng để vẽ hình biểu diễn"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "VIET_PHUONG_TRINH_TIEP_TUYEN",
+    "target": "DAO_HAM",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-2:0005"
+    ]
+  },
+  {
+    "source": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+    "target": "DUONG_THANG_TRONG_MAT_PHANG_TOA_DO",
+    "relation": "PART_OF",
+    "rationales": [
+      "Vị trí tương đối giữa hai đường thẳng là một khái niệm liên quan đến đường thẳng trong mặt phẳng toạ độ."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+    "target": "VECTO_CHI_PHUONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Vị trí tương đối giữa hai đường thẳng yêu cầu kiến thức về vectơ chỉ phương."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+    "target": "VECTO_PHAP_TUYEN_DUONG_THANG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Vị trí tương đối giữa hai đường thẳng yêu cầu kiến thức về vectơ pháp tuyến."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0008"
+    ]
+  },
+  {
+    "source": "XAC_DINH_HINH_CHIEU",
+    "target": "PHEP_CHIEU_SONG_SONG",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Phép chiếu song song là nền tảng để xác định hình chiếu"
+    ],
+    "source_chunks": [
+      "toan-11-tap-1:0014"
+    ]
+  },
+  {
+    "source": "XAC_DINH_MAT_PHANG_BOI_DIEM_VA_DUONG_THANG",
+    "target": "XAC_DINH_GIAO_DIEM_CUA_DUONG_THANG_VA_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "XAC_DINH_MAT_PHANG_BOI_HAI_DUONG_THANG_CAT_NHAU",
+    "target": "XAC_DINH_GIAO_DIEM_CUA_DUONG_THANG_VA_MAT_PHANG",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-11-tap-1:0010"
+    ]
+  },
+  {
+    "source": "XAC_DINH_TAM_BAN_KINH",
+    "target": "PHUONG_TRINH_DUONG_TRON",
+    "relation": "REQUIRES",
+    "rationales": [],
+    "source_chunks": [
+      "toan-10-tap-2:0009"
+    ]
+  },
+  {
+    "source": "XAC_SUAT_BIEN_CO_DOI",
+    "target": "CONG_THUC_XAC_SUAT_BIEN_CO_DOI",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Xác suất của biến cố đôi được tính bằng công thức xác suất của biến cố đối."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0006"
+    ]
+  },
+  {
+    "source": "XAC_SUAT_BIEN_CO_DOI",
+    "target": "PHUONG_PHAP_TO_HOP",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Xác suất của biến cố đôi có thể được tính bằng phương pháp tổ hợp."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0006"
+    ]
+  },
+  {
+    "source": "XAC_SUAT_BIEN_CO_DOI",
+    "target": "SO_DO_HINH_CAY_METHOD",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Xác suất của biến cố đôi cũng có thể được tính bằng sơ đồ hình cây."
+    ],
+    "source_chunks": [
+      "toan-10-tap-2:0006"
+    ]
+  },
+  {
+    "source": "XAC_SUAT_CO_DIEU_KIEN",
+    "target": "CONG_THUC_NHAN_XAC_SUAT_TONG_QUAT",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Xác suất có điều kiện là khái niệm cơ bản để hiểu và áp dụng công thức nhân xác suất."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0008"
+    ]
+  },
+  {
+    "source": "Y_NGHI_A_HINH_HOC_CUA_TICH_PHAN",
+    "target": "TICH_PHAN",
+    "relation": "REQUIRES",
+    "rationales": [
+      "Ý nghĩa hình học của tích phân yêu cầu khái niệm tích phân."
+    ],
+    "source_chunks": [
+      "toan-12-tap-2:0002"
+    ]
+  }
+]

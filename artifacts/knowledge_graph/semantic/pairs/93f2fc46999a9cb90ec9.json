@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_SIN",
+  "right_id": "CONG_THUC_NHAN_DOI",
+  "merge": false,
+  "rationale": "Left node is the angle addition formula for sine. Right node is the double-angle formula. They are distinct trigonometric identities. They are related but not semantic duplicates."
+}

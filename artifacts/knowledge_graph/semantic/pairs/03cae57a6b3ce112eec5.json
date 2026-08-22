@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEU_KIEN_HAI_MAT_PHANG_VUONG_GOC",
+  "right_id": "DIEU_KIEN_VUONG_GOC_HAI_MAT_PHANG",
+  "merge": false,
+  "rationale": "Left: condition using line contained in plane. Right: condition using normal vectors. Different formulations, possibly in different contexts (2D/3D or coordinate-free vs coordinate-specific)."
+}

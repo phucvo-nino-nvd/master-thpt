@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_TAI_VO_CUC",
+  "right_id": "GIOI_HAN_VO_CUC",
+  "merge": false,
+  "rationale": "Limit at infinity (variable → ∞) vs. infinite limit (function value → ∞). Different limit concepts."
+}

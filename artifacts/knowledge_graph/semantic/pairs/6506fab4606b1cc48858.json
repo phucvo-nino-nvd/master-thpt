@@ -1,0 +1,6 @@
+{
+  "left_id": "VECTO_BANG_NHAU",
+  "right_id": "VECTO_NGUOC_HUONG",
+  "merge": false,
+  "rationale": "Two distinct vector concepts: 'equal vectors' vs 'opposite-direction vectors'. They are not the same reusable knowledge."
+}

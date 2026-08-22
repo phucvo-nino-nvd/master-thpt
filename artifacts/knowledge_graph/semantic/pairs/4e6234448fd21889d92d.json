@@ -1,0 +1,6 @@
+{
+  "left_id": "GOC_GIUA_HAI_DUONG_THANG_TRONG_KHONG_GIAN",
+  "right_id": "VI_TRI_TUONG_DOI_HAI_DUONG_THANG",
+  "merge": false,
+  "rationale": "The nodes represent different concepts. One is the 'Góc giữa hai đường thẳng trong không gian' (angle between two lines in space), a specific measure. The other is 'Vị trí tương đối giữa hai đường thẳng' (relative position of two lines), a classification of relations including parallelism, intersection, etc. They are related but not identical."
+}

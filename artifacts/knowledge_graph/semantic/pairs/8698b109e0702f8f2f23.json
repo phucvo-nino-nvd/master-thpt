@@ -1,0 +1,6 @@
+{
+  "left_id": "QUY_TAC_GIOI_HAN_VO_CUC",
+  "right_id": "QUY_TAC_TINH_GIOI_HAN_THUONG",
+  "merge": false,
+  "rationale": "The left node is a general rule for limits involving infinity. The right node is a specific rule for the limit of a quotient, which may involve infinity or zero. The right node is a more specific case or application of limit rules, not a semantic duplicate."
+}

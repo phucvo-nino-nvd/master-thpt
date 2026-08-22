@@ -1,0 +1,2689 @@
+{
+  "summary": {
+    "chunks": 79,
+    "total_nodes": 812,
+    "unique_node_ids": 723,
+    "duplicate_node_occurrences": 89,
+    "total_edges": 750,
+    "node_types": {
+      "CONCEPT": 475,
+      "METHOD": 106,
+      "THEOREM": 92,
+      "FORMULA": 139
+    },
+    "relations": {
+      "IS_A": 156,
+      "REQUIRES": 439,
+      "SUBSET_OF": 4,
+      "PART_OF": 151
+    },
+    "repeated_ids": 66,
+    "conflicting_ids": 54,
+    "same_name_different_ids": 23
+  },
+  "conflicting_ids": {
+    "GIA_TRI_LUONG_GIAC": [
+      {
+        "chunk_id": "toan-10-tap-1:0005",
+        "name": "Giá trị lượng giác",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị lượng giác của một góc từ 0° đến 180° được định nghĩa dựa trên tọa độ của điểm trên nửa đường tròn đơn vị."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0001",
+        "name": "Giá trị lượng giác của góc lượng giác",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giá trị lượng giác của góc lượng giác bao gồm sin, cos, tan, cot của góc."
+      }
+    ],
+    "VECTO_KHONG": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Vectơ-không",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ có điểm đầu và điểm cuối trùng nhau, độ dài bằng 0, cùng hướng với mọi vectơ."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ không",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ có điểm đầu và điểm cuối trùng nhau, có độ dài 0 và cùng hướng với mọi vectơ."
+      }
+    ],
+    "DO_DAI_VECTO": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Độ dài của vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Khoảng cách giữa điểm đầu và điểm cuối của vectơ."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Độ dài vectơ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Khoảng cách giữa điểm đầu và điểm cuối của vectơ."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0008",
+        "name": "Độ dài vectơ",
+        "type": "FORMULA",
+        "grade": 12,
+        "description": "Biểu thức tính độ dài của một vectơ trong không gian Oxyz."
+      }
+    ],
+    "VECTO_CUNG_PHUONG": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Hai vectơ cùng phương",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hai vectơ có giá (đường thẳng đi qua điểm đầu và điểm cuối) song song hoặc trùng nhau."
+      },
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Vectơ cùng phương",
+        "type": "THEOREM",
+        "grade": 10,
+        "description": "Vectơ v(x'; y') cùng phương với vectơ u(x; y) ≠ 0 khi và chỉ khi tồn tại số k sao cho x' = kx, y' = ky (hay x'/x = y'/y nếu xy ≠ 0)."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ cùng phương",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hai vectơ có giá song song hoặc trùng nhau."
+      }
+    ],
+    "VECTO_CUNG_HUONG": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Hai vectơ cùng hướng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hai vectơ cùng phương và có cùng hướng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ cùng hướng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hai vectơ cùng phương và cùng hướng."
+      }
+    ],
+    "VECTO_BANG_NHAU": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Hai vectơ bằng nhau",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hai vectơ có cùng độ dài và cùng hướng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ bằng nhau",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hai vectơ có cùng độ dài và cùng hướng."
+      }
+    ],
+    "KY_HIEU_VECTO": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Ký hiệu vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ được ký hiệu là $\\overrightarrow{AB}$ (vectơ từ A đến B) hoặc $\\vec{a}, \\vec{b}, \\vec{x}, \\vec{y}, \\dots$."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Kí hiệu vectơ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ có điểm đầu A và điểm cuối B được kí hiệu là AB. Vectơ không chỉ rõ điểm đầu và cuối được kí hiệu là a, b, x, y, ..."
+      }
+    ],
+    "VECTO_DOI": [
+      {
+        "chunk_id": "toan-10-tap-1:0008",
+        "name": "vectơ đối",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ có cùng độ dài và ngược hướng với vectơ ban đầu, ký hiệu là -a."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ đối",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ có cùng độ dài và ngược hướng với vectơ a, kí hiệu là -a."
+      }
+    ],
+    "QUY_TAC_BA_DIEM": [
+      {
+        "chunk_id": "toan-10-tap-1:0008",
+        "name": "quy tắc ba điểm",
+        "type": "THEOREM",
+        "grade": 10,
+        "description": "Với ba điểm bất kì A, B, C, ta có AB + BC = AC."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Quy tắc ba điểm",
+        "type": "THEOREM",
+        "grade": 12,
+        "description": "Nếu A, B, C là ba điểm bất kì thì AB + BC = AC."
+      }
+    ],
+    "TRONG_TAM_TAM_GIAC": [
+      {
+        "chunk_id": "toan-10-tap-1:0008",
+        "name": "trọng tâm của tam giác",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Điểm G là trọng tâm của tam giác ABC nếu và chỉ nếu GA + GB + GC = 0."
+      },
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Trọng tâm tam giác",
+        "type": "FORMULA",
+        "grade": 10,
+        "description": "Trọng tâm G của tam giác ABC có toạ độ ((x_A + x_B + x_C)/3; (y_A + y_B + y_C)/3)."
+      }
+    ],
+    "MAT_PHANG_TOA_DO": [
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Mặt phẳng toạ độ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Mặt phẳng chứa hệ trục toạ độ Oxy, bao gồm trục hoành Ox và trục tung Oy, có gốc toạ độ chung O và vuông góc với nhau."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0007",
+        "name": "Mặt phẳng toạ độ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Ba mặt phẳng (Oxy), (Oyz), (Ozx) đôi một vuông góc với nhau trong hệ toạ độ."
+      }
+    ],
+    "TOA_DO_CUA_VECTO": [
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Toạ độ của vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Cặp số (x₀; y₀) duy nhất đại diện cho vectơ u trên mặt phẳng toạ độ Oxy, với u = x₀i + y₀j, trong đó i và j là vectơ đơn vị của trục Ox và Oy."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0007",
+        "name": "Toạ độ của vectơ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Bộ ba số (x; y; z) duy nhất sao cho vectơ a = xi + yj + zk."
+      }
+    ],
+    "VECTO_DON_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Vectơ đơn vị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ có độ dài bằng 1, được sử dụng để biểu diễn các vectơ khác trên trục toạ độ. Vectơ đơn vị của trục Ox là i, vectơ đơn vị của trục Oy là j."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0007",
+        "name": "Vectơ đơn vị",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ có độ dài bằng 1 và hướng theo trục toạ độ, ký hiệu i, j, k."
+      }
+    ],
+    "GOC_GIUA_HAI_VECTO": [
+      {
+        "chunk_id": "toan-10-tap-1:0011",
+        "name": "Góc giữa hai vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Số đo góc giữa hai vectơ không phải vectơ không, kí hiệu là (u, v)."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Góc giữa hai vectơ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Góc giữa hai vectơ a và b là góc giữa hai vectơ có điểm đầu trùng nhau và tương ứng với a và b."
+      }
+    ],
+    "TICH_VO_HUONG": [
+      {
+        "chunk_id": "toan-10-tap-1:0011",
+        "name": "Tích vô hướng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tích vô hướng của hai vectơ u và v là một số, kí hiệu là u·v, được xác định bởi công thức u·v = |u|·|v|·cos(u, v)."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Tích vô hướng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Tích vô hướng của hai vectơ a và b là một số, kí hiệu là a·b, được xác định bởi công thức a·b = |a|.|b|.cos(a, b)."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0008",
+        "name": "Tích vô hướng hai vectơ",
+        "type": "FORMULA",
+        "grade": 12,
+        "description": "Biểu thức toạ độ của tích vô hướng hai vectơ trong không gian Oxyz."
+      }
+    ],
+    "SO_TRUNG_BINH": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Số trung bình",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị trung bình cộng của các số trong mẫu số liệu, đại diện cho vị trí trung tâm của mẫu."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Số trung bình",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Số đặc trưng đo xu thế trung tâm của mẫu số liệu, tính bằng tổng các giá trị chia cho số lượng giá trị."
+      }
+    ],
+    "TRUNG_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Trung vị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị chia đôi mẫu số liệu sắp xếp, không bị ảnh hưởng bởi giá trị bất thường."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Trung vị",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Số đặc trưng đo xu thế trung tâm, chia mẫu số liệu thành hai phần có số lượng giá trị bằng nhau."
+      }
+    ],
+    "TU_PHAN_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Ba giá trị Q1, Q2, Q3 chia mẫu số liệu thành bốn phần, mỗi phần chứa 25% giá trị."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Ba số đặc trưng Q1, Q2, Q3 chia mẫu số liệu thành bốn phần, mỗi phần chứa 25% giá trị."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Tứ phân vị thứ r (r = 1, 2, 3) của một mẫu số liệu ghép nhóm là giá trị được tính dựa trên vị trí của nó trong mẫu, sử dụng công thức xác định nhóm chứa và tính toán giá trị xấp xỉ."
+      }
+    ],
+    "MOT": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Mốt",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị xuất hiện với tần số lớn nhất trong mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Mốt",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giá trị xuất hiện nhiều nhất trong mẫu số liệu, đo xu thế trung tâm."
+      }
+    ],
+    "CONG_THUC_TINH_TRUNG_BINH": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Công thức tính trung bình",
+        "type": "FORMULA",
+        "grade": 10,
+        "description": "Trung bình cộng của mẫu số liệu x1, x2, ..., xn là x̄ = (x1 + x2 + ... + xn)/n."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Công thức tính trung bình",
+        "type": "FORMULA",
+        "grade": 11,
+        "description": "Trung bình của mẫu số liệu ghép nhóm tính bằng công thức: x̄ = (m1x1 + ... + mkxk) / n, trong đó xi = (ai + ai+1)/2."
+      }
+    ],
+    "KHOANG_BIEN_THIEN": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Khoảng biến thiên",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0008",
+        "name": "Khoảng biến thiên",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khoảng cách giữa giá trị lớn nhất và nhỏ nhất trong mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Khoảng biến thiên",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Khoảng biến thiên của một mẫu số liệu là hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu. Được dùng để đo mức độ phân tán của mẫu."
+      }
+    ],
+    "KHOANG_TU_PHAN_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Khoảng tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất, đo độ phân tán của 50% số liệu chính giữa của mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Khoảng tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Khoảng tứ phân vị của một mẫu số liệu là hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất. Được dùng để đo mức độ phân tán của mẫu, không bị ảnh hưởng bởi các giá trị bất thường."
+      }
+    ],
+    "PHUONG_SAI": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Phương sai",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị tính bằng tổng bình phương độ lệch của từng giá trị so với giá trị trung bình, chia cho số lượng giá trị."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0010",
+        "name": "Phương sai",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Đo lường mức độ phân tán của mẫu số liệu xung quanh số trung bình."
+      }
+    ],
+    "DO_LECH_CHUAN": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Độ lệch chuẩn",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Căn bậc hai của phương sai, đo độ phân tán của mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0010",
+        "name": "Độ lệch chuẩn",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Căn bậc hai của phương sai, đo lường mức độ phân tán của mẫu số liệu."
+      }
+    ],
+    "TINH_KHOANG_BIEN_THIEN": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Tính khoảng biến thiên",
+        "type": "METHOD",
+        "grade": 10,
+        "description": "Tính hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Tính khoảng biến thiên",
+        "type": "METHOD",
+        "grade": 12,
+        "description": "Với mẫu số liệu ghép nhóm, khoảng biến thiên được tính là hiệu số giữa giới hạn trên của nhóm cuối cùng và giới hạn dưới của nhóm đầu tiên."
+      }
+    ],
+    "TINH_KHOANG_TU_PHAN_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Tính khoảng tứ phân vị",
+        "type": "METHOD",
+        "grade": 10,
+        "description": "Tính hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Tính khoảng tứ phân vị",
+        "type": "METHOD",
+        "grade": 12,
+        "description": "Với mẫu số liệu ghép nhóm, khoảng tứ phân vị được tính bằng hiệu số giữa tứ phân vị thứ ba (Q3) và tứ phân vị thứ nhất (Q1). Mỗi tứ phân vị được tính dựa trên công thức xác định nhóm chứa và tính toán giá trị xấp xỉ."
+      }
+    ],
+    "HAM_SO": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Hàm số",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Mối quan hệ giữa hai tập hợp số, trong đó mỗi phần tử của tập xác định được ánh xạ duy nhất vào một phần tử của tập giá trị."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0002",
+        "name": "hàm số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Quan hệ giữa hai tập hợp, trong đó mỗi phần tử của tập đầu vào được ánh xạ đến một phần tử duy nhất của tập đầu ra."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0003",
+        "name": "hàm số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "mối quan hệ giữa hai tập hợp số, biểu diễn bởi y = f(x)"
+      }
+    ],
+    "TAP_XAC_DINH": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Tập xác định",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tập hợp tất cả các giá trị của biến số mà hàm số được định nghĩa."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0004",
+        "name": "Tập xác định",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Tập tất cả các giá trị biến độc lập mà hàm số được định nghĩa."
+      }
+    ],
+    "TAP_GIA_TRI": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Tập giá trị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tập hợp tất cả các giá trị của hàm số được nhận được từ tập xác định."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0003",
+        "name": "Tập giá trị",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Tập tất cả các giá trị mà hàm số có thể nhận."
+      }
+    ],
+    "DO_THI_HAM_SO": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Đồ thị của hàm số",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tập hợp tất cả các điểm (x, f(x)) trên mặt phẳng toạ độ với x thuộc tập xác định."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0003",
+        "name": "Đồ thị hàm số",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Biểu diễn hình học của một hàm số trên hệ tọa độ Oxy."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0003",
+        "name": "đồ thị hàm số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "biểu diễn hình học của hàm số y = f(x) trên mặt phẳng tọa độ"
+      }
+    ],
+    "HAM_SO_DONG_BIEN": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Hàm số đồng biến",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hàm số mà giá trị tăng khi biến số tăng trên một khoảng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0001",
+        "name": "Hàm số đồng biến",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hàm số được gọi là đồng biến trên một khoảng nếu giá trị của nó tăng khi biến số tăng."
+      }
+    ],
+    "HAM_SO_NGHICH_BIEN": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Hàm số nghịch biến",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hàm số mà giá trị giảm khi biến số tăng trên một khoảng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0001",
+        "name": "Hàm số nghịch biến",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hàm số được gọi là nghịch biến trên một khoảng nếu giá trị của nó giảm khi biến số tăng."
+      }
+    ],
+    "TRUC_DOI_XUNG": [
+      {
+        "chunk_id": "toan-10-tap-2:0002",
+        "name": "Trục đối xứng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Đường thẳng x = -b/2a, là trục đối xứng của đồ thị parabola."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0004",
+        "name": "Trục đối xứng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Đường thẳng mà đồ thị hàm số đối xứng quanh đường thẳng này."
+      }
+    ],
+    "KHOANG_GIA_TRI_MAU": [
+      {
+        "chunk_id": "toan-10-tap-2:0005",
+        "name": "Không gian mẫu",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tập hợp tất cả các kết quả có thể khi thực hiện phép thử ngẫu nhiên."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0014",
+        "name": "Không gian mẫu",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Tập hợp tất cả các kết quả có thể xảy ra của một thử nghiệm ngẫu nhiên."
+      }
+    ],
+    "BIEN_CO": [
+      {
+        "chunk_id": "toan-10-tap-2:0005",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Một tập con của không gian mẫu, bao gồm tất cả các kết quả thuận lợi cho biến cố đó."
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0006",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Một tập con của không gian mẫu, đại diện cho một sự kiện có thể xảy ra."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0015",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Một sự kiện có thể xảy ra trong một thí nghiệm ngẫu nhiên."
+      }
+    ],
+    "BIEN_CO_DOI": [
+      {
+        "chunk_id": "toan-10-tap-2:0005",
+        "name": "Biến cố đối",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Biến cố 'E không xảy ra', được kí hiệu là E̅. Nếu E là tập con của không gian mẫu Ω, thì E̅ là phần bù của E trong Ω."
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0006",
+        "name": "Biến cố đôi",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hai biến cố liên quan, thường được tính bằng quy tắc xác suất của biến cố đối."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0015",
+        "name": "Biến cố đối",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Biến cố đối của A, ký hiệu A̅, xảy ra khi và chỉ khi A không xảy ra."
+      }
+    ],
+    "SO_DO_HINH_CAY": [
+      {
+        "chunk_id": "toan-10-tap-2:0006",
+        "name": "Sơ đồ hình cây",
+        "type": "METHOD",
+        "grade": 10,
+        "description": "Phương pháp mô tả các kết quả có thể của phép thử bằng sơ đồ hình cây để tính xác suất."
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0011",
+        "name": "Sơ đồ hình cây",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Sơ đồ minh hoạ cách phân chia trường hợp trong các bài toán đếm, giúp visual hóa và tránh bỏ sót trường hợp."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0016",
+        "name": "sơ đồ hình cây",
+        "type": "METHOD",
+        "grade": 11,
+        "description": "Phương pháp sử dụng sơ đồ hình cây để tính xác suất của các biến cố liên quan."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0009",
+        "name": "Sơ đồ hình cây",
+        "type": "METHOD",
+        "grade": 12,
+        "description": "Phương pháp mô tả trực quan công thức xác suất toàn phần bằng cách sử dụng hình cây."
+      }
+    ],
+    "VECTO_PHAP_TUYEN": [
+      {
+        "chunk_id": "toan-10-tap-2:0007",
+        "name": "vectơ pháp tuyến",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "vectơ khác không vuông góc với đường thẳng"
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "name": "Vectơ pháp tuyến",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ vuông góc với đường thẳng, dùng để xác định phương hướng của đường thẳng."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0004",
+        "name": "Vectơ pháp tuyến",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ vuông góc với mặt phẳng"
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Vectơ pháp tuyến",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ vuông góc với mặt phẳng"
+      }
+    ],
+    "PHUONG_TRINH_THAM_SO": [
+      {
+        "chunk_id": "toan-10-tap-2:0007",
+        "name": "phương trình tham số",
+        "type": "FORMULA",
+        "grade": 10,
+        "description": "hệ phương trình x = x0 + at, y = y0 + bt biểu diễn đường thẳng với t là tham số"
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "name": "Phương trình tham số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hệ phương trình xác định đường thẳng đi qua một điểm và có vectơ chỉ phương."
+      }
+    ],
+    "VECTO_CHI_PHUONG": [
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "name": "Vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ có cùng hướng với đường thẳng, dùng để xác định phương hướng của đường thẳng."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "name": "Vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ không bằng không được gọi là vectơ chỉ phương của đường thẳng nếu giá của nó song song hoặc trùng với đường thẳng đó."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ xác định hướng của đường thẳng trong không gian"
+      }
+    ],
+    "GOC_GIUA_HAI_DUONG_THANG": [
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "name": "Góc giữa hai đường thẳng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Góc không tù tạo bởi hai đường thẳng cắt nhau, được xác định bằng công thức liên quan đến vectơ pháp tuyến hoặc vectơ chỉ phương."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0008",
+        "name": "Góc giữa hai đường thẳng",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Góc giữa hai đường thẳng chéo nhau trong không gian, xác định bằng góc giữa hai đường thẳng song song với chúng và cùng đi qua một điểm."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Góc giữa hai đường thẳng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Góc tạo bởi hai đường thẳng trong không gian"
+      }
+    ],
+    "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG": [
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "name": "Khoảng cách từ điểm đến đường thẳng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Khoảng cách ngắn nhất từ một điểm đến một đường thẳng trong mặt phẳng toạ độ."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0012",
+        "name": "Khoảng cách từ điểm đến đường thẳng",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khoảng cách từ một điểm M đến đường thẳng a, kí hiệu d(M, a), là khoảng cách giữa M và hình chiếu H của M trên a."
+      }
+    ],
+    "PHUONG_TRINH_TIEP_TUYEN": [
+      {
+        "chunk_id": "toan-10-tap-2:0009",
+        "name": "phương trình tiếp tuyến",
+        "type": "FORMULA",
+        "grade": 10,
+        "description": "phương trình đại số biểu diễn tiếp tuyến của đường tròn tại một điểm."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0005",
+        "name": "Phương trình tiếp tuyến",
+        "type": "FORMULA",
+        "grade": 11,
+        "description": "Phương trình đường thẳng đi qua điểm P(x₀, y₀) với hệ số góc bằng đạo hàm tại điểm đó."
+      }
+    ],
+    "PHUONG_TRINH_CHINH_TAC": [
+      {
+        "chunk_id": "toan-10-tap-2:0010",
+        "name": "Phương trình chính tắc",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Phương trình đại số mô tả đường conic."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "name": "Phương trình chính tắc",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hệ phương trình dưới dạng phân số bằng nhau xác định đường thẳng đi qua một điểm và có vectơ chỉ phương."
+      }
+    ],
+    "MAU_SO_LIEU_GHEP_NHOM": [
+      {
+        "chunk_id": "toan-11-tap-1:0008",
+        "name": "Mẫu số liệu ghép nhóm",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Mẫu số liệu biểu diễn dưới dạng bảng tần số của các nhóm số liệu, mỗi nhóm được định nghĩa bởi một khoảng giá trị."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Mẫu số liệu ghép nhóm",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Mẫu số liệu được chia thành các nhóm có tần số tương ứng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Mẫu số liệu ghép nhóm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Mẫu số liệu được chia thành các nhóm (khoảng) và ghi nhận tần số của mỗi nhóm. Dùng để tính các số đặc trưng đo mức độ phân tán như khoảng biến thiên và khoảng tứ phân vị."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0010",
+        "name": "Mẫu số liệu ghép nhóm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Mẫu số liệu được chia thành các nhóm có tần số tương ứng."
+      }
+    ],
+    "GIOI_HAN_HAM_SO": [
+      {
+        "chunk_id": "toan-11-tap-1:0016",
+        "name": "Giới hạn của hàm số",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khái niệm về giới hạn của một hàm số khi biến số tiến gần một giá trị xác định hoặc vô cực."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0003",
+        "name": "giới hạn hàm số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "giá trị mà hàm số tiếp cận khi biến số tiếp cận một giá trị xác định"
+      }
+    ],
+    "VAN_TOC_TUC_THOI": [
+      {
+        "chunk_id": "toan-11-tap-2:0005",
+        "name": "Vận tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Đạo hàm của hàm vị trí theo thời gian."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0007",
+        "name": "Vận tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Đạo hàm của vị trí theo thời gian, biểu thị tốc độ và hướng chuyển động tại một thời điểm."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0005",
+        "name": "Vận tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vận tốc tức thời của vật chuyển động là đạo hàm của hàm vị trí s(t) đối với thời gian t."
+      }
+    ],
+    "DAO_HAM": [
+      {
+        "chunk_id": "toan-11-tap-2:0005",
+        "name": "Đạo hàm",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giới hạn của tỉ số phân biệt khi biến thay đổi về một điểm."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0006",
+        "name": "Đạo hàm",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khái niệm về đạo hàm của một hàm số."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0002",
+        "name": "đạo hàm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Đạo hàm của một hàm số tại một điểm là giới hạn của tỷ lệ biến thiên của hàm số khi biến độc lập thay đổi."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0004",
+        "name": "Đạo hàm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Thuật ngữ mô tả tốc độ biến thiên của hàm số."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0005",
+        "name": "Đạo hàm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Đạo hàm f'(a) biểu thị tốc độ thay đổi tức thời của đại lượng y = f(x) đối với x tại điểm x = a."
+      }
+    ],
+    "TICH_PHAN": [
+      {
+        "chunk_id": "toan-11-tap-2:0005",
+        "name": "Tích phân",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khái niệm liên quan đến đạo hàm, nhưng không được đề cập trong đoạn văn."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0002",
+        "name": "Tích phân",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hiệu số F(b) - F(a) của một nguyên hàm F(x) của hàm số liên tục f(x) trên đoạn [a, b], kí hiệu ∫ₐᵇ f(x) dx."
+      }
+    ],
+    "GIA_TOC_TUC_THOI": [
+      {
+        "chunk_id": "toan-11-tap-2:0007",
+        "name": "Gia tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Đạo hàm của vận tốc tức thời, biểu thị sự thay đổi của vận tốc theo thời gian."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0005",
+        "name": "Gia tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Gia tốc tức thời là đạo hàm của vận tốc tức thời, tức là đạo hàm thứ hai của hàm vị trí s(t)."
+      }
+    ],
+    "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG": [
+      {
+        "chunk_id": "toan-11-tap-2:0010",
+        "name": "Góc giữa đường thẳng và mặt phẳng",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Nếu đường thẳng a không vuông góc với mặt phẳng (P), thì góc giữa a và hình chiếu a' của nó trên (P) được gọi là góc giữa đường thẳng a và mặt phẳng (P)."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Góc giữa đường thẳng và mặt phẳng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Góc tạo bởi đường thẳng với mặt phẳng trong không gian"
+      }
+    ],
+    "GOC_GIUA_HAI_MAT_PHANG": [
+      {
+        "chunk_id": "toan-11-tap-2:0011",
+        "name": "Góc giữa hai mặt phẳng",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Góc giữa hai mặt phẳng được xác định bởi góc giữa hai đường thẳng tương ứng vuông góc với mỗi mặt phẳng."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Góc giữa hai mặt phẳng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Góc tạo bởi hai mặt phẳng trong không gian"
+      }
+    ],
+    "CONG_THUC_NHAN_XAC_SUAT": [
+      {
+        "chunk_id": "toan-11-tap-2:0016",
+        "name": "công thức nhân xác suất cho hai biến cố độc lập",
+        "type": "FORMULA",
+        "grade": 11,
+        "description": "Với hai biến cố độc lập A và B, công thức P(AB) = P(A) * P(B)."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0008",
+        "name": "Công thức nhân xác suất",
+        "type": "FORMULA",
+        "grade": 12,
+        "description": "P(AB) = P(B) * P(A|B) với P(B) > 0."
+      }
+    ],
+    "QUY_TAC_HINH_HOP": [
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Quy tắc hình hộp",
+        "type": "THEOREM",
+        "grade": 12,
+        "description": "Cho hình hộp ABCD.A'B'C'D' thì AB + AD + AA' = AC'."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0007",
+        "name": "Quy tắc hình hộp",
+        "type": "METHOD",
+        "grade": 12,
+        "description": "Phương pháp xác định toạ độ của điểm M bằng cách vẽ hình hộp chữ nhật từ gốc O đến M, sử dụng các vectơ trên trục."
+      }
+    ]
+  },
+  "repeated_ids": {
+    "GIA_TRI_LUONG_GIAC": [
+      {
+        "chunk_id": "toan-10-tap-1:0005",
+        "name": "Giá trị lượng giác",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị lượng giác của một góc từ 0° đến 180° được định nghĩa dựa trên tọa độ của điểm trên nửa đường tròn đơn vị."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0001",
+        "name": "Giá trị lượng giác của góc lượng giác",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giá trị lượng giác của góc lượng giác bao gồm sin, cos, tan, cot của góc."
+      }
+    ],
+    "VECTO": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Một đoạn thẳng có hướng, được xác định bởi điểm đầu và điểm cuối."
+      },
+      {
+        "chunk_id": "toan-10-tap-1:0008",
+        "name": "vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Đại lượng có cả độ lớn và hướng trong không gian."
+      }
+    ],
+    "VECTO_KHONG": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Vectơ-không",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ có điểm đầu và điểm cuối trùng nhau, độ dài bằng 0, cùng hướng với mọi vectơ."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ không",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ có điểm đầu và điểm cuối trùng nhau, có độ dài 0 và cùng hướng với mọi vectơ."
+      }
+    ],
+    "DO_DAI_VECTO": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Độ dài của vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Khoảng cách giữa điểm đầu và điểm cuối của vectơ."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Độ dài vectơ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Khoảng cách giữa điểm đầu và điểm cuối của vectơ."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0008",
+        "name": "Độ dài vectơ",
+        "type": "FORMULA",
+        "grade": 12,
+        "description": "Biểu thức tính độ dài của một vectơ trong không gian Oxyz."
+      }
+    ],
+    "VECTO_CUNG_PHUONG": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Hai vectơ cùng phương",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hai vectơ có giá (đường thẳng đi qua điểm đầu và điểm cuối) song song hoặc trùng nhau."
+      },
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Vectơ cùng phương",
+        "type": "THEOREM",
+        "grade": 10,
+        "description": "Vectơ v(x'; y') cùng phương với vectơ u(x; y) ≠ 0 khi và chỉ khi tồn tại số k sao cho x' = kx, y' = ky (hay x'/x = y'/y nếu xy ≠ 0)."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ cùng phương",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hai vectơ có giá song song hoặc trùng nhau."
+      }
+    ],
+    "VECTO_CUNG_HUONG": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Hai vectơ cùng hướng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hai vectơ cùng phương và có cùng hướng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ cùng hướng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hai vectơ cùng phương và cùng hướng."
+      }
+    ],
+    "VECTO_BANG_NHAU": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Hai vectơ bằng nhau",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hai vectơ có cùng độ dài và cùng hướng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ bằng nhau",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hai vectơ có cùng độ dài và cùng hướng."
+      }
+    ],
+    "KY_HIEU_VECTO": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "name": "Ký hiệu vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ được ký hiệu là $\\overrightarrow{AB}$ (vectơ từ A đến B) hoặc $\\vec{a}, \\vec{b}, \\vec{x}, \\vec{y}, \\dots$."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Kí hiệu vectơ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ có điểm đầu A và điểm cuối B được kí hiệu là AB. Vectơ không chỉ rõ điểm đầu và cuối được kí hiệu là a, b, x, y, ..."
+      }
+    ],
+    "VECTO_DOI": [
+      {
+        "chunk_id": "toan-10-tap-1:0008",
+        "name": "vectơ đối",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ có cùng độ dài và ngược hướng với vectơ ban đầu, ký hiệu là -a."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Vectơ đối",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ có cùng độ dài và ngược hướng với vectơ a, kí hiệu là -a."
+      }
+    ],
+    "QUY_TAC_BA_DIEM": [
+      {
+        "chunk_id": "toan-10-tap-1:0008",
+        "name": "quy tắc ba điểm",
+        "type": "THEOREM",
+        "grade": 10,
+        "description": "Với ba điểm bất kì A, B, C, ta có AB + BC = AC."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Quy tắc ba điểm",
+        "type": "THEOREM",
+        "grade": 12,
+        "description": "Nếu A, B, C là ba điểm bất kì thì AB + BC = AC."
+      }
+    ],
+    "TRONG_TAM_TAM_GIAC": [
+      {
+        "chunk_id": "toan-10-tap-1:0008",
+        "name": "trọng tâm của tam giác",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Điểm G là trọng tâm của tam giác ABC nếu và chỉ nếu GA + GB + GC = 0."
+      },
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Trọng tâm tam giác",
+        "type": "FORMULA",
+        "grade": 10,
+        "description": "Trọng tâm G của tam giác ABC có toạ độ ((x_A + x_B + x_C)/3; (y_A + y_B + y_C)/3)."
+      }
+    ],
+    "MAT_PHANG_TOA_DO": [
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Mặt phẳng toạ độ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Mặt phẳng chứa hệ trục toạ độ Oxy, bao gồm trục hoành Ox và trục tung Oy, có gốc toạ độ chung O và vuông góc với nhau."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0007",
+        "name": "Mặt phẳng toạ độ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Ba mặt phẳng (Oxy), (Oyz), (Ozx) đôi một vuông góc với nhau trong hệ toạ độ."
+      }
+    ],
+    "TOA_DO_CUA_VECTO": [
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Toạ độ của vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Cặp số (x₀; y₀) duy nhất đại diện cho vectơ u trên mặt phẳng toạ độ Oxy, với u = x₀i + y₀j, trong đó i và j là vectơ đơn vị của trục Ox và Oy."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0007",
+        "name": "Toạ độ của vectơ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Bộ ba số (x; y; z) duy nhất sao cho vectơ a = xi + yj + zk."
+      }
+    ],
+    "VECTO_DON_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0010",
+        "name": "Vectơ đơn vị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ có độ dài bằng 1, được sử dụng để biểu diễn các vectơ khác trên trục toạ độ. Vectơ đơn vị của trục Ox là i, vectơ đơn vị của trục Oy là j."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0007",
+        "name": "Vectơ đơn vị",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ có độ dài bằng 1 và hướng theo trục toạ độ, ký hiệu i, j, k."
+      }
+    ],
+    "GOC_GIUA_HAI_VECTO": [
+      {
+        "chunk_id": "toan-10-tap-1:0011",
+        "name": "Góc giữa hai vectơ",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Số đo góc giữa hai vectơ không phải vectơ không, kí hiệu là (u, v)."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Góc giữa hai vectơ",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Góc giữa hai vectơ a và b là góc giữa hai vectơ có điểm đầu trùng nhau và tương ứng với a và b."
+      }
+    ],
+    "TICH_VO_HUONG": [
+      {
+        "chunk_id": "toan-10-tap-1:0011",
+        "name": "Tích vô hướng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tích vô hướng của hai vectơ u và v là một số, kí hiệu là u·v, được xác định bởi công thức u·v = |u|·|v|·cos(u, v)."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Tích vô hướng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Tích vô hướng của hai vectơ a và b là một số, kí hiệu là a·b, được xác định bởi công thức a·b = |a|.|b|.cos(a, b)."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0008",
+        "name": "Tích vô hướng hai vectơ",
+        "type": "FORMULA",
+        "grade": 12,
+        "description": "Biểu thức toạ độ của tích vô hướng hai vectơ trong không gian Oxyz."
+      }
+    ],
+    "SO_TRUNG_BINH": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Số trung bình",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị trung bình cộng của các số trong mẫu số liệu, đại diện cho vị trí trung tâm của mẫu."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Số trung bình",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Số đặc trưng đo xu thế trung tâm của mẫu số liệu, tính bằng tổng các giá trị chia cho số lượng giá trị."
+      }
+    ],
+    "TRUNG_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Trung vị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị chia đôi mẫu số liệu sắp xếp, không bị ảnh hưởng bởi giá trị bất thường."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Trung vị",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Số đặc trưng đo xu thế trung tâm, chia mẫu số liệu thành hai phần có số lượng giá trị bằng nhau."
+      }
+    ],
+    "TU_PHAN_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Ba giá trị Q1, Q2, Q3 chia mẫu số liệu thành bốn phần, mỗi phần chứa 25% giá trị."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Ba số đặc trưng Q1, Q2, Q3 chia mẫu số liệu thành bốn phần, mỗi phần chứa 25% giá trị."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Tứ phân vị thứ r (r = 1, 2, 3) của một mẫu số liệu ghép nhóm là giá trị được tính dựa trên vị trí của nó trong mẫu, sử dụng công thức xác định nhóm chứa và tính toán giá trị xấp xỉ."
+      }
+    ],
+    "MOT": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Mốt",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị xuất hiện với tần số lớn nhất trong mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Mốt",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giá trị xuất hiện nhiều nhất trong mẫu số liệu, đo xu thế trung tâm."
+      }
+    ],
+    "CONG_THUC_TINH_TRUNG_BINH": [
+      {
+        "chunk_id": "toan-10-tap-1:0013",
+        "name": "Công thức tính trung bình",
+        "type": "FORMULA",
+        "grade": 10,
+        "description": "Trung bình cộng của mẫu số liệu x1, x2, ..., xn là x̄ = (x1 + x2 + ... + xn)/n."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Công thức tính trung bình",
+        "type": "FORMULA",
+        "grade": 11,
+        "description": "Trung bình của mẫu số liệu ghép nhóm tính bằng công thức: x̄ = (m1x1 + ... + mkxk) / n, trong đó xi = (ai + ai+1)/2."
+      }
+    ],
+    "KHOANG_BIEN_THIEN": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Khoảng biến thiên",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0008",
+        "name": "Khoảng biến thiên",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khoảng cách giữa giá trị lớn nhất và nhỏ nhất trong mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Khoảng biến thiên",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Khoảng biến thiên của một mẫu số liệu là hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu. Được dùng để đo mức độ phân tán của mẫu."
+      }
+    ],
+    "KHOANG_TU_PHAN_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Khoảng tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất, đo độ phân tán của 50% số liệu chính giữa của mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Khoảng tứ phân vị",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Khoảng tứ phân vị của một mẫu số liệu là hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất. Được dùng để đo mức độ phân tán của mẫu, không bị ảnh hưởng bởi các giá trị bất thường."
+      }
+    ],
+    "PHUONG_SAI": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Phương sai",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Giá trị tính bằng tổng bình phương độ lệch của từng giá trị so với giá trị trung bình, chia cho số lượng giá trị."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0010",
+        "name": "Phương sai",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Đo lường mức độ phân tán của mẫu số liệu xung quanh số trung bình."
+      }
+    ],
+    "DO_LECH_CHUAN": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Độ lệch chuẩn",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Căn bậc hai của phương sai, đo độ phân tán của mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0010",
+        "name": "Độ lệch chuẩn",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Căn bậc hai của phương sai, đo lường mức độ phân tán của mẫu số liệu."
+      }
+    ],
+    "TINH_KHOANG_BIEN_THIEN": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Tính khoảng biến thiên",
+        "type": "METHOD",
+        "grade": 10,
+        "description": "Tính hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất trong mẫu số liệu."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Tính khoảng biến thiên",
+        "type": "METHOD",
+        "grade": 12,
+        "description": "Với mẫu số liệu ghép nhóm, khoảng biến thiên được tính là hiệu số giữa giới hạn trên của nhóm cuối cùng và giới hạn dưới của nhóm đầu tiên."
+      }
+    ],
+    "TINH_KHOANG_TU_PHAN_VI": [
+      {
+        "chunk_id": "toan-10-tap-1:0014",
+        "name": "Tính khoảng tứ phân vị",
+        "type": "METHOD",
+        "grade": 10,
+        "description": "Tính hiệu số giữa tứ phân vị thứ ba và tứ phân vị thứ nhất."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Tính khoảng tứ phân vị",
+        "type": "METHOD",
+        "grade": 12,
+        "description": "Với mẫu số liệu ghép nhóm, khoảng tứ phân vị được tính bằng hiệu số giữa tứ phân vị thứ ba (Q3) và tứ phân vị thứ nhất (Q1). Mỗi tứ phân vị được tính dựa trên công thức xác định nhóm chứa và tính toán giá trị xấp xỉ."
+      }
+    ],
+    "HAM_SO": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Hàm số",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Mối quan hệ giữa hai tập hợp số, trong đó mỗi phần tử của tập xác định được ánh xạ duy nhất vào một phần tử của tập giá trị."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0002",
+        "name": "hàm số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Quan hệ giữa hai tập hợp, trong đó mỗi phần tử của tập đầu vào được ánh xạ đến một phần tử duy nhất của tập đầu ra."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0003",
+        "name": "hàm số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "mối quan hệ giữa hai tập hợp số, biểu diễn bởi y = f(x)"
+      }
+    ],
+    "TAP_XAC_DINH": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Tập xác định",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tập hợp tất cả các giá trị của biến số mà hàm số được định nghĩa."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0004",
+        "name": "Tập xác định",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Tập tất cả các giá trị biến độc lập mà hàm số được định nghĩa."
+      }
+    ],
+    "TAP_GIA_TRI": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Tập giá trị",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tập hợp tất cả các giá trị của hàm số được nhận được từ tập xác định."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0003",
+        "name": "Tập giá trị",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Tập tất cả các giá trị mà hàm số có thể nhận."
+      }
+    ],
+    "DO_THI_HAM_SO": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Đồ thị của hàm số",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tập hợp tất cả các điểm (x, f(x)) trên mặt phẳng toạ độ với x thuộc tập xác định."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0003",
+        "name": "Đồ thị hàm số",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Biểu diễn hình học của một hàm số trên hệ tọa độ Oxy."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0003",
+        "name": "đồ thị hàm số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "biểu diễn hình học của hàm số y = f(x) trên mặt phẳng tọa độ"
+      }
+    ],
+    "HAM_SO_DONG_BIEN": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Hàm số đồng biến",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hàm số mà giá trị tăng khi biến số tăng trên một khoảng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0001",
+        "name": "Hàm số đồng biến",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hàm số được gọi là đồng biến trên một khoảng nếu giá trị của nó tăng khi biến số tăng."
+      }
+    ],
+    "HAM_SO_NGHICH_BIEN": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "name": "Hàm số nghịch biến",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hàm số mà giá trị giảm khi biến số tăng trên một khoảng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0001",
+        "name": "Hàm số nghịch biến",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hàm số được gọi là nghịch biến trên một khoảng nếu giá trị của nó giảm khi biến số tăng."
+      }
+    ],
+    "TRUC_DOI_XUNG": [
+      {
+        "chunk_id": "toan-10-tap-2:0002",
+        "name": "Trục đối xứng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Đường thẳng x = -b/2a, là trục đối xứng của đồ thị parabola."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0004",
+        "name": "Trục đối xứng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Đường thẳng mà đồ thị hàm số đối xứng quanh đường thẳng này."
+      }
+    ],
+    "KHOANG_GIA_TRI_MAU": [
+      {
+        "chunk_id": "toan-10-tap-2:0005",
+        "name": "Không gian mẫu",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Tập hợp tất cả các kết quả có thể khi thực hiện phép thử ngẫu nhiên."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0014",
+        "name": "Không gian mẫu",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Tập hợp tất cả các kết quả có thể xảy ra của một thử nghiệm ngẫu nhiên."
+      }
+    ],
+    "BIEN_CO": [
+      {
+        "chunk_id": "toan-10-tap-2:0005",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Một tập con của không gian mẫu, bao gồm tất cả các kết quả thuận lợi cho biến cố đó."
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0006",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Một tập con của không gian mẫu, đại diện cho một sự kiện có thể xảy ra."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0015",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Một sự kiện có thể xảy ra trong một thí nghiệm ngẫu nhiên."
+      }
+    ],
+    "BIEN_CO_DOI": [
+      {
+        "chunk_id": "toan-10-tap-2:0005",
+        "name": "Biến cố đối",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Biến cố 'E không xảy ra', được kí hiệu là E̅. Nếu E là tập con của không gian mẫu Ω, thì E̅ là phần bù của E trong Ω."
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0006",
+        "name": "Biến cố đôi",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Hai biến cố liên quan, thường được tính bằng quy tắc xác suất của biến cố đối."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0015",
+        "name": "Biến cố đối",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Biến cố đối của A, ký hiệu A̅, xảy ra khi và chỉ khi A không xảy ra."
+      }
+    ],
+    "SO_DO_HINH_CAY": [
+      {
+        "chunk_id": "toan-10-tap-2:0006",
+        "name": "Sơ đồ hình cây",
+        "type": "METHOD",
+        "grade": 10,
+        "description": "Phương pháp mô tả các kết quả có thể của phép thử bằng sơ đồ hình cây để tính xác suất."
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0011",
+        "name": "Sơ đồ hình cây",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Sơ đồ minh hoạ cách phân chia trường hợp trong các bài toán đếm, giúp visual hóa và tránh bỏ sót trường hợp."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0016",
+        "name": "sơ đồ hình cây",
+        "type": "METHOD",
+        "grade": 11,
+        "description": "Phương pháp sử dụng sơ đồ hình cây để tính xác suất của các biến cố liên quan."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0009",
+        "name": "Sơ đồ hình cây",
+        "type": "METHOD",
+        "grade": 12,
+        "description": "Phương pháp mô tả trực quan công thức xác suất toàn phần bằng cách sử dụng hình cây."
+      }
+    ],
+    "VECTO_PHAP_TUYEN": [
+      {
+        "chunk_id": "toan-10-tap-2:0007",
+        "name": "vectơ pháp tuyến",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "vectơ khác không vuông góc với đường thẳng"
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "name": "Vectơ pháp tuyến",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ vuông góc với đường thẳng, dùng để xác định phương hướng của đường thẳng."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0004",
+        "name": "Vectơ pháp tuyến",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ vuông góc với mặt phẳng"
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Vectơ pháp tuyến",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ vuông góc với mặt phẳng"
+      }
+    ],
+    "PHUONG_TRINH_THAM_SO": [
+      {
+        "chunk_id": "toan-10-tap-2:0007",
+        "name": "phương trình tham số",
+        "type": "FORMULA",
+        "grade": 10,
+        "description": "hệ phương trình x = x0 + at, y = y0 + bt biểu diễn đường thẳng với t là tham số"
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "name": "Phương trình tham số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hệ phương trình xác định đường thẳng đi qua một điểm và có vectơ chỉ phương."
+      }
+    ],
+    "VECTO_CHI_PHUONG": [
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "name": "Vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Vectơ có cùng hướng với đường thẳng, dùng để xác định phương hướng của đường thẳng."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "name": "Vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ không bằng không được gọi là vectơ chỉ phương của đường thẳng nếu giá của nó song song hoặc trùng với đường thẳng đó."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vectơ xác định hướng của đường thẳng trong không gian"
+      }
+    ],
+    "GOC_GIUA_HAI_DUONG_THANG": [
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "name": "Góc giữa hai đường thẳng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Góc không tù tạo bởi hai đường thẳng cắt nhau, được xác định bằng công thức liên quan đến vectơ pháp tuyến hoặc vectơ chỉ phương."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0008",
+        "name": "Góc giữa hai đường thẳng",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Góc giữa hai đường thẳng chéo nhau trong không gian, xác định bằng góc giữa hai đường thẳng song song với chúng và cùng đi qua một điểm."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Góc giữa hai đường thẳng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Góc tạo bởi hai đường thẳng trong không gian"
+      }
+    ],
+    "KHOANG_CACH_TU_DIEM_DEN_DUONG_THANG": [
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "name": "Khoảng cách từ điểm đến đường thẳng",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Khoảng cách ngắn nhất từ một điểm đến một đường thẳng trong mặt phẳng toạ độ."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0012",
+        "name": "Khoảng cách từ điểm đến đường thẳng",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khoảng cách từ một điểm M đến đường thẳng a, kí hiệu d(M, a), là khoảng cách giữa M và hình chiếu H của M trên a."
+      }
+    ],
+    "PHUONG_TRINH_TIEP_TUYEN": [
+      {
+        "chunk_id": "toan-10-tap-2:0009",
+        "name": "phương trình tiếp tuyến",
+        "type": "FORMULA",
+        "grade": 10,
+        "description": "phương trình đại số biểu diễn tiếp tuyến của đường tròn tại một điểm."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0005",
+        "name": "Phương trình tiếp tuyến",
+        "type": "FORMULA",
+        "grade": 11,
+        "description": "Phương trình đường thẳng đi qua điểm P(x₀, y₀) với hệ số góc bằng đạo hàm tại điểm đó."
+      }
+    ],
+    "PHUONG_TRINH_CHINH_TAC": [
+      {
+        "chunk_id": "toan-10-tap-2:0010",
+        "name": "Phương trình chính tắc",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Phương trình đại số mô tả đường conic."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "name": "Phương trình chính tắc",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hệ phương trình dưới dạng phân số bằng nhau xác định đường thẳng đi qua một điểm và có vectơ chỉ phương."
+      }
+    ],
+    "QUY_TAC_NHAN": [
+      {
+        "chunk_id": "toan-10-tap-2:0011",
+        "name": "Quy tắc nhân",
+        "type": "METHOD",
+        "grade": 10,
+        "description": "Quy tắc đếm số cách thực hiện một công việc có nhiều công đoạn nối tiếp nhau, độc lập với nhau. Nếu công đoạn 1 có m₁ cách và với mỗi cách của công đoạn 1, công đoạn 2 có m₂ cách, thì tổng số cách là m₁ × m₂."
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0012",
+        "name": "Quy tắc nhân",
+        "type": "METHOD",
+        "grade": 10,
+        "description": "Phương pháp tính số cách thực hiện nhiều công việc liên tiếp bằng cách nhân số cách thực hiện từng công việc."
+      }
+    ],
+    "TO_HOP": [
+      {
+        "chunk_id": "toan-10-tap-2:0012",
+        "name": "Tổ hợp",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Một cách chọn k phần tử từ một tập hợp n phần tử (0 ≤ k ≤ n) mà không quan tâm đến thứ tự."
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0013",
+        "name": "Tổ hợp",
+        "type": "CONCEPT",
+        "grade": 10,
+        "description": "Số cách chọn k phần tử từ n phần tử không phân biệt thứ tự."
+      }
+    ],
+    "SO_HANG_TONG_QUAT": [
+      {
+        "chunk_id": "toan-11-tap-1:0005",
+        "name": "Số hạng tổng quát",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Số hạng thứ n của một dãy số, thường được biểu diễn bằng công thức u_n."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0006",
+        "name": "Số hạng tổng quát",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Công thức biểu diễn số hạng thứ n của cấp số cộng theo số hạng đầu u₁ và công sai d: uₙ = u₁ + (n - 1)d."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0007",
+        "name": "Số hạng tổng quát",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Công thức xác định số hạng thứ n của cấp số nhân: u_n = u_1 * q^(n-1)."
+      }
+    ],
+    "TONG_N_SO_HANG_DAU": [
+      {
+        "chunk_id": "toan-11-tap-1:0006",
+        "name": "Tổng n số hạng đầu",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Tổng của n số hạng đầu tiên của cấp số cộng, có công thức Sₙ = n/2 [2u₁ + (n - 1)d] hoặc Sₙ = n(u₁ + uₙ)/2."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0007",
+        "name": "Tổng n số hạng đầu",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Tổng của n số hạng đầu tiên của cấp số nhân, tính bằng công thức S_n = u_1 * (1 - q^n) / (1 - q) (khi q ≠ 1)."
+      }
+    ],
+    "MAU_SO_LIEU_GHEP_NHOM": [
+      {
+        "chunk_id": "toan-11-tap-1:0008",
+        "name": "Mẫu số liệu ghép nhóm",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Mẫu số liệu biểu diễn dưới dạng bảng tần số của các nhóm số liệu, mỗi nhóm được định nghĩa bởi một khoảng giá trị."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "name": "Mẫu số liệu ghép nhóm",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Mẫu số liệu được chia thành các nhóm có tần số tương ứng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "name": "Mẫu số liệu ghép nhóm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Mẫu số liệu được chia thành các nhóm (khoảng) và ghi nhận tần số của mỗi nhóm. Dùng để tính các số đặc trưng đo mức độ phân tán như khoảng biến thiên và khoảng tứ phân vị."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0010",
+        "name": "Mẫu số liệu ghép nhóm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Mẫu số liệu được chia thành các nhóm có tần số tương ứng."
+      }
+    ],
+    "GIOI_HAN_HUU_HAN": [
+      {
+        "chunk_id": "toan-11-tap-1:0015",
+        "name": "Giới hạn hữu hạn",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giới hạn của một dãy số khi giá trị của dãy số hội tụ về một số hữu hạn."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0016",
+        "name": "Giới hạn hữu hạn",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giới hạn của một hàm số khi biến số tiến gần một giá trị xác định và kết quả là một số hữu hạn."
+      }
+    ],
+    "GIOI_HAN_VO_CUC": [
+      {
+        "chunk_id": "toan-11-tap-1:0015",
+        "name": "Giới hạn vô cực",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giới hạn của một dãy số khi giá trị của dãy số phát triển vô hạn."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0016",
+        "name": "Giới hạn vô cực",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giới hạn của một hàm số khi biến số tiến gần một giá trị xác định và kết quả là vô cùng (vô cùng dương hoặc vô cùng âm)."
+      }
+    ],
+    "QUY_TAC_TINH_GIOI_HAN": [
+      {
+        "chunk_id": "toan-11-tap-1:0015",
+        "name": "Quy tắc tính giới hạn",
+        "type": "THEOREM",
+        "grade": 11,
+        "description": "Quy tắc tính giới hạn cho phép cộng, trừ, nhân, chia và căn bậc hai của dãy số."
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0016",
+        "name": "Quy tắc tính giới hạn",
+        "type": "THEOREM",
+        "grade": 11,
+        "description": "Các quy tắc để tính giới hạn của các phép toán cơ bản (cộng, trừ, nhân, chia) giữa hai hàm số."
+      }
+    ],
+    "GIOI_HAN_HAM_SO": [
+      {
+        "chunk_id": "toan-11-tap-1:0016",
+        "name": "Giới hạn của hàm số",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khái niệm về giới hạn của một hàm số khi biến số tiến gần một giá trị xác định hoặc vô cực."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0003",
+        "name": "giới hạn hàm số",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "giá trị mà hàm số tiếp cận khi biến số tiếp cận một giá trị xác định"
+      }
+    ],
+    "VAN_TOC_TUC_THOI": [
+      {
+        "chunk_id": "toan-11-tap-2:0005",
+        "name": "Vận tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Đạo hàm của hàm vị trí theo thời gian."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0007",
+        "name": "Vận tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Đạo hàm của vị trí theo thời gian, biểu thị tốc độ và hướng chuyển động tại một thời điểm."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0005",
+        "name": "Vận tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Vận tốc tức thời của vật chuyển động là đạo hàm của hàm vị trí s(t) đối với thời gian t."
+      }
+    ],
+    "DAO_HAM": [
+      {
+        "chunk_id": "toan-11-tap-2:0005",
+        "name": "Đạo hàm",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Giới hạn của tỉ số phân biệt khi biến thay đổi về một điểm."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0006",
+        "name": "Đạo hàm",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khái niệm về đạo hàm của một hàm số."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0002",
+        "name": "đạo hàm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Đạo hàm của một hàm số tại một điểm là giới hạn của tỷ lệ biến thiên của hàm số khi biến độc lập thay đổi."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0004",
+        "name": "Đạo hàm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Thuật ngữ mô tả tốc độ biến thiên của hàm số."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0005",
+        "name": "Đạo hàm",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Đạo hàm f'(a) biểu thị tốc độ thay đổi tức thời của đại lượng y = f(x) đối với x tại điểm x = a."
+      }
+    ],
+    "TICH_PHAN": [
+      {
+        "chunk_id": "toan-11-tap-2:0005",
+        "name": "Tích phân",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Khái niệm liên quan đến đạo hàm, nhưng không được đề cập trong đoạn văn."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0002",
+        "name": "Tích phân",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Hiệu số F(b) - F(a) của một nguyên hàm F(x) của hàm số liên tục f(x) trên đoạn [a, b], kí hiệu ∫ₐᵇ f(x) dx."
+      }
+    ],
+    "PHUONG_TRINH_CHUYEN_DONG": [
+      {
+        "chunk_id": "toan-11-tap-2:0005",
+        "name": "Phương trình chuyển động",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Hàm vị trí của vật chuyển động theo thời gian."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0007",
+        "name": "Phương trình chuyển động",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Phương trình mô tả vị trí của một vật chuyển động theo thời gian."
+      }
+    ],
+    "GIA_TOC_TUC_THOI": [
+      {
+        "chunk_id": "toan-11-tap-2:0007",
+        "name": "Gia tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Đạo hàm của vận tốc tức thời, biểu thị sự thay đổi của vận tốc theo thời gian."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0005",
+        "name": "Gia tốc tức thời",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Gia tốc tức thời là đạo hàm của vận tốc tức thời, tức là đạo hàm thứ hai của hàm vị trí s(t)."
+      }
+    ],
+    "GOC_GIUA_DUONG_THANG_VA_MAT_PHANG": [
+      {
+        "chunk_id": "toan-11-tap-2:0010",
+        "name": "Góc giữa đường thẳng và mặt phẳng",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Nếu đường thẳng a không vuông góc với mặt phẳng (P), thì góc giữa a và hình chiếu a' của nó trên (P) được gọi là góc giữa đường thẳng a và mặt phẳng (P)."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Góc giữa đường thẳng và mặt phẳng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Góc tạo bởi đường thẳng với mặt phẳng trong không gian"
+      }
+    ],
+    "GOC_GIUA_HAI_MAT_PHANG": [
+      {
+        "chunk_id": "toan-11-tap-2:0011",
+        "name": "Góc giữa hai mặt phẳng",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Góc giữa hai mặt phẳng được xác định bởi góc giữa hai đường thẳng tương ứng vuông góc với mỗi mặt phẳng."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "name": "Góc giữa hai mặt phẳng",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Góc tạo bởi hai mặt phẳng trong không gian"
+      }
+    ],
+    "BIEN_CO_HOP": [
+      {
+        "chunk_id": "toan-11-tap-2:0014",
+        "name": "Biến cố hợp",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Biến cố 'A hoặc B xảy ra' của hai biến cố A và B, kí hiệu là A ∪ B."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0015",
+        "name": "Biến cố hợp",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Biến cố A ∪ B xảy ra khi và chỉ khi A hoặc B hoặc cả hai xảy ra."
+      }
+    ],
+    "BIEN_CO_GIAO": [
+      {
+        "chunk_id": "toan-11-tap-2:0014",
+        "name": "Biến cố giao",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Biến cố 'Cả A và B đều xảy ra' của hai biến cố A và B, kí hiệu là A ∩ B."
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0016",
+        "name": "biến cố giao",
+        "type": "CONCEPT",
+        "grade": 11,
+        "description": "Biến cố giao của hai biến cố A và B là biến cố xảy ra khi cả hai biến cố A và B xảy ra cùng một lúc."
+      }
+    ],
+    "CONG_THUC_NHAN_XAC_SUAT": [
+      {
+        "chunk_id": "toan-11-tap-2:0016",
+        "name": "công thức nhân xác suất cho hai biến cố độc lập",
+        "type": "FORMULA",
+        "grade": 11,
+        "description": "Với hai biến cố độc lập A và B, công thức P(AB) = P(A) * P(B)."
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0008",
+        "name": "Công thức nhân xác suất",
+        "type": "FORMULA",
+        "grade": 12,
+        "description": "P(AB) = P(B) * P(A|B) với P(B) > 0."
+      }
+    ],
+    "BANG_BIEN_THIEN": [
+      {
+        "chunk_id": "toan-12-tap-1:0001",
+        "name": "Bảng biến thiên",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Bảng thể hiện dấu của đạo hàm và sự đồng biến, nghịch biến của hàm số trên các khoảng."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0002",
+        "name": "bảng biến thiên",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Bảng tổng hợp giá trị của đạo hàm và hàm số tại các điểm quan trọng để phân tích biến thiên của hàm số."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0004",
+        "name": "Bảng biến thiên",
+        "type": "CONCEPT",
+        "grade": 12,
+        "description": "Bảng tổng hợp các thông tin về biến thiên, cực trị, giới hạn và tiệm cận của hàm số."
+      }
+    ],
+    "QUY_TAC_HINH_HOP": [
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "name": "Quy tắc hình hộp",
+        "type": "THEOREM",
+        "grade": 12,
+        "description": "Cho hình hộp ABCD.A'B'C'D' thì AB + AD + AA' = AC'."
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0007",
+        "name": "Quy tắc hình hộp",
+        "type": "METHOD",
+        "grade": 12,
+        "description": "Phương pháp xác định toạ độ của điểm M bằng cách vẽ hình hộp chữ nhật từ gốc O đến M, sử dụng các vectơ trên trục."
+      }
+    ]
+  },
+  "same_name_different_ids": {
+    "ki hieu": [
+      {
+        "chunk_id": "toan-10-tap-1:0001",
+        "id": "KI_HIEU_FORALL",
+        "name": "Kí hiệu ∀",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-10-tap-1:0001",
+        "id": "KI_HIEU_EXISTS",
+        "name": "Kí hiệu ∃",
+        "type": "CONCEPT",
+        "grade": 10
+      }
+    ],
+    "tap hop": [
+      {
+        "chunk_id": "toan-10-tap-1:0002",
+        "id": "TAP_HOP",
+        "name": "Tập hợp",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0014",
+        "id": "TOAN_TAP",
+        "name": "Tập hợp",
+        "type": "CONCEPT",
+        "grade": 11
+      }
+    ],
+    "tap con": [
+      {
+        "chunk_id": "toan-10-tap-1:0002",
+        "id": "TAP_CON",
+        "name": "Tập con",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0014",
+        "id": "TOAN_TAP_CON",
+        "name": "Tập con",
+        "type": "CONCEPT",
+        "grade": 11
+      }
+    ],
+    "bieu dien mien nghiem trong mat phang toa o": [
+      {
+        "chunk_id": "toan-10-tap-1:0003",
+        "id": "BIEN_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+        "name": "Biểu diễn miền nghiệm trong mặt phẳng toạ độ",
+        "type": "METHOD",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-10-tap-1:0004",
+        "id": "BIEU_DIEN_MIEN_NGHIEM_TRONG_MAT_PHANG_TOA_DO",
+        "name": "Biểu diễn miền nghiệm trong mặt phẳng toạ độ",
+        "type": "METHOD",
+        "grade": 10
+      }
+    ],
+    "vecto": [
+      {
+        "chunk_id": "toan-10-tap-1:0007",
+        "id": "VECTO",
+        "name": "Vectơ",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-10-tap-1:0008",
+        "id": "VECTO",
+        "name": "vectơ",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-10-tap-1:0009",
+        "id": "VEC_TO",
+        "name": "Vectơ",
+        "type": "CONCEPT",
+        "grade": 10
+      }
+    ],
+    "quy tac hinh binh hanh": [
+      {
+        "chunk_id": "toan-10-tap-1:0008",
+        "id": "QUY_TAC_HINH_BINH_HANG",
+        "name": "quy tắc hình bình hành",
+        "type": "THEOREM",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "id": "QUY_TAC_HINH_BINH_HANGH",
+        "name": "Quy tắc hình bình hành",
+        "type": "THEOREM",
+        "grade": 12
+      }
+    ],
+    "goc giua hai vecto": [
+      {
+        "chunk_id": "toan-10-tap-1:0011",
+        "id": "GOC_GIUA_HAI_VECTO",
+        "name": "Góc giữa hai vectơ",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "id": "GOC_GIUA_HAI_VECTO",
+        "name": "Góc giữa hai vectơ",
+        "type": "CONCEPT",
+        "grade": 12
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0008",
+        "id": "GOC_GIUA_VECTO",
+        "name": "Góc giữa hai vectơ",
+        "type": "FORMULA",
+        "grade": 12
+      }
+    ],
+    "tich vo huong": [
+      {
+        "chunk_id": "toan-10-tap-1:0011",
+        "id": "TICH_VO_HUONG",
+        "name": "Tích vô hướng",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0006",
+        "id": "TICH_VO_HUONG",
+        "name": "Tích vô hướng",
+        "type": "CONCEPT",
+        "grade": 12
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0008",
+        "id": "TÍCH_VÔ_HƯỚNG",
+        "name": "Tích vô hướng",
+        "type": "CONCEPT",
+        "grade": 12
+      }
+    ],
+    "ham so tang": [
+      {
+        "chunk_id": "toan-10-tap-2:0001",
+        "id": "HAM_SO_TANG",
+        "name": "Hàm số tăng",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-11-tap-1:0003",
+        "id": "HAM_SO_TAN",
+        "name": "Hàm số tang",
+        "type": "CONCEPT",
+        "grade": 11
+      }
+    ],
+    "khong gian mau": [
+      {
+        "chunk_id": "toan-10-tap-2:0005",
+        "id": "KHOANG_GIA_TRI_MAU",
+        "name": "Không gian mẫu",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0006",
+        "id": "KHOANG_GIAN_MAU",
+        "name": "Không gian mẫu",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0014",
+        "id": "KHOANG_GIA_TRI_MAU",
+        "name": "Không gian mẫu",
+        "type": "CONCEPT",
+        "grade": 11
+      }
+    ],
+    "bien co": [
+      {
+        "chunk_id": "toan-10-tap-2:0005",
+        "id": "BIEN_CO",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0006",
+        "id": "BIEN_CO",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0015",
+        "id": "BIEN_CO",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0009",
+        "id": "BIEN_CO_SO",
+        "name": "Biến cố",
+        "type": "CONCEPT",
+        "grade": 12
+      }
+    ],
+    "vecto chi phuong": [
+      {
+        "chunk_id": "toan-10-tap-2:0007",
+        "id": "VECTO_CHI_HUONG",
+        "name": "vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "id": "VECTO_CHI_PHUONG",
+        "name": "Vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "id": "VECTO_CHI_PHUONG",
+        "name": "Vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 12
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "id": "VECTO_CHI_PHUONG",
+        "name": "Vectơ chỉ phương",
+        "type": "CONCEPT",
+        "grade": 12
+      }
+    ],
+    "vi tri tuong oi giua hai uong thang": [
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "id": "VI_TRI_TUONG_DOI_GIUA_HAI_DUONG_THANG",
+        "name": "Vị trí tương đối giữa hai đường thẳng",
+        "type": "CONCEPT",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "id": "VI_TRI_TUONG_DOI_DUONG_THANG",
+        "name": "Vị trí tương đối giữa hai đường thẳng",
+        "type": "METHOD",
+        "grade": 12
+      }
+    ],
+    "cong thuc tinh goc giua hai uong thang": [
+      {
+        "chunk_id": "toan-10-tap-2:0008",
+        "id": "CONG_THUC_TINH_GOC_GIUA_HAI_DUONG_THANG",
+        "name": "Công thức tính góc giữa hai đường thẳng",
+        "type": "FORMULA",
+        "grade": 10
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0006",
+        "id": "CONG_THUC_GOC_GIUA_HAI_DUONG_THANG",
+        "name": "Công thức tính góc giữa hai đường thẳng",
+        "type": "FORMULA",
+        "grade": 12
+      }
+    ],
+    "cong thuc tinh tu phan vi": [
+      {
+        "chunk_id": "toan-11-tap-1:0009",
+        "id": "CONG_THUC_TINH_TU_PHAN_VI",
+        "name": "Công thức tính tứ phân vị",
+        "type": "FORMULA",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-1:0009",
+        "id": "CONG_THUC_TU_PHAN_VI",
+        "name": "Công thức tính tứ phân vị",
+        "type": "FORMULA",
+        "grade": 12
+      }
+    ],
+    "hai uong thang cheo nhau": [
+      {
+        "chunk_id": "toan-11-tap-1:0011",
+        "id": "HAI_DUONG_THANG_CHEO_NHAU",
+        "name": "Hai đường thẳng chéo nhau",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "id": "DUONG_THANG_CHEO",
+        "name": "Hai đường thẳng chéo nhau",
+        "type": "THEOREM",
+        "grade": 12
+      }
+    ],
+    "hai uong thang cat nhau": [
+      {
+        "chunk_id": "toan-11-tap-1:0011",
+        "id": "DUONG_THANG_CAT_NHAU",
+        "name": "Hai đường thẳng cắt nhau",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "id": "DUONG_THANG_CAT",
+        "name": "Hai đường thẳng cắt nhau",
+        "type": "THEOREM",
+        "grade": 12
+      }
+    ],
+    "hai uong thang song song": [
+      {
+        "chunk_id": "toan-11-tap-1:0011",
+        "id": "DUONG_THANG_SONG_SONG",
+        "name": "Hai đường thẳng song song",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "id": "DUONG_THANG_SONG",
+        "name": "Hai đường thẳng song song",
+        "type": "THEOREM",
+        "grade": 12
+      }
+    ],
+    "hai uong thang trung nhau": [
+      {
+        "chunk_id": "toan-11-tap-1:0011",
+        "id": "DUONG_THANG_TRUNG_NHAU",
+        "name": "Hai đường thẳng trùng nhau",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "id": "DUONG_THANG_TRUNG",
+        "name": "Hai đường thẳng trùng nhau",
+        "type": "THEOREM",
+        "grade": 12
+      }
+    ],
+    "hai mat phang song song": [
+      {
+        "chunk_id": "toan-11-tap-1:0013",
+        "id": "HAI_MAT_PHANG_SONG_SONG",
+        "name": "Hai mặt phẳng song song",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0004",
+        "id": "MAT_PHANG_SONG_SONG",
+        "name": "Hai mặt phẳng song song",
+        "type": "THEOREM",
+        "grade": 12
+      }
+    ],
+    "hai uong thang vuong goc": [
+      {
+        "chunk_id": "toan-11-tap-2:0008",
+        "id": "HAI_DUONG_THANG_VUONG_GOC",
+        "name": "Hai đường thẳng vuông góc",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0005",
+        "id": "DUONG_THANG_VUONG_GOC",
+        "name": "Hai đường thẳng vuông góc",
+        "type": "THEOREM",
+        "grade": 12
+      }
+    ],
+    "hai mat phang vuong goc": [
+      {
+        "chunk_id": "toan-11-tap-2:0011",
+        "id": "HAI_MAT_PHANG_VUONG_GOC",
+        "name": "Hai mặt phẳng vuông góc",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0004",
+        "id": "MAT_PHANG_VUONG_GOC",
+        "name": "Hai mặt phẳng vuông góc",
+        "type": "THEOREM",
+        "grade": 12
+      }
+    ],
+    "bien co oc lap": [
+      {
+        "chunk_id": "toan-11-tap-2:0014",
+        "id": "BIEN_CO_DOC_LAP",
+        "name": "Biến cố độc lập",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-11-tap-2:0016",
+        "id": "BIEN_CO_DO_CHA",
+        "name": "biến cố độc lập",
+        "type": "CONCEPT",
+        "grade": 11
+      },
+      {
+        "chunk_id": "toan-12-tap-2:0008",
+        "id": "BIEN_CO_DO_THI",
+        "name": "Biến cố độc lập",
+        "type": "CONCEPT",
+        "grade": 12
+      }
+    ]
+  }
+}

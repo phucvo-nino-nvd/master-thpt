@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG_VUONG_GOC_VOI_HAI_CANH_TAM_GIAC",
+  "right_id": "TINH_CHAT_DUONG_THANG_VUONG_GOC_VOI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node states a theorem about a line perpendicular to two sides of a triangle, implying it is perpendicular to the third side. The right node states a theorem about a line perpendicular to two intersecting lines in a plane, implying it is perpendicular to the entire plane. They are related but distinct theorems with different conclusions (perpendicular to a line vs. perpendicular to a plane)."
+}

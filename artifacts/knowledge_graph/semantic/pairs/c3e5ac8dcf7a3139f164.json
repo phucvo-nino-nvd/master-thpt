@@ -1,0 +1,6 @@
+{
+  "left_id": "GIOI_HAN_HAM_SO",
+  "right_id": "GIOI_HAN_HUU_HAN",
+  "merge": false,
+  "rationale": "The left node is the general concept of the limit of a function. The right node is a specific type of limit (finite limit). One is a general concept and the other is a specific case, so they should be KEEP separate."
+}

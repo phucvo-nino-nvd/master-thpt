@@ -1,0 +1,6 @@
+{
+  "left_id": "TICH_CO_HUONG",
+  "right_id": "TICH_VO_HUONG",
+  "merge": false,
+  "rationale": "Tích có hướng (cross product) and Tích vô hướng (dot product) are fundamentally different vector operations; they represent different mathematical objects."
+}

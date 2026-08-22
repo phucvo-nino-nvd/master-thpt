@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_GIAM",
+  "right_id": "KHOANG_NGHICH_BIEN",
+  "merge": false,
+  "rationale": "The left node is the concept of a decreasing function, while the right node is the concept of an interval of decrease. One describes the function's property, the other describes the domain where that property holds. They are related but distinct concepts."
+}

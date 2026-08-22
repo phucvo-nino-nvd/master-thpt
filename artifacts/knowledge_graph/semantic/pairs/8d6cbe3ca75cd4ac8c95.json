@@ -1,0 +1,6 @@
+{
+  "left_id": "HAM_SO_BANG_BANG",
+  "right_id": "HAM_SO_BANG_CONG_THUC",
+  "merge": false,
+  "rationale": "These are different ways of representing a function: via a table versus via a formula. They are related concepts (representations of functions) but are distinct methods of definition."
+}

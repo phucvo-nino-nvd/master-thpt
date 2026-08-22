@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "GIA_TRI_LUONG_GIAC",
+      "name": "Giá trị lượng giác",
+      "type": "CONCEPT",
+      "description": "Các giá trị sin, cos, tan, cot của một góc, được định nghĩa ban đầu cho góc từ 0° đến 180° và mở rộng cho góc lượng giác tổng quát."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0005",
+      "original_id": "GIA_TRI_LUONG_GIAC",
+      "canonical_id": "GIA_TRI_LUONG_GIAC",
+      "rationale": "Both occurrences describe the same core mathematical concept of trigonometric values (sin, cos, tan, cot). The grade 10 version defines them for angles from 0 to 180 degrees using the unit semicircle, while the grade 11 version extends the concept to general angles (góc lượng giác). This is a natural extension of the same concept, not a different piece of knowledge. Therefore, they should be merged."
+    },
+    {
+      "chunk_id": "toan-11-tap-1:0001",
+      "original_id": "GIA_TRI_LUONG_GIAC",
+      "canonical_id": "GIA_TRI_LUONG_GIAC",
+      "rationale": "Both occurrences describe the same core mathematical concept of trigonometric values (sin, cos, tan, cot). The grade 10 version defines them for angles from 0 to 180 degrees using the unit semicircle, while the grade 11 version extends the concept to general angles (góc lượng giác). This is a natural extension of the same concept, not a different piece of knowledge. Therefore, they should be merged."
+    }
+  ]
+}

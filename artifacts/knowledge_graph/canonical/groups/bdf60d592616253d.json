@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "VECTO_PHAP_TUYEN_DUONG_THANG",
+      "name": "Vectơ pháp tuyến của đường thẳng",
+      "type": "CONCEPT",
+      "description": "Vectơ khác không vuông góc với một đường thẳng, dùng để xác định phương hướng của đường thẳng đó."
+    },
+    {
+      "id": "VECTO_PHAP_TUYEN_MAT_PHANG",
+      "name": "Vectơ pháp tuyến của mặt phẳng",
+      "type": "CONCEPT",
+      "description": "Vectơ vuông góc với một mặt phẳng."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-2:0007",
+      "original_id": "VECTO_PHAP_TUYEN",
+      "canonical_id": "VECTO_PHAP_TUYEN_DUONG_THANG",
+      "rationale": "Occurrence describes a normal vector of a line. This is a distinct mathematical concept from a normal vector of a plane, requiring a split."
+    },
+    {
+      "chunk_id": "toan-10-tap-2:0008",
+      "original_id": "VECTO_PHAP_TUYEN",
+      "canonical_id": "VECTO_PHAP_TUYEN_DUONG_THANG",
+      "rationale": "Occurrence describes a normal vector of a line. This is a distinct mathematical concept from a normal vector of a plane, requiring a split."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0004",
+      "original_id": "VECTO_PHAP_TUYEN",
+      "canonical_id": "VECTO_PHAP_TUYEN_MAT_PHANG",
+      "rationale": "Occurrence describes a normal vector of a plane. This is a distinct mathematical concept from a normal vector of a line, requiring a split."
+    },
+    {
+      "chunk_id": "toan-12-tap-2:0006",
+      "original_id": "VECTO_PHAP_TUYEN",
+      "canonical_id": "VECTO_PHAP_TUYEN_MAT_PHANG",
+      "rationale": "Occurrence describes a normal vector of a plane. This is a distinct mathematical concept from a normal vector of a line, requiring a split."
+    }
+  ]
+}

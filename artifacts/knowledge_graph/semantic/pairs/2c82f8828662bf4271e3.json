@@ -1,0 +1,6 @@
+{
+  "left_id": "KHOANG_CACH",
+  "right_id": "KHOANG_CACH_TRONG_KHONG_GIAN",
+  "merge": false,
+  "rationale": "The left node is the general concept of distance between geometric objects. The right node is the specific concept of distance between two points in 3D coordinate space (Oxyz). The right node is a specific formula/application of the general concept in a coordinate setting. They should be kept separate as general concept vs. coordinate-specific representation."
+}

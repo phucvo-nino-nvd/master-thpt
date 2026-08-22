@@ -1,0 +1,6 @@
+{
+  "left_id": "GIA_TRI_LUONG_GIAC_GOC_HON_KEM_PI",
+  "right_id": "GIA_TRI_LUONG_GIAC_GOC_PHU_NHAU",
+  "merge": false,
+  "rationale": "The left node gives trigonometric values for angles differing by π (supplementary angle identities). The right node gives trigonometric values for complementary angles (differing by π/2). They are distinct sets of formulas for different angle relationships."
+}

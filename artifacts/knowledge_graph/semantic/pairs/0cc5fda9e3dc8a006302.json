@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG",
+  "right_id": "CONG_THUC_CONG_COS",
+  "merge": false,
+  "rationale": "Công thức cộng is a general category for trigonometric addition formulas, while công thức cộng cosin is a specific formula within that category. The left is a general concept, the right is a specific case."
+}

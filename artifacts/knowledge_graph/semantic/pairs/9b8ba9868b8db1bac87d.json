@@ -1,0 +1,6 @@
+{
+  "left_id": "QUY_TAC_TINH_GIOI_HAN_THUONG",
+  "right_id": "QUY_TAC_TINH_GIOI_HAN_TICH",
+  "merge": false,
+  "rationale": "These are two different limit calculation rules: one for the limit of a quotient, the other for the limit of a product. They are related theorems about limits but address different operations. They are distinct reusable rules."
+}

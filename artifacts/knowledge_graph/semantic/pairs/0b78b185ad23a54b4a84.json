@@ -1,0 +1,6 @@
+{
+  "left_id": "GOC_GIUA_HAI_MAT_PHANG",
+  "right_id": "GOC_GIUA_HAI_VECTO",
+  "merge": false,
+  "rationale": "The left node defines the angle between two planes in space. The right node defines the angle between two vectors. They are distinct geometric concepts applicable in different contexts (planes vs. vectors)."
+}

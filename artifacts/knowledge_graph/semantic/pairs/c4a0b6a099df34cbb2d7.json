@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_THE_TICH_KHOI_CHOP_CUT_DEU",
+  "right_id": "CONG_THUC_THE_TICH_KHOI_LANG_TRU",
+  "merge": false,
+  "rationale": "The left node is the volume formula for a truncated regular pyramid. The right node is the volume formula for a prism. They are distinct formulas for different geometric solids. They are not semantic duplicates."
+}

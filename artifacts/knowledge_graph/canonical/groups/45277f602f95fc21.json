@@ -1,0 +1,24 @@
+{
+  "nodes": [
+    {
+      "id": "VECTO_KHONG",
+      "name": "Vectơ không",
+      "type": "CONCEPT",
+      "description": "Vectơ có điểm đầu và điểm cuối trùng nhau, độ dài bằng 0, cùng hướng với mọi vectơ."
+    }
+  ],
+  "assignments": [
+    {
+      "chunk_id": "toan-10-tap-1:0007",
+      "original_id": "VECTO_KHONG",
+      "canonical_id": "VECTO_KHONG",
+      "rationale": "Both occurrences describe the same mathematical concept: a vector with coincident start and end points, zero length, and the same direction as every vector. The descriptions are identical in meaning, with only minor phrasing differences. Grade differences alone are not a reason to split."
+    },
+    {
+      "chunk_id": "toan-12-tap-1:0006",
+      "original_id": "VECTO_KHONG",
+      "canonical_id": "VECTO_KHONG",
+      "rationale": "Both occurrences describe the same mathematical concept: a vector with coincident start and end points, zero length, and the same direction as every vector. The descriptions are identical in meaning, with only minor phrasing differences. Grade differences alone are not a reason to split."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_CONG_COS",
+  "right_id": "CONG_THUC_GOC_GIUA_HAI_MAT_PHANG",
+  "merge": false,
+  "rationale": "The left node is a trigonometric identity (cosine addition formula). The right node is a geometric formula for calculating the angle between two planes using normal vectors. They are formulas from different mathematical domains (trigonometry vs. solid geometry) and are not the same."
+}

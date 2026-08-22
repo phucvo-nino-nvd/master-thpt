@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_TRON_NGOAI_TIEP",
+  "right_id": "DUONG_TRON_NOI_TIEP",
+  "merge": false,
+  "rationale": "The left node is 'circumcircle' and the right node is 'incircle' of a triangle. They are distinct geometric concepts with different definitions and properties (passing through vertices vs. tangent to sides). They are related but not duplicates. KEEP."
+}

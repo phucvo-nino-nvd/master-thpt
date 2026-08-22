@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_THANG",
+  "right_id": "DUONG_THANG_CAT_NHAU",
+  "merge": false,
+  "rationale": "Left node is the general concept of a line. Right node is a specific property/relation of two lines (intersecting lines). They are not semantic duplicates; one is a general concept, the other is a specific case/relation."
+}

@@ -1,0 +1,6 @@
+{
+  "left_id": "DIEM_CUC_DAI",
+  "right_id": "DIEM_CUC_TIEU",
+  "merge": false,
+  "rationale": "Điểm cực đại (local maximum point) and Điểm cực tiểu (local minimum point) are distinct types of critical points; they are not semantic duplicates."
+}

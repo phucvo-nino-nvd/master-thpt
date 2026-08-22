@@ -1,0 +1,6 @@
+{
+  "left_id": "TINH_CHAT_TICH_HAM_SO",
+  "right_id": "TINH_CHAT_TONG_HAM_SO",
+  "merge": false,
+  "rationale": "The left node is the property of the integral (antiderivative) with respect to multiplication by a constant. The right node is the property with respect to addition of functions. They are two separate, fundamental properties of integrals/antiderivatives. They are related but distinct pieces of knowledge, so KEEP."
+}

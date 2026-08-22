@@ -1,0 +1,6 @@
+{
+  "left_id": "DUONG_HINH_COS",
+  "right_id": "DUONG_HINH_SIN",
+  "merge": false,
+  "rationale": "The left node is the graph of the cosine function. The right node is the graph of the sine function. They are distinct concepts representing the graphs of different trigonometric functions."
+}

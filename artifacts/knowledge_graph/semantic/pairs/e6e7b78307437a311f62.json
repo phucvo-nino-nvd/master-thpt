@@ -1,0 +1,6 @@
+{
+  "left_id": "CONG_THUC_LAI_KEP",
+  "right_id": "CONG_THUC_LAI_KEP_LIEN_TUC",
+  "merge": false,
+  "rationale": "The left node is the compound interest formula for discrete compounding. The right node is the formula for continuous compounding. They represent different models (discrete vs. continuous) and are not the same formula. They are related but distinct, so KEEP."
+}
