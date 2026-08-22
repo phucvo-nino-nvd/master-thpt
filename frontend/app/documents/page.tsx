@@ -5,13 +5,14 @@ import { DashboardTopbar } from '@/features/dashboard/components/dashboard-topba
 import {
 	DocumentItem,
 	IngestState,
+	PracticeStatus,
 	approveIngest,
 	dropIngestDoc,
 	getDocuments,
 	getIngest,
-	getPracticeStatus,
 	setIngestMode,
 } from '@/shared/api/client';
+import { getApiErrorMessage } from '@/shared/api/error-message';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
@@ -82,7 +83,8 @@ export default function DocumentsPage() {
 	const [activeQuickFilter, setActiveQuickFilter] = useState<string>('all');
 	const [ingest, setIngest] = useState<IngestState | null>(null);
 	const [ingestError, setIngestError] = useState('');
-	const [busy, setBusy] = useState(false);
+	const [status, setStatus] = useState<PracticeStatus | null>(null);
+	const busy = status !== null && status.stage !== 'done';
 
 	useEffect(() => {
 		async function loadDocuments() {
@@ -103,17 +105,13 @@ export default function DocumentsPage() {
 
 	// Manual mode queues crawled URLs on the server, so this page has to poll for them.
 	useEffect(() => {
-		async function pollIngest() {
-			try {
-				const [state, status] = await Promise.all([getIngest(), getPracticeStatus()]);
-				setIngest(state);
-				setBusy(status.concept !== null);
-			} catch {
-				setBusy(false);
-			}
+		function pollIngest() {
+			getIngest()
+				.then(setIngest)
+				.catch(() => {});
 		}
 
-		void pollIngest();
+		pollIngest();
 
 		const timer = window.setInterval(pollIngest, INGEST_DELAY);
 
@@ -127,8 +125,8 @@ export default function DocumentsPage() {
 
 		try {
 			setIngest(await action());
-		} catch {
-			setIngestError('Không thao tác được với hàng chờ. Vui lòng thử lại.');
+		} catch (error) {
+			setIngestError(getApiErrorMessage(error, 'Không thao tác được với hàng chờ. Vui lòng thử lại.'));
 		}
 	}
 
@@ -159,7 +157,7 @@ export default function DocumentsPage() {
 
 	return (
 		<main className="dashboard-shell documents-page">
-			<DashboardTopbar />
+			<DashboardTopbar onStatus={setStatus} />
 
 			<header className="documents-head">
 				<h1 className="documents-title">Kho đề thi gốc</h1>
@@ -181,30 +179,29 @@ export default function DocumentsPage() {
 				))}
 			</section>
 
-			{busy ? (
-				<p className="documents-message practice-status" role="status" aria-live="polite">
-					Đang xử lý đề mới...
-				</p>
-			) : null}
-
 			<details className="ingest-panel" open={queued.length > 0}>
 				<summary className="ingest-summary">
-					Nạp đề mới: {ingest?.manual ? 'thủ công' : 'tự động'}
-					{queued.length ? ` • ${queued.length} đường dẫn chờ duyệt` : ''}
-				</summary>
+					<span className="ingest-summary-label">
+						Nạp đề mới: {ingest?.manual ? 'thủ công' : 'tự động'}
+						{queued.length ? ` • ${queued.length} đường dẫn chờ duyệt` : ''}
+					</span>
 
-				<div className="ingest-modes">
-					{INGEST_MODES.map(({ manual, label }) => (
-						<button
-							key={label}
-							type="button"
-							className={`documents-filter-pill ingest-mode-pill ${ingest?.manual === manual ? 'is-active' : ''}`}
-							onClick={() => void runIngestAction(() => setIngestMode(manual))}
-						>
-							{label}
-						</button>
-					))}
-				</div>
+					<span className="ingest-modes">
+						{INGEST_MODES.map(({ manual, label }) => (
+							<button
+								key={label}
+								type="button"
+								className={`documents-filter-pill ingest-mode-pill ${ingest?.manual === manual ? 'is-active' : ''}`}
+								onClick={(event) => {
+									event.preventDefault();
+									void runIngestAction(() => setIngestMode(manual));
+								}}
+							>
+								{label}
+							</button>
+						))}
+					</span>
+				</summary>
 
 				{queued.length === 0 ? (
 					<p className="ingest-queue-empty">Chưa có đường dẫn nào chờ duyệt.</p>

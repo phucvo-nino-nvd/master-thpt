@@ -194,6 +194,7 @@ export type KnowledgeGraphEdge = {
 export type KnowledgeGraphResponse = {
 	nodes: KnowledgeGraphNode[];
 	edges: KnowledgeGraphEdge[];
+	streak: number;
 };
 
 const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL?.trim() || '/api';

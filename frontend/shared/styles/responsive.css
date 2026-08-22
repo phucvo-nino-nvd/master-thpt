@@ -1,7 +1,4 @@
 @media (max-width: 1180px) {
-	.dash-progress-layout {
-		grid-template-columns: 1fr;
-	}
 
 	.exam-layout {
 		grid-template-columns: minmax(0, 1fr) 232px;
@@ -70,10 +67,6 @@
 @media (max-width: 640px) {
 	.documents-grid {
 		grid-template-columns: 1fr;
-	}
-
-	.documents-search-input {
-		max-width: none;
 	}
 
 	.documents-title {

@@ -50,10 +50,6 @@ h4 {
 	font-family: Georgia, 'Times New Roman', serif;
 }
 
-.serif {
-	font-family: Georgia, 'Times New Roman', serif;
-}
-
 ::selection {
 	background: var(--amber-bg);
 }
@@ -82,58 +78,6 @@ img {
 	margin: 6px 0 0;
 	font-size: 13.5px;
 	color: var(--ink-soft);
-}
-
-/* ---------- form controls ---------- */
-
-.input-label {
-	display: inline-block;
-	margin-bottom: 7px;
-	font-size: 12.5px;
-	font-weight: 600;
-	color: var(--ink);
-}
-
-.input-field {
-	width: 100%;
-	padding: 11px 13px;
-	border: 1px solid var(--line);
-	border-radius: 10px;
-	background: var(--paper-card);
-	color: var(--ink);
-	font-size: 14px;
-	line-height: 1.45;
-	outline: none;
-	transition:
-		border-color 0.16s ease,
-		box-shadow 0.16s ease;
-}
-
-.input-field::placeholder {
-	color: var(--muted);
-}
-
-.input-field:hover {
-	border-color: var(--line-strong);
-}
-
-.input-field:focus {
-	border-color: var(--amber);
-	box-shadow: 0 0 0 3px rgba(217, 142, 52, 0.16);
-}
-
-.input-field:disabled {
-	background: #f1ebdd;
-	color: var(--ink-soft);
-	cursor: not-allowed;
-}
-
-.input-textarea {
-	min-height: 132px;
-}
-
-.input-textarea-compact {
-	min-height: 104px;
 }
 
 /* ---------- buttons (concept .cta / .exam-btn) ---------- */
@@ -197,8 +141,7 @@ img {
 
 .btn-primary:focus-visible,
 .btn-ghost:focus-visible,
-.btn-danger:focus-visible,
-.input-field:focus-visible {
+.btn-danger:focus-visible {
 	outline: 2px solid var(--amber);
 	outline-offset: 2px;
 }

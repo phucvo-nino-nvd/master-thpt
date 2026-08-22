@@ -2,37 +2,14 @@
 
 import { DocumentsPageSkeleton } from '@/features/dashboard/components/loading-skeletons';
 import { DashboardTopbar } from '@/features/dashboard/components/dashboard-topbar';
-import { DocumentItem, PracticeStatus, getPracticeExams, getPracticeStatus, updatePractice } from '@/shared/api/client';
+import { DocumentItem, PracticeStatus, getPracticeExams, updatePractice } from '@/shared/api/client';
+import { getApiErrorMessage } from '@/shared/api/error-message';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from 'react';
 
-const FILTER_DELAY = 200;
-const STATUS_DELAY = 2000;
-
-const STAGE_LABELS: Record<string, string> = {
-	planning: 'Đang chọn phần cần bổ sung câu',
-	crawler_agent: 'Đang tìm đề trên mạng',
-	parser_agent: 'Đang bóc tách câu hỏi từ đề',
-	item_bank: 'Đang gán câu vào chủ đề',
-};
-
 function formatPracticePrimaryMetric(item: DocumentItem) {
 	return `${item.total_questions} câu • Lớp ${item.grade}`;
-}
-
-function formatStatus(status: PracticeStatus) {
-	const parts = [STAGE_LABELS[status.stage ?? ''] ?? 'Đang xử lý'];
-
-	if (status.concept) {
-		parts.push(`cho "${status.concept}"`);
-	}
-
-	if (status.total) {
-		parts.push(`• đề ${status.step}/${status.total}`);
-	}
-
-	return `${parts.join(' ')}...`;
 }
 
 export default function PracticePage() {
@@ -42,15 +19,16 @@ export default function PracticePage() {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
 	const [requestText, setRequestText] = useState('');
+	const [query, setQuery] = useState('');
 	const [isUpdating, setIsUpdating] = useState(false);
 	const [updateError, setUpdateError] = useState('');
 	const [status, setStatus] = useState<PracticeStatus | null>(null);
 
-	async function loadPracticeExams(query = '') {
+	async function loadPracticeExams(search = '') {
 		setError('');
 
 		try {
-			const data = await getPracticeExams(query);
+			const data = await getPracticeExams(search);
 			setItems(data);
 		} catch {
 			setError('Không thể tải danh sách bài luyện tập. Vui lòng thử lại.');
@@ -58,36 +36,11 @@ export default function PracticePage() {
 	}
 
 	useEffect(() => {
-		const filterTimer = window.setTimeout(() => {
-			void loadPracticeExams(requestText.trim()).finally(() => setLoading(false));
-		}, FILTER_DELAY);
-
-		return () => {
-			window.clearTimeout(filterTimer);
-		};
-	}, [requestText, router, status?.stage]);
+		void loadPracticeExams(query).finally(() => setLoading(false));
+	}, [query, router, status?.stage]);
 
 	useEffect(() => {
-		async function pollStatus() {
-			try {
-				const data = await getPracticeStatus();
-				setStatus(data.concept === null ? null : data);
-			} catch {
-				setStatus(null);
-			}
-		}
-
-		void pollStatus();
-
-		const statusTimer = window.setInterval(pollStatus, STATUS_DELAY);
-
-		return () => {
-			window.clearInterval(statusTimer);
-		};
-	}, []);
-
-	useEffect(() => {
-		if (loading || error || items.length > 0 || isUpdating || requestText.trim()) {
+		if (loading || error || items.length > 0 || isUpdating || query) {
 			return;
 		}
 
@@ -98,7 +51,7 @@ export default function PracticePage() {
 		return () => {
 			window.clearTimeout(retryTimer);
 		};
-	}, [error, isUpdating, items.length, loading, requestText]);
+	}, [error, isUpdating, items.length, loading, query]);
 
 	useEffect(() => {
 		const textarea = textareaRef.current;
@@ -110,34 +63,45 @@ export default function PracticePage() {
 		textarea.style.height = `${Math.min(textarea.scrollHeight, 128)}px`;
 	}, [requestText]);
 
-	async function submitPracticeUpdate() {
-		const trimmedRequest = requestText.trim();
+	function applySearch() {
+		setUpdateError('');
+		setQuery(requestText.trim());
+	}
 
-		if (!trimmedRequest || isUpdating) {
+	async function fetchMoreExams() {
+		if (isUpdating) {
 			return;
 		}
 
+		const trimmedRequest = requestText.trim();
+
 		setUpdateError('');
 		setIsUpdating(true);
+		setQuery(trimmedRequest);
 
 		try {
 			setItems(await updatePractice({ request: trimmedRequest }));
-		} catch {
-			setUpdateError('Không thể gửi yêu cầu cập nhật lúc này. Vui lòng thử lại.');
+		} catch (error) {
+			setUpdateError(
+				getApiErrorMessage(error, 'Không thể gửi yêu cầu tìm thêm đề lúc này. Vui lòng thử lại.'),
+			);
 		} finally {
 			setIsUpdating(false);
 		}
 	}
 
-	async function onSubmitUpdate(event: FormEvent<HTMLFormElement>) {
+	function onSubmitSearch(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
-		await submitPracticeUpdate();
+		applySearch();
 	}
 
 	function onComposerKeyDown(event: KeyboardEvent<HTMLTextAreaElement>) {
-		if ((event.key === 'Backspace' || event.key === 'Delete') && requestText) {
+		const searchedNothing = query === requestText.trim() && items.length === 0;
+
+		if ((event.key === 'Backspace' || event.key === 'Delete') && requestText && searchedNothing) {
 			event.preventDefault();
 			setRequestText('');
+			setQuery('');
 
 			return;
 		}
@@ -148,7 +112,7 @@ export default function PracticePage() {
 
 		event.preventDefault();
 
-		void submitPracticeUpdate();
+		applySearch();
 	}
 
 	if (loading) {
@@ -157,7 +121,7 @@ export default function PracticePage() {
 
 	return (
 		<main className="dashboard-shell documents-page practice-page">
-			<DashboardTopbar />
+			<DashboardTopbar onStatus={setStatus} />
 
 			<header className="documents-head">
 				<h1 className="documents-title">Luyện tập</h1>
@@ -165,12 +129,6 @@ export default function PracticePage() {
 					Từng câu được chọn theo phần bạn còn yếu, làm xong là chấm ngay.
 				</p>
 			</header>
-
-			{status || isUpdating ? (
-				<p className="documents-message practice-status" role="status" aria-live="polite">
-					{status ? formatStatus(status) : 'Đang gửi yêu cầu cập nhật...'}
-				</p>
-			) : null}
 
 			{error ? <p className="documents-error">{error}</p> : null}
 
@@ -203,14 +161,16 @@ export default function PracticePage() {
 
 					{items.length === 0 ? (
 						<section className="documents-empty" aria-live="polite">
-							Hiện chưa có câu luyện tập nào được gán cho bạn.
+							{query
+								? `Không có phần nào khớp "${query}". Bấm "Tìm thêm đề" nếu muốn nạp thêm câu.`
+								: 'Hiện chưa có câu luyện tập nào được gán cho bạn.'}
 						</section>
 					) : null}
 				</>
 			) : null}
 
 			<div className="practice-composer-dock">
-				<form className="practice-composer-shell" onSubmit={onSubmitUpdate}>
+				<form className="practice-composer-shell" onSubmit={onSubmitSearch}>
 					<textarea
 						ref={textareaRef}
 						className="practice-composer-input"
@@ -222,21 +182,38 @@ export default function PracticePage() {
 						rows={1}
 					/>
 					<button
-						type="submit"
-						className="practice-composer-send"
-						disabled={!requestText.trim() || isUpdating}
-						aria-label={isUpdating ? 'Đang gửi yêu cầu cập nhật' : 'Gửi yêu cầu cập nhật'}
+						type="button"
+						className="practice-composer-fetch"
+						onClick={fetchMoreExams}
+						disabled={isUpdating}
 					>
 						{isUpdating ? (
 							<span className="exam-submit-spinner practice-composer-spinner" aria-hidden="true" />
 						) : (
 							<svg viewBox="0 0 24 24" aria-hidden="true" className="practice-composer-icon">
 								<path
-									d="M4 12.75L19.2 4.6c.6-.32 1.3.2 1.16.88l-2.33 11.44a1 1 0 01-.8.79L5.8 19.95c-.69.14-1.22-.58-.88-1.18l2.92-5.17a1 1 0 000-.98L4.92 7.45c-.34-.6.2-1.32.88-1.18"
-									fill="currentColor"
+									d="M12 5v14M5 12h14"
+									stroke="currentColor"
+									strokeWidth="2.2"
+									strokeLinecap="round"
+									fill="none"
 								/>
 							</svg>
 						)}
+						Tìm thêm đề
+					</button>
+					<button
+						type="submit"
+						className="practice-composer-send"
+						disabled={!requestText.trim() || isUpdating}
+						aria-label="Tìm trong danh sách đã có"
+					>
+						<svg viewBox="0 0 24 24" aria-hidden="true" className="practice-composer-icon">
+							<path
+								d="M4 12.75L19.2 4.6c.6-.32 1.3.2 1.16.88l-2.33 11.44a1 1 0 01-.8.79L5.8 19.95c-.69.14-1.22-.58-.88-1.18l2.92-5.17a1 1 0 000-.98L4.92 7.45c-.34-.6.2-1.32.88-1.18"
+								fill="currentColor"
+							/>
+						</svg>
 					</button>
 				</form>
 				{updateError ? <p className="documents-error practice-composer-error">{updateError}</p> : null}

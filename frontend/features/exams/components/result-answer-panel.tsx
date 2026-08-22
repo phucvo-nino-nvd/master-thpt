@@ -21,8 +21,10 @@ export function ResultAnswerPanel({ question, studentAnswer, correctAnswer, eval
 			return (
 				<div className="exam-mc-grid exam-result-panel">
 					{question.question.options.map((option) => {
-						const isCorrectOption = option.label === correctLabel;
 						const isStudentSelected = selected === option.label;
+						const isCorrectOption = correctLabel
+							? option.label === correctLabel
+							: isStudentSelected && evaluation.correct;
 						const isWrongSelected = isStudentSelected && !isCorrectOption;
 
 						return (

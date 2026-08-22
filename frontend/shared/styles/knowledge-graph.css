@@ -16,7 +16,6 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: conic-gradient(var(--amber) 65%, var(--line) 65%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,6 +89,10 @@
 }
 .dot.green {
   background: var(--green);
+}
+
+.map-canvas-area {
+  display: flex;
 }
 
 .map-canvas-empty {

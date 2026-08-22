@@ -47,7 +47,6 @@ export default function ExamRoomPage() {
 	const [showExitConfirm, setShowExitConfirm] = useState(false);
 	const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
 	const [checkingQuestionId, setCheckingQuestionId] = useState<string | null>(null);
-	const [isCompletingPractice, setIsCompletingPractice] = useState(false);
 	const [checkedResults, setCheckedResults] = useState<Record<string, Evaluation>>({});
 	const [hintFeedbacks, setHintFeedbacks] = useState<Record<string, string[]>>({});
 	const [loadingHintQuestionId, setLoadingHintQuestionId] = useState<string | null>(null);
@@ -78,12 +77,27 @@ export default function ExamRoomPage() {
 		return historyIdRef.current;
 	}, [examId]);
 
-	const handlePracticeComplete = useCallback(() => {
-		setIsCompletingPractice(true);
-		clearCachedExamDetail(examId);
+	const handlePracticeComplete = useCallback(async () => {
+		const unchecked = flatQuestions.filter(
+			(question) =>
+				isAnswered(answers[question.question_id]) && !checkedResults[question.question_id],
+		);
 
+		clearCachedExamDetail(examId);
 		router.push('/history');
-	}, [examId, router]);
+
+		for (const question of unchecked) {
+			try {
+				await checkPracticeQuestion({
+					history_id: await ensureHistoryId(),
+					question_id: question.question_id,
+					student_answer: toApiAnswer(answers[question.question_id] ?? ''),
+				});
+			} catch {
+				return;
+			}
+		}
+	}, [answers, checkedResults, examId, ensureHistoryId, flatQuestions, router]);
 
 	const handlePracticeDiscard = useCallback(() => {
 		clearCachedExamDetail(examId);
@@ -491,7 +505,7 @@ export default function ExamRoomPage() {
 									type="button"
 									className="exam-submit-btn"
 									onClick={handleCheckCurrentQuestion}
-									disabled={checkingQuestionId === activeQuestion.question_id || isCurrentQuestionLocked || isCompletingPractice}
+									disabled={checkingQuestionId === activeQuestion.question_id || isCurrentQuestionLocked}
 								>
 									{checkingQuestionId === activeQuestion.question_id ? (
 										<>
@@ -508,16 +522,8 @@ export default function ExamRoomPage() {
 									type="button"
 									className="exam-submit-btn"
 									onClick={handlePracticeComplete}
-									disabled={isCompletingPractice}
 								>
-									{isCompletingPractice ? (
-										<>
-											<span className="exam-submit-spinner" aria-hidden="true" />
-											Đang hoàn tất...
-										</>
-									) : (
-										'Xong'
-									)}
+									Xong
 								</button>
 								{checkError ? <p className="documents-error exam-submit-error">{checkError}</p> : null}
 							</>

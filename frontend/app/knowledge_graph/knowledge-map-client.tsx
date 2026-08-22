@@ -17,6 +17,17 @@ const STATUS_COLORS: Record<string, string> = {
   untouched: "#b9ae97",
 };
 
+function progressRing(progress: number) {
+  const color =
+    progress >= 80
+      ? STATUS_COLORS.mastered
+      : progress < 50
+        ? STATUS_COLORS.weak
+        : STATUS_COLORS.learning;
+
+  return `conic-gradient(${color} ${progress}%, color-mix(in srgb, ${color} 24%, var(--paper)) ${progress}%)`;
+}
+
 const STATUS_LABELS: Record<string, string> = {
   mastered: "Thành thạo",
   learning: "Đang học",
@@ -399,7 +410,7 @@ export function KnowledgeMapClient() {
 
   const stats = useMemo(() => {
     if (!raw) {
-      return { total: "--", mastered: "--", weak: "--", progress: 0 };
+      return { total: "--", mastered: "--", weak: "--", progress: 0, streak: 0 };
     }
 
     const mastered = raw.nodes.filter((node) => node.status === "mastered").length;
@@ -410,6 +421,7 @@ export function KnowledgeMapClient() {
       mastered,
       weak,
       progress: raw.nodes.length ? Math.round((mastered / raw.nodes.length) * 100) : 0,
+      streak: raw.streak,
     };
   }, [raw]);
 
@@ -426,7 +438,7 @@ export function KnowledgeMapClient() {
           </p>
         </div>
         <div className="map-progress-container">
-          <div className="map-progress-circle">
+          <div className="map-progress-circle" style={{ background: progressRing(stats.progress) }}>
             <div className="map-progress-inner">{stats.progress}%</div>
           </div>
           <div className="map-progress-label">tổng mức thành thạo</div>
@@ -435,21 +447,23 @@ export function KnowledgeMapClient() {
 
       <div className="map-layout">
         <div className="map-canvas-card" style={{ padding: 0, overflow: "hidden" }}>
-          <div className="map-legend">
-            <div className="map-legend-item">
-              <span className="dot red" /> Yếu (&lt;50%)
+          {model ? (
+            <div className="map-legend">
+              <div className="map-legend-item">
+                <span className="dot red" /> Yếu (&lt;50%)
+              </div>
+              <div className="map-legend-item">
+                <span className="dot orange" /> Đang học
+              </div>
+              <div className="map-legend-item">
+                <span className="dot green" /> Thành thạo (&ge;80%)
+              </div>
+              <div className="map-legend-item">
+                <span className="dot" style={{ backgroundColor: STATUS_COLORS.untouched }} /> Chưa
+                luyện tập
+              </div>
             </div>
-            <div className="map-legend-item">
-              <span className="dot orange" /> Đang học
-            </div>
-            <div className="map-legend-item">
-              <span className="dot green" /> Thành thạo (&ge;80%)
-            </div>
-            <div className="map-legend-item">
-              <span className="dot" style={{ backgroundColor: STATUS_COLORS.untouched }} /> Chưa luyện
-              tập
-            </div>
-          </div>
+          ) : null}
 
           {model ? (
             <div className="map-search">
@@ -618,7 +632,32 @@ export function KnowledgeMapClient() {
 
           <div className="map-card">
             <div className="dash-section-label">CHUỖI LUYỆN TẬP</div>
-            <p className="dash-empty-note">Bắt đầu làm bài để ghi nhận chuỗi ngày học của bạn.</p>
+            {stats.streak ? (
+              <div className="dash-streak">
+                <div>
+                  <b className="dash-streak-count">{stats.streak}</b>
+                  <span className="dash-streak-note">ngày liên tiếp có câu được chấm</span>
+                </div>
+                <svg viewBox="0 0 24 24" aria-hidden="true" className="dash-streak-flame">
+                  <defs>
+                    <linearGradient id="streak-flame" x1="0.5" y1="0" x2="0.5" y2="1">
+                      <stop offset="0" stopColor="#e8a44a" />
+                      <stop offset="1" stopColor="#b3701f" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M12 2.5c3.4 3.6 5.2 6.2 5.2 8.9a5.2 5.2 0 0 1-10.4 0c0-1.4.5-2.7 1.6-4 .2 1.7.9 2.6 2 2.9-.6-2.7 0-5.2 1.6-7.8Z"
+                    fill="url(#streak-flame)"
+                  />
+                  <path
+                    d="M12 9.4c1.6 1.9 2.4 3.1 2.4 4.3a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.4 2.4-4.3Z"
+                    fill="#fdf6ea"
+                  />
+                </svg>
+              </div>
+            ) : (
+              <p className="dash-empty-note">Bắt đầu làm bài để ghi nhận chuỗi ngày học của bạn.</p>
+            )}
           </div>
         </div>
       </div>

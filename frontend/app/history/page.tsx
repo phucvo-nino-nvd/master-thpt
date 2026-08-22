@@ -131,10 +131,14 @@ export default function HistoryPage() {
 							<article className="documents-card is-grading" aria-busy="true">
 								<div className="documents-card-top">
 									<p className="documents-card-type">
-										{docByExamId.get(gradingOnly)?.exam_type?.trim() || 'Đề gốc'}
+										{labelByExamId.has(gradingOnly)
+											? 'Luyện tập'
+											: docByExamId.get(gradingOnly)?.exam_type?.trim() || 'Đề gốc'}
 									</p>
 									<h2 className="documents-card-title">
-										{docByExamId.get(gradingOnly)?.title?.trim() || 'Đề vừa nộp'}
+										{docByExamId.get(gradingOnly)?.title?.trim() ||
+											labelByExamId.get(gradingOnly) ||
+											'Đề vừa nộp'}
 									</h2>
 									<p className="documents-card-stat">Đang chấm bài...</p>
 								</div>
