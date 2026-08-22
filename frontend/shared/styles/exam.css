@@ -485,23 +485,20 @@
 	opacity: 0.6;
 }
 
-.exam-tf-answer-chip {
-	justify-self: center;
-	margin: 0;
-	padding: 3px 10px;
-	border-radius: 999px;
-	font-size: 11px;
-	font-weight: 700;
+.exam-result-panel .exam-tf-radio {
+	cursor: default;
 }
 
-.exam-tf-answer-chip.is-correct {
-	background: var(--green-bg);
-	color: var(--green);
+.exam-tf-radio.is-correct {
+	border-color: var(--green);
+	background: var(--green);
+	box-shadow: inset 0 0 0 3px var(--paper-card);
 }
 
-.exam-tf-answer-chip.is-wrong {
-	background: var(--red-bg);
-	color: var(--red);
+.exam-tf-radio.is-wrong {
+	border-color: var(--red);
+	background: var(--red);
+	box-shadow: inset 0 0 0 3px var(--paper-card);
 }
 
 .exam-tf-result-item.is-correct {

@@ -2,15 +2,37 @@
 
 import { DocumentsPageSkeleton } from '@/features/dashboard/components/loading-skeletons';
 import { DashboardTopbar } from '@/features/dashboard/components/dashboard-topbar';
-import { DocumentItem, getPracticeExams, updatePractice } from '@/shared/api/client';
+import { DocumentItem, PracticeStatus, getPracticeExams, getPracticeStatus, updatePractice } from '@/shared/api/client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from 'react';
 
 const FILTER_DELAY = 200;
+const STATUS_DELAY = 2000;
+
+const STAGE_LABELS: Record<string, string> = {
+	planning: 'Đang chọn phần cần bổ sung câu',
+	crawler_agent: 'Đang tìm đề trên mạng',
+	parser_agent: 'Đang bóc tách câu hỏi từ đề',
+	item_bank: 'Đang gán câu vào chủ đề',
+};
 
 function formatPracticePrimaryMetric(item: DocumentItem) {
 	return `${item.total_questions} câu • Lớp ${item.grade}`;
+}
+
+function formatStatus(status: PracticeStatus) {
+	const parts = [STAGE_LABELS[status.stage ?? ''] ?? 'Đang xử lý'];
+
+	if (status.concept) {
+		parts.push(`cho "${status.concept}"`);
+	}
+
+	if (status.total) {
+		parts.push(`• đề ${status.step}/${status.total}`);
+	}
+
+	return `${parts.join(' ')}...`;
 }
 
 export default function PracticePage() {
@@ -22,6 +44,7 @@ export default function PracticePage() {
 	const [requestText, setRequestText] = useState('');
 	const [isUpdating, setIsUpdating] = useState(false);
 	const [updateError, setUpdateError] = useState('');
+	const [status, setStatus] = useState<PracticeStatus | null>(null);
 
 	async function loadPracticeExams(query = '') {
 		setError('');
@@ -42,7 +65,26 @@ export default function PracticePage() {
 		return () => {
 			window.clearTimeout(filterTimer);
 		};
-	}, [requestText, router]);
+	}, [requestText, router, status?.stage]);
+
+	useEffect(() => {
+		async function pollStatus() {
+			try {
+				const data = await getPracticeStatus();
+				setStatus(data.concept === null ? null : data);
+			} catch {
+				setStatus(null);
+			}
+		}
+
+		void pollStatus();
+
+		const statusTimer = window.setInterval(pollStatus, STATUS_DELAY);
+
+		return () => {
+			window.clearInterval(statusTimer);
+		};
+	}, []);
 
 	useEffect(() => {
 		if (loading || error || items.length > 0 || isUpdating || requestText.trim()) {
@@ -124,9 +166,9 @@ export default function PracticePage() {
 				</p>
 			</header>
 
-			{isUpdating ? (
+			{status || isUpdating ? (
 				<p className="documents-message practice-status" role="status" aria-live="polite">
-					Đang cập nhật danh sách đề luyện tập...
+					{status ? formatStatus(status) : 'Đang gửi yêu cầu cập nhật...'}
 				</p>
 			) : null}
 

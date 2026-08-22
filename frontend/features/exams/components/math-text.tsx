@@ -4,6 +4,7 @@ import Latex from 'react-latex-next';
 // without updating every screen individually.
 const IMAGE_RE = /^!\[([\s\S]*)\]\(([^)]+)\)$/;
 const CELL_RE = /<(td|th)([^>]*)>([\s\S]*?)<\/\1>/g;
+const BOLD_RE = /\*\*([\s\S]+?)\*\*/g;
 
 type Cell = { tag: 'td' | 'th'; text: string; rowSpan?: number; colSpan?: number };
 type Block = { table: Cell[][] } | { image: { src: string; alt: string } } | { text: string[] };
@@ -20,6 +21,22 @@ function parseRow(line: string): Cell[] {
 		rowSpan: span(attrs, 'rowspan'),
 		colSpan: span(attrs, 'colspan'),
 	}));
+}
+
+function Rich({ text }: { text: string }) {
+	return (
+		<>
+			{text.split(BOLD_RE).map((part, index) =>
+				!part ? null : index % 2 ? (
+					<strong key={index}>
+						<Latex>{part}</Latex>
+					</strong>
+				) : (
+					<Latex key={index}>{part}</Latex>
+				),
+			)}
+		</>
+	);
 }
 
 export function MathText({ text }: { text: string }) {
@@ -76,11 +93,11 @@ export function MathText({ text }: { text: string }) {
 										{row.map((cell, cellIndex) =>
 											cell.tag === 'th' ? (
 												<th key={cellIndex} rowSpan={cell.rowSpan} colSpan={cell.colSpan}>
-													<Latex>{cell.text}</Latex>
+													<Rich text={cell.text} />
 												</th>
 											) : (
 												<td key={cellIndex} rowSpan={cell.rowSpan} colSpan={cell.colSpan}>
-													<Latex>{cell.text}</Latex>
+													<Rich text={cell.text} />
 												</td>
 											),
 										)}
@@ -91,7 +108,7 @@ export function MathText({ text }: { text: string }) {
 					);
 				}
 
-				return <Latex key={index}>{block.text.join('\n')}</Latex>;
+				return <Rich key={index} text={block.text.join('\n')} />;
 			})}
 		</span>
 	);

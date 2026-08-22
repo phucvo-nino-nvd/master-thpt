@@ -19,6 +19,35 @@ export type UpdatePracticeBody = {
 	request: string;
 };
 
+export type PracticeStatus = {
+	concept: string | null;
+	stage: string | null;
+	step: number;
+	total: number;
+};
+
+export type GradingStatus = {
+	exam_id: string | null;
+};
+
+export type CrawledDoc = {
+	url: string;
+	title: string;
+	score: number;
+};
+
+export type CrawlBatch = {
+	request: { grade: number; concept: string };
+	query: string;
+	docs: CrawledDoc[];
+	missing: number;
+};
+
+export type IngestState = {
+	manual: boolean;
+	batches: CrawlBatch[];
+};
+
 export type QuestionType = 'multiple_choice' | 'true_false' | 'short_answer';
 
 export type QuestionOption = {
@@ -190,14 +219,47 @@ export async function getPracticeExams(query = '') {
 	return data;
 }
 
+export async function getPracticeStatus() {
+	const { data } = await api.get<PracticeStatus>('/practice/status');
+
+	return data;
+}
+
+export async function getIngest() {
+	const { data } = await api.get<IngestState>('/ingest');
+
+	return data;
+}
+
+export async function setIngestMode(manual: boolean) {
+	const { data } = await api.post<IngestState>('/ingest/mode', null, { params: { manual } });
+
+	return data;
+}
+
+export async function dropIngestDoc(url: string) {
+	const { data } = await api.delete<IngestState>('/ingest', { params: { url } });
+
+	return data;
+}
+
+export async function approveIngest(url: string) {
+	const { data } = await api.post<IngestState>('/ingest/approve', null, { params: { url } });
+
+	return data;
+}
+
 export async function updatePractice(body: UpdatePracticeBody) {
 	const { data } = await api.post<DocumentItem[]>('/practice/update', body);
 
 	return data;
 }
 
-export async function getDocumentDetail(id: string) {
-	const { data } = await api.get<DocumentDetailResponse>(`/documents/${id}`);
+export async function getDocumentDetail(id: string, historyId?: string) {
+	const { data } = await api.get<DocumentDetailResponse>(`/documents/${id}`, {
+		params: historyId ? { history_id: historyId } : undefined,
+	});
+
 	return data;
 }
 
@@ -215,6 +277,12 @@ export async function checkPracticeQuestion(body: PracticeQuestionCheckBody) {
 
 export async function createHistory(body: CreateHistoryBody) {
 	const { data } = await api.post<HistoryCreated>('/history', body);
+
+	return data;
+}
+
+export async function getGradingStatus() {
+	const { data } = await api.get<GradingStatus>('/exams/grading-status');
 
 	return data;
 }

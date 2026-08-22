@@ -3,25 +3,59 @@
 import { DashboardTopbar } from '@/features/dashboard/components/dashboard-topbar';
 import { DocumentsPageSkeleton } from '@/features/dashboard/components/loading-skeletons';
 import { formatDateTime, formatDuration, formatScore } from '@/features/exams/lib/helpers';
-import { DocumentItem, HistoryItem, getDocuments, getHistoryList } from '@/shared/api/client';
+import {
+	DocumentItem,
+	HistoryItem,
+	KnowledgeGraphNode,
+	getDocuments,
+	getGradingStatus,
+	getHistoryList,
+	getKnowledgeGraph,
+} from '@/shared/api/client';
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
+
+const STATUS_DELAY = 2000;
 
 export default function HistoryPage() {
 	const [items, setItems] = useState<HistoryItem[]>([]);
 	const [documents, setDocuments] = useState<DocumentItem[]>([]);
+	const [nodes, setNodes] = useState<KnowledgeGraphNode[]>([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
+	const [gradingExamId, setGradingExamId] = useState<string | null>(null);
+
+	useEffect(() => {
+		async function pollStatus() {
+			try {
+				setGradingExamId((await getGradingStatus()).exam_id);
+			} catch {
+				setGradingExamId(null);
+			}
+		}
+
+		void pollStatus();
+
+		const statusTimer = window.setInterval(pollStatus, STATUS_DELAY);
+
+		return () => {
+			window.clearInterval(statusTimer);
+		};
+	}, []);
 
 	useEffect(() => {
 		async function loadHistory() {
-			setLoading(true);
 			setError('');
 
 			try {
-				const [history, documents] = await Promise.all([getHistoryList(), getDocuments()]);
+				const [history, documents, graph] = await Promise.all([
+					getHistoryList(),
+					getDocuments(),
+					getKnowledgeGraph(),
+				]);
 				setItems(history);
 				setDocuments(documents);
+				setNodes(graph.nodes);
 			} catch {
 				setError('Không thể tải lịch sử làm bài. Vui lòng thử lại.');
 			} finally {
@@ -30,12 +64,18 @@ export default function HistoryPage() {
 		}
 
 		loadHistory();
-	}, []);
+	}, [gradingExamId]);
 
 	// History rows only carry exam_id, so đề info comes from the document list.
 	const docByExamId = useMemo(
 		() => new Map(documents.map((document) => [document.id, document])),
 		[documents],
+	);
+
+	// Practice attempts store a knowledge_id instead, which only the graph can name.
+	const labelByExamId = useMemo(
+		() => new Map(nodes.map((node) => [node.id, node.label])),
+		[nodes],
 	);
 
 	// One card per đề; each attempt keeps its own numbered version, newest first.
@@ -56,6 +96,12 @@ export default function HistoryPage() {
 			})
 			.sort((a, b) => b.latest.item.created_at.localeCompare(a.latest.item.created_at));
 	}, [items]);
+
+	// The history row lands only after grading, so a first-ever attempt needs its own card.
+	const gradingOnly =
+		gradingExamId && !groups.some((group) => group.examId === gradingExamId)
+			? gradingExamId
+			: null;
 
 	if (loading) {
 		return <DocumentsPageSkeleton cardCount={4} />;
@@ -81,20 +127,55 @@ export default function HistoryPage() {
 					</p>
 
 					<section className="documents-grid">
+						{gradingOnly ? (
+							<article className="documents-card is-grading" aria-busy="true">
+								<div className="documents-card-top">
+									<p className="documents-card-type">
+										{docByExamId.get(gradingOnly)?.exam_type?.trim() || 'Đề gốc'}
+									</p>
+									<h2 className="documents-card-title">
+										{docByExamId.get(gradingOnly)?.title?.trim() || 'Đề vừa nộp'}
+									</h2>
+									<p className="documents-card-stat">Đang chấm bài...</p>
+								</div>
+								<div className="documents-card-bottom">
+									<div className="documents-tags">
+										<span className="documents-tag">Đang chấm</span>
+									</div>
+								</div>
+							</article>
+						) : null}
 						{groups.map(({ examId, versions, latest }) => {
 							const doc = docByExamId.get(examId);
 							const duration = formatDuration(latest.item.duration_seconds);
+							const isGrading = examId === gradingExamId;
 
 							return (
-								<article key={examId} className="documents-card">
+								<article
+									key={examId}
+									className={`documents-card ${isGrading ? 'is-grading' : ''}`}
+									aria-busy={isGrading}
+								>
 									<div className="documents-card-top">
-										<p className="documents-card-type">{doc?.exam_type?.trim() || 'Đề gốc'}</p>
+										<p className="documents-card-type">
+											{latest.item.mode === 'practice'
+												? 'Luyện tập'
+												: doc?.exam_type?.trim() || 'Đề gốc'}
+										</p>
 										<h2 className="documents-card-title">
-											{doc ? doc.title?.trim() || doc.subject : 'Đề đã xoá khỏi kho'}
+											{doc
+												? doc.title?.trim() || doc.subject
+												: labelByExamId.get(examId) || 'Đề đã xoá khỏi kho'}
 										</h2>
 										<p className="documents-card-stat">
-											Lần gần nhất: {formatScore(latest.item.total_score)} điểm • Đúng{' '}
-											{latest.item.correct_count}/{latest.item.total_questions} câu
+											{isGrading ? (
+												'Đang chấm bài...'
+											) : (
+												<>
+													Lần gần nhất: {formatScore(latest.item.total_score)} điểm • Đúng{' '}
+													{latest.item.correct_count}/{latest.item.total_questions} câu
+												</>
+											)}
 										</p>
 										<p className="documents-card-meta">
 											{formatDateTime(latest.item.created_at)}
@@ -103,6 +184,7 @@ export default function HistoryPage() {
 									</div>
 									<div className="documents-card-bottom">
 										<div className="documents-tags">
+											{isGrading ? <span className="documents-tag">Đang chấm</span> : null}
 											<span className="documents-tag">{versions.length} lần làm</span>
 											{doc?.grade ? <span className="documents-tag">Lớp {doc.grade}</span> : null}
 										</div>

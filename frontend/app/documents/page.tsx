@@ -2,10 +2,35 @@
 
 import { DocumentsPageSkeleton } from '@/features/dashboard/components/loading-skeletons';
 import { DashboardTopbar } from '@/features/dashboard/components/dashboard-topbar';
-import { DocumentItem, getDocuments } from '@/shared/api/client';
+import {
+	DocumentItem,
+	IngestState,
+	approveIngest,
+	dropIngestDoc,
+	getDocuments,
+	getIngest,
+	getPracticeStatus,
+	setIngestMode,
+} from '@/shared/api/client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
+
+const INGEST_DELAY = 4000;
+
+const INGEST_MODES = [
+	{ manual: false, label: 'Tự động' },
+	{ manual: true, label: 'Thủ công' },
+];
+
+const QUICK_FILTERS = [
+	{ value: 'all', label: 'Tất cả' },
+	{ value: 'Toán 12', label: 'Toán 12' },
+	{ value: 'Toán 11', label: 'Toán 11' },
+	{ value: 'Toán 10', label: 'Toán 10' },
+	{ value: 'Đã làm', label: 'Đã làm' },
+	{ value: 'Chưa làm', label: 'Chưa làm' },
+];
 
 // The item bank stores the original file path as `source`; only the file name is useful here.
 function formatSource(source?: string) {
@@ -55,10 +80,12 @@ export default function DocumentsPage() {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
 	const [activeQuickFilter, setActiveQuickFilter] = useState<string>('all');
+	const [ingest, setIngest] = useState<IngestState | null>(null);
+	const [ingestError, setIngestError] = useState('');
+	const [busy, setBusy] = useState(false);
 
 	useEffect(() => {
 		async function loadDocuments() {
-			setLoading(true);
 			setError('');
 
 			try {
@@ -72,17 +99,52 @@ export default function DocumentsPage() {
 		}
 
 		loadDocuments();
-	}, [router]);
+	}, [router, busy]);
+
+	// Manual mode queues crawled URLs on the server, so this page has to poll for them.
+	useEffect(() => {
+		async function pollIngest() {
+			try {
+				const [state, status] = await Promise.all([getIngest(), getPracticeStatus()]);
+				setIngest(state);
+				setBusy(status.concept !== null);
+			} catch {
+				setBusy(false);
+			}
+		}
+
+		void pollIngest();
+
+		const timer = window.setInterval(pollIngest, INGEST_DELAY);
+
+		return () => {
+			window.clearInterval(timer);
+		};
+	}, []);
+
+	async function runIngestAction(action: () => Promise<IngestState>) {
+		setIngestError('');
+
+		try {
+			setIngest(await action());
+		} catch {
+			setIngestError('Không thao tác được với hàng chờ. Vui lòng thử lại.');
+		}
+	}
+
+	const queued = (ingest?.batches ?? []).flatMap((batch) =>
+		batch.docs.map((doc) => ({ ...doc, concept: batch.request.concept })),
+	);
 
 	const filteredDocuments = useMemo(() => {
 		return documents.filter((item) => {
 			let matchedQuick = true;
-			if (activeQuickFilter === 'Toán 12') {
-				matchedQuick = item.subject?.includes('Toán') && String(item.grade) === '12';
-			} else if (activeQuickFilter === 'Đề thi thử') {
-				matchedQuick = item.exam_type?.includes('thử') ?? false;
-			} else if (activeQuickFilter === 'Đề chính thức') {
-				matchedQuick = item.exam_type?.includes('chính thức') ?? false;
+			if (activeQuickFilter.startsWith('Toán ')) {
+				matchedQuick =
+					(item.subject?.includes('Toán') ?? false) &&
+					String(item.grade) === activeQuickFilter.slice('Toán '.length);
+			} else if (activeQuickFilter === 'Đã làm') {
+				matchedQuick = item.is_completed ?? false;
 			} else if (activeQuickFilter === 'Chưa làm') {
 				matchedQuick = !item.is_completed;
 			}
@@ -107,42 +169,83 @@ export default function DocumentsPage() {
 			</header>
 
 			<section className="documents-quick-filters" aria-label="Bộ lọc nhanh">
-				<button
-					type="button"
-					className={`documents-filter-pill ${activeQuickFilter === 'all' ? 'is-active' : ''}`}
-					onClick={() => setActiveQuickFilter('all')}
-				>
-					Tất cả
-				</button>
-				<button
-					type="button"
-					className={`documents-filter-pill ${activeQuickFilter === 'Toán 12' ? 'is-active' : ''}`}
-					onClick={() => setActiveQuickFilter('Toán 12')}
-				>
-					Toán 12
-				</button>
-				<button
-					type="button"
-					className={`documents-filter-pill ${activeQuickFilter === 'Đề thi thử' ? 'is-active' : ''}`}
-					onClick={() => setActiveQuickFilter('Đề thi thử')}
-				>
-					Đề thi thử
-				</button>
-				<button
-					type="button"
-					className={`documents-filter-pill ${activeQuickFilter === 'Đề chính thức' ? 'is-active' : ''}`}
-					onClick={() => setActiveQuickFilter('Đề chính thức')}
-				>
-					Đề chính thức
-				</button>
-				<button
-					type="button"
-					className={`documents-filter-pill ${activeQuickFilter === 'Chưa làm' ? 'is-active' : ''}`}
-					onClick={() => setActiveQuickFilter('Chưa làm')}
-				>
-					Chưa làm
-				</button>
+				{QUICK_FILTERS.map(({ value, label }) => (
+					<button
+						key={value}
+						type="button"
+						className={`documents-filter-pill ${activeQuickFilter === value ? 'is-active' : ''}`}
+						onClick={() => setActiveQuickFilter(value)}
+					>
+						{label}
+					</button>
+				))}
 			</section>
+
+			{busy ? (
+				<p className="documents-message practice-status" role="status" aria-live="polite">
+					Đang xử lý đề mới...
+				</p>
+			) : null}
+
+			<details className="ingest-panel" open={queued.length > 0}>
+				<summary className="ingest-summary">
+					Nạp đề mới: {ingest?.manual ? 'thủ công' : 'tự động'}
+					{queued.length ? ` • ${queued.length} đường dẫn chờ duyệt` : ''}
+				</summary>
+
+				<div className="ingest-modes">
+					{INGEST_MODES.map(({ manual, label }) => (
+						<button
+							key={label}
+							type="button"
+							className={`documents-filter-pill ingest-mode-pill ${ingest?.manual === manual ? 'is-active' : ''}`}
+							onClick={() => void runIngestAction(() => setIngestMode(manual))}
+						>
+							{label}
+						</button>
+					))}
+				</div>
+
+				{queued.length === 0 ? (
+					<p className="ingest-queue-empty">Chưa có đường dẫn nào chờ duyệt.</p>
+				) : null}
+
+				<ul className="ingest-queue">
+					{queued.map((doc) => (
+						<li key={doc.url} className="ingest-queue-row">
+							<a
+								className="ingest-queue-title"
+								href={doc.url}
+								title={doc.url}
+								target="_blank"
+								rel="noreferrer"
+							>
+								{doc.title || doc.url}
+							</a>
+							<span className="ingest-queue-meta">{doc.concept}</span>
+							<button
+								type="button"
+								className="ingest-queue-accept"
+								disabled={busy}
+								aria-label={`Cho ${doc.title || doc.url} qua OCR`}
+								onClick={() => void runIngestAction(() => approveIngest(doc.url))}
+							>
+								✓
+							</button>
+							<button
+								type="button"
+								className="ingest-queue-drop"
+								aria-label={`Xoá ${doc.title || doc.url} khỏi hàng chờ`}
+								onClick={() => void runIngestAction(() => dropIngestDoc(doc.url))}
+							>
+								×
+							</button>
+						</li>
+					))}
+				</ul>
+
+				{ingestError ? <p className="documents-error">{ingestError}</p> : null}
+			</details>
 
 			{error ? <p className="documents-error">{error}</p> : null}
 
@@ -166,9 +269,11 @@ export default function DocumentsPage() {
 								<div className="documents-card-bottom">
 									<div className="documents-tags">
 										<span className="documents-tag">Lớp {item.grade}</span>
-										{item.is_completed ? (
-											<span className="documents-tag documents-tag-completed">Đã hoàn thành</span>
-										) : null}
+										<span
+											className={`documents-tag ${item.is_completed ? 'documents-tag-completed' : ''}`}
+										>
+											{item.is_completed ? 'Đã làm' : 'Chưa làm'}
+										</span>
 									</div>
 									<div className="documents-card-actions">
 										<Link href={`/exams/${item.id}?intent=practice`} className="btn-ghost documents-start-btn">
@@ -185,7 +290,9 @@ export default function DocumentsPage() {
 
 					{filteredDocuments.length === 0 ? (
 						<div className="documents-empty">
-							Không tìm thấy đề phù hợp với bộ lọc hiện tại.
+							{documents.length === 0
+								? 'Kho đề đang trống. Bật nạp thủ công rồi cho một đường dẫn qua OCR để thêm đề.'
+								: 'Không tìm thấy đề phù hợp với bộ lọc hiện tại.'}
 						</div>
 					) : null}
 				</>

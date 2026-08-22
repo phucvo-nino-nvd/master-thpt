@@ -3,6 +3,7 @@
 import { DashboardTopbar } from '@/features/dashboard/components/dashboard-topbar';
 import { DocumentsPageSkeleton } from '@/features/dashboard/components/loading-skeletons';
 import { formatDateTime } from '@/features/exams/lib/helpers';
+import { MathText } from '@/features/exams/components/math-text';
 import {
 	DocumentItem,
 	HistoryDetailResponse,
@@ -214,7 +215,9 @@ export default function ReviewPage() {
 											</p>
 											<ul className="review-mistake-list">
 												{group.wrong.map((feedback, index) => (
-													<li key={index}>{feedback}</li>
+													<li key={index}>
+														<MathText text={feedback} />
+													</li>
 												))}
 											</ul>
 										</article>

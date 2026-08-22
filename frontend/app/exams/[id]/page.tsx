@@ -4,7 +4,8 @@ import { EditableAnswerPanel } from '@/features/exams/components/editable-answer
 import { QuestionFeedbackPanels } from '@/features/exams/components/feedback-panels';
 import { MathText } from '@/features/exams/components/math-text';
 import { ExamQuestionHeader } from '@/features/exams/components/question-header';
-import { AnswerValue, formatAnswer, isAnswered, toApiAnswer } from '@/features/exams/lib/helpers';
+import { ResultAnswerPanel } from '@/features/exams/components/result-answer-panel';
+import { AnswerValue, isAnswered, toApiAnswer } from '@/features/exams/lib/helpers';
 import { FlatQuestion, flattenExam } from '@/features/exams/lib/types';
 import {
 	MAX_HINT_LEVEL,
@@ -81,7 +82,7 @@ export default function ExamRoomPage() {
 		setIsCompletingPractice(true);
 		clearCachedExamDetail(examId);
 
-		router.push(historyIdRef.current ? `/history/${historyIdRef.current}` : '/practice');
+		router.push('/history');
 	}, [examId, router]);
 
 	const handlePracticeDiscard = useCallback(() => {
@@ -401,6 +402,8 @@ export default function ExamRoomPage() {
 							onAskSolution={handleAskSolution}
 							isSolutionLoading={loadingSolutionQuestionId === activeQuestion.question_id}
 							hasSolution={Boolean(activeSolution)}
+							statusText={checkedCurrentQuestion && (checkedCurrentQuestion.correct ? 'Trả lời đúng' : 'Trả lời sai')}
+							statusTone={checkedCurrentQuestion && (checkedCurrentQuestion.correct ? 'is-correct' : 'is-wrong')}
 						/>
 
 						<div className="exam-question-content"><MathText text={activeQuestion.question.content} /></div>
@@ -412,26 +415,20 @@ export default function ExamRoomPage() {
 							solution={activeSolution}
 						/>
 
-						<EditableAnswerPanel
-							question={activeQuestion}
-							answer={answers[activeQuestion.question_id]}
-							onChange={(value) => setAnswer(activeQuestion.question_id, value)}
-							disabled={isCurrentQuestionLocked}
-						/>
-
-						{isPracticeMode && checkedCurrentQuestion ? (
-							<div className={`exam-result-short ${checkedCurrentQuestion.correct ? 'is-correct' : 'is-wrong'}`}>
-								<p>
-									<strong>Kết quả:</strong> {checkedCurrentQuestion.correct ? 'Đúng' : 'Sai'} • {checkedCurrentQuestion.score} điểm
-								</p>
-								<p>
-									<strong>Đáp án đúng:</strong> <MathText text={formatAnswer(activeQuestion.question.answer) || 'Chưa có'} />
-								</p>
-								<p>
-									<MathText text={checkedCurrentQuestion.feedback} />
-								</p>
-							</div>
-						) : null}
+						{checkedCurrentQuestion ? (
+							<ResultAnswerPanel
+								question={activeQuestion}
+								studentAnswer={answers[activeQuestion.question_id]}
+								correctAnswer={activeQuestion.question.answer}
+								evaluation={checkedCurrentQuestion}
+							/>
+						) : (
+							<EditableAnswerPanel
+								question={activeQuestion}
+								answer={answers[activeQuestion.question_id]}
+								onChange={(value) => setAnswer(activeQuestion.question_id, value)}
+							/>
+						)}
 					</div>
 
 					<div className="exam-main-actions">

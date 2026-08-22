@@ -10,14 +10,6 @@ type ResultAnswerPanelProps = {
 	evaluation: Evaluation;
 };
 
-function partLabel(value: boolean | null | undefined) {
-	if (value === null || value === undefined) {
-		return '-';
-	}
-
-	return value ? 'Đúng' : 'Sai';
-}
-
 // This read-only renderer mirrors EditableAnswerPanel, but focuses on explaining
 // what happened after grading instead of collecting input.
 export function ResultAnswerPanel({ question, studentAnswer, correctAnswer, evaluation }: ResultAnswerPanelProps) {
@@ -55,30 +47,27 @@ export function ResultAnswerPanel({ question, studentAnswer, correctAnswer, eval
 		if (question.sectionType === 'true_false') {
 			const parts = question.question.parts;
 			const studentParts = Array.isArray(studentAnswer) ? studentAnswer : [];
-			const correctParts = Array.isArray(correctAnswer) ? correctAnswer : [];
 
 			return (
 				<div className="exam-tf-table exam-result-panel">
-					<div className="exam-tf-head exam-tf-result-head">
+					<div className="exam-tf-head">
 						<p>PHÁT BIỂU</p>
-						<p>BẠN CHỌN</p>
-						<p>ĐÁP ÁN</p>
+						<p>ĐÚNG</p>
+						<p>SAI</p>
 					</div>
 
 					{parts.map((part, index) => {
 						const picked = studentParts[index] ?? null;
-						const isCorrect = evaluation.part_correct[index] ?? false;
+						const tone = evaluation.part_correct[index] ? 'is-correct' : 'is-wrong';
 
 						return (
-							<div key={`${question.question_id}-${index}`} className={`exam-tf-item exam-tf-result-item ${isCorrect ? 'is-correct' : 'is-wrong'}`}>
+							<div key={`${question.question_id}-${index}`} className={`exam-tf-item exam-tf-result-item ${tone}`}>
 								<div className="exam-tf-statement">
 									<span className="exam-tf-label">{part.label.toUpperCase()}</span>
 									<p><MathText text={part.content} /></p>
 								</div>
-								<p className={`exam-tf-answer-chip ${isCorrect ? 'is-correct' : 'is-wrong'}`}>
-									{picked === null ? 'Bỏ trống' : partLabel(picked)}
-								</p>
-								<p className="exam-tf-answer-chip is-correct">{partLabel(correctParts[index])}</p>
+								<span className={`exam-tf-radio ${picked === true ? tone : ''}`} />
+								<span className={`exam-tf-radio ${picked === false ? tone : ''}`} />
 							</div>
 						);
 					})}

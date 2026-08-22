@@ -58,7 +58,10 @@ export default function HistoryDetailPage() {
 			try {
 				const detail = await getHistoryDetail(historyId);
 				setHistory(detail);
-				setExam(getCachedExamDetail(detail.exam_id) ?? (await getDocumentDetail(detail.exam_id)));
+				setExam(
+					getCachedExamDetail(detail.exam_id) ??
+						(await getDocumentDetail(detail.exam_id, historyId)),
+				);
 			} catch (error) {
 				setError(getApiErrorMessage(error, 'Không tải được chi tiết bài làm.'));
 			} finally {
