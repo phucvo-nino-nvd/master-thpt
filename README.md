@@ -1,173 +1,241 @@
-# MASTER
+<div align="center">
+  <img src="assets/logo.svg" width="88" height="88" alt="masterTHPT">
+  <h1>MASTER</h1>
+</div>
 
-> **Multi-Agent System for Teaching, Evaluating & Reviewing**
-> 
-> An autonomous EdTech platform driven by a deeply collaborative multi-agent architecture. Designed for high school students, MASTER transcends traditional static logic by orchestrating a cohesive ecosystem of 5 specialized AI agents: the **Manager**, **Parser**, **Teacher**, **Verifier**, and **Adaptive Agent**. Exhibiting true agentic capabilities, these entities reason and collaborate dynamically to ingest complex materials, provide cognitive step-by-step hints, cross-verify AI outputs to eliminate hallucinations, and autonomously map out hyper-personalized learning paths using real-time performance data.
+<hr>
 
 <p align="center">
-  <a href="https://github.com/khang1108/MASTER---Multi-Agent-System-for-Teaching-Evaluating-Reviewing/stargazers"><img src="https://img.shields.io/github/stars/khang1108/MASTER---Multi-Agent-System-for-Teaching-Evaluating-Reviewing?style=for-the-badge" alt="GitHub stars"></a>
-  <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-14-000000?style=for-the-badge&logo=next.js" alt="Next.js"></a>
-  <a href="https://nestjs.com/"><img src="https://img.shields.io/badge/NestJS-10-E0234E?style=for-the-badge&logo=nestjs" alt="NestJS"></a>
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python" alt="Python"></a>
-  <a href="https://azure.microsoft.com/en-us/products/container-apps"><img src="https://img.shields.io/badge/Deploy-Azure%20Container%20Apps-0078D4?style=for-the-badge&logo=microsoftazure" alt="Azure Container Apps"></a>
+  <b>A multi-agent maths tutor for Vietnamese high school.</b> Six agents crawl for exam papers,
+  turn them into questions, grade what the student submits, re-check their own grading, and restock
+  practice for whatever the learner is weakest at — on a 702-concept knowledge graph, with nobody
+  queueing the work by hand.
 </p>
 
-This repository constitutes the primary codebase for the MASTER system. The following sections provide an in-depth understanding of the platform's architecture, underlying technologies, deployment protocols, and knowledge graph integration processes.
-
-**Visit our website**: [Here](masterthpt.app)
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.12">
+  <img src="https://img.shields.io/badge/api-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/web-Next.js%2014-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js 14">
+  <img src="https://img.shields.io/badge/graph-Neo4j%20Aura-4581C3?style=flat-square&logo=neo4j&logoColor=white" alt="Neo4j Aura">
+  <img src="https://img.shields.io/badge/llm-OpenRouter-6467F2?style=flat-square" alt="OpenRouter">
+  <img src="https://img.shields.io/badge/traces-LangSmith-1C3C3C?style=flat-square&logo=langchain&logoColor=white" alt="LangSmith">
+</p>
 
 ## Overview and Core Value Proposition
 
-MASTER is developed to address the growing need for personalized learning among high school students. It serves as a centralized repository for examination papers and practice tests categorized by subject, grade level, and exam type. The system supports entrance assessments, maintains a comprehensive history of attempted exams, and allows students to review their performance at any time. Based on previous results and individual learner profiles, MASTER generates tailored recommendations for subsequent study sessions. To ensure seamless development, testing, and deployment, the architecture is decoupled into independent services: the web interface, the API backend, and the sophisticated AI agent service. The current implementation evaluates objective tests deterministically at the API layer, while the agent service is dedicated to advanced tasks such as providing strategic hints, analyzing student mistakes, generating adaptive practice sessions, and orchestrating various AI-driven workflows.
+Vietnamese students preparing for the national maths exam do not lack exercises — they lack
+exercises aimed at the exact thing they get wrong. MASTER closes that loop end to end. Every
+submitted answer is graded, re-checked, and turned into a mastery number for one specific concept on
+the curriculum graph; the weakest concept immediately becomes the system's next crawl target. The
+practice stock is a consequence of the learner's own mistakes rather than a fixed syllabus, and no
+human queues any of it.
+
+The whole system runs as two Python pipelines plus a Next.js front end. There is no orchestrator
+service, no message broker and no per-student configuration: grading fans out over one attempt's
+questions, and restocking runs in a background thread as soon as grading names a weak concept.
 
 ## Key Features and User Interface
 
-The platform offers a robust set of features designed to enhance the educational experience. Users can authenticate securely via email and password or Google OAuth. Upon logging in, students are greeted by a comprehensive dashboard that aggregates their academic profile, exam history, and overall learning performance. The exam library allows students to browse available tests, enter a simulated examination room, and submit their answers. For new students, the system can automatically generate entrance exams tailored to assess their initial proficiency. 
+- **Deterministic grading first.** The teacher matches the reference answer with a rubric and only
+  spends an LLM call when the rubric cannot settle the question, so most marking costs nothing.
+- **Self-checking.** Evaluations the teacher is unsure about are flagged and re-run by the verifier,
+  which has SymPy on hand to decide algebraic equivalence.
+- **Mastery on a real curriculum graph.** 702 concepts extracted from the grade 10–12 textbooks,
+  810 prerequisite and taxonomy edges, queried live from Neo4j to find what to review first.
+- **Practice that restocks itself.** Weak concept in, Tavily search out; new papers are OCR'd,
+  deduplicated against the item bank, and tagged with one concept each. If nothing is found online,
+  the author agent writes the missing questions.
+- **Approval gate for ingest.** In manual mode crawled URLs queue up in the exam bank and wait for a
+  human to approve them before anything is parsed.
+- **Hints while working, solutions after grading.** Staged hints are available during an attempt; the
+  full worked solution unlocks only once the answer has been marked.
+- **Five screens, one flow.** Knowledge map → exam bank → practice → attempt history → review, each
+  one reading the same artifacts the agents write.
 
-Furthermore, a dedicated practice mode continuously updates the student's backlog of exercises using a specialized adaptive AI agent. During practice, students can request AI-generated hints for specific questions and receive detailed explanations for their mistakes. All exam submissions are recorded in the history module, enabling students to revisit past results, review correct answers, and read question-specific feedback.
+## Screenshots
 
-![Dashboard Preview Placeholder](assets/overview_page.png)
-![Room](assets/room.png)
+|  |  |
+| --- | --- |
+| ![Knowledge map](assets/knowledge_graph.png) | ![Cluster zoom](assets/knowledge_graph_zoom.png) |
+| **Knowledge map** — every concept in the grade 10–12 maths curriculum, clustered and coloured by mastery. The side panel shows the selected concept, its prerequisites and the practice streak. | **Cluster zoom** — click a cluster to open it and read the prerequisite arrows between individual concepts. |
+| ![Exam bank](assets/documents.png) | ![Practice](assets/practice.png) |
+| **Exam bank** — source exams after parsing, filterable by grade and by whether they have been attempted. Newly crawled URLs wait at the top for approval before anything is parsed. | **Practice** — one card per concept the learner is weak at, restocked in the background. Ask for a topic and the crawler goes looking for it. |
+| ![Graded attempt](assets/history_result.png) | ![Review](assets/review.png) |
+| **Graded attempt** — the hints that were offered, the full worked solution and per-option marking. The solution unlocks only after grading. | **Review** — mastery per concept, the attempt timeline, and the recurring mistakes distilled from the last five runs. |
 
-## System Architecture & Agentic Pipeline
+## How one attempt travels through the system
 
-The system architecture follows a modern, decoupled microservices pattern to guarantee scalability and maintainability, driven by an advanced multi-agent orchestration pipeline.
+![Workflow](assets/workflow.png)
 
-```mermaid
-flowchart TD
-    %% Define styles
-    classDef frontend fill:#1e3a8a,stroke:#ce93d8,stroke-width:2px,color:#fff
-    classDef backend fill:#880e4f,stroke:#ffb74d,stroke-width:2px,color:#fff
-    classDef agent fill:#ff6f00,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
-    classDef db fill:#004d40,stroke:#80cbc4,stroke-width:2px,color:#fff
-    classDef user fill:#33691e,stroke:#a5d6a7,stroke-width:2px,color:#fff
-    classDef tools fill:#424242,stroke:#bdbdbd,stroke-width:2px,color:#fff
+The figure is generated from [`assets/workflow.html`](assets/workflow.html) — open it in a browser
+for the vector version.
 
-    subgraph UserLayer [User Layer]
-        U(["Student / User"]):::user
-    end
+Two pipelines, and they only touch through the item bank and the learner's mastery table:
 
-    subgraph ServiceLayer [Service Layer : Next.js & NestJS]
-        W["Web Frontend<br/>Next.js 14"]:::frontend
-        A["API Backend<br/>NestJS 10"]:::backend
-        
-        U <-->|Interact: Exams, Practice| W
-        W <-->|REST API| A
-    end
+**Grading.** A submitted attempt is stored in `history.db`, then `grade()` runs the teacher, the
+verifier and the learner in that order. The teacher tries the rubric first (`match_answer`) and only
+calls an LLM when the reference answer cannot settle the question; evaluations it is not confident
+about are flagged. The verifier re-checks *only* the flagged ones, with SymPy available as a tool for
+algebraic equivalence. The learner writes one mastery update per concept mapped to each graded
+question, then picks the weakest concept touched by the attempt and kicks off restocking in a
+background thread.
 
-    subgraph AIEcosystem [Multi-Agent AI Ecosystem : Python FastAPI]
-        MG["Manager Agent<br/>Orchestrator"]:::agent
-        PA["Parser Agent<br/>Extraction"]:::agent
-        TE["Teacher Agent<br/>Hints & Review"]:::agent
-        VE["Verifier Agent<br/>Anti-Hallucination"]:::agent
-        AD["Adaptive Agent<br/>Learning Path"]:::agent
-        
-        A <-->|Invoke AI Flow| MG
-        
-        MG -->|Delegate: Structuring Knowledge| PA
-        MG -->|Delegate: Tutoring| TE
-        TE -->|Cross Check Drafts| VE
-        VE -->|Validated Outputs| MG
-        MG -->|Delegate: Profiling| AD
-    end
+**Ingest.** Restocking asks the crawler for material on that concept. Tavily searches, already-known
+URLs are skipped. Found documents go through Datalab OCR in the parser; if nothing is found at all
+the author writes the missing questions instead. Either way the result is deduplicated against
+`item_bank.jsonl` by fingerprint, and only genuinely new items are sent to the tagger — so
+re-ingesting a document costs no LLM calls. The tagger maps each item to exactly one knowledge node,
+which is what makes the mastery bookkeeping one-update-per-question.
 
-    subgraph Persistence [Persistence & External Resources]
-        DB[("MongoDB<br/>Prisma ORM")]:::db
-        KG[("Knowledge Graph<br/>Concepts & Prereqs")]:::db
-        LLM(("LLMs<br/>Gemini / FPT")):::tools
-        LS["LangSmith<br/>Tracing & Observability"]:::tools
-        Raw["Educational Data<br/>Scrapers"]:::tools
+## Agents
 
-        A <--> DB
-        Raw -->|Input Docs| PA
-        PA -->|Writes| KG
-        AD <-->|Reads Logic Map| KG
-        
-        MG -.-> LLM
-        PA -.-> LLM
-        TE -.-> LLM
-        VE -.-> LLM
-        AD -.-> LLM
-        LLM -.-> LS
-    end
+| Agent | Code | What it does |
+| --- | --- | --- |
+| **Crawler** | `backend/agents/crawler` | Tavily search + fetch for a concept, excluding URLs already in the bank. |
+| **Parser** | `backend/agents/parser` | PDF/Word → Datalab OCR → one `refined.json` per document. |
+| **Author** | `backend/agents/teacher` (`write_questions`) | Writes items from scratch when the crawler comes back empty. |
+| **Teacher** | `backend/agents/teacher` | Rubric match first, LLM evaluation second; flags what needs review. |
+| **Verifier** | `backend/agents/verifier` | Re-checks flagged evaluations only, with SymPy tools. |
+| **Learner** | `backend/agents/learner` | Mastery per concept, next-action recommendation, weakest-concept selection. |
+
+Grading fans out across questions with a thread pool (`MAX_GRADING_WORKERS`), and every agent call is
+traced to LangSmith.
+
+## Data stores
+
+| Path | Contents |
+| --- | --- |
+| `artifacts/history/history.db` | Attempts, per-question answers, and the crawl queue waiting for approval. |
+| `artifacts/learner/learner.db` | `knowledge_state` (mastery, attempts, correct/incorrect) and `question_knowledge` (item → concept). |
+| `artifacts/item_bank.jsonl` | The practice pool. Append-only, deduplicated by fingerprint. |
+| `artifacts/data/<document>/` | `raw.json`, `refined.json` and extracted images per source document. |
+| `artifacts/knowledge_graph/knowledge_graph.json` | The graph itself: 702 concepts, 810 edges. |
+| Neo4j Aura | The same graph, queried live for prerequisites and dependents. |
+
+## Knowledge graph
+
+702 concepts (250 in grade 10, 308 in grade 11, 144 in grade 12) and 810 edges: 564 `REQUIRES`,
+157 `IS_A`, 76 `PART_OF`, 13 `SUBSET_OF`.
+
+It is built offline from the textbook PDFs in `artifacts/textbooks/raw`, not at startup. Each stage
+caches into `artifacts/knowledge_graph/` so a rerun only pays for what changed:
+
+```bash
+cd backend
+python -m knowledge.graph.refine        # PDF -> Datalab OCR -> refined Markdown
+python -m knowledge.graph.chunk         # split into lessons
+python -m knowledge.graph.extract       # lesson -> concepts + local edges
+python -m knowledge.graph.canonicalize  # merge duplicate concepts across books
+python -m knowledge.graph.link          # global prerequisite edges, cycle resolution
+python -m knowledge.graph.convert       # export CSVs for Neo4j Aura import
+python -m scripts.validate_graph
 ```
 
-High school students interact with the Next.js App Router-based frontend. These frontend interactions are routed through an internal API proxy to the backend NestJS REST API, securely handling authentication, document management, exam submissions, and profile updates. This data is seamlessly persisted to a MongoDB database leveraging the Prisma ORM. For intelligent functional operations, the NestJS backend communicates with a robust Python-based AI Agent Service. This segment operates via a FastAPI endpoint and coordinates specialized cognitive agents including a Manager, Parser, Teacher, Verifier, and Adaptive logic agent, dynamically integrating Large Language Models (LLMs) and LangSmith tracing.
+The app reads `knowledge_graph.json` for node lists and the knowledge-map UI, and Neo4j for
+prerequisite traversal.
 
-## Knowledge Graph Construction and Deployment
+## API
 
-Building the educational Knowledge Graph is a foundational step in enabling the adaptive learning capabilities of MASTER. The system ingests raw educational materials, such as the digital textbooks stored within the `data/` directory (e.g., mathematics textbooks for varying high school grade levels). Constructing the graph requires initializing the data parsing pipeline located in the `data/scrapers/` module. 
+FastAPI, everything under `/api`:
 
-By executing the configured extraction scripts, the system processes these markdown and document files, identifying key educational concepts, logical prerequisites, and learning objectives. The `Parser` AI agent systematically cross-references these newly identified concepts to establish semantic linkages, constructing a definitive network of knowledge. This resulting graph is subsequently persisted into the database, serving as the core reference model for the `Adaptive` agent. When a student takes an exam, the Adaptive agent traverses this Knowledge Graph to pinpoint the exact foundational gaps in their understanding, automatically queuing targeted practice content synchronized with their specific developmental needs.
+| Route | Purpose |
+| --- | --- |
+| `GET /api/documents`, `GET /api/documents/{id}` | Exam bank and one exam's items. |
+| `GET/POST/DELETE /api/ingest`, `POST /api/ingest/mode`, `POST /api/ingest/approve` | The manual crawl queue: inspect, switch auto/manual, drop or approve a URL. |
+| `GET /api/practice`, `GET /api/practice/status`, `POST /api/practice/update` | Practice sets, background stocking progress, request a topic. |
+| `POST /api/exams/submit`, `GET /api/exams/grading-status` | Submit an attempt, poll grading. |
+| `POST /api/practice/check-question` | Grade a single practice question. |
+| `POST /api/hints`, `POST /api/solutions` | Staged hints while working; worked solutions only once the answer is graded. |
+| `POST /api/history`, `GET /api/history`, `GET /api/history/{id}` | Attempt history. |
+| `GET /api/knowledge_graph` | The graph overlaid with the learner's mastery. |
 
-![Knowledge Graph](assets/knowledge_graph.png)
+## Local development
 
-## Usage and Local Development Instructions
+Two processes: FastAPI on port 8000 and Next.js on port 3000. The browser only ever talks to port
+3000 — every call goes through the frontend's own `/api/[...path]` route, which proxies to the
+backend.
 
-To begin utilizing the platform in a local development context, Docker Compose provides the most stable methodology. Developers must first configure their environment variables by duplicating the `infra/.env.example` templates into specific file environments for the API, Web, and AI segments.
-
-1. **Configure Environment Variables:**
+1. **Environment:**
 ```bash
-cp infra/.env.example infra/.env.api
-cp infra/.env.example infra/.env.web
-cp infra/.env.example infra/.env.ai
+cp .env.example .env
+echo 'API_PROXY_TARGET=http://localhost:8000' > frontend/.env.local
 ```
-*(Ensure you update the newly created files with your MongoDB keys, Google OAuth client secrets, and preferred LLM provider details)*
+Fill `.env` with your Tavily, Datalab, OpenRouter, LangSmith and Neo4j credentials. Every tuning knob
+lives there too — crawler page limits, grading concurrency, mastery rates and thresholds, practice
+stocking size.
 
-1. **Initialize the Docker Stack:**
+2. **Backend:**
 ```bash
-docker compose -f infra/docker-compose-web.yml up --build
-```
-When the containers successfully deploy, the user interface immediately becomes accessible via the standard local port 3000, while the API health statuses can be monitored at ports 3001 and 8000 respectively.
-
-1. **Alternative Manual Setup (Without Docker):**
-Engineers seeking to focus on distinct subsystems can instantiate the services manually.
-
-**For the Backend API (NestJS):**
-```bash
-cd master/apps/api
-npm install
-npx prisma generate
-npm run start:dev
+cd backend
+uv venv
+uv pip install -r requirements.txt
+.venv/bin/python -m api.router
 ```
 
-**For the Frontend Web (Next.js):**
+3. **Frontend:**
 ```bash
-cd master/apps/web
+cd frontend
 npm install
 npm run dev
 ```
 
-**For the AI Agent Service (Python):**
+4. **Tests:**
 ```bash
-cd master/agents
-pip install -r requirements.txt
-pytest
+cd backend && .venv/bin/python -m pytest -q
 ```
 
-## Comprehensive Technology Stack
+## Tech stack
 
-| Layer              | Technology                       | Key Features & Responsibilities                                                |
-| ------------------ | -------------------------------- | ------------------------------------------------------------------------------ |
-| **Frontend**       | Next.js 14, React 18, TypeScript | App Router, type-safety, responsive user interface                             |
-| **Backend**        | NestJS 10                        | Modular architecture, secure RESTful API, validation pipes, JWT                |
-| **Database**       | MongoDB, Prisma ORM              | Relational and document-based concepts mapping, secure clustering              |
-| **AI Service**     | Python 3.12, FastAPI             | Endpoint orchestration for Manager, Parser, Teacher, Verifier, Adaptive agents |
-| **AI Framework**   | LangChain, LangGraph             | Complex multi-agent workflow orchestration                                     |
-| **Infrastructure** | Docker, Docker Compose           | Container-native ideology, local development configuration                     |
-| **Deployment**     | Azure Container Apps             | Robust execution environments, seamless transitions                            |
+| Layer | Technology |
+| --- | --- |
+| **Frontend** | Next.js 14 App Router, React 18, TypeScript, KaTeX, `react-force-graph-2d` + `d3-force` |
+| **Backend** | Python 3.12, FastAPI, Uvicorn, Pydantic |
+| **Agents** | OpenRouter (per-role models), LangSmith tracing, SymPy, Tavily, Datalab OCR |
+| **Storage** | SQLite (`history.db`, `learner.db`), JSONL item bank, Neo4j Aura |
 
-## Production Azure Deployment
+## Repository layout
 
-The repository integrates an automated Continuous Integration and Continuous Deployment pipeline using GitHub Actions, tailored directly for Microsoft Azure. Triggered by a primary branch push or a manual workflow dispatch, the pipeline actively builds the distinct Docker images and securely pushes them into an Azure Container Registry (ACR).
-
-Subsequently, the Azure Container Apps are thoroughly updated with the latest revisions alongside their isolated secure environment variables via GitHub Secrets. Required keys include Azure subscription identifiers, registry login paths, database uniform resource identifiers, and LLM access tokens. This serverless container deployment strictly guarantees isolated execution, rapid scaling capabilities during high-traffic examination periods, and built-in observability with an integrated LangSmith tracing protocol activated natively across the AI containers.
-
-## Star History
-
-Tracking the community interest and growth of the repository over time:
-
-[![Star History Chart](https://api.star-history.com/svg?repos=khang1108/MASTER---Multi-Agent-System-for-Teaching-Evaluating-Reviewing&type=Date)](https://star-history.com/#khang1108/MASTER---Multi-Agent-System-for-Teaching-Evaluating-Reviewing&Date)
+```
+masterTHPT/
+├── backend/                                # FastAPI service, port 8000
+│   ├── main.py                             # grade(), ingest(), stock_practice()
+│   ├── api/                                # every /api route and its schemas
+│   ├── agents/
+│   │   ├── crawler/                        # Tavily search, skips known URLs
+│   │   ├── parser/                         # Datalab OCR, then split into items
+│   │   ├── teacher/                        # rubric first, then LLM; also writes items
+│   │   ├── verifier/                       # re-checks flagged evaluations with SymPy
+│   │   └── learner/                        # mastery, learning path, restock requests
+│   ├── knowledge/
+│   │   ├── bank/                           # dedupe, append, one concept per item
+│   │   └── graph/                          # offline graph build, Neo4j queries, textbook PDFs
+│   ├── history/                            # attempts and the crawl queue
+│   ├── common/                             # shared schemas, LLM and JSON helpers
+│   ├── scripts/                            # graph validation and stats
+│   ├── tests/                              # pytest
+│   └── requirements.txt
+├── frontend/                               # Next.js 14, port 3000
+│   ├── app/
+│   │   ├── api/[...path]/                  # proxy to the backend
+│   │   ├── knowledge_graph/                # the concept map
+│   │   ├── documents/                      # exam bank, crawl queue approval
+│   │   ├── exams/[id]/                     # sitting an exam
+│   │   ├── practice/                       # per-concept practice cards
+│   │   ├── history/[id]/                   # graded attempt, hints, solution
+│   │   └── review/                         # mastery and recurring mistakes
+│   ├── features/                           # page-level components
+│   └── shared/                             # api client and styles
+├── artifacts/
+│   ├── data/                               # raw.json, refined.json, images per document
+│   ├── textbooks/                          # raw and refined Markdown
+│   ├── knowledge_graph/                    # stage caches, knowledge_graph.json, neo4j CSVs
+│   ├── history/                            # history.db
+│   ├── learner/                            # learner.db
+│   └── item_bank.jsonl                     # the practice pool
+├── assets/                                 # screenshots, workflow.png and workflow.html
+├── .env.example                            # keys and tuning knobs
+└── README.md
+```
 
 ## Contributors
 
