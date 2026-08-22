@@ -3,8 +3,6 @@
   <h1>MASTER</h1>
 </div>
 
-<hr>
-
 <p align="center">
   <b>A multi-agent maths tutor for Vietnamese high school.</b> Six agents crawl for exam papers,
   turn them into questions, grade what the student submits, re-check their own grading, and restock
