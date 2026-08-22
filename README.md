@@ -1,6 +1,6 @@
 <div align="center">
   <img src="assets/logo.svg" width="88" height="88" alt="masterTHPT">
-  <h1>MASTER</h1>
+  <h1>MASTER THPT</h1>
 </div>
 
 <p align="center">
@@ -22,7 +22,7 @@
 ## Overview and Core Value Proposition
 
 Vietnamese students preparing for the national maths exam do not lack exercises — they lack
-exercises aimed at the exact thing they get wrong. MASTER closes that loop end to end. Every
+exercises aimed at the exact thing they get wrong. MASTER THPT closes that loop end to end. Every
 submitted answer is graded, re-checked, and turned into a mastery number for one specific concept on
 the curriculum graph; the weakest concept immediately becomes the system's next crawl target. The
 practice stock is a consequence of the learner's own mistakes rather than a fixed syllabus, and no
@@ -194,7 +194,7 @@ cd backend && .venv/bin/python -m pytest -q
 ## Repository layout
 
 ```
-masterTHPT/
+.
 ├── backend/                                # FastAPI service, port 8000
 │   ├── main.py                             # grade(), ingest(), stock_practice()
 │   ├── api/                                # every /api route and its schemas
@@ -237,7 +237,7 @@ masterTHPT/
 
 ## Contributors
 
-We welcome and appreciate all contributions to the MASTER platform. Thank you to everyone who has helped build this project!
+We welcome and appreciate all contributions to the MASTER THPT platform. Thank you to everyone who has helped build this project!
 
 [![Contributors](https://img.shields.io/github/contributors/khang1108/MASTER---Multi-Agent-System-for-Teaching-Evaluating-Reviewing?style=for-the-badge)](https://github.com/khang1108/MASTER---Multi-Agent-System-for-Teaching-Evaluating-Reviewing/graphs/contributors)
 
