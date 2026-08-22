@@ -47,5 +47,14 @@ def init_db() -> None:
                 PRIMARY KEY (history_id, question_id),
                 CHECK (correct IN (0, 1))
             );
+
+            CREATE TABLE IF NOT EXISTS crawl_queue (
+                url TEXT PRIMARY KEY,
+                title TEXT NOT NULL DEFAULT '',
+                score REAL NOT NULL DEFAULT 0.0,
+                concept TEXT NOT NULL DEFAULT '',
+                grade INTEGER NOT NULL,
+                created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+            );
             """
         )

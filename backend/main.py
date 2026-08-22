@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Callable, Sequence
+from collections.abc import Callable, Iterable, Sequence
 from concurrent.futures import ThreadPoolExecutor
 from contextvars import copy_context
 from pathlib import Path
@@ -14,11 +14,11 @@ from agents.crawler.main import crawl
 from agents.crawler.schema import CrawlerRequest
 from agents.parser.main import parse_question
 from agents.teacher.main import evaluate
-from agents.teacher.rubric import match_answer
+from agents.teacher.rubric import match_answer, settled
 from agents.verifier.main import verify
 from common.schema import Document, Evaluation
 from agents.learner.service import crawl_requests, run_learner
-from history.main import solved_question_ids
+from history.main import queue_docs, solved_question_ids, take_doc
 from knowledge.bank.main import build_item_bank, source_urls
 from knowledge.bank.tagger import tag_items
 
@@ -31,11 +31,35 @@ load_dotenv(override=True)
 
 MAX_GRADING_WORKERS = int(os.getenv("MAX_GRADING_WORKERS", "8"))
 
-def run(nodes: Sequence[Node], state: State) -> State:
+def run(
+    nodes: Sequence[Node],
+    state: State,
+    on_node: Callable[[str], None] | None = None,
+) -> State:
     for node in nodes:
+        if on_node is not None:
+            on_node(node.__name__)
+
         state = {**state, **(node(state) or {})}
 
     return state
+
+
+def mapped(fn: Callable[[Any], Any], items: Iterable[Any]) -> list[Any]:
+    tasks = [(copy_context(), item) for item in items]
+
+    with ThreadPoolExecutor(max_workers=MAX_GRADING_WORKERS) as pool:
+        return list(pool.map(lambda task: task[0].run(fn, task[1]), tasks))
+
+
+def graded(submission: dict) -> tuple[Evaluation, bool]:
+    item, student_answer = submission["item"], submission["student_answer"]
+    matched = match_answer(item, student_answer)
+
+    if matched:
+        return matched, False
+
+    return evaluate(item, student_answer), not settled(item)
 
 
 @traceable(name="Crawler Agent", run_type="chain")
@@ -65,23 +89,9 @@ def item_bank(state: State) -> State:
     return {"items": items, "tags": tag_items(items)}
 
 
-def graded(submission: dict) -> tuple[Evaluation, bool]:
-    matched = match_answer(submission["item"], submission["student_answer"])
-
-    if matched:
-        return matched, False
-
-    return evaluate(submission["item"], submission["student_answer"]), True
-
-
 @traceable(name="Teacher Agent", run_type="chain")
 def teacher_agent(state: State) -> State:
-    context = copy_context()
-
-    with ThreadPoolExecutor(max_workers=MAX_GRADING_WORKERS) as pool:
-        results = list(
-            pool.map(lambda submission: context.run(graded, submission), state["submissions"])
-        )
+    results = mapped(graded, state["submissions"])
 
     return {
         "evaluations": [evaluation for evaluation, _ in results],
@@ -99,13 +109,9 @@ def verifier_agent(state: State) -> State:
 
         return verify(submission["item"], submission["student_answer"], evaluation)
 
-    context = copy_context()
     pending = zip(state["submissions"], state["evaluations"], state["needs_review"])
 
-    with ThreadPoolExecutor(max_workers=MAX_GRADING_WORKERS) as pool:
-        return {
-            "evaluations": list(pool.map(lambda args: context.run(reviewed, args), pending))
-        }
+    return {"evaluations": mapped(reviewed, pending)}
 
 
 def graded_attempts(state: State) -> list[dict]:
@@ -130,33 +136,68 @@ def learner_agent(state: State) -> State:
 
 
 @traceable(name="Ingest Pipeline", run_type="chain")
-def ingest(request: CrawlerRequest) -> State:
-    return run((crawler_agent, parser_agent, item_bank), {"request": request})
+def ingest(request: CrawlerRequest, on_node: Callable[[str], None] | None = None) -> State:
+    state = run((crawler_agent,), {"request": request}, on_node)
+
+    if manual:
+        queue_docs(state["crawled"])
+
+        return state
+
+    return run((parser_agent, item_bank), state, on_node)
 
 
-crawling: str | None = None
+progress: State | None = None
+grading: str | None = None
+manual: bool = True
 
 
-def crawl_concept() -> str | None:
-    return crawling
+@traceable(name="Manual Ingest", run_type="chain")
+def approve(url: str) -> None:
+    global progress
+
+    if progress is not None:
+        return
+
+    batches = take_doc(url)
+
+    running: State = {"concept": "", "stage": "planning", "step": 0, "total": len(batches)}
+    progress = running
+
+    try:
+        for step, crawled in enumerate(batches, start=1):
+            running.update(concept=crawled.request.concept, step=step)
+
+            run(
+                (parser_agent, item_bank),
+                {"crawled": crawled},
+                lambda stage: running.update(stage=stage),
+            )
+    finally:
+        progress = None
 
 
 @traceable(name="Practice Stocking", run_type="chain")
 def stock_practice(concept: str = "") -> None:
-    global crawling
+    global progress
 
-    if crawling is not None:
+    if progress is not None:
         return
 
-    crawling = concept
+    running: State = {"concept": concept, "stage": "planning", "step": 0, "total": 0}
+    progress = running
 
     try:
-        for request in crawl_requests(solved_question_ids(), source_urls(), concept):
-            request.exclude_urls = source_urls()
+        requests = crawl_requests(solved_question_ids(), source_urls(), concept)
+        running["total"] = len(requests)
 
-            ingest(request)
+        for step, request in enumerate(requests, start=1):
+            request.exclude_urls = source_urls()
+            running["step"] = step
+
+            ingest(request, lambda stage: running.update(stage=stage))
     finally:
-        crawling = None
+        progress = None
 
 
 @traceable(name="Grading Pipeline", run_type="chain")

@@ -13,7 +13,7 @@ from knowledge.graph.query import (
     get_prerequisites,
 )
 from .db import get_connection, init_db
-from .mastery import update_mastery
+from .mastery import INITIAL_MASTERY, update_mastery
 
 
 load_dotenv()
@@ -299,16 +299,11 @@ def learning_path() -> list[dict]:
             if state_of(prerequisite_id) in ("untouched", "weak")
         )
 
-    if not selected:
-        selected = {
-            node["id"]
-            for node in graph_nodes
-            if state_of(node["id"]) == "untouched"
-            and all(
-                state_of(prerequisite_id) == "mastered"
-                for prerequisite_id in prerequisites.get(node["id"], ())
-            )
-        }
+    selected |= {
+        node["id"]
+        for node in graph_nodes
+        if state_of(node["id"]) == "untouched"
+    }
 
     depth_by_id: dict[str, int] = {}
 
@@ -337,6 +332,7 @@ def learning_path() -> list[dict]:
     ordered = sorted(
         selected,
         key=lambda knowledge_id: (
+            mastery_by_id.get(knowledge_id, INITIAL_MASTERY),
             depth_of(knowledge_id, frozenset()),
             node_by_id[knowledge_id]["introduced_grade"] or 0,
             node_by_id[knowledge_id]["name"],

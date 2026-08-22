@@ -9,7 +9,7 @@ from common.schema import Evaluation
 from common.utils import chat_model
 from knowledge.bank.main import Item
 from .context import EVALUATE_CONTEXT, HINT_CONTEXT, HINT_LEVELS, SOLUTION_CONTEXT
-from .rubric import apply_rubric
+from .rubric import answer_of, apply_rubric, settled
 from .schema import HintResponse, SolutionResponse
 
 
@@ -89,17 +89,30 @@ def answer_text(item: Item, student_answer: str | list[bool]) -> str:
     )
 
 
+def answer_key_block(item: Item) -> str:
+    if not settled(item):
+        return f"Return exactly {len(item.parts)} booleans in part_correct." if item.parts else ""
+
+    key = ", ".join(
+        f"{part.label}) {'Đúng' if expected else 'Sai'}"
+        for part, expected in zip(item.parts, answer_of(item))
+    )
+
+    return (
+        f"Answer key: {key}\n"
+        "The key is authoritative and correctness is already settled from it. "
+        "Write feedback only; correct and part_correct are discarded."
+    )
+
+
 def build_evaluate_prompt(item: Item, student_answer: str | list[bool]) -> str:
     sections = [
         EVALUATE_CONTEXT,
         question_block(item),
         reference_solution(item),
+        answer_key_block(item),
+        f"Student answer:\n{answer_text(item, student_answer) or '(empty)'}",
     ]
-
-    if item.parts:
-        sections.append(f"Return exactly {len(item.parts)} booleans in part_correct.")
-
-    sections.append(f"Student answer:\n{answer_text(item, student_answer) or '(empty)'}")
 
     return "\n\n".join(section for section in sections if section)
 
@@ -140,14 +153,15 @@ def build_solution_prompt(item: Item, student_answer: str | list[bool], evaluati
 @traceable(name="Evaluate student answer")
 def evaluate(item: Item, student_answer: str | list[bool]) -> Evaluation:
     prompt = build_evaluate_prompt(item, student_answer)
+    keyed = settled(item)
 
     evaluation = None
 
     for _ in range(2):
         evaluation = Evaluation.model_validate(evaluator().invoke(prompt))
 
-        if len(evaluation.part_correct) == len(item.parts):
-            return apply_rubric(item.type, evaluation)
+        if keyed or len(evaluation.part_correct) == len(item.parts):
+            return apply_rubric(item, student_answer, evaluation)
 
     raise ValueError(
         f"LLM judged {len(evaluation.part_correct) if evaluation else 0} sub-statements "

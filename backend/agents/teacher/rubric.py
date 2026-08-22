@@ -34,16 +34,30 @@ def question_score(
     return MAX_POINTS[question_type] if correct else 0.0
 
 
-def apply_rubric(question_type: QuestionType, evaluation: Evaluation) -> Evaluation:
-    score = question_score(question_type, evaluation.correct, evaluation.part_correct)
+def apply_rubric(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Evaluation:
+    key = answer_of(item)
+
+    if item.type == "true_false" and isinstance(key, list) and key:
+        given = student_answer if isinstance(student_answer, list) else []
+
+        evaluation = evaluation.model_copy(
+            update={
+                "part_correct": [
+                    index < len(given) and given[index] == expected
+                    for index, expected in enumerate(key)
+                ]
+            }
+        )
+
+    score = question_score(item.type, evaluation.correct, evaluation.part_correct)
 
     return evaluation.model_copy(
         update={
             "score": score,
             "correct": (
                 bool(evaluation.part_correct) and all(evaluation.part_correct)
-                if question_type == "true_false"
-                else score == MAX_POINTS[question_type]
+                if item.type == "true_false"
+                else score == MAX_POINTS[item.type]
             ),
         }
     )
@@ -68,6 +82,10 @@ def answer_of(item: Item) -> str | list[bool]:
     return results[-1].strip().rstrip(".") if results else ""
 
 
+def settled(item: Item) -> bool:
+    return item.type == "true_false" and bool(answer_of(item))
+
+
 def normalize_answer(text: str) -> str:
     return text.strip().casefold().replace(",", ".").replace(" ", "").rstrip(".")
 
@@ -83,7 +101,8 @@ def match_answer(item: Item, student_answer: str | list[bool]) -> Evaluation | N
             return None
 
         return apply_rubric(
-            item.type,
+            item,
+            student_answer,
             Evaluation(
                 score=0.0,
                 correct=True,
@@ -99,7 +118,8 @@ def match_answer(item: Item, student_answer: str | list[bool]) -> Evaluation | N
         return None
 
     return apply_rubric(
-        item.type,
+        item,
+        student_answer,
         Evaluation(
             score=0.0,
             correct=True,

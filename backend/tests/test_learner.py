@@ -87,7 +87,7 @@ def test_knowledge_graph_overlays_mastery(learner_db):
     )
 
 
-def test_learning_path_puts_prerequisite_before_weak_node(learner_db):
+def test_learning_path_puts_weak_node_before_untouched(learner_db):
     add_mapping("Q001", "DAO_HAM")
 
     process_attempt(
@@ -98,7 +98,7 @@ def test_learning_path_puts_prerequisite_before_weak_node(learner_db):
     path = learning_path()
     knowledge_ids = [step["knowledge_id"] for step in path]
 
-    assert knowledge_ids.index("GIOI_HAN_HAM_SO") < knowledge_ids.index("DAO_HAM")
+    assert knowledge_ids.index("DAO_HAM") < knowledge_ids.index("GIOI_HAN_HAM_SO")
 
     steps = {step["knowledge_id"]: step["action"] for step in path}
 
@@ -106,13 +106,13 @@ def test_learning_path_puts_prerequisite_before_weak_node(learner_db):
     assert steps["GIOI_HAN_HAM_SO"] == "diagnose"
 
 
-def test_learning_path_without_history_starts_at_graph_roots(learner_db):
+def test_learning_path_without_history_covers_every_untouched_node(learner_db):
     path = learning_path()
 
     assert path
     assert all(step["action"] == "diagnose" for step in path)
 
-    assert "DAO_HAM" not in {step["knowledge_id"] for step in path}
+    assert "DAO_HAM" in {step["knowledge_id"] for step in path}
 
 
 def test_question_without_mapping_raises_error(learner_db):

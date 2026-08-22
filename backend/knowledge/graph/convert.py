@@ -83,6 +83,9 @@ def load_graph() -> tuple[list[dict], list[dict]]:
     nodes = data["nodes"]
     edges = data["edges"]
 
+    for node in nodes:
+        node["name"] = node["name"][:1].upper() + node["name"][1:]
+
     node_ids = {node["id"] for node in nodes}
 
     if len(node_ids) != len(nodes):

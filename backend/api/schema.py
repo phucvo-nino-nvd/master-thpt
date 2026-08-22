@@ -32,6 +32,17 @@ class PracticeRequest(BaseModel):
     request: str = ""
 
 
+class PracticeStatus(BaseModel):
+    concept: str | None = None
+    stage: str | None = None
+    step: int = 0
+    total: int = 0
+
+
+class GradingStatus(BaseModel):
+    exam_id: str | None = None
+
+
 class DocumentItem(BaseModel):
     id: str
     title: str

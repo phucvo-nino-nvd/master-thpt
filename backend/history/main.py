@@ -5,6 +5,7 @@ from uuid import uuid4
 
 import json
 
+from agents.crawler.schema import CrawledDoc, CrawlerRequest, CrawlerResponse
 from common.schema import Evaluation
 from .db import get_connection, init_db
 from .schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryQuestion, Mode
@@ -152,6 +153,20 @@ def get_history(history_id: str) -> HistoryDetail | None:
     )
 
 
+def attempted_exam_ids() -> set[str]:
+    init_db()
+
+    with get_connection() as conn:
+        rows = conn.execute(
+            """
+            SELECT DISTINCT exam_id
+            FROM history
+            """
+        ).fetchall()
+
+    return {row["exam_id"] for row in rows}
+
+
 def solved_question_ids() -> set[str]:
     init_db()
 
@@ -165,6 +180,88 @@ def solved_question_ids() -> set[str]:
         ).fetchall()
 
     return {row["question_id"] for row in rows}
+
+
+def batches_of(rows: list[Row]) -> list[CrawlerResponse]:
+    batches: dict[tuple[str, int], CrawlerResponse] = {}
+
+    for row in rows:
+        batch = batches.setdefault(
+            (row["concept"], row["grade"]),
+            CrawlerResponse(
+                request=CrawlerRequest(grade=row["grade"], concept=row["concept"]),
+                query="",
+                docs=[],
+                missing=0,
+            ),
+        )
+
+        batch.docs.append(
+            CrawledDoc(url=row["url"], title=row["title"], score=row["score"])
+        )
+
+    return list(batches.values())
+
+
+def queue_docs(crawled: CrawlerResponse) -> None:
+    init_db()
+
+    with get_connection() as conn:
+        conn.executemany(
+            """
+            INSERT INTO crawl_queue (url, title, score, concept, grade)
+            VALUES (?, ?, ?, ?, ?)
+            ON CONFLICT(url) DO NOTHING
+            """,
+            [
+                (doc.url, doc.title, doc.score, crawled.request.concept, crawled.request.grade)
+                for doc in crawled.docs
+            ],
+        )
+
+
+def queued_docs() -> list[CrawlerResponse]:
+    init_db()
+
+    with get_connection() as conn:
+        rows = conn.execute(
+            """
+            SELECT url, title, score, concept, grade
+            FROM crawl_queue
+            ORDER BY created_at, rowid
+            """
+        ).fetchall()
+
+    return batches_of(rows)
+
+
+def drop_doc(url: str) -> None:
+    init_db()
+
+    with get_connection() as conn:
+        conn.execute(
+            """
+            DELETE FROM crawl_queue
+            WHERE url = ?
+            """,
+            (url,),
+        )
+
+
+def take_doc(url: str) -> list[CrawlerResponse]:
+    init_db()
+
+    with get_connection() as conn:
+        rows = conn.execute(
+            """
+            DELETE FROM crawl_queue
+            WHERE url = ?
+            RETURNING url, title, score, concept, grade
+            """,
+            (url,),
+        ).fetchall()
+
+    return batches_of(rows)
 
 
 def get_answer(history_id: str, question_id: str) -> HistoryQuestion | None:

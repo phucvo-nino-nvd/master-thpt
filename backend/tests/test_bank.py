@@ -26,7 +26,11 @@ if __name__ == "__main__":
     refined_path = (
         Path(sys.argv[1])
         if len(sys.argv) > 1
-        else ROOT / "artifacts" / "data" / "sample" / "refined.json"
+        else ROOT
+        / "artifacts"
+        / "data"
+        / "Đề chính thức kỳ thi tốt nghiệp THPT năm 2026 môn Toán - TOANMATH.com"
+        / "refined.json"
     )
 
     document = Document.model_validate_json(

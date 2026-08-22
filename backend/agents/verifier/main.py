@@ -58,7 +58,7 @@ def verify(item: Item, student_answer: str | list[bool], evaluation: Evaluation)
         reviewed = Evaluation.model_validate(verifier().invoke(prompt))
 
         if len(reviewed.part_correct) == len(item.parts):
-            return apply_rubric(item.type, reviewed)
+            return apply_rubric(item, student_answer, reviewed)
 
     raise ValueError(
         f"Verifier judged {len(reviewed.part_correct) if reviewed else 0} sub-statements "

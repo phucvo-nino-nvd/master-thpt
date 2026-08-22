@@ -6,6 +6,7 @@ from uuid import NAMESPACE_URL, uuid5
 from fastapi import BackgroundTasks, FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 
+import main
 import os
 import re
 
@@ -15,17 +16,17 @@ from agents.teacher.rubric import answer_of
 from agents.teacher.schema import HintRequest, HintResponse, SolutionRequest, SolutionResponse
 from common.schema import Evaluation
 from common.utils import normalized
-from history.main import get_answer, get_history, list_history, save_answer, solved_question_ids, start_history
+from history.main import attempted_exam_ids, drop_doc, get_answer, get_history, list_history, queued_docs, save_answer, solved_question_ids, start_history
 from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRequest
 from knowledge.bank.main import Item, items_of, load_items
 from knowledge.graph.convert import node_map
-from main import grade, stock_practice
-from .schema import CheckRequest, DocumentItem, PracticeRequest, SubmitRequest, SubmitResponse
+from main import approve, grade, stock_practice
+from .schema import CheckRequest, DocumentItem, GradingStatus, PracticeRequest, PracticeStatus, SubmitRequest, SubmitResponse
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 IMAGES_DIR = ROOT_DIR / "artifacts" / "data"
 SECTION_ORDER = {"multiple_choice": 0, "true_false": 1, "short_answer": 2}
-PRACTICE_LIMIT = int(os.getenv("PRACTICE_LIMIT", "6"))
+PRACTICE_CARD_LIMIT = int(os.getenv("PRACTICE_CARD_LIMIT", "6"))
 PRACTICE_DURATION = int(os.getenv("PRACTICE_DURATION", "0"))
 
 
@@ -64,14 +65,17 @@ def list_documents() -> list[DocumentItem]:
     for item in load_items():
         groups.setdefault(item["source_url"], []).append(item)
 
+    attempted = attempted_exam_ids()
+
     documents = []
     for source_url, group in groups.items():
         title = group[0]["source_title"]
         year_match = re.search(r"20\d{2}", title)
+        document_id = document_id_of(source_url)
 
         documents.append(
             DocumentItem(
-                id=document_id_of(source_url),
+                id=document_id,
                 title=title,
                 subject="Toán",
                 grade=group[0].get("grade") or 12,
@@ -79,7 +83,7 @@ def list_documents() -> list[DocumentItem]:
                 source=source_url,
                 total_questions=len(group),
                 duration=90,
-                is_completed=False,
+                is_completed=document_id in attempted,
             )
         )
 
@@ -152,19 +156,25 @@ def practice_sets(query: str = "") -> list[DocumentItem]:
             )
         )
 
-        if len(sets) == PRACTICE_LIMIT:
+        if len(sets) == PRACTICE_CARD_LIMIT:
             break
 
     return sets
 
 
-def practice_set_of(knowledge_id: str) -> dict:
+def ingest_state() -> dict:
+    return {"manual": main.manual, "batches": queued_docs()}
+
+
+def practice_set_of(knowledge_id: str, question_ids: set[str] | None = None) -> dict:
     node = node_map().get(knowledge_id)
 
     if node is None:
         raise HTTPException(status_code=404, detail="Không tìm thấy đề thi.")
 
-    question_ids = set(pending_of([knowledge_id], solved_question_ids()).get(knowledge_id, []))
+    if question_ids is None:
+        question_ids = set(pending_of([knowledge_id], solved_question_ids()).get(knowledge_id, []))
+
     items = items_of(question_ids)
 
     if not items:
@@ -190,9 +200,61 @@ def get_documents() -> list[DocumentItem]:
     return list_documents()
 
 
+@app.get("/api/documents/{document_id}")
+def get_document(document_id: str, history_id: str = "") -> dict:
+    items = [item for item in load_items() if document_id_of(item["source_url"]) == document_id]
+
+    if not items:
+        reviewed = get_history(history_id) if history_id else None
+
+        return practice_set_of(
+            document_id,
+            {answer.question_id for answer in reviewed.questions} if reviewed else None,
+        )
+
+    return exam_of(
+        document_id,
+        items[0]["source_title"],
+        items[0].get("grade") or 12,
+        90,
+        items,
+    )
+
+
+@app.get("/api/ingest")
+def get_ingest() -> dict:
+    return ingest_state()
+
+
+@app.post("/api/ingest/mode")
+def post_ingest_mode(manual: bool) -> dict:
+    main.manual = manual
+
+    return ingest_state()
+
+
+@app.delete("/api/ingest")
+def delete_ingest(url: str) -> dict:
+    drop_doc(url)
+
+    return ingest_state()
+
+
+@app.post("/api/ingest/approve")
+def post_ingest_approve(url: str, background: BackgroundTasks) -> dict:
+    background.add_task(approve, url)
+
+    return ingest_state()
+
+
 @app.get("/api/practice")
 def get_practice(q: str = "") -> list[DocumentItem]:
     return practice_sets(q)
+
+
+@app.get("/api/practice/status")
+def get_practice_status() -> PracticeStatus:
+    return PracticeStatus(**(main.progress or {}))
 
 
 @app.post("/api/practice/update")
@@ -202,22 +264,6 @@ def post_practice_update(request: PracticeRequest, background: BackgroundTasks) 
     background.add_task(stock_practice, query)
 
     return practice_sets(query)
-
-
-@app.get("/api/documents/{document_id}")
-def get_document(document_id: str) -> dict:
-    items = [item for item in load_items() if document_id_of(item["source_url"]) == document_id]
-
-    if not items:
-        return practice_set_of(document_id)
-
-    return exam_of(
-        document_id,
-        items[0]["source_title"],
-        items[0].get("grade") or 12,
-        90,
-        items,
-    )
 
 
 @app.post("/api/hints")
@@ -255,6 +301,11 @@ def get_history_detail(history_id: str) -> HistoryDetail:
     return detail
 
 
+@app.get("/api/exams/grading-status")
+def get_grading_status() -> GradingStatus:
+    return GradingStatus(exam_id=main.grading)
+
+
 @app.post("/api/exams/submit")
 def post_exam_submit(request: SubmitRequest, background: BackgroundTasks) -> SubmitResponse:
     submissions = [
@@ -262,16 +313,21 @@ def post_exam_submit(request: SubmitRequest, background: BackgroundTasks) -> Sub
         for answer in request.answers
     ]
 
-    state = grade(submissions)
-    created = start_history(request.exam_id, "exam", request.duration_seconds)
+    main.grading = request.exam_id
 
-    for submission, evaluation in zip(submissions, state["evaluations"]):
-        save_answer(
-            created.history_id,
-            submission["item"].id,
-            submission["student_answer"],
-            evaluation,
-        )
+    try:
+        state = grade(submissions)
+        created = start_history(request.exam_id, "exam", request.duration_seconds)
+
+        for submission, evaluation in zip(submissions, state["evaluations"]):
+            save_answer(
+                created.history_id,
+                submission["item"].id,
+                submission["student_answer"],
+                evaluation,
+            )
+    finally:
+        main.grading = None
 
     background.add_task(stock_practice)
 
@@ -288,7 +344,7 @@ def post_exam_submit(request: SubmitRequest, background: BackgroundTasks) -> Sub
 
 
 @app.post("/api/practice/check-question")
-def post_practice_check(request: CheckRequest) -> Evaluation:
+def post_practice_check(request: CheckRequest, background: BackgroundTasks) -> Evaluation:
     submission = submission_of(request.question_id, request.student_answer)
     evaluation = grade([submission])["evaluations"][0]
 
@@ -296,6 +352,8 @@ def post_practice_check(request: CheckRequest) -> Evaluation:
         save_answer(request.history_id, request.question_id, request.student_answer, evaluation)
     except IntegrityError:
         raise HTTPException(status_code=404, detail="Không tìm thấy lượt làm bài.")
+
+    background.add_task(stock_practice)
 
     return evaluation
 
