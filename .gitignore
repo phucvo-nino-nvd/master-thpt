@@ -4,11 +4,5 @@ __pycache__/
 .env
 .omo/
 
-# Generated data. Only the finished knowledge graph is tracked.
-artifacts/*
-!artifacts/knowledge_graph
-artifacts/knowledge_graph/*
-!artifacts/knowledge_graph/knowledge_graph.json
-
 # 112MB of textbook PDFs, source input for the graph pipeline.
 backend/knowledge/graph/data/
