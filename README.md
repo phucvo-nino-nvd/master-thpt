@@ -4,7 +4,8 @@
 </div>
 
 <p align="center">
-  <b>A multi-agent maths tutor for Vietnamese high school.</b> Six agents crawl for exam papers,
+  <b>A multi-agent maths tutor for Vietnamese high school.</b> Seven roles — four of them LLM-driven,
+  the rest a search crawler, an OCR parser and a deterministic mastery tracker — crawl for exam papers,
   turn them into questions, grade what the student submits, re-check their own grading, and restock
   practice for whatever the learner is weakest at — on a 702-concept knowledge graph, with nobody
   queueing the work by hand.
@@ -85,18 +86,24 @@ the author writes the missing questions instead. Either way the result is dedupl
 re-ingesting a document costs no LLM calls. The tagger maps each item to exactly one knowledge node,
 which is what makes the mastery bookkeeping one-update-per-question.
 
-## Agents
+## Agents and pipeline stages
 
-| Agent | Code | What it does |
-| --- | --- | --- |
-| **Crawler** | `backend/agents/crawler` | Tavily search + fetch for a concept, excluding URLs already in the bank. |
-| **Parser** | `backend/agents/parser` | PDF/Word → Datalab OCR → one `refined.json` per document. |
-| **Author** | `backend/agents/teacher` (`write_questions`) | Writes items from scratch when the crawler comes back empty. |
-| **Teacher** | `backend/agents/teacher` | Rubric match first, LLM evaluation second; flags what needs review. |
-| **Verifier** | `backend/agents/verifier` | Re-checks flagged evaluations only, with SymPy tools. |
-| **Learner** | `backend/agents/learner` | Mastery per concept, next-action recommendation, weakest-concept selection. |
+Four of the seven reason with a model. The crawler and the parser do call services with models inside
+them — Tavily's ranking, Datalab's OCR and image captions — but neither ever asks a model to choose:
+which URL survives and where one question ends are regex decisions, made here. The learner touches no
+model at all; its mastery numbers are arithmetic over SQLite.
 
-Grading fans out across questions with a thread pool (`MAX_GRADING_WORKERS`), and every agent call is
+| Role | Code | Decided by | What it does |
+| --- | --- | --- | --- |
+| **Teacher** | `backend/agents/teacher` | LLM | Rubric match first, LLM evaluation second; flags what needs review. |
+| **Author** | `backend/agents/teacher` (`write_questions`) | LLM | Writes items from scratch when the crawler comes back empty. |
+| **Verifier** | `backend/agents/verifier` | LLM + SymPy | Re-checks flagged evaluations only, with SymPy tools. |
+| **Tagger** | `backend/knowledge/bank/tagger` | LLM | Maps each new item to exactly one knowledge node, in batches of `TAGGER_BATCH_SIZE`. |
+| **Crawler** | `backend/agents/crawler` | Tavily API | Search + fetch for a concept, excluding URLs already in the bank. |
+| **Parser** | `backend/agents/parser` | Datalab OCR | PDF/Word → OCR → one `refined.json` per document. |
+| **Learner** | `backend/agents/learner` | Deterministic | Mastery arithmetic per concept, next-action recommendation, weakest-concept selection. No model call. |
+
+Grading fans out across questions with a thread pool (`MAX_GRADING_WORKERS`), and every LLM call is
 traced to LangSmith.
 
 ## Data stores
