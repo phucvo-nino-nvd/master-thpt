@@ -379,6 +379,11 @@
 	gap: 10px;
 }
 
+.exam-tf-head {
+	padding: 0 16px;
+	border: 1px solid transparent;
+}
+
 .exam-tf-head p {
 	margin: 0;
 	font-size: 10.5px;
