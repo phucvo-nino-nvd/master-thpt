@@ -1,5 +1,7 @@
 import Latex from 'react-latex-next';
 
+import { normalizeMath } from '@/features/exams/components/math-normalize';
+
 // All math-capable text goes through one component so we can swap rendering strategy later
 // without updating every screen individually.
 const IMAGE_RE = /^!\[([\s\S]*)\]\(([^)]+)\)$/;
@@ -26,7 +28,7 @@ function parseRow(line: string): Cell[] {
 function Rich({ text }: { text: string }) {
 	return (
 		<>
-			{text.split(BOLD_RE).map((part, index) =>
+			{normalizeMath(text).split(BOLD_RE).map((part, index) =>
 				!part ? null : index % 2 ? (
 					<strong key={index}>
 						<Latex>{part}</Latex>
