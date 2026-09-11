@@ -103,10 +103,13 @@ def answer_key_block(item: Item) -> str:
     if not settled(item):
         return f"Return exactly {len(item.parts)} booleans in part_correct." if item.parts else ""
 
-    key = ", ".join(
-        f"{part.label}) {'Đúng' if expected else 'Sai'}"
-        for part, expected in zip(item.parts, answer_of(item))
-    )
+    key = answer_of(item)
+
+    if isinstance(key, list):
+        key = ", ".join(
+            f"{part.label}) {'Đúng' if expected else 'Sai'}"
+            for part, expected in zip(item.parts, key)
+        )
 
     return (
         f"Answer key: {key}\n"

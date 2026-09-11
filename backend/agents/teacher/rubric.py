@@ -13,6 +13,7 @@ RESULT_RE = re.compile(r"Kết quả:\s*([^\n_]+)")
 TRUE_RE = re.compile(r"\s*\**\s*ĐÚNG")
 
 TRUE_FALSE_POINTS = (0.0, 0.1, 0.25, 0.5, 1.0)
+KEYED_TYPES = {"multiple_choice", "true_false"}
 MAX_POINTS: dict[str, float] = {
     "multiple_choice": 0.25,
     "true_false": 1.0,
@@ -49,6 +50,11 @@ def apply_rubric(item: Item, student_answer: str | list[bool], evaluation: Evalu
             }
         )
 
+    elif item.type == "multiple_choice" and isinstance(key, str) and key:
+        evaluation = evaluation.model_copy(
+            update={"correct": matches_key(key, student_answer)}
+        )
+
     score = question_score(item.type, evaluation.correct, evaluation.part_correct)
 
     return evaluation.model_copy(
@@ -83,11 +89,18 @@ def answer_of(item: Item) -> str | list[bool]:
 
 
 def settled(item: Item) -> bool:
-    return item.type == "true_false" and bool(answer_of(item))
+    return item.type in KEYED_TYPES and bool(answer_of(item))
 
 
 def normalize_answer(text: str) -> str:
     return text.strip().casefold().replace(",", ".").replace(" ", "").replace("$", "").rstrip(".")
+
+
+def matches_key(key: str, student_answer: str | list[bool]) -> bool:
+    return (
+        not isinstance(student_answer, list)
+        and normalize_answer(student_answer) == normalize_answer(key)
+    )
 
 
 def match_answer(item: Item, student_answer: str | list[bool]) -> Evaluation | None:
@@ -111,10 +124,7 @@ def match_answer(item: Item, student_answer: str | list[bool]) -> Evaluation | N
             ),
         )
 
-    if isinstance(student_answer, list):
-        return None
-
-    if normalize_answer(student_answer) != normalize_answer(key):
+    if not matches_key(key, student_answer):
         return None
 
     return apply_rubric(
