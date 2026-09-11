@@ -9,3 +9,5 @@ backend/knowledge/graph/data/
 
 *.db-wal
 *.db-shm
+
+artifacts/history/history.db

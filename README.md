@@ -6,9 +6,9 @@
 <p align="center">
   <b>A multi-agent maths tutor for Vietnamese high school.</b> Seven roles — four of them LLM-driven,
   the rest a search crawler, an OCR parser and a deterministic mastery tracker — crawl for exam papers,
-  turn them into questions, grade what the student submits, re-check their own grading, and restock
-  practice for whatever the learner is weakest at — on a 702-concept knowledge graph, with nobody
-  queueing the work by hand.
+  turn them into questions, grade what the student submits, re-check the grading no answer key can
+  settle, and restock practice for whatever the learner is weakest at — on a 702-concept knowledge
+  graph.
 </p>
 
 <p align="center">
@@ -24,10 +24,11 @@
 
 Vietnamese students preparing for the national maths exam do not lack exercises — they lack
 exercises aimed at the exact thing they get wrong. MASTER THPT closes that loop end to end. Every
-submitted answer is graded, re-checked, and turned into a mastery number for one specific concept on
-the curriculum graph; the weakest concept immediately becomes the system's next crawl target. The
-practice stock is a consequence of the learner's own mistakes rather than a fixed syllabus, and no
-human queues any of it.
+submitted answer is graded, re-checked when no answer key can settle it, and turned into a mastery
+number for one specific concept on the curriculum graph; the weakest concept immediately becomes the
+system's next crawl target. The practice stock is a consequence of the learner's own mistakes rather
+than a fixed syllabus. Restocking starts on its own; ingest is the one place a human stays in the
+loop, and by default does.
 
 The whole system runs as two Python pipelines plus a Next.js front end. There is no orchestrator
 service, no message broker and no per-student configuration: grading fans out over one attempt's
@@ -35,10 +36,12 @@ questions, and restocking runs in a background thread as soon as grading names a
 
 ## Key Features and User Interface
 
-- **Deterministic grading first.** The teacher matches the reference answer with a rubric and only
-  spends an LLM call when the rubric cannot settle the question, so most marking costs nothing.
-- **Self-checking.** Evaluations the teacher is unsure about are flagged and re-run by the verifier,
-  which has SymPy on hand to decide algebraic equivalence.
+- **Answer key before any model call.** An answer that matches the reference key is marked by
+  `match_answer` alone — no teacher call, no verifier call, no cost.
+- **Self-checking where it buys something.** A multiple-choice or true/false item that has a key is
+  already settled: the key overrides the model's verdict and the teacher is left writing the feedback
+  only. Evaluations no key can settle are flagged and re-run by the verifier, which has SymPy on hand
+  to decide algebraic equivalence.
 - **Mastery on a real curriculum graph.** 702 concepts extracted from the grade 10–12 textbooks,
   810 prerequisite and taxonomy edges, queried live from Neo4j to find what to review first.
 - **Practice that restocks itself.** Weak concept in, Tavily search out; new papers are OCR'd,
@@ -71,13 +74,17 @@ for the vector version.
 
 Two pipelines, and they only touch through the item bank and the learner's mastery table:
 
-**Grading.** A submitted attempt is stored in `history.db`, then `grade()` runs the teacher, the
-verifier and the learner in that order. The teacher tries the rubric first (`match_answer`) and only
-calls an LLM when the reference answer cannot settle the question; evaluations it is not confident
-about are flagged. The verifier re-checks *only* the flagged ones, with SymPy available as a tool for
-algebraic equivalence. The learner writes one mastery update per concept mapped to each graded
-question, then picks the weakest concept touched by the attempt and kicks off restocking in a
-background thread.
+**Grading.** `grade()` runs the teacher, the verifier and the learner in that order. Practice opens
+the attempt in `history.db` up front and saves each answer as it is checked; a whole exam is graded
+first and written afterwards, in one pass. The teacher tries the answer key first
+(`match_answer`): an answer that matches it is marked with no LLM call at all. Otherwise the teacher
+grades with a model and `settled()` decides what follows. A multiple-choice or true/false item that
+has a key is settled — `apply_rubric` overrides the model's verdict with the key and nothing is
+flagged. Everything else is. The verifier re-checks *only* the flagged ones, with SymPy available as
+a tool for algebraic equivalence. Short answers are deliberately never settled: `1/2`, `0.5` and
+`0,5` are the same number, and string comparison cannot say so. The learner writes one mastery update
+per concept mapped to each graded question, then picks the weakest concept touched by the attempt and
+kicks off restocking in a background thread.
 
 **Ingest.** Restocking asks the crawler for material on that concept. Tavily searches, already-known
 URLs are skipped. Found documents go through Datalab OCR in the parser; if nothing is found at all
@@ -95,7 +102,7 @@ model at all; its mastery numbers are arithmetic over SQLite.
 
 | Role | Code | Decided by | What it does |
 | --- | --- | --- | --- |
-| **Teacher** | `backend/agents/teacher` | LLM | Rubric match first, LLM evaluation second; flags what needs review. |
+| **Teacher** | `backend/agents/teacher` | LLM | Answer key first, LLM evaluation second; flags only what no key can settle. |
 | **Author** | `backend/agents/teacher` (`write_questions`) | LLM | Writes items from scratch when the crawler comes back empty. |
 | **Verifier** | `backend/agents/verifier` | LLM + SymPy | Re-checks flagged evaluations only, with SymPy tools. |
 | **Tagger** | `backend/knowledge/bank/tagger` | LLM | Maps each new item to exactly one knowledge node, in batches of `TAGGER_BATCH_SIZE`. |
@@ -208,7 +215,7 @@ cd backend && .venv/bin/python -m pytest -q
 │   ├── agents/
 │   │   ├── crawler/                        # Tavily search, skips known URLs
 │   │   ├── parser/                         # Datalab OCR, then split into items
-│   │   ├── teacher/                        # rubric first, then LLM; also writes items
+│   │   ├── teacher/                        # answer key first, then LLM; also writes items
 │   │   ├── verifier/                       # re-checks flagged evaluations with SymPy
 │   │   └── learner/                        # mastery, learning path, restock requests
 │   ├── knowledge/
