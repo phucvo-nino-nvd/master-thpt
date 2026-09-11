@@ -118,12 +118,8 @@ def test_learning_path_without_history_covers_every_untouched_node(learner_db):
     assert "DAO_HAM" in {step["knowledge_id"] for step in path}
 
 
-def test_question_without_mapping_raises_error(learner_db):
-    with pytest.raises(ValueError):
-        process_attempt(
-            "Q_UNKNOWN",
-            correct=False,
-        )
+def test_question_without_mapping_updates_nothing(learner_db):
+    assert process_attempt("Q_UNKNOWN", correct=False) == []
 
 
 def test_first_wrong_attempt_creates_state(learner_db):

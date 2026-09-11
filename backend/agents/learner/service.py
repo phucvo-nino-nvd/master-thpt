@@ -117,9 +117,7 @@ def process_attempt(
         ).fetchall()
 
         if not mappings:
-            raise ValueError(
-                f"Question {question_id!r} has no knowledge mapping"
-            )
+            return []
 
         updated_states = []
 
