@@ -30,7 +30,8 @@ def init_db() -> None:
             );
 
             CREATE TABLE IF NOT EXISTS knowledge_state (
-                knowledge_id TEXT PRIMARY KEY,
+                user_id TEXT NOT NULL,
+                knowledge_id TEXT NOT NULL,
                 mastery REAL,
                 attempts INTEGER NOT NULL DEFAULT 0,
                 correct INTEGER NOT NULL DEFAULT 0,
@@ -38,6 +39,7 @@ def init_db() -> None:
                 last_attempt_at TEXT,
                 updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
+                PRIMARY KEY (user_id, knowledge_id),
                 CHECK (
                     mastery IS NULL
                     OR mastery BETWEEN 0.0 AND 1.0

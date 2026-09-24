@@ -11,18 +11,19 @@ from langsmith import traceable
 
 import os
 
-from agents.crawler.main import crawl
-from agents.crawler.schema import CrawlerRequest
-from agents.parser.main import parse_question
-from agents.teacher.main import evaluate, write_questions
-from agents.teacher.rubric import match_answer, settled
-from agents.verifier.main import verify
+from roles.crawler.main import crawl
+from roles.crawler.schema import CrawlerRequest
+from roles.parser.main import parse_question
+from roles.author.main import write_questions
+from roles.teacher.main import evaluate
+from roles.teacher.rubric import match_answer, settled
+from roles.verifier.main import verify
+from roles.learner.service import MIN_QUESTIONS, crawl_requests, run_learner, stocked_count
 from common.schema import Document, Evaluation
 from common.utils import normalized, write_json
-from agents.learner.service import MIN_QUESTIONS, crawl_requests, run_learner, stocked_count
 from history.main import queue_docs, solved_question_ids, take_doc
 from knowledge.bank.main import GENERATED_PREFIX, build_item_bank, numbered, source_urls
-from knowledge.bank.tagger import tag_items
+from roles.tagger.main import tag_items
 from knowledge.graph.convert import node_map
 
 
@@ -66,18 +67,18 @@ def graded(submission: dict) -> tuple[Evaluation, bool]:
     return evaluate(item, student_answer), not settled(item)
 
 
-@traceable(name="Crawler Agent", run_type="chain")
+@traceable(name="Crawler", run_type="chain")
 def crawler_agent(state: State) -> State:
     return {"crawled": crawl(state["request"])}
 
 
-@traceable(name="Parser Agent", run_type="chain")
+@traceable(name="Parser", run_type="chain")
 def parser_agent(state: State) -> State:
     # PDF/Word URL -> Datalab OCR -> refined.json per document
     return {"refined_paths": parse_question(state["crawled"])}
 
 
-@traceable(name="Author Agent", run_type="chain")
+@traceable(name="Author", run_type="chain")
 def author_agent(state: State) -> State:
     request = state["request"]
 
@@ -121,7 +122,7 @@ def item_bank(state: State) -> State:
     return {"items": items, "tags": tag_items(items)}
 
 
-@traceable(name="Teacher Agent", run_type="chain")
+@traceable(name="Teacher", run_type="chain")
 def teacher_agent(state: State) -> State:
     results = mapped(graded, state["submissions"])
 
@@ -131,7 +132,7 @@ def teacher_agent(state: State) -> State:
     }
 
 
-@traceable(name="Verifier Agent", run_type="chain")
+@traceable(name="Verifier", run_type="chain")
 def verifier_agent(state: State) -> State:
     def reviewed(args: tuple[dict, Evaluation, bool]) -> Evaluation:
         submission, evaluation, needs_review = args
@@ -159,7 +160,7 @@ def graded_attempts(state: State) -> list[dict]:
     ]
 
 
-@traceable(name="Learner Agent", run_type="chain")
+@traceable(name="Learner", run_type="chain")
 def learner_agent(state: State) -> State:
     learned = run_learner(
         knowledge_id=state.get("knowledge_id"),

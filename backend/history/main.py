@@ -8,7 +8,7 @@ from uuid import uuid4
 import json
 import os
 
-from agents.crawler.schema import CrawledDoc, CrawlerRequest, CrawlerResponse
+from roles.crawler.schema import CrawledDoc, CrawlerRequest, CrawlerResponse
 from common.schema import Evaluation
 from .db import get_connection, init_db
 from .schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryQuestion, Mode

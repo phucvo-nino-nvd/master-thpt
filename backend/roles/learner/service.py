@@ -6,7 +6,7 @@ from typing import Any
 
 import os
 
-from agents.crawler.schema import CrawlerRequest
+from roles.crawler.schema import CrawlerRequest
 from common.utils import normalized
 from knowledge.graph.convert import load_graph, node_map
 from knowledge.graph.query import (

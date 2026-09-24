@@ -10,10 +10,10 @@ import main
 import os
 import re
 
-from agents.learner.service import crawl_requests, get_knowledge_graph, learning_path, pending_of, stocked_count
-from agents.teacher.main import explain, give_hint
-from agents.teacher.rubric import answer_of
-from agents.teacher.schema import HintRequest, HintResponse, SolutionRequest, SolutionResponse
+from roles.learner.service import crawl_requests, get_knowledge_graph, learning_path, pending_of, stocked_count
+from roles.teacher.main import explain, give_hint
+from roles.teacher.rubric import answer_of
+from roles.teacher.schema import HintRequest, HintResponse, SolutionRequest, SolutionResponse
 from common.schema import Evaluation
 from common.utils import normalized
 from history.main import attempted_exam_ids, drop_doc, get_answer, get_history, list_history, queued_docs, save_answer, solved_question_ids, start_history, streak

@@ -1,7 +1,7 @@
 from langchain_core.messages import AIMessage
 
-from agents.verifier.main import answered
-from agents.verifier.tools import SYMPY_MAX_LENGTH, calculate, tool_messages
+from roles.verifier.main import answered
+from roles.verifier.tools import SYMPY_MAX_LENGTH, calculate, tool_messages
 
 
 def compute(expression: str) -> str:

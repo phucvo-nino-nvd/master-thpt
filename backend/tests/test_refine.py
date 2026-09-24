@@ -4,8 +4,8 @@ import base64
 import json
 import sys
 
-from agents.parser.main import client, question_options
-from agents.parser.refine import refine
+from roles.parser.main import client, question_options
+from roles.parser.refine import refine
 
 
 ROOT = Path(__file__).resolve().parents[1]

@@ -3,7 +3,7 @@ from dataclasses import dataclass
 import re
 import unicodedata
 
-from agents.parser.main import parse_textbook
+from roles.parser.main import parse_textbook
 from .config import DATA_DIR, REFINED_DIR
 
 

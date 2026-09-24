@@ -7,7 +7,7 @@ sys.path.insert(0, str(BACKEND))
 
 from common.schema import Document
 from knowledge.bank.main import Item, build_item_bank
-from knowledge.bank.tagger import BATCH_SIZE, node_names, tag_items
+from roles.tagger.main import BATCH_SIZE, MAX_TAGS, node_names, tag_items
 
 
 ROOT = BACKEND.parent
@@ -63,11 +63,12 @@ if __name__ == "__main__":
     tags = tag_items(bank)
 
     for item in bank:
-        knowledge_id = tags[item.id]
-
-        print(
-            f"  PHẦN {item.section} - Câu {item.number}"
-            f" -> {names[knowledge_id]} ({knowledge_id})"
+        labels = ", ".join(
+            f"{names[knowledge_id]} ({knowledge_id})"
+            for knowledge_id in tags[item.id]
         )
 
+        print(f"  PHẦN {item.section} - Câu {item.number} -> {labels}")
+
     assert len(tags) == len(bank), "thiếu mapping cho một số item"
+    assert all(1 <= len(ids) <= MAX_TAGS for ids in tags.values()), "số tag ngoài khoảng"

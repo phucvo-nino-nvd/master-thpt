@@ -26,6 +26,7 @@ def init_db() -> None:
             """
             CREATE TABLE IF NOT EXISTS history (
                 id TEXT PRIMARY KEY,
+                user_id TEXT NOT NULL,
                 exam_id TEXT NOT NULL,
                 mode TEXT NOT NULL,
                 duration_seconds INTEGER,

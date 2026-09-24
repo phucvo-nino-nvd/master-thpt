@@ -5,7 +5,7 @@ from threading import Barrier
 
 import pytest
 
-from agents.crawler.schema import CrawledDoc, CrawlerRequest, CrawlerResponse
+from roles.crawler.schema import CrawledDoc, CrawlerRequest, CrawlerResponse
 from history import db, main as history
 
 import main

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from agents.teacher.rubric import apply_rubric, settled
+from roles.teacher.rubric import apply_rubric, settled
 from common.schema import Evaluation
 from knowledge.bank.main import Item
 

@@ -22,6 +22,7 @@ GENERATED_PREFIX = "generated://"
 
 class Item(BaseModel):
     id: str
+    fingerprint: str = ""
 
     # Provenance
     source_url: str
@@ -149,17 +150,17 @@ def build_item_bank(document: Document) -> list[Item]:
                     continue
 
                 old_item = Item.model_validate_json(line)
-                existing_fingerprints.add(make_fingerprint(old_item))
+                existing_fingerprints.add(old_item.fingerprint or make_fingerprint(old_item))
                 existing_ids.add(old_item.id)
 
     new_items: list[Item] = []
     for item in unique_items:
-        fingerprint = make_fingerprint(item)
+        item.fingerprint = make_fingerprint(item)
 
-        if fingerprint in existing_fingerprints or item.id in existing_ids:
+        if item.fingerprint in existing_fingerprints or item.id in existing_ids:
             continue
 
-        existing_fingerprints.add(fingerprint)
+        existing_fingerprints.add(item.fingerprint)
         existing_ids.add(item.id)
         new_items.append(item)
 

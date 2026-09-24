@@ -6,8 +6,8 @@ from langsmith import traceable
 
 import os
 
-from agents.teacher.main import answer_text, question_block, reference_solution
-from agents.teacher.rubric import apply_rubric
+from roles.teacher.main import answer_text, question_block, reference_solution
+from roles.teacher.rubric import apply_rubric
 from common.schema import Evaluation
 from common.utils import chat_model
 from knowledge.bank.main import Item

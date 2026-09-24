@@ -3,41 +3,23 @@ from __future__ import annotations
 from collections.abc import Sequence
 from functools import lru_cache
 from langsmith import traceable
-from pydantic import BaseModel
 from tqdm import tqdm
 
 import os
 
-from agents.learner.db import get_connection, init_db
+from common.utils import chat_model, load_json
+from roles.learner.db import get_connection, init_db
 from knowledge.graph.canonicalize import normalize_name
 from knowledge.graph.config import CANONICAL_MODEL, KNOWLEDGE_GRAPH_PATH
-from common.utils import chat_model, load_json
 from knowledge.graph.utils import require_online
-
-from .main import Item
+from knowledge.bank.main import Item
+from .context import TAGGING_CONTEXT
+from .schema import TaggingDecision
 
 
 MIN_ALIAS_LENGTH = int(os.getenv("TAGGER_MIN_ALIAS_LENGTH", "6"))
 BATCH_SIZE = int(os.getenv("TAGGER_BATCH_SIZE", "8"))
-
-TAGGING_CONTEXT = """\
-You map Vietnamese high school math exam questions to knowledge nodes.
-
-For each question, choose the ONE knowledge node that the question most
-directly assesses.
-
-Do NOT return every prerequisite or every related concept.
-Choose only the single most central concept required to answer the question.
-
-Return one knowledge_id per question, in the same order as the questions,
-and exactly as many IDs as there are questions.
-Only return IDs from the provided list, copied exactly.
-Never invent an ID.
-"""
-
-
-class TaggingDecision(BaseModel):
-    knowledge_ids: list[str]
+MAX_TAGS = int(os.getenv("TAGGER_MAX_TAGS", "3"))
 
 
 @lru_cache(maxsize=1)
@@ -171,9 +153,9 @@ def batch_grade(items: Sequence[Item]) -> int | None:
 
 def build_prompt(items: Sequence[Item]) -> str:
     sections = [
-        TAGGING_CONTEXT,
-        "Knowledge nodes. Choose exactly ONE per question, any node below is"
-        f" allowed.\n{format_catalog(catalog_ids(batch_grade(items)))}",
+        TAGGING_CONTEXT.format(max_tags=MAX_TAGS),
+        f"Knowledge nodes. Choose 1 to {MAX_TAGS} per question, any node below"
+        f" is allowed.\n{format_catalog(catalog_ids(batch_grade(items)))}",
     ]
 
     for position, item in enumerate(items, start=1):
@@ -191,7 +173,7 @@ def build_prompt(items: Sequence[Item]) -> str:
         sections.append(block)
 
     sections.append(
-        f"Return exactly {len(items)} knowledge_ids, "
+        f"Return exactly {len(items)} entries, "
         f"one per question, in question order."
     )
 
@@ -199,25 +181,29 @@ def build_prompt(items: Sequence[Item]) -> str:
 
 
 @traceable(name="Tag item batch with LLM")
-def tag_with_llm(items: Sequence[Item]) -> list[str]:
+def tag_with_llm(items: Sequence[Item]) -> list[list[str]]:
     require_online(f"LLM tag for {len(items)} items")
 
     prompt = build_prompt(items)
     names = node_names()
 
-    knowledge_ids: list[str] = []
+    knowledge_ids: list[list[str]] = []
 
     for _ in range(2):
         decision = tagger().invoke(prompt)
 
         knowledge_ids = [
-            knowledge_id.strip()
-            for knowledge_id in decision.knowledge_ids
+            list(dict.fromkeys(
+                knowledge_id.strip()
+                for knowledge_id in question.knowledge_ids
+            ))
+            for question in decision.questions
         ]
 
         if len(knowledge_ids) == len(items) and all(
-            knowledge_id in names
-            for knowledge_id in knowledge_ids
+            1 <= len(question_ids) <= MAX_TAGS
+            and all(knowledge_id in names for knowledge_id in question_ids)
+            for question_ids in knowledge_ids
         ):
             return knowledge_ids
 
@@ -227,13 +213,19 @@ def tag_with_llm(items: Sequence[Item]) -> list[str]:
     )
 
 
-def save_tags(tags: dict[str, str]) -> int:
+def save_tags(tags: dict[str, list[str]]) -> int:
     if not tags:
         return 0
 
     valid_ids = set(node_names())
 
-    for question_id, knowledge_id in tags.items():
+    rows = [
+        (question_id, knowledge_id)
+        for question_id, knowledge_ids in tags.items()
+        for knowledge_id in knowledge_ids
+    ]
+
+    for question_id, knowledge_id in rows:
         if knowledge_id not in valid_ids:
             raise ValueError(
                 f"Unknown knowledge_id {knowledge_id!r} "
@@ -241,8 +233,6 @@ def save_tags(tags: dict[str, str]) -> int:
             )
 
     init_db()
-
-    rows = list(tags.items())
 
     with get_connection() as conn:
         conn.executemany(
@@ -270,9 +260,9 @@ def save_tags(tags: dict[str, str]) -> int:
     return len(rows)
 
 
-@traceable(name="Item Tagger", run_type="chain")
-def tag_items(items: list[Item]) -> dict[str, str]:
-    tags: dict[str, str] = {}
+@traceable(name="Tagger", run_type="chain")
+def tag_items(items: list[Item]) -> dict[str, list[str]]:
+    tags: dict[str, list[str]] = {}
     failures: list[str] = []
 
     # An item can fail tagging, so duplicates are tracked separately.

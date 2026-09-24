@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import pytest
 
-from agents.learner import db, service
-from agents.learner.service import (
+from roles.learner import db, service
+from roles.learner.service import (
     MIN_QUESTIONS,
     crawl_requests,
     matching_nodes,

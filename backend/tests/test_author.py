@@ -1,6 +1,6 @@
 from common.schema import Option, Question
-from agents.parser.refine import rescued
-from agents.teacher.rubric import answer_of, match_answer
+from roles.parser.refine import rescued
+from roles.teacher.rubric import answer_of, match_answer
 from api import router
 from knowledge.bank import main as bank
 
@@ -110,7 +110,7 @@ def test_rescued_leaves_a_short_answer_stem_intact():
 def test_authored_schema_never_asks_for_the_answer():
     import json
 
-    from agents.teacher.schema import AuthoredQuestions
+    from roles.author.schema import AuthoredQuestions
 
     schema = AuthoredQuestions.model_json_schema()
 
@@ -125,8 +125,8 @@ def test_authored_schema_never_asks_for_the_answer():
 
 
 def test_authored_question_reaches_the_bank_without_a_key(bank_file):
-    from agents.teacher.rubric import answer_of, match_answer
-    from agents.teacher.schema import AuthoredQuestion
+    from roles.teacher.rubric import answer_of, match_answer
+    from roles.author.schema import AuthoredQuestion
 
     authored_question = AuthoredQuestion(
         number="",
