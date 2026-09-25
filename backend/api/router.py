@@ -344,7 +344,7 @@ def post_exam_submit(request: SubmitRequest) -> SubmitResponse:
         state = grade(submissions)
         created = start_history(request.exam_id, "exam", request.duration_seconds)
 
-        for submission, evaluation in zip(submissions, state["evaluations"]):
+        for submission, evaluation in zip(submissions, state["final_evaluations"]):
             save_answer(
                 created.history_id,
                 submission["item"].id,
@@ -358,10 +358,10 @@ def post_exam_submit(request: SubmitRequest) -> SubmitResponse:
         exam_id=request.exam_id,
         history_id=created.history_id,
         total_score=state["total_score"],
-        correct_count=sum(evaluation.correct for evaluation in state["evaluations"]),
+        correct_count=sum(evaluation.correct for evaluation in state["final_evaluations"]),
         per_question={
             submission["item"].id: evaluation
-            for submission, evaluation in zip(submissions, state["evaluations"])
+            for submission, evaluation in zip(submissions, state["final_evaluations"])
         },
     )
 
@@ -374,7 +374,7 @@ def post_practice_check(request: CheckRequest) -> Evaluation:
     main.grading = reviewed.exam_id if reviewed else None
 
     try:
-        evaluation = grade([submission])["evaluations"][0]
+        evaluation = grade([submission])["final_evaluations"][0]
         save_answer(request.history_id, request.question_id, request.student_answer, evaluation)
     except IntegrityError:
         raise HTTPException(status_code=404, detail="Không tìm thấy lượt làm bài.")

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pydantic import BaseModel
 from pydantic.json_schema import SkipJsonSchema
+
 from common.schema import Option, Question, QuestionPart, QuestionType
 
 

@@ -6,6 +6,7 @@ tavily-python
 pydantic
 beautifulsoup4
 langchain-openrouter
+langchain-typesafe
 langsmith
 numpy
 sympy

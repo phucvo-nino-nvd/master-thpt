@@ -43,6 +43,9 @@ def init_db() -> None:
                 part_correct TEXT NOT NULL DEFAULT '[]',
                 score REAL NOT NULL,
                 feedback TEXT NOT NULL,
+                error_type TEXT,
+                error_confidence REAL,
+                grading_trace TEXT,
                 answered_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
                 PRIMARY KEY (history_id, question_id),

@@ -16,8 +16,9 @@ from roles.crawler.schema import CrawlerRequest
 from roles.parser.main import parse_question
 from roles.author.main import write_questions
 from roles.teacher.main import evaluate
-from roles.teacher.rubric import match_answer, settled
+from roles.teacher.rubric import match_answer
 from roles.verifier.main import verify
+from roles.learner.main import diagnose_answer
 from roles.learner.service import MIN_QUESTIONS, crawl_requests, run_learner, stocked_count
 from common.schema import Document, Evaluation
 from common.utils import normalized, write_json
@@ -64,7 +65,7 @@ def graded(submission: dict) -> tuple[Evaluation, bool]:
     if matched:
         return matched, False
 
-    return evaluate(item, student_answer), not settled(item)
+    return evaluate(item, student_answer), True
 
 
 @traceable(name="Crawler", run_type="chain")
@@ -144,34 +145,64 @@ def verifier_agent(state: State) -> State:
 
     pending = zip(state["submissions"], state["evaluations"], state["needs_review"])
 
-    return {"evaluations": mapped(reviewed, pending)}
+    return {"final_evaluations": mapped(reviewed, pending)}
 
 
 def graded_attempts(state: State) -> list[dict]:
     return [
         {
             "question_id": submission["item"].id,
+            "type": submission["item"].type,
             "correct": evaluation.correct,
+            "diagnosis": diagnosis.model_dump() if diagnosis else None,
         }
-        for submission, evaluation in zip(
+        for submission, evaluation, diagnosis in zip(
             state.get("submissions", []),
-            state.get("evaluations", []),
+            state.get("final_evaluations", []),
+            state.get("error_diagnoses", []),
         )
     ]
 
 
 @traceable(name="Learner", run_type="chain")
 def learner_agent(state: State) -> State:
+    if not state.get("user_id"):
+        error_diagnoses = [None] * len(state["submissions"])
+    else:
+        def classified(args: tuple[dict, Evaluation, Evaluation]) -> Any:
+            submission, teacher_evaluation, final_evaluation = args
+
+            if final_evaluation.correct:
+                return None
+
+            return diagnose_answer(
+                submission["item"],
+                submission["student_answer"],
+                teacher_evaluation,
+                final_evaluation,
+            )
+
+        error_diagnoses = mapped(
+            classified,
+            zip(
+                state["submissions"],
+                state["evaluations"],
+                state["final_evaluations"],
+            ),
+        )
+
+    state = {**state, "error_diagnoses": error_diagnoses}
     learned = run_learner(
         knowledge_id=state.get("knowledge_id"),
         attempts=graded_attempts(state),
+        user_id=state.get("user_id"),
     )
     concept = restock_concept(learned)
 
     if concept is not None:
         Thread(target=stock_practice, args=(concept,), daemon=True).start()
 
-    return learned
+    return {**learned, "error_diagnoses": error_diagnoses}
 
 
 def restock_concept(state: State) -> str | None:
@@ -260,15 +291,15 @@ def stock_practice(concept: str = "") -> None:
 
 
 @traceable(name="Grading Pipeline", run_type="chain")
-def grade(submissions: Sequence[dict]) -> State:
+def grade(submissions: Sequence[dict], *, user_id: str | None = None) -> State:
     state = run(
         (teacher_agent, verifier_agent, learner_agent),
-        {"submissions": list(submissions)},
+        {"submissions": list(submissions), "user_id": user_id},
     )
 
     return {
         **state,
         "total_score": round(
-            sum(evaluation.score for evaluation in state["evaluations"]), 2
+            sum(evaluation.score for evaluation in state["final_evaluations"]), 2
         ),
     }
