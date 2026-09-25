@@ -8,6 +8,7 @@ from threading import Thread
 from typing import Any
 from dotenv import load_dotenv
 from langsmith import traceable
+from tqdm import tqdm
 
 import os
 
@@ -20,11 +21,11 @@ from roles.teacher.rubric import match_answer
 from roles.verifier.main import verify
 from roles.learner.main import diagnose_answer
 from roles.learner.service import MIN_QUESTIONS, crawl_requests, run_learner, stocked_count
+from roles.tagger.main import BATCH_SIZE, save_tags, tag_with_llm
 from common.schema import Document, Evaluation
 from common.utils import normalized, write_json
 from history.main import queue_docs, solved_question_ids, take_doc
-from knowledge.bank.main import GENERATED_PREFIX, build_item_bank, numbered, source_urls
-from roles.tagger.main import tag_items
+from knowledge.bank.main import GENERATED_PREFIX, Item, build_item_bank, numbered, source_urls
 from knowledge.graph.convert import node_map
 
 
@@ -107,20 +108,42 @@ def author_agent(state: State) -> State:
     return {"refined_paths": [path]}
 
 
-@traceable(name="Item Bank", run_type="chain")
-def item_bank(state: State) -> State:
-    items = []
+@traceable(name="Tagger", run_type="chain")
+def tagger(items: list[Item]) -> dict[str, list[str]]:
+    tags: dict[str, list[str]] = {}
+    failures: list[str] = []
+    seen_ids: set[str] = set()
 
-    for path in state["refined_paths"]:
-        document = Document.model_validate_json(
-            Path(path).read_text(encoding="utf-8")
+    for item in items:
+        if item.id in seen_ids:
+            raise ValueError(f"Duplicate item id: {item.id}")
+
+        seen_ids.add(item.id)
+
+    batches = [
+        items[start:start + BATCH_SIZE]
+        for start in range(0, len(items), BATCH_SIZE)
+    ]
+
+    for batch in tqdm(batches, unit="batch"):
+        try:
+            knowledge_ids = tag_with_llm(batch)
+        except ValueError as error:
+            failures.extend(f"{item.id}: {error}" for item in batch)
+            continue
+
+        for item, item_knowledge_ids in zip(batch, knowledge_ids):
+            tags[item.id] = item_knowledge_ids
+
+    save_tags(tags)
+
+    if failures:
+        raise ValueError(
+            f"Tagged {len(tags)}/{len(items)} items, "
+            f"{len(failures)} failed:\n" + "\n".join(failures)
         )
 
-        # Deduplicates against the existing bank, so this is append-only.
-        items.extend(build_item_bank(document))
-
-    # Only new items are tagged, so re-ingesting a document costs no LLM calls.
-    return {"items": items, "tags": tag_items(items)}
+    return tags
 
 
 @traceable(name="Teacher", run_type="chain")
@@ -222,7 +245,23 @@ def restock_concept(state: State) -> str | None:
     return nodes[weakest["knowledge_id"]]["name"]
 
 
-@traceable(name="Ingest Pipeline", run_type="chain")
+@traceable(name="[INGEST]: Item Bank", run_type="chain")
+def item_bank(state: State) -> State:
+    items = []
+
+    for path in state["refined_paths"]:
+        document = Document.model_validate_json(
+            Path(path).read_text(encoding="utf-8")
+        )
+
+        # Deduplicates against the existing bank, so this is append-only.
+        items.extend(build_item_bank(document))
+
+    # Only new items are tagged, so re-ingesting a document costs no LLM calls.
+    return {"items": items, "tags": tagger(items)}
+
+
+@traceable(name="[INGEST]: Content Ingestion", run_type="chain")
 def ingest(request: CrawlerRequest, on_node: Callable[[str], None] | None = None) -> State:
     state = run((crawler_agent,), {"request": request}, on_node)
 
@@ -242,7 +281,7 @@ grading: str | None = None
 manual: bool = True
 
 
-@traceable(name="Manual Ingest", run_type="chain")
+@traceable(name="[INGEST]: Manual Ingest", run_type="chain")
 def approve(url: str) -> None:
     global progress
 
@@ -267,7 +306,7 @@ def approve(url: str) -> None:
         progress = None
 
 
-@traceable(name="Practice Stocking", run_type="chain")
+@traceable(name="[INGEST]: Practice Stocking", run_type="chain")
 def stock_practice(concept: str = "") -> None:
     global progress
 
@@ -290,7 +329,7 @@ def stock_practice(concept: str = "") -> None:
         progress = None
 
 
-@traceable(name="Grading Pipeline", run_type="chain")
+@traceable(name="[GRADING]: Submission Grading", run_type="chain")
 def grade(submissions: Sequence[dict], *, user_id: str | None = None) -> State:
     state = run(
         (teacher_agent, verifier_agent, learner_agent),

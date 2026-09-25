@@ -153,7 +153,7 @@ def build_solution_prompt(item: Item, student_answer: str | list[bool], evaluati
     return "\n\n".join(section for section in sections if section)
 
 
-@traceable(name="Evaluate student answer")
+@traceable(name="[TEACHER]: Evaluate student answer")
 def evaluate(item: Item, student_answer: str | list[bool]) -> Evaluation:
     prompt = build_evaluate_prompt(item, student_answer)
     keyed = settled(item)
@@ -172,7 +172,7 @@ def evaluate(item: Item, student_answer: str | list[bool]) -> Evaluation:
     )
 
 
-@traceable(name="Give hint")
+@traceable(name="[TEACHER]: Give hint")
 def give_hint(item: Item, level: int = 1, student_answer: str | list[bool] = "") -> HintResponse:
     level = min(max(level, 1), MAX_HINT_LEVEL)
 
@@ -181,7 +181,7 @@ def give_hint(item: Item, level: int = 1, student_answer: str | list[bool] = "")
     return result.model_copy(update={"level": level})
 
 
-@traceable(name="Explain solution")
+@traceable(name="[TEACHER]: Explain solution")
 def explain(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> SolutionResponse:
     return SolutionResponse.model_validate(
         explainer().invoke(build_solution_prompt(item, student_answer, evaluation))

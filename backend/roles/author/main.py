@@ -32,7 +32,7 @@ def build_author_prompt(concept: str, grade: int, count: int) -> str:
     ])
 
 
-@traceable(name="Write questions")
+@traceable(name="[AUTHOR]: Write questions")
 def write_questions(concept: str, grade: int, count: int) -> list[Question]:
     if count < 1:
         return []

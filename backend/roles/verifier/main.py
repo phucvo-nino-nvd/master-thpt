@@ -69,7 +69,7 @@ def build_verify_prompt(item: Item, student_answer: str | list[bool], evaluation
     return "\n\n".join(section for section in sections if section)
 
 
-@traceable(name="Verify evaluation")
+@traceable(name="[VERIFIER]: Verify evaluation")
 def verify(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Evaluation:
     messages: list[BaseMessage] = [
         HumanMessage(build_verify_prompt(item, student_answer, evaluation))

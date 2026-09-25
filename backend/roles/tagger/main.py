@@ -3,7 +3,6 @@ from __future__ import annotations
 from collections.abc import Sequence
 from functools import lru_cache
 from langsmith import traceable
-from tqdm import tqdm
 
 import os
 
@@ -81,7 +80,6 @@ def catalog_ids(grade: int | None = None) -> tuple[str, ...]:
 
 
 def item_text(item: Item) -> str:
-    """Join all useful textual evidence from one item."""
     texts: list[str] = [item.content]
 
     texts.extend(
@@ -180,7 +178,7 @@ def build_prompt(items: Sequence[Item]) -> str:
     return "\n\n".join(sections)
 
 
-@traceable(name="Tag item batch with LLM")
+@traceable(name="[TAGGER]: Tag item batch with LLM")
 def tag_with_llm(items: Sequence[Item]) -> list[list[str]]:
     require_online(f"LLM tag for {len(items)} items")
 
@@ -258,45 +256,3 @@ def save_tags(tags: dict[str, list[str]]) -> int:
         )
 
     return len(rows)
-
-
-@traceable(name="Tagger", run_type="chain")
-def tag_items(items: list[Item]) -> dict[str, list[str]]:
-    tags: dict[str, list[str]] = {}
-    failures: list[str] = []
-
-    # An item can fail tagging, so duplicates are tracked separately.
-    seen_ids: set[str] = set()
-
-    for item in items:
-        if item.id in seen_ids:
-            raise ValueError(
-                f"Duplicate item id: {item.id}"
-            )
-
-        seen_ids.add(item.id)
-
-    batches = [
-        items[start:start + BATCH_SIZE]
-        for start in range(0, len(items), BATCH_SIZE)
-    ]
-
-    for batch in tqdm(batches, unit="batch"):
-        try:
-            knowledge_ids = tag_with_llm(batch)
-        except ValueError as error:
-            failures.extend(f"{item.id}: {error}" for item in batch)
-            continue
-
-        for item, knowledge_id in zip(batch, knowledge_ids):
-            tags[item.id] = knowledge_id
-
-    save_tags(tags)
-
-    if failures:
-        raise ValueError(
-            f"Tagged {len(tags)}/{len(items)} items, "
-            f"{len(failures)} failed:\n" + "\n".join(failures)
-        )
-
-    return tags
