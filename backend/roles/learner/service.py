@@ -8,6 +8,7 @@ import os
 
 from roles.crawler.schema import CrawlerRequest
 from common.utils import normalized
+from knowledge.bank.main import SECTIONS
 from knowledge.graph.convert import load_graph, node_map
 from knowledge.graph.query import (
     get_dependents,
@@ -25,17 +26,28 @@ MIN_QUESTIONS = int(os.getenv("PRACTICE_MIN_QUESTIONS", "6"))
 CRAWL_TOP_K = int(os.getenv("CRAWL_TOP_K", "3"))
 CRAWL_NODES = int(os.getenv("CRAWL_NODES", "2"))
 CRAWL_GRADE = int(os.getenv("CRAWL_GRADE", "12"))
+ERROR_CONFIDENCE_THRESHOLD = float(os.getenv("ERROR_CONFIDENCE_THRESHOLD", "0.65"))
+RECENT_ERROR_DAYS = int(os.getenv("RECENT_ERROR_DAYS", "14"))
+TYPE_GAP_THRESHOLD = float(os.getenv("TYPE_GAP_THRESHOLD", "0.15"))
 
 
-def get_mastery(knowledge_id: str) -> float | None:
+def get_mastery(
+    knowledge_id: str,
+    *,
+    user_id: str | None = None,
+    question_type: str = "overall",
+) -> float | None:
+    if not user_id:
+        return None
+
     with get_connection() as conn:
         row = conn.execute(
             """
             SELECT mastery
             FROM knowledge_state
-            WHERE knowledge_id = ?
+            WHERE user_id = ? AND knowledge_id = ? AND type = ?
             """,
-            (knowledge_id,),
+            (user_id, knowledge_id, question_type),
         ).fetchone()
 
     return None if row is None else row["mastery"]
@@ -54,22 +66,23 @@ def status(mastery: float | None) -> str:
     return "mastered"
 
 
-def get_knowledge_graph() -> dict:
-    """
-    Knowledge graph overlaid with the learner's mastery, for the knowledge graph UI.
-    """
+def get_knowledge_graph(user_id: str | None = None) -> dict:
     init_db()
 
-    with get_connection() as conn:
-        mastery_by_id = {
-            row["knowledge_id"]: row["mastery"]
-            for row in conn.execute(
-                """
-                SELECT knowledge_id, mastery
-                FROM knowledge_state
-                """
-            )
-        }
+    mastery_by_id = {}
+    if user_id:
+        with get_connection() as conn:
+            mastery_by_id = {
+                row["knowledge_id"]: row["mastery"]
+                for row in conn.execute(
+                    """
+                    SELECT knowledge_id, mastery
+                    FROM knowledge_state
+                    WHERE user_id = ? AND type = 'overall'
+                    """,
+                    (user_id,),
+                )
+            }
 
     graph_nodes, graph_edges = load_graph()
 
@@ -105,6 +118,8 @@ def process_attempt(
     question_id: str,
     *,
     correct: bool,
+    question_type: str = "overall",
+    user_id: str,
 ) -> list[dict]:
     with get_connection() as conn:
         mappings = conn.execute(
@@ -121,84 +136,180 @@ def process_attempt(
 
         updated_states = []
 
+        state_types = ("overall",) if question_type == "overall" else ("overall", question_type)
+
         for mapping in mappings:
             knowledge_id = mapping["knowledge_id"]
 
-            state = conn.execute(
-                """
-                SELECT mastery, attempts, correct, incorrect
-                FROM knowledge_state
-                WHERE knowledge_id = ?
-                """,
-                (knowledge_id,),
-            ).fetchone()
+            for state_type in state_types:
+                state = conn.execute(
+                    """
+                    SELECT mastery, attempts, correct, incorrect
+                    FROM knowledge_state
+                    WHERE user_id = ? AND knowledge_id = ? AND type = ?
+                    """,
+                    (user_id, knowledge_id, state_type),
+                ).fetchone()
 
-            old_mastery = None if state is None else state["mastery"]
-            attempts = 0 if state is None else state["attempts"]
-            correct_count = 0 if state is None else state["correct"]
-            incorrect_count = 0 if state is None else state["incorrect"]
+                old_mastery = None if state is None else state["mastery"]
+                attempts = 0 if state is None else state["attempts"]
+                correct_count = 0 if state is None else state["correct"]
+                incorrect_count = 0 if state is None else state["incorrect"]
+                mastery = update_mastery(old_mastery, correct=correct)
 
-            mastery = update_mastery(
-                old_mastery,
-                correct=correct,
-            )
+                attempts += 1
+                if correct:
+                    correct_count += 1
+                else:
+                    incorrect_count += 1
 
-            attempts += 1
-
-            if correct:
-                correct_count += 1
-            else:
-                incorrect_count += 1
-
-            conn.execute(
-                """
-                INSERT INTO knowledge_state (
-                    knowledge_id,
-                    mastery,
-                    attempts,
-                    correct,
-                    incorrect,
-                    last_attempt_at,
-                    updated_at
+                conn.execute(
+                    """
+                    INSERT INTO knowledge_state (
+                        user_id, knowledge_id, type, mastery, attempts, correct, incorrect,
+                        last_attempt_at, updated_at
+                    )
+                    VALUES (?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+                    ON CONFLICT(user_id, knowledge_id, type) DO UPDATE SET
+                        mastery = excluded.mastery,
+                        attempts = excluded.attempts,
+                        correct = excluded.correct,
+                        incorrect = excluded.incorrect,
+                        last_attempt_at = CURRENT_TIMESTAMP,
+                        updated_at = CURRENT_TIMESTAMP
+                    """,
+                    (
+                        user_id,
+                        knowledge_id,
+                        state_type,
+                        mastery,
+                        attempts,
+                        correct_count,
+                        incorrect_count,
+                    ),
                 )
-                VALUES (
-                    ?, ?, ?, ?, ?,
-                    CURRENT_TIMESTAMP,
-                    CURRENT_TIMESTAMP
-                )
-                ON CONFLICT(knowledge_id) DO UPDATE SET
-                    mastery = excluded.mastery,
-                    attempts = excluded.attempts,
-                    correct = excluded.correct,
-                    incorrect = excluded.incorrect,
-                    last_attempt_at = CURRENT_TIMESTAMP,
-                    updated_at = CURRENT_TIMESTAMP
-                """,
-                (
-                    knowledge_id,
-                    mastery,
-                    attempts,
-                    correct_count,
-                    incorrect_count,
-                ),
-            )
 
-            updated_states.append(
-                {
-                    "knowledge_id": knowledge_id,
-                    "old_mastery": old_mastery,
-                    "mastery": mastery,
-                    "attempts": attempts,
-                    "correct": correct_count,
-                    "incorrect": incorrect_count,
-                }
-            )
+                updated_states.append(
+                    {
+                        "knowledge_id": knowledge_id,
+                        "type": state_type,
+                        "old_mastery": old_mastery,
+                        "mastery": mastery,
+                        "attempts": attempts,
+                        "correct": correct_count,
+                        "incorrect": incorrect_count,
+                    }
+                )
 
     return updated_states
 
 
-def recommend(knowledge_id: str) -> dict:
-    mastery = get_mastery(knowledge_id)
+def recurring_error(knowledge_id: str, *, user_id: str) -> dict | None:
+    with get_connection() as conn:
+        row = conn.execute(
+            """
+            SELECT type, error_type, count, recent_count, last_seen
+            FROM error_state
+            WHERE user_id = ? AND knowledge_id = ?
+            ORDER BY recent_count DESC, count DESC, last_seen DESC
+            LIMIT 1
+            """,
+            (user_id, knowledge_id),
+        ).fetchone()
+
+    return None if row is None else dict(row)
+
+
+def weakest_type_gap(
+    knowledge_id: str,
+    overall_mastery: float,
+    *,
+    user_id: str,
+) -> dict | None:
+    with get_connection() as conn:
+        rows = conn.execute(
+            """
+            SELECT type, mastery
+            FROM knowledge_state
+            WHERE user_id = ? AND knowledge_id = ? AND type != 'overall'
+            ORDER BY mastery ASC
+            """,
+            (user_id, knowledge_id),
+        ).fetchall()
+
+    for row in rows:
+        if row["type"] not in SECTIONS:
+            continue
+
+        if overall_mastery - row["mastery"] >= TYPE_GAP_THRESHOLD:
+            return dict(row)
+
+    return None
+
+
+def record_error(
+    *,
+    question_id: str,
+    question_type: str,
+    error_type: str | None,
+    confidence: float | None,
+    user_id: str,
+) -> list[dict]:
+    if not error_type or confidence is None or confidence < ERROR_CONFIDENCE_THRESHOLD:
+        return []
+
+    with get_connection() as conn:
+        mappings = conn.execute(
+            """
+            SELECT knowledge_id
+            FROM question_knowledge
+            WHERE question_id = ?
+            """,
+            (question_id,),
+        ).fetchall()
+
+        updated = []
+        for mapping in mappings:
+            knowledge_id = mapping["knowledge_id"]
+            conn.execute(
+                """
+                INSERT INTO error_state (
+                    user_id, knowledge_id, type, error_type,
+                    count, recent_count, last_seen
+                )
+                VALUES (?, ?, ?, ?, 1, 1, CURRENT_TIMESTAMP)
+                ON CONFLICT(user_id, knowledge_id, type, error_type) DO UPDATE SET
+                    count = error_state.count + 1,
+                    recent_count = CASE
+                        WHEN error_state.last_seen >= datetime('now', ?)
+                        THEN error_state.recent_count + 1
+                        ELSE 1
+                    END,
+                    last_seen = CURRENT_TIMESTAMP
+                """,
+                (
+                    user_id,
+                    knowledge_id,
+                    question_type,
+                    error_type,
+                    f"-{RECENT_ERROR_DAYS} days",
+                ),
+            )
+            row = conn.execute(
+                """
+                SELECT knowledge_id, type, error_type, count, recent_count, last_seen
+                FROM error_state
+                WHERE user_id = ? AND knowledge_id = ? AND type = ? AND error_type = ?
+                """,
+                (user_id, knowledge_id, question_type, error_type),
+            ).fetchone()
+            updated.append(dict(row))
+
+    return updated
+
+
+def recommend(knowledge_id: str, *, user_id: str) -> dict:
+    mastery = get_mastery(knowledge_id, user_id=user_id)
 
     if mastery is None:
         return {
@@ -209,7 +320,7 @@ def recommend(knowledge_id: str) -> dict:
     if mastery < WEAK_THRESHOLD:
         for prerequisite in get_prerequisites(knowledge_id):
             prerequisite_id = prerequisite["id"]
-            prerequisite_mastery = get_mastery(prerequisite_id)
+            prerequisite_mastery = get_mastery(prerequisite_id, user_id=user_id)
 
             if prerequisite_mastery is None:
                 return {
@@ -223,6 +334,28 @@ def recommend(knowledge_id: str) -> dict:
                     "knowledge_id": prerequisite_id,
                 }
 
+    error = recurring_error(knowledge_id, user_id=user_id)
+    if error is not None:
+        return {
+            "action": "remediate",
+            "knowledge_id": knowledge_id,
+            "type": error["type"],
+            "error_type": error["error_type"],
+        }
+
+    type_gap = weakest_type_gap(
+        knowledge_id,
+        mastery,
+        user_id=user_id,
+    )
+    if type_gap is not None:
+        return {
+            "action": "transfer",
+            "knowledge_id": knowledge_id,
+            "type": type_gap["type"],
+        }
+
+    if mastery < WEAK_THRESHOLD:
         return {
             "action": "practice",
             "knowledge_id": knowledge_id,
@@ -255,19 +388,23 @@ def prerequisite_map(edges: Sequence[dict]) -> dict[str, list[str]]:
     return prerequisites
 
 
-def learning_path() -> list[dict]:
+def learning_path(user_id: str | None = None) -> list[dict]:
     init_db()
 
-    with get_connection() as conn:
-        mastery_by_id = {
-            row["knowledge_id"]: row["mastery"]
-            for row in conn.execute(
-                """
-                SELECT knowledge_id, mastery
-                FROM knowledge_state
-                """
-            )
-        }
+    mastery_by_id = {}
+    if user_id:
+        with get_connection() as conn:
+            mastery_by_id = {
+                row["knowledge_id"]: row["mastery"]
+                for row in conn.execute(
+                    """
+                    SELECT knowledge_id, mastery
+                    FROM knowledge_state
+                    WHERE user_id = ? AND type = 'overall'
+                    """,
+                    (user_id,),
+                )
+            }
 
     graph_nodes, graph_edges = load_graph()
 
@@ -389,8 +526,12 @@ def pending_of(knowledge_ids: Sequence[str], solved: set[str]) -> dict[str, list
     }
 
 
-def lacking_knowledge(solved: set[str]) -> list[str]:
-    path = learning_path()
+def lacking_knowledge(
+    solved: set[str],
+    *,
+    user_id: str | None = None,
+) -> list[str]:
+    path = learning_path(user_id) if user_id else learning_path()
     pending = pending_of([step["knowledge_id"] for step in path], solved)
 
     lacking = [
@@ -405,7 +546,7 @@ def lacking_knowledge(solved: set[str]) -> list[str]:
             for step in lacking
             if step["action"] == "practice"
         ),
-        key=lambda knowledge_id: get_mastery(knowledge_id) or 0.0,
+        key=lambda knowledge_id: get_mastery(knowledge_id, user_id=user_id) or 0.0,
     )
 
     return weak + [
@@ -415,19 +556,29 @@ def lacking_knowledge(solved: set[str]) -> list[str]:
     ]
 
 
-def matching_nodes(concept: str) -> list[str]:
+def matching_nodes(
+    concept: str,
+    *,
+    user_id: str | None = None,
+) -> list[str]:
     wanted = normalized(concept)
     nodes = node_map()
+    path = learning_path(user_id) if user_id else learning_path()
 
     return [
         step["knowledge_id"]
-        for step in learning_path()
+        for step in path
         if wanted in normalized(nodes[step["knowledge_id"]]["name"])
     ]
 
 
-def stocked_count(concept: str, solved: set[str]) -> int:
-    pending = pending_of(matching_nodes(concept), solved)
+def stocked_count(
+    concept: str,
+    solved: set[str],
+    *,
+    user_id: str | None = None,
+) -> int:
+    pending = pending_of(matching_nodes(concept, user_id=user_id), solved)
 
     return sum(len(question_ids) for question_ids in pending.values())
 
@@ -436,9 +587,11 @@ def crawl_requests(
     solved: set[str],
     exclude_urls: list[str],
     concept: str = "",
+    *,
+    user_id: str | None = None,
 ) -> list[CrawlerRequest]:
     if concept:
-        if stocked_count(concept, solved) >= MIN_QUESTIONS:
+        if stocked_count(concept, solved, user_id=user_id) >= MIN_QUESTIONS:
             return []
 
         return [
@@ -459,7 +612,7 @@ def crawl_requests(
             top_k=CRAWL_TOP_K,
             exclude_urls=exclude_urls,
         )
-        for knowledge_id in lacking_knowledge(solved)[:CRAWL_NODES]
+        for knowledge_id in lacking_knowledge(solved, user_id=user_id)[:CRAWL_NODES]
     ]
 
 
@@ -467,11 +620,33 @@ def run_learner(
     *,
     knowledge_id: str | None = None,
     attempts: Sequence[dict[str, Any]] = (),
+    user_id: str | None = None,
 ) -> dict:
-    """
-    Public entry point for the learner module.
-    """
+    if not user_id:
+        return {
+            "knowledge_states": [],
+            "error_states": [],
+            "recommendation": None,
+        }
+
     init_db()
+
+    error_states = []
+    for attempt in attempts:
+        diagnosis = attempt.get("diagnosis") or {}
+
+        if attempt["correct"] or not isinstance(diagnosis, dict):
+            continue
+
+        error_states.extend(
+            record_error(
+                question_id=attempt["question_id"],
+                question_type=attempt.get("type", "unknown"),
+                error_type=diagnosis.get("error_type"),
+                confidence=diagnosis.get("confidence"),
+                user_id=user_id,
+            )
+        )
 
     updated_states = []
 
@@ -480,6 +655,8 @@ def run_learner(
             process_attempt(
                 attempt["question_id"],
                 correct=attempt["correct"],
+                question_type=attempt.get("type", "overall"),
+                user_id=user_id,
             )
         )
 
@@ -490,8 +667,9 @@ def run_learner(
 
     return {
         "knowledge_states": updated_states,
+        "error_states": error_states,
         "recommendation": (
-            recommend(target_id)
+            recommend(target_id, user_id=user_id)
             if target_id is not None
             else None
         ),

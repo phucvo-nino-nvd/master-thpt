@@ -7,7 +7,8 @@ sys.path.insert(0, str(BACKEND))
 
 from common.schema import Document
 from knowledge.bank.main import Item, build_item_bank
-from roles.tagger.main import BATCH_SIZE, MAX_TAGS, node_names, tag_items
+from main import tagger
+from roles.tagger.main import BATCH_SIZE, MAX_TAGS, node_names
 
 
 ROOT = BACKEND.parent
@@ -60,7 +61,7 @@ if __name__ == "__main__":
 
     print(f"\n{BANK_PATH}: {len(bank)} item -> gọi LLM {batches} lần")
 
-    tags = tag_items(bank)
+    tags = tagger(bank)
 
     for item in bank:
         labels = ", ".join(

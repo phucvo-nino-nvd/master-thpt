@@ -87,7 +87,12 @@ def author_agent(state: State) -> State:
     questions = write_questions(
         request.concept,
         request.grade,
-        MIN_QUESTIONS - stocked_count(request.concept, solved_question_ids()),
+        MIN_QUESTIONS
+        - stocked_count(
+            request.concept,
+            solved_question_ids(user_id=state["user_id"]),
+            user_id=state["user_id"],
+        ),
     )
 
     if not questions:
@@ -223,7 +228,11 @@ def learner_agent(state: State) -> State:
     concept = restock_concept(learned)
 
     if concept is not None:
-        Thread(target=stock_practice, args=(concept,), daemon=True).start()
+        Thread(
+            target=stock_practice,
+            args=(concept, state["user_id"]),
+            daemon=True,
+        ).start()
 
     return {**learned, "error_diagnoses": error_diagnoses}
 
@@ -262,8 +271,12 @@ def item_bank(state: State) -> State:
 
 
 @traceable(name="[INGEST]: Content Ingestion", run_type="chain")
-def ingest(request: CrawlerRequest, on_node: Callable[[str], None] | None = None) -> State:
-    state = run((crawler_agent,), {"request": request}, on_node)
+def ingest(
+    request: CrawlerRequest,
+    user_id: str | None = None,
+    on_node: Callable[[str], None] | None = None,
+) -> State:
+    state = run((crawler_agent,), {"request": request, "user_id": user_id}, on_node)
 
     if not state["crawled"].docs:
         return run((author_agent, item_bank), state, on_node)
@@ -299,7 +312,7 @@ def approve(url: str) -> None:
 
             run(
                 (parser_agent, item_bank),
-                {"crawled": crawled},
+                {"crawled": crawled, "user_id": "admin"},
                 lambda stage: running.update(stage=stage),
             )
     finally:
@@ -307,7 +320,7 @@ def approve(url: str) -> None:
 
 
 @traceable(name="[INGEST]: Practice Stocking", run_type="chain")
-def stock_practice(concept: str = "") -> None:
+def stock_practice(concept: str, user_id: str | None = None) -> None:
     global progress
 
     if progress is not None:
@@ -317,14 +330,22 @@ def stock_practice(concept: str = "") -> None:
     progress = running
 
     try:
-        requests = crawl_requests(solved_question_ids(), source_urls(), concept)
+        solved = solved_question_ids(user_id=user_id) if user_id else solved_question_ids()
+        requests = (
+            crawl_requests(solved, source_urls(), concept, user_id=user_id)
+            if user_id
+            else crawl_requests(solved, source_urls(), concept)
+        )
         running["total"] = len(requests)
 
         for step, request in enumerate(requests, start=1):
             request.exclude_urls = source_urls()
             running["step"] = step
 
-            ingest(request, lambda stage: running.update(stage=stage))
+            if user_id:
+                ingest(request, user_id, lambda stage: running.update(stage=stage))
+            else:
+                ingest(request, on_node=lambda stage: running.update(stage=stage))
     finally:
         progress = None
 

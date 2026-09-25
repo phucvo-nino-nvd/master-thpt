@@ -63,7 +63,13 @@ def question_of(row: Row) -> HistoryQuestion:
     )
 
 
-def start_history(exam_id: str, mode: Mode = "practice", duration_seconds: int | None = None) -> HistoryCreated:
+def start_history(
+    exam_id: str,
+    mode: Mode = "practice",
+    duration_seconds: int | None = None,
+    *,
+    user_id: str | None = None,
+) -> HistoryCreated:
     init_db()
 
     history_id = str(uuid4())
@@ -71,10 +77,10 @@ def start_history(exam_id: str, mode: Mode = "practice", duration_seconds: int |
     with get_connection() as conn:
         conn.execute(
             """
-            INSERT INTO history (id, exam_id, mode, duration_seconds)
-            VALUES (?, ?, ?, ?)
+            INSERT INTO history (id, user_id, exam_id, mode, duration_seconds)
+            VALUES (?, ?, ?, ?, ?)
             """,
-            (history_id, exam_id, mode, duration_seconds),
+            (history_id, user_id or "", exam_id, mode, duration_seconds),
         )
 
     return HistoryCreated(history_id=history_id)
@@ -121,25 +127,39 @@ def save_answer(
         )
 
 
-def list_history() -> list[HistoryItem]:
+def list_history(*, user_id: str | None = None) -> list[HistoryItem]:
     init_db()
 
     with get_connection() as conn:
-        rows = conn.execute(
-            SUMMARY_SQL + "GROUP BY history.id ORDER BY history.created_at DESC"
-        ).fetchall()
+        query = SUMMARY_SQL + "GROUP BY history.id ORDER BY history.created_at DESC"
+        params: tuple[str, ...] = ()
+        if user_id:
+            query = (
+                SUMMARY_SQL
+                + "WHERE history.user_id = ? GROUP BY history.id ORDER BY history.created_at DESC"
+            )
+            params = (user_id,)
+
+        rows = conn.execute(query, params).fetchall()
 
     return [item_of(row) for row in rows]
 
 
-def get_history(history_id: str) -> HistoryDetail | None:
+def get_history(
+    history_id: str,
+    *,
+    user_id: str | None = None,
+) -> HistoryDetail | None:
     init_db()
 
     with get_connection() as conn:
-        row = conn.execute(
-            SUMMARY_SQL + "WHERE history.id = ? GROUP BY history.id",
-            (history_id,),
-        ).fetchone()
+        query = SUMMARY_SQL + "WHERE history.id = ? GROUP BY history.id"
+        params: tuple[str, ...] = (history_id,)
+        if user_id:
+            query = SUMMARY_SQL + "WHERE history.id = ? AND history.user_id = ? GROUP BY history.id"
+            params = (history_id, user_id)
+
+        row = conn.execute(query, params).fetchone()
 
         if row is None:
             return None
@@ -160,50 +180,57 @@ def get_history(history_id: str) -> HistoryDetail | None:
     )
 
 
-def attempted_exam_ids() -> set[str]:
+def attempted_exam_ids(*, user_id: str | None = None) -> set[str]:
     init_db()
 
     with get_connection() as conn:
-        rows = conn.execute(
-            """
-            SELECT DISTINCT exam_id
-            FROM history
-            """
-        ).fetchall()
+        query = "SELECT DISTINCT exam_id FROM history"
+        params: tuple[str, ...] = ()
+        if user_id:
+            query += " WHERE user_id = ?"
+            params = (user_id,)
+
+        rows = conn.execute(query, params).fetchall()
 
     return {row["exam_id"] for row in rows}
 
 
-def solved_question_ids() -> set[str]:
+def solved_question_ids(*, user_id: str | None = None) -> set[str]:
     init_db()
 
     with get_connection() as conn:
-        rows = conn.execute(
-            """
+        query = """
             SELECT question_id
             FROM history_question
+            JOIN history ON history.id = history_question.history_id
             WHERE correct = 1
-            GROUP BY question_id
-            HAVING MAX(answered_at) > datetime('now', ?)
-            """,
-            (f"-{REVIEW_DAYS} days",),
-        ).fetchall()
+        """
+        params: tuple[str, ...] = ()
+        if user_id:
+            query += " AND history.user_id = ?"
+            params = (user_id,)
+        query += " GROUP BY question_id HAVING MAX(answered_at) > datetime('now', ?)"
+        rows = conn.execute(query, (*params, f"-{REVIEW_DAYS} days")).fetchall()
 
     return {row["question_id"] for row in rows}
 
 
-def streak() -> int:
+def streak(*, user_id: str | None = None) -> int:
     init_db()
 
     with get_connection() as conn:
         today = conn.execute("SELECT DATE('now', 'localtime') AS day").fetchone()["day"]
-        rows = conn.execute(
-            """
+        query = """
             SELECT DISTINCT DATE(answered_at, 'localtime') AS day
             FROM history_question
-            ORDER BY day DESC
-            """
-        ).fetchall()
+            JOIN history ON history.id = history_question.history_id
+        """
+        params: tuple[str, ...] = ()
+        if user_id:
+            query += " WHERE history.user_id = ?"
+            params = (user_id,)
+        query += " ORDER BY day DESC"
+        rows = conn.execute(query, params).fetchall()
 
     days = [date.fromisoformat(row["day"]) for row in rows]
 
@@ -303,17 +330,26 @@ def take_doc(url: str) -> list[CrawlerResponse]:
     return batches_of(rows)
 
 
-def get_answer(history_id: str, question_id: str) -> HistoryQuestion | None:
+def get_answer(
+    history_id: str,
+    question_id: str,
+    *,
+    user_id: str | None = None,
+) -> HistoryQuestion | None:
     init_db()
 
     with get_connection() as conn:
-        row = conn.execute(
-            """
+        query = """
             SELECT question_id, student_answer, correct, part_correct, score, feedback
             FROM history_question
+            JOIN history ON history.id = history_question.history_id
             WHERE history_id = ? AND question_id = ?
-            """,
-            (history_id, question_id),
-        ).fetchone()
+        """
+        params: tuple[str, ...] = (history_id, question_id)
+        if user_id:
+            query += " AND history.user_id = ?"
+            params = (history_id, question_id, user_id)
+
+        row = conn.execute(query, params).fetchone()
 
     return None if row is None else question_of(row)

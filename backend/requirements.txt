@@ -1,12 +1,13 @@
 python-dotenv
 fastapi
+fastapi-clerk-auth>=0.0.7
 uvicorn[standard]
 datalab-python-sdk
 tavily-python
 pydantic
 beautifulsoup4
 langchain-openrouter
-langchain-typesafe
+typesafe-sdk
 langsmith
 numpy
 sympy

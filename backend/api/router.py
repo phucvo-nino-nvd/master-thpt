@@ -3,8 +3,13 @@ from __future__ import annotations
 from pathlib import Path
 from sqlite3 import IntegrityError
 from uuid import NAMESPACE_URL, uuid5
-from fastapi import BackgroundTasks, FastAPI, HTTPException
+from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
+from fastapi_clerk_auth import (
+    ClerkConfig,
+    ClerkHTTPBearer,
+    HTTPAuthorizationCredentials,
+)
 
 import main
 import os
@@ -60,7 +65,7 @@ def submission_of(question_id: str, student_answer: str | list[bool]) -> dict:
     return {"item": find_item(question_id), "student_answer": student_answer}
 
 
-def list_documents() -> list[DocumentItem]:
+def list_documents(user_id: str | None = None) -> list[DocumentItem]:
     groups: dict[str, list[dict]] = {}
     for item in load_items():
         if item["source_url"].startswith(GENERATED_PREFIX):
@@ -68,7 +73,7 @@ def list_documents() -> list[DocumentItem]:
 
         groups.setdefault(item["source_url"], []).append(item)
 
-    attempted = attempted_exam_ids()
+    attempted = attempted_exam_ids(user_id=user_id) if user_id else attempted_exam_ids()
 
     documents = []
     for source_url, group in groups.items():
@@ -126,10 +131,13 @@ def exam_of(exam_id: str, title: str, grade: int, duration_minutes: int, items: 
     }
 
 
-def practice_sets(query: str = "") -> list[DocumentItem]:
-    path = learning_path()
+def practice_sets(user_id: str | None = None, query: str = "") -> list[DocumentItem]:
+    path = learning_path(user_id) if user_id else learning_path()
     nodes = node_map()
-    pending = pending_of([step["knowledge_id"] for step in path], solved_question_ids())
+    pending = pending_of(
+        [step["knowledge_id"] for step in path],
+        solved_question_ids(user_id=user_id) if user_id else solved_question_ids(),
+    )
     wanted = normalized(query)
 
     sets: list[DocumentItem] = []
@@ -179,14 +187,23 @@ def reject_if_busy() -> None:
     )
 
 
-def practice_set_of(knowledge_id: str, question_ids: set[str] | None = None) -> dict:
+def practice_set_of(
+    knowledge_id: str,
+    user_id: str | None = None,
+    question_ids: set[str] | None = None,
+) -> dict:
     node = node_map().get(knowledge_id)
 
     if node is None:
         raise HTTPException(status_code=404, detail="Không tìm thấy đề thi.")
 
     if question_ids is None:
-        question_ids = set(pending_of([knowledge_id], solved_question_ids()).get(knowledge_id, []))
+        question_ids = set(
+            pending_of(
+                [knowledge_id],
+                solved_question_ids(user_id=user_id) if user_id else solved_question_ids(),
+            ).get(knowledge_id, [])
+        )
 
     items = items_of(question_ids)
 
@@ -204,24 +221,65 @@ def practice_set_of(knowledge_id: str, question_ids: set[str] | None = None) -> 
 
 app = FastAPI()
 
+
+@app.middleware("http")
+async def clerk_token_header(request: Request, call_next):
+    """CloudFront owns Authorization, so the Clerk token rides X-Clerk-Token."""
+    token = request.headers.get("x-clerk-token")
+
+    if token:
+        request.scope["headers"] = [
+            (name, value)
+            for name, value in request.scope["headers"]
+            if name != b"authorization"
+        ] + [(b"authorization", token.encode())]
+
+    return await call_next(request)
+
+
+clerk_bearer = ClerkHTTPBearer(
+    ClerkConfig(jwks_url=os.getenv("CLERK_JWKS_URL"))
+)
+
+
+def clerk_guard(
+    creds: HTTPAuthorizationCredentials = Depends(clerk_bearer),
+) -> HTTPAuthorizationCredentials:
+    return creds
+
+
+def credential_user_id(creds: HTTPAuthorizationCredentials) -> str | None:
+    decoded = getattr(creds, "decoded", None)
+
+    return decoded.get("sub") if isinstance(decoded, dict) else None
+
 if IMAGES_DIR.exists():
     app.mount("/api/images", StaticFiles(directory=IMAGES_DIR), name="images")
 
 
 @app.get("/api/documents")
-def get_documents() -> list[DocumentItem]:
-    return list_documents()
+def get_documents(creds: HTTPAuthorizationCredentials = Depends(clerk_guard)) -> list[DocumentItem]:
+    return list_documents(creds.decoded["sub"])
 
 
 @app.get("/api/documents/{document_id}")
-def get_document(document_id: str, history_id: str = "") -> dict:
+def get_document(
+    document_id: str,
+    history_id: str = "",
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
+    user_id = credential_user_id(creds)
     items = [item for item in load_items() if document_id_of(item["source_url"]) == document_id]
 
     if not items:
-        reviewed = get_history(history_id) if history_id else None
+        reviewed = (
+            get_history(history_id, user_id=user_id)
+            if history_id and user_id
+            else get_history(history_id) if history_id else None
+        )
 
         return practice_set_of(
-            document_id,
+            document_id, user_id,
             {answer.question_id for answer in reviewed.questions} if reviewed else None,
         )
 
@@ -235,26 +293,36 @@ def get_document(document_id: str, history_id: str = "") -> dict:
 
 
 @app.get("/api/ingest")
-def get_ingest() -> dict:
+def get_ingest(creds: HTTPAuthorizationCredentials = Depends(clerk_guard)) -> dict:
     return ingest_state()
 
 
 @app.post("/api/ingest/mode")
-def post_ingest_mode(manual: bool) -> dict:
+def post_ingest_mode(
+    manual: bool,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
     main.manual = manual
 
     return ingest_state()
 
 
 @app.delete("/api/ingest")
-def delete_ingest(url: str) -> dict:
+def delete_ingest(
+    url: str,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
     drop_doc(url)
 
     return ingest_state()
 
 
 @app.post("/api/ingest/approve")
-def post_ingest_approve(url: str, background: BackgroundTasks) -> dict:
+def post_ingest_approve(
+    url: str,
+    background: BackgroundTasks,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
     reject_if_busy()
 
     background.add_task(approve, url)
@@ -263,42 +331,65 @@ def post_ingest_approve(url: str, background: BackgroundTasks) -> dict:
 
 
 @app.get("/api/practice")
-def get_practice(q: str = "") -> list[DocumentItem]:
-    return practice_sets(q)
+def get_practice(
+    q: str = "",
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> list[DocumentItem]:
+    return practice_sets(creds.decoded["sub"], q)
 
 
 @app.get("/api/practice/status")
-def get_practice_status() -> PracticeStatus:
+def get_practice_status(
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> PracticeStatus:
     return PracticeStatus(**(main.progress or {}))
 
 
 @app.post("/api/practice/update")
-def post_practice_update(request: PracticeRequest, background: BackgroundTasks) -> list[DocumentItem]:
+def post_practice_update(
+    request: PracticeRequest,
+    background: BackgroundTasks,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> list[DocumentItem]:
     query = request.request.strip()
+    user_id = credential_user_id(creds)
 
     reject_if_busy()
 
-    solved = solved_question_ids()
+    solved = solved_question_ids(user_id=user_id)
 
-    if query and not crawl_requests(solved, source_urls(), query):
+    if query and not crawl_requests(solved, source_urls(), query, user_id=user_id):
         raise HTTPException(
             status_code=409,
-            detail=f'Đã có {stocked_count(query, solved)} câu "{query}" chưa làm, chưa cần tìm thêm đề.',
+            detail=(
+                f'You already have {stocked_count(query, solved, user_id=user_id)} '
+                f'unanswered "{query}" questions. No new questions are needed yet.'
+            ),
         )
 
-    background.add_task(stock_practice, query)
+    background.add_task(stock_practice, query, user_id)
 
-    return practice_sets(query)
+    return practice_sets(user_id, query)
 
 
 @app.post("/api/hints")
-def post_hint(request: HintRequest) -> HintResponse:
+def post_hint(
+    request: HintRequest,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> HintResponse:
     return give_hint(find_item(request.question_id), request.level, request.student_answer)
 
 
 @app.post("/api/solutions")
-def post_solution(request: SolutionRequest) -> SolutionResponse:
-    answered = get_answer(request.history_id, request.question_id)
+def post_solution(
+    request: SolutionRequest,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> SolutionResponse:
+    answered = get_answer(
+        request.history_id,
+        request.question_id,
+        user_id=creds.decoded["sub"],
+    )
 
     if not answered:
         raise HTTPException(status_code=404, detail="Câu này chưa được chấm.")
@@ -307,18 +398,31 @@ def post_solution(request: SolutionRequest) -> SolutionResponse:
 
 
 @app.post("/api/history")
-def post_history(request: HistoryRequest) -> HistoryCreated:
-    return start_history(request.exam_id, request.mode, request.duration_seconds)
+def post_history(
+    request: HistoryRequest,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> HistoryCreated:
+    return start_history(
+        request.exam_id,
+        request.mode,
+        request.duration_seconds,
+        user_id=creds.decoded["sub"],
+    )
 
 
 @app.get("/api/history")
-def get_history_list() -> list[HistoryItem]:
-    return list_history()
+def get_history_list(
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> list[HistoryItem]:
+    return list_history(user_id=creds.decoded["sub"])
 
 
 @app.get("/api/history/{history_id}")
-def get_history_detail(history_id: str) -> HistoryDetail:
-    detail = get_history(history_id)
+def get_history_detail(
+    history_id: str,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> HistoryDetail:
+    detail = get_history(history_id, user_id=creds.decoded["sub"])
 
     if not detail:
         raise HTTPException(status_code=404, detail="Không tìm thấy lượt làm bài.")
@@ -327,12 +431,18 @@ def get_history_detail(history_id: str) -> HistoryDetail:
 
 
 @app.get("/api/exams/grading-status")
-def get_grading_status() -> GradingStatus:
+def get_grading_status(
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> GradingStatus:
     return GradingStatus(exam_id=main.grading)
 
 
 @app.post("/api/exams/submit")
-def post_exam_submit(request: SubmitRequest) -> SubmitResponse:
+def post_exam_submit(
+    request: SubmitRequest,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> SubmitResponse:
+    user_id = creds.decoded["sub"]
     submissions = [
         submission_of(answer.question_id, answer.student_answer)
         for answer in request.answers
@@ -341,8 +451,13 @@ def post_exam_submit(request: SubmitRequest) -> SubmitResponse:
     main.grading = request.exam_id
 
     try:
-        state = grade(submissions)
-        created = start_history(request.exam_id, "exam", request.duration_seconds)
+        state = grade(submissions, user_id=user_id)
+        created = start_history(
+            request.exam_id,
+            "exam",
+            request.duration_seconds,
+            user_id=user_id,
+        )
 
         for submission, evaluation in zip(submissions, state["final_evaluations"]):
             save_answer(
@@ -367,14 +482,23 @@ def post_exam_submit(request: SubmitRequest) -> SubmitResponse:
 
 
 @app.post("/api/practice/check-question")
-def post_practice_check(request: CheckRequest) -> Evaluation:
+def post_practice_check(
+    request: CheckRequest,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> Evaluation:
+    user_id = credential_user_id(creds)
     submission = submission_of(request.question_id, request.student_answer)
-    reviewed = get_history(request.history_id)
+    reviewed = (
+        get_history(request.history_id, user_id=user_id)
+        if user_id
+        else get_history(request.history_id)
+    )
 
     main.grading = reviewed.exam_id if reviewed else None
 
     try:
-        evaluation = grade([submission])["final_evaluations"][0]
+        state = grade([submission], user_id=user_id) if user_id else grade([submission])
+        evaluation = state.get("final_evaluations", state["evaluations"])[0]
         save_answer(request.history_id, request.question_id, request.student_answer, evaluation)
     except IntegrityError:
         raise HTTPException(status_code=404, detail="Không tìm thấy lượt làm bài.")
@@ -385,8 +509,11 @@ def post_practice_check(request: CheckRequest) -> Evaluation:
 
 
 @app.get("/api/knowledge_graph")
-def get_graph() -> dict:
-    return {**get_knowledge_graph(), "streak": streak()}
+def get_graph(
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
+    user_id = creds.decoded["sub"]
+    return {**get_knowledge_graph(user_id), "streak": streak(user_id=user_id)}
 
 
 if __name__ == "__main__":

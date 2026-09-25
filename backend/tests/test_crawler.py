@@ -1,15 +1,20 @@
-from roles.crawler.refine import page_count
+"""Live crawler check. Run: .venv/bin/python tests/test_crawler.py"""
+
+from pathlib import Path
+import sys
+
+from dotenv import load_dotenv
 
 
-PAGE = b"<< /Type /Page /Parent 2 0 R >>\n"
-TREE = b"<< /Type /Pages /Kids [3 0 R] /Count 99 >>\n"
+root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(root))
+load_dotenv(root / ".env", override=True)
+
+from roles.crawler.main import crawl
+from roles.crawler.schema import CrawlerRequest
 
 
-def test_page_count_counts_page_objects():
-    body = b"%PDF-1.7\n" + PAGE * 7 + TREE
+request = CrawlerRequest(grade=12, concept="Tích phân", top_k=1)
+response = crawl(request)
 
-    assert page_count(body) == 7
-
-
-def test_page_count_of_non_pdf_is_zero():
-    assert page_count(b"PK\x03\x04word/document.xml") == 0
+print(response.model_dump_json(indent=2))

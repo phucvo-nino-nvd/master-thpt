@@ -1,4 +1,4 @@
-"""Live verifier check. Run: .venv/bin/python tests/test_verifier.py"""
+"""Live teacher check. Run: .venv/bin/python tests/test_teacher.py"""
 
 from pathlib import Path
 import sys
@@ -10,15 +10,15 @@ root = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(root))
 load_dotenv(root / ".env", override=True)
 
-from common.schema import Evaluation, Option
+from common.schema import Option
 from knowledge.bank.main import Item
-from roles.verifier.main import verify
+from roles.teacher.main import evaluate
 
 
 item = Item(
-    id="live-verifier-choice",
-    source_url="live://verifier",
-    source_title="Live verifier test",
+    id="live-teacher-choice",
+    source_url="live://teacher",
+    source_title="Live teacher test",
     number="1",
     grade=12,
     type="multiple_choice",
@@ -32,11 +32,6 @@ item = Item(
     solution="Chọn A.",
 )
 student_answer = "B"
-teacher_evaluation = Evaluation(
-    score=0.25,
-    correct=True,
-    feedback="Em chọn đúng.",
-)
-final_evaluation = verify(item, student_answer, teacher_evaluation)
+evaluation = evaluate(item, student_answer)
 
-print(final_evaluation.model_dump_json(indent=2))
+print(evaluation.model_dump_json(indent=2))
