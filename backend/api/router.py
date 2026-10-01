@@ -1,9 +1,10 @@
 from __future__ import annotations
 
+from datetime import date
 from pathlib import Path
 from sqlite3 import IntegrityError
 from uuid import NAMESPACE_URL, uuid5
-from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request
+from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi_clerk_auth import (
     ClerkConfig,
@@ -15,13 +16,13 @@ import main
 import os
 import re
 
-from roles.learner.service import crawl_requests, get_knowledge_graph, learning_path, pending_of, stocked_count
+from roles.learner.service import crawl_requests, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, quest, quest_test, skip_review, stocked_count
 from roles.teacher.main import explain, give_hint
 from roles.teacher.rubric import answer_of
 from roles.teacher.schema import HintRequest, HintResponse, SolutionRequest, SolutionResponse
 from common.schema import Evaluation
 from common.utils import normalized
-from history.main import attempted_exam_ids, drop_doc, get_answer, get_history, list_history, queued_docs, save_answer, solved_question_ids, start_history, streak
+from history.main import attempted_exam_ids, drop_doc, runs_of, get_answer, get_history, list_history, queued_docs, save_answer, solved_question_ids, start_history, streak
 from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRequest
 from knowledge.bank.main import GENERATED_PREFIX, Item, items_of, load_items, source_urls
 from knowledge.graph.convert import node_map
@@ -222,21 +223,6 @@ def practice_set_of(
 app = FastAPI()
 
 
-@app.middleware("http")
-async def clerk_token_header(request: Request, call_next):
-    """CloudFront owns Authorization, so the Clerk token rides X-Clerk-Token."""
-    token = request.headers.get("x-clerk-token")
-
-    if token:
-        request.scope["headers"] = [
-            (name, value)
-            for name, value in request.scope["headers"]
-            if name != b"authorization"
-        ] + [(b"authorization", token.encode())]
-
-    return await call_next(request)
-
-
 clerk_bearer = ClerkHTTPBearer(
     ClerkConfig(jwks_url=os.getenv("CLERK_JWKS_URL"))
 )
@@ -336,6 +322,70 @@ def get_practice(
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> list[DocumentItem]:
     return practice_sets(creds.decoded["sub"], q)
+
+
+@app.get("/api/review")
+def get_review(
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
+    runs = runs_of(user_id=credential_user_id(creds))
+    answers = [answer for run in runs for answer in run["answers"]]
+    knowledge_by_question = knowledge_of(sorted({answer["question_id"] for answer in answers}))
+    reviews = due_reviews(answers, forced=skip_review(runs, knowledge_by_question))
+
+    return exam_of(
+        f"review:{date.today()}",
+        "Luyện tập hôm nay",
+        12,
+        PRACTICE_DURATION,
+        items_of({review["question_id"] for review in reviews if review["question_id"]}),
+    )
+
+
+@app.get("/api/quest")
+def get_quest(
+    grade: int | None = None,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
+    user_id = credential_user_id(creds)
+    runs = runs_of(user_id=user_id)
+    state = quest(runs, grade, user_id)
+    placement = state["placement"]
+
+    if placement["done"] and not placement_runs(runs):
+        start_history(placement["start"], "placement", user_id=user_id)
+
+    return state
+
+
+@app.post("/api/quest/reset")
+def post_quest_reset(
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
+    user_id = credential_user_id(creds)
+    start_history("reset", "placement", user_id=user_id)
+
+    return quest(runs_of(user_id=user_id), user_id=user_id)
+
+
+@app.get("/api/quest/{item_id}")
+def get_quest_test(
+    item_id: str,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
+    user_id = credential_user_id(creds)
+    test = quest_test(item_id, runs_of(user_id=user_id), user_id)
+
+    if test is None:
+        raise HTTPException(status_code=403, detail="Trạm này chưa mở.")
+
+    return exam_of(
+        test["id"],
+        test["name"],
+        test["grade"],
+        PRACTICE_DURATION,
+        items_of(set(test["question_ids"])),
+    )
 
 
 @app.get("/api/practice/status")
@@ -440,6 +490,7 @@ def get_grading_status(
 @app.post("/api/exams/submit")
 def post_exam_submit(
     request: SubmitRequest,
+    background: BackgroundTasks,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> SubmitResponse:
     user_id = creds.decoded["sub"]
@@ -454,7 +505,7 @@ def post_exam_submit(
         state = grade(submissions, user_id=user_id)
         created = start_history(
             request.exam_id,
-            "exam",
+            request.mode,
             request.duration_seconds,
             user_id=user_id,
         )
@@ -468,6 +519,12 @@ def post_exam_submit(
             )
     finally:
         main.grading = None
+
+    if request.mode in ("checkpoint", "obstacle"):
+        nodes = node_map()
+
+        for knowledge_id in quest(runs_of(user_id=user_id), user_id=user_id)["missing"]:
+            background.add_task(stock_practice, nodes[knowledge_id]["name"], user_id)
 
     return SubmitResponse(
         exam_id=request.exam_id,

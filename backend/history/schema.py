@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from common.schema import Evaluation
 
 
-Mode = Literal["exam", "practice"]
+Mode = Literal["exam", "practice", "placement", "checkpoint", "obstacle", "review", "skip"]
 
 
 class HistoryRequest(BaseModel):

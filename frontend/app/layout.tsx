@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Literata } from 'next/font/google';
+import { ClerkProviderClient } from '@/components/clerk-provider';
 import 'katex/dist/katex.min.css';
 import './globals.css';
 
@@ -28,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${inter.className} ${literata.variable}`}>
-				{children}
+				<ClerkProviderClient>{children}</ClerkProviderClient>
 			</body>
 		</html>
 	);

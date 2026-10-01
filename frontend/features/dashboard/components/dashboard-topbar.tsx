@@ -2,6 +2,7 @@
 
 import { PracticeSteps } from '@/features/practice/components/practice-steps';
 import { PracticeStatus, getIngest, getPracticeStatus } from '@/shared/api/client';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -106,6 +107,15 @@ export function DashboardTopbar({
 						</Link>
 					))}
 				</nav>
+
+				<SignedIn>
+					<UserButton />
+				</SignedIn>
+				<SignedOut>
+					<Link href="/sign-in" className="dash-nav-link">
+						Đăng nhập
+					</Link>
+				</SignedOut>
 			</header>
 
 			{status ? (

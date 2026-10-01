@@ -204,6 +204,22 @@ const api = axios.create({
 	timeout: 180000,
 });
 
+let clerkToken: (() => Promise<string | null>) | null = null;
+
+export function setClerkToken(getToken: () => Promise<string | null>) {
+	clerkToken = getToken;
+}
+
+api.interceptors.request.use(async (config) => {
+	const token = await clerkToken?.();
+
+	if (token) {
+		config.headers.set('Authorization', `Bearer ${token}`);
+	}
+
+	return config;
+});
+
 export async function getDocuments() {
 	const { data } = await api.get<DocumentItem[]>('/documents');
 	return data;

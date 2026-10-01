@@ -3,6 +3,7 @@ from __future__ import annotations
 from pydantic import BaseModel
 
 from common.schema import Evaluation
+from history.schema import Mode
 
 
 class Submission(BaseModel):
@@ -18,6 +19,7 @@ class SubmitRequest(BaseModel):
     exam_id: str
     answers: list[Submission]
     duration_seconds: int | None = None
+    mode: Mode = "exam"
 
 
 class SubmitResponse(BaseModel):

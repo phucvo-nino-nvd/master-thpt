@@ -215,6 +215,46 @@ def solved_question_ids(*, user_id: str | None = None) -> set[str]:
     return {row["question_id"] for row in rows}
 
 
+def runs_of(*, user_id: str | None = None) -> list[dict]:
+    init_db()
+
+    with get_connection() as conn:
+        query = """
+            SELECT
+                history.id,
+                history.mode,
+                history.exam_id,
+                history_question.question_id,
+                history_question.correct,
+                history_question.answered_at
+            FROM history
+            LEFT JOIN history_question ON history_question.history_id = history.id
+        """
+        params: tuple[str, ...] = ()
+        if user_id:
+            query += " WHERE history.user_id = ?"
+            params = (user_id,)
+        query += " ORDER BY history.created_at, history.rowid, history_question.answered_at"
+        rows = conn.execute(query, params).fetchall()
+
+    runs: dict[str, dict] = {}
+
+    for row in rows:
+        run = runs.setdefault(
+            row["id"],
+            {"mode": row["mode"], "exam_id": row["exam_id"], "answers": []},
+        )
+
+        if row["question_id"] is not None:
+            run["answers"].append({
+                "question_id": row["question_id"],
+                "correct": row["correct"],
+                "answered_at": row["answered_at"],
+            })
+
+    return list(runs.values())
+
+
 def streak(*, user_id: str | None = None) -> int:
     init_db()
 

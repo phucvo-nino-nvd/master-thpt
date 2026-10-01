@@ -32,7 +32,7 @@ def init_db() -> None:
                 duration_seconds INTEGER,
                 created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
-                CHECK (mode IN ('exam', 'practice'))
+                CHECK (mode IN ('exam', 'practice', 'placement', 'checkpoint', 'obstacle', 'review', 'skip'))
             );
 
             CREATE TABLE IF NOT EXISTS history_question (
