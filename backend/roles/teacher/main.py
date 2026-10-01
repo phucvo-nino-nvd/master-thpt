@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Iterator
 from functools import lru_cache
 from langsmith import traceable
 
@@ -8,9 +9,9 @@ import os
 from common.schema import Evaluation
 from common.utils import chat_model
 from knowledge.bank.main import Item
-from .context import EVALUATE_CONTEXT, HINT_CONTEXT, HINT_LEVELS, SOLUTION_CONTEXT
+from .context import CHAT_CONTEXT, EVALUATE_CONTEXT, HINT_CONTEXT, HINT_LEVELS, SOLUTION_CONTEXT
 from .rubric import answer_of, apply_rubric, settled
-from .schema import HintResponse, SolutionResponse
+from .schema import ChatMessage, HintResponse, SolutionResponse
 
 
 TEACHER_MODEL = os.getenv("OPENROUTER_TEACHER_MODEL")
@@ -153,6 +154,20 @@ def build_solution_prompt(item: Item, student_answer: str | list[bool], evaluati
     return "\n\n".join(section for section in sections if section)
 
 
+def build_chat_prompt(item: Item | None, student_answer: str | list[bool]) -> str:
+    if item is None:
+        return CHAT_CONTEXT
+
+    sections = [
+        CHAT_CONTEXT,
+        question_block(item),
+        reference_solution(item),
+        f"Student answer:\n{answer_text(item, student_answer) or '(not answered yet)'}",
+    ]
+
+    return "\n\n".join(section for section in sections if section)
+
+
 @traceable(name="[TEACHER]: Evaluate student answer")
 def evaluate(item: Item, student_answer: str | list[bool]) -> Evaluation:
     prompt = build_evaluate_prompt(item, student_answer)
@@ -179,6 +194,24 @@ def give_hint(item: Item, level: int = 1, student_answer: str | list[bool] = "")
     result = HintResponse.model_validate(hinter().invoke(build_hint_prompt(item, level, student_answer)))
 
     return result.model_copy(update={"level": level})
+
+
+@traceable(name="[TEACHER]: Chat")
+def chat(
+    message: str,
+    history: list[ChatMessage],
+    item: Item | None = None,
+    student_answer: str | list[bool] = "",
+) -> Iterator[dict]:
+    messages = [
+        ("system", build_chat_prompt(item, student_answer)),
+        *((turn.role, turn.content) for turn in history),
+        ("user", message),
+    ]
+
+    for chunk in chat_model(TEACHER_MODEL).stream(messages):
+        if chunk.content:
+            yield {"type": "content", "content": chunk.content}
 
 
 @traceable(name="[TEACHER]: Explain solution")

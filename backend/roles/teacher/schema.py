@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from typing import Literal
 from pydantic import BaseModel
 
 
@@ -21,3 +22,15 @@ class SolutionRequest(BaseModel):
 
 class SolutionResponse(BaseModel):
     solution: str
+
+
+class ChatMessage(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str
+
+
+class ChatRequest(BaseModel):
+    message: str
+    history: list[ChatMessage] = []
+    question_id: str = ""
+    student_answer: str | list[bool] = ""

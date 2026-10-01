@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+from collections.abc import Iterator
 from datetime import date
 from pathlib import Path
 from sqlite3 import IntegrityError
 from uuid import NAMESPACE_URL, uuid5
 from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException
+from fastapi.responses import StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi_clerk_auth import (
     ClerkConfig,
@@ -12,14 +14,15 @@ from fastapi_clerk_auth import (
     HTTPAuthorizationCredentials,
 )
 
+import json
 import main
 import os
 import re
 
 from roles.learner.service import crawl_requests, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, quest, quest_test, skip_review, stocked_count
-from roles.teacher.main import explain, give_hint
+from roles.teacher.main import chat, explain, give_hint
 from roles.teacher.rubric import answer_of
-from roles.teacher.schema import HintRequest, HintResponse, SolutionRequest, SolutionResponse
+from roles.teacher.schema import ChatRequest, HintRequest, HintResponse, SolutionRequest, SolutionResponse
 from common.schema import Evaluation
 from common.utils import normalized
 from history.main import attempted_exam_ids, drop_doc, runs_of, get_answer, get_history, list_history, queued_docs, save_answer, solved_question_ids, start_history, streak
@@ -64,6 +67,14 @@ def find_item(question_id: str) -> Item:
 
 def submission_of(question_id: str, student_answer: str | list[bool]) -> dict:
     return {"item": find_item(question_id), "student_answer": student_answer}
+
+
+def sse(events: Iterator[dict]) -> Iterator[str]:
+    try:
+        for event in events:
+            yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n"
+    except Exception as error:
+        yield f"data: {json.dumps({'type': 'error', 'content': f'{type(error).__name__}: {error}'}, ensure_ascii=False)}\n\n"
 
 
 def list_documents(user_id: str | None = None) -> list[DocumentItem]:
@@ -238,6 +249,15 @@ def credential_user_id(creds: HTTPAuthorizationCredentials) -> str | None:
     decoded = getattr(creds, "decoded", None)
 
     return decoded.get("sub") if isinstance(decoded, dict) else None
+
+
+def pro_guard(
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> HTTPAuthorizationCredentials:
+    if creds.decoded.get("pla") != "u:pro":
+        raise HTTPException(status_code=402, detail="Tính năng này dành cho gói Pro.")
+
+    return creds
 
 if IMAGES_DIR.exists():
     app.mount("/api/images", StaticFiles(directory=IMAGES_DIR), name="images")
@@ -428,6 +448,19 @@ def post_hint(
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> HintResponse:
     return give_hint(find_item(request.question_id), request.level, request.student_answer)
+
+
+@app.post("/api/teacher/chat")
+def post_teacher_chat(
+    request: ChatRequest,
+    creds: HTTPAuthorizationCredentials = Depends(pro_guard),
+) -> StreamingResponse:
+    item = find_item(request.question_id) if request.question_id else None
+
+    return StreamingResponse(
+        sse(chat(request.message, request.history, item, request.student_answer)),
+        media_type="text/event-stream",
+    )
 
 
 @app.post("/api/solutions")
