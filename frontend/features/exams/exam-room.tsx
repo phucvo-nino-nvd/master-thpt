@@ -372,7 +372,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 
 						{solutions[question.id] !== undefined && (
 							<div className={s.solution}>
-								{solutions[question.id] ? <MathText text={solutions[question.id]} /> : <span role="status">Đang viết lời giải…</span>}
+								{solutions[question.id] ? <MathText text={solutions[question.id]} /> : <strong role="status">Đang viết lời giải…</strong>}
 							</div>
 						)}
 
