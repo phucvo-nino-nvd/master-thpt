@@ -12,5 +12,4 @@ langsmith
 numpy
 sympy
 tqdm
-neo4j
 fsrs
