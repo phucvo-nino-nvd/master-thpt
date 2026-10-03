@@ -154,9 +154,6 @@ export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextSh
 						<div className={s.pop}>
 							<div className={s.popCard}>
 								<div className={s.popTitle}>Bom ôn tập</div>
-								<p className={s.popCopy}>
-									{obstacle.total_questions} câu kiểu em vừa sai ở <MathInline text={nameOf(bombAt)} />. Gỡ xong là được thử lại trạm.
-								</p>
 								<Link href={examHref(obstacle.id, 'obstacle')} className={`${s.cta} ${s.coral}`}>
 									Gỡ bom →
 								</Link>

@@ -15,6 +15,7 @@ VIETNAM = timezone(timedelta(hours=7))
 XP_PER_CORRECT = 4
 XP_PER_CUP = 10
 XP_PER_EXAM = 20
+DAILY_CORRECT_TARGET = 8
 ANSWERED = """(
     (json_type(q.student_answer) = 'text' AND TRIM(json_extract(q.student_answer, '$')) != '')
     OR (json_type(q.student_answer) = 'array' AND json_array_length(q.student_answer) > 0)
@@ -76,7 +77,7 @@ def account_of(user_id: str, plan: Literal["free", "pro"] = "free") -> Account:
         cursor -= timedelta(days=1)
 
     monday = today - timedelta(days=today.weekday())
-    today_xp = sum(row["correct"] for row in rows if row["day"] == today.isoformat()) * XP_PER_CORRECT
+    today_correct = sum(row["correct"] for row in rows if row["day"] == today.isoformat())
     joined_at = min(profile["created_at"], joined) if joined else profile["created_at"]
 
     return Account(
@@ -87,7 +88,12 @@ def account_of(user_id: str, plan: Literal["free", "pro"] = "free") -> Account:
         streak=streak,
         kept_today=kept_today,
         week=[(monday + timedelta(days=i)).isoformat() in learned for i in range(7)],
-        daily=[DailyTask(id="insight", title="Tích lũy 30 Điểm thấu hiểu", current=min(30, today_xp), target=30)],
+        daily=[DailyTask(
+            id="insight",
+            title=f"Trả lời đúng {DAILY_CORRECT_TARGET} câu · +{DAILY_CORRECT_TARGET * XP_PER_CORRECT} XP",
+            current=min(DAILY_CORRECT_TARGET, today_correct),
+            target=DAILY_CORRECT_TARGET,
+        )],
         activity=[ActivityDay(date=row["day"], count=row["count"]) for row in rows],
     )
 

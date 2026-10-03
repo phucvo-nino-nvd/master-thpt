@@ -35,6 +35,14 @@ def question_score(
     return MAX_POINTS[question_type] if correct else 0.0
 
 
+def maximum_score(item: Item) -> float:
+    return question_score(item.type, True, [True] * len(item.parts))
+
+
+def score_on_ten(earned: float, maximum: float) -> float:
+    return round(10 * earned / maximum, 2) if maximum else 0.0
+
+
 def apply_rubric(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Evaluation:
     key = answer_of(item)
 

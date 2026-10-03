@@ -24,7 +24,7 @@ export const weekdayIndex = (date = new Date()) => (date.getDay() + 6) % 7;
 
 export const starSeq = (correct: number, total: number) => {
 	const stars = total ? Math.round((3 * correct) / total) : 0;
-	return stars ? `switch|${stars}|1200` : undefined;
+	return stars ? `switch|${stars}|650` : undefined;
 };
 
 export const score = (value: number) => value.toFixed(1).replace('.', ',');

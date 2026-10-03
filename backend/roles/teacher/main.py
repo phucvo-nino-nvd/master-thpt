@@ -125,9 +125,8 @@ def build_hint_prompt(item: Item, level: int, student_answer: str | list[bool]) 
     return "\n\n".join(section for section in sections if section)
 
 
-def build_solution_prompt(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> str:
+def build_solution_prompt(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> list[tuple[str, str]]:
     sections = [
-        SOLUTION_CONTEXT,
         question_block(item),
         reference_solution(item),
         f"Student answer:\n{answer_text(item, student_answer) or '(empty)'}",
@@ -139,7 +138,7 @@ def build_solution_prompt(item: Item, student_answer: str | list[bool], evaluati
         ),
     ]
 
-    return "\n\n".join(section for section in sections if section)
+    return [("system", SOLUTION_CONTEXT), ("user", "\n\n".join(section for section in sections if section))]
 
 
 def build_chat_prompt(item: Item | None, student_answer: str | list[bool]) -> str:
@@ -200,4 +199,6 @@ def chat(
 
 @traceable(name="[TEACHER]: Explain solution")
 def explain(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Iterator[dict]:
+    yield {"type": "model", "content": TEACHER_MODEL}
+
     yield from streamed(build_solution_prompt(item, student_answer, evaluation))

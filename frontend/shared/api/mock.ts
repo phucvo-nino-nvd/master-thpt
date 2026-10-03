@@ -63,19 +63,36 @@ function rotated(offset: number, size: number) {
 	return Array.from({ length: Math.min(size, ids.length) }, (_, i) => ids[(offset + i) % ids.length]);
 }
 
-function grade(question: ExamQuestion, answer: AnswerPayload, weight: number): Evaluation {
+const TRUE_FALSE_POINTS = [0, 0.1, 0.25, 0.5, 1];
+
+function maximumScore(question: ExamQuestion): number {
+	if (question.type === 'true_false') return TRUE_FALSE_POINTS[Math.min(question.parts.length, 4)];
+	return question.type === 'short_answer' ? 0.5 : 0.25;
+}
+
+function scoreOf(questions: HistoryDetail['questions']): number {
+	const earned = questions.reduce((sum, question) => sum + question.evaluation.score, 0);
+	const maximum = questions.reduce((sum, entry) => {
+		const question = db.questions.find((question) => question.id === entry.question_id);
+		if (!question) throw new MockError(404, 'Không tìm thấy câu hỏi.');
+		return sum + maximumScore(question);
+	}, 0);
+	return maximum ? Math.round((1000 * earned) / maximum) / 100 : 0;
+}
+
+function grade(question: ExamQuestion, answer: AnswerPayload): Evaluation {
 	if (Array.isArray(question.answer)) {
 		const given = Array.isArray(answer) ? answer : [];
 		const part_correct = question.answer.map((value, i) => given[i] === value);
 		const right = part_correct.filter(Boolean).length;
 		const correct = right === part_correct.length;
 
-		return { score: (weight * right) / part_correct.length, correct, part_correct, feedback: correct ? 'Đúng hết các ý.' : `Đúng ${right}/${part_correct.length} ý.` };
+		return { score: TRUE_FALSE_POINTS[Math.min(right, 4)], correct, part_correct, feedback: correct ? 'Đúng hết các ý.' : `Đúng ${right}/${part_correct.length} ý.` };
 	}
 
 	const correct = String(answer).trim().toUpperCase() === question.answer.toUpperCase();
 
-	return { score: correct ? weight : 0, correct, part_correct: [], feedback: correct ? 'Chính xác!' : `Chưa đúng. Đáp án là ${question.answer}.` };
+	return { score: correct ? maximumScore(question) : 0, correct, part_correct: [], feedback: correct ? 'Chính xác!' : `Chưa đúng. Đáp án là ${question.answer}.` };
 }
 
 function reward(answered: number, correct: number) {
@@ -84,7 +101,7 @@ function reward(answered: number, correct: number) {
 	const day = account.activity.find((entry) => entry.date === today());
 
 	account.xp += xp;
-	account.daily = account.daily.map((task, i) => ({ ...task, current: Math.min(task.target, task.current + (i ? correct : xp)) }));
+	account.daily = account.daily.map((task) => ({ ...task, current: Math.min(task.target, task.current + correct) }));
 
 	if (day) day.count += answered;
 	else account.activity.push({ date: today(), count: answered });
@@ -142,7 +159,7 @@ function record(exam_id: string, mode: HistoryMode, questions: HistoryDetail['qu
 		history_id: `h-${Date.now()}`,
 		exam_id,
 		mode,
-		total_score: questions.reduce((sum, question) => sum + question.evaluation.score, 0),
+		total_score: scoreOf(questions),
 		correct_count: questions.filter((question) => question.evaluation.correct).length,
 		total_questions: questions.length,
 		duration_seconds,
@@ -170,11 +187,10 @@ function questTest(id: string): Exam {
 }
 
 function submit(body: SubmitExamBody) {
-	const weight = 10 / Math.max(1, body.answers.length);
 	const questions = body.answers.map(({ question_id, student_answer }) => {
 		const question = db.questions.find((entry) => entry.id === question_id);
 		if (!question) throw new MockError(404, 'Không tìm thấy câu hỏi.');
-		return { question_id, student_answer, evaluation: grade(question, student_answer, weight) };
+		return { question_id, student_answer, evaluation: grade(question, student_answer) };
 	});
 	const mode = body.mode ?? 'exam';
 	const detail = record(body.exam_id, mode, questions, body.duration_seconds ?? null);
@@ -203,11 +219,11 @@ function check(body: { history_id: string; question_id: string; student_answer: 
 	const question = db.questions.find((entry) => entry.id === body.question_id);
 	if (!detail || !question) throw new MockError(404, 'Không tìm thấy lượt làm bài.');
 
-	const evaluation = grade(question, body.student_answer, 1);
+	const evaluation = grade(question, body.student_answer);
 	detail.questions = [...detail.questions.filter((entry) => entry.question_id !== body.question_id), { ...body, evaluation }];
 	detail.total_questions = detail.questions.length;
 	detail.correct_count = detail.questions.filter((entry) => entry.evaluation.correct).length;
-	detail.total_score = (10 * detail.correct_count) / detail.total_questions;
+	detail.total_score = scoreOf(detail.questions);
 	reward(1, evaluation.correct ? 1 : 0);
 
 	return evaluation;

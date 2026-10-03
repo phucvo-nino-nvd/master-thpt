@@ -132,8 +132,8 @@
 }
 
 .mascot.medium {
-	width: 130px;
-	height: 130px;
+	width: 220px;
+	height: 220px;
 }
 
 .welcomeCopy {
@@ -214,6 +214,11 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
+}
+
+.center > .talk {
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .bubble {
@@ -454,7 +459,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	width: 440px;
+	width: min(440px, 100%);
 	padding: 16px 18px;
 	border: 2px solid var(--line);
 	border-radius: 20px;

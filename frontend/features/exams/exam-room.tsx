@@ -197,11 +197,13 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 			if (!historyId.current) return;
 			const id = question.id;
 			let text = '';
+			setSolutions((prev) => ({ ...prev, [id]: '' }));
 			try {
 				await askSolution(historyId.current, id, (chunk) => {
 					text += chunk;
 					setSolutions((prev) => ({ ...prev, [id]: text }));
 				});
+				if (!text.trim()) throw new Error('Chưa nhận được lời giải. Thử lại nha.');
 			} catch (failure) {
 				setSolutions(({ [id]: _, ...rest }) => rest);
 				throw failure;
@@ -275,7 +277,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 									</button>
 								)}
 								{evaluation && historyId.current ? (
-									!solutions[question.id] && (
+									solutions[question.id] === undefined && (
 										<button type="button" className={`${s.tool} ${s.hint}`} onClick={solve} disabled={busy}>
 											Xem lời giải
 										</button>
@@ -368,9 +370,9 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 							</div>
 						)}
 
-						{solutions[question.id] && (
+						{solutions[question.id] !== undefined && (
 							<div className={s.solution}>
-								<MathText text={solutions[question.id]} />
+								{solutions[question.id] ? <MathText text={solutions[question.id]} /> : <span role="status">Đang viết lời giải…</span>}
 							</div>
 						)}
 

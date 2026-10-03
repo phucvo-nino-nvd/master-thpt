@@ -21,7 +21,7 @@ import re
 
 from roles.learner.service import GRADE, crawl_requests, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, quest, quest_test, skip_review, stages, stocked_count
 from roles.teacher.main import chat, explain, give_hint
-from roles.teacher.rubric import answer_of, key_evaluation
+from roles.teacher.rubric import answer_of, key_evaluation, maximum_score, score_on_ten
 from roles.teacher.schema import ChatRequest, HintRequest, SolutionRequest
 from common.schema import Evaluation
 from common.utils import normalized
@@ -584,6 +584,7 @@ def post_exam_submit(
                 submission["item"].id,
                 submission["student_answer"],
                 evaluation,
+                max_score=maximum_score(submission["item"]),
             )
     finally:
         main.grading = None
@@ -597,7 +598,10 @@ def post_exam_submit(
     return SubmitResponse(
         exam_id=request.exam_id,
         history_id=created.history_id,
-        total_score=state["total_score"],
+        total_score=score_on_ten(
+            sum(evaluation.score for evaluation in state["final_evaluations"]),
+            sum(maximum_score(submission["item"]) for submission in submissions),
+        ),
         correct_count=sum(evaluation.correct for evaluation in state["final_evaluations"]),
         per_question={
             submission["item"].id: evaluation
@@ -624,7 +628,10 @@ def post_practice_check(
     try:
         state = grade([submission], user_id=user_id) if user_id else grade([submission])
         evaluation = state.get("final_evaluations", state["evaluations"])[0]
-        save_answer(request.history_id, request.question_id, request.student_answer, evaluation)
+        save_answer(
+            request.history_id, request.question_id, request.student_answer, evaluation,
+            max_score=maximum_score(submission["item"]),
+        )
     except IntegrityError:
         raise HTTPException(status_code=404, detail="Không tìm thấy lượt làm bài.")
     finally:

@@ -76,7 +76,7 @@
 	display: flex;
 	align-items: center;
 	gap: 16px;
-	max-width: 560px;
+	max-width: 800px;
 	margin: 34px auto 26px;
 	color: var(--muted);
 	font-size: 14px;
@@ -509,7 +509,7 @@
 }
 
 .modal {
-	width: 460px;
+	width: min(460px, calc(100vw - 32px));
 	padding: 0 28px 24px;
 	overflow: hidden;
 	border-radius: 28px;
@@ -528,11 +528,7 @@
 
 .warrior {
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 380px;
-	height: 380px;
-	margin: -190px 0 0 -190px;
+	inset: 12px;
 }
 
 .burst {

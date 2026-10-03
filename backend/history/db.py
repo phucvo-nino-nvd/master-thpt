@@ -48,6 +48,7 @@ def init_db() -> None:
                 correct INTEGER NOT NULL,
                 part_correct TEXT NOT NULL DEFAULT '[]',
                 score REAL NOT NULL,
+                max_score REAL,
                 feedback TEXT NOT NULL,
                 error_type TEXT,
                 error_confidence REAL,
@@ -68,3 +69,10 @@ def init_db() -> None:
             );
             """
         )
+
+        columns = {row["name"] for row in conn.execute("PRAGMA table_info(history_question)")}
+        if "max_score" not in columns:
+            conn.execute("BEGIN IMMEDIATE")
+            columns = {row["name"] for row in conn.execute("PRAGMA table_info(history_question)")}
+            if "max_score" not in columns:
+                conn.execute("ALTER TABLE history_question ADD COLUMN max_score REAL")

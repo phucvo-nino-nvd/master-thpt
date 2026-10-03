@@ -10,6 +10,8 @@ import os
 
 from roles.crawler.schema import CrawledDoc, CrawlerRequest, CrawlerResponse
 from common.schema import Evaluation
+from knowledge.bank.main import Item, load_items
+from roles.teacher.rubric import MAX_POINTS, maximum_score, score_on_ten
 from .db import get_connection, init_db
 from .schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryQuestion, Mode
 
@@ -26,6 +28,8 @@ SELECT
     history.duration_seconds,
     history.created_at,
     COALESCE(SUM(history_question.score), 0.0) AS total_score,
+    COALESCE(SUM(history_question.max_score), 0.0) AS maximum_score,
+    json_group_array(CASE WHEN history_question.max_score IS NULL THEN history_question.question_id END) AS legacy_ids,
     COALESCE(SUM(history_question.correct), 0) AS correct_count,
     COUNT(history_question.question_id) AS total_questions
 FROM history
@@ -37,12 +41,27 @@ def encode(value: str | list[bool]) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
-def item_of(row: Row) -> HistoryItem:
+def legacy_maximums(rows: list[Row]) -> dict[str, float]:
+    ids = {qid for row in rows for qid in json.loads(row["legacy_ids"]) if qid}
+    if not ids:
+        return {}
+    return {
+        item["id"]: maximum_score(Item.model_validate(item))
+        for item in load_items()
+        if item["id"] in ids and item.get("type") in MAX_POINTS
+    }
+
+
+def item_of(row: Row, legacy: dict[str, float]) -> HistoryItem:
+    ids = [qid for qid in json.loads(row["legacy_ids"]) if qid]
+    maximum = row["maximum_score"] + sum(legacy.get(qid, 0.0) for qid in ids)
+    # Keep old results intact if a removed question has no recoverable rubric.
+    total = score_on_ten(row["total_score"], maximum) if all(qid in legacy for qid in ids) else round(row["total_score"], 2)
     return HistoryItem(
         history_id=row["id"],
         exam_id=row["exam_id"],
         mode=row["mode"],
-        total_score=round(row["total_score"], 2),
+        total_score=total,
         correct_count=row["correct_count"],
         total_questions=row["total_questions"],
         duration_seconds=row["duration_seconds"],
@@ -91,6 +110,8 @@ def save_answer(
     question_id: str,
     student_answer: str | list[bool],
     evaluation: Evaluation,
+    *,
+    max_score: float | None = None,
 ) -> None:
     init_db()
 
@@ -104,14 +125,16 @@ def save_answer(
                 correct,
                 part_correct,
                 score,
+                max_score,
                 feedback
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(history_id, question_id) DO UPDATE SET
                 student_answer = excluded.student_answer,
                 correct = excluded.correct,
                 part_correct = excluded.part_correct,
                 score = excluded.score,
+                max_score = COALESCE(excluded.max_score, history_question.max_score),
                 feedback = excluded.feedback,
                 answered_at = CURRENT_TIMESTAMP
             """,
@@ -122,6 +145,7 @@ def save_answer(
                 int(evaluation.correct),
                 encode(evaluation.part_correct),
                 evaluation.score,
+                max_score,
                 evaluation.feedback,
             ),
         )
@@ -142,7 +166,8 @@ def list_history(*, user_id: str | None = None) -> list[HistoryItem]:
 
         rows = conn.execute(query, params).fetchall()
 
-    return [item_of(row) for row in rows]
+    legacy = legacy_maximums(rows)
+    return [item_of(row, legacy) for row in rows]
 
 
 def get_history(
@@ -175,7 +200,7 @@ def get_history(
         ).fetchall()
 
     return HistoryDetail(
-        **item_of(row).model_dump(),
+        **item_of(row, legacy_maximums([row])).model_dump(),
         questions=[question_of(answer) for answer in answers],
     )
 

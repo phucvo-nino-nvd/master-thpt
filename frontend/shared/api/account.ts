@@ -1,4 +1,4 @@
-import { dayKey } from '@/lib/format';
+import { XP_PER_CORRECT, dayKey } from '@/lib/format';
 import type { Account, DocumentItem, ExamQuestion, HistoryDetail, KnowledgeNode, Quest } from './client';
 
 type MockDb = {
@@ -101,7 +101,7 @@ export const ACCOUNT: MockDb = {
 		kept_today: false,
 		week: Array.from({ length: 7 }, (_, i) => i < weekdayIndex),
 		daily: [
-			{ id: 'insight', title: 'Tích lũy 30 Điểm thấu hiểu', current: 18, target: 30 },
+			{ id: 'insight', title: `Trả lời đúng 8 câu · +${8 * XP_PER_CORRECT} XP`, current: 4, target: 8 },
 			{ id: 'combo', title: 'Đúng 3 câu Tích phân liên tiếp', current: 1, target: 3 },
 		],
 		gains: [
