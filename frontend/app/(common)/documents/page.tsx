@@ -120,7 +120,7 @@ export default function DocumentsPage() {
 
 					<div className={s.listHead}>
 						{savedOnly ? 'Đề em đã lưu' : 'Đề gần đây'}
-						<span>{savedOnly ? `${list.length} đề` : `${documents.length} đề · mới nhất`}</span>
+						{savedOnly && <span>{list.length} đề</span>}
 					</div>
 
 					{error && <div className={page.error}>{error}</div>}
