@@ -13,5 +13,4 @@ numpy
 sympy
 tqdm
 neo4j
-pytest
 fsrs

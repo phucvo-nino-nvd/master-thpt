@@ -21,6 +21,7 @@ class SubmitRequest(BaseModel):
     answers: list[Submission]
     duration_seconds: int | None = None
     mode: Mode = "exam"
+    guest: bool = False
 
 
 class SubmitResponse(BaseModel):

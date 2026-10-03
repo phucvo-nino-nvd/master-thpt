@@ -351,6 +351,13 @@ def stock_practice(concept: str, user_id: str | None = None) -> None:
 
 
 @traceable(name="[GRADING]: Submission Grading", run_type="chain")
+def grade_by_key(submissions: Sequence[dict], evaluations: list[Evaluation], *, user_id: str) -> State:
+    state = {"submissions": list(submissions), "final_evaluations": evaluations, "error_diagnoses": [None] * len(evaluations)}
+    run_learner(attempts=graded_attempts(state), user_id=user_id)
+
+    return {**state, "total_score": round(sum(evaluation.score for evaluation in evaluations), 2)}
+
+
 def grade(submissions: Sequence[dict], *, user_id: str | None = None) -> State:
     state = run(
         (teacher_agent, verifier_agent, learner_agent),

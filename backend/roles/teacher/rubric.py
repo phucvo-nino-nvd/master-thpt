@@ -136,3 +136,19 @@ def match_answer(item: Item, student_answer: str | list[bool]) -> Evaluation | N
             feedback=f"Đúng, đáp án là {key}.",
         ),
     )
+
+def key_evaluation(item: Item, student_answer: str | list[bool]) -> Evaluation | None:
+    key = answer_of(item)
+
+    if not key:
+        return None
+
+    return match_answer(item, student_answer) or apply_rubric(
+        item,
+        student_answer,
+        Evaluation(
+            score=0.0,
+            correct=False,
+            feedback="Chưa đúng hết các ý." if isinstance(key, list) else f"Chưa đúng, đáp án là {key}.",
+        ),
+    )

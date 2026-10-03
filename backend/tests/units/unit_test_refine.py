@@ -8,11 +8,12 @@ from roles.parser.main import client, question_options
 from roles.parser.refine import refine
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3]
 
 
 if __name__ == "__main__":
     pdf_path = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "sample.pdf"
+    grade = int(sys.argv[2]) if len(sys.argv) > 2 else None
 
     result = client.convert(file_path=pdf_path, options=question_options)
 
@@ -32,6 +33,7 @@ if __name__ == "__main__":
         source_url=str(pdf_path),
         title=pdf_path.stem,
         image_path_prefix="images",
+        grade=grade,
     )
 
     refined_path = document_dir / "refined.json"

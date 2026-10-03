@@ -88,7 +88,7 @@ def test_activity_uses_vietnam_dates_and_only_owners_nonempty_answers(client):
     assert data["streak"] == 3
     assert data["kept_today"] is True
     assert data["week"] == [False, False, False, True, True, True, False]
-    assert data["xp"] == 8
+    assert data["xp"] == 8 + 20
     assert data["daily"][0]["current"] == 4
     assert data["joined_at"] == "2026-10-01T16:59:00Z"
     answer("user-a", "a2", "q3", "2026-10-02 17:01:00", value=[False, True])

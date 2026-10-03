@@ -19,17 +19,17 @@ import main
 import os
 import re
 
-from roles.learner.service import crawl_requests, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, quest, quest_test, skip_review, stocked_count
+from roles.learner.service import GRADE, crawl_requests, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, quest, quest_test, skip_review, stages, stocked_count
 from roles.teacher.main import chat, explain, give_hint
-from roles.teacher.rubric import answer_of
-from roles.teacher.schema import ChatRequest, HintRequest, HintResponse, SolutionRequest, SolutionResponse
+from roles.teacher.rubric import answer_of, key_evaluation
+from roles.teacher.schema import ChatRequest, HintRequest, SolutionRequest
 from common.schema import Evaluation
 from common.utils import normalized
 from history.main import attempted_exam_ids, drop_doc, runs_of, get_answer, get_history, list_history, queued_docs, save_answer, solved_question_ids, start_history, streak
 from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRequest
 from knowledge.bank.main import GENERATED_PREFIX, Item, items_of, load_items, source_urls
 from knowledge.graph.convert import node_map
-from main import approve, grade, stock_practice
+from main import approve, grade, grade_by_key, stock_practice
 from .account import account_of, save_account
 from .schema import Account, AccountUpdate, CheckRequest, DocumentItem, GradingStatus, PracticeRequest, PracticeStatus, SubmitRequest, SubmitResponse
 
@@ -305,6 +305,10 @@ def get_document(
             else get_history(history_id) if history_id else None
         )
 
+        if reviewed and document_id not in node_map():
+            name = next((item["name"] for stage in stages() for item in [*stage["stations"], stage] if item["id"] == document_id), document_id)
+            return exam_of(document_id, name, GRADE, PRACTICE_DURATION, items_of({answer.question_id for answer in reviewed.questions}))
+
         return practice_set_of(
             document_id, user_id,
             {answer.question_id for answer in reviewed.questions} if reviewed else None,
@@ -357,14 +361,6 @@ def post_ingest_approve(
     return ingest_state()
 
 
-@app.get("/api/practice")
-def get_practice(
-    q: str = "",
-    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
-) -> list[DocumentItem]:
-    return practice_sets(creds.decoded["sub"], q)
-
-
 @app.get("/api/review")
 def get_review(
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
@@ -385,12 +381,11 @@ def get_review(
 
 @app.get("/api/quest")
 def get_quest(
-    grade: int | None = None,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> dict:
     user_id = credential_user_id(creds)
     runs = runs_of(user_id=user_id)
-    state = quest(runs, grade, user_id)
+    state = quest(runs, user_id)
     placement = state["placement"]
 
     if placement["done"] and not placement_runs(runs):
@@ -411,11 +406,10 @@ def post_quest_reset(
 
 @app.post("/api/quest/start")
 def post_quest_start(
-    grade: int,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> dict:
     user_id = credential_user_id(creds)
-    start_history(f"path:{grade}", "placement", user_id=user_id)
+    start_history(f"path:{GRADE}", "placement", user_id=user_id)
 
     return quest(runs_of(user_id=user_id), user_id=user_id)
 
@@ -464,8 +458,8 @@ def post_practice_update(
         raise HTTPException(
             status_code=409,
             detail=(
-                f'You already have {stocked_count(query, solved, user_id=user_id)} '
-                f'unanswered "{query}" questions. No new questions are needed yet.'
+                f'Đã có {stocked_count(query, solved, user_id=user_id)} câu "{query}" '
+                f'em chưa làm, chưa cần thêm câu mới.'
             ),
         )
 
@@ -478,8 +472,11 @@ def post_practice_update(
 def post_hint(
     request: HintRequest,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
-) -> HintResponse:
-    return give_hint(find_item(request.question_id), request.level, request.student_answer)
+) -> StreamingResponse:
+    return StreamingResponse(
+        sse(give_hint(find_item(request.question_id), request.level, request.student_answer)),
+        media_type="text/event-stream",
+    )
 
 
 @app.post("/api/teacher/chat")
@@ -499,7 +496,7 @@ def post_teacher_chat(
 def post_solution(
     request: SolutionRequest,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
-) -> SolutionResponse:
+) -> StreamingResponse:
     answered = get_answer(
         request.history_id,
         request.question_id,
@@ -509,7 +506,10 @@ def post_solution(
     if not answered:
         raise HTTPException(status_code=404, detail="Câu này chưa được chấm.")
 
-    return explain(find_item(request.question_id), answered.student_answer, answered.evaluation)
+    return StreamingResponse(
+        sse(explain(find_item(request.question_id), answered.student_answer, answered.evaluation)),
+        media_type="text/event-stream",
+    )
 
 
 @app.post("/api/history")
@@ -564,10 +564,13 @@ def post_exam_submit(
         for answer in request.answers
     ]
 
-    main.grading = request.exam_id
+    keyed = [key_evaluation(submission["item"], submission["student_answer"]) for submission in submissions]
+    direct = request.guest and all(keyed)
+
+    main.grading = None if direct else request.exam_id
 
     try:
-        state = grade(submissions, user_id=user_id)
+        state = grade_by_key(submissions, keyed, user_id=user_id) if direct else grade(submissions, user_id=user_id)
         created = start_history(
             request.exam_id,
             request.mode,

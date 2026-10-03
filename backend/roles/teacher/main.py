@@ -11,7 +11,7 @@ from common.utils import chat_model
 from knowledge.bank.main import Item
 from .context import CHAT_CONTEXT, EVALUATE_CONTEXT, HINT_CONTEXT, HINT_LEVELS, SOLUTION_CONTEXT
 from .rubric import answer_of, apply_rubric, settled
-from .schema import ChatMessage, HintResponse, SolutionResponse
+from .schema import ChatMessage
 
 
 TEACHER_MODEL = os.getenv("OPENROUTER_TEACHER_MODEL")
@@ -27,22 +27,10 @@ def evaluator():
     )
 
 
-@lru_cache(maxsize=1)
-def hinter():
-    return chat_model(TEACHER_MODEL).with_structured_output(
-        HintResponse,
-        method="json_schema",
-        strict=True,
-    )
-
-
-@lru_cache(maxsize=1)
-def explainer():
-    return chat_model(TEACHER_MODEL).with_structured_output(
-        SolutionResponse,
-        method="json_schema",
-        strict=True,
-    )
+def streamed(prompt: str | list[tuple[str, str]]) -> Iterator[dict]:
+    for chunk in chat_model(TEACHER_MODEL).stream(prompt):
+        if chunk.content:
+            yield {"type": "content", "content": chunk.content}
 
 
 def question_block(item: Item) -> str:
@@ -188,12 +176,8 @@ def evaluate(item: Item, student_answer: str | list[bool]) -> Evaluation:
 
 
 @traceable(name="[TEACHER]: Give hint")
-def give_hint(item: Item, level: int = 1, student_answer: str | list[bool] = "") -> HintResponse:
-    level = min(max(level, 1), MAX_HINT_LEVEL)
-
-    result = HintResponse.model_validate(hinter().invoke(build_hint_prompt(item, level, student_answer)))
-
-    return result.model_copy(update={"level": level})
+def give_hint(item: Item, level: int = 1, student_answer: str | list[bool] = "") -> Iterator[dict]:
+    yield from streamed(build_hint_prompt(item, min(max(level, 1), MAX_HINT_LEVEL), student_answer))
 
 
 @traceable(name="[TEACHER]: Chat")
@@ -209,13 +193,11 @@ def chat(
         ("user", message),
     ]
 
-    for chunk in chat_model(TEACHER_MODEL).stream(messages):
-        if chunk.content:
-            yield {"type": "content", "content": chunk.content}
+    yield {"type": "model", "content": TEACHER_MODEL}
+
+    yield from streamed(messages)
 
 
 @traceable(name="[TEACHER]: Explain solution")
-def explain(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> SolutionResponse:
-    return SolutionResponse.model_validate(
-        explainer().invoke(build_solution_prompt(item, student_answer, evaluation))
-    )
+def explain(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Iterator[dict]:
+    yield from streamed(build_solution_prompt(item, student_answer, evaluation))

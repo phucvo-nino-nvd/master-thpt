@@ -13,13 +13,14 @@ import re
 
 from roles.crawler.schema import CrawlerRequest
 from common.utils import normalized
-from knowledge.bank.main import SECTIONS
+from knowledge.bank.main import SECTIONS, Item, load_items
 from knowledge.graph.chunk import load_chunks
 from knowledge.graph.convert import load_graph, node_map
 from knowledge.graph.query import (
     get_dependents,
     get_prerequisites,
 )
+from roles.teacher.rubric import answer_of
 from .db import get_connection, init_db
 from .mastery import INITIAL_MASTERY, update_mastery
 
@@ -40,11 +41,11 @@ ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50}
 REVIEW_DAILY_LIMIT = int(os.getenv("REVIEW_DAILY_LIMIT", "20"))
 STATION_QUESTIONS = int(os.getenv("STATION_QUESTIONS", "6"))
 STAGE_QUESTIONS = int(os.getenv("STAGE_QUESTIONS", "10"))
-PLACEMENT_QUESTIONS = int(os.getenv("PLACEMENT_QUESTIONS", "2"))
+PLACEMENT_QUESTIONS = int(os.getenv("PLACEMENT_QUESTIONS", "30"))
 STATION_PASS_RATE = float(os.getenv("STATION_PASS_RATE", "0.8"))
-OBSTACLE_DEPTH = int(os.getenv("OBSTACLE_DEPTH", "3"))
 OBSTACLE_QUESTIONS = int(os.getenv("OBSTACLE_QUESTIONS", "6"))
 SKIP_QUESTIONS = int(os.getenv("SKIP_QUESTIONS", "15"))
+GRADE = 12
 SCHEDULER = Scheduler(
     desired_retention=float(os.getenv("REVIEW_RETENTION", "0.9")),
     learning_steps=(),
@@ -499,7 +500,7 @@ def pick_questions(
 
 
 def quest_groups() -> tuple[list[dict], dict[str, list[list[str]]]]:
-    path = stages()
+    path = [stage for stage in stages() if stage["stations"][0]["grade"] == GRADE]
     questions = questions_of(sorted({
         knowledge_id
         for stage in path
@@ -525,8 +526,20 @@ def quest_groups() -> tuple[list[dict], dict[str, list[list[str]]]]:
     return path, groups
 
 
+def keyed_questions() -> set[str]:
+    return {item["id"] for item in load_items() if answer_of(Item.model_validate(item))}
+
+
+def question_types() -> dict[str, str]:
+    return {item["id"]: item["type"] for item in load_items()}
+
+
+def station_questions(groups: Sequence[Sequence[str]]) -> list[str]:
+    return sorted({question_id for group in groups for question_id in group})
+
+
 def question_count(groups: Sequence[Sequence[str]]) -> int:
-    return len({question_id for group in groups for question_id in group})
+    return len(station_questions(groups))
 
 
 def obstacle_of(
@@ -548,7 +561,7 @@ def obstacle_of(
 
     chain = trail[attempts[-1]:]
 
-    if len(chain) > OBSTACLE_DEPTH or any(passed(run["answers"], knowledge_by_question) for run in chain):
+    if any(passed(run["answers"], knowledge_by_question) for run in chain):
         return None, []
 
     wrong = {
@@ -616,17 +629,10 @@ def placement_of(
     groups: Mapping[str, list[list[str]]],
     runs: Sequence[Mapping],
     knowledge_by_question: Mapping[str, list[str]],
-    grade: int | None,
 ) -> dict:
-    index = {station["id"]: position for position, station in enumerate(stations)}
-    probes = [run for run in placement_runs(runs) if run["exam_id"] in index and run["answers"]]
-    paths = [run["exam_id"] for run in placement_runs(runs) if run["exam_id"].startswith("path:")]
-
-    if probes:
-        grade = stations[index[probes[-1]["exam_id"]]]["grade"]
-
-    if paths:
-        grade = int(paths[-1].removeprefix("path:"))
+    grade = GRADE
+    probes = [run for run in placement_runs(runs) if run["exam_id"] == f"placement:{grade}" and run["answers"]]
+    paths = [run for run in placement_runs(runs) if run["exam_id"] == f"path:{grade}"]
 
     in_grade = [position for position, station in enumerate(stations) if station["grade"] == grade]
 
@@ -636,27 +642,22 @@ def placement_of(
     if paths:
         return {"done": True, "grade": grade, "probe": None, "start": in_grade[0]}
 
-    if probes:
-        run = probes[-1]
-        return {
-            "done": True,
-            "grade": grade,
-            "probe": None,
-            "start": index[run["exam_id"]] + 1 if passed(run["answers"], knowledge_by_question) else in_grade[0],
-        }
+    probeable = [position for position in in_grade if question_count(groups[stations[position]["id"]])]
 
-    probeable = [
-        position
-        for position in in_grade
-        if question_count(groups[stations[position]["id"]]) >= PLACEMENT_QUESTIONS
-    ]
+    if probes:
+        answers = probes[-1]["answers"]
+        failed = (
+            position
+            for position in probeable
+            if not passed(
+                [answer for answer in answers if answer["question_id"] in station_questions(groups[stations[position]["id"]])],
+                knowledge_by_question,
+            )
+        )
+        return {"done": True, "grade": grade, "probe": None, "start": next(failed, in_grade[-1] + 1)}
+
     if probeable:
-        return {
-            "done": False,
-            "grade": grade,
-            "probe": stations[probeable[len(probeable) // 2]]["id"],
-            "start": -1,
-        }
+        return {"done": False, "grade": grade, "probe": f"placement:{grade}", "start": -1}
 
     return {
         "done": True,
@@ -666,13 +667,13 @@ def placement_of(
     }
 
 
-def quest(runs: Sequence[Mapping], grade: int | None = None, user_id: str | None = None) -> dict:
+def quest(runs: Sequence[Mapping], user_id: str | None = None) -> dict:
     path, groups = quest_groups()
     stations = [station for stage in path for station in stage["stations"]]
     knowledge_by_question = knowledge_of(sorted({
         answer["question_id"] for run in runs for answer in run["answers"]
     }))
-    placement = placement_of(stations, groups, runs, knowledge_by_question, grade)
+    placement = placement_of(stations, groups, runs, knowledge_by_question)
     won = {
         run["exam_id"]
         for run in runs
@@ -764,12 +765,38 @@ def quest_test(item_id: str, runs: Sequence[Mapping], user_id: str | None = None
     if item_id not in allowed:
         return None
 
+    keyed = keyed_questions()
     path, groups = quest_groups()
+    groups = {
+        group_id: [kept for group in group_list if (kept := [question_id for question_id in group if question_id in keyed])]
+        for group_id, group_list in groups.items()
+    }
     last_seen = {
         answer["question_id"]: answer["answered_at"]
         for run in runs
         for answer in run["answers"]
     }
+
+    if not placement["done"]:
+        queues = [
+            (station["name"], queue)
+            for stage in path
+            for station in stage["stations"]
+            if station["grade"] == placement["grade"]
+            and (queue := station_questions(groups[station["id"]]))
+        ]
+        picked = pick_questions([queue for _, queue in queues], min(PLACEMENT_QUESTIONS, len(queues)), last_seen)
+
+        return {
+            "id": item_id,
+            "name": "Bài xác định trình độ",
+            "grade": placement["grade"],
+            "question_ids": picked,
+            "stations": {
+                question_id: next(name for name, queue in queues if question_id in queue)
+                for question_id in picked
+            },
+        }
 
     status = {
         item["id"]: item["status"]
@@ -799,13 +826,18 @@ def quest_test(item_id: str, runs: Sequence[Mapping], user_id: str | None = None
         for item in [stage, *stage["stations"]]:
             if obstacle and f"obstacle:{item['id']}" == item_id:
                 questions = questions_of(obstacle["knowledge_ids"])
+                types = question_types()
+                weak = {knowledge_id: recommend(knowledge_id, user_id=user_id or "").get("type") for knowledge_id in obstacle["knowledge_ids"]}
 
                 return {
                     "id": item_id,
                     "name": f"Chướng ngại: {item['name']}",
                     "grade": stage["stations"][0]["grade"],
                     "question_ids": pick_questions(
-                        [questions[knowledge_id] for knowledge_id in obstacle["knowledge_ids"]],
+                        [
+                            sorted((question_id for question_id in questions[knowledge_id] if question_id in keyed), key=lambda question_id: types.get(question_id) != weak[knowledge_id])
+                            for knowledge_id in obstacle["knowledge_ids"]
+                        ],
                         OBSTACLE_QUESTIONS,
                         last_seen,
                     ),
@@ -814,18 +846,11 @@ def quest_test(item_id: str, runs: Sequence[Mapping], user_id: str | None = None
             if item["id"] != item_id:
                 continue
 
-            if not placement["done"]:
-                limit = PLACEMENT_QUESTIONS
-            elif item is stage:
-                limit = STAGE_QUESTIONS
-            else:
-                limit = STATION_QUESTIONS
-
             return {
                 "id": item_id,
                 "name": item["name"],
                 "grade": stage["stations"][0]["grade"],
-                "question_ids": pick_questions(groups[item_id], limit, last_seen),
+                "question_ids": pick_questions(groups[item_id], STAGE_QUESTIONS if item is stage else STATION_QUESTIONS, last_seen),
             }
 
     return None

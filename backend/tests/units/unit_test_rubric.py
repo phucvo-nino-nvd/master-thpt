@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from roles.teacher.rubric import apply_rubric, settled
+from roles.teacher.rubric import apply_rubric, key_evaluation, settled
 from common.schema import Evaluation
 from knowledge.bank.main import Item
 
@@ -84,3 +84,12 @@ def test_choice_without_a_key_still_leaves_the_verdict_to_the_llm():
 def test_only_a_keyed_choice_skips_the_verifier():
     assert settled(KEYED_CHOICE)
     assert not settled(UNKEYED_CHOICE)
+
+
+def test_key_evaluation_grades_both_ways_without_the_llm():
+    assert key_evaluation(KEYED_CHOICE, "A").correct
+    wrong = key_evaluation(KEYED_CHOICE, "B")
+    assert not wrong.correct and wrong.score == 0.0
+    partial = key_evaluation(ITEM, [True, True])
+    assert partial.part_correct == [True, False] and not partial.correct
+    assert key_evaluation(UNKEYED_CHOICE, "A") is None

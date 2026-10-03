@@ -419,28 +419,46 @@ def quest_book(learner_db, monkeypatch):
     path = [
         {"id": "g11", "name": "Lớp 11", "stations": [station("S", 11)]},
         {"id": "g12", "name": "Lớp 12", "stations": [station(name, 12) for name in "ABCDEF"]},
+        {"id": "h12", "name": "Lớp 12 tiếp", "stations": [station("H", 12)]},
     ]
     monkeypatch.setattr(service, "stages", lambda: path)
+    monkeypatch.setattr(service, "keyed_questions", lambda: {f"{name}{number}" for name in "SABCDEH" for number in (1, 2)})
 
     with db.get_connection() as conn:
         conn.executemany(
             "INSERT INTO question_knowledge (question_id, knowledge_id) VALUES (?, ?)",
-            [(f"{name}{number}", name) for name in "SABCDE" for number in (1, 2)],
+            [(f"{name}{number}", name) for name in "SABCDEH" for number in (1, 2)],
         )
 
 
-def probe_run(name, correct):
+def placement_run(grade, **results):
     return {
         "mode": "placement",
-        "exam_id": f"s-{name}",
-        "answers": answers_of((f"{name}1", correct), (f"{name}2", correct)),
+        "exam_id": f"placement:{grade}",
+        "answers": answers_of(*((f"{name}1", correct) for name, correct in results.items())),
     }
 
 
-def test_single_placement_opens_station_without_another_probe(quest_book):
-    assert service.quest([], grade=12)["placement"]["probe"] == "s-C"
+def test_placement_asks_one_question_per_station_in_path_order(quest_book, monkeypatch):
+    assert service.quest([])["placement"]["probe"] == "placement:12"
 
-    state = service.quest([probe_run("C", True)])
+    test = service.quest_test("placement:12", [])
+    assert test["question_ids"] == ["A1", "B1", "C1", "D1", "E1", "H1"]
+    assert test["stations"] == {"A1": "A", "B1": "B", "C1": "C", "D1": "D", "E1": "E", "H1": "H"}
+
+    monkeypatch.setattr(service, "PLACEMENT_QUESTIONS", 3)
+    assert service.quest_test("placement:12", [])["question_ids"] == ["A1", "B1", "C1"]
+    assert service.quest([placement_run(12, A=1, B=1, C=1)])["placement"]["start"] == "s-D"
+
+
+def test_quest_test_skips_questions_without_an_answer_key(quest_book, monkeypatch):
+    monkeypatch.setattr(service, "keyed_questions", lambda: {"A2", "B1", "B2", "D1"})
+
+    assert service.quest_test("placement:12", [])["question_ids"] == ["A2", "B1", "D1"]
+
+
+def test_placement_starts_at_first_failed_station(quest_book):
+    state = service.quest([placement_run(12, A=1, B=1, C=1, D=0, E=1)])
     statuses = {
         item["id"]: item["status"]
         for stage in state["stages"]
@@ -450,42 +468,39 @@ def test_single_placement_opens_station_without_another_probe(quest_book):
     assert state["placement"] == {"done": True, "grade": 12, "probe": None, "start": "s-D"}
     assert state["current"] == "s-D"
     assert statuses == {
-        "g11": "passed", "s-S": "passed",
         "s-A": "passed", "s-B": "passed", "s-C": "passed", "s-D": "current",
-        "s-E": "locked", "s-F": "locked", "g12": "locked",
+        "s-E": "locked", "s-F": "locked", "g12": "locked", "s-H": "locked", "h12": "locked",
     }
 
 
-def test_single_failed_placement_opens_first_station(quest_book):
-    runs = [probe_run("C", False)]
+def test_failed_first_station_opens_first_station(quest_book):
+    runs = [placement_run(12, A=0, B=1, C=1, D=1, E=1)]
     state = service.quest(runs)
 
     assert state["placement"] == {"done": True, "grade": 12, "probe": None, "start": "s-A"}
-    assert state["current"] == "s-A"
-    assert service.quest_test("s-A", runs)["question_ids"] == ["A1", "A2"]
+    assert sorted(service.quest_test("s-A", runs)["question_ids"]) == ["A1", "A2"]
 
 
 def test_placement_uses_latest_completed_attempt(quest_book):
-    runs = [probe_run("C", True), probe_run("C", False)]
+    runs = [placement_run(12, A=1, B=1, C=1, D=1, E=1), placement_run(12, A=0)]
     assert service.quest(runs)["current"] == "s-A"
 
-    runs.append(probe_run("D", True))
-    assert service.quest(runs)["current"] == "s-E"
+    runs.append(placement_run(12, A=1, B=1, C=0))
+    assert service.quest(runs)["current"] == "s-C"
 
 
 def test_empty_placement_history_does_not_complete_test(quest_book):
-    runs = [{"mode": "placement", "exam_id": "s-C", "answers": []}]
-    assert service.quest(runs, grade=12)["placement"]["done"] is False
+    runs = [{"mode": "placement", "exam_id": "placement:12", "answers": []}]
+    assert service.quest(runs)["placement"]["done"] is False
 
 
 def test_placement_reset_forgets_probes_and_grade(quest_book):
-    runs = [probe_run("C", True), probe_run("E", False), probe_run("D", True)]
+    runs = [placement_run(12, A=1, B=1, C=1, D=1, E=0)]
     runs.append({"mode": "placement", "exam_id": "reset", "answers": []})
 
-    assert service.quest(runs)["placement"] == {"done": False, "grade": None, "probe": None, "start": None}
-    assert service.quest(runs, grade=12)["placement"]["probe"] == "s-C"
+    assert service.quest(runs)["placement"] == {"done": False, "grade": 12, "probe": "placement:12", "start": None}
 
-    runs.append(probe_run("C", False))
+    runs.append(placement_run(12, A=0))
     assert service.quest(runs)["placement"]["done"] is True
     assert service.quest(runs)["current"] == "s-A"
 
@@ -496,7 +511,7 @@ def test_failed_station_chains_obstacles_down_prerequisites(quest_book, monkeypa
         service, "recommend",
         lambda knowledge_id, user_id: {"action": "review", "knowledge_id": prerequisite[knowledge_id]},
     )
-    placed = [probe_run("C", True), probe_run("E", False), probe_run("D", True)]
+    placed = [placement_run(12, A=1, B=1, C=1, D=1, E=0)]
 
     def run(mode, exam_id, name):
         return {"mode": mode, "exam_id": exam_id, "answers": answers_of((f"{name}1", 0), (f"{name}2", 1))}
@@ -507,7 +522,7 @@ def test_failed_station_chains_obstacles_down_prerequisites(quest_book, monkeypa
     assert state["obstacle"] == {"id": "obstacle:s-E", "depth": 1, "knowledge_ids": ["D"], "total_questions": 2}
     assert state["current"] == "s-E"
     assert service.quest_test("s-E", runs) is None
-    assert service.quest_test("obstacle:s-E", runs)["question_ids"] == ["D1", "D2"]
+    assert sorted(service.quest_test("obstacle:s-E", runs)["question_ids"]) == ["D1", "D2"]
 
     runs.append(run("obstacle", "obstacle:s-E", "D"))
     assert service.quest(runs)["obstacle"]["knowledge_ids"] == ["C"]
@@ -519,50 +534,61 @@ def test_failed_station_chains_obstacles_down_prerequisites(quest_book, monkeypa
         "mode": "obstacle", "exam_id": "obstacle:s-E", "answers": answers_of(("D1", 1), ("D2", 1)),
     }]
     assert service.quest(cleared)["obstacle"] is None
-    assert service.quest_test("s-E", cleared)["question_ids"] == ["E1", "E2"]
-
-    monkeypatch.setattr(service, "OBSTACLE_DEPTH", 1)
-    assert service.quest(runs[:-1])["obstacle"] is None
+    assert sorted(service.quest_test("s-E", cleared)["question_ids"]) == ["E1", "E2"]
 
     prerequisite["E"] = "F"
-    state = service.quest(runs[:4])
+    state = service.quest(runs[:2])
     assert (state["obstacle"], state["missing"], state["current"]) == (None, ["F"], "s-E")
 
 
+def test_obstacle_puts_weak_question_type_first(quest_book, monkeypatch):
+    monkeypatch.setattr(
+        service, "recommend",
+        lambda knowledge_id, user_id: {"action": "remediate", "knowledge_id": "D", "type": "true_false"},
+    )
+    monkeypatch.setattr(service, "question_types", lambda: {"D1": "multiple_choice", "D2": "true_false"})
+    runs = [
+        placement_run(12, A=1, B=1, C=1, D=1, E=0),
+        {"mode": "checkpoint", "exam_id": "s-E", "answers": answers_of(("E1", 0), ("E2", 1))},
+    ]
+
+    assert service.quest_test("obstacle:s-E", runs)["question_ids"] == ["D2", "D1"]
+
+
 def test_skip_covers_every_concept_and_failure_needs_review(quest_book):
-    runs = [probe_run("S", False)]
-    test = service.quest_test("skip:g12", runs)
+    runs = [placement_run(12, A=0)]
+    test = service.quest_test("skip:h12", runs)
 
-    assert service.quest(runs)["current"] == "s-S"
-    assert service.quest_test("skip:g11", [probe_run("S", True)]) is None
-    assert sorted(question[0] for question in test["question_ids"]) == list("ABCDES")
+    assert service.quest(runs)["current"] == "s-A"
+    assert sorted(question[0] for question in test["question_ids"]) == list("ABCDEH")
 
-    failed = [*runs, {"mode": "skip", "exam_id": "skip:g12", "answers": answers_of(
-        ("S1", 0), ("A1", 1), ("B1", 1), ("C1", 1), ("D1", 1), ("E1", 1),
+    failed = [*runs, {"mode": "skip", "exam_id": "skip:h12", "answers": answers_of(
+        ("H1", 0), ("A1", 1), ("B1", 1), ("C1", 1), ("D1", 1), ("E1", 1),
     )}]
     state = service.quest(failed)
 
-    assert (state["obstacle"], state["current"], state["skip_review"]) == (None, "s-S", ["S"])
-    assert service.quest_test("skip:g12", failed) is None
+    assert (state["obstacle"], state["current"], state["skip_review"]) == (None, "s-A", ["H"])
+    assert service.quest_test("skip:h12", failed) is None
 
-    reviewed = [*failed, {"mode": "review", "exam_id": "review", "answers": answers_of(("S2", 1))}]
+    reviewed = [*failed, {"mode": "review", "exam_id": "review", "answers": answers_of(("H2", 1))}]
     assert service.quest(reviewed)["skip_review"] == []
-    assert service.quest_test("skip:g12", reviewed) is not None
+    assert service.quest_test("skip:h12", reviewed) is not None
 
-    won = [*runs, {"mode": "skip", "exam_id": "skip:g12", "answers": answers_of(
-        *((f"{name}1", 1) for name in "SABCDE"),
+    won = [*runs, {"mode": "skip", "exam_id": "skip:h12", "answers": answers_of(
+        *((f"{name}1", 1) for name in "ABCDEH"),
     )}]
     state = service.quest(won)
 
     assert state["current"] is None
+    assert [stage["id"] for stage in state["stages"]] == ["g12", "h12"]
     assert {stage["status"] for stage in state["stages"]} == {"passed"}
 
 
 def test_quest_test_only_opens_current_and_auto_passes_empty_station(quest_book):
-    runs = [probe_run("C", True), probe_run("E", False), probe_run("D", True)]
+    runs = [placement_run(12, A=1, B=1, C=1, D=1, E=0)]
 
     assert service.quest_test("s-F", runs) is None
-    assert service.quest_test("s-E", runs)["question_ids"] == ["E1", "E2"]
+    assert sorted(service.quest_test("s-E", runs)["question_ids"]) == ["E1", "E2"]
 
     runs.append({"mode": "checkpoint", "exam_id": "s-E", "answers": answers_of(("E1", 1), ("E2", 1))})
     state = service.quest(runs)
