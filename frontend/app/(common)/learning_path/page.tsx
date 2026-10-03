@@ -87,7 +87,7 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 		if (milestone === 'streak') localStorage.setItem(streakSeenKey(account.streak), '1');
 		setMilestone(null);
 		setWave((n) => n + 1);
-		if (from) router.replace('/knowledge_graph');
+		if (from) router.replace('/learning_path');
 	};
 
 	const onScroll = () => {

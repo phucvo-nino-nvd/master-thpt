@@ -84,7 +84,7 @@ export default function TodayPage() {
 							</div>
 						)}
 						<div className={`${s.layer} ${s.actions}`}>
-							<Link href={review && total ? examHref(review.exam_id, 'review') : '/knowledge_graph'} className={s.go}>
+							<Link href={review && total ? examHref(review.exam_id, 'review') : '/learning_path'} className={s.go}>
 								{total ? 'BẮT ĐẦU NGAY' : 'VÀO LỘ TRÌNH'}
 							</Link>
 							{total > 0 && (

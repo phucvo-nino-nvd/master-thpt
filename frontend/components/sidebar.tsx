@@ -10,7 +10,7 @@ import s from './sidebar.module.css';
 
 const NAV = [
 	{ href: '/today', label: 'Hôm nay', icon: <SunIcon /> },
-	{ href: '/knowledge_graph', label: 'Lộ trình', icon: <RouteIcon /> },
+	{ href: '/learning_path', label: 'Lộ trình', icon: <RouteIcon /> },
 	{ href: '/documents', label: 'Kho đề thi', icon: <BookIcon /> },
 	{ href: '/practice', label: 'Nhiệm vụ', icon: <ChecklistIcon /> },
 	{ href: '/history', label: 'Lịch sử', icon: <HistoryIcon /> },

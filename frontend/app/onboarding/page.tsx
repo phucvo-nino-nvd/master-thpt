@@ -12,7 +12,7 @@ import { XP_PER_CORRECT, examHref, starSeq, streakHue, streakSeenKey } from '@/l
 import { ANSWERS_KEY, ATTEMPT_KEY, readPending, writePending } from '@/lib/pending';
 import { questResultHref } from '@/lib/quest';
 import { MOCK_ACCOUNT, SubmitExamBody, startPath, submitExam } from '@/shared/api/client';
-import q from '../(common)/knowledge_graph/quest.module.css';
+import q from '../(common)/learning_path/quest.module.css';
 import s from './onboarding.module.css';
 
 const STEPS = ['welcome', 'source', 'goal', 'time', 'start', 'loading', 'streak', 'save', 'done'] as const;
@@ -173,7 +173,7 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 				reload();
 				if (attempt && response) return questResultHref(attempt.exam_id, response.correct_count, attempt.answers.length);
 				if (quest?.current) return examHref(quest.current, 'checkpoint');
-				return pending.start === 'mock' ? '/knowledge_graph' : '/today';
+				return pending.start === 'mock' ? '/learning_path' : '/today';
 			});
 		Promise.all([work, new Promise((wait) => setTimeout(wait, LOADING_MS))])
 			.then(([href]) => router.replace(href))
@@ -199,7 +199,7 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 	const gated = isQuestion(step) && !selected;
 	const questionIndex = isQuestion(step) ? QUESTIONS.indexOf(step) : -1;
 	const firstName = name.split(' ').pop();
-	const doneHref = plan.start === 'mock' ? '/knowledge_graph' : '/today';
+	const doneHref = plan.start === 'mock' ? '/learning_path' : '/today';
 	const startLabel = plan.start === 'mock' ? 'bài xác định trình độ' : 'Trạm 1';
 
 	return (

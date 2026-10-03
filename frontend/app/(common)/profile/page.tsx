@@ -110,7 +110,7 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 	const { signOut } = useClerk();
 	const router = useRouter();
 	const restart = () => {
-		if (window.confirm('Làm lại lộ trình từ đầu? Em sẽ làm lại bài xác định trình độ, lịch sử làm bài vẫn được giữ.')) void resetQuest().then(() => router.push('/knowledge_graph'));
+		if (window.confirm('Làm lại lộ trình từ đầu? Em sẽ làm lại bài xác định trình độ, lịch sử làm bài vẫn được giữ.')) void resetQuest().then(() => router.push('/learning_path'));
 	};
 	const mounted = useMounted();
 	const requested = TABS.find(([key]) => key === searchParams.tab)?.[0];

@@ -49,4 +49,4 @@ export function questStep(quest: Quest | null): QuestStep | null {
 }
 
 export const questResultHref = (examId: string, correct: number, total: number, retake = false) =>
-	`/knowledge_graph?from=${encodeURIComponent(examId)}&correct=${correct}&total=${total}${retake ? '&retake=1' : ''}`;
+	`/learning_path?from=${encodeURIComponent(examId)}&correct=${correct}&total=${total}${retake ? '&retake=1' : ''}`;

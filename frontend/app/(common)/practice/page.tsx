@@ -30,7 +30,7 @@ export default function PracticePage() {
 	const done = mounted
 		? history.find((attempt) => attempt.mode === 'review' && attempt.total_questions > 0 && dayKey(new Date(attempt.created_at)) === dayKey(now))
 		: undefined;
-	const startHref = review && total ? `${examHref(review.exam_id, 'review')}&limit=${goal}` : '/knowledge_graph';
+	const startHref = review && total ? `${examHref(review.exam_id, 'review')}&limit=${goal}` : '/learning_path';
 
 	const chooseGoal = (value: number) => {
 		setPicked(value);

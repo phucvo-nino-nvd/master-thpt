@@ -6,6 +6,9 @@ const nextConfig = {
 	experimental: {
 		proxyTimeout: 10 * 60 * 1000,
 	},
+	async redirects() {
+		return [{ source: '/knowledge_graph', destination: '/learning_path', permanent: true }];
+	},
 	async rewrites() {
 		const target = (process.env.API_PROXY_TARGET || '').replace(/\/$/, '').replace(/\/api$/, '');
 		if (!target) {
