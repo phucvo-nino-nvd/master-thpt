@@ -1,70 +1,8 @@
-import axios from 'axios';
+import axios, { AxiosAdapter } from 'axios';
 
-export type DocumentItem = {
-	id: string;
-	title?: string;
-	subject: string;
-	grade: number;
-	year?: number | null;
-	exam_type?: string;
-	type?: string;
-	source?: string;
-	total_questions?: number;
-	duration?: number;
-	is_completed?: boolean;
-	created_at?: string;
-};
-
-export type UpdatePracticeBody = {
-	request: string;
-};
-
-export type PracticeStatus = {
-	concept: string | null;
-	stage: string | null;
-	step: number;
-	total: number;
-};
-
-export type GradingStatus = {
-	exam_id: string | null;
-};
-
-export type CrawledDoc = {
-	url: string;
-	title: string;
-	score: number;
-};
-
-export type CrawlBatch = {
-	request: { grade: number; concept: string };
-	query: string;
-	docs: CrawledDoc[];
-	missing: number;
-};
-
-export type IngestState = {
-	manual: boolean;
-	batches: CrawlBatch[];
-};
+export const MOCK_ACCOUNT = process.env.MOCK_ACCOUNT?.toLowerCase() === 'true';
 
 export type QuestionType = 'multiple_choice' | 'true_false' | 'short_answer';
-
-export type QuestionOption = {
-	label: string;
-	content: string;
-};
-
-export type QuestionPart = {
-	label: string;
-	content: string;
-	solution?: string;
-};
-
-export type QuestionImage = {
-	url: string;
-	alt?: string | null;
-};
 
 export type ExamQuestion = {
 	id: string;
@@ -72,13 +10,13 @@ export type ExamQuestion = {
 	number: number;
 	type: QuestionType;
 	content: string;
-	options: QuestionOption[];
-	parts: QuestionPart[];
-	images: QuestionImage[];
+	options: { label: string; content: string }[];
+	parts: { label: string; content: string; solution?: string }[];
+	images: { url: string; alt?: string | null }[];
 	answer: string | boolean[];
 };
 
-export type DocumentDetailResponse = {
+export type Exam = {
 	exam_id: string;
 	title: string;
 	subject: string;
@@ -86,6 +24,18 @@ export type DocumentDetailResponse = {
 	total_questions: number;
 	duration_minutes: number;
 	questions: ExamQuestion[];
+};
+
+export type DocumentItem = {
+	id: string;
+	title: string;
+	subject: string;
+	grade: number;
+	year: number | null;
+	source: string;
+	total_questions: number;
+	duration: number;
+	is_completed: boolean;
 };
 
 export type AnswerPayload = string | boolean[];
@@ -97,13 +47,13 @@ export type Evaluation = {
 	feedback: string;
 };
 
+export type HistoryMode = 'exam' | 'practice' | 'placement' | 'checkpoint' | 'obstacle' | 'review' | 'skip';
+
 export type SubmitExamBody = {
 	exam_id: string;
-	answers: Array<{
-		question_id: string;
-		student_answer: AnswerPayload;
-	}>;
+	answers: { question_id: string; student_answer: AnswerPayload }[];
 	duration_seconds?: number;
+	mode?: HistoryMode;
 };
 
 export type SubmitExamResponse = {
@@ -112,24 +62,6 @@ export type SubmitExamResponse = {
 	total_score: number;
 	correct_count: number;
 	per_question: Record<string, Evaluation>;
-};
-
-export type PracticeQuestionCheckBody = {
-	history_id: string;
-	question_id: string;
-	student_answer: AnswerPayload;
-};
-
-export type HistoryMode = 'exam' | 'practice';
-
-export type CreateHistoryBody = {
-	exam_id: string;
-	mode?: HistoryMode;
-	duration_seconds?: number;
-};
-
-export type HistoryCreated = {
-	history_id: string;
 };
 
 export type HistoryItem = {
@@ -143,75 +75,94 @@ export type HistoryItem = {
 	created_at: string;
 };
 
-export type HistoryQuestion = {
-	question_id: string;
-	student_answer: AnswerPayload;
-	evaluation: Evaluation;
+export type HistoryDetail = HistoryItem & {
+	questions: { question_id: string; student_answer: AnswerPayload; evaluation: Evaluation }[];
 };
 
-export type HistoryDetailResponse = HistoryItem & {
-	questions: HistoryQuestion[];
-};
-
-export const MAX_HINT_LEVEL = 3;
-
-export type AskHintBody = {
-	question_id: string;
-	level: number;
-	student_answer?: string | boolean[];
-};
-
-export type AskHintResponse = {
-	hint: string;
-	level: number;
-};
-
-export type AskSolutionBody = {
-	history_id: string;
-	question_id: string;
-};
-
-export type AskSolutionResponse = {
-	solution: string;
-};
-
-export type KnowledgeStatus = 'weak' | 'learning' | 'mastered' | 'untouched';
-
-export type KnowledgeGraphNode = {
+export type KnowledgeNode = {
 	id: string;
 	label: string;
 	grade: number;
-	status: KnowledgeStatus;
+	status: 'weak' | 'learning' | 'mastered' | 'untouched';
 	score: number | null;
 };
 
-export type KnowledgeGraphEdge = {
-	source: string;
-	target: string;
-	relation: 'REQUIRES' | 'IS_A' | 'PART_OF' | 'SUBSET_OF';
-};
-
-export type KnowledgeGraphResponse = {
-	nodes: KnowledgeGraphNode[];
-	edges: KnowledgeGraphEdge[];
+export type KnowledgeGraph = {
+	nodes: KnowledgeNode[];
+	edges: { source: string; target: string; relation: string }[];
 	streak: number;
 };
 
-const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL?.trim() || '/api';
+export type QuestStatus = 'passed' | 'current' | 'blocked' | 'locked';
+
+export type QuestStation = {
+	id: string;
+	name: string;
+	total_questions: number;
+	status: QuestStatus;
+};
+
+export type QuestStage = QuestStation & { stations: QuestStation[] };
+
+export type Quest = {
+	placement: { done: boolean; grade: number | null; probe: string | null; start: string | null };
+	current: string | null;
+	obstacle: { id: string; depth: number; knowledge_ids: string[]; total_questions: number } | null;
+	missing: string[];
+	skip_review: string[];
+	stages: QuestStage[];
+};
+
+export type Plan = 'free' | 'pro';
+
+export type Account = {
+	name: string;
+	grade: number | null;
+	goal: number | null;
+	avatar: number;
+	plan: Plan;
+	joined_at: string | null;
+	xp: number;
+	streak: number;
+	kept_today: boolean;
+	week: boolean[];
+	daily: { id: string; title: string; current: number; target: number }[];
+	gains: { name: string; from: number; to: number }[];
+	activity: { date: string; count: number }[];
+	saved_exam_ids: string[];
+	settings: { remind: boolean; sound: boolean; minutes: number; daily_goal: number };
+};
+
+export type AccountUpdate = Partial<Omit<Account, 'settings'>> & { settings?: Partial<Account['settings']> };
+
+export type IngestSource = { url: string; title: string; score: number };
+export type IngestState = {
+	manual: boolean;
+	batches: { request: { concept: string; grade: number }; docs: IngestSource[] }[];
+};
+export type PracticeStatus = { concept: string | null; stage: string | null; step: number; total: number };
+export type ProcessingSnapshot = { ingest: IngestState; practice: PracticeStatus; grading: { exam_id: string | null } };
+
+export const MAX_HINT_LEVEL = 3;
+
+const mockAdapter: AxiosAdapter = (config) => import('./mock').then(({ handle }) => handle(config));
 
 const api = axios.create({
-	baseURL: apiBaseUrl,
+	baseURL: process.env.NEXT_PUBLIC_API_URL?.trim() || '/api',
 	timeout: 180000,
+	adapter: MOCK_ACCOUNT ? mockAdapter : undefined,
 });
 
-let clerkToken: (() => Promise<string | null>) | null = null;
+type TokenGetter = () => Promise<string | null>;
 
-export function setClerkToken(getToken: () => Promise<string | null>) {
-	clerkToken = getToken;
+let getToken: TokenGetter | null = null;
+
+export function setClerkToken(getter: TokenGetter | null) {
+	getToken = getter;
 }
 
 api.interceptors.request.use(async (config) => {
-	const token = await clerkToken?.();
+	const token = await getToken?.();
 
 	if (token) {
 		config.headers.set('Authorization', `Bearer ${token}`);
@@ -220,110 +171,50 @@ api.interceptors.request.use(async (config) => {
 	return config;
 });
 
-export async function getDocuments() {
-	const { data } = await api.get<DocumentItem[]>('/documents');
-	return data;
+const get = <T>(url: string, params?: object) => api.get<T>(url, { params }).then((res) => res.data);
+const post = <T>(url: string, body?: object) => api.post<T>(url, body).then((res) => res.data);
+
+export const getAccount = () => get<Account>('/me');
+export const updateAccount = (body: AccountUpdate) => api.patch<Account>('/me', body).then((res) => res.data);
+
+export const getDocuments = () => get<DocumentItem[]>('/documents');
+export const getDocument = (id: string, historyId?: string) =>
+	get<Exam>(`/documents/${encodeURIComponent(id)}`, historyId ? { history_id: historyId } : undefined);
+export const getReview = () => get<Exam>('/review');
+export const getKnowledgeGraph = () => get<KnowledgeGraph>('/knowledge_graph');
+
+export const getQuest = (grade?: number) => get<Quest>('/quest', grade ? { grade } : undefined);
+export const getQuestTest = (id: string) => get<Exam>(`/quest/${encodeURIComponent(id)}`);
+export const startPath = (grade: number) => api.post<Quest>('/quest/start', null, { params: { grade } }).then((res) => res.data);
+
+export const submitExam = (body: SubmitExamBody) =>
+	api.post<SubmitExamResponse>('/exams/submit', body, { timeout: 600000 }).then((response) => response.data);
+
+export async function getProcessingSnapshot(signal?: AbortSignal): Promise<ProcessingSnapshot> {
+	const config = { signal, timeout: 10000 };
+	const [ingest, practice, grading] = await Promise.all([
+		api.get<IngestState>('/ingest', config),
+		api.get<PracticeStatus>('/practice/status', config),
+		api.get<{ exam_id: string | null }>('/exams/grading-status', config),
+	]);
+	return { ingest: ingest.data, practice: practice.data, grading: grading.data };
 }
 
-export async function getKnowledgeGraph() {
-	const { data } = await api.get<KnowledgeGraphResponse>('/knowledge_graph');
-	return data;
-}
+export const setIngestMode = (manual: boolean, signal?: AbortSignal) =>
+	api.post<IngestState>('/ingest/mode', null, { params: { manual }, signal }).then((response) => response.data);
+export const approveIngestSource = (url: string, signal?: AbortSignal) =>
+	api.post<IngestState>('/ingest/approve', null, { params: { url }, signal }).then((response) => response.data);
+export const rejectIngestSource = (url: string, signal?: AbortSignal) =>
+	api.delete<IngestState>('/ingest', { params: { url }, signal }).then((response) => response.data);
+export const createHistory = (exam_id: string, mode: HistoryMode) =>
+	post<{ history_id: string }>('/history', { exam_id, mode });
+export const checkQuestion = (history_id: string, question_id: string, student_answer: AnswerPayload) =>
+	post<Evaluation>('/practice/check-question', { history_id, question_id, student_answer });
 
-export async function getPracticeExams(query = '') {
-	const { data } = await api.get<DocumentItem[]>('/practice', { params: { q: query } });
+export const getHistoryList = () => get<HistoryItem[]>('/history');
+export const getHistory = (id: string) => get<HistoryDetail>(`/history/${encodeURIComponent(id)}`);
 
-	return data;
-}
-
-export async function getPracticeStatus() {
-	const { data } = await api.get<PracticeStatus>('/practice/status');
-
-	return data;
-}
-
-export async function getIngest() {
-	const { data } = await api.get<IngestState>('/ingest');
-
-	return data;
-}
-
-export async function setIngestMode(manual: boolean) {
-	const { data } = await api.post<IngestState>('/ingest/mode', null, { params: { manual } });
-
-	return data;
-}
-
-export async function dropIngestDoc(url: string) {
-	const { data } = await api.delete<IngestState>('/ingest', { params: { url } });
-
-	return data;
-}
-
-export async function approveIngest(url: string) {
-	const { data } = await api.post<IngestState>('/ingest/approve', null, { params: { url } });
-
-	return data;
-}
-
-export async function updatePractice(body: UpdatePracticeBody) {
-	const { data } = await api.post<DocumentItem[]>('/practice/update', body);
-
-	return data;
-}
-
-export async function getDocumentDetail(id: string, historyId?: string) {
-	const { data } = await api.get<DocumentDetailResponse>(`/documents/${id}`, {
-		params: historyId ? { history_id: historyId } : undefined,
-	});
-
-	return data;
-}
-
-export async function submitExam(body: SubmitExamBody) {
-	const { data } = await api.post<SubmitExamResponse>('/exams/submit', body);
-
-	return data;
-}
-
-export async function checkPracticeQuestion(body: PracticeQuestionCheckBody) {
-	const { data } = await api.post<Evaluation>('/practice/check-question', body);
-
-	return data;
-}
-
-export async function createHistory(body: CreateHistoryBody) {
-	const { data } = await api.post<HistoryCreated>('/history', body);
-
-	return data;
-}
-
-export async function getGradingStatus() {
-	const { data } = await api.get<GradingStatus>('/exams/grading-status');
-
-	return data;
-}
-
-export async function getHistoryList() {
-	const { data } = await api.get<HistoryItem[]>('/history');
-
-	return data;
-}
-
-export async function getHistoryDetail(id: string) {
-	const { data } = await api.get<HistoryDetailResponse>(`/history/${id}`);
-
-	return data;
-}
-
-export async function askHint(body: AskHintBody) {
-	const { data } = await api.post<AskHintResponse>('/hints', body);
-
-	return data;
-}
-
-export async function askSolution(body: AskSolutionBody) {
-	const { data } = await api.post<AskSolutionResponse>('/solutions', body);
-
-	return data;
-}
+export const askHint = (question_id: string, level: number, student_answer?: AnswerPayload) =>
+	post<{ hint: string; level: number }>('/hints', { question_id, level, student_answer });
+export const askSolution = (history_id: string, question_id: string) =>
+	post<{ solution: string }>('/solutions', { history_id, question_id });

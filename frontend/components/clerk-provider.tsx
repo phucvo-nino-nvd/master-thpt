@@ -1,15 +1,13 @@
 'use client';
 
 import { ClerkProvider } from '@clerk/nextjs';
-import { useApi } from '@/lib/api';
-
+import { useSyncClerkToken } from '@/lib/api';
 
 function ClerkApiToken() {
-	useApi();
+	useSyncClerkToken();
 
 	return null;
 }
-
 
 export function ClerkProviderClient({
 	children,

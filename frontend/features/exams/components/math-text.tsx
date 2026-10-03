@@ -2,8 +2,6 @@ import Latex from 'react-latex-next';
 
 import { normalizeMath } from '@/features/exams/components/math-normalize';
 
-// All math-capable text goes through one component so we can swap rendering strategy later
-// without updating every screen individually.
 const IMAGE_RE = /^!\[([\s\S]*)\]\(([^)]+)\)$/;
 const CELL_RE = /<(td|th)([^>]*)>([\s\S]*?)<\/\1>/g;
 const BOLD_RE = /\*\*([\s\S]+?)\*\*/g;
@@ -25,7 +23,7 @@ function parseRow(line: string): Cell[] {
 	}));
 }
 
-function Rich({ text }: { text: string }) {
+export function MathInline({ text }: { text: string }) {
 	return (
 		<>
 			{normalizeMath(text).split(BOLD_RE).map((part, index) =>
@@ -92,17 +90,11 @@ export function MathText({ text }: { text: string }) {
 							<tbody>
 								{block.table.map((row, rowIndex) => (
 									<tr key={rowIndex}>
-										{row.map((cell, cellIndex) =>
-											cell.tag === 'th' ? (
-												<th key={cellIndex} rowSpan={cell.rowSpan} colSpan={cell.colSpan}>
-													<Rich text={cell.text} />
-												</th>
-											) : (
-												<td key={cellIndex} rowSpan={cell.rowSpan} colSpan={cell.colSpan}>
-													<Rich text={cell.text} />
-												</td>
-											),
-										)}
+										{row.map(({ tag: Tag, text, rowSpan, colSpan }, cellIndex) => (
+											<Tag key={cellIndex} rowSpan={rowSpan} colSpan={colSpan}>
+												<MathInline text={text} />
+											</Tag>
+										))}
 									</tr>
 								))}
 							</tbody>
@@ -110,7 +102,7 @@ export function MathText({ text }: { text: string }) {
 					);
 				}
 
-				return <Rich key={index} text={block.text.join('\n')} />;
+				return <MathInline key={index} text={block.text.join('\n')} />;
 			})}
 		</span>
 	);

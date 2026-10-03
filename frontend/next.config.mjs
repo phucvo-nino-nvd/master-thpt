@@ -1,8 +1,9 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
+	env: {
+		MOCK_ACCOUNT: process.env.MOCK_ACCOUNT ?? 'False',
+	},
 	experimental: {
-		// Grading waits on the LLM, longer than the 30s default.
 		proxyTimeout: 10 * 60 * 1000,
 	},
 	async rewrites() {

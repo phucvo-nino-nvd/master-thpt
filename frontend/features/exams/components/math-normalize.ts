@@ -15,8 +15,6 @@ const REPAIRS: [RegExp, string][] = [
 	[/\\\(([^\n]*)\)/g, '$$$1$$'],
 ];
 
-// A token joins a formula either because it can only be maths (\, ^, _, braces,
-// symbols) or because it is short enough to be notation rather than a word.
 function joins(token: string): boolean {
 	const core = token.replace(TRAILING, '');
 
