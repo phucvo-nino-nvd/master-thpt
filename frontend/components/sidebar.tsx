@@ -3,8 +3,7 @@
 import { useAuth, useClerk } from '@clerk/nextjs';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useLoad } from '@/lib/api';
-import { MOCK_ACCOUNT, getDocuments } from '@/shared/api/client';
+import { MOCK_ACCOUNT } from '@/shared/api/client';
 import { AVATARS, initialsOf, useAccount } from './account-provider';
 import { BookIcon, ChecklistIcon, ChevronUpIcon, GearIcon, HistoryIcon, LogoutIcon, RouteIcon, SunIcon, UserIcon } from './icons';
 import s from './sidebar.module.css';
@@ -12,7 +11,7 @@ import s from './sidebar.module.css';
 const NAV = [
 	{ href: '/today', label: 'Hôm nay', icon: <SunIcon /> },
 	{ href: '/knowledge_graph', label: 'Lộ trình', icon: <RouteIcon /> },
-	{ href: '/documents', label: 'Kho đề thi', icon: <BookIcon />, counted: true },
+	{ href: '/documents', label: 'Kho đề thi', icon: <BookIcon /> },
 	{ href: '/practice', label: 'Nhiệm vụ', icon: <ChecklistIcon /> },
 	{ href: '/history', label: 'Lịch sử', icon: <HistoryIcon /> },
 ];
@@ -22,7 +21,6 @@ export function Sidebar() {
 	const { signOut } = useClerk();
 	const { isLoaded, isSignedIn } = useAuth();
 	const { account, name } = useAccount();
-	const { data: documents } = useLoad(getDocuments, []);
 	const [from, to] = AVATARS[account.avatar] ?? AVATARS[0];
 
 	if (pathname.startsWith('/exams')) return null;
@@ -40,7 +38,6 @@ export function Sidebar() {
 					<Link key={item.href} href={item.href} className={`${s.link} ${active ? s.active : ''}`} aria-current={active ? 'page' : undefined}>
 						{item.icon}
 						{item.label}
-						{item.counted && documents.length > 0 && <span className={s.count}>{documents.length}</span>}
 					</Link>
 				);
 			})}

@@ -9,7 +9,7 @@ import { ArenaCard, DailyQuests, Rail, StatPills, StreakCard } from '@/component
 import { Rive } from '@/components/rive';
 import { MathInline } from '@/features/exams/components/math-text';
 import { useLoad, useMounted } from '@/lib/api';
-import { WEEKDAY_NAMES, examHref } from '@/lib/format';
+import { examHref } from '@/lib/format';
 import { questStep } from '@/lib/quest';
 import { Exam, Quest, getQuest, getReview } from '@/shared/api/client';
 import s from './today.module.css';
@@ -47,14 +47,7 @@ export default function TodayPage() {
 							<Rive src="mascot_hello" knockout fit="cover" fireonload trigger={`clic salut|${waves}`} bool="detect mouse=true" />
 						</div>
 						<div className={s.bubble}>
-							{mounted && (
-								<>
-									<div className={s.date}>
-										{WEEKDAY_NAMES[now.getDay()]} {now.getDate()}/{now.getMonth() + 1}
-									</div>
-									<div className={s.greeting}>{greetingOf(now.getHours(), name.split(' ').pop() ?? name)}</div>
-								</>
-							)}
+							{mounted && <div className={s.greeting}>{greetingOf(now.getHours(), name)}</div>}
 							<div className={s.sub}>{sub}</div>
 						</div>
 					</div>

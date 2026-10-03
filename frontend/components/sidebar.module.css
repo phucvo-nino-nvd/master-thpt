@@ -68,19 +68,6 @@
 	box-shadow: 0 4px 0 var(--lime);
 }
 
-.count {
-	margin-left: auto;
-	padding: 3px 7px;
-	border-radius: 6px;
-	background: rgba(255, 255, 255, 0.1);
-	font: 500 12px/1 var(--mono);
-}
-
-.active .count {
-	background: #ececff;
-	color: var(--indigo-2);
-}
-
 .active > svg,
 .active:hover > svg {
 	color: var(--indigo);

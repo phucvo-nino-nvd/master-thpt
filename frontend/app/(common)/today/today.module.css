@@ -45,13 +45,7 @@
 	transform: rotate(45deg);
 }
 
-.date {
-	color: var(--soft);
-	font: 500 12px/1 var(--mono);
-}
-
 .greeting {
-	margin-top: 6px;
 	font: 800 22px/1.2 var(--sans);
 	letter-spacing: -0.02em;
 }
