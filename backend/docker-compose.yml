@@ -1,9 +1,11 @@
+name: master-thpt
+
 services:
   backend:
-    build: ./backend
-    env_file: .env
+    build: .
+    env_file: ../.env
     volumes:
-      - ./artifacts:/app/artifacts
+      - ../artifacts:/app/artifacts
     restart: unless-stopped
 
   caddy:
