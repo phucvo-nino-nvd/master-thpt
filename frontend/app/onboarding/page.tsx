@@ -5,19 +5,22 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import { useAccount } from '@/components/account-provider';
-import { useProcessing } from '@/components/processing-provider';
 import { CheckIcon, ChevronLeftIcon } from '@/components/icons';
 import { Rive } from '@/components/rive';
+import { MathInline } from '@/features/exams/components/math-text';
+import { XP_PER_CORRECT, examHref, starSeq, streakHue, streakSeenKey } from '@/lib/format';
 import { ANSWERS_KEY, ATTEMPT_KEY, readPending, writePending } from '@/lib/pending';
 import { questResultHref } from '@/lib/quest';
-import { MOCK_ACCOUNT, SubmitExamBody, startPath } from '@/shared/api/client';
+import { MOCK_ACCOUNT, SubmitExamBody, startPath, submitExam } from '@/shared/api/client';
+import q from '../(common)/knowledge_graph/quest.module.css';
 import s from './onboarding.module.css';
 
-const STEPS = ['welcome', 'source', 'grade', 'goal', 'time', 'start', 'loading', 'save', 'done'] as const;
-const QUESTIONS = ['source', 'grade', 'goal', 'time', 'start'] as const;
+const STEPS = ['welcome', 'source', 'goal', 'time', 'start', 'loading', 'streak', 'save', 'done'] as const;
+const QUESTIONS = ['source', 'goal', 'time', 'start'] as const;
 const LOAD_START_MS = 60;
 const LOADING_MS = 2400;
-const DEFAULTS = { grade: '12', goal: '8', time: '20' };
+const DEFAULTS = { goal: '8', time: '20' };
+const STATION_PASS_RATE = 0.8;
 
 type Step = (typeof STEPS)[number];
 type Question = (typeof QUESTIONS)[number];
@@ -26,7 +29,6 @@ type Choice = { id: string; title: string; right?: string; sub?: string };
 
 const ASK: Record<Question, string> = {
 	source: 'Em biết tới MASTER THPT qua đâu?',
-	grade: 'Em đang học lớp mấy?',
 	goal: 'Mục tiêu điểm Toán của em là bao nhiêu?',
 	time: 'Mỗi ngày em học được bao lâu?',
 	start: 'Giờ mình bắt đầu từ đâu nè?',
@@ -39,11 +41,6 @@ const CHOICES: Record<Question, Choice[]> = {
 		{ id: 'yt', title: 'YouTube' },
 		{ id: 'ban', title: 'Bạn bè rủ' },
 		{ id: 'thay', title: 'Thầy cô, trường' },
-	],
-	grade: [
-		{ id: '10', title: 'Lớp 10', right: 'Mới vào cấp 3' },
-		{ id: '11', title: 'Lớp 11', right: 'Đang giữa chặng' },
-		{ id: '12', title: 'Lớp 12', right: 'Năm thi tốt nghiệp' },
 	],
 	goal: [
 		{ id: '6', title: '6+ điểm', right: 'Đủ đỗ' },
@@ -65,7 +62,6 @@ const CHOICES: Record<Question, Choice[]> = {
 
 const REPLY: Record<Question, (value: string) => string> = {
 	source: () => 'Ok, cảm ơn nha!',
-	grade: (value) => (value === '12' ? 'Năm cuối rồi, mình chạy nhanh nha.' : 'Còn kịp xây nền chắc.'),
 	goal: (value) => (value === '9' ? 'Tham vọng đó, thích!' : 'Mục tiêu rõ ràng, ổn áp.'),
 	time: (value) => `${value} phút mỗi ngày, chốt.`,
 	start: (value) => (value === 'path' ? 'Đi từ Trạm 1 nha.' : 'Làm vài câu để mình xếp trạm cho em.'),
@@ -115,21 +111,24 @@ const SOURCE_ICONS: Record<string, ReactNode> = {
 };
 
 const isQuestion = (step: Step): step is Question => (QUESTIONS as readonly string[]).includes(step);
-const RESUMABLE: readonly string[] = ['save', 'done'];
+const RESUMABLE: readonly string[] = ['streak', 'save', 'done'];
 
-export default function OnboardingPage({ searchParams }: { searchParams: { step?: string } }) {
+export default function OnboardingPage({ searchParams }: { searchParams: { step?: string; correct?: string; total?: string; start?: string } }) {
 	const router = useRouter();
 	const { isLoaded, isSignedIn } = useAuth();
 	const { name, save, reload } = useAccount();
-	const { submit: submitExam } = useProcessing();
 	const [index, setIndex] = useState(RESUMABLE.includes(searchParams.step ?? '') ? STEPS.indexOf(searchParams.step as Step) : 0);
 	const [answers, setAnswers] = useState<Answers>({});
 	const [loaded, setLoaded] = useState(false);
-	const [resultHref, setResultHref] = useState('');
+	const [finishing, setFinishing] = useState(searchParams.step === 'done');
 	const finished = useRef(false);
 	const step = STEPS[index];
 	const signedIn = isSignedIn || MOCK_ACCOUNT;
 	const plan = { ...DEFAULTS, ...answers };
+	const correct = Number(searchParams.correct) || 0;
+	const total = Number(searchParams.total) || 0;
+	const [scored, setScored] = useState(total === 0);
+	const pathPassed = correct >= STATION_PASS_RATE * total;
 	const go = (delta: number) => setIndex((i) => Math.max(0, Math.min(STEPS.length - 1, i + delta)));
 
 	useEffect(() => {
@@ -137,11 +136,15 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 	}, []);
 
 	useEffect(() => {
+		if (step === 'streak' && scored) localStorage.setItem(streakSeenKey(1), '1');
+	}, [step, scored]);
+
+	useEffect(() => {
 		if (step !== 'loading') return;
 		const fill = setTimeout(() => setLoaded(true), LOAD_START_MS);
 		const next = setTimeout(() => {
 			writePending(ANSWERS_KEY, answers);
-			if (signedIn) go(1);
+			if (signedIn) setIndex(STEPS.indexOf('save'));
 			else router.push(`/exams/guest?mode=${answers.start === 'mock' ? 'placement' : 'checkpoint'}`);
 		}, LOADING_MS);
 		return () => {
@@ -156,20 +159,35 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 		const pending = readPending<Answers>(ANSWERS_KEY) ?? {};
 		const attempt = readPending<SubmitExamBody>(ATTEMPT_KEY);
 		setAnswers(pending);
-		if (!pending.grade || !signedIn || finished.current) return;
+		if (finished.current) return;
+		if (!pending.start || !signedIn) return setFinishing(false);
 		finished.current = true;
-		save({ grade: Number(pending.grade), goal: Number(pending.goal), settings: { minutes: Number(pending.time) } })
+		setFinishing(true);
+		const work = save({ grade: 12, goal: Number(pending.goal), settings: { minutes: Number(pending.time) } })
 			.catch(() => {})
-			.then(() => (pending.start === 'path' ? startPath(Number(pending.grade)) : null))
-			.then(() => (attempt ? submitExam(attempt) : null))
-			.then((response) => {
+			.then(async () => {
+				const quest = pending.start === 'path' ? await startPath() : null;
+				const response = attempt ? await submitExam({ ...attempt, guest: true }) : null;
 				localStorage.removeItem(ANSWERS_KEY);
 				localStorage.removeItem(ATTEMPT_KEY);
-				if (attempt && response) setResultHref(questResultHref(attempt.exam_id, response.correct_count, attempt.answers.length));
 				reload();
-			})
-			.catch(() => {});
+				if (attempt && response) return questResultHref(attempt.exam_id, response.correct_count, attempt.answers.length);
+				if (quest?.current) return examHref(quest.current, 'checkpoint');
+				return pending.start === 'mock' ? '/knowledge_graph' : '/today';
+			});
+		Promise.all([work, new Promise((wait) => setTimeout(wait, LOADING_MS))])
+			.then(([href]) => router.replace(href))
+			.catch(() => setFinishing(false));
 	}, [step, isLoaded, signedIn]);
+
+	useEffect(() => {
+		if (!finishing) return;
+		const fill = setTimeout(() => setLoaded(true), LOAD_START_MS);
+		return () => {
+			clearTimeout(fill);
+			setLoaded(false);
+		};
+	}, [finishing]);
 
 	const createProfile = () => {
 		writePending(ANSWERS_KEY, answers);
@@ -180,8 +198,8 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 	const selected = isQuestion(step) ? answers[step] : undefined;
 	const gated = isQuestion(step) && !selected;
 	const questionIndex = isQuestion(step) ? QUESTIONS.indexOf(step) : -1;
-	const recommendMock = !!answers.grade && answers.grade !== '10';
 	const firstName = name.split(' ').pop();
+	const doneHref = plan.start === 'mock' ? '/knowledge_graph' : '/today';
 	const startLabel = plan.start === 'mock' ? 'bài xác định trình độ' : 'Trạm 1';
 
 	return (
@@ -203,7 +221,7 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 						<div className={s.brand}>
 							<span className={s.mark}>M</span>MASTER THPT
 						</div>
-						<span className={s.subject}>MÔN TOÁN · LỚP 10–12</span>
+						<span className={s.subject}>MÔN TOÁN · LỚP 12</span>
 					</div>
 					<div className={s.welcome}>
 						<div className={s.mascot}>
@@ -228,7 +246,7 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 				<div className={s.question}>
 					<div className={s.talk}>
 						<div className={`${s.mascot} ${s.small}`}>
-							<Rive src="mascot_hello" knockout fit="cover" fireonload trigger={`clic salut|${step}`} />
+							<Rive src="mascot_hello" knockout fit="cover" fireonload trigger={`clic salut|${step}`} bool="detect mouse=true" />
 						</div>
 						<div className={s.ask}>{ASK[step]}</div>
 					</div>
@@ -248,7 +266,7 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 										{choice.sub && <small>{choice.sub}</small>}
 									</span>
 									{choice.right && <span className={s.right}>{choice.right}</span>}
-									{step === 'start' && (choice.id === 'mock') === recommendMock && <span className={s.badge}>GỢI Ý CHO EM</span>}
+									{step === 'start' && choice.id === 'mock' && <span className={s.badge}>GỢI Ý CHO EM</span>}
 								</button>
 							))}
 						</div>
@@ -256,21 +274,71 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 				</div>
 			)}
 
-			{step === 'loading' && (
+			{(step === 'loading' || finishing) && (
 				<div className={s.center}>
 					<picture className={s.loadingArt}>
 						<source media="(prefers-reduced-motion: reduce)" srcSet="/illustrations/roadmap-camel-still.jpg" />
 						<img src="/illustrations/roadmap-camel.gif" alt="" width={800} height={600} />
 					</picture>
-					<div className={s.loadingTitle}>Đang xếp lộ trình Lớp {plan.grade} cho em…</div>
+					<div className={s.loadingTitle}>Đang xếp lộ trình Lớp 12 cho em…</div>
 					<div className={s.loadTrack}>
 						<span style={{ width: loaded ? '100%' : '0%' }} />
 					</div>
 					<div className={s.chips}>
-						<span className={s.chip}>Lớp {plan.grade}</span>
+						<span className={s.chip}>Lớp 12</span>
 						<span className={s.chip}>Mục tiêu {plan.goal}+</span>
 						<span className={s.chip}>{plan.time} phút / ngày</span>
 					</div>
+				</div>
+			)}
+
+			{step === 'streak' && !scored && (
+				<div className={q.overlay}>
+					<div className={q.modal}>
+						<div className={q.modalArt}>
+							<div className={q.warrior}>
+								<Rive src="warrior" fireseq={starSeq(correct, total)} />
+							</div>
+						</div>
+						<div className={q.modalKicker}>{plan.start === 'path' ? `TRẠM 1 · ${pathPassed ? 'XONG' : 'CHƯA QUA'}` : 'BÀI XÁC ĐỊNH TRÌNH ĐỘ'}</div>
+						<h2 className={q.modalTitle}>{plan.start === 'path' ? (pathPassed ? 'Qua trạm rồi nè!' : 'Suýt qua rồi!') : 'Xếp trạm xong rồi!'}</h2>
+						<p className={q.modalCopy}>
+							{plan.start === 'path'
+								? pathPassed
+									? 'Trạm 1: qua rồi. Trạm 2 mở khoá rồi.'
+									: `Cần đúng ${Math.ceil(STATION_PASS_RATE * total)}/${total} để qua Trạm 1. Làm lại sau nha.`
+								: searchParams.start
+									? <>Bắt đầu từ: <MathInline text={searchParams.start} /></>
+									: 'Vượt cả khối rồi!'}
+						</p>
+						<div className={q.tiles}>
+							<div className={q.tile}>
+								<b>{(correct * XP_PER_CORRECT).toLocaleString('vi-VN')}</b>TỔNG XP
+							</div>
+							<div className={q.tile}>
+								<b>1</b>NGÀY LIỀN
+							</div>
+							<div className={q.tile}>
+								<b>
+									{correct}/{total}
+								</b>
+								ĐÚNG
+							</div>
+						</div>
+						<button type="button" className={q.modalButton} onClick={() => setScored(true)}>
+							TIẾP TỤC
+						</button>
+					</div>
+				</div>
+			)}
+
+			{step === 'streak' && scored && (
+				<div className={s.center}>
+					<div className={s.mascot}>
+						<Rive src="streak" autobind vm="streak=1" style={{ filter: streakHue(1) }} />
+					</div>
+					<h1 className={s.doneTitle}>1 ngày liền!</h1>
+					<p className={s.doneCopy}>Ngọn lửa đầu tiên đã nhóm. Mai quay lại làm 1 câu là giữ được lửa.</p>
 				</div>
 			)}
 
@@ -278,7 +346,7 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 				<div className={s.center}>
 					<div className={s.talk}>
 						<div className={`${s.mascot} ${s.medium}`}>
-							<Rive src="mascot_hello" knockout fit="cover" fireonload trigger="clic salut|save" />
+							<Rive src="mascot_hello" knockout fit="cover" fireonload trigger="clic salut|save" bool="detect mouse=true" />
 						</div>
 						<div className={s.bubble}>
 							<div className={s.say}>Tạo hồ sơ để giữ lộ trình nha!</div>
@@ -286,7 +354,7 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 						</div>
 					</div>
 					<div className={s.checklist}>
-						{[`Lộ trình Lớp ${plan.grade} · mục tiêu ${plan.goal}+`, `${plan.time} phút mỗi ngày`, `Bắt đầu từ ${startLabel}`].map((line) => (
+						{[`Lộ trình Lớp 12 · mục tiêu ${plan.goal}+`, `${plan.time} phút mỗi ngày`, `Bắt đầu từ ${startLabel}`].map((line) => (
 							<div key={line} className={s.checkRow}>
 								<span className={s.tick}>
 									<CheckIcon size={13} strokeWidth={4} />
@@ -298,25 +366,26 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 				</div>
 			)}
 
-			{step === 'done' && (
+			{step === 'done' && !finishing && (
 				<div className={s.center}>
-					<div className={s.mascot}>
-						<Rive src="mascot_hello" knockout fit="cover" fireonload trigger="clic salut|done" />
-					</div>
+					<picture className={s.loadingArt}>
+						<source media="(prefers-reduced-motion: reduce)" srcSet="/illustrations/roadmap-camel-still.jpg" />
+						<img src="/illustrations/roadmap-camel.gif" alt="" width={800} height={600} />
+					</picture>
 					<h1 className={s.doneTitle}>Chào mừng {firstName} vào lớp!</h1>
 					<p className={s.doneCopy}>
-						Lớp {plan.grade} · mục tiêu {plan.goal}+ · {plan.time} phút mỗi ngày
+						Lớp 12 · mục tiêu {plan.goal}+ · {plan.time} phút mỗi ngày
 					</p>
-					<Link href={resultHref || (plan.start === 'mock' ? '/knowledge_graph' : '/today')} className={`${s.lime} ${s.doneButton}`}>
-						{resultHref ? 'XEM KẾT QUẢ' : plan.start === 'mock' ? 'LÀM BÀI XÁC ĐỊNH' : 'VÀO TRANG HÔM NAY'}
+					<Link href={doneHref} className={`${s.lime} ${s.doneButton}`}>
+						{plan.start === 'mock' ? 'LÀM BÀI XÁC ĐỊNH' : 'VÀO TRANG HÔM NAY'}
 					</Link>
 				</div>
 			)}
 
-			{(isQuestion(step) || step === 'save') && (
-				<footer className={`${s.footer} ${selected ? s.ok : ''}`}>
+			{(isQuestion(step) || (step === 'streak' && scored) || step === 'save') && (
+				<footer className={`${s.footer} ${selected || step === 'streak' ? s.ok : ''}`}>
 					<div className={s.footerInner}>
-						<span className={s.footNote}>{selected && isQuestion(step) ? REPLY[step](selected) : step === 'save' ? 'Mất chưa tới 1 phút.' : ''}</span>
+						<span className={s.footNote}>{selected && isQuestion(step) ? REPLY[step](selected) : step === 'save' ? 'Mất chưa tới 1 phút.' : step === 'streak' ? 'Tạo hồ sơ để giữ lửa nha.' : ''}</span>
 						<button type="button" className={s.next} disabled={gated} onClick={step === 'save' ? createProfile : () => go(1)}>
 							{step === 'start' ? 'XẾP LỘ TRÌNH' : step === 'save' ? 'TẠO HỒ SƠ' : 'TIẾP TỤC'}
 						</button>

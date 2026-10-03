@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 
 type RiveProps = {
-	src: 'mascot_hello' | 'streak' | 'bomb' | 'burst' | 'chest' | 'crab' | 'warrior';
+	src: 'mascot_hello' | 'streak' | 'bomb' | 'burst' | 'chest' | 'warrior';
 	className?: string;
 	style?: CSSProperties;
 	fit?: 'cover' | 'contain';

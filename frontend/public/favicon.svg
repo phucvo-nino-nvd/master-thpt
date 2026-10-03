@@ -1,15 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-	<rect width="32" height="32" rx="8" fill="#1b2430" />
-	<circle cx="16" cy="16" r="9" fill="none" stroke="#3a4657" stroke-width="4" />
-	<circle
-		cx="16"
-		cy="16"
-		r="9"
-		fill="none"
-		stroke="#d98e34"
-		stroke-width="4"
-		stroke-linecap="round"
-		stroke-dasharray="42 57"
-		transform="rotate(-90 16 16)"
-	/>
+	<g transform="rotate(-6 16 16)">
+		<rect x="4" y="5" width="24" height="24" rx="6" fill="#7fae14" />
+		<rect x="4" y="3" width="24" height="24" rx="6" fill="#a8dc2c" />
+		<path d="M10.5 20.5V9.5L16 15.5L21.5 9.5V20.5" fill="none" stroke="#17183a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+	</g>
 </svg>

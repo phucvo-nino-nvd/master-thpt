@@ -1,13 +1,15 @@
 'use client';
 
 import { useClerk, useUser } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { AVATARS, initialsOf, useAccount } from '@/components/account-provider';
-import { BoltIcon, CheckIcon, CrownIcon, FlameIcon, PencilIcon } from '@/components/icons';
+import { BoltIcon, FlameIcon, PencilIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
+import { Plans } from '@/components/plans';
 import { useMounted } from '@/lib/api';
 import { dayKey, weekdayIndex } from '@/lib/format';
-import { Account, AccountUpdate } from '@/shared/api/client';
+import { Account, AccountUpdate, resetQuest } from '@/shared/api/client';
 import { getApiErrorMessage } from '@/shared/api/error-message';
 import s from './profile.module.css';
 
@@ -16,13 +18,10 @@ const TABS = [
 	['plan', 'Gói học'],
 	['settings', 'Cài đặt'],
 ] as const;
-const GRADES = [10, 11, 12];
 const MINUTES = [10, 20, 30, 45];
 const LEVELS = ['#ECEDF2', '#FFD2C4', '#FF9F80', '#F2542D', '#C23B19'];
 const WEEKS = 52;
 const SAVED_FLASH_MS = 2200;
-const FREE_FEATURES = ['Lộ trình học theo khối', 'Bài luyện mỗi ngày', '5 đề thi thử mỗi tháng'];
-const PRO_FEATURES = ['Toàn bộ kho đề, không giới hạn', 'Giải thích từng bước mọi câu', 'Đấu trường thi thử mỗi tuần', 'Giữ lửa 2 lần/tháng khi lỡ nghỉ'];
 const TOGGLES = [
 	['remind', 'Nhắc học mỗi ngày', 'Gửi thông báo lúc 20:00 nếu chưa giữ lửa'],
 	['sound', 'Âm thanh khi trả lời', 'Tiếng "ting" khi đúng, "bụp" khi sai'],
@@ -109,15 +108,19 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 	const { account, name, save } = useAccount();
 	const { user } = useUser();
 	const { signOut } = useClerk();
+	const router = useRouter();
+	const restart = () => {
+		if (window.confirm('Làm lại lộ trình từ đầu? Em sẽ làm lại bài xác định trình độ, lịch sử làm bài vẫn được giữ.')) void resetQuest().then(() => router.push('/knowledge_graph'));
+	};
 	const mounted = useMounted();
 	const requested = TABS.find(([key]) => key === searchParams.tab)?.[0];
 	const [tab, setTab] = useState<Tab>(requested ?? 'profile');
-	const [draft, setDraft] = useState<{ name: string; grade: number | null; avatar: number } | null>(null);
+	const [draft, setDraft] = useState<{ name: string; avatar: number } | null>(null);
 	const [passwords, setPasswords] = useState(EMPTY_PASSWORDS);
 	const [passwordOpen, setPasswordOpen] = useState(false);
 	const [saved, setSaved] = useState(false);
 	const [error, setError] = useState('');
-	const form = draft ?? { name: account.name || name, grade: account.grade, avatar: account.avatar };
+	const form = draft ?? { name: account.name || name, avatar: account.avatar };
 	const [from, to] = AVATARS[form.avatar] ?? AVATARS[0];
 	const pro = account.plan === 'pro';
 	const joined = account.joined_at ? new Date(account.joined_at) : null;
@@ -143,6 +146,7 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 
 	const update = (patch: AccountUpdate) => attempt(() => save(patch));
 
+
 	const saveProfile = () =>
 		attempt(async () => {
 			if (passwordOpen && (passwords.current || passwords.next)) {
@@ -150,7 +154,7 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 				if (!user) throw new Error('Cần đăng nhập để đổi mật khẩu.');
 				await user.updatePassword({ currentPassword: passwords.current, newPassword: passwords.next });
 			}
-			await save({ name: form.name.trim(), grade: form.grade, avatar: form.avatar });
+			await save({ name: form.name.trim(), avatar: form.avatar });
 			setDraft(null);
 			setPasswords(EMPTY_PASSWORDS);
 			setPasswordOpen(false);
@@ -208,16 +212,6 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 									Tên hiển thị
 									<input className={s.input} value={form.name} maxLength={24} onChange={(event) => setDraft({ ...form, name: event.target.value })} />
 								</label>
-								<div className={s.field}>
-									Lớp
-									<div className={s.row}>
-										{GRADES.map((grade) => (
-											<button key={grade} type="button" className={`${s.option} ${form.grade === grade ? s.on : ''}`} onClick={() => setDraft({ ...form, grade })}>
-												Lớp {grade}
-											</button>
-										))}
-									</div>
-								</div>
 							</div>
 							<div className={s.section}>Ảnh đại diện</div>
 							<div className={s.avatars}>
@@ -254,57 +248,7 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 					</>
 				)}
 
-				{tab === 'plan' && (
-					<div className={s.plans}>
-						<article className={`${s.plan} ${pro ? '' : s.current}`}>
-							<div className={s.planHead}>
-								FREE
-								{!pro && <span className={s.using}>ĐANG DÙNG</span>}
-							</div>
-							<div className={s.price}>0đ</div>
-							<div className={s.planCopy}>Học đều mỗi ngày, không tốn đồng nào.</div>
-							<div className={s.features}>
-								{FREE_FEATURES.map((feature) => (
-									<div key={feature}>
-										<span className={s.tick}>
-											<CheckIcon size={12} strokeWidth={4} />
-										</span>
-										{feature}
-									</div>
-								))}
-							</div>
-							<button type="button" className={s.planButton} disabled={!pro} onClick={() => update({ plan: 'free' })}>
-								{pro ? 'CHUYỂN VỀ FREE' : 'GÓI HIỆN TẠI'}
-							</button>
-						</article>
-						<article className={`${s.plan} ${s.pro} ${pro ? s.current : ''}`}>
-							<div className={s.planHead}>
-								<span className={s.crown}>
-									<CrownIcon />
-									PRO
-								</span>
-								{pro && <span className={s.using}>ĐANG DÙNG</span>}
-							</div>
-							<div className={s.price}>
-								79.000đ<small>/ tháng</small>
-							</div>
-							<div className={s.planCopy}>Cho giai đoạn tăng tốc trước kỳ thi.</div>
-							<div className={s.features}>
-								{PRO_FEATURES.map((feature) => (
-									<div key={feature}>
-										<span className={s.tick}>
-											<CheckIcon size={12} strokeWidth={4} />
-										</span>
-										{feature}
-									</div>
-								))}
-							</div>
-							<button type="button" className={s.planButton} disabled={pro} onClick={() => update({ plan: 'pro' })}>
-								{pro ? 'ĐANG DÙNG PRO' : 'NÂNG CẤP PRO'}
-							</button>
-						</article>
-					</div>
-				)}
+				{tab === 'plan' && <Plans run={attempt} />}
 
 				{tab === 'settings' && (
 					<>
@@ -338,6 +282,15 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 									</button>
 								))}
 							</div>
+						</div>
+						<div className={s.logout}>
+							<div className={s.who}>
+								<div className={s.toggleTitle}>Làm lại lộ trình</div>
+								<div className={s.toggleSub}>Xếp lại trạm từ bài xác định trình độ. Lịch sử làm bài vẫn giữ nguyên.</div>
+							</div>
+							<button type="button" className={s.small} onClick={restart}>
+								LÀM LẠI
+							</button>
 						</div>
 						<div className={s.logout}>
 							<div className={s.who}>

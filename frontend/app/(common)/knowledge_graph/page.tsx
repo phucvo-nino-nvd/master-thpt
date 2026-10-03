@@ -10,15 +10,13 @@ import { ArenaCard, DailyQuests, Rail, StatPills, StreakCard } from '@/component
 import { Rive } from '@/components/rive';
 import { MathInline } from '@/features/exams/components/math-text';
 import { useLoad } from '@/lib/api';
-import { examHref } from '@/lib/format';
+import { STREAK_MILESTONES, examHref, starSeq, streakHue, streakSeenKey } from '@/lib/format';
 import { OBSTACLE_PREFIX, locate, shortName } from '@/lib/quest';
 import { Quest, QuestStation, getQuest } from '@/shared/api/client';
 import s from './quest.module.css';
 import { BombPhase, StageMap } from './stage-map';
 
-const GRADES = [10, 11, 12];
 const STAGE_COLORS = ['var(--indigo)', '#0b8447', '#087fa3', '#b95b13', '#8645c1', '#bc3f70'];
-const STREAK_MILESTONES = [7, 14, 30, 50, 100];
 const BOMB_POP_MS = 900;
 const BOMB_DRAW_MS = 1600;
 const SCROLL_SLACK = 40;
@@ -27,14 +25,10 @@ type Milestone = 'cleared' | 'goal' | 'streak' | null;
 
 type QuestPageProps = { searchParams: { from?: string; correct?: string; total?: string; retake?: string } };
 
-const seenKey = (streak: number) => `streak-milestone-${streak}`;
-
 export default function QuestPage({ searchParams }: QuestPageProps) {
 	const router = useRouter();
-	const { account, save } = useAccount();
-	const [pickedGrade, setPickedGrade] = useState<number | null>(null);
-	const grade = account.grade ?? pickedGrade;
-	const { data: quest, error } = useLoad<Quest | null>(() => getQuest(grade ?? undefined), null, [grade]);
+	const { account } = useAccount();
+	const { data: quest, error } = useLoad<Quest | null>(getQuest, null);
 	const [view, setView] = useState(0);
 	const [pop, setPop] = useState<string | null>(null);
 	const [shake, setShake] = useState({ id: '', count: 0 });
@@ -43,6 +37,7 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 	const [milestone, setMilestone] = useState<Milestone>(null);
 	const scrollRef = useRef<HTMLDivElement>(null);
 	const dividers = useRef<(HTMLDivElement | null)[]>([]);
+	const bombPlayed = useRef(false);
 	const from = searchParams.from ?? '';
 	const nextSpot = quest ? locate(quest, quest.current) : null;
 	const fromSpot = quest && from ? locate(quest, from.replace(OBSTACLE_PREFIX, '')) : null;
@@ -70,7 +65,10 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 
 		setBombPhase('pop');
 		const draw = setTimeout(() => setBombPhase('draw'), BOMB_POP_MS);
-		const shown = setTimeout(() => setBombPhase('shown'), BOMB_POP_MS + BOMB_DRAW_MS);
+		const shown = setTimeout(() => {
+			bombPlayed.current = true;
+			setBombPhase('shown');
+		}, BOMB_POP_MS + BOMB_DRAW_MS);
 
 		return () => {
 			clearTimeout(draw);
@@ -79,13 +77,14 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 	}, [fromSpot?.item.status]);
 
 	useEffect(() => {
-		if (milestone || !account.kept_today || !STREAK_MILESTONES.includes(account.streak)) return;
-		if (localStorage.getItem(seenKey(account.streak))) return;
-		setMilestone('streak');
-	}, [account.kept_today, account.streak, milestone]);
+		if (milestone || bombPhase !== 'shown' || (from && !quest) || !account.kept_today || !STREAK_MILESTONES.includes(account.streak)) return;
+		if (fromSpot?.item.status === 'blocked' && !searchParams.retake && !from.startsWith(OBSTACLE_PREFIX) && !bombPlayed.current) return;
+		if (localStorage.getItem(streakSeenKey(account.streak))) return;
+		setMilestone((current) => current ?? 'streak');
+	}, [account.kept_today, account.streak, milestone, bombPhase, quest]);
 
 	const closeMilestone = () => {
-		if (milestone === 'streak') localStorage.setItem(seenKey(account.streak), '1');
+		if (milestone === 'streak') localStorage.setItem(streakSeenKey(account.streak), '1');
 		setMilestone(null);
 		setWave((n) => n + 1);
 		if (from) router.replace('/knowledge_graph');
@@ -102,11 +101,6 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 		setWave((n) => n + 1);
 		if (item.status === 'locked') setShake((prev) => ({ id: item.id, count: prev.count + 1 }));
 		setPop(pop === item.id ? null : item.id);
-	};
-
-	const chooseGrade = (value: number) => {
-		setPickedGrade(value);
-		save({ grade: value }).catch(() => {});
 	};
 
 	const stage = quest?.stages[view];
@@ -147,24 +141,16 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 					{quest && !quest.placement.done && (
 						<div className={s.start}>
 							<div className={s.startBody}>
-								<div className={s.startKicker}>{quest.placement.grade ? 'BÀI XÁC ĐỊNH TRÌNH ĐỘ' : 'BẮT ĐẦU LỘ TRÌNH'}</div>
-								<div className={s.startTitle}>{quest.placement.grade ? `Lộ trình Lớp ${quest.placement.grade}` : 'Em đang học lớp mấy?'}</div>
+								<div className={s.startKicker}>BÀI XÁC ĐỊNH TRÌNH ĐỘ</div>
+								<div className={s.startTitle}>Lộ trình Lớp 12</div>
 								<div className={s.startCopy}>
-									{quest.placement.grade ? 'Làm vài câu để mình xếp trạm hợp sức cho em.' : 'Chọn khối để mình mở đúng lộ trình cho em.'}
+									Làm vài câu để mình xếp trạm hợp sức cho em.
 								</div>
 							</div>
-							{quest.placement.probe ? (
+							{quest.placement.probe && (
 								<Link href={examHref(quest.placement.probe, 'placement')} className={s.startGo}>
 									LÀM BÀI XÁC ĐỊNH →
 								</Link>
-							) : (
-								<div className={s.grades}>
-									{GRADES.map((value) => (
-										<button key={value} type="button" className={s.startGo} onClick={() => chooseGrade(value)}>
-											Lớp {value}
-										</button>
-									))}
-								</div>
 							)}
 						</div>
 					)}
@@ -183,6 +169,7 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 							</div>
 							<StageMap
 								stage={entry}
+								order={i}
 								obstacle={quest.obstacle}
 								bombPhase={bombPhase}
 								pop={pop}
@@ -211,7 +198,7 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 					<div className={s.modal}>
 						<div className={s.modalArt}>
 							<div className={s.warrior}>
-								<Rive src="warrior" fireseq="switch|3|650" />
+								<Rive src="warrior" fireseq={starSeq(Number(searchParams.correct), Number(searchParams.total))} />
 							</div>
 						</div>
 						<div className={s.modalKicker}>{shortName(fromSpot).toUpperCase()} · XONG</div>
@@ -250,15 +237,17 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 								</div>
 							</div>
 							<div className={`${s.medal} ${milestone === 'goal' ? '' : s.fire}`}>
-								{milestone === 'goal' ? <TrophyIcon size={88} /> : <Rive src="streak" autobind vm={`streak=${account.streak}`} />}
+								{milestone === 'goal' ? <TrophyIcon size={88} /> : <Rive src="streak" autobind vm={`streak=${account.streak}`} style={{ filter: streakHue(account.streak) }} />}
 							</div>
 						</div>
-						{milestone === 'streak' && <div className={`${s.modalKicker} ${s.fire}`}>MỐC STREAK MỚI</div>}
+						{milestone === 'streak' && <div className={`${s.modalKicker} ${s.fire}`}>{account.streak === 1 ? 'NGỌN LỬA ĐẦU TIÊN' : 'MỐC STREAK MỚI'}</div>}
 						<h2 className={s.modalTitle}>{milestone === 'goal' ? 'Về đích rồi!' : `${account.streak} ngày liền!`}</h2>
 						<p className={s.modalCopy}>
 							<MathInline text={milestone === 'goal'
 								? `Xong ${fromSpot?.stage.name ?? 'chặng này'}. Cúp chặng về tủ rồi nha.`
-								: 'Không bỏ buổi nào luôn. Giữ nhịp này tới ngày thi là ngon.'} />
+								: account.streak === 1
+									? 'Lửa đã nhóm rồi nè. Mai quay lại làm 1 câu là giữ được lửa.'
+									: 'Không bỏ buổi nào luôn. Giữ nhịp này tới ngày thi là ngon.'} />
 						</p>
 						<button type="button" className={`${s.modalButton} ${milestone === 'goal' ? s.gold : s.fire}`} onClick={closeMilestone}>
 							{milestone === 'goal' ? 'NHẬN CÚP' : 'GIỮ LỬA TIẾP'}

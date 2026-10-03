@@ -6,12 +6,13 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { useAccount } from '@/components/account-provider';
 import { useProcessing } from '@/components/processing-provider';
-import { ChecklistIcon, LogoutIcon } from '@/components/icons';
+import { ChecklistIcon, ChevronLeftIcon, LogoutIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
 import { score } from '@/lib/format';
 import { ATTEMPT_KEY, writePending } from '@/lib/pending';
 import { questResultHref } from '@/lib/quest';
 import {
+	ChatMessage,
 	Evaluation,
 	Exam,
 	ExamQuestion,
@@ -27,7 +28,9 @@ import {
 } from '@/shared/api/client';
 import { getApiErrorMessage } from '@/shared/api/error-message';
 import { MathInline, MathText } from './components/math-text';
-import { AnswerValue, isAnswered, toApiAnswer } from './lib/helpers';
+import { AnswerValue, isAnswered, isCorrect, toApiAnswer } from './lib/helpers';
+import { Tutor } from './tutor';
+import { Plans } from '@/components/plans';
 import s from './exam-room.module.css';
 
 const PRACTICE_MODES: HistoryMode[] = ['review', 'practice'];
@@ -54,7 +57,7 @@ type ExamRoomProps = { exam: Exam; mode: HistoryMode; review?: HistoryDetail; re
 
 export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 	const router = useRouter();
-	const { reload } = useAccount();
+	const { account, reload } = useAccount();
 	const { submit: submitExam } = useProcessing();
 	const { isSignedIn } = useAuth();
 	const guest = !isSignedIn && !MOCK_ACCOUNT;
@@ -72,6 +75,8 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 	const [flags, setFlags] = useState<Record<string, boolean>>({});
 	const [hints, setHints] = useState<Record<string, string[]>>({});
 	const [solutions, setSolutions] = useState<Record<string, string>>({});
+	const [threads, setThreads] = useState<Record<string, ChatMessage[]>>({});
+	const [tutorOpen, setTutorOpen] = useState(false);
 	const [busy, setBusy] = useState(false);
 	const [error, setError] = useState('');
 	const [result, setResult] = useState<SubmitExamResponse | null>(null);
@@ -133,7 +138,9 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 			};
 			if (guest && QUEST_MODES.includes(mode)) {
 				writePending(ATTEMPT_KEY, body);
-				router.push('/onboarding?step=save');
+				const wrong = questions.filter((entry, i) => !isCorrect(entry, body.answers[i].student_answer));
+				const start = mode === 'placement' ? `&start=${encodeURIComponent(wrong[0]?.station ?? '')}` : '';
+				router.push(`/onboarding?step=streak&correct=${questions.length - wrong.length}&total=${questions.length}${start}`);
 				return;
 			}
 			const response = await submitExam(body);
@@ -173,15 +180,32 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 
 	const hint = () =>
 		run(async () => {
-			const response = await askHint(question.id, hintLevel + 1, answer === undefined ? undefined : toApiAnswer(answer));
-			setHints((prev) => ({ ...prev, [question.id]: [...(prev[question.id] ?? []), response.hint] }));
+			const id = question.id;
+			let text = '';
+			const write = (value?: string) => setHints((prev) => ({ ...prev, [id]: [...(prev[id] ?? []).slice(0, hintLevel), ...(value === undefined ? [] : [value])] }));
+			write('');
+			try {
+				await askHint(id, hintLevel + 1, answer === undefined ? undefined : toApiAnswer(answer), (chunk) => write((text += chunk)));
+			} catch (failure) {
+				write();
+				throw failure;
+			}
 		}, 'Chưa lấy được gợi ý.');
 
 	const solve = () =>
 		run(async () => {
 			if (!historyId.current) return;
-			const response = await askSolution(historyId.current, question.id);
-			setSolutions((prev) => ({ ...prev, [question.id]: response.solution }));
+			const id = question.id;
+			let text = '';
+			try {
+				await askSolution(historyId.current, id, (chunk) => {
+					text += chunk;
+					setSolutions((prev) => ({ ...prev, [id]: text }));
+				});
+			} catch (failure) {
+				setSolutions(({ [id]: _, ...rest }) => rest);
+				throw failure;
+			}
 		}, 'Chưa lấy được lời giải.');
 
 	const next = () => setIndex((i) => Math.min(last, i + 1));
@@ -205,7 +229,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 			<div className={s.inner}>
 				<header className={s.topbar}>
 					<button type="button" className={s.back} onClick={leave} disabled={busy} aria-label="Quay lại">
-						‹
+						<ChevronLeftIcon size={20} strokeWidth={3} />
 					</button>
 					<div>
 						<h1 className={s.title}><MathInline text={exam.title} /></h1>
@@ -245,10 +269,17 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 										{flags[question.id] ? 'Bỏ đánh dấu' : 'Đánh dấu câu'}
 									</button>
 								)}
-								{evaluation && historyId.current ? (
-									<button type="button" className={`${s.tool} ${s.hint}`} onClick={solve} disabled={busy || !!solutions[question.id]}>
-										Xem lời giải
+								{readOnly && (
+									<button type="button" className={`${s.tool} ${s.ask}`} onClick={() => setTutorOpen(true)}>
+										{account.plan === 'pro' ? 'Hỏi trợ lý' : 'Hỏi trợ lý · PRO'}
 									</button>
+								)}
+								{evaluation && historyId.current ? (
+									!solutions[question.id] && (
+										<button type="button" className={`${s.tool} ${s.hint}`} onClick={solve} disabled={busy}>
+											Xem lời giải
+										</button>
+									)
 								) : (
 									!readOnly &&
 									!guest && (
@@ -464,6 +495,29 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 						</div>
 					</div>
 				</div>
+			)}
+			{tutorOpen && account.plan !== 'pro' && (
+				<div className={s.planOverlay} onClick={() => setTutorOpen(false)}>
+					<div className={s.planSheet} role="dialog" aria-modal="true" aria-labelledby="plan-title" onClick={(event) => event.stopPropagation()}>
+						<div className={s.planHead}>
+							<h2 id="plan-title">Hỏi trợ lý dành cho gói Pro</h2>
+							<button type="button" className={s.planClose} onClick={() => setTutorOpen(false)} aria-label="Đóng">
+								✕
+							</button>
+						</div>
+						<Plans run={(task) => run(task, 'Chưa đổi được gói.')} onCheckout={() => setTutorOpen(false)} />
+					</div>
+				</div>
+			)}
+			{tutorOpen && account.plan === 'pro' && (
+				<Tutor
+					question={question}
+					number={index + 1}
+					answer={answer === undefined ? undefined : toApiAnswer(answer)}
+					thread={threads[question.id] ?? []}
+					onThread={(thread) => setThreads((prev) => ({ ...prev, [question.id]: thread }))}
+					onClose={() => setTutorOpen(false)}
+				/>
 			)}
 		</main>
 	);

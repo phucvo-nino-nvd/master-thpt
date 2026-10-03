@@ -1,7 +1,7 @@
 import { dayKey } from '@/lib/format';
 import type { Account, DocumentItem, ExamQuestion, HistoryDetail, KnowledgeNode, Quest } from './client';
 
-export type MockDb = {
+type MockDb = {
 	account: Account;
 	documents: DocumentItem[];
 	questions: ExamQuestion[];

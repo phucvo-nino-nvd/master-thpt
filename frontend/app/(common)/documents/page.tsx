@@ -7,7 +7,6 @@ import { BookmarkIcon, SearchIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
 import card from '@/components/exam-card.module.css';
 import { DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
-import { Rive } from '@/components/rive';
 import { useLoad } from '@/lib/api';
 import { DocKind, docKind, examHref, score } from '@/lib/format';
 import { KnowledgeGraph, getDocuments, getHistoryList, getKnowledgeGraph } from '@/shared/api/client';
@@ -162,9 +161,6 @@ export default function DocumentsPage() {
 
 						{list.length === 0 && (
 							<div className={page.empty}>
-								<div className={s.crab}>
-									<Rive src="crab" knockout fit="cover" bool="Walk=true" />
-								</div>
 								{savedOnly ? 'Chưa lưu đề nào. Bấm biểu tượng dấu trang trên đề để lưu nha.' : 'Chưa có đề nào khớp. Thử bộ lọc khác nha.'}
 							</div>
 						)}

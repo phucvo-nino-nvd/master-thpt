@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { score } from '@/lib/format';
 import { pendingSources, processingPhase, sourceHref } from '@/lib/processing';
 import { MOCK_ACCOUNT } from '@/shared/api/client';
-import { ChevronUpIcon } from './icons';
+import { ChevronUpIcon, SearchIcon } from './icons';
 import { useProcessing } from './processing-provider';
 import s from './processing-widget.module.css';
 
@@ -16,10 +16,12 @@ const PHASES = {
 } as const;
 
 export function ProcessingWidget() {
-	const { snapshot, submitting, result, error, busy, remaining, enabled, refresh, changeMode, process } = useProcessing();
+	const { snapshot, submitting, result, error, busy, remaining, enabled, refresh, changeMode, process, request } = useProcessing();
 	const pathname = usePathname();
 	const [open, setOpen] = useState(false);
 	const [selected, setSelected] = useState<string[]>([]);
+	const [searching, setSearching] = useState(false);
+	const [query, setQuery] = useState('');
 	const root = useRef<HTMLDivElement>(null);
 	const toggle = useRef<HTMLButtonElement>(null);
 	const all = useRef<HTMLInputElement>(null);
@@ -71,7 +73,12 @@ export function ProcessingWidget() {
 				<div className={s.segment} role="group" aria-label="Chế độ nạp đề">
 					<button aria-pressed={snapshot?.ingest.manual === true} disabled={busy || !snapshot} onClick={() => void changeMode(true)}>Thủ công</button>
 					<button aria-pressed={snapshot?.ingest.manual === false} disabled={busy || !snapshot} onClick={() => void changeMode(false)}>Tự động</button>
+					<button className={s.searchToggle} aria-pressed={searching} aria-label="Tìm đề theo chủ đề" onClick={() => setSearching(!searching)}><SearchIcon size={14} /></button>
 				</div>
+				{searching && <form className={s.search} onSubmit={(event) => { event.preventDefault(); if (query.trim()) void request(query.trim()).then(() => setQuery('')); }}>
+					<input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Chủ đề cần thêm câu, vd: tích phân" aria-label="Chủ đề cần thêm câu" autoFocus />
+					<button type="submit" disabled={busy || !query.trim() || !!snapshot?.practice.stage}>Tìm</button>
+				</form>}
 				{sources.length > 0 && <div className={s.sources}>
 					<div className={s.sourceHead}><strong>{sources.length} nguồn</strong><label className={s.selectAll}>
 						<input ref={all} type="checkbox" className={s.checkbox} checked={urls.length === sources.length} disabled={busy} onChange={(event) => setSelected(event.target.checked ? sources.map((source) => source.url) : [])} />Tất cả
@@ -96,7 +103,7 @@ export function ProcessingWidget() {
 					<svg viewBox="0 0 38 38"><circle className={s.track} cx="19" cy="19" r="16" /><circle className={s.fill} cx="19" cy="19" r="16" strokeDasharray="100.531" strokeDashoffset={100.531 * (1 - (step < 0 ? result ? 1 : 0 : (step + 1) / 4))} /></svg>
 					<span>{error ? '!' : step < 0 ? result ? '✓' : '·' : `${step + 1}/4`}</span>
 				</span>
-				<span className={s.dockBody}><strong>{title}</strong><small>{note}</small></span><ChevronUpIcon size={32} className={`${s.chevron} ${open ? s.open : ''}`} />
+				<span className={s.dockBody}><strong>{title}</strong><small>{note}</small></span><ChevronUpIcon size={28} className={`${s.chevron} ${open ? s.open : ''}`} />
 			</button>
 			<span className={s.srOnly} role="status" aria-live="polite">{title}{step >= 0 ? ` · Bước ${step + 1} trên 4` : ''}</span>
 		</div>

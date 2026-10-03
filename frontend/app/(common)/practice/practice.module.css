@@ -153,13 +153,6 @@
 	box-shadow: 0 5px 0 var(--green-soft);
 }
 
-.crab {
-	width: 120px;
-	height: 96px;
-	flex: none;
-	margin: -14px -10px -14px -14px;
-}
-
 .doneBody {
 	flex: 1;
 	min-width: 0;

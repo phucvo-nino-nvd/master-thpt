@@ -24,7 +24,7 @@ const mono = DM_Mono({
 export const metadata: Metadata = {
 	title: 'MASTER THPT',
 	description: 'Luyện thi THPT môn Toán mỗi ngày một chút',
-	icons: { icon: '/favicon.svg' },
+	icons: { icon: '/favicon.svg?v=2' },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

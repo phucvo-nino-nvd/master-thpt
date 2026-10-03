@@ -1,8 +1,8 @@
 import type { HistoryMode, Quest, QuestStage, QuestStation } from '@/shared/api/client';
 
-export type QuestSpot = { stage: QuestStage; index: number; item: QuestStation };
+type QuestSpot = { stage: QuestStage; index: number; item: QuestStation };
 
-export type QuestStep = { id: string; title: string; short: string; mode: HistoryMode; bomb: boolean; total: number };
+type QuestStep = { id: string; title: string; short: string; mode: HistoryMode; bomb: boolean; total: number };
 
 export const OBSTACLE_PREFIX = 'obstacle:';
 

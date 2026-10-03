@@ -177,15 +177,23 @@
 	color: #704200;
 }
 
+.tool.ask {
+	border-color: #c9c8ef;
+	background: var(--indigo-soft);
+	box-shadow: 0 3px 0 #c9c8ef;
+	color: var(--indigo);
+}
+
 .tool:disabled {
 	opacity: 0.5;
 }
 
 .prompt {
 	margin: 24px 0 20px;
-	font-size: 20px;
-	font-weight: 400;
-	line-height: 1.5;
+	color: var(--ink);
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.6;
 	letter-spacing: normal;
 }
 
@@ -246,8 +254,8 @@
 }
 
 .optionCopy {
-	font-size: 18px;
-	font-weight: 400;
+	font-size: 16px;
+	font-weight: 600;
 	line-height: 1.4;
 }
 
@@ -383,8 +391,10 @@
 .solution {
 	margin-top: 10px;
 	padding: 12px 16px;
+	border: 2px solid var(--gold-soft);
 	border-radius: 16px;
-	background: var(--line-2);
+	background: #fff8dc;
+	box-shadow: 0 3px 0 var(--gold-soft);
 	color: var(--ink-2);
 	font-size: 14px;
 	line-height: 1.6;
@@ -726,4 +736,48 @@
 	.layout {
 		grid-template-columns: 1fr;
 	}
+}
+
+.planOverlay {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	display: grid;
+	place-items: center;
+	padding: 16px;
+	background: rgba(23, 24, 58, 0.55);
+	backdrop-filter: blur(6px);
+}
+
+.planSheet {
+	width: min(760px, 100%);
+	max-height: 100%;
+	overflow-y: auto;
+	padding: 22px 24px 28px;
+	border-radius: 28px;
+	background: var(--page);
+	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.planHead {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 18px;
+}
+
+.planHead h2 {
+	font: 800 22px/1.2 var(--sans);
+	letter-spacing: -0.03em;
+}
+
+.planClose {
+	width: 36px;
+	height: 36px;
+	border: 2px solid var(--line);
+	border-radius: 12px;
+	background: #fff;
+	color: var(--muted);
+	font-weight: 800;
 }

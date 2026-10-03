@@ -7,7 +7,7 @@ import page from '@/components/page.module.css';
 import card from '@/components/exam-card.module.css';
 import { Rail } from '@/components/rail';
 import { useLoad, useMounted } from '@/lib/api';
-import { WEEKDAYS, dayKey, score, weekdayIndex } from '@/lib/format';
+import { STREAK_MILESTONES, WEEKDAYS, dayKey, score, weekdayIndex } from '@/lib/format';
 import { OBSTACLE_PREFIX, fullName, locate } from '@/lib/quest';
 import { HistoryMode, Quest, getDocuments, getHistoryList, getQuest } from '@/shared/api/client';
 import s from './history.module.css';
@@ -34,12 +34,16 @@ const RANGES: [number, string][] = [
 	[7, '7 ngày gần nhất'],
 	[0, 'Tất cả'],
 ];
-const STREAK_MILESTONES = [7, 14, 30, 50, 100];
 const DAY_MS = 86400000;
 const HIGH_SCORE = 8;
 const LOW_SCORE = 7;
 
 const pad = (n: number) => String(n).padStart(2, '0');
+const toneOf = (value: number) => (value >= HIGH_SCORE ? s.hi : value < LOW_SCORE ? s.lo : '');
+const stamp = (iso: string) => {
+	const date = new Date(iso);
+	return `${pad(date.getDate())}/${pad(date.getMonth() + 1)} · ${pad(date.getHours())}:${pad(date.getMinutes())}`;
+};
 
 function Month({ learned, today }: { learned: Set<string>; today: Date }) {
 	const year = today.getFullYear();
@@ -116,7 +120,7 @@ export default function HistoryPage() {
 	const recent = history.filter((attempt) => attempt.total_questions > 0 && (!days || Date.now() - new Date(attempt.created_at).getTime() <= days * DAY_MS));
 	const list = recent.filter((attempt) => kind === 'all' || KIND_OF[attempt.mode] === kind);
 	const scores = list.map((attempt) => attempt.total_score);
-	const attempts = (examId: string) => history.filter((attempt) => attempt.exam_id === examId).length;
+	const groups = [...Map.groupBy(list, (attempt) => attempt.exam_id).values()];
 	const learned = new Set([...history.map((attempt) => dayKey(new Date(attempt.created_at))), ...account.activity.map((day) => day.date)]);
 	const milestone = STREAK_MILESTONES.find((value) => value > account.streak) ?? account.streak;
 
@@ -143,7 +147,7 @@ export default function HistoryPage() {
 							điểm trung bình
 						</div>
 						<div className={s.stat}>
-							<b>{list.length}</b>
+							<b>{groups.length}</b>
 							bài đã làm
 						</div>
 						<div className={`${s.stat} ${s.best}`}>
@@ -156,7 +160,7 @@ export default function HistoryPage() {
 						{FILTERS.map((key) => (
 							<button key={key} type="button" className={`${page.chip} ${kind === key ? `${page.on} ${s.on}` : ''}`} onClick={() => setKind(key)}>
 								{key === 'all' ? 'Tất cả' : LABELS[key]}
-								<span className={s.count}>{key === 'all' ? recent.length : recent.filter((attempt) => KIND_OF[attempt.mode] === key).length}</span>
+								<span className={s.count}>{new Set(recent.filter((attempt) => key === 'all' || KIND_OF[attempt.mode] === key).map((attempt) => attempt.exam_id)).size}</span>
 							</button>
 						))}
 					</div>
@@ -164,17 +168,16 @@ export default function HistoryPage() {
 					{error && <div className={page.error}>{error}</div>}
 
 					<div className={s.list}>
-						{list.map((attempt) => {
+						{groups.map(([attempt, ...older]) => {
 							const type = KIND_OF[attempt.mode];
-							const date = new Date(attempt.created_at);
-							const tone = attempt.total_score >= HIGH_SCORE ? s.hi : attempt.total_score < LOW_SCORE ? s.lo : '';
+							const tone = toneOf(attempt.total_score);
 
 							return (
-								<article key={attempt.history_id} className={`${card.card} ${s[type]}`}>
+								<article key={attempt.exam_id} className={`${card.card} ${s[type]}`}>
 									<div className={s.itemBody}>
 										<div className={s.meta}>
 											<span className={s.badge}>{LABELS[type]}</span>
-											{pad(date.getDate())}/{pad(date.getMonth() + 1)} · {pad(date.getHours())}:{pad(date.getMinutes())}
+											{stamp(attempt.created_at)}
 										</div>
 										<h3 className={s.itemTitle}>{titleOf(attempt.exam_id)}</h3>
 										<div className={s.itemMeta}>
@@ -183,8 +186,18 @@ export default function HistoryPage() {
 											</span>
 											<span className={s.detail}>{attempt.correct_count}/{attempt.total_questions} câu đúng</span>
 											{attempt.duration_seconds ? <span className={s.detail}>{Math.max(1, Math.round(attempt.duration_seconds / 60))} phút</span> : null}
-											<span className={s.detail}>{attempts(attempt.exam_id)} lần làm</span>
+											<span className={s.detail}>{older.length + 1} lần làm</span>
 										</div>
+										{older.length > 0 && (
+											<div className={s.older}>
+												Lượt trước
+												{older.map((past) => (
+													<Link key={past.history_id} href={`/history/${past.history_id}`} className={`${s.score} ${toneOf(past.total_score)}`} title={stamp(past.created_at)}>
+														<b>{score(past.total_score)}</b>
+													</Link>
+												))}
+											</div>
+										)}
 									</div>
 									<Link href={`/history/${attempt.history_id}`} className={`${card.action} ${s.review}`} aria-label={`Xem lại ${titleOf(attempt.exam_id)}`}>
 										XEM LẠI

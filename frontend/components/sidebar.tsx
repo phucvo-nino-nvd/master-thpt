@@ -6,14 +6,13 @@ import { usePathname } from 'next/navigation';
 import { useLoad } from '@/lib/api';
 import { MOCK_ACCOUNT, getDocuments } from '@/shared/api/client';
 import { AVATARS, initialsOf, useAccount } from './account-provider';
-import { BookIcon, ChecklistIcon, ChevronUpIcon, GearIcon, HistoryIcon, LogoutIcon, PencilIcon, RouteIcon, SunIcon, UserIcon } from './icons';
+import { BookIcon, ChecklistIcon, ChevronUpIcon, GearIcon, HistoryIcon, LogoutIcon, RouteIcon, SunIcon, UserIcon } from './icons';
 import s from './sidebar.module.css';
 
 const NAV = [
 	{ href: '/today', label: 'Hôm nay', icon: <SunIcon /> },
 	{ href: '/knowledge_graph', label: 'Lộ trình', icon: <RouteIcon /> },
 	{ href: '/documents', label: 'Kho đề thi', icon: <BookIcon />, counted: true },
-	{ href: '/exams', label: 'Làm bài', icon: <PencilIcon size={20} />, examOnly: true },
 	{ href: '/practice', label: 'Nhiệm vụ', icon: <ChecklistIcon /> },
 	{ href: '/history', label: 'Lịch sử', icon: <HistoryIcon /> },
 ];
@@ -26,21 +25,18 @@ export function Sidebar() {
 	const { data: documents } = useLoad(getDocuments, []);
 	const [from, to] = AVATARS[account.avatar] ?? AVATARS[0];
 
+	if (pathname.startsWith('/exams')) return null;
+
 	return (
 		<nav className={s.nav}>
 			<div className={s.brand}>
 				<span className={s.mark}>M</span>MASTER THPT
 			</div>
 
-			{NAV.filter((item) => !item.examOnly || pathname.startsWith('/exams')).map((item) => {
+			{NAV.map((item) => {
 				const active = pathname.startsWith(item.href);
 
-				return item.examOnly ? (
-					<span key={item.href} className={`${s.link} ${s.active}`} aria-current="page">
-						{item.icon}
-						{item.label}
-					</span>
-				) : (
+				return (
 					<Link key={item.href} href={item.href} className={`${s.link} ${active ? s.active : ''}`} aria-current={active ? 'page' : undefined}>
 						{item.icon}
 						{item.label}

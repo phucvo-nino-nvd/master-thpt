@@ -14,8 +14,7 @@ const TOP = 70;
 const SWING = 110;
 const BOMB_REACH = 0.8;
 const MASCOT_SIZE = 180;
-const MASCOT_GAP = 56;
-const MASCOT_LIFT = 96;
+const CHEST_COLORS = ['', 'green', 'blue', 'red'];
 
 export type BombPhase = 'pop' | 'draw' | 'shown';
 
@@ -23,6 +22,7 @@ type Point = [number, number];
 
 type StageMapProps = {
 	stage: QuestStage;
+	order: number;
 	obstacle: Quest['obstacle'];
 	bombPhase: BombPhase;
 	pop: string | null;
@@ -43,7 +43,7 @@ const curve = (points: Point[]) =>
 		return `${d} C${x0} ${y0 + h} ${x1} ${y1 - h} ${x1} ${y1}`;
 	}, '');
 
-export function StageMap({ stage, obstacle, bombPhase, pop, shake, nextShort, nextId, goal, wave, onTap, onPop }: StageMapProps) {
+export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextShort, nextId, goal, wave, onTap, onPop }: StageMapProps) {
 	const items = [...stage.stations, stage];
 	const last = items.length - 1;
 	const points = items.map((_, i): Point => [CENTER + (i === last ? 0 : i % 2 ? SWING : -SWING), TOP + i * ROW]);
@@ -63,9 +63,10 @@ export function StageMap({ stage, obstacle, bombPhase, pop, shake, nextShort, ne
 	const at = (i: number) => (bomb && i > bombAt ? i + 1 : i);
 	const segment = (a: number, b: number) => curve(route.slice(at(a), at(b) + 1));
 	const height = TOP + last * ROW + 120 + (bomb && bombAt === last ? ROW : 0);
-	const live = head >= 0 && items[head].status !== 'locked';
-	const anchor = live ? points[head] : null;
+	const labelAt = items.findIndex((item) => item.status === 'current' || (item.status === 'blocked' && !obstacle));
+	const nest = items.findIndex((_, r) => r > 0 && r < last && r % 2 === order % 2 && r !== labelAt && r !== bombAt && r !== bombAt + 1);
 	const stationsLeft = items.slice(Math.max(head, 0), last).length;
+	const tint = CHEST_COLORS[order % CHEST_COLORS.length];
 
 	const nameOf = (i: number) => (i === last ? `Đích: ${stage.name}` : `Trạm ${i + 1}: ${items[i].name}`);
 
@@ -165,14 +166,8 @@ export function StageMap({ stage, obstacle, bombPhase, pop, shake, nextShort, ne
 				</div>
 			)}
 
-			{anchor && (
-				<div
-					className={s.mascot}
-					style={{
-						left: anchor[0] > CENTER ? anchor[0] + MASCOT_GAP : anchor[0] - MASCOT_GAP - MASCOT_SIZE,
-						top: anchor[1] - MASCOT_LIFT,
-					}}
-				>
+			{nest > 0 && (
+				<div className={s.mascot} style={{ left: CENTER + Math.sign(CENTER - points[nest][0]) * (SWING + 175) - MASCOT_SIZE / 2, top: points[nest][1] - MASCOT_SIZE / 2 }}>
 					<Rive src="mascot_hello" knockout fit="cover" fireonload trigger={`clic salut|${wave}`} bool="detect mouse=true" />
 				</div>
 			)}
@@ -189,12 +184,18 @@ export function StageMap({ stage, obstacle, bombPhase, pop, shake, nextShort, ne
 							<button
 								key={shake.id === item.id ? `${item.id}-${shake.count}` : item.id}
 								type="button"
-								aria-labelledby={`quest-label-${item.id}`}
+								aria-label={nameOf(i)}
 								onClick={tap}
 								className={`${s.press} ${s.chest} ${item.status === 'locked' ? s.locked : ''} ${shake.id === item.id ? s.shake : ''}`}
 							>
 								<span className={s.chestArt} aria-hidden="true">
-									<Rive src="chest" artboard="Sanduk" trigger={item.status === 'passed' ? 'open' : 'close'} fireseq={item.status === 'passed' ? 'open|1|100' : undefined} knockout />
+									<Rive
+										src="chest"
+										artboard="Sanduk"
+										trigger={item.status === 'passed' ? 'open' : 'close'}
+										fireseq={[tint && `color ${tint}|1|50`, item.status === 'passed' && 'open|1|100'].filter(Boolean).join(';') || undefined}
+										knockout
+									/>
 								</span>
 							</button>
 						) : item.status === 'current' ? (
@@ -203,7 +204,7 @@ export function StageMap({ stage, obstacle, bombPhase, pop, shake, nextShort, ne
 								<svg className={s.ring} width="108" height="108" viewBox="0 0 108 108" aria-hidden="true">
 									<circle cx="54" cy="54" r="50" fill="none" stroke="#E4E5F0" strokeWidth="6" />
 								</svg>
-								<button type="button" aria-labelledby={`quest-label-${item.id}`} onClick={tap} className={`${s.press} ${s.activeButton}`}>
+								<button type="button" aria-label={nameOf(i)} onClick={tap} className={`${s.press} ${s.activeButton}`}>
 									{i + 1}
 								</button>
 							</div>
@@ -211,7 +212,7 @@ export function StageMap({ stage, obstacle, bombPhase, pop, shake, nextShort, ne
 							<button
 								key={shake.id === item.id ? `${item.id}-${shake.count}` : item.id}
 								type="button"
-								aria-labelledby={`quest-label-${item.id}`}
+								aria-label={nameOf(i)}
 								onClick={tap}
 								className={`${s.press} ${s.station} ${item.status === 'blocked' ? s.fail : ''} ${item.status === 'locked' ? s.locked : ''} ${shake.id === item.id ? s.shake : ''}`}
 							>
@@ -219,10 +220,12 @@ export function StageMap({ stage, obstacle, bombPhase, pop, shake, nextShort, ne
 							</button>
 						)}
 
-						<div className={`${s.label} ${s[item.status]} ${points[i][0] <= CENTER ? s.right : s.left}`} onClick={tap}>
-							<span id={`quest-label-${item.id}`} className={s.labelName}><MathInline text={nameOf(i)} /></span>
-							<span className={s.labelSub}>{subOf(item, i)}</span>
-						</div>
+						{i === labelAt && (
+							<div className={`${s.label} ${s[item.status]} ${points[i][0] <= CENTER ? s.right : s.left}`} onClick={tap}>
+								<span className={s.labelName}><MathInline text={nameOf(i)} /></span>
+								<span className={s.labelSub}>{subOf(item, i)}</span>
+							</div>
+						)}
 
 						{open && (
 							<div className={s.pop}>

@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { useAccount } from '@/components/account-provider';
 import page from '@/components/page.module.css';
 import { DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
-import { Rive } from '@/components/rive';
 import { useLoad, useMounted } from '@/lib/api';
 import { WEEKDAY_NAMES, dayKey, examHref } from '@/lib/format';
 import { Exam, getHistoryList, getReview } from '@/shared/api/client';
@@ -60,9 +59,6 @@ export default function PracticePage() {
 
 					{done ? (
 						<article className={s.done}>
-							<div className={s.crab}>
-								<Rive src="crab" knockout fit="cover" bool="Hands=true" />
-							</div>
 							<div className={s.doneBody}>
 								<div className={s.doneKicker}>XONG BÀI HÔM NAY</div>
 								<div className={s.doneTitle}>

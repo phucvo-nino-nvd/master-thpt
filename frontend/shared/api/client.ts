@@ -2,7 +2,7 @@ import axios, { AxiosAdapter } from 'axios';
 
 export const MOCK_ACCOUNT = process.env.MOCK_ACCOUNT?.toLowerCase() === 'true';
 
-export type QuestionType = 'multiple_choice' | 'true_false' | 'short_answer';
+type QuestionType = 'multiple_choice' | 'true_false' | 'short_answer';
 
 export type ExamQuestion = {
 	id: string;
@@ -14,6 +14,7 @@ export type ExamQuestion = {
 	parts: { label: string; content: string; solution?: string }[];
 	images: { url: string; alt?: string | null }[];
 	answer: string | boolean[];
+	station?: string;
 };
 
 export type Exam = {
@@ -54,6 +55,7 @@ export type SubmitExamBody = {
 	answers: { question_id: string; student_answer: AnswerPayload }[];
 	duration_seconds?: number;
 	mode?: HistoryMode;
+	guest?: boolean;
 };
 
 export type SubmitExamResponse = {
@@ -64,7 +66,7 @@ export type SubmitExamResponse = {
 	per_question: Record<string, Evaluation>;
 };
 
-export type HistoryItem = {
+type HistoryItem = {
 	history_id: string;
 	exam_id: string;
 	mode: HistoryMode;
@@ -93,7 +95,7 @@ export type KnowledgeGraph = {
 	streak: number;
 };
 
-export type QuestStatus = 'passed' | 'current' | 'blocked' | 'locked';
+type QuestStatus = 'passed' | 'current' | 'blocked' | 'locked';
 
 export type QuestStation = {
 	id: string;
@@ -113,7 +115,7 @@ export type Quest = {
 	stages: QuestStage[];
 };
 
-export type Plan = 'free' | 'pro';
+type Plan = 'free' | 'pro';
 
 export type Account = {
 	name: string;
@@ -135,7 +137,7 @@ export type Account = {
 
 export type AccountUpdate = Partial<Omit<Account, 'settings'>> & { settings?: Partial<Account['settings']> };
 
-export type IngestSource = { url: string; title: string; score: number };
+type IngestSource = { url: string; title: string; score: number };
 export type IngestState = {
 	manual: boolean;
 	batches: { request: { concept: string; grade: number }; docs: IngestSource[] }[];
@@ -183,9 +185,10 @@ export const getDocument = (id: string, historyId?: string) =>
 export const getReview = () => get<Exam>('/review');
 export const getKnowledgeGraph = () => get<KnowledgeGraph>('/knowledge_graph');
 
-export const getQuest = (grade?: number) => get<Quest>('/quest', grade ? { grade } : undefined);
+export const getQuest = () => get<Quest>('/quest');
 export const getQuestTest = (id: string) => get<Exam>(`/quest/${encodeURIComponent(id)}`);
-export const startPath = (grade: number) => api.post<Quest>('/quest/start', null, { params: { grade } }).then((res) => res.data);
+export const startPath = () => post<Quest>('/quest/start');
+export const resetQuest = () => post<Quest>('/quest/reset');
 
 export const submitExam = (body: SubmitExamBody) =>
 	api.post<SubmitExamResponse>('/exams/submit', body, { timeout: 600000 }).then((response) => response.data);
@@ -206,6 +209,8 @@ export const approveIngestSource = (url: string, signal?: AbortSignal) =>
 	api.post<IngestState>('/ingest/approve', null, { params: { url }, signal }).then((response) => response.data);
 export const rejectIngestSource = (url: string, signal?: AbortSignal) =>
 	api.delete<IngestState>('/ingest', { params: { url }, signal }).then((response) => response.data);
+export const requestPractice = (request: string, signal?: AbortSignal) =>
+	api.post<DocumentItem[]>('/practice/update', { request }, { signal }).then((response) => response.data);
 export const createHistory = (exam_id: string, mode: HistoryMode) =>
 	post<{ history_id: string }>('/history', { exam_id, mode });
 export const checkQuestion = (history_id: string, question_id: string, student_answer: AnswerPayload) =>
@@ -214,7 +219,42 @@ export const checkQuestion = (history_id: string, question_id: string, student_a
 export const getHistoryList = () => get<HistoryItem[]>('/history');
 export const getHistory = (id: string) => get<HistoryDetail>(`/history/${encodeURIComponent(id)}`);
 
-export const askHint = (question_id: string, level: number, student_answer?: AnswerPayload) =>
-	post<{ hint: string; level: number }>('/hints', { question_id, level, student_answer });
-export const askSolution = (history_id: string, question_id: string) =>
-	post<{ solution: string }>('/solutions', { history_id, question_id });
+export const askHint = (question_id: string, level: number, student_answer: AnswerPayload | undefined, onChunk: (text: string) => void) =>
+	stream('/hints', { question_id, level, student_answer }, onChunk);
+export const askSolution = (history_id: string, question_id: string, onChunk: (text: string) => void) =>
+	stream('/solutions', { history_id, question_id }, onChunk);
+
+export type ChatMessage = { role: 'user' | 'assistant'; content: string };
+type ChatBody = { message: string; history: ChatMessage[]; question_id: string; student_answer?: AnswerPayload };
+
+export const streamChat = (body: ChatBody, onChunk: (text: string) => void, onModel: (model: string) => void) =>
+	stream('/teacher/chat', body, onChunk, onModel);
+
+async function stream(path: string, body: object, onChunk: (text: string) => void, onModel?: (model: string) => void) {
+	if (MOCK_ACCOUNT) {
+		const reply = await post<{ model: string; content: string }>(path, body);
+		onModel?.(reply.model);
+		return onChunk(reply.content);
+	}
+
+	const token = await getToken?.();
+	const response = await fetch(`${api.defaults.baseURL}${path}`, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+		body: JSON.stringify(body),
+	});
+	if (!response.ok || !response.body) throw new Error((await response.json().catch(() => null))?.detail ?? 'Trợ lý chưa trả lời được.');
+
+	const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+	let buffer = '';
+	for (let chunk = await reader.read(); !chunk.done; chunk = await reader.read()) {
+		const events = (buffer + chunk.value).split('\n\n');
+		buffer = events.pop() ?? '';
+		for (const event of events) {
+			const data = JSON.parse(event.replace(/^data: /, ''));
+			if (data.type === 'error') throw new Error('Trợ lý chưa trả lời được.');
+			if (data.type === 'model') onModel?.(data.content);
+			else onChunk(data.content);
+		}
+	}
+}

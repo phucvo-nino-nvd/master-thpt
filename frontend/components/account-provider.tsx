@@ -56,7 +56,7 @@ export function AccountProvider({ children }: Readonly<{ children: React.ReactNo
 
 	const value: AccountContextValue = {
 		account,
-		name: account.name || user?.fullName || user?.username || 'bạn',
+		name: account.name || user?.fullName || 'bạn',
 		save: async (patch) => setData(await updateAccount(patch)),
 		reload: () => setVersion((v) => v + 1),
 	};

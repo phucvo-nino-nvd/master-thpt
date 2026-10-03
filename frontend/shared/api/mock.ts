@@ -1,5 +1,5 @@
 import { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import { dayKey } from '@/lib/format';
+import { XP_PER_CORRECT, dayKey } from '@/lib/format';
 import { ACCOUNT } from './account';
 import type {
 	AccountUpdate,
@@ -18,7 +18,8 @@ import type {
 const PASS_RATIO = 0.6;
 const TEST_SIZE = 5;
 const OBSTACLE_SIZE = 4;
-const XP_PER_CORRECT = 4;
+const XP_PER_CUP = 10;
+const XP_PER_EXAM = 20;
 
 const db = structuredClone(ACCOUNT);
 
@@ -131,6 +132,7 @@ function progressQuest(examId: string, passed: boolean) {
 	if (!item || item.status === 'passed') return;
 
 	item.status = passed ? 'passed' : 'blocked';
+	if (passed && db.quest.stages.some((stage) => stage.id === examId)) db.account.xp += XP_PER_CUP;
 	db.quest.obstacle = passed ? null : { id: `obstacle:${item.id}`, depth: 1, knowledge_ids: [], total_questions: OBSTACLE_SIZE };
 	advanceQuest();
 }
@@ -178,6 +180,7 @@ function submit(body: SubmitExamBody) {
 	const detail = record(body.exam_id, mode, questions, body.duration_seconds ?? null);
 
 	reward(questions.length, detail.correct_count);
+	if (mode === 'exam' && questions.every(({ student_answer }) => String(student_answer).trim())) db.account.xp += XP_PER_EXAM;
 
 	if (mode === 'checkpoint' || mode === 'obstacle') {
 		progressQuest(body.exam_id, detail.correct_count / Math.max(1, detail.total_questions) >= PASS_RATIO);
@@ -232,6 +235,9 @@ function route(method: string, path: string[], params: Record<string, string>, b
 		case 'delete ingest':
 			for (const batch of ingest.batches) batch.docs = batch.docs.filter((doc) => doc.url !== params.url);
 			return ingest;
+		case 'post practice/update':
+			processingStarted = Date.now();
+			return [];
 		case 'get practice/status':
 			return practiceStatus();
 		case 'get exams/grading-status':
@@ -258,6 +264,11 @@ function route(method: string, path: string[], params: Record<string, string>, b
 		case 'get quest/:id':
 			return questTest(id);
 		case 'post quest/:id':
+			if (id === 'start') {
+				for (const item of questItems()) item.status = 'locked';
+				db.quest.obstacle = null;
+				advanceQuest();
+			}
 			return db.quest;
 		case 'post exams/submit':
 			return submit(body);
@@ -273,9 +284,11 @@ function route(method: string, path: string[], params: Record<string, string>, b
 			return detail;
 		}
 		case 'post hints':
-			return { hint: db.hints[body.question_id]?.[body.level - 1] ?? 'Xác định dạng toán rồi viết công thức tương ứng ra trước nha.', level: body.level };
+			return { model: 'mock', content: db.hints[body.question_id]?.[body.level - 1] ?? 'Xác định dạng toán rồi viết công thức tương ứng ra trước nha.' };
+		case 'post teacher/chat':
+			return { model: 'mock', content: `Câu "${body.message}" hay đó! Thử viết lại đề bài thành công thức trước, rồi đối chiếu từng bước với lời giải nha.` };
 		case 'post solutions':
-			return { solution: db.solutions[body.question_id] ?? 'Lời giải chi tiết sẽ có khi nối backend.' };
+			return { model: 'mock', content: db.solutions[body.question_id] ?? 'Lời giải chi tiết sẽ có khi nối backend.' };
 		default:
 			throw new MockError(404, `Mock chưa có ${method.toUpperCase()} /${path.join('/')}`);
 	}
@@ -284,7 +297,7 @@ function route(method: string, path: string[], params: Record<string, string>, b
 export async function handle(config: InternalAxiosRequestConfig): Promise<AxiosResponse> {
 	const path = (config.url ?? '').split('?')[0].split('/').filter(Boolean).map(decodeURIComponent);
 	const [resource, id] = path;
-	const key = resource === 'practice' || resource === 'exams' ? [`${resource}/${id}`] : path;
+	const key = ['practice', 'exams', 'teacher'].includes(resource) ? [`${resource}/${id}`] : path;
 	const body = typeof config.data === 'string' ? JSON.parse(config.data) : config.data;
 
 	try {

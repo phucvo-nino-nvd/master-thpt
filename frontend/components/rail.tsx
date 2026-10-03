@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { useLoad, useMounted } from '@/lib/api';
-import { WEEKDAYS, examHref, hoursLeftToday, weekdayIndex } from '@/lib/format';
+import { WEEKDAYS, examHref, hoursLeftToday, streakHue, weekdayIndex } from '@/lib/format';
 import { selectOfficialExam } from '@/lib/documents';
 import { getDocuments } from '@/shared/api/client';
 import { useAccount } from './account-provider';
@@ -45,7 +45,7 @@ export function StreakCard() {
 		<div className={`${s.streak} ${account.kept_today ? '' : s.cold}`}>
 			<div className={s.streakHead}>
 				<div className={s.streakArt}>
-					<Rive src="streak" autobind vm={`streak=${account.streak}`} />
+					<Rive src="streak" autobind vm={`streak=${account.streak}`} style={{ filter: streakHue(account.streak) }} />
 				</div>
 				<div>
 					<div className={s.streakDays}>{account.streak} ngày liền</div>

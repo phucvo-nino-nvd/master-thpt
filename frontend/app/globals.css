@@ -80,8 +80,6 @@ summary::-webkit-details-marker {
 }
 
 .exam-math-text {
-	font-family: 'Times New Roman', 'Liberation Serif', serif;
-	font-weight: 400;
 	letter-spacing: normal;
 	white-space: pre-line;
 }

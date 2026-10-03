@@ -32,18 +32,20 @@
           this._out.style.cssText = css + ';pointer-events:none';
           this.appendChild(this._out);
           this._outCtx = this._out.getContext('2d', { willReadFrequently: true });
-          const loop = () => { this._key(); this._raf = requestAnimationFrame(loop); };
-          this._raf = requestAnimationFrame(loop);
         }
-        this._ro = new ResizeObserver(() => this._fit());
-        this._ro.observe(this);
-        this._iv = setInterval(() => this._fit(), 400);
       }
-      this._load();
+      this._ro = new ResizeObserver(() => this._fit());
+      this._ro.observe(this);
+      this._iv = setInterval(() => this._fit(), 400);
+      this._io = new IntersectionObserver(([e]) => { this._visible = e.isIntersecting; if (this._visible) this._load(); else this._unload(); }, { rootMargin: '300px' });
+      this._io.observe(this);
     }
     disconnectedCallback() {
-      clearInterval(this._iv); cancelAnimationFrame(this._raf);
-      this._ro && this._ro.disconnect(); if (this._r) this._r.cleanup(); this._r = null; this._loadedSrc = null;
+      clearInterval(this._iv); this._ro.disconnect(); this._io.disconnect(); this._unload();
+    }
+    _unload() {
+      cancelAnimationFrame(this._raf); this._raf = 0;
+      if (this._r) this._r.cleanup(); this._r = null; this._loadedSrc = null; this._ready = false;
     }
     _fit() {
       if (!this._r || !this._canvas) return;
@@ -94,11 +96,12 @@
       else this._apply(key);
     }
     async _load() {
-      const src = this._p.src; if (!src || !this._canvas) return;
+      const src = this._p.src; if (!src || !this._canvas || !this._visible) return;
       const lk = src + '|' + this._p.fit + '|' + (this._p.artboard || '');
       if (this._loadedSrc === lk) return;
       this._loadedSrc = lk;
       const R = await loadRuntime();
+      if (!this._visible || this._loadedSrc !== lk) return;
       if (this._r) { this._r.cleanup(); this._r = null; }
       this._ready = false;
       const r = new R.Rive({
@@ -113,10 +116,11 @@
           const sm = ab && ab.stateMachines && ab.stateMachines[0];
           if (sm) { this._sm = sm.name; r.play(sm.name); }
           this._ready = true; this._lastTrigger = this._p.trigger;
-          if (this.hasAttribute('fireonload') && this._p.trigger) this.fire(String(this._p.trigger).split('|')[0]);
-          const seq = this.getAttribute('fireseq');
-          if (seq) { const [nm, cnt, ms] = seq.split('|'); for (let k = 1; k <= (+cnt || 1); k++) setTimeout(() => this._r === r && this.fire(nm), k * (+ms || 600)); }
+          if (this._knockout && !this._raf) { const loop = () => { this._key(); this._raf = requestAnimationFrame(loop); }; this._raf = requestAnimationFrame(loop); }
           this._apply('vmNumber'); this._apply('bool');
+          if (this.hasAttribute('fireonload') && this._p.trigger) setTimeout(() => this._r === r && this.fire(String(this._p.trigger).split('|')[0]), 300);
+          const seq = this.getAttribute('fireseq');
+          if (seq) seq.split(';').forEach(part => { const [nm, cnt, ms] = part.split('|'); for (let k = 1; k <= (+cnt || 1); k++) setTimeout(() => this._r === r && this.fire(nm), k * (+ms || 600)); });
           const ht = this.getAttribute('hidetext');
           if (ht) this._hidden = ht.split(';').map(n => { try { r.setTextRunValue(n.trim(), ' '); return n + ':ok'; } catch (e) { return n + ':miss'; } });
           this.dispatchEvent(new CustomEvent('rive-ready', { detail: r.contents, bubbles: true }));

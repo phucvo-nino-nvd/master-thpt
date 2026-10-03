@@ -6,6 +6,10 @@
 	background: var(--page);
 }
 
+.app:not(:has(> nav)) {
+	grid-template-columns: minmax(0, 1fr);
+}
+
 .withRail {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) 348px;

@@ -6,7 +6,7 @@
 	min-height: 0;
 	overflow-y: auto;
 	scrollbar-width: none;
-	padding: 24px 22px 32px;
+	padding: 24px 22px 120px;
 	border-left: 2px solid var(--line);
 	background: #fff;
 }

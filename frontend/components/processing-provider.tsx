@@ -5,7 +5,7 @@ import { isAxiosError } from 'axios';
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 import { pendingSources } from '@/lib/processing';
 import {
-	MOCK_ACCOUNT, approveIngestSource, getProcessingSnapshot, rejectIngestSource, setIngestMode, submitExam,
+	MOCK_ACCOUNT, approveIngestSource, getProcessingSnapshot, rejectIngestSource, requestPractice, setIngestMode, submitExam,
 	type ProcessingSnapshot, type SubmitExamBody, type SubmitExamResponse,
 } from '@/shared/api/client';
 import { getApiErrorMessage } from '@/shared/api/error-message';
@@ -22,6 +22,7 @@ type ProcessingContextValue = {
 	submit: (body: SubmitExamBody) => Promise<SubmitExamResponse>;
 	changeMode: (manual: boolean) => Promise<void>;
 	process: (urls: string[], approve: boolean) => Promise<void>;
+	request: (query: string) => Promise<void>;
 };
 
 const ProcessingContext = createContext<ProcessingContextValue | null>(null);
@@ -141,6 +142,7 @@ export function ProcessingProvider({ children }: { children: ReactNode }) {
 
 	return <ProcessingContext.Provider value={{ snapshot, submitting, result, error: error || connectionError, busy, remaining, enabled, refresh, submit, process,
 		changeMode: (manual) => mutate(async (signal) => { await setIngestMode(manual, signal); await read(signal); }),
+		request: (query) => mutate(async (signal) => { await requestPractice(query, signal); await read(signal); }),
 	}}>{children}</ProcessingContext.Provider>;
 }
 
