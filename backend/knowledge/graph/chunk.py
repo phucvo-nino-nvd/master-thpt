@@ -102,7 +102,7 @@ def chunk_markdown_file(path: str | Path) -> list[MarkdownChunk]:
             continue
 
         level = len(match.group(1))
-        heading = match.group(2).strip()
+        heading = re.sub(r"\s*<br\s*/?>\s*", " ", match.group(2), flags=re.IGNORECASE).strip()
 
         # Start a new chapter.
         if level == 1 and normalize_heading(heading).startswith("CHUONG "):

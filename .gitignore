@@ -3,6 +3,8 @@ __pycache__/
 .venv/
 .env
 .omo/
+.lavish/
+.claude/
 
 # 112MB of textbook PDFs, source input for the graph pipeline.
 backend/knowledge/graph/data/

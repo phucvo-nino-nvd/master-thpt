@@ -619,39 +619,42 @@ def placement_of(
     grade: int | None,
 ) -> dict:
     index = {station["id"]: position for position, station in enumerate(stations)}
-    probes = [run for run in placement_runs(runs) if run["exam_id"] in index]
+    probes = [run for run in placement_runs(runs) if run["exam_id"] in index and run["answers"]]
+    paths = [run["exam_id"] for run in placement_runs(runs) if run["exam_id"].startswith("path:")]
 
     if probes:
-        grade = stations[index[probes[0]["exam_id"]]]["grade"]
+        grade = stations[index[probes[-1]["exam_id"]]]["grade"]
+
+    if paths:
+        grade = int(paths[-1].removeprefix("path:"))
 
     in_grade = [position for position, station in enumerate(stations) if station["grade"] == grade]
 
     if not in_grade:
         return {"done": False, "grade": None, "probe": None, "start": -1}
 
+    if paths:
+        return {"done": True, "grade": grade, "probe": None, "start": in_grade[0]}
+
+    if probes:
+        run = probes[-1]
+        return {
+            "done": True,
+            "grade": grade,
+            "probe": None,
+            "start": index[run["exam_id"]] + 1 if passed(run["answers"], knowledge_by_question) else in_grade[0],
+        }
+
     probeable = [
         position
         for position in in_grade
         if question_count(groups[stations[position]["id"]]) >= PLACEMENT_QUESTIONS
     ]
-    lo, hi = 0, len(probeable)
-
-    for run in probes:
-        if index[run["exam_id"]] not in probeable:
-            continue
-
-        probe = probeable.index(index[run["exam_id"]])
-
-        if passed(run["answers"], knowledge_by_question):
-            lo = max(lo, probe + 1)
-        else:
-            hi = min(hi, probe)
-
-    if lo < hi:
+    if probeable:
         return {
             "done": False,
             "grade": grade,
-            "probe": stations[probeable[(lo + hi) // 2]]["id"],
+            "probe": stations[probeable[len(probeable) // 2]]["id"],
             "start": -1,
         }
 
@@ -659,7 +662,7 @@ def placement_of(
         "done": True,
         "grade": grade,
         "probe": None,
-        "start": probeable[lo - 1] + 1 if lo else in_grade[0],
+        "start": in_grade[0],
     }
 
 

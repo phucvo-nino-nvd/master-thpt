@@ -30,7 +30,8 @@ from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRe
 from knowledge.bank.main import GENERATED_PREFIX, Item, items_of, load_items, source_urls
 from knowledge.graph.convert import node_map
 from main import approve, grade, stock_practice
-from .schema import CheckRequest, DocumentItem, GradingStatus, PracticeRequest, PracticeStatus, SubmitRequest, SubmitResponse
+from .account import account_of, save_account
+from .schema import Account, AccountUpdate, CheckRequest, DocumentItem, GradingStatus, PracticeRequest, PracticeStatus, SubmitRequest, SubmitResponse
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 IMAGES_DIR = ROOT_DIR / "artifacts" / "data"
@@ -263,6 +264,26 @@ if IMAGES_DIR.exists():
     app.mount("/api/images", StaticFiles(directory=IMAGES_DIR), name="images")
 
 
+@app.get("/api/me", response_model=Account)
+def get_me(creds: HTTPAuthorizationCredentials = Depends(clerk_guard)) -> Account:
+    user_id = credential_user_id(creds)
+    if not isinstance(user_id, str) or not user_id.strip():
+        raise HTTPException(status_code=401, detail="Cần đăng nhập để xem hồ sơ.")
+    return account_of(user_id, "pro" if creds.decoded.get("pla") == "u:pro" else "free")
+
+
+@app.patch("/api/me", response_model=Account)
+def patch_me(
+    request: AccountUpdate,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> Account:
+    user_id = credential_user_id(creds)
+    if not isinstance(user_id, str) or not user_id.strip():
+        raise HTTPException(status_code=401, detail="Cần đăng nhập để sửa hồ sơ.")
+    save_account(user_id, request)
+    return get_me(creds)
+
+
 @app.get("/api/documents")
 def get_documents(creds: HTTPAuthorizationCredentials = Depends(clerk_guard)) -> list[DocumentItem]:
     return list_documents(creds.decoded["sub"])
@@ -384,6 +405,17 @@ def post_quest_reset(
 ) -> dict:
     user_id = credential_user_id(creds)
     start_history("reset", "placement", user_id=user_id)
+
+    return quest(runs_of(user_id=user_id), user_id=user_id)
+
+
+@app.post("/api/quest/start")
+def post_quest_start(
+    grade: int,
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+) -> dict:
+    user_id = credential_user_id(creds)
+    start_history(f"path:{grade}", "placement", user_id=user_id)
 
     return quest(runs_of(user_id=user_id), user_id=user_id)
 

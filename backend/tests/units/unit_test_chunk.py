@@ -1,4 +1,25 @@
 from knowledge.graph.chunk import REFINED_DIR, chunk_markdown_file
+import pytest
+
+
+@pytest.mark.parametrize("line_break", ["<br>", "<br/>", "<br />", "<BR>"])
+def test_heading_line_breaks_become_spaces(tmp_path, line_break):
+    path = tmp_path / "toan-11-tap-2.md"
+    body = "Nội dung<br>giữ nguyên."
+    path.write_text(
+        f"# CHƯƠNG I.{line_break}HÌNH HỌC\n"
+        f"## Bài 3. Phép chiếu vuông góc.{line_break}Góc giữa đường thẳng và mặt phẳng\n"
+        f"{body}\n",
+        encoding="utf-8",
+    )
+
+    chunks = chunk_markdown_file(path)
+
+    assert len(chunks) == 1
+    assert chunks[0].id == "toan-11-tap-2:0001"
+    assert chunks[0].chapter == "CHƯƠNG I. HÌNH HỌC"
+    assert chunks[0].title == "Phép chiếu vuông góc. Góc giữa đường thẳng và mặt phẳng"
+    assert chunks[0].content == body
 
 
 TARGET_IDS = {

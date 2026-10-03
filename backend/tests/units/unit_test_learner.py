@@ -437,25 +437,45 @@ def probe_run(name, correct):
     }
 
 
-def test_placement_binary_search_then_station_statuses(quest_book):
+def test_single_placement_opens_station_without_another_probe(quest_book):
     assert service.quest([], grade=12)["placement"]["probe"] == "s-C"
-    assert service.quest([probe_run("C", True)])["placement"]["probe"] == "s-E"
-    assert service.quest([probe_run("C", True), probe_run("E", False)])["placement"]["probe"] == "s-D"
 
-    state = service.quest([probe_run("C", True), probe_run("E", False), probe_run("D", True)])
+    state = service.quest([probe_run("C", True)])
     statuses = {
         item["id"]: item["status"]
         for stage in state["stages"]
         for item in [stage, *stage["stations"]]
     }
 
-    assert state["placement"]["start"] == "s-E"
-    assert state["current"] == "s-E"
+    assert state["placement"] == {"done": True, "grade": 12, "probe": None, "start": "s-D"}
+    assert state["current"] == "s-D"
     assert statuses == {
         "g11": "passed", "s-S": "passed",
-        "s-A": "passed", "s-B": "passed", "s-C": "passed", "s-D": "passed",
-        "s-E": "current", "s-F": "locked", "g12": "locked",
+        "s-A": "passed", "s-B": "passed", "s-C": "passed", "s-D": "current",
+        "s-E": "locked", "s-F": "locked", "g12": "locked",
     }
+
+
+def test_single_failed_placement_opens_first_station(quest_book):
+    runs = [probe_run("C", False)]
+    state = service.quest(runs)
+
+    assert state["placement"] == {"done": True, "grade": 12, "probe": None, "start": "s-A"}
+    assert state["current"] == "s-A"
+    assert service.quest_test("s-A", runs)["question_ids"] == ["A1", "A2"]
+
+
+def test_placement_uses_latest_completed_attempt(quest_book):
+    runs = [probe_run("C", True), probe_run("C", False)]
+    assert service.quest(runs)["current"] == "s-A"
+
+    runs.append(probe_run("D", True))
+    assert service.quest(runs)["current"] == "s-E"
+
+
+def test_empty_placement_history_does_not_complete_test(quest_book):
+    runs = [{"mode": "placement", "exam_id": "s-C", "answers": []}]
+    assert service.quest(runs, grade=12)["placement"]["done"] is False
 
 
 def test_placement_reset_forgets_probes_and_grade(quest_book):
@@ -464,6 +484,10 @@ def test_placement_reset_forgets_probes_and_grade(quest_book):
 
     assert service.quest(runs)["placement"] == {"done": False, "grade": None, "probe": None, "start": None}
     assert service.quest(runs, grade=12)["placement"]["probe"] == "s-C"
+
+    runs.append(probe_run("C", False))
+    assert service.quest(runs)["placement"]["done"] is True
+    assert service.quest(runs)["current"] == "s-A"
 
 
 def test_failed_station_chains_obstacles_down_prerequisites(quest_book, monkeypatch):

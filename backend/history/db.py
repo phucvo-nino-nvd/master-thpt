@@ -24,6 +24,12 @@ def init_db() -> None:
     with get_connection() as conn:
         conn.executescript(
             """
+            CREATE TABLE IF NOT EXISTS account_profile (
+                user_id TEXT PRIMARY KEY,
+                data TEXT NOT NULL DEFAULT '{}',
+                created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+            );
+
             CREATE TABLE IF NOT EXISTS history (
                 id TEXT PRIMARY KEY,
                 user_id TEXT NOT NULL DEFAULT '',
