@@ -17,7 +17,7 @@ from roles.crawler.schema import CrawlerRequest
 from roles.parser.main import parse_question
 from roles.author.main import write_questions
 from roles.teacher.main import evaluate
-from roles.teacher.rubric import match_answer
+from roles.teacher.rubric import match_answer, settled
 from roles.verifier.main import verify
 from roles.learner.main import diagnose_answer
 from roles.learner.service import MIN_QUESTIONS, crawl_requests, run_learner, stocked_count
@@ -25,7 +25,7 @@ from roles.tagger.main import BATCH_SIZE, save_tags, tag_with_llm
 from common.schema import Document, Evaluation
 from common.utils import normalized, write_json
 from history.main import queue_docs, solved_question_ids, take_doc
-from knowledge.bank.main import GENERATED_PREFIX, Item, build_item_bank, numbered, source_urls
+from knowledge.bank.main import GENERATED_PREFIX, Item, build_item_bank, numbered, save_solution, source_urls
 from knowledge.graph.convert import node_map
 
 
@@ -66,7 +66,7 @@ def graded(submission: dict) -> tuple[Evaluation, bool]:
     if matched:
         return matched, False
 
-    return evaluate(item, student_answer), True
+    return evaluate(item, student_answer), not (bool(item.solution) or settled(item))
 
 
 @traceable(name="Crawler", run_type="chain")
@@ -169,7 +169,9 @@ def verifier_agent(state: State) -> State:
         if not needs_review:
             return evaluation
 
-        return verify(submission["item"], submission["student_answer"], evaluation)
+        evaluation = verify(submission["item"], submission["student_answer"], evaluation)
+        save_solution(submission["item"], submission["student_answer"], evaluation)
+        return evaluation
 
     pending = zip(state["submissions"], state["evaluations"], state["needs_review"])
 

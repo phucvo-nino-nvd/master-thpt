@@ -2,10 +2,13 @@ from uuid import NAMESPACE_URL, uuid5
 from pydantic import BaseModel, Field
 from pathlib import Path
 
+import fcntl
 import json
+import tempfile
 
 from common.schema import (
     Document,
+    Evaluation,
     ImageRef,
     Option,
     Question,
@@ -164,15 +167,44 @@ def build_item_bank(document: Document) -> list[Item]:
         existing_ids.add(item.id)
         new_items.append(item)
 
-    # Append new items to the item bank file
-    with open(path, "a", encoding="utf-8") as f:
-        for item in new_items:
-            f.write(
-                json.dumps(
-                    item.model_dump(),
-                    ensure_ascii=False,
+    with open(path.with_suffix(".lock"), "a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        with open(path, "a", encoding="utf-8") as f:
+            for item in new_items:
+                f.write(
+                    json.dumps(
+                        item.model_dump(),
+                        ensure_ascii=False,
+                    )
+                    + "\n"
                 )
-                + "\n"
-            )
 
     return new_items
+
+
+def save_solution(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> None:
+    if evaluation.correct or not evaluation.feedback.strip() or not ITEM_BANK_PATH.exists():
+        return
+
+    with open(ITEM_BANK_PATH.with_suffix(".lock"), "a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        rows = load_items()
+        row = next((row for row in rows if row["id"] == item.id), None)
+        if row is None or row.get("solution"):
+            return
+
+        if item.type == "true_false":
+            if not isinstance(student_answer, list) or not (len(student_answer) == len(row["parts"]) == len(evaluation.part_correct)):
+                return
+            for part, given, correct in zip(row["parts"], student_answer, evaluation.part_correct):
+                if not part.get("solution"):
+                    part["solution"] = "ĐÚNG." if given == correct else "SAI."
+        row["solution"] = evaluation.feedback
+
+        with tempfile.TemporaryDirectory(dir=ITEM_BANK_PATH.parent) as directory:
+            temporary = Path(directory) / ITEM_BANK_PATH.name
+            temporary.write_text(
+                "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows),
+                encoding="utf-8",
+            )
+            temporary.replace(ITEM_BANK_PATH)
