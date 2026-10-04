@@ -79,7 +79,7 @@ export default function TodayPage() {
 						{total > 0 && (
 							<div className={`${s.layer} ${s.segs}`} style={{ gridTemplateColumns: `repeat(${Math.min(total, MAX_SEGMENTS)}, 1fr)` }}>
 								{Array.from({ length: Math.min(total, MAX_SEGMENTS) }, (_, i) => (
-									<span key={i} className={`${s.seg} ${i ? '' : s.next}`} />
+									<span key={i} className={`${s.seg} ${i ? '' : s.activeSeg}`} />
 								))}
 							</div>
 						)}
