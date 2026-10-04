@@ -72,11 +72,33 @@ function wrapBare(chunk: string): string {
 	return out.join('');
 }
 
+function unwrapNestedMath(math: string): string {
+	const dollars: number[] = [];
+	let depth = 0;
+
+	for (let index = 0; index < math.length; index++) {
+		const char = math[index];
+		if (char === '\\') {
+			index++;
+		} else if (char === '{') {
+			depth++;
+		} else if (char === '}') {
+			depth--;
+		} else if (char === '$' && depth === 0) {
+			dollars.push(index);
+		}
+	}
+
+	// Array cells are already in math mode. Keep escaped dollars and text groups.
+	const delimiters = new Set(dollars.slice(0, dollars.length - dollars.length % 2));
+	return math.split('').filter((_, index) => !delimiters.has(index)).join('');
+}
+
 export function normalizeMath(text: string): string {
 	const repaired = REPAIRS.reduce(
 		(current, [pattern, replacement]) => current.replace(pattern, replacement),
 		text,
-	);
+	).replace(/\$\$([\s\S]*?)\$\$(?!\$)/g, (_, math: string) => `$$${unwrapNestedMath(math)}$$`);
 
 	const out: string[] = [];
 	let last = 0;
