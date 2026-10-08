@@ -8,7 +8,7 @@ import card from '@/components/exam-card.module.css';
 import { Rail } from '@/components/rail';
 import { useLoad, useMounted } from '@/lib/api';
 import { STREAK_MILESTONES, WEEKDAYS, dayKey, score, weekdayIndex } from '@/lib/format';
-import { OBSTACLE_PREFIX, fullName, locate } from '@/lib/quest';
+import { historyTitle } from '@/lib/history';
 import { HistoryMode, Quest, getDocuments, getHistoryList, getQuest } from '@/shared/api/client';
 import s from './history.module.css';
 
@@ -109,13 +109,7 @@ export default function HistoryPage() {
 
 	const titles = new Map(documents.map((doc) => [doc.id, doc.title]));
 
-	const titleOf = (examId: string) => {
-		if (titles.has(examId)) return titles.get(examId);
-		if (examId.startsWith('review:')) return 'Nhiệm vụ hôm nay';
-		const spot = quest && locate(quest, examId.replace(OBSTACLE_PREFIX, ''));
-		if (!spot) return examId;
-		return examId.startsWith(OBSTACLE_PREFIX) ? `Bom ôn tập: ${spot.item.name}` : fullName(spot);
-	};
+	const titleOf = (examId: string) => historyTitle(examId, titles, quest);
 
 	const recent = history.filter((attempt) => attempt.total_questions > 0 && (!days || Date.now() - new Date(attempt.created_at).getTime() <= days * DAY_MS));
 	const list = recent.filter((attempt) => kind === 'all' || KIND_OF[attempt.mode] === kind);

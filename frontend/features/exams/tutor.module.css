@@ -244,19 +244,6 @@
 	outline: none;
 }
 
-.model {
-	display: flex;
-	align-items: center;
-	flex: none;
-	padding: 0 12px;
-	border: 2px solid var(--line);
-	border-radius: 14px;
-	background: #fff;
-	box-shadow: 0 3px 0 var(--line);
-	color: var(--muted);
-	font: 700 11px var(--mono);
-}
-
 .send {
 	padding: 0 20px;
 	border: 0;

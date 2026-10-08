@@ -227,7 +227,7 @@ export const askSolution = (history_id: string, question_id: string, onChunk: (t
 export type ChatMessage = { role: 'user' | 'assistant'; content: string };
 type ChatBody = { message: string; history: ChatMessage[]; question_id: string; student_answer?: AnswerPayload };
 
-export const streamChat = (body: ChatBody, onChunk: (text: string) => void, onModel: (model: string) => void) =>
+export const streamChat = (body: ChatBody, onChunk: (text: string) => void, onModel?: (model: string) => void) =>
 	stream('/teacher/chat', body, onChunk, onModel);
 
 async function stream(path: string, body: object, onChunk: (text: string) => void, onModel?: (model: string) => void) {

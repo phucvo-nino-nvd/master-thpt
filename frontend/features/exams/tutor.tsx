@@ -7,8 +7,6 @@ import { getApiErrorMessage } from '@/shared/api/error-message';
 import { MathText } from './components/math-text';
 import s from './tutor.module.css';
 
-let lastModel = '';
-
 const PRESETS = [
 	['Giải thích lại', 'Giải thích lại câu này theo cách dễ hiểu hơn giúp em.'],
 	['Soi lời giải', 'Soi bài làm của em, em sai hoặc thiếu ở bước nào?'],
@@ -30,7 +28,6 @@ export function Tutor({ question, number, answer, thread, onThread, onClose }: T
 	const [draft, setDraft] = useState('');
 	const [reply, setReply] = useState<string | null>(null);
 	const [error, setError] = useState('');
-	const [model, setModel] = useState(lastModel);
 	const body = useRef<HTMLDivElement>(null);
 	const stick = useRef(true);
 	const label = String(number).padStart(2, '0');
@@ -59,9 +56,6 @@ export function Tutor({ question, number, answer, thread, onThread, onClose }: T
 			await streamChat({ message, history: thread, question_id: question.id, student_answer: answer }, (chunk) => {
 				text += chunk;
 				setReply(text);
-			}, (name) => {
-				lastModel = name;
-				setModel(name);
 			});
 			onThread([...asked, { role: 'assistant', content: text }]);
 		} catch (failure) {
@@ -147,11 +141,6 @@ export function Tutor({ question, number, answer, thread, onThread, onClose }: T
 								if (event.key === 'Enter' && !event.shiftKey) submit(event);
 							}}
 						/>
-						{model && (
-							<span className={s.model} title="Model đang trả lời">
-								{model.split('/').pop()}
-							</span>
-						)}
 						<button type="submit" className={s.send} disabled={!draft.trim() || reply !== null}>
 							GỬI
 						</button>
