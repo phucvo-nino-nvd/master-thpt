@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { CSSProperties, useEffect, useRef, useState } from 'react';
 import { useAccount } from '@/components/account-provider';
-import { ForwardIcon, TrophyIcon } from '@/components/icons';
+import { TrophyIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
 import { ArenaCard, DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
 import { Rive } from '@/components/rive';
@@ -167,37 +167,6 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 							>
 								Chặng {i + 1} · <MathInline text={entry.name} />
 							</div>
-							{quest.placement.done && entry.status === 'locked' && (
-								<div className={`${s.skip} ${pop === `skip:${entry.id}` ? s.open : ''}`}>
-									<span className={s.skipTag}>HỌC VƯỢT</span>
-									<button
-										type="button"
-										aria-label={`Học vượt tới chặng ${i + 1}`}
-										className={`${s.press} ${s.skipButton}`}
-										onClick={() => setPop(pop === `skip:${entry.id}` ? null : `skip:${entry.id}`)}
-									>
-										<ForwardIcon size={30} />
-									</button>
-									{pop === `skip:${entry.id}` && (
-										<div className={s.pop}>
-											<div className={s.popCard}>
-												<div className={s.popTitle}>Học vượt tới chặng {i + 1}</div>
-												<p className={s.popCopy}>
-													{quest.skip_review.length
-														? 'Lần vượt trước còn vài phần chưa vững. Ôn xong ở Nhiệm vụ rồi thử lại nha.'
-														: 'Làm một bài trộn các chặng phía trước. Đạt là mở khoá luôn chặng này.'}
-												</p>
-												<Link
-													href={quest.skip_review.length ? '/practice' : examHref(`skip:${entry.id}`, 'skip')}
-													className={`${s.cta} ${s.green}`}
-												>
-													{quest.skip_review.length ? 'Đi ôn ngay' : 'Học vượt'}
-												</Link>
-											</div>
-										</div>
-									)}
-								</div>
-							)}
 							<StageMap
 								stage={entry}
 								order={i}
@@ -208,6 +177,7 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 								nextShort={nextShort}
 								nextId={nextId}
 								goal={account.goal}
+								skip={quest.placement.done ? { review: quest.skip_review.length > 0 } : null}
 								wave={wave}
 								onTap={onTap}
 								onPop={setPop}

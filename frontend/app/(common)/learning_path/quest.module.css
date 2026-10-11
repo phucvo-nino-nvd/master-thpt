@@ -742,22 +742,12 @@
 	}
 }
 
-.skip {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 14px;
-	width: max-content;
-	margin: 0 auto 30px;
-}
-
-.skip.open {
-	z-index: 30;
-}
-
 .skipTag {
-	position: relative;
+	position: absolute;
+	bottom: calc(100% + 14px);
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
 	padding: 8px 14px;
 	border: 2px solid var(--line);
 	border-radius: 12px;

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { CheckIcon, LockIcon } from '@/components/icons';
+import { CheckIcon, ForwardIcon, LockIcon } from '@/components/icons';
 import { Rive } from '@/components/rive';
 import { MathInline } from '@/features/exams/components/math-text';
 import { examHref } from '@/lib/format';
@@ -30,6 +30,7 @@ type StageMapProps = {
 	nextShort: string | null;
 	nextId: string | null;
 	goal: number | null;
+	skip: { review: boolean } | null;
 	wave: number;
 	onTap: (item: QuestStation) => void;
 	onPop: (id: string | null) => void;
@@ -43,10 +44,13 @@ const curve = (points: Point[]) =>
 		return `${d} C${x0} ${y0 + h} ${x1} ${y1 - h} ${x1} ${y1}`;
 	}, '');
 
-export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextShort, nextId, goal, wave, onTap, onPop }: StageMapProps) {
+export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextShort, nextId, goal, skip, wave, onTap, onPop }: StageMapProps) {
 	const items = [...stage.stations, stage];
 	const last = items.length - 1;
-	const points = items.map((_, i): Point => [CENTER + (i === last ? 0 : i % 2 ? SWING : -SWING), TOP + i * ROW]);
+	const skipAt: Point | null = skip && items.every((item) => item.status === 'locked') ? [CENTER, TOP] : null;
+	const top = skipAt ? TOP + ROW : TOP;
+	const skipId = `skip:${stage.id}`;
+	const points = items.map((_, i): Point => [CENTER + (i === last ? 0 : i % 2 ? SWING : -SWING), top + i * ROW]);
 	const head = items.findIndex((item) => item.status !== 'passed');
 	const bombAt = obstacle ? items.findIndex((item) => item.status === 'blocked') : -1;
 
@@ -62,7 +66,7 @@ export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextSh
 	const route = bomb ? [...points.slice(0, bombAt + 1), bomb, ...points.slice(bombAt + 1)] : points;
 	const at = (i: number) => (bomb && i > bombAt ? i + 1 : i);
 	const segment = (a: number, b: number) => curve(route.slice(at(a), at(b) + 1));
-	const height = TOP + last * ROW + 120 + (bomb && bombAt === last ? ROW : 0);
+	const height = top + last * ROW + 120 + (bomb && bombAt === last ? ROW : 0);
 	const labelAt = items.findIndex((item) => item.status === 'current' || (item.status === 'blocked' && !obstacle));
 	const nest = items.findIndex((_, r) => r > 0 && r < last && r % 2 === order % 2 && r !== labelAt && r !== bombAt && r !== bombAt + 1);
 	const stationsLeft = items.slice(Math.max(head, 0), last).length;
@@ -116,7 +120,34 @@ export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextSh
 			<svg className={s.svg} width="520" height={height} aria-hidden="true">
 				<path className={s.path} d={head < 0 ? '' : segment(bomb ? bombAt + 1 : head, last)} stroke="#D3D6E0" />
 				<path className={s.path} d={segment(0, head < 0 ? last : head)} stroke="#14B866" />
+				{skipAt && <path className={s.path} d={curve([skipAt, points[0]])} stroke="#D3D6E0" />}
 			</svg>
+
+			{skipAt && skip && (
+				<div className={`${s.node} ${pop === skipId ? s.open : ''}`} style={{ left: skipAt[0], top: skipAt[1] }}>
+					<span className={s.skipTag}>HỌC VƯỢT</span>
+					<button type="button" aria-label={`Học vượt tới ${stage.name}`} className={`${s.press} ${s.skipButton}`} onClick={() => onPop(pop === skipId ? null : skipId)}>
+						<ForwardIcon size={30} />
+					</button>
+					{pop === skipId && (
+						<div className={s.pop}>
+							<div className={s.popCard}>
+								<div className={s.popTitle}>
+									Học vượt tới <MathInline text={stage.name} />
+								</div>
+								<p className={s.popCopy}>
+									{skip.review
+										? 'Lần vượt trước còn vài phần chưa vững. Ôn xong ở Nhiệm vụ rồi thử lại nha.'
+										: 'Làm một bài trộn các chặng phía trước. Đạt là mở khoá luôn chặng này.'}
+								</p>
+								<Link href={skip.review ? '/practice' : examHref(skipId, 'skip')} className={`${s.cta} ${s.green}`}>
+									{skip.review ? 'Đi ôn ngay' : 'Học vượt'}
+								</Link>
+							</div>
+						</div>
+					)}
+				</div>
+			)}
 
 			{bomb && after && bombPhase !== 'pop' && (
 				<svg className={s.svg} width="520" height={height} aria-hidden="true">
