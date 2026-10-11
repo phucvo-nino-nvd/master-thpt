@@ -212,7 +212,7 @@ export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextSh
 							<div className={s.active}>
 								<span className={s.halo} />
 								<svg className={s.ring} width="108" height="108" viewBox="0 0 108 108" aria-hidden="true">
-									<circle cx="54" cy="54" r="50" fill="none" stroke="#E4E5F0" strokeWidth="6" />
+									<circle cx="54" cy="54" r="50" stroke="#E4E5F0" strokeWidth="6" />
 								</svg>
 								<button type="button" aria-label={nameOf(i)} onClick={tap} className={`${s.press} ${s.activeButton}`}>
 									{i + 1}

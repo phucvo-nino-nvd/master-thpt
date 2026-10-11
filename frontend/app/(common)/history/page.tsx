@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useAccount } from '@/components/account-provider';
+import { CamelLoading } from '@/components/camel-loading';
 import page from '@/components/page.module.css';
 import card from '@/components/exam-card.module.css';
 import { Rail } from '@/components/rail';
@@ -100,7 +101,7 @@ function Month({ learned, today }: { learned: Set<string>; today: Date }) {
 export default function HistoryPage() {
 	const { account } = useAccount();
 	const mounted = useMounted();
-	const { data: history, error } = useLoad(getHistoryList, []);
+	const { data: history, loading, error } = useLoad(getHistoryList, []);
 	const { data: documents } = useLoad(getDocuments, []);
 	const { data: quest } = useLoad<Quest | null>(getQuest, null);
 	const [kind, setKind] = useState<Kind | 'all'>('all');
@@ -117,6 +118,8 @@ export default function HistoryPage() {
 	const groups = [...Map.groupBy(list, (attempt) => attempt.exam_id).values()];
 	const learned = new Set([...history.map((attempt) => dayKey(new Date(attempt.created_at))), ...account.activity.map((day) => day.date)]);
 	const milestone = STREAK_MILESTONES.find((value) => value > account.streak) ?? account.streak;
+
+	if (loading) return <CamelLoading title="Đang tải lịch sử…" />;
 
 	return (
 		<div className={page.withRail}>
