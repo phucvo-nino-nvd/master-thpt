@@ -7,7 +7,7 @@ import { WEEKDAYS, docKind, examHref, hoursLeftToday, streakHue, weekdayIndex } 
 import { sourceHref } from '@/lib/processing';
 import { DocumentItem, getDocuments } from '@/shared/api/client';
 import { useAccount } from './account-provider';
-import { BoltIcon, CheckIcon, FlameIcon, TargetIcon, TrophyIcon } from './icons';
+import { BoltIcon, CheckIcon, TargetIcon, TrophyIcon } from './icons';
 import { Rive } from './rive';
 import s from './rail.module.css';
 
@@ -27,10 +27,6 @@ export function StatPills() {
 
 	return (
 		<div className={s.pills}>
-			<div className={s.pill}>
-				<FlameIcon className={s.flicker} />
-				{account.streak}
-			</div>
 			<div className={`${s.pill} ${s.xp}`}>
 				<BoltIcon />
 				{account.xp.toLocaleString('vi-VN')} XP
@@ -87,7 +83,7 @@ export function DailyQuests() {
 			</div>
 			{account.daily.map((task, i) => (
 				<div key={task.id} className={`${s.task} ${i % 2 ? s.indigo : ''}`}>
-					<span className={s.taskIcon}>{i % 2 ? <TargetIcon stroke="#4A48E8" /> : <BoltIcon size={20} />}</span>
+					<span className={s.taskIcon}>{i % 2 ? <TargetIcon stroke="#4A48E8" /> : <BoltIcon size={34} />}</span>
 					<div className={s.taskBody}>
 						<div className={s.taskTitle}>{task.title}</div>
 						<div className={s.bar}>
@@ -116,7 +112,7 @@ export function ArenaCard() {
 		<div className={s.arena}>
 			<div className={s.arenaHead}>
 				<span className={s.cup}>
-					<TrophyIcon size={24} />
+					<TrophyIcon size={36} />
 				</span>
 				<div>
 					<div className={s.kicker}>ĐẤU TRƯỜNG THI THỬ</div>

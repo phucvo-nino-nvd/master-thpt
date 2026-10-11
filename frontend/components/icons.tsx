@@ -128,14 +128,30 @@ export const BookmarkIcon = ({ size = 18, filled, ...p }: IconProps & { filled?:
 );
 
 export const FlameIcon = (p: IconProps) => (
-	<svg {...line({ color: 'var(--coral)', ...p })}>
-		<path d="M12 3c1 4 7 6 7 12a7 7 0 0 1-14 0c0-3 1.5-5 3-6 .2 2 1.2 3.3 3 4 0-4 .2-7 1-10Z" />
+	<svg {...line({ stroke: 'none', ...p })}>
+		<defs>
+			<linearGradient id="flame-shine" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#FFA24D" />
+				<stop offset="0.6" stopColor="#FF7A1F" />
+				<stop offset="1" stopColor="#F2541B" />
+			</linearGradient>
+		</defs>
+		<path d="M12.4 1.8Q13.4 1.2 14 2.2C15.4 5 20 8.2 20 14.6A8 8 0 0 1 4 14.6C4 11.4 5.4 9.2 7 7.8Q7.9 7.1 8.2 8.2Q8.6 10 9.8 10.8C9.6 7.4 10.6 3.6 12.4 1.8Z" fill="url(#flame-shine)" />
+		<path d="M11.6 12.6Q12 12.1 12.5 12.6C13.8 14 15.6 15.2 15.6 17.6A3.6 3.6 0 0 1 8.4 17.6C8.4 15.6 10 14.2 11.6 12.6Z" fill="#FFE066" />
 	</svg>
 );
 
 export const BoltIcon = (p: IconProps) => (
-	<svg {...line({ color: 'var(--gold-ink)', ...p })}>
-		<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+	<svg {...line({ stroke: 'none', ...p })}>
+		<defs>
+			<linearGradient id="bolt-shine" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#FFE066" />
+				<stop offset="0.55" stopColor="#FFC21A" />
+				<stop offset="1" stopColor="#F5A300" />
+			</linearGradient>
+		</defs>
+		<path d="M10.2 13.8H6Q4 13.8 5 12Q8.2 6.2 13.6 2.4C15 .9 17.8 1.6 17 3.8Q16.4 6.8 14.6 9.4Q14.3 10 15 10H19.2Q21.2 10 20.2 11.8Q17 17.6 11.6 21.4C10.2 22.9 7.4 22.2 8.2 20Q8.8 17 10.6 14.4Q10.9 13.8 10.2 13.8Z" fill="url(#bolt-shine)" />
+		<path d="M13.8 4.4Q11 6.6 8.8 10.2" stroke="#fff" strokeWidth="1.8" opacity="0.75" />
 	</svg>
 );
 
@@ -146,8 +162,28 @@ export const CrownIcon = (p: IconProps) => (
 );
 
 export const TrophyIcon = (p: IconProps) => (
-	<svg {...line({ size: 48, color: 'var(--gold-ink)', ...p })}>
-		<path d="M7 3h10v6a5 5 0 0 1-10 0ZM7 5H3v3a4 4 0 0 0 4 4m10-7h4v3a4 4 0 0 1-4 4m-5 2v4m-4 3v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1ZM6 21h12" />
+	<svg {...line({ size: 48, stroke: 'none', ...p })}>
+		<defs>
+			<linearGradient id="trophy-cup" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#FFE066" />
+				<stop offset="0.55" stopColor="#FFC21A" />
+				<stop offset="1" stopColor="#F5A300" />
+			</linearGradient>
+			<linearGradient id="trophy-arm" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#FFAA5C" />
+				<stop offset="1" stopColor="#F0761E" />
+			</linearGradient>
+			<linearGradient id="trophy-base" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#7A76A0" />
+				<stop offset="1" stopColor="#4E4A6B" />
+			</linearGradient>
+		</defs>
+		<path d="M7 5.2H4.4Q2.6 5.2 3 7.4Q3.6 10.8 7.6 12.4M17 5.2H19.6Q21.4 5.2 21 7.4Q20.4 10.8 16.4 12.4" stroke="url(#trophy-arm)" strokeWidth="1.9" strokeLinecap="round" fill="none" />
+		<path d="M10.5 13.6H13.5L13.1 18.4H10.9Z" fill="url(#trophy-arm)" />
+		<path d="M6.6 2.4H17.4Q18.4 2.4 18.3 3.4L17.6 10.4Q17.2 14.4 12 14.4Q6.8 14.4 6.4 10.4L5.7 3.4Q5.6 2.4 6.6 2.4Z" fill="url(#trophy-cup)" />
+		<path d="M12.00 4.50L12.85 6.43L14.95 6.64L13.38 8.05L13.82 10.11L12.00 9.05L10.18 10.11L10.62 8.05L9.05 6.64L11.15 6.43Z" fill="#fff" stroke="#fff" strokeWidth="0.9" strokeLinejoin="round" />
+		<path d="M8.4 18H15.6Q16.6 18 16.8 19L17.2 21.2Q17.4 22.4 16.2 22.4H7.8Q6.6 22.4 6.8 21.2L7.2 19Q7.4 18 8.4 18Z" fill="url(#trophy-base)" />
+		<path d="M9.9 19.7H14.1L14.4 20.9H9.6Z" fill="#fff" stroke="#fff" strokeWidth="0.6" strokeLinejoin="round" />
 	</svg>
 );
 
