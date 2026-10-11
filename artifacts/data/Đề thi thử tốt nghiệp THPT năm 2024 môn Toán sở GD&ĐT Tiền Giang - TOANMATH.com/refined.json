@@ -177,7 +177,7 @@
       "section": null,
       "number": "4",
       "type": "multiple_choice",
-      "content": "Cho hàm số $y = f(x)$ liên tục trên $\\mathbb{R}$ và có bảng xét dấu đạo hàm như sau:\n\n<table>\n<tr><td>$x$</td><td>$-\\infty$</td><td>-1</td><td>0</td><td>1</td><td>2</td><td>$+\\infty$</td></tr>\n<tr><td>$y'$</td><td>+</td><td>0</td><td>-</td><td>0</td><td>+</td><td>-</td></tr>\n</table>\n\nHàm số đã cho có bao nhiêu điểm cực trị?",
+      "content": "Cho hàm số $y = f(x)$ liên tục trên $\\mathbb{R}$ và có bảng xét dấu đạo hàm như sau:\n\n<table>\n<tr><td>$x$</td><td>$-\\infty$</td><td></td><td>$-1$</td><td></td><td>$0$</td><td></td><td>$1$</td><td></td><td>$2$</td><td></td><td>$+\\infty$</td></tr>\n<tr><td>$y'$</td><td></td><td>+</td><td>0</td><td>-</td><td>0</td><td>+</td><td>||</td><td>-</td><td>0</td><td>+</td><td></td></tr>\n</table>\n\nHàm số đã cho có bao nhiêu điểm cực trị?",
       "options": [
         {
           "label": "A",
@@ -198,7 +198,7 @@
       ],
       "parts": [],
       "images": [],
-      "solution": "Cho hàm số $y = f(x)$ liên tục trên $\\mathbb{R}$ và có bảng xét dấu đạo hàm như sau:\n\n<table>\n<tr><td>$x$</td><td>$-\\infty$</td><td></td><td>$-1$</td><td></td><td>$0$</td><td></td><td>$1$</td><td></td><td>$2$</td><td></td><td>$+\\infty$</td></tr>\n<tr><td>$y'$</td><td></td><td>+</td><td>0</td><td>-</td><td>0</td><td>+</td><td></td><td>-</td><td>0</td><td>+</td><td></td></tr>\n</table>\n\nHàm số đã cho có bao nhiêu cực trị?\n\nA. 2.                      B. 4.                      C. 3.                      D. 1.\n\nLời giải\n\nChọn B\n\nTa có: Dựa vào bảng xét dấu ta thấy hàm số đã cho có 4 điểm cực trị.",
+      "solution": "Cho hàm số $y = f(x)$ liên tục trên $\\mathbb{R}$ và có bảng xét dấu đạo hàm như sau:\n\n<table>\n<tr><td>$x$</td><td>$-\\infty$</td><td></td><td>$-1$</td><td></td><td>$0$</td><td></td><td>$1$</td><td></td><td>$2$</td><td></td><td>$+\\infty$</td></tr>\n<tr><td>$y'$</td><td></td><td>+</td><td>0</td><td>-</td><td>0</td><td>+</td><td>||</td><td>-</td><td>0</td><td>+</td><td></td></tr>\n</table>\n\nHàm số đã cho có bao nhiêu cực trị?\n\nA. 2.                      B. 4.                      C. 3.                      D. 1.\n\nLời giải\n\nChọn B\n\nTa có: Dựa vào bảng xét dấu ta thấy hàm số đã cho có 4 điểm cực trị.",
       "source_blocks": [
         {
           "id": "/page/0/Text/13",
