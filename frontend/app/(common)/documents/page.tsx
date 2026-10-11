@@ -79,11 +79,6 @@ export default function DocumentsPage() {
 							<button type="button" className={`${page.chip} ${s.saved} ${savedOnly ? s.on : ''}`} onClick={() => setSavedOnly(!savedOnly)}>
 								Đề đã lưu · {savedIds.length}
 							</button>
-							{pick && (
-								<Link href={examHref(pick.id, 'exam')} className={s.quick}>
-									LUYỆN ĐỀ NHANH
-								</Link>
-							)}
 						</div>
 					</div>
 
