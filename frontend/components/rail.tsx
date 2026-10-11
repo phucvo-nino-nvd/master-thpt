@@ -3,13 +3,20 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { useLoad, useMounted } from '@/lib/api';
-import { WEEKDAYS, examHref, hoursLeftToday, streakHue, weekdayIndex } from '@/lib/format';
-import { selectOfficialExam } from '@/lib/documents';
-import { getDocuments } from '@/shared/api/client';
+import { WEEKDAYS, docKind, examHref, hoursLeftToday, streakHue, weekdayIndex } from '@/lib/format';
+import { sourceHref } from '@/lib/processing';
+import { DocumentItem, getDocuments } from '@/shared/api/client';
 import { useAccount } from './account-provider';
 import { BoltIcon, CheckIcon, FlameIcon, TargetIcon, TrophyIcon } from './icons';
 import { Rive } from './rive';
 import s from './rail.module.css';
+
+const OFFICIAL_RE = /chính thức|kỳ thi tốt nghiệp THPT/i;
+
+function selectOfficialExam(documents: DocumentItem[]) {
+	const official = documents.filter((doc) => docKind(doc.title) === 'official' && OFFICIAL_RE.test(doc.title) && sourceHref(doc.source));
+	return official.find((doc) => !doc.is_completed) ?? official[0];
+}
 
 export function Rail({ children }: { children: ReactNode }) {
 	return <aside className={s.rail}>{children}</aside>;

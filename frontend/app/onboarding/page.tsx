@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import { useAccount } from '@/components/account-provider';
+import { BrandRow } from '@/components/auth-shell';
+import { CamelArt, CamelLoading } from '@/components/camel-loading';
 import { CheckIcon, ChevronLeftIcon } from '@/components/icons';
 import { Rive } from '@/components/rive';
 import { MathInline } from '@/features/exams/components/math-text';
@@ -17,7 +19,6 @@ import s from './onboarding.module.css';
 
 const STEPS = ['welcome', 'source', 'goal', 'time', 'start', 'loading', 'streak', 'save', 'done'] as const;
 const QUESTIONS = ['source', 'goal', 'time', 'start'] as const;
-const LOAD_START_MS = 60;
 const LOADING_MS = 2400;
 const DEFAULTS = { goal: '8', time: '20' };
 const STATION_PASS_RATE = 0.8;
@@ -119,7 +120,6 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 	const { name, save, reload } = useAccount();
 	const [index, setIndex] = useState(RESUMABLE.includes(searchParams.step ?? '') ? STEPS.indexOf(searchParams.step as Step) : 0);
 	const [answers, setAnswers] = useState<Answers>({});
-	const [loaded, setLoaded] = useState(false);
 	const [finishing, setFinishing] = useState(searchParams.step === 'done');
 	const finished = useRef(false);
 	const step = STEPS[index];
@@ -141,17 +141,12 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 
 	useEffect(() => {
 		if (step !== 'loading') return;
-		const fill = setTimeout(() => setLoaded(true), LOAD_START_MS);
 		const next = setTimeout(() => {
 			writePending(ANSWERS_KEY, answers);
 			if (signedIn) setIndex(STEPS.indexOf('save'));
 			else router.push(`/exams/guest?mode=${answers.start === 'mock' ? 'placement' : 'checkpoint'}`);
 		}, LOADING_MS);
-		return () => {
-			clearTimeout(fill);
-			clearTimeout(next);
-			setLoaded(false);
-		};
+		return () => clearTimeout(next);
 	}, [step, signedIn]);
 
 	useEffect(() => {
@@ -179,15 +174,6 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 			.then(([href]) => router.replace(href))
 			.catch(() => setFinishing(false));
 	}, [step, isLoaded, signedIn]);
-
-	useEffect(() => {
-		if (!finishing) return;
-		const fill = setTimeout(() => setLoaded(true), LOAD_START_MS);
-		return () => {
-			clearTimeout(fill);
-			setLoaded(false);
-		};
-	}, [finishing]);
 
 	const createProfile = () => {
 		writePending(ANSWERS_KEY, answers);
@@ -217,12 +203,7 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 
 			{step === 'welcome' && (
 				<>
-					<div className={s.brandRow}>
-						<div className={s.brand}>
-							<span className={s.mark}>M</span>MASTER THPT
-						</div>
-						<span className={s.subject}>MÔN TOÁN · LỚP 12</span>
-					</div>
+					<BrandRow />
 					<div className={s.welcome}>
 						<div className={s.mascot}>
 							<Rive src="mascot_hello" knockout fit="cover" fireonload trigger="clic salut|welcome" bool="detect mouse=true" />
@@ -275,21 +256,13 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 			)}
 
 			{(step === 'loading' || finishing) && (
-				<div className={s.center}>
-					<picture className={s.loadingArt}>
-						<source media="(prefers-reduced-motion: reduce)" srcSet="/illustrations/roadmap-camel-still.jpg" />
-						<img src="/illustrations/roadmap-camel.gif" alt="" width={800} height={600} />
-					</picture>
-					<div className={s.loadingTitle}>Đang xếp lộ trình Lớp 12 cho em…</div>
-					<div className={s.loadTrack}>
-						<span style={{ width: loaded ? '100%' : '0%' }} />
-					</div>
+				<CamelLoading title="Đang xếp lộ trình Lớp 12 cho em…">
 					<div className={s.chips}>
 						<span className={s.chip}>Lớp 12</span>
 						<span className={s.chip}>Mục tiêu {plan.goal}+</span>
 						<span className={s.chip}>{plan.time} phút / ngày</span>
 					</div>
-				</div>
+				</CamelLoading>
 			)}
 
 			{step === 'streak' && !scored && (
@@ -368,10 +341,7 @@ export default function OnboardingPage({ searchParams }: { searchParams: { step?
 
 			{step === 'done' && !finishing && (
 				<div className={s.center}>
-					<picture className={s.loadingArt}>
-						<source media="(prefers-reduced-motion: reduce)" srcSet="/illustrations/roadmap-camel-still.jpg" />
-						<img src="/illustrations/roadmap-camel.gif" alt="" width={800} height={600} />
-					</picture>
+					<CamelArt />
 					<h1 className={s.doneTitle}>Chào mừng {firstName} vào lớp!</h1>
 					<p className={s.doneCopy}>
 						Lớp 12 · mục tiêu {plan.goal}+ · {plan.time} phút mỗi ngày

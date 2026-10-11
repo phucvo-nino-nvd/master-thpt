@@ -57,6 +57,23 @@
 	font-weight: 600;
 }
 
+.bombFocus {
+	background: var(--coral);
+	box-shadow: 0 7px 0 var(--coral-2);
+}
+
+.bombFocus .blobA,
+.bombFocus .blobB {
+	display: none;
+}
+
+.note {
+	margin-top: 14px;
+	color: var(--indigo-soft);
+	font-size: 13px;
+	font-weight: 700;
+}
+
 .focus {
 	position: relative;
 	padding: 24px 26px 26px;
@@ -139,17 +156,6 @@
 	line-height: 1.55;
 }
 
-.count {
-	text-align: right;
-	font: 800 56px/0.9 var(--sans);
-	letter-spacing: -0.05em;
-}
-
-.count small {
-	color: #afafff;
-	font-size: 22px;
-}
-
 .eta {
 	margin-top: 6px;
 	color: var(--indigo-soft);
@@ -225,89 +231,6 @@
 .ghost:active {
 	transform: translateY(4px);
 	box-shadow: none;
-}
-
-.next {
-	display: flex;
-	align-items: center;
-	gap: 16px;
-	padding: 16px 18px;
-	border: 2px solid var(--indigo-soft);
-	border-radius: 22px;
-	background: #fff;
-	box-shadow: 0 4px 0 var(--indigo-soft);
-	color: var(--ink);
-	transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.next:hover {
-	color: var(--ink);
-	transform: translateY(-2px);
-	box-shadow: 0 6px 0 var(--indigo-soft);
-}
-
-.next:active {
-	transform: translateY(4px);
-	box-shadow: 0 0 0 var(--indigo-soft);
-}
-
-.glyph {
-	display: grid;
-	place-items: center;
-	width: 58px;
-	height: 58px;
-	flex: none;
-	border-radius: 50%;
-	background: var(--indigo);
-	box-shadow: 0 5px 0 var(--indigo-3);
-	color: #fff;
-	font: 800 28px/1 var(--sans);
-}
-
-.next.bomb .glyph,
-.next.bomb .nextGo {
-	background: var(--coral);
-	box-shadow: 0 4px 0 var(--coral-2);
-}
-
-.nextBody {
-	flex: 1;
-	min-width: 0;
-}
-
-.nextKicker {
-	color: var(--indigo);
-	font-size: 11px;
-	font-weight: 800;
-	letter-spacing: 0.08em;
-}
-
-.bomb .nextKicker {
-	color: var(--coral-2);
-}
-
-.nextTitle {
-	margin-top: 3px;
-	font-size: 17px;
-	font-weight: 800;
-}
-
-.nextCopy {
-	margin-top: 2px;
-	color: var(--muted);
-	font-size: 13px;
-	font-weight: 600;
-}
-
-.nextGo {
-	padding: 12px 16px;
-	border-radius: 14px;
-	background: var(--indigo);
-	box-shadow: 0 4px 0 var(--indigo-3);
-	color: #fff;
-	font-size: 13px;
-	font-weight: 800;
-	white-space: nowrap;
 }
 
 .gains {

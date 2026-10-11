@@ -16,9 +16,7 @@ export function Plans({ run, onCheckout }: { run: (task: () => Promise<void>) =>
 	const { session } = useClerk();
 	const pro = account.plan === 'pro';
 
-	const update = (patch: AccountUpdate) => run(async () => {
-			await save(patch);
-		});
+	const update = (patch: AccountUpdate) => run(() => save(patch));
 
 	const upgraded = () =>
 		run(async () => {

@@ -3,15 +3,21 @@ import { ReactNode } from 'react';
 import { Rive } from './rive';
 import s from './auth-shell.module.css';
 
+export function BrandRow() {
+	return (
+		<div className={s.brandRow}>
+			<Link href="/" className={s.brand}>
+				<span className={s.mark}>M</span>MASTER THPT
+			</Link>
+			<span className={s.subject}>MÔN TOÁN · LỚP 12</span>
+		</div>
+	);
+}
+
 export function AuthShell({ title, note, children }: { title: string; note: string; children: ReactNode }) {
 	return (
 		<div className={s.screen}>
-			<div className={s.brandRow}>
-				<Link href="/" className={s.brand}>
-					<span className={s.mark}>M</span>MASTER THPT
-				</Link>
-				<span className={s.subject}>MÔN TOÁN · LỚP 12</span>
-			</div>
+			<BrandRow />
 			<div className={s.body}>
 				<div className={s.side}>
 					<div className={s.mascot}>

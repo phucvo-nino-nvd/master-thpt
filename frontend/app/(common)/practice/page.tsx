@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useAccount } from '@/components/account-provider';
+import { CamelLoading } from '@/components/camel-loading';
 import page from '@/components/page.module.css';
 import { DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
 import { useLoad, useMounted } from '@/lib/api';
@@ -23,7 +24,7 @@ export default function PracticePage() {
 	const mounted = useMounted();
 	const [picked, setPicked] = useState<number | null>(null);
 	const goal = picked ?? account.settings.daily_goal;
-	const { data: review, error } = useLoad<Exam | null>(getReview, null);
+	const { data: review, loading, error } = useLoad<Exam | null>(getReview, null);
 	const { data: history } = useLoad(getHistoryList, []);
 	const total = review?.questions.length ?? 0;
 	const now = new Date();
@@ -36,6 +37,8 @@ export default function PracticePage() {
 		setPicked(value);
 		save({ settings: { daily_goal: value } }).catch(() => {});
 	};
+
+	if (loading) return <CamelLoading title="Đang soạn nhiệm vụ hôm nay…" />;
 
 	return (
 		<div className={page.withRail}>
@@ -80,10 +83,15 @@ export default function PracticePage() {
 								{total ? `${Math.min(goal, total)} câu trộn từ những gì em đã học` : 'Chưa có bài luyện hôm nay'}
 							</h2>
 							<p className={`${s.layer} ${s.todayCopy}`}>
-								{total
-									? 'Bài mới mỗi ngày, không theo chặng. Câu em từng sai được đưa lại đúng lúc sắp quên.'
-									: 'Qua vài trạm ở Lộ trình trước nha. Làm xong là mai có bài trộn riêng cho em.'}
+								{!total
+									? 'Qua vài trạm ở Lộ trình trước nha. Làm xong là mai có bài trộn riêng cho em.'
+									: total < goal
+										? `Hôm nay mới có ${total} câu đến hạn ôn, chưa đủ mục tiêu ${goal} câu.`
+										: 'Bài mới mỗi ngày, không theo chặng. Câu em từng sai được đưa lại đúng lúc sắp quên.'}
 							</p>
+							{total > 0 && (
+								<p className={`${s.layer} ${s.todayCopy}`}>Cơ cấu dự kiến cho mục tiêu {goal} câu:</p>
+							)}
 							{total > 0 && (
 								<div className={`${s.layer} ${s.mix}`}>
 									{MIX[goal].map((count, i) => (

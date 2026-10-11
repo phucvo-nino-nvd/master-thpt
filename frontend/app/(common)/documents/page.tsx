@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useAccount } from '@/components/account-provider';
+import { CamelLoading } from '@/components/camel-loading';
 import { BookmarkIcon, SearchIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
 import card from '@/components/exam-card.module.css';
@@ -34,7 +35,7 @@ function orgOf(source: string) {
 
 export default function DocumentsPage() {
 	const { account, save } = useAccount();
-	const { data: documents, error } = useLoad(getDocuments, []);
+	const { data: documents, loading, error } = useLoad(getDocuments, []);
 	const { data: history } = useLoad(getHistoryList, []);
 	const { data: graph } = useLoad<KnowledgeGraph | null>(getKnowledgeGraph, null);
 	const [kind, setKind] = useState<DocKind | 'all'>('all');
@@ -66,6 +67,8 @@ export default function DocumentsPage() {
 		save({ saved_exam_ids: next }).catch(() => {});
 	};
 
+	if (loading) return <CamelLoading title="Đang tải kho đề…" />;
+
 	return (
 		<div className={page.withRail}>
 			<main className={page.main}>
@@ -73,7 +76,7 @@ export default function DocumentsPage() {
 					<div className={page.head}>
 						<h1 className={page.title}>Kho đề thi</h1>
 						<div className={s.actions}>
-							<button type="button" className={`${s.saved} ${savedOnly ? s.on : ''}`} onClick={() => setSavedOnly(!savedOnly)}>
+							<button type="button" className={`${page.chip} ${s.saved} ${savedOnly ? s.on : ''}`} onClick={() => setSavedOnly(!savedOnly)}>
 								Đề đã lưu · {savedIds.length}
 							</button>
 							{pick && (

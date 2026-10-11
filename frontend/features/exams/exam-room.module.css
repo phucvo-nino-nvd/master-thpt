@@ -211,6 +211,17 @@
 	line-height: 1.5;
 }
 
+.retry {
+	padding: 0;
+	border: 0;
+	background: none;
+	color: inherit;
+	font: inherit;
+	font-weight: 800;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 .options {
 	display: flex;
 	flex-direction: column;

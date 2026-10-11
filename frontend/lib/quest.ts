@@ -2,7 +2,7 @@ import type { HistoryMode, Quest, QuestStage, QuestStation } from '@/shared/api/
 
 type QuestSpot = { stage: QuestStage; index: number; item: QuestStation };
 
-type QuestStep = { id: string; title: string; short: string; mode: HistoryMode; bomb: boolean; total: number };
+type QuestStep = { id: string; title: string; name: string; short: string; mode: HistoryMode; bomb: boolean; total: number };
 
 export const OBSTACLE_PREFIX = 'obstacle:';
 
@@ -28,6 +28,7 @@ export function questStep(quest: Quest | null): QuestStep | null {
 		return {
 			id: quest.obstacle.id,
 			title: `Bom ôn tập: ${spot?.item.name ?? ''}`,
+			name: spot?.item.name ?? '',
 			short: 'Bom ôn tập',
 			mode: 'obstacle',
 			bomb: true,
@@ -37,14 +38,14 @@ export function questStep(quest: Quest | null): QuestStep | null {
 
 	if (!quest.placement.done) {
 		return quest.placement.probe
-			? { id: quest.placement.probe, title: 'Bài xác định trình độ', short: 'Bài xác định', mode: 'placement', bomb: false, total: 0 }
+			? { id: quest.placement.probe, title: 'Bài xác định trình độ', name: 'Bài xác định trình độ', short: 'Bài xác định', mode: 'placement', bomb: false, total: 0 }
 			: null;
 	}
 
 	const spot = locate(quest, quest.current);
 
 	return spot
-		? { id: spot.item.id, title: fullName(spot), short: shortName(spot), mode: 'checkpoint', bomb: false, total: spot.item.total_questions }
+		? { id: spot.item.id, title: fullName(spot), name: spot.item.name, short: shortName(spot), mode: 'checkpoint', bomb: false, total: spot.item.total_questions }
 		: null;
 }
 

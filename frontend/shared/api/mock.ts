@@ -1,5 +1,6 @@
 import { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import { XP_PER_CORRECT, dayKey } from '@/lib/format';
+import { XP_PER_CORRECT, dayKey, weekdayIndex } from '@/lib/format';
+import { OBSTACLE_PREFIX } from '@/lib/quest';
 import { ACCOUNT } from './account';
 import type {
 	AccountUpdate,
@@ -109,7 +110,7 @@ function reward(answered: number, correct: number) {
 	if (!account.kept_today) {
 		account.kept_today = true;
 		account.streak += 1;
-		account.week[(new Date().getDay() + 6) % 7] = true;
+		account.week[weekdayIndex()] = true;
 	}
 }
 
@@ -140,7 +141,7 @@ function progressQuest(examId: string, passed: boolean) {
 		}
 
 		db.quest.obstacle = null;
-		const item = questItem(examId.replace('obstacle:', ''));
+		const item = questItem(examId.replace(OBSTACLE_PREFIX, ''));
 		if (item) item.status = 'current';
 		return;
 	}
@@ -150,7 +151,7 @@ function progressQuest(examId: string, passed: boolean) {
 
 	item.status = passed ? 'passed' : 'blocked';
 	if (passed && db.quest.stages.some((stage) => stage.id === examId)) db.account.xp += XP_PER_CUP;
-	db.quest.obstacle = passed ? null : { id: `obstacle:${item.id}`, depth: 1, knowledge_ids: [], total_questions: OBSTACLE_SIZE };
+	db.quest.obstacle = passed ? null : { id: `${OBSTACLE_PREFIX}${item.id}`, depth: 1, knowledge_ids: [], total_questions: OBSTACLE_SIZE };
 	advanceQuest();
 }
 
@@ -175,7 +176,7 @@ function questTest(id: string): Exam {
 	const obstacle = db.quest.obstacle;
 
 	if (obstacle && id === obstacle.id) {
-		return examOf(id, `Chướng ngại: ${questItem(id.replace('obstacle:', ''))?.name ?? ''}`, db.review.slice(0, OBSTACLE_SIZE));
+		return examOf(id, `Chướng ngại: ${questItem(id.replace(OBSTACLE_PREFIX, ''))?.name ?? ''}`, db.review.slice(0, OBSTACLE_SIZE));
 	}
 
 	const index = questItems().findIndex((item) => item.id === id);
@@ -272,7 +273,10 @@ function route(method: string, path: string[], params: Record<string, string>, b
 			return examOf(id, questItem(id)?.name ?? 'Luyện tập', reviewed.questions.map((entry) => entry.question_id));
 		}
 		case 'get review':
-			return examOf(`review:${today()}`, 'Nhiệm vụ hôm nay', db.review);
+			return {
+				...examOf(`review:${today()}`, 'Nhiệm vụ hôm nay', db.review),
+				focus: { knowledge: 'Tích phân từng phần', reason: 'Vì lần trước em quên trừ $\\int_0^1 e^x dx$ khi tính tích phân từng phần.', seconds_per_question: 90 },
+			};
 		case 'get knowledge_graph':
 			return { nodes: db.knowledge, edges: [], streak: db.account.streak };
 		case 'get quest':

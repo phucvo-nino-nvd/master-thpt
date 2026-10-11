@@ -17,6 +17,8 @@ export type ExamQuestion = {
 	station?: string;
 };
 
+export type ReviewFocus = { knowledge: string | null; reason: string | null; seconds_per_question: number };
+
 export type Exam = {
 	exam_id: string;
 	title: string;
@@ -25,6 +27,7 @@ export type Exam = {
 	total_questions: number;
 	duration_minutes: number;
 	questions: ExamQuestion[];
+	focus?: ReviewFocus;
 };
 
 export type DocumentItem = {

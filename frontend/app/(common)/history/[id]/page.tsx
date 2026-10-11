@@ -1,5 +1,6 @@
 'use client';
 
+import { CamelLoading } from '@/components/camel-loading';
 import page from '@/components/page.module.css';
 import { ExamRoom } from '@/features/exams/exam-room';
 import { useLoad } from '@/lib/api';
@@ -21,13 +22,15 @@ async function loadReview(id: string) {
 
 export default function HistoryDetailPage({ params }: { params: { id: string } }) {
 	const id = decodeURIComponent(params.id);
-	const { data, error } = useLoad(() => loadReview(id), null, [id]);
+	const { data, loading, error } = useLoad(() => loadReview(id), null, [id]);
+
+	if (loading) return <CamelLoading title="Đang mở bài làm…" />;
 
 	if (!data?.exam.questions.length) {
 		return (
 			<main className={page.main}>
 				<div className={page.inner}>
-					{error ? <div className={page.error}>{error}</div> : <div className={page.empty}>{data ? 'Lượt này chưa lưu câu trả lời nào.' : 'Đang mở bài làm…'}</div>}
+					{error ? <div className={page.error}>{error}</div> : <div className={page.empty}>Lượt này chưa lưu câu trả lời nào.</div>}
 				</div>
 			</main>
 		);

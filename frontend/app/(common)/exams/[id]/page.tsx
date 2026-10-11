@@ -1,5 +1,6 @@
 'use client';
 
+import { CamelLoading } from '@/components/camel-loading';
 import page from '@/components/page.module.css';
 import { ExamRoom, QUEST_MODES } from '@/features/exams/exam-room';
 import { useLoad } from '@/lib/api';
@@ -15,13 +16,15 @@ export default function ExamPage({ params, searchParams }: ExamPageProps) {
 		fetch(`/guest/12-${mode}.json`).then((res) => (res.ok ? (res.json() as Promise<Exam>) : Promise.reject(res)));
 	const load = () =>
 		id === 'guest' ? guestExam() : mode === 'review' ? getReview() : QUEST_MODES.includes(mode) ? getQuestTest(id) : getDocument(id);
-	const { data: exam, error } = useLoad<Exam | null>(load, null, [id, mode]);
+	const { data: exam, loading, error } = useLoad<Exam | null>(load, null, [id, mode]);
+
+	if (loading) return <CamelLoading title="Đang mở phòng thi…" />;
 
 	if (!exam?.questions.length) {
 		return (
 			<main className={page.main}>
 				<div className={page.inner}>
-					{error ? <div className={page.error}>{error}</div> : <div className={page.empty}>{exam ? 'Bài này chưa có câu hỏi.' : 'Đang mở phòng thi…'}</div>}
+					{error ? <div className={page.error}>{error}</div> : <div className={page.empty}>Bài này chưa có câu hỏi.</div>}
 				</div>
 			</main>
 		);

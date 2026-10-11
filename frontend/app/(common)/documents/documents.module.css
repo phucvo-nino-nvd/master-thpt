@@ -3,23 +3,6 @@
 	gap: 10px;
 }
 
-.saved {
-	padding: 11px 15px;
-	border: 2px solid var(--line);
-	border-radius: 14px;
-	background: #fff;
-	box-shadow: 0 3px 0 var(--line);
-	color: var(--ink-2);
-	font-size: 13px;
-	font-weight: 800;
-	transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.saved:active {
-	transform: translateY(3px);
-	box-shadow: none;
-}
-
 .saved.on {
 	border-color: var(--gold-soft);
 	background: #fff3c4;

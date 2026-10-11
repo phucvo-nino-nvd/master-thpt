@@ -4,7 +4,7 @@ import { useAuth, useClerk } from '@clerk/nextjs';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { MOCK_ACCOUNT } from '@/shared/api/client';
-import { AVATARS, initialsOf, useAccount } from './account-provider';
+import { avatarBg, initialsOf, useAccount } from './account-provider';
 import { BookIcon, ChecklistIcon, ChevronUpIcon, GearIcon, HistoryIcon, LogoutIcon, RouteIcon, SunIcon, UserIcon } from './icons';
 import s from './sidebar.module.css';
 
@@ -21,7 +21,6 @@ export function Sidebar() {
 	const { signOut } = useClerk();
 	const { isLoaded, isSignedIn } = useAuth();
 	const { account, name } = useAccount();
-	const [from, to] = AVATARS[account.avatar] ?? AVATARS[0];
 
 	if (pathname.startsWith('/exams')) return null;
 
@@ -49,7 +48,7 @@ export function Sidebar() {
 			) : (
 				<details key={pathname} className={s.account}>
 					<summary className={`${s.card} ${pathname.startsWith('/profile') ? s.current : ''}`}>
-						<span className={s.avatar} style={{ background: `linear-gradient(135deg, ${from}, ${to})` }}>
+						<span className={s.avatar} style={{ background: avatarBg(account.avatar) }}>
 							{initialsOf(name)}
 						</span>
 						<span className={s.name}>{name}</span>

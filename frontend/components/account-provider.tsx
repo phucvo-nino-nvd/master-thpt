@@ -46,6 +46,11 @@ const AccountContext = createContext<AccountContextValue>({
 	reload: () => {},
 });
 
+export const avatarBg = (index: number) => {
+	const [from, to] = AVATARS[index] ?? AVATARS[0];
+	return `linear-gradient(135deg, ${from}, ${to})`;
+};
+
 export const initialsOf = (name: string) =>
 	(name.trim().split(/\s+/).map((word) => word[0]).join('').slice(-2) || '?').toUpperCase();
 

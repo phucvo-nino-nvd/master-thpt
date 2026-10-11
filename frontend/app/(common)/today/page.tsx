@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useAccount } from '@/components/account-provider';
-import { TargetIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
 import { ArenaCard, DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
 import { Rive } from '@/components/rive';
@@ -15,7 +14,7 @@ import { Exam, Quest, getQuest, getReview } from '@/shared/api/client';
 import s from './today.module.css';
 
 const MAX_SEGMENTS = 12;
-const MINUTES_PER_QUESTION = 1.5;
+const DEFAULT_SECONDS_PER_QUESTION = 90;
 
 function greetingOf(hour: number, name: string) {
 	if (hour < 12) return `Chào buổi sáng, ${name}!`;
@@ -31,6 +30,44 @@ export default function TodayPage() {
 	const { data: quest } = useLoad<Quest | null>(getQuest, null);
 	const step = questStep(quest);
 	const total = review?.questions.length ?? 0;
+	const daily = account.daily[0];
+	const card = step?.bomb
+		? {
+				kicker: 'GỠ BOM TRƯỚC',
+				title: `Hôm nay: gỡ bom ${step.name}`,
+				count: step.total,
+				reason: 'Vì trạm vừa rồi chưa đủ điểm. Gỡ bom là mở trạm tiếp theo.',
+				href: examHref(step.id, step.mode),
+				cta: 'GỠ BOM',
+			}
+		: review && total
+			? {
+					kicker: 'VIỆC CHÍNH HÔM NAY',
+					title: `Hôm nay: củng cố ${review.focus?.knowledge ?? 'bài đã học'}`,
+					count: total,
+					reason: review.focus?.reason ?? 'Câu em từng sai được đưa lại đúng lúc sắp quên.',
+					href: examHref(review.exam_id, 'review'),
+					cta: 'BẮT ĐẦU LUYỆN',
+				}
+			: step
+				? {
+						kicker: 'KHUYÊN LÀM TRƯỚC',
+						title: step.title,
+						count: step.total,
+						reason: step.mode === 'placement' ? 'Làm vài câu để mình biết em đang ở đâu.' : 'Qua trạm này là mở khoá trạm tiếp theo.',
+						href: examHref(step.id, step.mode),
+						cta: step.mode === 'placement' ? 'LÀM BÀI XÁC ĐỊNH' : 'VÀO TRẠM',
+					}
+				: {
+						kicker: 'BẮT ĐẦU TỪ ĐÂY',
+						title: 'Xếp lộ trình cho em',
+						count: 0,
+						reason: 'Chọn khối rồi làm bài xác định trình độ, mình xếp trạm hợp sức cho em.',
+						href: '/learning_path',
+						cta: 'VÀO LỘ TRÌNH',
+					};
+	const minutes = Math.max(1, Math.round((card.count * (review?.focus?.seconds_per_question ?? DEFAULT_SECONDS_PER_QUESTION)) / 60));
+	const counted = card.count > 0 && !!daily && daily.current < daily.target;
 	const now = new Date();
 	const sub = account.kept_today
 		? 'Lửa hôm nay giữ rồi. Làm thêm là cộng XP thôi.'
@@ -52,71 +89,51 @@ export default function TodayPage() {
 						</div>
 					</div>
 
-					<article className={s.focus}>
+					<article className={`${s.focus} ${step?.bomb ? s.bombFocus : ''}`}>
 						<span className={s.blobA} />
 						<span className={s.blobB} />
 						<div className={`${s.layer} ${s.tags}`}>
-							{total > 0 && <span className={s.deadline}>HẠN HÔM NAY 23:59</span>}
-							<span className={s.kicker}>{total ? 'VIỆC CHÍNH HÔM NAY' : 'BẮT ĐẦU TỪ ĐÂY'}</span>
+							{!step?.bomb && total > 0 && <span className={s.deadline}>HẠN HÔM NAY 23:59</span>}
+							<span className={s.kicker}>{card.kicker}</span>
 						</div>
 						<div className={`${s.layer} ${s.focusBody}`}>
 							<div>
-								<h1 className={s.focusTitle}>{total ? review?.title : 'Xếp lộ trình cho em'}</h1>
+								<h1 className={s.focusTitle}>
+									<MathInline text={card.title} />
+								</h1>
+								{card.count > 0 && (
+									<div className={s.eta}>
+										{card.count} câu · khoảng {minutes} phút
+									</div>
+								)}
 								<p className={s.focusCopy}>
-									{total
-										? `${total} câu trộn từ những gì em đã học. Xử xong là giữ lửa hôm nay.`
-										: 'Chọn khối rồi làm bài xác định trình độ, mình xếp trạm hợp sức cho em.'}
+									<MathInline text={card.reason} />
 								</p>
 							</div>
-							{total > 0 && (
-								<div className={s.count}>
-									{total}
-									<small> câu</small>
-									<div className={s.eta}>còn ~{Math.round(total * MINUTES_PER_QUESTION)} phút</div>
-								</div>
-							)}
 						</div>
-						{total > 0 && (
-							<div className={`${s.layer} ${s.segs}`} style={{ gridTemplateColumns: `repeat(${Math.min(total, MAX_SEGMENTS)}, 1fr)` }}>
-								{Array.from({ length: Math.min(total, MAX_SEGMENTS) }, (_, i) => (
+						{card.count > 0 && (
+							<div className={`${s.layer} ${s.segs}`} style={{ gridTemplateColumns: `repeat(${Math.min(card.count, MAX_SEGMENTS)}, 1fr)` }}>
+								{Array.from({ length: Math.min(card.count, MAX_SEGMENTS) }, (_, i) => (
 									<span key={i} className={`${s.seg} ${i ? '' : s.activeSeg}`} />
 								))}
 							</div>
 						)}
 						<div className={`${s.layer} ${s.actions}`}>
-							<Link href={review && total ? examHref(review.exam_id, 'review') : '/learning_path'} className={s.go}>
-								{total ? 'BẮT ĐẦU NGAY' : 'VÀO LỘ TRÌNH'}
+							<Link href={card.href} className={s.go}>
+								{card.cta}
 							</Link>
-							{total > 0 && (
+							{!step?.bomb && total > 0 && (
 								<Link href="/practice" className={s.ghost}>
 									Xem cả phiếu
 								</Link>
 							)}
 						</div>
+						{counted && (
+							<p className={`${s.layer} ${s.note}`}>
+								Câu đúng ở đây cũng tính vào nhiệm vụ Đúng {daily.target} câu ({daily.current}/{daily.target}).
+							</p>
+						)}
 					</article>
-
-					{step && (
-						<Link href={examHref(step.id, step.mode)} className={`${s.next} ${step.bomb ? s.bomb : ''}`}>
-							<span className={s.glyph} aria-hidden="true">
-								{step.bomb ? '!' : step.mode === 'placement' ? <TargetIcon size={28} /> : step.short.replace('Trạm ', '').replace('Đích', '★')}
-							</span>
-							<div className={s.nextBody}>
-								<div className={s.nextKicker}>
-									{step.bomb ? 'GỠ BOM TRƯỚC' : 'KHUYÊN LÀM TRƯỚC'}
-									{step.total > 0 && ` · ${step.total} CÂU`}
-								</div>
-								<div className={s.nextTitle}><MathInline text={step.title} /></div>
-								<div className={s.nextCopy}>
-									{step.bomb
-										? 'Trạm vừa rồi chưa đủ điểm. Gỡ bom là mở trạm tiếp theo.'
-										: step.mode === 'placement'
-											? 'Làm vài câu để mình biết em đang ở đâu.'
-											: 'Qua trạm này là mở khoá trạm tiếp theo.'}
-								</div>
-							</div>
-							<span className={s.nextGo}>{step.bomb ? 'GỠ BOM →' : 'VÀO TRẠM →'}</span>
-						</Link>
-					)}
 
 					{account.gains.length > 0 && (
 						<div className={s.gains}>

@@ -34,6 +34,7 @@ import { Plans } from '@/components/plans';
 import s from './exam-room.module.css';
 
 const PRACTICE_MODES: HistoryMode[] = ['review', 'practice'];
+const HINT_ERROR = 'Chưa lấy được gợi ý.';
 export const QUEST_MODES: HistoryMode[] = ['checkpoint', 'obstacle', 'placement', 'skip'];
 const TAGS: Record<HistoryMode, string> = {
 	exam: 'Đề thi',
@@ -74,6 +75,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 	);
 	const [flags, setFlags] = useState<Record<string, boolean>>({});
 	const [hints, setHints] = useState<Record<string, string[]>>({});
+	const [pendingHint, setPendingHint] = useState<{ id: string; text: string; error?: string } | null>(null);
 	const [solutions, setSolutions] = useState<Record<string, string>>({});
 	const [threads, setThreads] = useState<Record<string, ChatMessage[]>>({});
 	const [tutorOpen, setTutorOpen] = useState(false);
@@ -94,6 +96,8 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 	const remaining = limit ? Math.max(0, limit - elapsed) : null;
 	const answeredCount = questions.filter((entry) => isAnswered(answers[entry.id])).length;
 	const hintLevel = hints[question.id]?.length ?? 0;
+	const hintLoading = !!pendingHint && !pendingHint.error;
+	const shownPendingHint = pendingHint?.id === question.id ? pendingHint : null;
 
 	const run = async (task: () => Promise<void>, fallback: string) => {
 		setBusy(true);
@@ -178,19 +182,19 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 			reload();
 		}, 'Chưa kiểm tra được câu này.');
 
-	const hint = () =>
-		run(async () => {
-			const id = question.id;
-			let text = '';
-			const write = (value?: string) => setHints((prev) => ({ ...prev, [id]: [...(prev[id] ?? []).slice(0, hintLevel), ...(value === undefined ? [] : [value])] }));
-			write('');
-			try {
-				await askHint(id, hintLevel + 1, answer === undefined ? undefined : toApiAnswer(answer), (chunk) => write((text += chunk)));
-			} catch (failure) {
-				write();
-				throw failure;
-			}
-		}, 'Chưa lấy được gợi ý.');
+	const hint = async () => {
+		const id = question.id;
+		let text = '';
+		setPendingHint({ id, text });
+		try {
+			await askHint(id, hintLevel + 1, answer === undefined ? undefined : toApiAnswer(answer), (chunk) => setPendingHint({ id, text: (text += chunk) }));
+			if (!text.trim()) throw new Error(HINT_ERROR);
+			setHints((prev) => ({ ...prev, [id]: [...(prev[id] ?? []), text] }));
+			setPendingHint(null);
+		} catch (failure) {
+			setPendingHint({ id, text: '', error: getApiErrorMessage(failure, HINT_ERROR) });
+		}
+	};
 
 	const solve = () =>
 		run(async () => {
@@ -285,7 +289,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 								) : (
 									!readOnly &&
 									!guest && (
-										<button type="button" className={`${s.tool} ${s.hint}`} onClick={hint} disabled={busy || hintLevel >= MAX_HINT_LEVEL}>
+										<button type="button" className={`${s.tool} ${s.hint}`} onClick={hint} disabled={busy || hintLoading || hintLevel >= MAX_HINT_LEVEL}>
 											Gợi ý ({hintLevel}/{MAX_HINT_LEVEL})
 										</button>
 									)
@@ -297,13 +301,30 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 							<MathText text={question.content} />
 						</div>
 
-						{hintLevel > 0 && (
+						{(hintLevel > 0 || shownPendingHint) && (
 							<div className={s.hints}>
-								{hints[question.id].map((text, i) => (
+								{hints[question.id]?.map((text, i) => (
 									<div key={i}>
 										<strong>Gợi ý {i + 1}:</strong> <MathText text={text} />
 									</div>
 								))}
+								{shownPendingHint && (
+									<div aria-live="polite">
+										<strong>Gợi ý {hintLevel + 1}:</strong>{' '}
+										{shownPendingHint.error ? (
+											<>
+												{shownPendingHint.error}{' '}
+												<button type="button" className={s.retry} onClick={hint}>
+													Thử lại
+												</button>
+											</>
+										) : shownPendingHint.text ? (
+											<MathText text={shownPendingHint.text} />
+										) : (
+											'Đang lấy gợi ý…'
+										)}
+									</div>
+								)}
 							</div>
 						)}
 

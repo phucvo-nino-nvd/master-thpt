@@ -48,45 +48,6 @@
 	transition: width 0.45s cubic-bezier(0.2, 1.3, 0.4, 1);
 }
 
-.brandRow {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	max-width: 1080px;
-	margin: 0 auto;
-	padding: 28px 40px 0;
-}
-
-.brand {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	font-size: 15px;
-	font-weight: 800;
-	letter-spacing: 0.03em;
-}
-
-.mark {
-	display: grid;
-	place-items: center;
-	width: 34px;
-	height: 34px;
-	border-radius: 10px;
-	background: var(--lime);
-	box-shadow: 0 3px 0 var(--lime-2);
-	color: var(--nav);
-	font: 800 18px/1 var(--sans);
-	transform: rotate(-6deg);
-}
-
-.subject {
-	color: var(--soft);
-	font-size: 13px;
-	font-weight: 800;
-	letter-spacing: 0.06em;
-}
-
 .welcome {
 	display: grid;
 	flex: 1;
@@ -398,44 +359,6 @@
 .on .glyph.mock {
 	background: var(--indigo);
 	color: #fff;
-}
-
-.loadingArt {
-	display: block;
-	width: min(300px, 100%);
-	flex: none;
-	background: var(--page);
-	isolation: isolate;
-}
-
-.loadingArt img {
-	display: block;
-	width: 100%;
-	height: auto;
-	mix-blend-mode: multiply;
-}
-
-.loadingTitle {
-	font: 800 26px/1.3 var(--sans);
-	letter-spacing: -0.025em;
-	text-align: center;
-}
-
-.loadTrack {
-	position: relative;
-	width: min(420px, 100%);
-	height: 18px;
-	border-radius: 99px;
-	background: var(--line);
-}
-
-.loadTrack span {
-	position: absolute;
-	inset: 0 auto 0 0;
-	border-radius: 99px;
-	background: var(--indigo);
-	box-shadow: inset 0 -4px 0 var(--indigo-2);
-	transition: width 2.1s cubic-bezier(0.4, 0.1, 0.3, 1);
 }
 
 .chips {

@@ -3,7 +3,7 @@
 import { useClerk, useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { AVATARS, initialsOf, useAccount } from '@/components/account-provider';
+import { AVATARS, avatarBg, initialsOf, useAccount } from '@/components/account-provider';
 import { BoltIcon, FlameIcon, PencilIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
 import { Plans } from '@/components/plans';
@@ -121,7 +121,6 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 	const [saved, setSaved] = useState(false);
 	const [error, setError] = useState('');
 	const form = draft ?? { name: account.name || name, avatar: account.avatar };
-	const [from, to] = AVATARS[form.avatar] ?? AVATARS[0];
 	const pro = account.plan === 'pro';
 	const joined = account.joined_at ? new Date(account.joined_at) : null;
 
@@ -168,7 +167,7 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 					<div className={s.banner} />
 					<div className={s.heroBody}>
 						<div className={s.avatarWrap}>
-							<div className={s.avatar} style={{ background: `linear-gradient(135deg, ${from}, ${to})` }}>
+							<div className={s.avatar} style={{ background: avatarBg(form.avatar) }}>
 								{initialsOf(form.name)}
 							</div>
 							<button type="button" className={s.edit} title="Đổi ảnh" onClick={() => setTab('profile')}>
@@ -215,9 +214,9 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 							</div>
 							<div className={s.section}>Ảnh đại diện</div>
 							<div className={s.avatars}>
-								{AVATARS.map(([c0, c1], i) => (
-									<button key={c0 + c1} type="button" title="Chọn màu" className={`${s.swatch} ${form.avatar === i ? s.on : ''}`} onClick={() => setDraft({ ...form, avatar: i })}>
-										<span style={{ background: `linear-gradient(135deg, ${c0}, ${c1})` }}>{initialsOf(form.name)}</span>
+								{AVATARS.map((_, i) => (
+									<button key={i} type="button" title="Chọn màu" className={`${s.swatch} ${form.avatar === i ? s.on : ''}`} onClick={() => setDraft({ ...form, avatar: i })}>
+										<span style={{ background: avatarBg(i) }}>{initialsOf(form.name)}</span>
 									</button>
 								))}
 							</div>
