@@ -150,3 +150,9 @@ export const TrophyIcon = (p: IconProps) => (
 		<path d="M7 3h10v6a5 5 0 0 1-10 0ZM7 5H3v3a4 4 0 0 0 4 4m10-7h4v3a4 4 0 0 1-4 4m-5 2v4m-4 3v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1ZM6 21h12" />
 	</svg>
 );
+
+export const ForwardIcon = (p: IconProps) => (
+	<svg {...line({ fill: 'currentColor', strokeWidth: 2.4, ...p })}>
+		<path d="M3 6v12l8-6ZM12 6v12l8-6Z" />
+	</svg>
+);

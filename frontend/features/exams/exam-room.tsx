@@ -43,7 +43,7 @@ const TAGS: Record<HistoryMode, string> = {
 	checkpoint: 'Vượt trạm',
 	obstacle: 'Gỡ bom',
 	placement: 'Xác định trình độ',
-	skip: 'Vượt cấp',
+	skip: 'Học vượt',
 };
 
 const clock = (seconds: number) => `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
