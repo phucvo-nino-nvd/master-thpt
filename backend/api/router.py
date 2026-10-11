@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections import Counter
 from collections.abc import Iterator
 from datetime import date
 from pathlib import Path
@@ -19,13 +20,13 @@ import main
 import os
 import re
 
-from roles.learner.service import GRADE, crawl_requests, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, quest, quest_test, skip_review, stages, stocked_count
+from roles.learner.service import GRADE, crawl_requests, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, questions_of, quest, quest_test, recurring_error, skip_review, stages, stocked_count
 from roles.teacher.main import chat, explain, give_hint
 from roles.teacher.rubric import answer_of, key_evaluation, maximum_score, score_on_ten
 from roles.teacher.schema import ChatRequest, HintRequest, SolutionRequest
 from common.schema import Evaluation
 from common.utils import normalized
-from history.main import attempted_exam_ids, drop_doc, runs_of, get_answer, get_history, list_history, queued_docs, save_answer, solved_question_ids, start_history, streak
+from history.main import attempted_exam_ids, drop_doc, runs_of, get_answer, get_history, list_history, mistake_note, queued_docs, save_answer, seconds_per_question, solved_question_ids, start_history, streak, wrong_feedback
 from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRequest
 from knowledge.bank.main import GENERATED_PREFIX, Item, items_of, load_items, source_urls
 from knowledge.graph.convert import node_map
@@ -38,6 +39,19 @@ IMAGES_DIR = ROOT_DIR / "artifacts" / "data"
 SECTION_ORDER = {"multiple_choice": 0, "true_false": 1, "short_answer": 2}
 PRACTICE_CARD_LIMIT = int(os.getenv("PRACTICE_CARD_LIMIT", "6"))
 PRACTICE_DURATION = int(os.getenv("PRACTICE_DURATION", "0"))
+SECONDS_PER_QUESTION = (30, 90, 300)
+ERROR_PHRASES = {
+    "wrong_concept": "dùng nhầm khái niệm",
+    "wrong_formula": "nhớ sai công thức",
+    "wrong_condition": "bỏ sót điều kiện",
+    "wrong_setup": "đặt sai hướng làm",
+    "algebra_error": "biến đổi sai",
+    "calculation_error": "tính toán sai",
+    "misread_question": "đọc nhầm đề",
+    "reasoning_error": "lập luận chưa chặt",
+    "final_value_error": "sai ở bước kết luận",
+    "format_error": "ghi đáp án sai định dạng",
+}
 
 
 def document_id_of(source_url: str) -> str:
@@ -264,6 +278,27 @@ if IMAGES_DIR.exists():
     app.mount("/api/images", StaticFiles(directory=IMAGES_DIR), name="images")
 
 
+def focus_of(reviews: list[dict], user_id: str | None) -> dict:
+    floor, default, ceiling = SECONDS_PER_QUESTION
+    seconds = min(ceiling, max(floor, seconds_per_question(user_id=user_id) or default))
+    picked = [review["knowledge_id"] for review in reviews if review["question_id"]]
+
+    if not picked:
+        return {"knowledge": None, "reason": None, "seconds_per_question": seconds}
+
+    knowledge_id = Counter(picked).most_common(1)[0][0]
+    name = node_map().get(knowledge_id, {}).get("name") or "bài đã học"
+    error = recurring_error(knowledge_id, user_id=user_id) if user_id else None
+    phrase = ERROR_PHRASES.get(error["error_type"]) if error else None
+    reason = (
+        mistake_note(wrong_feedback(questions_of([knowledge_id]).get(knowledge_id, []), user_id=user_id))
+        or (phrase and f"Vì em hay {phrase} ở phần {name}.")
+        or f"Vì có vài câu phần {name} em làm chưa đúng."
+    )
+
+    return {"knowledge": name, "reason": reason, "seconds_per_question": seconds}
+
+
 @app.get("/api/me", response_model=Account)
 def get_me(creds: HTTPAuthorizationCredentials = Depends(clerk_guard)) -> Account:
     user_id = credential_user_id(creds)
@@ -365,18 +400,22 @@ def post_ingest_approve(
 def get_review(
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> dict:
-    runs = runs_of(user_id=credential_user_id(creds))
+    user_id = credential_user_id(creds)
+    runs = runs_of(user_id=user_id)
     answers = [answer for run in runs for answer in run["answers"]]
     knowledge_by_question = knowledge_of(sorted({answer["question_id"] for answer in answers}))
     reviews = due_reviews(answers, forced=skip_review(runs, knowledge_by_question))
 
-    return exam_of(
-        f"review:{date.today()}",
-        "Luyện tập hôm nay",
-        12,
-        PRACTICE_DURATION,
-        items_of({review["question_id"] for review in reviews if review["question_id"]}),
-    )
+    return {
+        **exam_of(
+            f"review:{date.today()}",
+            "Luyện tập hôm nay",
+            12,
+            PRACTICE_DURATION,
+            items_of({review["question_id"] for review in reviews if review["question_id"]}),
+        ),
+        "focus": focus_of(reviews, user_id),
+    }
 
 
 @app.get("/api/quest")

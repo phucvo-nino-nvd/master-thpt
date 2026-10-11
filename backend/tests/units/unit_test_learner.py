@@ -317,9 +317,11 @@ def test_recommend_transfers_to_weaker_question_type(learner_db, monkeypatch):
         "type": "short_answer",
     }
 
-def test_search_skips_crawl_when_concept_already_stocked(learner_db):
+def test_search_skips_crawl_when_concept_already_stocked(learner_db, monkeypatch):
     for number in range(MIN_QUESTIONS):
         add_mapping(f"Q{number:03d}", "DAO_HAM")
+    last_year = service.datetime.now().year - 1
+    monkeypatch.setattr(service, "source_years", lambda: {f"Q{number:03d}": last_year for number in range(MIN_QUESTIONS)})
 
     assert crawl_requests(set(), [], "đạo hàm") == []
 
@@ -336,7 +338,7 @@ def test_crawl_uses_concept_grade_inside_focus(learner_db, monkeypatch):
         "CAP": {"name": "Cấp số cộng", "introduced_grade": 9},
     })
     monkeypatch.setattr(service, "CRAWL_GRADES", [10, 11, 12])
-    monkeypatch.setattr(service, "stocked_count", lambda concept, solved, user_id=None: 0)
+    monkeypatch.setattr(service, "matching_nodes", lambda concept, user_id=None: [])
 
     assert [request.grade for request in crawl_requests(set(), [], "logarit")] == [11]
     assert crawl_requests(set(), [], "cấp số cộng") == []
@@ -597,3 +599,20 @@ def test_quest_test_only_opens_current_and_auto_passes_empty_station(quest_book)
     assert sorted(service.quest_test("g12", runs)["question_ids"]) == sorted(
         f"{name}{number}" for name in "ABCDE" for number in (1, 2)
     )
+
+
+def test_stocked_concept_still_crawls_last_year_exams(learner_db, monkeypatch):
+    for number in range(MIN_QUESTIONS):
+        add_mapping(f"Q{number:03d}", "DAO_HAM")
+    last_year = service.datetime.now().year - 1
+    monkeypatch.setattr(service, "source_years", lambda: {"Q000": last_year, "Q001": last_year - 1})
+
+    requests = crawl_requests(set(), [], "đạo hàm")
+
+    assert [(request.concept, request.year) for request in requests] == [("đạo hàm", last_year)]
+
+
+def test_lacking_concept_crawls_any_year(learner_db):
+    add_mapping("Q000", "DAO_HAM")
+
+    assert [request.year for request in crawl_requests(set(), [], "đạo hàm")] == [None]

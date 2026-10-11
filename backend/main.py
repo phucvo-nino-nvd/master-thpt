@@ -281,7 +281,7 @@ def ingest(
     state = run((crawler_agent,), {"request": request, "user_id": user_id}, on_node)
 
     if not state["crawled"].docs:
-        return run((author_agent, item_bank), state, on_node)
+        return state if request.year else run((author_agent, item_bank), state, on_node)
 
     if manual:
         queue_docs(state["crawled"])

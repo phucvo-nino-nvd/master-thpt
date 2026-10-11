@@ -23,7 +23,7 @@ MAX_PAGES = int(os.getenv("CRAWLER_MAX_PAGES", "15"))
 
 
 def crawl(request: CrawlerRequest) -> CrawlerResponse:
-    query = build_query(request.concept, request.grade)
+    query = build_query(request.concept, request.grade, request.year)
 
     results = client.search(
         query,
@@ -42,6 +42,9 @@ def crawl(request: CrawlerRequest) -> CrawlerResponse:
         url = r["url"]
 
         if url in seen or not is_single_exam(r.get("title", ""), url, r.get("content", "")):
+            continue
+
+        if request.year and str(request.year) not in f"{r.get('title', '')} {url}":
             continue
 
         response = requests.get(url, timeout=TIMEOUT, allow_redirects=True, stream=True)

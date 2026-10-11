@@ -6,6 +6,7 @@ class CrawlerRequest(BaseModel):
     concept: str
     top_k: int = Field(default=5, ge=1, le=50)
     exclude_urls: list[str] = Field(default_factory=list)
+    year: int | None = None
 
 
 class CrawledDoc(BaseModel):

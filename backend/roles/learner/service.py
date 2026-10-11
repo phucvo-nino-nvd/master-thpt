@@ -37,6 +37,7 @@ ERROR_CONFIDENCE_THRESHOLD = float(os.getenv("ERROR_CONFIDENCE_THRESHOLD", "0.65
 RECENT_ERROR_DAYS = int(os.getenv("RECENT_ERROR_DAYS", "14"))
 TYPE_GAP_THRESHOLD = float(os.getenv("TYPE_GAP_THRESHOLD", "0.15"))
 CHAPTER_RE = re.compile(r"^CHƯƠNG\s+([IVXL]+)")
+YEAR_RE = re.compile(r"20\d{2}")
 ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50}
 REVIEW_DAILY_LIMIT = int(os.getenv("REVIEW_DAILY_LIMIT", "20"))
 STATION_QUESTIONS = int(os.getenv("STATION_QUESTIONS", "6"))
@@ -1073,32 +1074,46 @@ def pending_of(knowledge_ids: Sequence[str], solved: set[str]) -> dict[str, list
     }
 
 
+def source_years() -> dict[str, int]:
+    return {
+        item["id"]: max(map(int, YEAR_RE.findall(item.get("source_title") or "")), default=0)
+        for item in load_items()
+    }
+
+
+def crawl_need(question_ids: Sequence[str], years: Mapping[str, int]) -> tuple[bool, int | None]:
+    last_year = datetime.now().year - 1
+
+    if len(question_ids) < MIN_QUESTIONS:
+        return True, None
+
+    return sum(years.get(question_id) == last_year for question_id in question_ids) < MIN_QUESTIONS, last_year
+
+
 def lacking_knowledge(
     solved: set[str],
     *,
     user_id: str | None = None,
-) -> list[str]:
+) -> list[tuple[str, int | None]]:
     path = learning_path(user_id) if user_id else learning_path()
     pending = pending_of([step["knowledge_id"] for step in path], solved)
+    years = source_years()
 
-    lacking = [
-        step
-        for step in path
-        if len(pending.get(step["knowledge_id"], [])) < MIN_QUESTIONS
-    ]
+    needs = [(step, *crawl_need(pending.get(step["knowledge_id"], []), years)) for step in path]
+    lacking = [(step, year) for step, needed, year in needs if needed]
 
     weak = sorted(
         (
-            step["knowledge_id"]
-            for step in lacking
+            (step["knowledge_id"], year)
+            for step, year in lacking
             if step["action"] == "practice"
         ),
-        key=lambda knowledge_id: get_mastery(knowledge_id, user_id=user_id) or 0.0,
+        key=lambda pair: get_mastery(pair[0], user_id=user_id) or 0.0,
     )
 
     return weak + [
-        step["knowledge_id"]
-        for step in lacking
+        (step["knowledge_id"], year)
+        for step, year in lacking
         if step["action"] == "diagnose"
     ]
 
@@ -1140,7 +1155,10 @@ def crawl_requests(
     nodes = node_map()
 
     if concept:
-        if stocked_count(concept, solved, user_id=user_id) >= MIN_QUESTIONS:
+        pending = pending_of(matching_nodes(concept, user_id=user_id), solved)
+        needed, year = crawl_need([question_id for question_ids in pending.values() for question_id in question_ids], source_years())
+
+        if not needed:
             return []
 
         wanted = normalized(concept)
@@ -1153,6 +1171,7 @@ def crawl_requests(
                 concept=concept,
                 top_k=CRAWL_TOP_K,
                 exclude_urls=exclude_urls,
+                year=year,
             )
             for grade in focused[:1]
         ]
@@ -1163,8 +1182,9 @@ def crawl_requests(
             concept=nodes[knowledge_id]["name"],
             top_k=CRAWL_TOP_K,
             exclude_urls=exclude_urls,
+            year=year,
         )
-        for knowledge_id in lacking_knowledge(solved, user_id=user_id)
+        for knowledge_id, year in lacking_knowledge(solved, user_id=user_id)
         if nodes[knowledge_id]["introduced_grade"] in CRAWL_GRADES
     ][:CRAWL_NODES]
 

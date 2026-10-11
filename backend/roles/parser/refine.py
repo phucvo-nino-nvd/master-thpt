@@ -72,6 +72,10 @@ PLAIN_WORD_RE = re.compile(r"^[A-Za-z]+$")
 ACCENT_RE = re.compile(r"[À-ỹ]")
 KEEP_MATH_RE = re.compile(r"\$[^$]*\$")
 TAG_TEXT_RE = re.compile(r">([^<>]+)<")
+DERIVATIVE_LABEL_RE = re.compile(r"^\$?[a-zA-Z]'")
+X_LABEL_RE = re.compile(r"^\$?x\$?$")
+INFINITY_RE = re.compile(r"\\infty")
+UNDEFINED_MARK = "||"
 
 
 class HTMLContentParser(HTMLParser):
@@ -228,9 +232,35 @@ class HTMLContentParser(HTMLParser):
         return text.strip()
 
 
+def mark_undefined_derivative(rows: list[list[tuple[str, int, int, bool]]]) -> list[list[tuple[str, int, int, bool]]]:
+    if not rows or any((rowspan, colspan) != (1, 1) for row in rows for _, rowspan, colspan, _ in row):
+        return rows
+
+    x_row = [text for text, *_ in rows[0]]
+
+    if not X_LABEL_RE.match(x_row[0]) or "" not in x_row[1:]:
+        return rows
+
+    marked = [rows[0]]
+
+    for row in rows[1:]:
+        if len(row) == len(x_row) and DERIVATIVE_LABEL_RE.match(row[0][0]):
+            row = [
+                (UNDEFINED_MARK, *rest)
+                if index and not text and x_row[index] and not INFINITY_RE.search(x_row[index])
+                else (text, *rest)
+                for index, (text, *rest) in enumerate(row)
+            ]
+        marked.append(row)
+
+    return marked
+
+
 def html_table(rows: list[list[tuple[str, int, int, bool]]]) -> str:
     if not rows:
         return ""
+
+    rows = mark_undefined_derivative(rows)
 
     lines = ["<table>"]
 

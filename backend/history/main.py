@@ -7,6 +7,7 @@ from uuid import uuid4
 
 import json
 import os
+import re
 
 from roles.crawler.schema import CrawledDoc, CrawlerRequest, CrawlerResponse
 from common.schema import Evaluation
@@ -19,6 +20,9 @@ from .schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryQuestion,
 load_dotenv()
 
 REVIEW_DAYS = int(os.getenv("REVIEW_INTERVAL_DAYS", "7"))
+MISTAKE_RE = re.compile(r"nhầm|quên|bỏ sót|chưa xét|thiếu", re.IGNORECASE)
+STUDENT_RE = re.compile(r"^(?:bạn|em)\s+(?:đã\s+)?", re.IGNORECASE)
+SENTENCE_RE = re.compile(r"(?<=[.!?])\s+")
 
 SUMMARY_SQL = """
 SELECT
@@ -418,3 +422,61 @@ def get_answer(
         row = conn.execute(query, params).fetchone()
 
     return None if row is None else question_of(row)
+
+
+def mistake_note(feedbacks: list[str]) -> str | None:
+    for feedback in feedbacks:
+        for sentence in SENTENCE_RE.split(feedback.strip()):
+            student = STUDENT_RE.match(sentence)
+            if student and MISTAKE_RE.search(sentence) and len(sentence) <= 160 and sentence.count("$") <= 4:
+                return f"Vì lần trước em {sentence[student.end():].rstrip('.!')}."
+
+    return None
+
+
+def wrong_feedback(question_ids: list[str], *, user_id: str | None = None) -> list[str]:
+    if not question_ids:
+        return []
+
+    init_db()
+
+    placeholders = ", ".join("?" * len(question_ids))
+    query = f"""
+        SELECT history_question.feedback
+        FROM history_question
+        JOIN history ON history.id = history_question.history_id
+        WHERE history_question.correct = 0
+            AND history_question.feedback != ''
+            AND history_question.question_id IN ({placeholders})
+    """
+    params: tuple[str, ...] = tuple(question_ids)
+    if user_id:
+        query += " AND history.user_id = ?"
+        params += (user_id,)
+    query += " ORDER BY history_question.answered_at DESC LIMIT 5"
+
+    with get_connection() as conn:
+        return [row["feedback"] for row in conn.execute(query, params).fetchall()]
+
+
+def seconds_per_question(*, user_id: str | None = None) -> float | None:
+    init_db()
+
+    query = """
+        SELECT SUM(duration_seconds) AS seconds, SUM(answered) AS answered
+        FROM (
+            SELECT history.duration_seconds, COUNT(history_question.question_id) AS answered
+            FROM history
+            JOIN history_question ON history_question.history_id = history.id
+            WHERE history.duration_seconds > 0
+    """
+    params: tuple[str, ...] = ()
+    if user_id:
+        query += " AND history.user_id = ?"
+        params = (user_id,)
+    query += " GROUP BY history.id)"
+
+    with get_connection() as conn:
+        row = conn.execute(query, params).fetchone()
+
+    return row["seconds"] / row["answered"] if row["answered"] else None
