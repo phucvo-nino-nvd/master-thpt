@@ -5,6 +5,7 @@ type QuestSpot = { stage: QuestStage; index: number; item: QuestStation };
 type QuestStep = { id: string; title: string; name: string; short: string; mode: HistoryMode; bomb: boolean; total: number };
 
 export const OBSTACLE_PREFIX = 'obstacle:';
+const CHAPTER_RE = /^chương\s+[IVXL]+\.?\s*/i;
 
 export function locate(quest: Quest, id: string | null): QuestSpot | null {
 	for (const stage of quest.stages) {
@@ -15,6 +16,8 @@ export function locate(quest: Quest, id: string | null): QuestSpot | null {
 
 	return null;
 }
+
+export const stageTitle = (name: string) => name.replace(CHAPTER_RE, '');
 
 export const shortName = ({ index }: QuestSpot) => (index < 0 ? 'Đích' : `Trạm ${index + 1}`);
 

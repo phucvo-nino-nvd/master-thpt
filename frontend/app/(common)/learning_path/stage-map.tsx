@@ -118,7 +118,7 @@ export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextSh
 		<div className={s.map} style={{ height }}>
 			<svg className={s.svg} width="520" height={height} aria-hidden="true">
 				<path className={s.path} d={head < 0 ? '' : segment(bomb ? bombAt + 1 : head, last)} stroke="#D3D6E0" />
-				<path className={s.path} d={segment(0, head < 0 ? last : head)} stroke="#14B866" />
+				<path className={s.path} d={segment(0, head < 0 ? last : head)} style={{ stroke: 'var(--stage-color)' }} />
 				{skipAt && <path className={s.path} d={curve([skipAt, points[0]])} stroke="#D3D6E0" />}
 			</svg>
 

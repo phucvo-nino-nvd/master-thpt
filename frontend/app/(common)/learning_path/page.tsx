@@ -11,7 +11,7 @@ import { Rive } from '@/components/rive';
 import { MathInline } from '@/features/exams/components/math-text';
 import { useLoad } from '@/lib/api';
 import { STREAK_MILESTONES, examHref, starSeq, streakHue, streakSeenKey } from '@/lib/format';
-import { OBSTACLE_PREFIX, locate, shortName } from '@/lib/quest';
+import { OBSTACLE_PREFIX, locate, shortName, stageTitle } from '@/lib/quest';
 import { Quest, QuestStation, getQuest } from '@/shared/api/client';
 import s from './quest.module.css';
 import { BombPhase, StageMap } from './stage-map';
@@ -120,7 +120,7 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 							<div className={s.headerKicker}>
 								{stage ? `CHẶNG ${view + 1} · ${stageDone ? 'ĐÃ HOÀN THÀNH' : stageLive ? 'ĐANG THỰC HIỆN' : 'CHƯA MỞ'}` : 'LỘ TRÌNH'}
 							</div>
-							<h1 className={s.headerTitle}><MathInline text={stage?.name ?? 'Lộ trình của em'} /></h1>
+							<h1 className={s.headerTitle}><MathInline text={stage ? stageTitle(stage.name) : 'Lộ trình của em'} /></h1>
 						</div>
 						{stage && (
 							<div className={s.headerSide}>
@@ -158,14 +158,14 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 					{pop && <div className={s.backdrop} onClick={() => setPop(null)} />}
 
 					{quest?.stages.map((entry, i) => (
-						<div key={entry.id}>
+						<div key={entry.id} style={{ '--stage-color': STAGE_COLORS[i % STAGE_COLORS.length] } as CSSProperties}>
 							<div
 								ref={(node) => {
 									dividers.current[i] = node;
 								}}
 								className={s.divider}
 							>
-								Chặng {i + 1} · <MathInline text={entry.name} />
+								Chặng {i + 1} · <MathInline text={stageTitle(entry.name)} />
 							</div>
 							<StageMap
 								stage={entry}

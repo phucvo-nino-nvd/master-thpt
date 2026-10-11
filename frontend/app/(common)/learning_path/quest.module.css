@@ -152,15 +152,15 @@
 	width: 72px;
 	height: 72px;
 	border-radius: 50%;
-	background: var(--green);
-	box-shadow: 0 6px 0 var(--green-2);
+	background: var(--stage-color);
+	box-shadow: 0 6px 0 color-mix(in srgb, var(--stage-color), #000 25%);
 	color: #fff;
 	font: 800 18px/1 var(--sans);
 }
 
 .station:active {
 	transform: translateY(6px);
-	box-shadow: 0 0 0 var(--green-2);
+	box-shadow: none;
 }
 
 .station.fail {
@@ -191,7 +191,7 @@
 	position: absolute;
 	inset: 4px;
 	border-radius: 50%;
-	background: var(--indigo);
+	background: var(--stage-color);
 	opacity: 0.25;
 	animation: halo 2.4s ease-in-out infinite;
 }
@@ -207,8 +207,8 @@
 	width: 84px;
 	height: 84px;
 	border-radius: 50%;
-	background: var(--indigo);
-	box-shadow: 0 7px 0 var(--indigo-3);
+	background: var(--stage-color);
+	box-shadow: 0 7px 0 color-mix(in srgb, var(--stage-color), #000 25%);
 	color: #fff;
 	font: 800 34px/1 var(--sans);
 }
@@ -219,7 +219,7 @@
 
 .activeButton:active {
 	transform: translateY(7px);
-	box-shadow: 0 0 0 var(--indigo-3);
+	box-shadow: none;
 }
 
 .chest {
@@ -293,21 +293,21 @@
 }
 
 .label.passed {
-	border-color: #ddf3e5;
-	box-shadow: 0 3px 0 #ddf3e5;
+	border-color: color-mix(in srgb, var(--stage-color) 18%, #fff);
+	box-shadow: 0 3px 0 color-mix(in srgb, var(--stage-color) 18%, #fff);
 }
 
 .passed .labelSub {
-	color: var(--green-2);
+	color: var(--stage-color);
 }
 
 .label.current {
-	border-color: var(--indigo-soft);
-	box-shadow: 0 3px 0 var(--indigo-soft);
+	border-color: color-mix(in srgb, var(--stage-color) 25%, #fff);
+	box-shadow: 0 3px 0 color-mix(in srgb, var(--stage-color) 25%, #fff);
 }
 
 .current .labelSub {
-	color: var(--indigo);
+	color: var(--stage-color);
 }
 
 .label.blocked {
@@ -753,7 +753,7 @@
 	border-radius: 12px;
 	background: #fff;
 	box-shadow: 0 3px 0 var(--line);
-	color: var(--green);
+	color: var(--stage-color);
 	font-size: 14px;
 	font-weight: 800;
 	letter-spacing: 0.04em;
@@ -777,8 +777,8 @@
 	width: 70px;
 	height: 62px;
 	border-radius: 50%;
-	background: var(--green);
-	box-shadow: 0 7px 0 var(--green-2);
+	background: var(--stage-color);
+	box-shadow: 0 7px 0 color-mix(in srgb, var(--stage-color), #000 25%);
 	color: #fff;
 }
 
@@ -788,5 +788,5 @@
 
 .skipButton:active {
 	transform: translateY(7px);
-	box-shadow: 0 0 0 var(--green-2);
+	box-shadow: none;
 }
