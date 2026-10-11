@@ -744,7 +744,7 @@
 
 .skipTag {
 	position: absolute;
-	bottom: calc(100% + 14px);
+	bottom: calc(100% + 16px);
 	left: 50%;
 	transform: translateX(-50%);
 	white-space: nowrap;
@@ -752,6 +752,7 @@
 	border: 2px solid var(--line);
 	border-radius: 12px;
 	background: #fff;
+	box-shadow: 0 3px 0 var(--line);
 	color: var(--green);
 	font-size: 14px;
 	font-weight: 800;
@@ -768,6 +769,7 @@
 	border: solid var(--line);
 	border-width: 0 2px 2px 0;
 	background: #fff;
+	box-shadow: 2px 2px 0 var(--line);
 	transform: translate(-50%, -4px) rotate(45deg);
 }
 

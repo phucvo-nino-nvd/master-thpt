@@ -49,7 +49,6 @@ export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextSh
 	const last = items.length - 1;
 	const skipAt: Point | null = skip && items.every((item) => item.status === 'locked') ? [CENTER, TOP] : null;
 	const top = skipAt ? TOP + ROW : TOP;
-	const skipId = `skip:${stage.id}`;
 	const points = items.map((_, i): Point => [CENTER + (i === last ? 0 : i % 2 ? SWING : -SWING), top + i * ROW]);
 	const head = items.findIndex((item) => item.status !== 'passed');
 	const bombAt = obstacle ? items.findIndex((item) => item.status === 'blocked') : -1;
@@ -124,28 +123,11 @@ export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextSh
 			</svg>
 
 			{skipAt && skip && (
-				<div className={`${s.node} ${pop === skipId ? s.open : ''}`} style={{ left: skipAt[0], top: skipAt[1] }}>
+				<div className={s.node} style={{ left: skipAt[0], top: skipAt[1] }}>
 					<span className={s.skipTag}>HỌC VƯỢT</span>
-					<button type="button" aria-label={`Học vượt tới ${stage.name}`} className={`${s.press} ${s.skipButton}`} onClick={() => onPop(pop === skipId ? null : skipId)}>
+					<Link href={skip.review ? '/practice' : examHref(`skip:${stage.id}`, 'skip')} aria-label={`Học vượt tới ${stage.name}`} className={`${s.press} ${s.skipButton}`}>
 						<ForwardIcon size={30} />
-					</button>
-					{pop === skipId && (
-						<div className={s.pop}>
-							<div className={s.popCard}>
-								<div className={s.popTitle}>
-									Học vượt tới <MathInline text={stage.name} />
-								</div>
-								<p className={s.popCopy}>
-									{skip.review
-										? 'Lần vượt trước còn vài phần chưa vững. Ôn xong ở Nhiệm vụ rồi thử lại nha.'
-										: 'Làm một bài trộn các chặng phía trước. Đạt là mở khoá luôn chặng này.'}
-								</p>
-								<Link href={skip.review ? '/practice' : examHref(skipId, 'skip')} className={`${s.cta} ${s.green}`}>
-									{skip.review ? 'Đi ôn ngay' : 'Học vượt'}
-								</Link>
-							</div>
-						</div>
-					)}
+					</Link>
 				</div>
 			)}
 
