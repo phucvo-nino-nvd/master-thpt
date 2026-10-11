@@ -6,6 +6,9 @@
 }
 
 .top {
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
 	padding: 22px 32px 0;
 }
 
@@ -69,7 +72,7 @@
 	overflow-x: hidden;
 	overflow-y: auto;
 	scrollbar-width: none;
-	padding: 22px 32px 70px;
+	padding: 22px max(32px, calc((100% - 656px) / 2)) 70px;
 }
 
 .divider {

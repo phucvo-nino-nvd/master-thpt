@@ -1,9 +1,9 @@
 .widget {
 	position: fixed;
 	z-index: 40;
-	right: max(22px, env(safe-area-inset-right));
+	right: max(40px, env(safe-area-inset-right));
 	bottom: max(24px, env(safe-area-inset-bottom));
-	width: 302px;
+	width: 300px;
 	max-width: calc(100vw - 24px);
 	font-family: var(--sans);
 	color: var(--ink);
