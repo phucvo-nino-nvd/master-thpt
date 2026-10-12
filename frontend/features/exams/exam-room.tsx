@@ -30,7 +30,7 @@ import { getApiErrorMessage } from '@/shared/api/error-message';
 import { MathInline, MathText } from './components/math-text';
 import { AnswerValue, isAnswered, isCorrect, toApiAnswer } from './lib/helpers';
 import { Tutor } from './tutor';
-import { Plans } from '@/components/plans';
+import { PlanSheet } from '@/components/plans';
 import s from './exam-room.module.css';
 
 const PRACTICE_MODES: HistoryMode[] = ['review', 'practice'];
@@ -520,17 +520,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 				</div>
 			)}
 			{tutorOpen && account.plan !== 'pro' && (
-				<div className={s.planOverlay} onClick={() => setTutorOpen(false)}>
-					<div className={s.planSheet} role="dialog" aria-modal="true" aria-labelledby="plan-title" onClick={(event) => event.stopPropagation()}>
-						<div className={s.planHead}>
-							<h2 id="plan-title">Hỏi trợ lý dành cho gói Pro</h2>
-							<button type="button" className={s.planClose} onClick={() => setTutorOpen(false)} aria-label="Đóng">
-								✕
-							</button>
-						</div>
-						<Plans run={(task) => run(task, 'Chưa đổi được gói.')} onCheckout={() => setTutorOpen(false)} />
-					</div>
-				</div>
+				<PlanSheet title="Hỏi trợ lý dành cho gói Pro" onClose={() => setTutorOpen(false)} run={(task) => run(task, 'Chưa đổi được gói.')} onCheckout={() => setTutorOpen(false)} />
 			)}
 			{tutorOpen && account.plan === 'pro' && (
 				<Tutor

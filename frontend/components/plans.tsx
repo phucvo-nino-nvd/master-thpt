@@ -11,6 +11,22 @@ const FREE_FEATURES = ['Lộ trình học theo khối', 'Bài luyện mỗi ngà
 const PRO_FEATURES = ['Toàn bộ kho đề, không giới hạn', 'Giải thích từng bước mọi câu', 'Hỏi trợ lý về từng câu đã làm', 'Đấu trường thi thử mỗi tuần', 'Giữ lửa 2 lần/tháng khi lỡ nghỉ'];
 const PRO_PLAN_ID = process.env.NEXT_PUBLIC_CLERK_PRO_PLAN_ID ?? '';
 
+export function PlanSheet({ title, onClose, run, onCheckout }: { title: string; onClose: () => void; run: (task: () => Promise<void>) => unknown; onCheckout?: () => void }) {
+	return (
+		<div className={s.overlay} onClick={onClose}>
+			<div className={s.sheet} role="dialog" aria-modal="true" aria-labelledby="plan-title" onClick={(event) => event.stopPropagation()}>
+				<div className={s.sheetHead}>
+					<h2 id="plan-title">{title}</h2>
+					<button type="button" className={s.close} onClick={onClose} aria-label="Đóng">
+						✕
+					</button>
+				</div>
+				<Plans run={run} onCheckout={onCheckout} />
+			</div>
+		</div>
+	);
+}
+
 export function Plans({ run, onCheckout }: { run: (task: () => Promise<void>) => unknown; onCheckout?: () => void }) {
 	const { account, save, reload } = useAccount();
 	const { session } = useClerk();

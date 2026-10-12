@@ -42,6 +42,8 @@ export type DocumentItem = {
 	is_completed: boolean;
 };
 
+export type PracticeUpdate = { sets: DocumentItem[]; authoring: boolean };
+
 export type AnswerPayload = string | boolean[];
 
 export type Evaluation = {
@@ -213,7 +215,8 @@ export const approveIngestSource = (url: string, signal?: AbortSignal) =>
 export const rejectIngestSource = (url: string, signal?: AbortSignal) =>
 	api.delete<IngestState>('/ingest', { params: { url }, signal }).then((response) => response.data);
 export const requestPractice = (request: string, signal?: AbortSignal) =>
-	api.post<DocumentItem[]>('/practice/update', { request }, { signal }).then((response) => response.data);
+	api.post<PracticeUpdate>('/practice/update', { request }, { signal }).then((response) => response.data);
+export const getPracticeSets = (query: string) => get<DocumentItem[]>('/practice/sets', { query });
 export const createHistory = (exam_id: string, mode: HistoryMode) =>
 	post<{ history_id: string }>('/history', { exam_id, mode });
 export const checkQuestion = (history_id: string, question_id: string, student_answer: AnswerPayload) =>

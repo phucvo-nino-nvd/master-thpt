@@ -6,7 +6,7 @@ import { createContext, useContext, useEffect, useRef, useState, type ReactNode 
 import { pendingSources } from '@/lib/processing';
 import {
 	MOCK_ACCOUNT, approveIngestSource, getProcessingSnapshot, rejectIngestSource, requestPractice, setIngestMode, submitExam,
-	type ProcessingSnapshot, type SubmitExamBody, type SubmitExamResponse,
+	type PracticeUpdate, type ProcessingSnapshot, type SubmitExamBody, type SubmitExamResponse,
 } from '@/shared/api/client';
 import { getApiErrorMessage } from '@/shared/api/error-message';
 
@@ -20,9 +20,9 @@ type ProcessingContextValue = {
 	enabled: boolean;
 	refresh: () => void;
 	submit: (body: SubmitExamBody) => Promise<SubmitExamResponse>;
-	changeMode: (manual: boolean) => Promise<void>;
-	process: (urls: string[], approve: boolean) => Promise<void>;
-	request: (query: string) => Promise<void>;
+	changeMode: (manual: boolean) => Promise<boolean>;
+	process: (urls: string[], approve: boolean) => Promise<boolean>;
+	request: (query: string) => Promise<PracticeUpdate | null>;
 };
 
 const ProcessingContext = createContext<ProcessingContextValue | null>(null);
@@ -86,14 +86,16 @@ export function ProcessingProvider({ children }: { children: ReactNode }) {
 	const refresh = () => { setError(''); setVersion((value) => value + 1); };
 
 	async function mutate(task: (signal: AbortSignal) => Promise<void>) {
-		if (!enabled || operation.current) return;
+		if (!enabled || operation.current) return false;
 		const controller = new AbortController();
 		operation.current = controller;
 		setBusy(true); setError('');
 		try {
 			await task(controller.signal);
+			return true;
 		} catch (failure) {
 			if (!controller.signal.aborted) setError(getApiErrorMessage(failure, 'Chưa xử lý được nguồn. Tải lại trạng thái để kiểm tra.'));
+			return false;
 		} finally {
 			if (!controller.signal.aborted) {
 				operation.current = null;
@@ -103,7 +105,7 @@ export function ProcessingProvider({ children }: { children: ReactNode }) {
 	}
 
 	async function process(urls: string[], approve: boolean) {
-		await mutate(async (signal) => {
+		return mutate(async (signal) => {
 			const unique = [...new Set(urls)];
 			for (const [index, url] of unique.entries()) {
 				setRemaining(unique.length - index);
@@ -142,7 +144,11 @@ export function ProcessingProvider({ children }: { children: ReactNode }) {
 
 	return <ProcessingContext.Provider value={{ snapshot, submitting, result, error: error || connectionError, busy, remaining, enabled, refresh, submit, process,
 		changeMode: (manual) => mutate(async (signal) => { await setIngestMode(manual, signal); await read(signal); }),
-		request: (query) => mutate(async (signal) => { await requestPractice(query, signal); await read(signal); }),
+		request: async (query) => {
+			let update: PracticeUpdate | null = null;
+			const ok = await mutate(async (signal) => { update = await requestPractice(query, signal); await read(signal); });
+			return ok ? update : null;
+		},
 	}}>{children}</ProcessingContext.Provider>;
 }
 

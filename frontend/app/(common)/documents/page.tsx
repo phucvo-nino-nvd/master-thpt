@@ -7,9 +7,10 @@ import { CamelLoading } from '@/components/camel-loading';
 import { BookmarkIcon, SearchIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
 import card from '@/components/exam-card.module.css';
+import { ProcessingCard } from '@/components/processing-widget';
 import { DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
 import { useLoad } from '@/lib/api';
-import { DocKind, docKind, examHref, score } from '@/lib/format';
+import { DocKind, docKind, examHref, score, weakest } from '@/lib/format';
 import { KnowledgeGraph, getDocuments, getHistoryList, getKnowledgeGraph } from '@/shared/api/client';
 import s from './documents.module.css';
 
@@ -20,8 +21,6 @@ const FILTERS: [DocKind | 'all', string][] = [
 	['ref', 'Tham khảo'],
 	['mock', 'Thi thử'],
 ];
-const WEAK_LIMIT = 3;
-
 const weakColors = (value: number) =>
 	value < 50 ? ['#F2542D', '#C23B19'] : value < 70 ? ['#FFB21E', '#F5A300'] : ['#14B866', '#0B8C4B'];
 
@@ -47,10 +46,7 @@ export default function DocumentsPage() {
 	const scores = new Map<string, number>();
 	for (const attempt of history) if (!scores.has(attempt.exam_id)) scores.set(attempt.exam_id, attempt.total_score);
 
-	const weak = (graph?.nodes ?? [])
-		.filter((node) => node.score !== null)
-		.sort((a, b) => (a.score ?? 0) - (b.score ?? 0))
-		.slice(0, WEAK_LIMIT);
+	const weak = weakest(graph?.nodes ?? []);
 
 	const pick = documents.find((doc) => !doc.is_completed);
 	const needle = query.trim().toLowerCase();
@@ -170,6 +166,7 @@ export default function DocumentsPage() {
 				<StatPills />
 				<StreakCard />
 				<DailyQuests />
+				<ProcessingCard />
 			</Rail>
 		</div>
 	);

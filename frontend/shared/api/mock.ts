@@ -254,6 +254,8 @@ function route(method: string, path: string[], params: Record<string, string>, b
 			return ingest;
 		case 'post practice/update':
 			processingStarted = Date.now();
+			return { sets: [], authoring: true };
+		case 'get practice/sets':
 			return [];
 		case 'get practice/status':
 			return practiceStatus();

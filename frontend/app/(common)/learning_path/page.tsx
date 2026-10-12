@@ -6,7 +6,8 @@ import { CSSProperties, useEffect, useRef, useState } from 'react';
 import { useAccount } from '@/components/account-provider';
 import { TrophyIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
-import { ArenaCard, DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
+import { ProcessingCard } from '@/components/processing-widget';
+import { DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
 import { Rive } from '@/components/rive';
 import { MathInline } from '@/features/exams/components/math-text';
 import { useLoad } from '@/lib/api';
@@ -191,7 +192,7 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 				<StatPills />
 				<StreakCard />
 				<DailyQuests />
-				<ArenaCard />
+				<ProcessingCard />
 			</Rail>
 
 			{milestone === 'cleared' && fromSpot && (

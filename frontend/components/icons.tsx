@@ -106,18 +106,24 @@ export const SearchIcon = (p: IconProps) => (
 	</svg>
 );
 
+export const AgentIcon = (p: IconProps) => (
+	<svg {...line({ stroke: 'none', ...p })}>
+		<defs>
+			<linearGradient id="agent-shell" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#7B79FF" />
+				<stop offset="1" stopColor="#4A48E8" />
+			</linearGradient>
+		</defs>
+		<path d="M9.4 3.4Q12 -.6 14.6 3.4L22.8 17.4Q25 21.8 20 22H4Q-1 21.8 1.2 17.4Z" fill="url(#agent-shell)" />
+		<rect x="8" y="11.2" width="3" height="6.6" rx="1.5" fill="#fff" />
+		<rect x="13" y="11.2" width="3" height="6.6" rx="1.5" fill="#fff" />
+	</svg>
+);
+
 export const PencilIcon = (p: IconProps) => (
 	<svg {...line({ size: 16, ...p })}>
 		<path d="M12 20h9" />
 		<path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z" />
-	</svg>
-);
-
-export const TargetIcon = (p: IconProps) => (
-	<svg {...line(p)}>
-		<circle cx="12" cy="12" r="10" />
-		<circle cx="12" cy="12" r="6" />
-		<circle cx="12" cy="12" r="2" />
 	</svg>
 );
 
@@ -158,6 +164,24 @@ export const BoltIcon = (p: IconProps) => (
 export const CrownIcon = (p: IconProps) => (
 	<svg {...line({ color: 'var(--gold-ink)', ...p })}>
 		<path d="m3 6 4.5 4L12 3l4.5 7L21 6l-2 11H5ZM5 21h14" />
+	</svg>
+);
+
+export const StopwatchIcon = (p: IconProps) => (
+	<svg {...line({ stroke: 'none', ...p })}>
+		<defs>
+			<linearGradient id="stopwatch-shell" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#5CD0FF" />
+				<stop offset="1" stopColor="#1C9BE6" />
+			</linearGradient>
+		</defs>
+		<rect x="9" y="1.4" width="6" height="2.8" rx="1.2" fill="url(#stopwatch-shell)" />
+		<rect x="11" y="3.6" width="2" height="2.6" fill="url(#stopwatch-shell)" />
+		<circle cx="12" cy="14" r="8.6" fill="url(#stopwatch-shell)" />
+		<circle cx="12" cy="14" r="6.2" fill="#E8F7FF" />
+		<path d="M12 14V7.8A6.2 6.2 0 0 0 5.8 14Z" fill="#BFE9FF" />
+		<path d="M12 14L14.8 16.6" stroke="#1C9BE6" strokeWidth="1.8" strokeLinecap="round" />
+		<circle cx="12" cy="14" r="1.2" fill="#1C9BE6" />
 	</svg>
 );
 

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { MINUTE_OPTIONS, useAccount } from '@/components/account-provider';
 import { CamelLoading } from '@/components/camel-loading';
 import page from '@/components/page.module.css';
+import { ProcessingCard } from '@/components/processing-widget';
 import { DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
 import { useLoad, useMounted } from '@/lib/api';
 import { WEEKDAY_NAMES, dayKey, examHref } from '@/lib/format';
@@ -123,6 +124,7 @@ export default function PracticePage() {
 			<Rail>
 				<StatPills />
 				<StreakCard />
+				<ProcessingCard />
 			</Rail>
 		</div>
 	);

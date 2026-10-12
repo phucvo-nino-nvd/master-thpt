@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useAccount } from '@/components/account-provider';
 import page from '@/components/page.module.css';
-import { ArenaCard, DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
+import { ProcessingCard } from '@/components/processing-widget';
+import { DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
 import { Rive } from '@/components/rive';
 import { MathInline } from '@/features/exams/components/math-text';
 import { useLoad, useMounted } from '@/lib/api';
@@ -165,7 +166,7 @@ export default function TodayPage() {
 				<StatPills />
 				<StreakCard />
 				<DailyQuests />
-				<ArenaCard />
+				<ProcessingCard />
 			</Rail>
 		</div>
 	);

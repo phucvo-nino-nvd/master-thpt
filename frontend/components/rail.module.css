@@ -208,7 +208,7 @@
 }
 
 .indigo .taskIcon {
-	background: #ececff;
+	background: #fff3a8;
 }
 
 .indigo .fill {
@@ -223,75 +223,5 @@
 	color: var(--muted);
 	font: 500 12px/1 var(--mono);
 	white-space: nowrap;
-}
-
-.arena {
-	padding: 18px;
-	border: 2px solid var(--indigo-soft);
-	border-radius: 20px;
-	background: #f7f7ff;
-	box-shadow: 0 4px 0 var(--indigo-soft);
-}
-
-.arenaHead {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-}
-
-.cup {
-	display: grid;
-	place-items: center;
-	width: 46px;
-	height: 46px;
-	flex: none;
-	border: 2px solid var(--gold-soft);
-	border-radius: 14px;
-	background: #fff3a8;
-}
-
-.kicker {
-	color: var(--indigo);
-	font-size: 11px;
-	font-weight: 800;
-	letter-spacing: 0.08em;
-}
-
-.arenaTitle {
-	margin-top: 2px;
-	font-size: 15px;
-	font-weight: 800;
-}
-
-.arenaCopy {
-	margin: 10px 0 14px;
-	color: var(--ink-2);
-	font-size: 13px;
-	line-height: 1.55;
-}
-
-.arenaButton {
-	display: block;
-	width: 100%;
-	padding: 13px 16px;
-	border-radius: 14px;
-	background: var(--indigo);
-	box-shadow: 0 5px 0 var(--indigo-3);
-	color: #fff;
-	font-size: 13px;
-	font-weight: 800;
-	letter-spacing: 0.03em;
-	text-align: center;
-	transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.arenaButton:hover {
-	color: #fff;
-	filter: brightness(1.08);
-}
-
-.arenaButton:active {
-	transform: translateY(5px);
-	box-shadow: 0 0 0 var(--indigo-3);
 }
 

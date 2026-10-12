@@ -1,4 +1,4 @@
-import type { HistoryMode } from '@/shared/api/client';
+import type { HistoryMode, KnowledgeNode } from '@/shared/api/client';
 
 export type DocKind = 'official' | 'ref' | 'mock';
 
@@ -11,6 +11,8 @@ export const STREAK_MILESTONES = [1, 7, 14, 30, 100, 365];
 
 const STREAK_HUES = [0, -15, -28, -42, -110, -180];
 
+export const WEAK_LIMIT = 3;
+
 export const WEEKDAYS = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'];
 
 export const WEEKDAY_NAMES = ['CHỦ NHẬT', 'THỨ HAI', 'THỨ BA', 'THỨ TƯ', 'THỨ NĂM', 'THỨ SÁU', 'THỨ BẢY'];
@@ -19,6 +21,12 @@ export const docKind = (title: string): DocKind => (REF_RE.test(title) ? 'ref' :
 
 export const examHref = (id: string, mode?: HistoryMode) =>
 	`/exams/${encodeURIComponent(id)}${mode ? `?mode=${mode}` : ''}`;
+
+export const weakest = (nodes: KnowledgeNode[]) =>
+	nodes
+		.filter((node) => node.score !== null)
+		.sort((a, b) => (a.score ?? 0) - (b.score ?? 0))
+		.slice(0, WEAK_LIMIT);
 
 export const weekdayIndex = (date = new Date()) => (date.getDay() + 6) % 7;
 
