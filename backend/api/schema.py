@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from typing import Literal
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from common.schema import Evaluation
 from history.schema import Mode
@@ -65,7 +65,11 @@ class AccountSettings(BaseModel):
     remind: bool = True
     sound: bool = True
     minutes: Literal[10, 20, 30, 45] = 20
-    daily_goal: Literal[5, 10, 20] = 10
+
+    @model_validator(mode="before")
+    @classmethod
+    def drop_daily_goal(cls, data):
+        return {key: value for key, value in data.items() if key != "daily_goal"} if isinstance(data, dict) else data
 
 
 class AccountUpdate(BaseModel):

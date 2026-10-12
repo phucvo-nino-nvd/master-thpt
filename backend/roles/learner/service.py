@@ -531,6 +531,10 @@ def keyed_questions() -> set[str]:
     return {item["id"] for item in load_items() if answer_of(Item.model_validate(item))}
 
 
+def keyed_only(groups: Sequence[Sequence[str]], keyed: set[str]) -> list[list[str]]:
+    return [kept for group in groups if (kept := [question_id for question_id in group if question_id in keyed])]
+
+
 def question_types() -> dict[str, str]:
     return {item["id"]: item["type"] for item in load_items()}
 
@@ -591,7 +595,7 @@ def obstacle_of(
         "id": obstacle_id,
         "depth": len(chain),
         "knowledge_ids": knowledge_ids,
-        "total_questions": question_count([questions[knowledge_id] for knowledge_id in knowledge_ids]),
+        "total_questions": min(OBSTACLE_QUESTIONS, question_count([questions[knowledge_id] for knowledge_id in knowledge_ids])),
     }, missing
 
 
@@ -671,6 +675,8 @@ def placement_of(
 def quest(runs: Sequence[Mapping], user_id: str | None = None) -> dict:
     path, groups = quest_groups()
     stations = [station for stage in path for station in stage["stations"]]
+    guest_station = stations[0]["id"] if stations else None
+    tested = {**groups, guest_station: keyed_only(groups[guest_station], keyed_questions())} if guest_station else groups
     knowledge_by_question = knowledge_of(sorted({
         answer["question_id"] for run in runs for answer in run["answers"]
     }))
@@ -715,7 +721,7 @@ def quest(runs: Sequence[Mapping], user_id: str | None = None) -> dict:
             stage_stations.append({
                 "id": station["id"],
                 "name": station["name"],
-                "total_questions": question_count(groups[station["id"]]),
+                "total_questions": min(STATION_QUESTIONS, question_count(tested[station["id"]])),
                 "status": status_of(station["id"], order[station["id"]] < start),
             })
 
@@ -723,7 +729,7 @@ def quest(runs: Sequence[Mapping], user_id: str | None = None) -> dict:
             "id": stage["id"],
             "name": stage["name"],
             "stations": stage_stations,
-            "total_questions": question_count(groups[stage["id"]]),
+            "total_questions": min(STAGE_QUESTIONS, question_count(groups[stage["id"]])),
             "status": status_of(
                 stage["id"],
                 all(order[station["id"]] < start for station in stage["stations"]),
@@ -768,10 +774,6 @@ def quest_test(item_id: str, runs: Sequence[Mapping], user_id: str | None = None
 
     keyed = keyed_questions()
     path, groups = quest_groups()
-    groups = {
-        group_id: [kept for group in group_list if (kept := [question_id for question_id in group if question_id in keyed])]
-        for group_id, group_list in groups.items()
-    }
     last_seen = {
         answer["question_id"]: answer["answered_at"]
         for run in runs
@@ -784,7 +786,7 @@ def quest_test(item_id: str, runs: Sequence[Mapping], user_id: str | None = None
             for stage in path
             for station in stage["stations"]
             if station["grade"] == placement["grade"]
-            and (queue := station_questions(groups[station["id"]]))
+            and (queue := station_questions(keyed_only(groups[station["id"]], keyed)))
         ]
         picked = pick_questions([queue for _, queue in queues], min(PLACEMENT_QUESTIONS, len(queues)), last_seen)
 
@@ -799,6 +801,8 @@ def quest_test(item_id: str, runs: Sequence[Mapping], user_id: str | None = None
             },
         }
 
+    guest_station = path[0]["stations"][0]["id"]
+    groups = {**groups, guest_station: keyed_only(groups[guest_station], keyed)}
     status = {
         item["id"]: item["status"]
         for stage in state["stages"]
@@ -836,7 +840,7 @@ def quest_test(item_id: str, runs: Sequence[Mapping], user_id: str | None = None
                     "grade": stage["stations"][0]["grade"],
                     "question_ids": pick_questions(
                         [
-                            sorted((question_id for question_id in questions[knowledge_id] if question_id in keyed), key=lambda question_id: types.get(question_id) != weak[knowledge_id])
+                            sorted(questions[knowledge_id], key=lambda question_id: types.get(question_id) != weak[knowledge_id])
                             for knowledge_id in obstacle["knowledge_ids"]
                         ],
                         OBSTACLE_QUESTIONS,

@@ -62,7 +62,7 @@ def test_new_account_has_empty_activity_and_complete_defaults(client):
     assert data["week"] == [False] * 7
     assert data["kept_today"] is False
     assert data["plan"] == "free"
-    assert data["settings"] == {"remind": True, "sound": True, "minutes": 20, "daily_goal": 10}
+    assert data["settings"] == {"remind": True, "sound": True, "minutes": 20}
     assert data["joined_at"].endswith("Z")
     assert http.get("/api/me").json()["joined_at"] == data["joined_at"]
 
@@ -89,12 +89,31 @@ def test_activity_uses_vietnam_dates_and_only_owners_nonempty_answers(client):
     assert data["kept_today"] is True
     assert data["week"] == [False, False, False, True, True, True, False]
     assert data["xp"] == 8 + 20
-    assert data["daily"][0] == {"id": "insight", "title": "Trả lời đúng 8 câu · +32 XP", "current": 1, "target": 8}
+    assert data["daily"][0] == {"id": "insight", "title": "Trả lời đúng 13 câu · +52 XP", "current": 1, "target": 13}
     assert data["joined_at"] == "2026-10-01T16:59:00Z"
     answer("user-a", "a2", "q3", "2026-10-02 17:01:00", value=[False, True])
     assert http.get("/api/me").json()["activity"] == data["activity"]
     creds.decoded = {"sub": "user-b"}
     assert http.get("/api/me").json()["activity"] == [{"date": "2026-10-03", "count": 1}]
+
+
+def test_combo_counts_consecutive_correct_answers_per_vietnam_day(client):
+    http, _ = client
+    answer("user-a", "c1", "q1", "2026-10-01 01:00:00")
+    answer("user-a", "c1", "q2", "2026-10-01 01:01:00")
+    answer("user-a", "c1", "q3", "2026-10-01 01:02:00")
+    answer("user-a", "c2", "q4", "2026-10-03 01:00:00")
+    answer("user-a", "c2", "q5", "2026-10-03 01:01:00", correct=False)
+    answer("user-a", "c2", "q6", "2026-10-03 01:02:00")
+    answer("user-a", "c2", "q7", "2026-10-03 01:03:00")
+
+    data = http.get("/api/me").json()
+    assert data["daily"][1] == {"id": "combo", "title": "Trả lời đúng 3 câu liên tiếp · +30 XP", "current": 2, "target": 3}
+    assert data["xp"] == 6 * 4 + 20 + 30
+    answer("user-a", "c2", "q8", "2026-10-03 01:04:00")
+    data = http.get("/api/me").json()
+    assert data["daily"][1]["current"] == 3
+    assert data["xp"] == 7 * 4 + 20 + 30 * 2
 
 
 def test_streak_survives_yesterday_and_resets_after_gap(client):
@@ -114,10 +133,11 @@ def test_profile_patch_persists_and_merges_settings_without_changing_activity(cl
     answer("user-a", "a1", "q1", "2026-10-03 01:00:00")
     response = http.patch("/api/me", json={"name": "  Gia Bảo  ", "grade": 12, "goal": 8, "avatar": 2, "saved_exam_ids": ["exam"], "settings": {"sound": False, "minutes": 30}})
     assert response.status_code == 200
-    response = http.patch("/api/me", json={"settings": {"daily_goal": 20}})
+    response = http.patch("/api/me", json={"settings": {"remind": False}})
     data = response.json()
     assert data["name"] == "Gia Bảo"
-    assert data["settings"] == {"remind": True, "sound": False, "minutes": 30, "daily_goal": 20}
+    assert data["settings"] == {"remind": False, "sound": False, "minutes": 30}
+    assert data["daily"][0]["target"] == 20
     assert data["activity"] == [{"date": "2026-10-03", "count": 1}]
     assert http.get("/api/me").json() == data
     creds.decoded = {"sub": "user-b"}
@@ -128,7 +148,7 @@ def test_profile_patch_persists_and_merges_settings_without_changing_activity(cl
 @pytest.mark.parametrize("patch", [
     {"user_id": "user-b"}, {"plan": "pro"}, {"xp": 10000}, {"activity": []},
     {"grade": 9}, {"avatar": 6}, {"name": None}, {"settings": None},
-    {"settings": {"daily_goal": 100}}, {"settings": {"sound": "false"}},
+    {"settings": {"minutes": 15}}, {"settings": {"sound": "false"}},
 ])
 def test_patch_rejects_invalid_values_and_server_owned_fields(client, patch):
     http, _ = client

@@ -15,7 +15,9 @@ VIETNAM = timezone(timedelta(hours=7))
 XP_PER_CORRECT = 4
 XP_PER_CUP = 10
 XP_PER_EXAM = 20
-DAILY_CORRECT_TARGET = 8
+XP_PER_COMBO = 30
+SECONDS_PER_QUESTION = 90
+COMBO_TARGET = 3
 ANSWERED = """(
     (json_type(q.student_answer) = 'text' AND TRIM(json_extract(q.student_answer, '$')) != '')
     OR (json_type(q.student_answer) = 'array' AND json_array_length(q.student_answer) > 0)
@@ -29,6 +31,18 @@ def cups_of(user_id: str) -> int:
     knowledge = knowledge_of(sorted({answer["question_id"] for run in runs for answer in run["answers"]}))
 
     return len({run["exam_id"] for run in runs if passed(run["answers"], knowledge)})
+
+
+def combo_days(answers) -> dict[str, int]:
+    best: dict[str, int] = {}
+    run: dict[str, int] = {}
+
+    for answer in answers:
+        day = answer["day"]
+        run[day] = run.get(day, 0) + 1 if answer["correct"] else 0
+        best[day] = max(best.get(day, 0), run[day])
+
+    return best
 
 
 def account_of(user_id: str, plan: Literal["free", "pro"] = "free") -> Account:
@@ -56,6 +70,18 @@ def account_of(user_id: str, plan: Literal["free", "pro"] = "free") -> Account:
             """,
             (user_id, today.isoformat()),
         ).fetchall()
+        answers = conn.execute(
+            f"""
+            SELECT DATE(q.answered_at, '+7 hours') AS day, q.correct
+            FROM history_question q
+            JOIN history h ON h.id = q.history_id
+            WHERE h.user_id = ?
+              AND DATE(q.answered_at, '+7 hours') <= ?
+              AND {ANSWERED}
+            ORDER BY q.answered_at, q.rowid
+            """,
+            (user_id, today.isoformat()),
+        ).fetchall()
         exams = conn.execute(
             f"""
             SELECT COUNT(DISTINCT h.exam_id)
@@ -79,21 +105,37 @@ def account_of(user_id: str, plan: Literal["free", "pro"] = "free") -> Account:
     monday = today - timedelta(days=today.weekday())
     today_correct = sum(row["correct"] for row in rows if row["day"] == today.isoformat())
     joined_at = min(profile["created_at"], joined) if joined else profile["created_at"]
+    daily_target = round(settings.settings.minutes * 60 / SECONDS_PER_QUESTION)
+    combos = combo_days(answers)
+    xp = (
+        sum(row["correct"] for row in rows) * XP_PER_CORRECT
+        + cups_of(user_id) * XP_PER_CUP
+        + exams * XP_PER_EXAM
+        + sum(best >= COMBO_TARGET for best in combos.values()) * XP_PER_COMBO
+    )
 
     return Account(
         **settings.model_dump(),
         plan=plan,
         joined_at=joined_at.replace(" ", "T") + "Z",
-        xp=sum(row["correct"] for row in rows) * XP_PER_CORRECT + cups_of(user_id) * XP_PER_CUP + exams * XP_PER_EXAM,
+        xp=xp,
         streak=streak,
         kept_today=kept_today,
         week=[(monday + timedelta(days=i)).isoformat() in learned for i in range(7)],
-        daily=[DailyTask(
-            id="insight",
-            title=f"Trả lời đúng {DAILY_CORRECT_TARGET} câu · +{DAILY_CORRECT_TARGET * XP_PER_CORRECT} XP",
-            current=min(DAILY_CORRECT_TARGET, today_correct),
-            target=DAILY_CORRECT_TARGET,
-        )],
+        daily=[
+            DailyTask(
+                id="insight",
+                title=f"Trả lời đúng {daily_target} câu · +{daily_target * XP_PER_CORRECT} XP",
+                current=min(daily_target, today_correct),
+                target=daily_target,
+            ),
+            DailyTask(
+                id="combo",
+                title=f"Trả lời đúng {COMBO_TARGET} câu liên tiếp · +{XP_PER_COMBO} XP",
+                current=min(COMBO_TARGET, combos.get(today.isoformat(), 0)),
+                target=COMBO_TARGET,
+            ),
+        ],
         activity=[ActivityDay(date=row["day"], count=row["count"]) for row in rows],
     )
 
