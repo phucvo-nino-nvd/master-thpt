@@ -1,7 +1,7 @@
 'use client';
 
 import { useClerk } from '@clerk/nextjs';
-import { CheckoutButton, SubscriptionDetailsButton } from '@clerk/nextjs/experimental';
+import { CheckoutButton, SubscriptionDetailsButton, usePlans } from '@clerk/nextjs/experimental';
 import { useAccount } from '@/components/account-provider';
 import { CheckIcon, CrownIcon } from '@/components/icons';
 import { AccountUpdate, MOCK_ACCOUNT } from '@/shared/api/client';
@@ -31,6 +31,7 @@ export function Plans({ run, onCheckout }: { run: (task: () => Promise<void>) =>
 	const { account, save, reload } = useAccount();
 	const { session } = useClerk();
 	const pro = account.plan === 'pro';
+	const fee = usePlans({ for: 'user' }).data?.find((plan) => plan.id === PRO_PLAN_ID)?.fee;
 
 	const update = (patch: AccountUpdate) => run(() => save(patch));
 
@@ -80,7 +81,7 @@ export function Plans({ run, onCheckout }: { run: (task: () => Promise<void>) =>
 					{pro && <span className={s.using}>ĐANG DÙNG</span>}
 				</div>
 				<div className={s.price}>
-					79.000đ<small>/ tháng</small>
+					{fee ? `${fee.currencySymbol}${fee.amountFormatted}` : '…'}<small>/ tháng</small>
 				</div>
 				<div className={s.planCopy}>Cho giai đoạn tăng tốc trước kỳ thi.</div>
 				<div className={s.features}>
