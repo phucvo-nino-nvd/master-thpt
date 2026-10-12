@@ -42,7 +42,7 @@
 
   <!-- reading key -->
   <text class="key" x="600" y="16" text-anchor="middle">Everything flows left to right; the two dark red wires at the bottom are the only returns.</text>
-  <text class="key" x="600" y="34" text-anchor="middle">❶ Student submits → ❷ Stored as attempts → ❸ Teacher scores → ❹ Verifier re-checks, Learner updates mastery → ❺ Weakest concept restocks → ❻ Crawler → ❼ Parser (or Author) → ❽ Dedupe + Tagger → Back to ❶</text>
+  <text class="key" x="600" y="34" text-anchor="middle" style="font-size:10.5px">❶ Student submits → ❷ Stored as attempts → ❸ Teacher scores → ❹ Verifier re-checks, Learner diagnoses + updates mastery → ❺ Weakest concept restocks → ❻ Crawler → ❼ Parser (or Author) → ❽ Dedupe + Tagger → Back to ❶</text>
   <line x1="30" y1="46" x2="1170" y2="46" stroke="#2b2b2b" stroke-width="1" stroke-dasharray="6 4"/>
 
   <!-- ============ ENTRY ============ -->
@@ -105,18 +105,18 @@
   <text class="sub" x="542" y="320" text-anchor="middle">SymPy · flagged only</text>
   <path class="w" d="M612,322 H702"/>
   <text class="lbl" x="657" y="314" text-anchor="middle">(v¹, ⋯, vⁿ)</text>
-  <polygon points="702,272 788,300 788,344 702,372" fill="#fadcdc" stroke="#c08484" stroke-width="1.1"/>
+  <rect x="702" y="295" width="86" height="54" rx="8" fill="#fdf6d5" stroke="#c9b043" stroke-width="1.1"/>
   <text class="box" x="745" y="318" text-anchor="middle">Learner</text>
-  <text class="sub" x="745" y="332" text-anchor="middle">mastery update</text>
+  <text class="sub" x="745" y="333" text-anchor="middle">errors · mastery</text>
   <path class="w" d="M788,322 H862"/>
   <text class="lbl" x="825" y="314" text-anchor="middle">(m¹, ⋯, mⁿ)</text>
   <polygon points="862,228 966,280 966,364 862,416" fill="#fadcdc" stroke="#c08484" stroke-width="1.1"/>
   <text class="box" x="914" y="318" text-anchor="middle">Pick Weakest</text>
   <text class="box" x="914" y="334" text-anchor="middle">Concept</text>
-  <path class="w" d="M390,392 H745 V358"/>
+  <path class="w" d="M390,392 H735 V349"/>
   <text class="lbl" x="556" y="384" text-anchor="middle">prior mastery &#160;· learner.db</text>
-  <path class="w d" d="M390,420 H765 V352"/>
-  <text class="lbl" x="580" y="412" text-anchor="middle">knowledge graph &#160;· Neo4j prerequisites</text>
+  <path class="w d" d="M390,420 H755 V349"/>
+  <text class="lbl" x="580" y="412" text-anchor="middle">knowledge graph &#160;· prerequisites</text>
 
   <!-- restock: grading -> ingest -->
   <path class="r" d="M966,322 H1054 V512 H206 V562"/>
