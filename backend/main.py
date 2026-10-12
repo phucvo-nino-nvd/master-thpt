@@ -24,6 +24,7 @@ from roles.learner.service import MIN_QUESTIONS, crawl_requests, run_learner, st
 from roles.tagger.main import BATCH_SIZE, save_tags, tag_with_llm
 from common.schema import Document, Evaluation
 from common.utils import normalized, write_json
+from api.account import settings_of
 from history.main import queue_docs, solved_question_ids, take_doc
 from knowledge.bank.main import GENERATED_PREFIX, Item, build_item_bank, numbered, save_solution, source_urls
 from knowledge.graph.convert import node_map
@@ -283,8 +284,8 @@ def ingest(
     if not state["crawled"].docs:
         return state if request.year else run((author_agent, item_bank), state, on_node)
 
-    if manual:
-        queue_docs(state["crawled"])
+    if user_id and settings_of(user_id).manual:
+        queue_docs(state["crawled"], user_id)
 
         return state
 
@@ -293,17 +294,16 @@ def ingest(
 
 progress: State | None = None
 grading: str | None = None
-manual: bool = True
 
 
 @traceable(name="[INGEST]: Manual Ingest", run_type="chain")
-def approve(url: str) -> None:
+def approve(url: str, user_id: str) -> None:
     global progress
 
     if progress is not None:
         return
 
-    batches = take_doc(url)
+    batches = take_doc(url, user_id)
 
     running: State = {"concept": "", "stage": "planning", "step": 0, "total": len(batches)}
     progress = running

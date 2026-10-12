@@ -95,31 +95,59 @@ def test_manual_mode_queues_urls_until_approved(history_db, monkeypatch):
     parsed: list[list[str]] = []
 
     monkeypatch.setattr(main, "crawl", lambda request: crawled("a.pdf", "b.pdf"))
-    monkeypatch.setattr(main, "manual", True)
     monkeypatch.setattr(
         main,
         "parse_question",
         lambda crawled: parsed.append([doc.url for doc in crawled.docs]) or [],
     )
 
-    main.ingest(CrawlerRequest(grade=12, concept="Đạo hàm"))
+    main.ingest(CrawlerRequest(grade=12, concept="Đạo hàm"), "user-a")
 
     assert parsed == []
-    assert [doc.url for doc in history.queued_docs()[0].docs] == ["a.pdf", "b.pdf"]
+    assert [doc.url for doc in history.queued_docs("user-a")[0].docs] == ["a.pdf", "b.pdf"]
 
-    history.drop_doc("a.pdf")
-    main.approve("b.pdf")
+    history.drop_doc("a.pdf", "user-a")
+    main.approve("b.pdf", "user-a")
 
     assert parsed == [["b.pdf"]]
-    assert history.queued_docs() == []
+    assert history.queued_docs("user-a") == []
     assert main.progress is None
 
 
 def test_queue_keeps_one_row_per_url(history_db):
-    history.queue_docs(crawled("a.pdf"))
-    history.queue_docs(crawled("a.pdf", "b.pdf"))
+    history.queue_docs(crawled("a.pdf"), "user-a")
+    history.queue_docs(crawled("a.pdf", "b.pdf"), "user-a")
 
-    assert [doc.url for doc in history.queued_docs()[0].docs] == ["a.pdf", "b.pdf"]
+    assert [doc.url for doc in history.queued_docs("user-a")[0].docs] == ["a.pdf", "b.pdf"]
+
+
+def test_queue_and_mode_belong_to_each_user(history_db, monkeypatch):
+    from api.account import save_account, settings_of
+    from api.schema import AccountUpdate
+
+    parsed: list[list[str]] = []
+
+    monkeypatch.setattr(main, "crawl", lambda request: crawled("a.pdf"))
+    monkeypatch.setattr(
+        main,
+        "parse_question",
+        lambda crawled: parsed.append([doc.url for doc in crawled.docs]) or [],
+    )
+    save_account("user-b", AccountUpdate.model_validate({"settings": {"manual": False}}))
+
+    main.ingest(CrawlerRequest(grade=12, concept="Đạo hàm"), "user-a")
+    main.ingest(CrawlerRequest(grade=12, concept="Đạo hàm"), "user-b")
+
+    assert settings_of("user-a").manual and not settings_of("user-b").manual
+    assert [doc.url for doc in history.queued_docs("user-a")[0].docs] == ["a.pdf"]
+    assert history.queued_docs("user-b") == []
+    assert parsed == [["a.pdf"]]
+
+    history.drop_doc("a.pdf", "user-b")
+    main.approve("a.pdf", "user-b")
+
+    assert parsed == [["a.pdf"]]
+    assert [doc.url for doc in history.queued_docs("user-a")[0].docs] == ["a.pdf"]
 
 
 def test_busy_pipeline_rejects_new_request_instead_of_dropping_it(monkeypatch):

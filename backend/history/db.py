@@ -22,6 +22,10 @@ def get_connection() -> sqlite3.Connection:
 
 def init_db() -> None:
     with get_connection() as conn:
+        queue = {row["name"] for row in conn.execute("PRAGMA table_info(crawl_queue)")}
+        if queue and "user_id" not in queue:
+            conn.execute("DROP TABLE crawl_queue")
+
         conn.executescript(
             """
             CREATE TABLE IF NOT EXISTS account_profile (
@@ -60,12 +64,15 @@ def init_db() -> None:
             );
 
             CREATE TABLE IF NOT EXISTS crawl_queue (
-                url TEXT PRIMARY KEY,
+                user_id TEXT NOT NULL,
+                url TEXT NOT NULL,
                 title TEXT NOT NULL DEFAULT '',
                 score REAL NOT NULL DEFAULT 0.0,
                 concept TEXT NOT NULL DEFAULT '',
                 grade INTEGER NOT NULL,
-                created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+                created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+                PRIMARY KEY (user_id, url)
             );
             """
         )

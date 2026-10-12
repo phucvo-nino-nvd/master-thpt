@@ -62,7 +62,7 @@ def test_new_account_has_empty_activity_and_complete_defaults(client):
     assert data["week"] == [False] * 7
     assert data["kept_today"] is False
     assert data["plan"] == "free"
-    assert data["settings"] == {"remind": True, "sound": True, "minutes": 20}
+    assert data["settings"] == {"remind": True, "sound": True, "minutes": 20, "manual": True}
     assert data["joined_at"].endswith("Z")
     assert http.get("/api/me").json()["joined_at"] == data["joined_at"]
 
@@ -136,7 +136,7 @@ def test_profile_patch_persists_and_merges_settings_without_changing_activity(cl
     response = http.patch("/api/me", json={"settings": {"remind": False}})
     data = response.json()
     assert data["name"] == "Gia Bảo"
-    assert data["settings"] == {"remind": False, "sound": False, "minutes": 30}
+    assert data["settings"] == {"remind": False, "sound": False, "minutes": 30, "manual": True}
     assert data["daily"][0]["target"] == 20
     assert data["activity"] == [{"date": "2026-10-03", "count": 1}]
     assert http.get("/api/me").json() == data

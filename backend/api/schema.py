@@ -65,6 +65,7 @@ class AccountSettings(BaseModel):
     remind: bool = True
     sound: bool = True
     minutes: Literal[10, 20, 30, 45] = 20
+    manual: bool = True
 
     @model_validator(mode="before")
     @classmethod

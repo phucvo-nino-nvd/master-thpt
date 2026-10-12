@@ -31,7 +31,7 @@ from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRe
 from knowledge.bank.main import GENERATED_PREFIX, Item, items_of, load_items, source_urls
 from knowledge.graph.convert import node_map
 from main import approve, grade, grade_by_key, stock_practice
-from .account import account_of, save_account
+from .account import account_of, save_account, settings_of
 from .schema import Account, AccountUpdate, CheckRequest, DocumentItem, GradingStatus, PracticeRequest, PracticeStatus, SubmitRequest, SubmitResponse
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -200,8 +200,8 @@ def practice_sets(user_id: str | None = None, query: str = "") -> list[DocumentI
     return sets
 
 
-def ingest_state() -> dict:
-    return {"manual": main.manual, "batches": queued_docs()}
+def ingest_state(user_id: str) -> dict:
+    return {"manual": settings_of(user_id).manual, "batches": queued_docs(user_id)}
 
 
 def reject_if_busy() -> None:
@@ -360,7 +360,7 @@ def get_document(
 
 @app.get("/api/ingest")
 def get_ingest(creds: HTTPAuthorizationCredentials = Depends(clerk_guard)) -> dict:
-    return ingest_state()
+    return ingest_state(creds.decoded["sub"])
 
 
 @app.post("/api/ingest/mode")
@@ -368,9 +368,10 @@ def post_ingest_mode(
     manual: bool,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> dict:
-    main.manual = manual
+    user_id = creds.decoded["sub"]
+    save_account(user_id, AccountUpdate.model_validate({"settings": {"manual": manual}}))
 
-    return ingest_state()
+    return ingest_state(user_id)
 
 
 @app.delete("/api/ingest")
@@ -378,9 +379,10 @@ def delete_ingest(
     url: str,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> dict:
-    drop_doc(url)
+    user_id = creds.decoded["sub"]
+    drop_doc(url, user_id)
 
-    return ingest_state()
+    return ingest_state(user_id)
 
 
 @app.post("/api/ingest/approve")
@@ -389,11 +391,12 @@ def post_ingest_approve(
     background: BackgroundTasks,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> dict:
+    user_id = creds.decoded["sub"]
     reject_if_busy()
 
-    background.add_task(approve, url)
+    background.add_task(approve, url, user_id)
 
-    return ingest_state()
+    return ingest_state(user_id)
 
 
 @app.get("/api/review")

@@ -8,7 +8,7 @@ import json
 from history.db import get_connection, init_db
 from history.main import runs_of
 from roles.learner.service import knowledge_of, passed, quest_groups
-from .schema import Account, AccountUpdate, ActivityDay, DailyTask
+from .schema import Account, AccountSettings, AccountUpdate, ActivityDay, DailyTask
 
 
 VIETNAM = timezone(timedelta(hours=7))
@@ -31,6 +31,15 @@ def cups_of(user_id: str) -> int:
     knowledge = knowledge_of(sorted({answer["question_id"] for run in runs for answer in run["answers"]}))
 
     return len({run["exam_id"] for run in runs if passed(run["answers"], knowledge)})
+
+
+def settings_of(user_id: str) -> AccountSettings:
+    init_db()
+
+    with get_connection() as conn:
+        row = conn.execute("SELECT data FROM account_profile WHERE user_id = ?", (user_id,)).fetchone()
+
+    return AccountUpdate.model_validate_json(row["data"]).settings if row else AccountSettings()
 
 
 def combo_days(answers) -> dict[str, int]:

@@ -2228,25 +2228,6 @@
       ]
     },
     {
-      "id": "CUC_TRI",
-      "name": "Cực trị",
-      "type": "CONCEPT",
-      "description": "Giá trị lớn nhất hoặc nhỏ nhất của hàm số trong một khoảng hoặc toàn bộ tập xác định.",
-      "introduced_grade": 12,
-      "grades": [
-        12
-      ],
-      "aliases": [
-        "Cực trị"
-      ],
-      "source_ids": [
-        "CUC_TRI"
-      ],
-      "source_chunks": [
-        "toan-12-tap-1:0004"
-      ]
-    },
-    {
       "id": "CUONG_DO_TRUNG_BINH",
       "name": "Cường độ trung bình",
       "type": "CONCEPT",
@@ -14872,13 +14853,6 @@
       "source_chunks": []
     },
     {
-      "source": "DIEM_CUC_TRI",
-      "target": "CUC_TRI",
-      "relation": "REQUIRES",
-      "rationale": null,
-      "source_chunks": []
-    },
-    {
       "source": "DIEM_KHONG_THUOC_MAT_PHANG",
       "target": "MAT_PHANG",
       "relation": "REQUIRES",
@@ -15584,13 +15558,6 @@
       "source_chunks": [
         "toan-11-tap-2:0007"
       ]
-    },
-    {
-      "source": "GIA_TRI_CUC_TRI",
-      "target": "CUC_TRI",
-      "relation": "REQUIRES",
-      "rationale": null,
-      "source_chunks": []
     },
     {
       "source": "GIA_TRI_CUC_TRI",

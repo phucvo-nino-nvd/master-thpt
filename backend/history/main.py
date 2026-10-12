@@ -338,24 +338,24 @@ def batches_of(rows: list[Row]) -> list[CrawlerResponse]:
     return list(batches.values())
 
 
-def queue_docs(crawled: CrawlerResponse) -> None:
+def queue_docs(crawled: CrawlerResponse, user_id: str) -> None:
     init_db()
 
     with get_connection() as conn:
         conn.executemany(
             """
-            INSERT INTO crawl_queue (url, title, score, concept, grade)
-            VALUES (?, ?, ?, ?, ?)
-            ON CONFLICT(url) DO NOTHING
+            INSERT INTO crawl_queue (user_id, url, title, score, concept, grade)
+            VALUES (?, ?, ?, ?, ?, ?)
+            ON CONFLICT(user_id, url) DO NOTHING
             """,
             [
-                (doc.url, doc.title, doc.score, crawled.request.concept, crawled.request.grade)
+                (user_id, doc.url, doc.title, doc.score, crawled.request.concept, crawled.request.grade)
                 for doc in crawled.docs
             ],
         )
 
 
-def queued_docs() -> list[CrawlerResponse]:
+def queued_docs(user_id: str) -> list[CrawlerResponse]:
     init_db()
 
     with get_connection() as conn:
@@ -363,37 +363,39 @@ def queued_docs() -> list[CrawlerResponse]:
             """
             SELECT url, title, score, concept, grade
             FROM crawl_queue
+            WHERE user_id = ?
             ORDER BY created_at, rowid
-            """
+            """,
+            (user_id,),
         ).fetchall()
 
     return batches_of(rows)
 
 
-def drop_doc(url: str) -> None:
+def drop_doc(url: str, user_id: str) -> None:
     init_db()
 
     with get_connection() as conn:
         conn.execute(
             """
             DELETE FROM crawl_queue
-            WHERE url = ?
+            WHERE user_id = ? AND url = ?
             """,
-            (url,),
+            (user_id, url),
         )
 
 
-def take_doc(url: str) -> list[CrawlerResponse]:
+def take_doc(url: str, user_id: str) -> list[CrawlerResponse]:
     init_db()
 
     with get_connection() as conn:
         rows = conn.execute(
             """
             DELETE FROM crawl_queue
-            WHERE url = ?
+            WHERE user_id = ? AND url = ?
             RETURNING url, title, score, concept, grade
             """,
-            (url,),
+            (user_id, url),
         ).fetchall()
 
     return batches_of(rows)
