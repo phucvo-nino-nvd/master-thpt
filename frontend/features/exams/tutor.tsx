@@ -115,7 +115,7 @@ export function Tutor({ question, number, answer, thread, onThread, onClose }: T
 									<i />
 									<i />
 								</span>
-								Trợ lý đang soi lại bước giải của em
+								Trợ lý đang soi lại đáp án của em
 							</div>
 						)
 					)}

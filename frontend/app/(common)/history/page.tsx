@@ -127,7 +127,6 @@ export default function HistoryPage() {
 				<div className={page.inner}>
 					<div className={page.head}>
 						<div>
-							<div className={page.eyebrow}>DỮ LIỆU HỌC TẬP</div>
 							<h1 className={page.title}>Lịch sử làm bài</h1>
 						</div>
 						<button type="button" className={page.chip} onClick={() => setRange((range + 1) % RANGES.length)}>
