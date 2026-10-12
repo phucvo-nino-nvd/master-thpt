@@ -21,9 +21,7 @@
 
 ## Preview
 
-<video src="frontend/public/preview.mp4" controls muted width="100%"></video>
-
-If the player does not load, open [`frontend/public/preview.mp4`](frontend/public/preview.mp4) directly.
+https://github.com/user-attachments/assets/f50e78b4-eca2-4271-9ea7-0de16cf6b9bf
 
 ## Overview and Core Value Proposition
 
