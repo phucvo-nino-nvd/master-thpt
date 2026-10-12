@@ -10,7 +10,7 @@ import { Rail } from '@/components/rail';
 import { useLoad, useMounted } from '@/lib/api';
 import { STREAK_MILESTONES, WEEKDAYS, dayKey, score, weekdayIndex } from '@/lib/format';
 import { historyTitle } from '@/lib/history';
-import { HistoryMode, Quest, getDocuments, getHistoryList, getQuest } from '@/shared/api/client';
+import { HistoryMode, KnowledgeGraph, Quest, getDocuments, getHistoryList, getKnowledgeGraph, getQuest } from '@/shared/api/client';
 import s from './history.module.css';
 
 type Kind = 'quest' | 'exam' | 'self';
@@ -104,11 +104,12 @@ export default function HistoryPage() {
 	const { data: history, loading, error } = useLoad(getHistoryList, []);
 	const { data: documents } = useLoad(getDocuments, []);
 	const { data: quest } = useLoad<Quest | null>(getQuest, null);
+	const { data: graph } = useLoad<KnowledgeGraph | null>(getKnowledgeGraph, null);
 	const [kind, setKind] = useState<Kind | 'all'>('all');
 	const [range, setRange] = useState(0);
 	const [days, rangeLabel] = RANGES[range];
 
-	const titles = new Map(documents.map((doc) => [doc.id, doc.title]));
+	const titles = new Map([...(graph?.nodes ?? []).map((node): [string, string] => [node.id, node.label]), ...documents.map((doc): [string, string] => [doc.id, doc.title])]);
 
 	const titleOf = (examId: string) => historyTitle(examId, titles, quest);
 
