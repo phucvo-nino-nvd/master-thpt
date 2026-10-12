@@ -20,7 +20,7 @@ import main
 import os
 import re
 
-from roles.learner.service import GRADE, crawl_requests, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, questions_of, quest, quest_test, recurring_error, skip_review, stages, stocked_count
+from roles.learner.service import GRADE, MIN_QUESTIONS, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, questions_of, quest, quest_test, recurring_error, skip_review, stages, stocked_count
 from roles.teacher.main import chat, explain, give_hint
 from roles.teacher.rubric import answer_of, key_evaluation, maximum_score, score_on_ten
 from roles.teacher.schema import ChatRequest, HintRequest, SolutionRequest
@@ -28,11 +28,11 @@ from common.schema import Evaluation
 from common.utils import normalized
 from history.main import attempted_exam_ids, drop_doc, runs_of, get_answer, get_history, list_history, mistake_note, queued_docs, save_answer, seconds_per_question, solved_question_ids, start_history, streak, wrong_feedback
 from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRequest
-from knowledge.bank.main import GENERATED_PREFIX, Item, items_of, load_items, source_urls
+from knowledge.bank.main import GENERATED_PREFIX, Item, items_of, load_items
 from knowledge.graph.convert import node_map
-from main import approve, grade, grade_by_key, stock_practice
+from main import approve, author_practice, grade, grade_by_key, stock_practice
 from .account import account_of, save_account, settings_of
-from .schema import Account, AccountUpdate, CheckRequest, DocumentItem, GradingStatus, PracticeRequest, PracticeStatus, SubmitRequest, SubmitResponse
+from .schema import Account, AccountUpdate, CheckRequest, DocumentItem, GradingStatus, PracticeRequest, PracticeStatus, PracticeUpdate, SubmitRequest, SubmitResponse
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 IMAGES_DIR = ROOT_DIR / "artifacts" / "data"
@@ -487,27 +487,31 @@ def get_practice_status(
 def post_practice_update(
     request: PracticeRequest,
     background: BackgroundTasks,
+    creds: HTTPAuthorizationCredentials = Depends(pro_guard),
+) -> PracticeUpdate:
+    query = request.request.strip()
+    user_id = creds.decoded["sub"]
+
+    if not query:
+        raise HTTPException(status_code=422, detail="Nhập chủ đề cần tạo đề.")
+
+    authoring = stocked_count(query, solved_question_ids(user_id=user_id), user_id=user_id) < MIN_QUESTIONS
+
+    if authoring:
+        reject_if_busy()
+        wanted = normalized(query)
+        grade = max((node["introduced_grade"] for node in node_map().values() if node["introduced_grade"] and wanted in normalized(node["name"])), default=GRADE)
+        background.add_task(author_practice, query, grade, user_id)
+
+    return PracticeUpdate(sets=practice_sets(user_id, query), authoring=authoring)
+
+
+@app.get("/api/practice/sets")
+def get_practice_sets(
+    query: str,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> list[DocumentItem]:
-    query = request.request.strip()
-    user_id = credential_user_id(creds)
-
-    reject_if_busy()
-
-    solved = solved_question_ids(user_id=user_id)
-
-    if query and not crawl_requests(solved, source_urls(), query, user_id=user_id):
-        raise HTTPException(
-            status_code=409,
-            detail=(
-                f'Đã có {stocked_count(query, solved, user_id=user_id)} câu "{query}" '
-                f'em chưa làm, chưa cần thêm câu mới.'
-            ),
-        )
-
-    background.add_task(stock_practice, query, user_id)
-
-    return practice_sets(user_id, query)
+    return practice_sets(creds.decoded["sub"], query.strip())
 
 
 @app.post("/api/hints")

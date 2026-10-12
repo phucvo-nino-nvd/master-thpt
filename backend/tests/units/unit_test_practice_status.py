@@ -150,6 +150,77 @@ def test_queue_and_mode_belong_to_each_user(history_db, monkeypatch):
     assert [doc.url for doc in history.queued_docs("user-a")[0].docs] == ["a.pdf"]
 
 
+def practice_request(monkeypatch, stocked: int):
+    from types import SimpleNamespace
+
+    from fastapi import BackgroundTasks
+
+    from api import router
+    from api.schema import PracticeRequest
+
+    monkeypatch.setattr(router, "solved_question_ids", lambda user_id: set())
+    monkeypatch.setattr(router, "stocked_count", lambda query, solved, user_id: stocked)
+    monkeypatch.setattr(router, "practice_sets", lambda user_id, query: [])
+    monkeypatch.setattr(router, "node_map", lambda: {"a": {"name": "Tích phân", "introduced_grade": 12}})
+    monkeypatch.setattr(main, "crawl", lambda request: pytest.fail("crawler must not run"))
+    background = BackgroundTasks()
+    update = router.post_practice_update(PracticeRequest(request=" tích phân "), background, SimpleNamespace(decoded={"sub": "user-a"}))
+
+    return update, background
+
+
+def test_practice_request_reuses_bank_when_stocked(monkeypatch):
+    update, background = practice_request(monkeypatch, main.MIN_QUESTIONS)
+
+    assert update.authoring is False
+    assert background.tasks == []
+
+
+def test_practice_request_goes_straight_to_author_when_lacking(monkeypatch):
+    update, background = practice_request(monkeypatch, main.MIN_QUESTIONS - 1)
+
+    assert update.authoring is True
+    assert [(task.func, task.args) for task in background.tasks] == [(main.author_practice, ("tích phân", 12, "user-a"))]
+
+
+def test_practice_request_requires_pro(monkeypatch):
+    from types import SimpleNamespace
+
+    from fastapi.testclient import TestClient
+
+    from api import router
+
+    monkeypatch.setattr(router, "author_practice", lambda *args: pytest.fail("free users must not reach author"))
+    creds = SimpleNamespace(decoded={"sub": "user-a"})
+    router.app.dependency_overrides[router.clerk_guard] = lambda: creds
+
+    try:
+        with TestClient(router.app) as http:
+            response = http.post("/api/practice/update", json={"request": "tích phân"})
+    finally:
+        router.app.dependency_overrides.clear()
+
+    assert response.status_code == 402
+
+
+def test_author_practice_runs_author_then_bank(monkeypatch):
+    seen: list[tuple[str, str]] = []
+
+    def author_agent(state):
+        seen.append(("author_agent", main.progress["stage"]))
+
+    def item_bank(state):
+        seen.append(("item_bank", state["request"].concept))
+
+    monkeypatch.setattr(main, "author_agent", author_agent)
+    monkeypatch.setattr(main, "item_bank", item_bank)
+
+    main.author_practice("Tích phân", 12, "user-a")
+
+    assert seen == [("author_agent", "author_agent"), ("item_bank", "Tích phân")]
+    assert main.progress is None
+
+
 def test_busy_pipeline_rejects_new_request_instead_of_dropping_it(monkeypatch):
     from fastapi import HTTPException
 

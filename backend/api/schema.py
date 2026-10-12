@@ -59,6 +59,11 @@ class DocumentItem(BaseModel):
     is_completed: bool
 
 
+class PracticeUpdate(BaseModel):
+    sets: list[DocumentItem]
+    authoring: bool
+
+
 class AccountSettings(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True)
 

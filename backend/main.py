@@ -321,6 +321,26 @@ def approve(url: str, user_id: str) -> None:
         progress = None
 
 
+@traceable(name="[INGEST]: Author Practice", run_type="chain")
+def author_practice(concept: str, grade: int, user_id: str) -> None:
+    global progress
+
+    if progress is not None:
+        return
+
+    running: State = {"concept": concept, "stage": "author_agent", "step": 1, "total": 1}
+    progress = running
+
+    try:
+        run(
+            (author_agent, item_bank),
+            {"request": CrawlerRequest(grade=grade, concept=concept), "user_id": user_id},
+            lambda stage: running.update(stage=stage),
+        )
+    finally:
+        progress = None
+
+
 @traceable(name="[INGEST]: Practice Stocking", run_type="chain")
 def stock_practice(concept: str, user_id: str | None = None) -> None:
     global progress
