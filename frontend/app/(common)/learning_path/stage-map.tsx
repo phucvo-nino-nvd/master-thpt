@@ -103,13 +103,14 @@ export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextSh
 		}
 
 		if (item.status === 'blocked') {
-			return { copy: 'Chưa đủ điểm để qua. Gỡ bom ôn tập bên cạnh rồi đi tiếp nha.', cta: 'Tới bom ngay →', tone: s.coral, action: () => onPop('bomb') };
+			return { copy: 'Chưa đủ điểm để qua. Gỡ bom ôn tập bên cạnh rồi đi tiếp nha.', cta: 'Tới bom ngay →', tone: s.coral, href: obstacle ? examHref(obstacle.id, 'obstacle') : undefined, action: () => onPop(null) };
 		}
 
 		return {
 			copy: finish ? `Còn ${stationsLeft} trạm nữa là tới.` : `Khoá rồi nha. Qua ${nextShort ?? 'trạm trước'} trước đã.`,
 			cta: nextShort ? `Đến ${nextShort} ngay →` : '',
 			tone: '',
+			href: nextId === 'bomb' && obstacle ? examHref(obstacle.id, 'obstacle') : undefined,
 			action: () => onPop(nextId),
 		};
 	};
@@ -151,27 +152,17 @@ export function StageMap({ stage, order, obstacle, bombPhase, pop, shake, nextSh
 			)}
 
 			{bomb && obstacle && (
-				<div className={`${s.node} ${pop === 'bomb' ? s.open : ''}`} style={{ left: bomb[0], top: bomb[1] }}>
-					<button type="button" className={s.bomb} title="Bom ôn tập" onClick={() => onPop(pop === 'bomb' ? null : 'bomb')}>
+				<div className={s.node} style={{ left: bomb[0], top: bomb[1] }}>
+					<Link href={examHref(obstacle.id, 'obstacle')} className={s.bomb} title="Gỡ bom ôn tập">
 						<div className={s.bombArt}>
 							<Rive src="bomb" knockout fit="cover" />
 						</div>
-					</button>
+					</Link>
 					{bombPhase === 'shown' && (
-						<div className={`${s.label} ${s.blocked} ${s.labelIn} ${bomb[0] > CENTER ? s.left : s.right}`} onClick={() => onPop('bomb')}>
+						<Link href={examHref(obstacle.id, 'obstacle')} className={`${s.label} ${s.blocked} ${s.labelIn} ${bomb[0] > CENTER ? s.left : s.right}`}>
 							<span className={s.labelName}>Bom ôn tập: <MathInline text={items[bombAt].name} /></span>
 							<span className={s.labelSub}>Gỡ bom · {obstacle.total_questions} câu</span>
-						</div>
-					)}
-					{pop === 'bomb' && (
-						<div className={s.pop}>
-							<div className={s.popCard}>
-								<div className={s.popTitle}>Bom ôn tập</div>
-								<Link href={examHref(obstacle.id, 'obstacle')} className={`${s.cta} ${s.coral}`}>
-									Gỡ bom →
-								</Link>
-							</div>
-						</div>
+						</Link>
 					)}
 				</div>
 			)}

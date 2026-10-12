@@ -336,29 +336,6 @@
 	width: 56px;
 	height: 56px;
 	flex: none;
-	border-radius: 12px;
-	font: 800 24px/1 var(--sans);
-	letter-spacing: -0.03em;
-}
-
-.glyph.path {
-	background: #eaf8f0;
-	color: var(--green-2);
-}
-
-.glyph.mock {
-	background: #ececff;
-	color: var(--indigo-2);
-}
-
-.on .glyph.path {
-	background: var(--green);
-	color: #fff;
-}
-
-.on .glyph.mock {
-	background: var(--indigo);
-	color: #fff;
 }
 
 .chips {
