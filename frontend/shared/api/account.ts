@@ -99,8 +99,8 @@ export const ACCOUNT: MockDb = {
 		kept_today: false,
 		week: Array.from({ length: 7 }, (_, i) => i < weekdayIndex()),
 		daily: [
-			{ id: 'insight', title: `Trả lời đúng 8 câu · +${8 * XP_PER_CORRECT} XP`, current: 4, target: 8 },
-			{ id: 'combo', title: 'Đúng 3 câu Tích phân liên tiếp', current: 1, target: 3 },
+			{ id: 'insight', title: `Trả lời đúng 13 câu · +${13 * XP_PER_CORRECT} XP`, current: 4, target: 13 },
+			{ id: 'combo', title: 'Trả lời đúng 3 câu liên tiếp · +30 XP', current: 1, target: 3 },
 		],
 		gains: [
 			{ name: 'Đổi biến', from: 62, to: 81 },
@@ -109,7 +109,7 @@ export const ACCOUNT: MockDb = {
 		],
 		activity,
 		saved_exam_ids: ['off-2025'],
-		settings: { remind: true, sound: true, minutes: 20, daily_goal: 10 },
+		settings: { remind: true, sound: true, minutes: 20 },
 	},
 
 	documents: [

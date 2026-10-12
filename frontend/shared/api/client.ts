@@ -135,7 +135,7 @@ export type Account = {
 	gains: { name: string; from: number; to: number }[];
 	activity: { date: string; count: number }[];
 	saved_exam_ids: string[];
-	settings: { remind: boolean; sound: boolean; minutes: number; daily_goal: number };
+	settings: { remind: boolean; sound: boolean; minutes: number };
 };
 
 export type AccountUpdate = Partial<Omit<Account, 'settings'>> & { settings?: Partial<Account['settings']> };

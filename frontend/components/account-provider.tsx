@@ -5,6 +5,8 @@ import { createContext, useContext, useState } from 'react';
 import { useLoad } from '@/lib/api';
 import { Account, AccountUpdate, getAccount, updateAccount } from '@/shared/api/client';
 
+export const MINUTE_OPTIONS = [10, 20, 30, 45];
+
 export const AVATARS = [
 	['#d9d7ff', '#A8DC2C'],
 	['#FFB21E', '#F2542D'],
@@ -29,7 +31,7 @@ const NEW_ACCOUNT: Account = {
 	gains: [],
 	activity: [],
 	saved_exam_ids: [],
-	settings: { remind: true, sound: true, minutes: 20, daily_goal: 10 },
+	settings: { remind: true, sound: true, minutes: 20 },
 };
 
 type AccountContextValue = {

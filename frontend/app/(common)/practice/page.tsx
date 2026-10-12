@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { useAccount } from '@/components/account-provider';
+import { MINUTE_OPTIONS, useAccount } from '@/components/account-provider';
 import { CamelLoading } from '@/components/camel-loading';
 import page from '@/components/page.module.css';
 import { DailyQuests, Rail, StatPills, StreakCard } from '@/components/rail';
@@ -11,19 +11,24 @@ import { WEEKDAY_NAMES, dayKey, examHref } from '@/lib/format';
 import { Exam, getHistoryList, getReview } from '@/shared/api/client';
 import s from './practice.module.css';
 
-const GOALS = [5, 10, 20];
-const MIX: Record<number, number[]> = { 5: [2, 2, 1], 10: [4, 4, 2], 20: [8, 8, 4] };
+const MIX_SHARE = 0.4;
 const MIX_LABELS = [
 	['câu em từng sai', '#F2542D'],
 	['ôn bài đã học', '#A8DC2C'],
 	['thử thách khó hơn', '#FFB21E'],
 ];
 
+const mixOf = (goal: number) => {
+	const share = Math.round(goal * MIX_SHARE);
+	return [share, share, goal - 2 * share];
+};
+
 export default function PracticePage() {
 	const { account, save } = useAccount();
 	const mounted = useMounted();
 	const [picked, setPicked] = useState<number | null>(null);
-	const goal = picked ?? account.settings.daily_goal;
+	const minutes = picked ?? account.settings.minutes;
+	const goal = account.daily[0]?.target ?? 0;
 	const { data: review, loading, error } = useLoad<Exam | null>(getReview, null);
 	const { data: history } = useLoad(getHistoryList, []);
 	const total = review?.questions.length ?? 0;
@@ -33,9 +38,9 @@ export default function PracticePage() {
 		: undefined;
 	const startHref = review && total ? `${examHref(review.exam_id, 'review')}&limit=${goal}` : '/learning_path';
 
-	const chooseGoal = (value: number) => {
+	const chooseMinutes = (value: number) => {
 		setPicked(value);
-		save({ settings: { daily_goal: value } }).catch(() => {});
+		save({ settings: { minutes: value } }).catch(() => {});
 	};
 
 	if (loading) return <CamelLoading title="Đang soạn nhiệm vụ hôm nay…" />;
@@ -49,9 +54,9 @@ export default function PracticePage() {
 						<div className={s.goal}>
 							Mục tiêu mỗi ngày
 							<div className={s.segment}>
-								{GOALS.map((value) => (
-									<button key={value} type="button" className={goal === value ? s.on : ''} onClick={() => chooseGoal(value)}>
-										{value} câu
+								{MINUTE_OPTIONS.map((value) => (
+									<button key={value} type="button" className={minutes === value ? s.on : ''} onClick={() => chooseMinutes(value)}>
+										{value} phút
 									</button>
 								))}
 							</div>
@@ -94,7 +99,7 @@ export default function PracticePage() {
 							)}
 							{total > 0 && (
 								<div className={`${s.layer} ${s.mix}`}>
-									{MIX[goal].map((count, i) => (
+									{mixOf(goal).map((count, i) => (
 										<div key={MIX_LABELS[i][0]} className={s.mixTile}>
 											<b>
 												<i style={{ background: MIX_LABELS[i][1] }} />

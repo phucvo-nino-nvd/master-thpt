@@ -3,7 +3,7 @@
 import { useClerk, useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { AVATARS, avatarBg, initialsOf, useAccount } from '@/components/account-provider';
+import { AVATARS, MINUTE_OPTIONS, avatarBg, initialsOf, useAccount } from '@/components/account-provider';
 import { BoltIcon, FlameIcon, PencilIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
 import { Plans } from '@/components/plans';
@@ -18,7 +18,6 @@ const TABS = [
 	['plan', 'Gói học'],
 	['settings', 'Cài đặt'],
 ] as const;
-const MINUTES = [10, 20, 30, 45];
 const LEVELS = ['#ECEDF2', '#FFD2C4', '#FF9F80', '#F2542D', '#C23B19'];
 const WEEKS = 52;
 const SAVED_FLASH_MS = 2200;
@@ -270,7 +269,7 @@ export default function ProfilePage({ searchParams }: { searchParams: { tab?: st
 						<div className={s.card}>
 							<div className={s.toggleTitle}>Thời gian học mỗi ngày</div>
 							<div className={`${s.row} ${s.minutes}`}>
-								{MINUTES.map((minutes) => (
+								{MINUTE_OPTIONS.map((minutes) => (
 									<button
 										key={minutes}
 										type="button"
