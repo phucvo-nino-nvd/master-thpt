@@ -68,12 +68,12 @@ def reference_solution(item: Item) -> str:
     return f"Reference solution:\n{solution}" if solution else ""
 
 
-def answer_text(item: Item, student_answer: str | list[bool]) -> str:
+def answer_text(item: Item, student_answer: str | list[bool | None]) -> str:
     if not isinstance(student_answer, list):
         return student_answer.strip()
 
     return "\n".join(
-        f"{part.label}) {'Đúng' if given else 'Sai'}"
+        f"{part.label}) {'(chưa chọn)' if given is None else 'Đúng' if given else 'Sai'}"
         for part, given in zip(item.parts, student_answer)
     )
 
@@ -97,7 +97,7 @@ def answer_key_block(item: Item) -> str:
     )
 
 
-def build_evaluate_prompt(item: Item, student_answer: str | list[bool]) -> str:
+def build_evaluate_prompt(item: Item, student_answer: str | list[bool | None]) -> str:
     sections = [
         EVALUATE_CONTEXT,
         question_block(item),
@@ -109,7 +109,7 @@ def build_evaluate_prompt(item: Item, student_answer: str | list[bool]) -> str:
     return "\n\n".join(section for section in sections if section)
 
 
-def build_hint_prompt(item: Item, level: int, student_answer: str | list[bool]) -> str:
+def build_hint_prompt(item: Item, level: int, student_answer: str | list[bool | None]) -> str:
     sections = [
         HINT_CONTEXT,
         question_block(item),
@@ -125,7 +125,7 @@ def build_hint_prompt(item: Item, level: int, student_answer: str | list[bool]) 
     return "\n\n".join(section for section in sections if section)
 
 
-def build_solution_prompt(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> list[tuple[str, str]]:
+def build_solution_prompt(item: Item, student_answer: str | list[bool | None], evaluation: Evaluation) -> list[tuple[str, str]]:
     sections = [
         question_block(item),
         reference_solution(item),
@@ -141,7 +141,7 @@ def build_solution_prompt(item: Item, student_answer: str | list[bool], evaluati
     return [("system", SOLUTION_CONTEXT), ("user", "\n\n".join(section for section in sections if section))]
 
 
-def build_chat_prompt(item: Item | None, student_answer: str | list[bool]) -> str:
+def build_chat_prompt(item: Item | None, student_answer: str | list[bool | None]) -> str:
     if item is None:
         return CHAT_CONTEXT
 
@@ -156,7 +156,7 @@ def build_chat_prompt(item: Item | None, student_answer: str | list[bool]) -> st
 
 
 @traceable(name="[TEACHER]: Evaluate student answer")
-def evaluate(item: Item, student_answer: str | list[bool]) -> Evaluation:
+def evaluate(item: Item, student_answer: str | list[bool | None]) -> Evaluation:
     prompt = build_evaluate_prompt(item, student_answer)
     keyed = settled(item)
 
@@ -175,7 +175,7 @@ def evaluate(item: Item, student_answer: str | list[bool]) -> Evaluation:
 
 
 @traceable(name="[TEACHER]: Give hint")
-def give_hint(item: Item, level: int = 1, student_answer: str | list[bool] = "") -> Iterator[dict]:
+def give_hint(item: Item, level: int = 1, student_answer: str | list[bool | None] = "") -> Iterator[dict]:
     yield from streamed(build_hint_prompt(item, min(max(level, 1), MAX_HINT_LEVEL), student_answer))
 
 
@@ -184,7 +184,7 @@ def chat(
     message: str,
     history: list[ChatMessage],
     item: Item | None = None,
-    student_answer: str | list[bool] = "",
+    student_answer: str | list[bool | None] = "",
 ) -> Iterator[dict]:
     messages = [
         ("system", build_chat_prompt(item, student_answer)),
@@ -198,7 +198,7 @@ def chat(
 
 
 @traceable(name="[TEACHER]: Explain solution")
-def explain(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Iterator[dict]:
+def explain(item: Item, student_answer: str | list[bool | None], evaluation: Evaluation) -> Iterator[dict]:
     yield {"type": "model", "content": TEACHER_MODEL}
 
     yield from streamed(build_solution_prompt(item, student_answer, evaluation))

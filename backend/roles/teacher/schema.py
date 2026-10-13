@@ -7,7 +7,7 @@ from pydantic import BaseModel
 class HintRequest(BaseModel):
     question_id: str
     level: int = 1
-    student_answer: str | list[bool] = ""
+    student_answer: str | list[bool | None] = ""
 
 
 class SolutionRequest(BaseModel):
@@ -24,4 +24,4 @@ class ChatRequest(BaseModel):
     message: str
     history: list[ChatMessage] = []
     question_id: str = ""
-    student_answer: str | list[bool] = ""
+    student_answer: str | list[bool | None] = ""

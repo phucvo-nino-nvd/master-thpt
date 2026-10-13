@@ -43,7 +43,7 @@ def score_on_ten(earned: float, maximum: float) -> float:
     return round(10 * earned / maximum, 2) if maximum else 0.0
 
 
-def apply_rubric(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Evaluation:
+def apply_rubric(item: Item, student_answer: str | list[bool | None], evaluation: Evaluation) -> Evaluation:
     key = answer_of(item)
 
     if item.type == "true_false" and isinstance(key, list) and key:
@@ -104,14 +104,14 @@ def normalize_answer(text: str) -> str:
     return text.strip().casefold().replace(",", ".").replace(" ", "").replace("$", "").rstrip(".")
 
 
-def matches_key(key: str, student_answer: str | list[bool]) -> bool:
+def matches_key(key: str, student_answer: str | list[bool | None]) -> bool:
     return (
         not isinstance(student_answer, list)
         and normalize_answer(student_answer) == normalize_answer(key)
     )
 
 
-def match_answer(item: Item, student_answer: str | list[bool]) -> Evaluation | None:
+def match_answer(item: Item, student_answer: str | list[bool | None]) -> Evaluation | None:
     key = answer_of(item)
 
     if not key:
@@ -145,7 +145,7 @@ def match_answer(item: Item, student_answer: str | list[bool]) -> Evaluation | N
         ),
     )
 
-def key_evaluation(item: Item, student_answer: str | list[bool]) -> Evaluation | None:
+def key_evaluation(item: Item, student_answer: str | list[bool | None]) -> Evaluation | None:
     key = answer_of(item)
 
     if not key:

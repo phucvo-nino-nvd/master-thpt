@@ -46,7 +46,7 @@ def answered(messages: list[BaseMessage], reply: BaseMessage) -> bool:
     return True
 
 
-def build_verify_prompt(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> str:
+def build_verify_prompt(item: Item, student_answer: str | list[bool | None], evaluation: Evaluation) -> str:
     sections = [
         VERIFY_CONTEXT,
         question_block(item),
@@ -70,7 +70,7 @@ def build_verify_prompt(item: Item, student_answer: str | list[bool], evaluation
 
 
 @traceable(name="[VERIFIER]: Verify evaluation")
-def verify(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> Evaluation:
+def verify(item: Item, student_answer: str | list[bool | None], evaluation: Evaluation) -> Evaluation:
     messages: list[BaseMessage] = [
         HumanMessage(build_verify_prompt(item, student_answer, evaluation))
     ]

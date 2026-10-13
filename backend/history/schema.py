@@ -21,7 +21,7 @@ class HistoryCreated(BaseModel):
 
 class HistoryQuestion(BaseModel):
     question_id: str
-    student_answer: str | list[bool]
+    student_answer: str | list[bool | None]
     evaluation: Evaluation
 
 

@@ -1251,3 +1251,11 @@ def run_learner(
             else None
         ),
     }
+
+
+def delete_user_knowledge(user_id: str) -> None:
+    init_db()
+
+    with get_connection() as conn:
+        conn.execute("DELETE FROM knowledge_state WHERE user_id = ?", (user_id,))
+        conn.execute("DELETE FROM error_state WHERE user_id = ?", (user_id,))

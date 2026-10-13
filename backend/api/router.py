@@ -6,7 +6,7 @@ from datetime import date
 from pathlib import Path
 from sqlite3 import IntegrityError
 from uuid import NAMESPACE_URL, uuid5
-from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException
+from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Request
 from fastapi.responses import StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi_clerk_auth import (
@@ -15,18 +15,22 @@ from fastapi_clerk_auth import (
     HTTPAuthorizationCredentials,
 )
 
+import base64
+import hashlib
+import hmac
 import json
 import main
 import os
 import re
+import time
 
-from roles.learner.service import GRADE, MIN_QUESTIONS, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, questions_of, quest, quest_test, recurring_error, skip_review, stages, stocked_count
+from roles.learner.service import GRADE, MIN_QUESTIONS, delete_user_knowledge, due_reviews, get_knowledge_graph, knowledge_of, learning_path, pending_of, placement_runs, questions_of, quest, quest_test, recurring_error, skip_review, stages, stocked_count
 from roles.teacher.main import chat, explain, give_hint
 from roles.teacher.rubric import answer_of, key_evaluation, maximum_score, score_on_ten
 from roles.teacher.schema import ChatRequest, HintRequest, SolutionRequest
 from common.schema import Evaluation
 from common.utils import normalized
-from history.main import attempted_exam_ids, drop_doc, runs_of, get_answer, get_history, list_history, mistake_note, queued_docs, save_answer, seconds_per_question, solved_question_ids, start_history, streak, wrong_feedback
+from history.main import attempted_exam_ids, delete_user_history, drop_doc, runs_of, get_answer, get_history, list_history, mistake_note, queued_docs, save_answer, seconds_per_question, solved_question_ids, start_history, streak, wrong_feedback
 from history.schema import HistoryCreated, HistoryDetail, HistoryItem, HistoryRequest
 from knowledge.bank.main import GENERATED_PREFIX, Item, items_of, load_items
 from knowledge.graph.convert import node_map
@@ -39,6 +43,7 @@ IMAGES_DIR = ROOT_DIR / "artifacts" / "data"
 SECTION_ORDER = {"multiple_choice": 0, "true_false": 1, "short_answer": 2}
 PRACTICE_CARD_LIMIT = int(os.getenv("PRACTICE_CARD_LIMIT", "6"))
 PRACTICE_DURATION = int(os.getenv("PRACTICE_DURATION", "0"))
+CLERK_WEBHOOK_SECRET = os.getenv("CLERK_WEBHOOK_SECRET", "")
 SECONDS_PER_QUESTION = (30, 90, 300)
 ERROR_PHRASES = {
     "wrong_concept": "dùng nhầm khái niệm",
@@ -81,7 +86,7 @@ def find_item(question_id: str) -> Item:
     return Item.model_validate(item)
 
 
-def submission_of(question_id: str, student_answer: str | list[bool]) -> dict:
+def submission_of(question_id: str, student_answer: str | list[bool | None]) -> dict:
     return {"item": find_item(question_id), "student_answer": student_answer}
 
 
@@ -299,6 +304,18 @@ def finish_grading(request: SubmitRequest, submissions: list[dict], user_id: str
         main.grading.pop(user_id, None)
 
     restock(request.mode, user_id)
+
+
+def signed_by_clerk(headers: dict, body: bytes) -> bool:
+    message_id, timestamp = headers.get("svix-id", ""), headers.get("svix-timestamp", "")
+
+    if not CLERK_WEBHOOK_SECRET.startswith("whsec_") or not message_id or not timestamp.isdigit() or abs(time.time() - int(timestamp)) > 300:
+        return False
+
+    key = base64.b64decode(CLERK_WEBHOOK_SECRET.removeprefix("whsec_"))
+    expected = base64.b64encode(hmac.new(key, f"{message_id}.{timestamp}.".encode() + body, hashlib.sha256).digest()).decode()
+
+    return any(hmac.compare_digest(expected, signature.partition(",")[2]) for signature in headers.get("svix-signature", "").split())
 
 
 app = FastAPI()
@@ -726,6 +743,24 @@ def get_graph(
 ) -> dict:
     user_id = creds.decoded["sub"]
     return {**get_knowledge_graph(user_id), "streak": streak(user_id=user_id)}
+
+
+@app.post("/api/clerk/webhook")
+async def post_clerk_webhook(request: Request) -> dict:
+    body = await request.body()
+
+    if not signed_by_clerk(request.headers, body):
+        raise HTTPException(status_code=401, detail="Invalid webhook signature.")
+
+    event = json.loads(body)
+    user_id = event.get("data", {}).get("id")
+
+    if event.get("type") == "user.deleted" and user_id:
+        delete_user_history(user_id)
+        delete_user_knowledge(user_id)
+        graded.pop(user_id, None)
+
+    return {"ok": True}
 
 
 if __name__ == "__main__":

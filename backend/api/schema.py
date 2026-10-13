@@ -9,7 +9,7 @@ from history.schema import Mode
 
 class Submission(BaseModel):
     question_id: str
-    student_answer: str | list[bool] = ""
+    student_answer: str | list[bool | None] = ""
 
 
 class CheckRequest(Submission):

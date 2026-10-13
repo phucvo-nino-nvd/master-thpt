@@ -37,7 +37,7 @@ def evaluation_block(label: str, evaluation: Evaluation) -> str:
 
 def build_diagnosis_prompt(
     item: Item,
-    student_answer: str | list[bool],
+    student_answer: str | list[bool | None],
     teacher_evaluation: Evaluation,
     verifier_evaluation: Evaluation,
 ) -> str:
@@ -76,7 +76,7 @@ def diagnosis_questions() -> dict:
 @traceable(name="[LEARNER]: Diagnosis answer")
 def diagnose_answer(
     item: Item,
-    student_answer: str | list[bool],
+    student_answer: str | list[bool | None],
     teacher_evaluation: Evaluation,
     verifier_evaluation: Evaluation,
 ) -> ErrorDiagnosis | None:

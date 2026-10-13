@@ -141,3 +141,21 @@ def test_concurrent_ingest_and_solution_save_keep_both_changes():
 ])
 def test_saved_solution_drops_words_addressed_to_the_student(feedback, solution):
     assert bank.neutral_solution(feedback) == solution
+
+
+@pytest.mark.parametrize("answer", ["", "   "])
+def test_a_blank_answer_is_not_saved_as_a_solution(answer):
+    item = stock()
+    bank.save_solution(item, answer, Evaluation(score=0, correct=False, feedback="Kết quả đúng là $53$."))
+    assert bank.load_items()[0]["solution"] is None
+
+
+def test_an_unanswered_statement_is_not_saved_as_truth():
+    from api.schema import Submission
+    from roles.teacher.main import answer_text
+
+    item = stock("true_false", parts=[QuestionPart(label=label, content=label) for label in "abcd"])
+    answer = Submission(question_id=item.id, student_answer=[True, None, False, True]).student_answer
+    assert answer_text(item, answer).splitlines()[1] == "b) (chưa chọn)"
+    bank.save_solution(item, answer, Evaluation(score=0, correct=False, part_correct=[True, False, True, True], feedback="Ý b phải là Sai."))
+    assert bank.load_items()[0]["solution"] is None

@@ -41,7 +41,7 @@ LEFT JOIN history_question ON history_question.history_id = history.id
 """
 
 
-def encode(value: str | list[bool]) -> str:
+def encode(value: str | list[bool | None]) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
@@ -112,7 +112,7 @@ def start_history(
 def save_answer(
     history_id: str,
     question_id: str,
-    student_answer: str | list[bool],
+    student_answer: str | list[bool | None],
     evaluation: Evaluation,
     *,
     max_score: float | None = None,
@@ -482,3 +482,13 @@ def seconds_per_question(*, user_id: str | None = None) -> float | None:
         row = conn.execute(query, params).fetchone()
 
     return row["seconds"] / row["answered"] if row["answered"] else None
+
+
+def delete_user_history(user_id: str) -> None:
+    init_db()
+
+    with get_connection() as conn:
+        conn.execute("DELETE FROM history_question WHERE history_id IN (SELECT id FROM history WHERE user_id = ?)", (user_id,))
+        conn.execute("DELETE FROM history WHERE user_id = ?", (user_id,))
+        conn.execute("DELETE FROM crawl_queue WHERE user_id = ?", (user_id,))
+        conn.execute("DELETE FROM account_profile WHERE user_id = ?", (user_id,))

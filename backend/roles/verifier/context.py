@@ -12,7 +12,7 @@ explains the truth about this answer.
 
 Return the final decision:
 - correct: whether the student's answer is mathematically correct.
-- part_correct: one boolean per sub-statement, in the given order, for a true/false question. Empty otherwise.
+- part_correct: for a true/false question, one boolean per sub-statement in the given order, true when the student's Đúng/Sai choice for that sub-statement is right. It is not whether the sub-statement itself is true. Empty otherwise.
 - feedback: a short Vietnamese explanation written for the student.
 - score: always 0.0. The real score is computed from a fixed rubric outside this decision.
 

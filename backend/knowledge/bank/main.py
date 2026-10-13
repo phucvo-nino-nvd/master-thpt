@@ -196,10 +196,10 @@ def neutral_solution(feedback: str) -> str | None:
     return None if not solution or ADDRESS_RE.search(solution) else solution
 
 
-def save_solution(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> None:
+def save_solution(item: Item, student_answer: str | list[bool | None], evaluation: Evaluation) -> None:
     solution = neutral_solution(evaluation.feedback)
 
-    if evaluation.correct or not solution or not ITEM_BANK_PATH.exists():
+    if evaluation.correct or not solution or (isinstance(student_answer, str) and not student_answer.strip()) or not ITEM_BANK_PATH.exists():
         return
 
     with open(ITEM_BANK_PATH.with_suffix(".lock"), "a") as lock:
@@ -210,7 +210,7 @@ def save_solution(item: Item, student_answer: str | list[bool], evaluation: Eval
             return
 
         if item.type == "true_false":
-            if not isinstance(student_answer, list) or not (len(student_answer) == len(row["parts"]) == len(evaluation.part_correct)):
+            if not isinstance(student_answer, list) or None in student_answer or not (len(student_answer) == len(row["parts"]) == len(evaluation.part_correct)):
                 return
             for part, given, correct in zip(row["parts"], student_answer, evaluation.part_correct):
                 if not part.get("solution"):
