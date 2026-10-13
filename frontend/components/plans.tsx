@@ -48,7 +48,7 @@ export function Plans({ run, onCheckout }: { run: (task: () => Promise<void>) =>
 					FREE
 					{!pro && <span className={s.using}>ĐANG DÙNG</span>}
 				</div>
-				<div className={s.price}>0đ</div>
+				<div className={s.price}>{fee ? `${fee.currencySymbol}0` : '…'}</div>
 				<div className={s.planCopy}>Học đều mỗi ngày, không tốn đồng nào.</div>
 				<div className={s.features}>
 					{FREE_FEATURES.map((feature) => (
