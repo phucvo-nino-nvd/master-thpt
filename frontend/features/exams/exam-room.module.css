@@ -690,59 +690,6 @@
 .confirmActions button { flex: 1; white-space: nowrap; }
 .confirmActions button:focus-visible { outline: 3px solid var(--indigo-soft); outline-offset: 4px; }
 
-.overlay {
-	position: fixed;
-	inset: 0;
-	z-index: 100;
-	display: grid;
-	place-items: center;
-	padding: 20px;
-	background: rgba(23, 24, 58, 0.55);
-	backdrop-filter: blur(6px);
-}
-
-.result {
-	width: 100%;
-	max-width: 440px;
-	padding: 28px;
-	border-radius: 28px;
-	background: #fff;
-	box-shadow: 0 8px 0 #d8dae2, 0 30px 80px rgba(0, 0, 0, 0.3);
-	text-align: center;
-}
-
-.resultKicker {
-	color: var(--green);
-	font-size: 12px;
-	font-weight: 800;
-	letter-spacing: 0.1em;
-}
-
-.resultScore {
-	margin-top: 8px;
-	font: 800 56px/1 var(--sans);
-	letter-spacing: -0.05em;
-}
-
-.resultScore small {
-	color: var(--soft);
-	font-size: 22px;
-}
-
-.resultCopy {
-	margin-top: 8px;
-	color: var(--muted);
-	font-size: 14px;
-	font-weight: 600;
-}
-
-.resultActions {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	margin-top: 22px;
-}
-
 @media (max-width: 1000px) {
 	.layout {
 		grid-template-columns: 1fr;

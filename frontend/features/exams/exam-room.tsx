@@ -8,7 +8,6 @@ import { useAccount } from '@/components/account-provider';
 import { useProcessing } from '@/components/processing-provider';
 import { ChecklistIcon, ChevronLeftIcon, LogoutIcon } from '@/components/icons';
 import page from '@/components/page.module.css';
-import { score } from '@/lib/format';
 import { ATTEMPT_KEY, writePending } from '@/lib/pending';
 import { questResultHref } from '@/lib/quest';
 import {
@@ -20,7 +19,6 @@ import {
 	HistoryMode,
 	MAX_HINT_LEVEL,
 	MOCK_ACCOUNT,
-	SubmitExamResponse,
 	askHint,
 	askSolution,
 	checkQuestion,
@@ -81,7 +79,6 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 	const [tutorOpen, setTutorOpen] = useState(false);
 	const [busy, setBusy] = useState(false);
 	const [error, setError] = useState('');
-	const [result, setResult] = useState<SubmitExamResponse | null>(null);
 	const [confirmation, setConfirmation] = useState<'leave' | 'submit' | null>(null);
 	const confirmationDialog = useRef<HTMLDialogElement>(null);
 	const historyId = useRef(review?.history_id ?? null);
@@ -113,48 +110,43 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 
 	const confirmSubmit = () => {
 		if (busy) return;
-		if (answeredCount === questions.length) void submit();
+		if (answeredCount === questions.length) submit();
 		else setConfirmation('submit');
 	};
 
 	const leave = () => {
 		if (busy) return;
-		if (readOnly || result || !answeredCount) router.back();
+		if (readOnly || !answeredCount) router.back();
 		else setConfirmation('leave');
 	};
 
 	useEffect(() => {
 		const dialog = confirmationDialog.current;
-		if (confirmation && !busy && !result) dialog?.showModal();
+		if (confirmation && !busy) dialog?.showModal();
 		else {
 			dialog?.close();
 			if (confirmation) setConfirmation(null);
 		}
-	}, [confirmation, busy, result]);
+	}, [confirmation, busy]);
 
-	const submit = () =>
-		run(async () => {
-			const body = {
-				exam_id: exam.exam_id,
-				answers: questions.map((entry) => ({ question_id: entry.id, student_answer: toApiAnswer(answers[entry.id] ?? '') })),
-				duration_seconds: Math.floor((Date.now() - startedAt.current) / 1000),
-				mode,
-			};
-			if (guest && QUEST_MODES.includes(mode)) {
-				writePending(ATTEMPT_KEY, body);
-				const wrong = questions.filter((entry, i) => !isCorrect(entry, body.answers[i].student_answer));
-				const start = mode === 'placement' ? `&start=${encodeURIComponent(wrong[0]?.station ?? '')}` : '';
-				router.push(`/onboarding?step=streak&correct=${questions.length - wrong.length}&total=${questions.length}${start}`);
-				return;
-			}
-			const response = await submitExam(body);
-			reload();
-			if (QUEST_MODES.includes(mode)) {
-				router.push(questResultHref(exam.exam_id, response.correct_count, questions.length, retake));
-			} else {
-				setResult(response);
-			}
-		}, 'Chưa nộp được bài. Thử lại nha.');
+	const submit = () => {
+		const body = {
+			exam_id: exam.exam_id,
+			answers: questions.map((entry) => ({ question_id: entry.id, student_answer: toApiAnswer(answers[entry.id] ?? '') })),
+			duration_seconds: Math.floor((Date.now() - startedAt.current) / 1000),
+			mode,
+		};
+		const quest = QUEST_MODES.includes(mode);
+		if (guest && quest) {
+			writePending(ATTEMPT_KEY, body);
+			const wrong = questions.filter((entry, i) => !isCorrect(entry, body.answers[i].student_answer));
+			const start = mode === 'placement' ? `&start=${encodeURIComponent(wrong[0]?.station ?? '')}` : '';
+			router.push(`/onboarding?step=streak&correct=${questions.length - wrong.length}&total=${questions.length}${start}`);
+			return;
+		}
+		submitExam(body, quest ? (response) => questResultHref(exam.exam_id, response.correct_count, questions.length, retake) : undefined).catch(() => {});
+		router.push(quest ? '/learning_path' : '/history');
+	};
 
 	useEffect(() => {
 		if (readOnly) return;
@@ -163,7 +155,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 	}, [readOnly]);
 
 	useEffect(() => {
-		if (remaining === 0 && !practice && !result && !busy) void submit();
+		if (remaining === 0 && !practice && !busy) submit();
 	}, [remaining === 0, busy]);
 
 	const setAnswer = (value: AnswerValue) => setAnswers((prev) => ({ ...prev, [question.id]: value }));
@@ -471,7 +463,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 							</Link>
 						) : (
 							<button type="button" className={s.submit} disabled={busy} onClick={confirmSubmit}>
-								{busy ? 'ĐANG CHẤM BÀI...' : 'NỘP BÀI & CHẤM NGAY'}
+								NỘP BÀI & CHẤM NGAY
 							</button>
 						)}
 
@@ -491,34 +483,12 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 					<button type="button" className={s.secondary} disabled={busy} onClick={() => {
 						const action = confirmation;
 						setConfirmation(null);
-						if (action === 'submit') void submit();
+						if (action === 'submit') submit();
 						else if (action === 'leave') router.back();
 					}}>{confirmation === 'submit' ? 'Nộp bài' : 'Thoát bài'}</button>
 				</div>
 			</dialog>
 
-			{result && (
-				<div className={s.overlay}>
-					<div className={s.result}>
-						<div className={s.resultKicker}>NỘP BÀI XONG</div>
-						<div className={s.resultScore}>
-							{score(result.total_score)}
-							<small>/10</small>
-						</div>
-						<p className={s.resultCopy}>
-							Đúng {result.correct_count}/{questions.length} câu.
-						</p>
-						<div className={s.resultActions}>
-							<Link href={`/history/${result.history_id}`} className={s.submit}>
-								XEM LẠI BÀI
-							</Link>
-							<Link href="/documents" className={s.secondary}>
-								Về kho đề
-							</Link>
-						</div>
-					</div>
-				</div>
-			)}
 			{tutorOpen && account.plan !== 'pro' && (
 				<PlanSheet title="Hỏi trợ lý dành cho gói Pro" onClose={() => setTutorOpen(false)} run={(task) => run(task, 'Chưa đổi được gói.')} onCheckout={() => setTutorOpen(false)} />
 			)}

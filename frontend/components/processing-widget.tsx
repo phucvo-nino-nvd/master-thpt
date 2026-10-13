@@ -30,7 +30,7 @@ function ProgressBar({ reached, error }: { reached: number; error: boolean }) {
 }
 
 export function ProcessingCard() {
-	const { snapshot, submitting, result, error, busy, remaining, enabled, refresh, changeMode, process } = useProcessing();
+	const { snapshot, submitting, result, href, error, busy, remaining, enabled, refresh, retry, changeMode, process, dismiss } = useProcessing();
 	const [open, setOpen] = useState(false);
 	const [selected, setSelected] = useState<string[]>([]);
 	const all = useRef<HTMLInputElement>(null);
@@ -63,7 +63,7 @@ export function ProcessingCard() {
 			{open && <div className={s.body}>
 				{MOCK_ACCOUNT && <p className={s.context}>Dữ liệu mẫu</p>}
 				{snapshot?.practice.concept && <p className={s.context}>{snapshot.practice.concept}</p>}
-				{error && <div role="alert" className={s.error}>{error}<button onClick={refresh} disabled={busy}>Tải lại ↻</button></div>}
+				{error && <div role="alert" className={s.error}>{error}<button onClick={retry ?? refresh} disabled={busy}>{retry ? 'Nộp lại' : 'Tải lại ↻'}</button></div>}
 				<div className={s.segment} role="group" aria-label="Chế độ nạp đề">
 					<button aria-pressed={snapshot?.ingest.manual === true} disabled={busy || !snapshot} onClick={() => void changeMode(true)}>Thủ công</button>
 					<button aria-pressed={snapshot?.ingest.manual === false} disabled={busy || !snapshot} onClick={() => void changeMode(false)}>Tự động</button>
@@ -85,7 +85,7 @@ export function ProcessingCard() {
 					</div>
 					<div className={s.actions}><button className={s.approve} disabled={!urls.length || busy || !!snapshot?.practice.stage} onClick={() => act(true)}>Duyệt ({urls.length})</button><button className={s.reject} disabled={!urls.length || busy} onClick={() => act(false)}>Bỏ qua</button></div>
 				</div>}
-				{result && <div className={s.result}><span><strong>{score(result.total_score)}</strong><small>/10 · Đã chấm</small></span><Link href={`/history/${encodeURIComponent(result.history_id)}`}>Xem bài →</Link></div>}
+				{result && <div className={s.result}><span><strong>{score(result.total_score)}</strong><small>/10 · Đã chấm</small></span><Link href={href} onClick={dismiss}>Xem bài →</Link></div>}
 			</div>}
 		</section>
 	);

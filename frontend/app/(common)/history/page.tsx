@@ -6,6 +6,7 @@ import { useAccount } from '@/components/account-provider';
 import { CamelLoading } from '@/components/camel-loading';
 import page from '@/components/page.module.css';
 import card from '@/components/exam-card.module.css';
+import { ProcessingCard } from '@/components/processing-widget';
 import { Rail } from '@/components/rail';
 import { useLoad, useMounted } from '@/lib/api';
 import { STREAK_MILESTONES, WEEKDAYS, dayKey, score, weekdayIndex } from '@/lib/format';
@@ -219,6 +220,7 @@ export default function HistoryPage() {
 						</div>
 					</div>
 				</div>
+				<ProcessingCard />
 			</Rail>
 		</div>
 	);

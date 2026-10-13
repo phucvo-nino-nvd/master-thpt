@@ -4,6 +4,7 @@ import { useAuth } from '@clerk/nextjs';
 import { isAxiosError } from 'axios';
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 import { pendingSources } from '@/lib/processing';
+import { useAccount } from './account-provider';
 import {
 	MOCK_ACCOUNT, approveIngestSource, getProcessingSnapshot, rejectIngestSource, requestPractice, setIngestMode, submitExam,
 	type PracticeUpdate, type ProcessingSnapshot, type SubmitExamBody, type SubmitExamResponse,
@@ -14,12 +15,15 @@ type ProcessingContextValue = {
 	snapshot: ProcessingSnapshot | null;
 	submitting: boolean;
 	result: SubmitExamResponse | null;
+	href: string;
 	error: string;
 	busy: boolean;
 	remaining: number;
 	enabled: boolean;
 	refresh: () => void;
-	submit: (body: SubmitExamBody) => Promise<SubmitExamResponse>;
+	submit: (body: SubmitExamBody, link?: (response: SubmitExamResponse) => string) => Promise<SubmitExamResponse>;
+	retry: (() => void) | null;
+	dismiss: () => void;
 	changeMode: (manual: boolean) => Promise<boolean>;
 	process: (urls: string[], approve: boolean) => Promise<boolean>;
 	request: (query: string) => Promise<PracticeUpdate | null>;
@@ -36,9 +40,11 @@ const pause = (signal: AbortSignal) => new Promise<void>((resolve, reject) => {
 export function ProcessingProvider({ children }: { children: ReactNode }) {
 	const { isLoaded, isSignedIn, userId } = useAuth();
 	const enabled = !!isLoaded && (!!isSignedIn || MOCK_ACCOUNT);
+	const { reload } = useAccount();
 	const [snapshot, setSnapshot] = useState<ProcessingSnapshot | null>(null);
 	const [submitting, setSubmitting] = useState(false);
 	const [result, setResult] = useState<SubmitExamResponse | null>(null);
+	const [href, setHref] = useState('');
 	const [error, setError] = useState('');
 	const [connectionError, setConnectionError] = useState('');
 	const [busy, setBusy] = useState(false);
@@ -47,6 +53,7 @@ export function ProcessingProvider({ children }: { children: ReactNode }) {
 	const operation = useRef<AbortController | null>(null);
 	const generation = useRef(0);
 	const latestRequest = useRef(0);
+	const failed = useRef<{ body: SubmitExamBody; link?: (response: SubmitExamResponse) => string } | null>(null);
 
 	async function read(signal: AbortSignal) {
 		const request = ++latestRequest.current;
@@ -60,7 +67,8 @@ export function ProcessingProvider({ children }: { children: ReactNode }) {
 
 	useEffect(() => {
 		generation.current++;
-		setSnapshot(null); setResult(null); setError(''); setConnectionError(''); setSubmitting(false); setBusy(false); setRemaining(0);
+		failed.current = null;
+		setSnapshot(null); setResult(null); setHref(''); setError(''); setConnectionError(''); setSubmitting(false); setBusy(false); setRemaining(0);
 		return () => { generation.current++; operation.current?.abort(); operation.current = null; };
 	}, [userId, enabled]);
 
@@ -127,22 +135,30 @@ export function ProcessingProvider({ children }: { children: ReactNode }) {
 		});
 	}
 
-	async function submit(body: SubmitExamBody) {
+	async function submit(body: SubmitExamBody, link?: (response: SubmitExamResponse) => string) {
 		const owner = generation.current;
-		setSubmitting(true); setResult(null); setError('');
+		failed.current = null;
+		setSubmitting(true); setResult(null); setHref(''); setError('');
 		try {
 			const response = await submitExam(body);
-			if (owner === generation.current) setResult(response);
+			reload();
+			if (owner === generation.current) { setResult(response); setHref(link?.(response) ?? `/history/${encodeURIComponent(response.history_id)}`); }
 			return response;
 		} catch (failure) {
-			if (owner === generation.current) setError(getApiErrorMessage(failure, 'Chưa nhận được kết quả chấm. Kiểm tra lại bài làm.'));
+			if (owner === generation.current) {
+				failed.current = { body, link };
+				setError(getApiErrorMessage(failure, 'Chưa nhận được kết quả chấm. Bấm Nộp lại để chấm tiếp.'));
+			}
 			throw failure;
 		} finally {
 			if (owner === generation.current) { setSubmitting(false); setVersion((value) => value + 1); }
 		}
 	}
 
-	return <ProcessingContext.Provider value={{ snapshot, submitting, result, error: error || connectionError, busy, remaining, enabled, refresh, submit, process,
+	const retry = failed.current && !submitting ? () => { const { body, link } = failed.current!; void submit(body, link).catch(() => {}); } : null;
+
+	return <ProcessingContext.Provider value={{ snapshot, submitting, result, href, error: error || connectionError, busy, remaining, enabled, refresh, submit, retry, process,
+		dismiss: () => { setResult(null); setHref(''); },
 		changeMode: (manual) => mutate(async (signal) => { await setIngestMode(manual, signal); await read(signal); }),
 		request: async (query) => {
 			let update: PracticeUpdate | null = null;

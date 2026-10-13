@@ -29,7 +29,8 @@ type QuestPageProps = { searchParams: { from?: string; correct?: string; total?:
 export default function QuestPage({ searchParams }: QuestPageProps) {
 	const router = useRouter();
 	const { account } = useAccount();
-	const { data: quest, error } = useLoad<Quest | null>(getQuest, null);
+	const from = searchParams.from ?? '';
+	const { data: quest, error } = useLoad<Quest | null>(getQuest, null, [from]);
 	const [view, setView] = useState(0);
 	const [pop, setPop] = useState<string | null>(null);
 	const [shake, setShake] = useState({ id: '', count: 0 });
@@ -39,7 +40,6 @@ export default function QuestPage({ searchParams }: QuestPageProps) {
 	const scrollRef = useRef<HTMLDivElement>(null);
 	const dividers = useRef<(HTMLDivElement | null)[]>([]);
 	const bombPlayed = useRef(false);
-	const from = searchParams.from ?? '';
 	const nextSpot = quest ? locate(quest, quest.current) : null;
 	const fromSpot = quest && from ? locate(quest, from.replace(OBSTACLE_PREFIX, '')) : null;
 
