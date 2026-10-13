@@ -70,6 +70,7 @@ export type SubmitExamResponse = {
 	correct_count: number;
 	per_question: Record<string, Evaluation>;
 };
+export type GradingStatus = { exam_id: string | null; result?: SubmitExamResponse | null; error?: string | null };
 
 type HistoryItem = {
 	history_id: string;
@@ -148,7 +149,7 @@ export type IngestState = {
 	batches: { request: { concept: string; grade: number }; docs: IngestSource[] }[];
 };
 export type PracticeStatus = { concept: string | null; stage: string | null; step: number; total: number };
-export type ProcessingSnapshot = { ingest: IngestState; practice: PracticeStatus; grading: { exam_id: string | null } };
+export type ProcessingSnapshot = { ingest: IngestState; practice: PracticeStatus; grading: GradingStatus };
 
 export const MAX_HINT_LEVEL = 3;
 
@@ -195,15 +196,23 @@ export const getQuestTest = (id: string) => get<Exam>(`/quest/${encodeURICompone
 export const startPath = () => post<Quest>('/quest/start');
 export const resetQuest = () => post<Quest>('/quest/reset');
 
-export const submitExam = (body: SubmitExamBody) =>
-	api.post<SubmitExamResponse>('/exams/submit', body, { timeout: 600000 }).then((response) => response.data);
+export async function submitExam(body: SubmitExamBody) {
+	let status = (await api.post<GradingStatus>('/exams/submit', body)).data;
+	while (status.exam_id) {
+		await new Promise((resolve) => setTimeout(resolve, 2000));
+		const current = status;
+		status = await api.get<GradingStatus>('/exams/grading-status').then((response) => response.data, () => current);
+	}
+	if (!status.result) throw new Error(status.error || 'Chưa chấm xong bài. Bấm Nộp lại để chấm tiếp.');
+	return status.result;
+}
 
 export async function getProcessingSnapshot(signal?: AbortSignal): Promise<ProcessingSnapshot> {
 	const config = { signal, timeout: 10000 };
 	const [ingest, practice, grading] = await Promise.all([
 		api.get<IngestState>('/ingest', config),
 		api.get<PracticeStatus>('/practice/status', config),
-		api.get<{ exam_id: string | null }>('/exams/grading-status', config),
+		api.get<GradingStatus>('/exams/grading-status', config),
 	]);
 	return { ingest: ingest.data, practice: practice.data, grading: grading.data };
 }

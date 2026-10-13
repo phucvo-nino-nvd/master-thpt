@@ -293,7 +293,7 @@ function route(method: string, path: string[], params: Record<string, string>, b
 			}
 			return db.quest;
 		case 'post exams/submit':
-			return submit(body);
+			return { exam_id: null, result: submit(body) };
 		case 'post history':
 			return { history_id: record(body.exam_id, body.mode, [], null).history_id };
 		case 'post practice/check-question':
