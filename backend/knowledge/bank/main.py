@@ -4,6 +4,7 @@ from pathlib import Path
 
 import fcntl
 import json
+import re
 import tempfile
 
 from common.schema import (
@@ -21,6 +22,13 @@ from common.schema import (
 ITEM_BANK_PATH = Path(__file__).resolve().parents[3] / "artifacts" / "item_bank.jsonl"
 SECTIONS = {"multiple_choice": "I", "true_false": "II", "short_answer": "III"}
 GENERATED_PREFIX = "generated://"
+VERDICT_RE = re.compile(
+    r"^(?:sai|chưa đúng|đúng)\s*[.,!:]\s*"
+    r"|\b(?:em|bạn)\s+(?:đã\s+)?(?:chọn\s+|trả lời\s+|làm\s+)?(?:sai|chưa đúng|đúng|chưa đưa ra câu trả lời|chưa trả lời)\b[^.,;!]*[.,;!]\s*",
+    re.IGNORECASE,
+)
+SENTENCE_START_RE = re.compile(r"(^|[.!?]\s+)(\w)")
+ADDRESS_RE = re.compile(r"\b(?:em|bạn)\b", re.IGNORECASE)
 
 
 class Item(BaseModel):
@@ -182,8 +190,16 @@ def build_item_bank(document: Document) -> list[Item]:
     return new_items
 
 
+def neutral_solution(feedback: str) -> str | None:
+    solution = SENTENCE_START_RE.sub(lambda match: match.group(1) + match.group(2).upper(), VERDICT_RE.sub("", feedback).strip())
+
+    return None if not solution or ADDRESS_RE.search(solution) else solution
+
+
 def save_solution(item: Item, student_answer: str | list[bool], evaluation: Evaluation) -> None:
-    if evaluation.correct or not evaluation.feedback.strip() or not ITEM_BANK_PATH.exists():
+    solution = neutral_solution(evaluation.feedback)
+
+    if evaluation.correct or not solution or not ITEM_BANK_PATH.exists():
         return
 
     with open(ITEM_BANK_PATH.with_suffix(".lock"), "a") as lock:
@@ -199,7 +215,7 @@ def save_solution(item: Item, student_answer: str | list[bool], evaluation: Eval
             for part, given, correct in zip(row["parts"], student_answer, evaluation.part_correct):
                 if not part.get("solution"):
                     part["solution"] = "ĐÚNG." if given == correct else "SAI."
-        row["solution"] = evaluation.feedback
+        row["solution"] = solution
 
         with tempfile.TemporaryDirectory(dir=ITEM_BANK_PATH.parent) as directory:
             temporary = Path(directory) / ITEM_BANK_PATH.name

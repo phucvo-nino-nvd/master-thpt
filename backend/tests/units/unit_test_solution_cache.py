@@ -129,3 +129,15 @@ def test_concurrent_ingest_and_solution_save_keep_both_changes():
     rows = bank.load_items()
     assert len(rows) == 2
     assert next(row for row in rows if row["id"] == item.id)["solution"] == "Chọn A."
+
+
+@pytest.mark.parametrize("feedback,solution", [
+    ("Bạn chưa đưa ra câu trả lời. Giá trị nhỏ nhất là $-32\\sqrt{2}$, đáp án A.", "Giá trị nhỏ nhất là $-32\\sqrt{2}$, đáp án A."),
+    ("Em đã chọn sai. Tổng là $21$, phương án C.", "Tổng là $21$, phương án C."),
+    ("Có hai điểm cực trị. Bạn đã chọn sai, đáp án đúng là B.", "Có hai điểm cực trị. Đáp án đúng là B."),
+    ("Sai. Cực đại tại $t=2$.", "Cực đại tại $t=2$."),
+    ("Bạn chọn $t=0$ nhưng $N'(t)>0$ sau $t=5$.", None),
+    ("Đúng.", None),
+])
+def test_saved_solution_drops_words_addressed_to_the_student(feedback, solution):
+    assert bank.neutral_solution(feedback) == solution
