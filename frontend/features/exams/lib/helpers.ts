@@ -9,10 +9,6 @@ export function isCorrect(question: ExamQuestion, answer: AnswerPayload) {
 	return !!question.answer && canonical(String(answer)) === canonical(question.answer);
 }
 
-export function toApiAnswer(value: AnswerValue): AnswerPayload {
-	return Array.isArray(value) ? value.map((part) => part === true) : value;
-}
-
 export function isAnswered(value?: AnswerValue) {
 	if (value === undefined) {
 		return false;

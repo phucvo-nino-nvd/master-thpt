@@ -26,7 +26,7 @@ import {
 } from '@/shared/api/client';
 import { getApiErrorMessage } from '@/shared/api/error-message';
 import { MathInline, MathText } from './components/math-text';
-import { AnswerValue, isAnswered, isCorrect, toApiAnswer } from './lib/helpers';
+import { AnswerValue, isAnswered, isCorrect } from './lib/helpers';
 import { Tutor } from './tutor';
 import { PlanSheet } from '@/components/plans';
 import s from './exam-room.module.css';
@@ -132,7 +132,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 	const submit = () => {
 		const body = {
 			exam_id: exam.exam_id,
-			answers: questions.map((entry) => ({ question_id: entry.id, student_answer: toApiAnswer(answers[entry.id] ?? '') })),
+			answers: questions.map((entry) => ({ question_id: entry.id, student_answer: answers[entry.id] ?? '' })),
 			duration_seconds: Math.floor((Date.now() - startedAt.current) / 1000),
 			mode,
 		};
@@ -169,7 +169,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 	const check = () =>
 		run(async () => {
 			historyId.current ??= (await createHistory(exam.exam_id, mode)).history_id;
-			const verdict = await checkQuestion(historyId.current, question.id, toApiAnswer(answer));
+			const verdict = await checkQuestion(historyId.current, question.id, answer);
 			setChecked((prev) => ({ ...prev, [question.id]: verdict }));
 			reload();
 		}, 'Chưa kiểm tra được câu này.');
@@ -179,7 +179,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 		let text = '';
 		setPendingHint({ id, text });
 		try {
-			await askHint(id, hintLevel + 1, answer === undefined ? undefined : toApiAnswer(answer), (chunk) => setPendingHint({ id, text: (text += chunk) }));
+			await askHint(id, hintLevel + 1, answer, (chunk) => setPendingHint({ id, text: (text += chunk) }));
 			if (!text.trim()) throw new Error(HINT_ERROR);
 			setHints((prev) => ({ ...prev, [id]: [...(prev[id] ?? []), text] }));
 			setPendingHint(null);
@@ -496,7 +496,7 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 				<Tutor
 					question={question}
 					number={index + 1}
-					answer={answer === undefined ? undefined : toApiAnswer(answer)}
+					answer={answer}
 					thread={threads[question.id] ?? []}
 					onThread={(thread) => setThreads((prev) => ({ ...prev, [question.id]: thread }))}
 					onClose={() => setTutorOpen(false)}

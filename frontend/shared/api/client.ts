@@ -44,7 +44,7 @@ export type DocumentItem = {
 
 export type PracticeUpdate = { sets: DocumentItem[]; authoring: boolean };
 
-export type AnswerPayload = string | boolean[];
+export type AnswerPayload = string | Array<boolean | null>;
 
 export type Evaluation = {
 	score: number;
