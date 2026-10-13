@@ -1,0 +1,27 @@
+{
+  "name": "promo",
+  "version": "9.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "render": "remotion render src/index.tsx Promo ../preview.mp4 --codec h264 --crf 17 --pixel-format yuv420p",
+    "still": "remotion still src/index.tsx Promo",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write src scripts/render.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.535",
+    "@rive-app/canvas": "^2.44.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.535"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.2",
+    "prettier": "^3.9.10",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

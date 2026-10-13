@@ -1,0 +1,7 @@
+node_modules/
+.remotion/
+dist/
+build/
+*.log
+public/soundtrack-raw.wav
+.work/

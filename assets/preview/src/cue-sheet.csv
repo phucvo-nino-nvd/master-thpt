@@ -1,0 +1,41 @@
+time_seconds,frame_60fps,event,story
+0.700,42,Paper fold 1,Square begins folding
+1.200,72,Paper fold 2,Wing takes shape
+1.800,108,Paper fold 3,Plane complete
+4.000,240,Paper sweep,Enter learning path
+5.500,330,Click,Select placement option in onboarding
+5.850,351,Two-note confirmation,Placement option selected
+6.700,402,Click,Confirm XEP LO TRINH
+8.000,480,Paper sweep,Enter diagnostic question
+9.300,558,Click,Select incorrect answer A
+9.400,564,Descending note pair,Weak topic detected
+12.000,720,Paper sweep,Enter personalized path
+13.250,795,Station ting,Paper plane touches station
+14.200,852,Click,Select practice bomb directly
+14.200,852,Bomb ting,Paper plane touches bomb
+15.500,930,Paper sweep,Enter full-screen bomb practice
+16.350,981,Click,Open hint level 1
+17.550,1053,Click,Open hint level 2
+18.950,1137,Click,Select correct answer B = 2
+19.100,1146,Two-note confirmation,Answer selected; progress 1/6
+21.500,1290,Paper sweep,Enter topic generation
+23.050,1383,Click,Generate topic questions
+24.550,1473,Three-note confirmation,New practice set ready
+26.500,1590,Paper sweep,Enter tutor conversation
+27.850,1671,Click,Ask about mistake
+28.450,1707,Answer chime,Explain missing derivative sign change
+31.050,1863,Click,Close tutor at the X button
+32.500,1950,Paper sweep,Progress milestone
+32.500,1950,Lead-in note,Rising four-note run begins as Warrior enters
+33.500,2010,Star note 1,Warrior first switch
+34.500,2070,Star note 2,Warrior second switch
+34.835,2090,Star note 3,Warrior third switch
+36.500,2190,Paper sweep,Planes converge
+37.900,2274,End of riser and breath,Prepare reveal
+38.220,2293,Signature note 1,Logo aperture opens
+38.460,2308,Signature note 2,M draws on
+38.720,2323,Signature note 3,Logo resolved
+41.250,2475,Music fade,Hold final brand message
+42.500,2550,End,Audio tail reaches silence
+32.450,1947,Continuous music bed,Full bed runs unbroken from tutor chat into Warrior
+34.835,2090,Music bed out,Bed fades to silence over 0.5 s after third level ting

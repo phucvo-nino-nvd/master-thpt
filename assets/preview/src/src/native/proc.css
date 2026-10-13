@@ -1,0 +1,507 @@
+/* Original app: components/processing-widget.module.css; only class names and time-driven animation changed. */
+.proc-widget {
+  position: fixed;
+  z-index: 40;
+  right: max(40px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  width: 300px;
+  max-width: calc(100vw - 24px);
+  font-family: var(--sans);
+  color: var(--ink);
+}
+body:has([class*="cl-drawer"], [class*="cl-modalBackdrop"]) .proc-widget {
+  display: none;
+}
+.proc-card {
+  padding: 6px 18px;
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 0 var(--line);
+  font-family: var(--sans);
+  color: var(--ink);
+}
+.proc-summary {
+  width: 100%;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+.proc-summaryTitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.proc-caret {
+  flex: none;
+  margin-top: 1px;
+  color: var(--muted);
+}
+.proc-caret.proc-open {
+  transform: rotate(180deg);
+}
+.proc-summary:hover .proc-caret {
+  color: var(--indigo);
+}
+.proc-body {
+  padding-bottom: 12px;
+}
+.proc-fallback {
+  display: none;
+  margin-top: 14px;
+}
+.proc-fallback .proc-card {
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+}
+body:not(:has(aside)) .proc-fallback {
+  display: block;
+}
+@media (max-width: 1150px) {
+  .proc-fallback {
+    display: block;
+  }
+}
+.proc-spark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #ececff;
+}
+.proc-suggest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.proc-suggest button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 0 var(--line);
+  color: var(--ink-2);
+  font-size: 11px;
+  font-weight: 800;
+}
+.proc-suggest small {
+  color: var(--coral-2);
+  font-size: 10px;
+}
+.proc-typing {
+  margin-top: 12px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.proc-sets {
+  display: grid;
+  gap: 6px;
+  margin-top: 12px;
+}
+.proc-sets a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 3px 0 var(--line);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+}
+.proc-sets a:hover {
+  border-color: var(--indigo-soft);
+}
+.proc-sets small {
+  flex: none;
+  color: var(--indigo);
+  font-size: 11px;
+}
+.proc-error a {
+  display: block;
+  padding-top: 5px;
+  color: inherit;
+  font-size: 11px;
+  font-weight: 800;
+}
+.proc-panel {
+  position: absolute;
+  bottom: 84px;
+  right: 0;
+  width: 100%;
+  max-height: calc(100dvh - 124px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  padding: 18px 18px 14px;
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow:
+    0 5px 0 var(--line),
+    0 12px 32px #17183a0d;
+}
+.proc-head,
+.proc-sourceHead,
+.proc-result,
+.proc-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.proc-head h2 {
+  font-size: 15px;
+  font-weight: 800;
+}
+.proc-collapse,
+.proc-reject {
+  padding: 7px 3px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+.proc-collapse {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.proc-collapse svg {
+  flex: none;
+  transform: rotate(180deg);
+}
+.proc-context {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.proc-segment {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  margin-top: 14px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 0 var(--line);
+}
+.proc-segment button {
+  flex: 1;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 4px;
+  background: none;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+.proc-segment button[aria-pressed="true"] {
+  background: var(--nav);
+  color: #fff;
+}
+.proc-segment .proc-searchToggle {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px;
+}
+.proc-search {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.proc-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+}
+.proc-search input::placeholder {
+  color: var(--soft);
+  font-weight: 600;
+}
+.proc-search button {
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--indigo);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+.proc-sources {
+  margin-top: 15px;
+}
+.proc-sourceHead {
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+.proc-sourceHead strong {
+  color: var(--gold-ink);
+}
+.proc-selectAll {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+.proc-checkbox {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin: 0;
+  border: 2px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 0 var(--line);
+  cursor: pointer;
+}
+.proc-checkbox:checked,
+.proc-checkbox:indeterminate {
+  border-color: var(--indigo);
+  background: var(--indigo);
+  box-shadow: 0 2px 0 var(--indigo-3);
+}
+.proc-checkbox:checked::after {
+  content: "";
+  width: 5px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-1px) rotate(45deg);
+}
+.proc-checkbox:indeterminate::after {
+  content: "";
+  width: 8px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+.proc-sourceList {
+  max-height: 168px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.proc-sourceRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 8px 3px;
+  border-bottom: 1px solid var(--line);
+}
+.proc-sourceRow:last-child {
+  border-bottom: 0;
+}
+.proc-sourceRow:has(input:checked) {
+  background: #f7f7ff;
+}
+.proc-sourceRow label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  flex: 1;
+  cursor: pointer;
+}
+.proc-sourceCopy {
+  min-width: 0;
+  flex: 1;
+}
+.proc-sourceTitle,
+.proc-sourceUrl {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.proc-sourceTitle {
+  font-size: 11px;
+  font-weight: 800;
+}
+.proc-sourceUrl {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.proc-sourceLink {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.proc-actions {
+  margin-top: 10px;
+}
+.proc-approve {
+  flex: 1;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--lime);
+  color: var(--nav);
+  box-shadow: 0 3px 0 var(--lime-2);
+  font-size: 11px;
+  font-weight: 800;
+}
+.proc-approve:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+:is(.proc-widget, .proc-card) button:disabled,
+.proc-checkbox:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+:is(.proc-widget, .proc-card) :is(button, a, .proc-checkbox):focus-visible {
+  outline: 3px solid var(--indigo);
+  outline-offset: 3px;
+}
+.proc-search input:focus {
+  outline: none;
+}
+.proc-result {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.proc-result strong {
+  color: var(--green-2);
+  font-size: 17px;
+  font-weight: 800;
+}
+.proc-result small {
+  margin-left: 4px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.proc-result a {
+  font-size: 11px;
+  font-weight: 800;
+}
+.proc-error {
+  margin-top: 12px;
+  padding: 10px;
+  border: 2px solid var(--coral-soft);
+  border-radius: 12px;
+  background: #fff6f2;
+  color: var(--coral-2);
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.proc-error button {
+  display: block;
+  border: 0;
+  padding: 5px 0 0;
+  background: none;
+  color: inherit;
+  font-size: 11px;
+  font-weight: 800;
+}
+.proc-dock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 72px;
+  padding: 14px 16px;
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 0 var(--line);
+  text-align: left;
+}
+.proc-dock:hover {
+  border-color: var(--indigo-soft);
+}
+.proc-dockBody {
+  flex: 1;
+  min-width: 0;
+}
+.proc-dockBody strong,
+.proc-dockBody small {
+  display: block;
+}
+.proc-dockBody strong {
+  font-size: 14px;
+  font-weight: 800;
+}
+.proc-dockBody small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+.proc-chevron {
+  flex: none;
+  padding: 5px;
+  border-radius: 10px;
+  background: var(--line-2);
+  color: var(--muted);
+}
+.proc-dock:hover .proc-chevron {
+  background: #ececff;
+  color: var(--indigo);
+}
+.proc-chevron.proc-open {
+  transform: rotate(180deg);
+}
+.proc-srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 520px) {
+  .proc-widget {
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+  }
+  .proc-panel {
+    max-height: calc(100dvh - 110px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .proc-chevron,
+  .proc-caret {
+  }
+}
