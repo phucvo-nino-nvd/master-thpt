@@ -365,6 +365,12 @@
 	color: var(--coral-2);
 }
 
+.truth .picked {
+	border-color: var(--indigo);
+	background: #ececff;
+	color: var(--indigo);
+}
+
 .short {
 	width: 100%;
 	height: 52px;

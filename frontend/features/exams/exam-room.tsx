@@ -348,16 +348,17 @@ export function ExamRoom({ exam, mode, review, retake }: ExamRoomProps) {
 								{question.parts.map((part, i) => {
 									const value = Array.isArray(answer) ? answer[i] : null;
 									const tone = evaluation ? (evaluation.part_correct[i] ? s.right : s.wrong) : '';
+									const locked = readOnly || !!evaluation;
 									return (
 										<div key={part.label} className={`${s.part} ${tone}`}>
 											<div>
 												<strong>{part.label})</strong> <MathText text={part.content} />
 											</div>
 											<div className={s.truth}>
-												<button type="button" disabled={readOnly || !!evaluation} className={value === true ? s.yes : ''} onClick={() => setPart(i, true)}>
+												<button type="button" disabled={locked} className={value === true ? (locked ? s.yes : s.picked) : ''} onClick={() => setPart(i, true)}>
 													Đúng
 												</button>
-												<button type="button" disabled={readOnly || !!evaluation} className={value === false ? s.no : ''} onClick={() => setPart(i, false)}>
+												<button type="button" disabled={locked} className={value === false ? (locked ? s.no : s.picked) : ''} onClick={() => setPart(i, false)}>
 													Sai
 												</button>
 											</div>
