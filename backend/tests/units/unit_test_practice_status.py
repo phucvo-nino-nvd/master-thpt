@@ -264,19 +264,20 @@ def test_check_question_publishes_grading_then_clears(monkeypatch):
     from api import router
     from api.schema import CheckRequest
 
-    seen: list[str | None] = []
+    seen: list[dict[str, str]] = []
 
-    monkeypatch.setattr(router, "submission_of", lambda question_id, answer: {})
-    monkeypatch.setattr(router, "get_history", lambda history_id: SimpleNamespace(exam_id="node-1"))
-    monkeypatch.setattr(router, "save_answer", lambda *args: None)
+    monkeypatch.setattr(router, "submission_of", lambda question_id, answer: {"item": None})
+    monkeypatch.setattr(router, "maximum_score", lambda item: 1)
+    monkeypatch.setattr(router, "get_history", lambda history_id, **kwargs: SimpleNamespace(exam_id="node-1"))
+    monkeypatch.setattr(router, "save_answer", lambda *args, **kwargs: None)
     monkeypatch.setattr(
         router,
         "grade",
-        lambda submissions: seen.append(main.grading) or {"evaluations": ["graded"]},
+        lambda submissions, **kwargs: seen.append(dict(main.grading)) or {"evaluations": ["graded"]},
     )
 
     request = CheckRequest(history_id="h1", question_id="q1", student_answer="3")
 
-    assert router.post_practice_check(request) == "graded"
-    assert seen == ["node-1"]
-    assert main.grading is None
+    assert router.post_practice_check(request, SimpleNamespace(decoded={"sub": "student"})) == "graded"
+    assert seen == [{"student": "node-1"}]
+    assert main.grading == {}

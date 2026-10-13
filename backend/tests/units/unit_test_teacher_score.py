@@ -106,7 +106,18 @@ def test_submit_response_matches_history_weighted_score(history_db, monkeypatch,
     monkeypatch.setattr(router, 'node_map', lambda: {})
     monkeypatch.setattr(router, 'runs_of', lambda **kwargs: [])
     monkeypatch.setattr(router, 'quest', lambda *args, **kwargs: {'missing':[]})
-    result = router.post_exam_submit(SubmitRequest(exam_id='test', mode=mode, answers=[Submission(question_id='1',student_answer='A'), Submission(question_id='2', student_answer=[True,True,False,False])]), BackgroundTasks(), SimpleNamespace(decoded={'sub':'student'}))
+    creds, background = SimpleNamespace(decoded={'sub':'student'}), BackgroundTasks()
+    request = SubmitRequest(exam_id='test', mode=mode, answers=[Submission(question_id='1',student_answer='A'), Submission(question_id='2', student_answer=[True,True,False,False])])
+    assert router.post_exam_submit(request, background, creds).exam_id == 'test'
+    assert router.get_grading_status(creds).exam_id == 'test'
+    assert router.get_grading_status(SimpleNamespace(decoded={'sub':'other'})).exam_id is None
+    with pytest.raises(router.HTTPException) as busy:
+        router.post_exam_submit(request, BackgroundTasks(), creds)
+    assert busy.value.status_code == 409
+    for task in background.tasks:
+        task.func(*task.args, **task.kwargs)
+    result = router.get_grading_status(creds).result
+    assert router.get_grading_status(creds).exam_id is None
     assert result.total_score == 4.0  # 0.5 / 1.25 * 10
     assert history.get_history(result.history_id, user_id='student').total_score == result.total_score
 

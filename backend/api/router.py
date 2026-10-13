@@ -52,6 +52,7 @@ ERROR_PHRASES = {
     "final_value_error": "sai ở bước kết luận",
     "format_error": "ghi đáp án sai định dạng",
 }
+graded: dict[str, GradingStatus] = {}
 
 
 def document_id_of(source_url: str) -> str:
@@ -244,6 +245,60 @@ def practice_set_of(
         PRACTICE_DURATION,
         items,
     )
+
+
+def recorded(request: SubmitRequest, submissions: list[dict], state: dict, user_id: str) -> SubmitResponse:
+    created = start_history(
+        request.exam_id,
+        request.mode,
+        request.duration_seconds,
+        user_id=user_id,
+    )
+
+    for submission, evaluation in zip(submissions, state["final_evaluations"]):
+        save_answer(
+            created.history_id,
+            submission["item"].id,
+            submission["student_answer"],
+            evaluation,
+            max_score=maximum_score(submission["item"]),
+        )
+
+    return SubmitResponse(
+        exam_id=request.exam_id,
+        history_id=created.history_id,
+        total_score=score_on_ten(
+            sum(evaluation.score for evaluation in state["final_evaluations"]),
+            sum(maximum_score(submission["item"]) for submission in submissions),
+        ),
+        correct_count=sum(evaluation.correct for evaluation in state["final_evaluations"]),
+        per_question={
+            submission["item"].id: evaluation
+            for submission, evaluation in zip(submissions, state["final_evaluations"])
+        },
+    )
+
+
+def restock(mode: str, user_id: str) -> None:
+    if mode not in ("checkpoint", "obstacle"):
+        return
+
+    nodes = node_map()
+
+    for knowledge_id in quest(runs_of(user_id=user_id), user_id=user_id)["missing"]:
+        stock_practice(nodes[knowledge_id]["name"], user_id)
+
+
+def finish_grading(request: SubmitRequest, submissions: list[dict], user_id: str) -> None:
+    try:
+        graded[user_id] = GradingStatus(result=recorded(request, submissions, grade(submissions, user_id=user_id), user_id))
+    except Exception:
+        graded[user_id] = GradingStatus(error="Chưa chấm xong bài. Bấm Nộp lại để chấm tiếp.")
+        raise
+    finally:
+        main.grading.pop(user_id, None)
+
+    restock(request.mode, user_id)
 
 
 app = FastAPI()
@@ -595,7 +650,10 @@ def get_history_detail(
 def get_grading_status(
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
 ) -> GradingStatus:
-    return GradingStatus(exam_id=main.grading)
+    user_id = creds.decoded["sub"]
+    exam_id = main.grading.get(user_id)
+
+    return GradingStatus(exam_id=exam_id) if exam_id else graded.get(user_id, GradingStatus())
 
 
 @app.post("/api/exams/submit")
@@ -603,57 +661,29 @@ def post_exam_submit(
     request: SubmitRequest,
     background: BackgroundTasks,
     creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
-) -> SubmitResponse:
+) -> GradingStatus:
     user_id = creds.decoded["sub"]
+
+    if user_id in main.grading:
+        raise HTTPException(status_code=409, detail="Em đang có bài đang chấm, chờ chấm xong rồi nộp tiếp nha.")
+
     submissions = [
         submission_of(answer.question_id, answer.student_answer)
         for answer in request.answers
     ]
-
     keyed = [key_evaluation(submission["item"], submission["student_answer"]) for submission in submissions]
-    direct = request.guest and all(keyed)
+    graded.pop(user_id, None)
 
-    main.grading = None if direct else request.exam_id
+    if request.guest and all(keyed):
+        graded[user_id] = GradingStatus(result=recorded(request, submissions, grade_by_key(submissions, keyed, user_id=user_id), user_id))
+        background.add_task(restock, request.mode, user_id)
 
-    try:
-        state = grade_by_key(submissions, keyed, user_id=user_id) if direct else grade(submissions, user_id=user_id)
-        created = start_history(
-            request.exam_id,
-            request.mode,
-            request.duration_seconds,
-            user_id=user_id,
-        )
+        return graded[user_id]
 
-        for submission, evaluation in zip(submissions, state["final_evaluations"]):
-            save_answer(
-                created.history_id,
-                submission["item"].id,
-                submission["student_answer"],
-                evaluation,
-                max_score=maximum_score(submission["item"]),
-            )
-    finally:
-        main.grading = None
+    main.grading[user_id] = request.exam_id
+    background.add_task(finish_grading, request, submissions, user_id)
 
-    if request.mode in ("checkpoint", "obstacle"):
-        nodes = node_map()
-
-        for knowledge_id in quest(runs_of(user_id=user_id), user_id=user_id)["missing"]:
-            background.add_task(stock_practice, nodes[knowledge_id]["name"], user_id)
-
-    return SubmitResponse(
-        exam_id=request.exam_id,
-        history_id=created.history_id,
-        total_score=score_on_ten(
-            sum(evaluation.score for evaluation in state["final_evaluations"]),
-            sum(maximum_score(submission["item"]) for submission in submissions),
-        ),
-        correct_count=sum(evaluation.correct for evaluation in state["final_evaluations"]),
-        per_question={
-            submission["item"].id: evaluation
-            for submission, evaluation in zip(submissions, state["final_evaluations"])
-        },
-    )
+    return GradingStatus(exam_id=request.exam_id)
 
 
 @app.post("/api/practice/check-question")
@@ -669,7 +699,10 @@ def post_practice_check(
         else get_history(request.history_id)
     )
 
-    main.grading = reviewed.exam_id if reviewed else None
+    owned = bool(user_id and reviewed) and user_id not in main.grading
+
+    if owned:
+        main.grading[user_id] = reviewed.exam_id
 
     try:
         state = grade([submission], user_id=user_id) if user_id else grade([submission])
@@ -681,7 +714,8 @@ def post_practice_check(
     except IntegrityError:
         raise HTTPException(status_code=404, detail="Không tìm thấy lượt làm bài.")
     finally:
-        main.grading = None
+        if owned:
+            main.grading.pop(user_id, None)
 
     return evaluation
 

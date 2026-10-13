@@ -45,6 +45,8 @@ class PracticeStatus(BaseModel):
 
 class GradingStatus(BaseModel):
     exam_id: str | None = None
+    result: SubmitResponse | None = None
+    error: str | None = None
 
 
 class DocumentItem(BaseModel):

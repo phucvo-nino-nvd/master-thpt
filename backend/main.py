@@ -293,7 +293,7 @@ def ingest(
 
 
 progress: State | None = None
-grading: str | None = None
+grading: dict[str, str] = {}
 
 
 @traceable(name="[INGEST]: Manual Ingest", run_type="chain")
