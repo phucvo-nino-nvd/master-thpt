@@ -5,6 +5,8 @@ import { normalizeMath } from '@/features/exams/components/math-normalize';
 const IMAGE_RE = /^!\[([\s\S]*)\]\(([^)]+)\)$/;
 const CELL_RE = /<(td|th)([^>]*)>([\s\S]*?)<\/\1>/g;
 const BOLD_RE = /\*\*([\s\S]+?)\*\*/g;
+const PIPE_RULE_RE = /^\|?(\s*:?-{3,}:?\s*\|)+\s*(:?-{3,}:?\s*)?$/;
+const PIPE_RE = /\|(?=(?:[^$]*\$[^$]*\$)*[^$]*$)/;
 
 type Cell = { tag: 'td' | 'th'; text: string; rowSpan?: number; colSpan?: number };
 type Block = { table: Cell[][] } | { image: { src: string; alt: string } } | { text: string[] };
@@ -41,11 +43,22 @@ export function MathInline({ text }: { text: string }) {
 
 export function MathText({ text }: { text: string }) {
 	const blocks: Block[] = [];
+	let piped = false;
 
 	for (const line of text.split('\n')) {
 		const trimmed = line.trim();
 		const last = blocks[blocks.length - 1];
 		const image = trimmed.match(IMAGE_RE);
+		const wasPiped = piped;
+		piped = trimmed.startsWith('|');
+
+		if (piped) {
+			if (PIPE_RULE_RE.test(trimmed)) continue;
+			const cells = trimmed.replace(/^\||\|$/g, '').split(PIPE_RE).map((cell) => cell.trim());
+			if (wasPiped && last && 'table' in last) last.table.push(cells.map((cell) => ({ tag: 'td', text: cell })));
+			else blocks.push({ table: [cells.map((cell) => ({ tag: 'th', text: cell }))] });
+			continue;
+		}
 
 		if (image) {
 			blocks.push({ image: { alt: image[1], src: image[2] } });
