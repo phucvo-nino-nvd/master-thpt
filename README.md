@@ -21,7 +21,7 @@
 
 ## Preview
 
-https://github.com/user-attachments/assets/f50e78b4-eca2-4271-9ea7-0de16cf6b9bf
+https://github.com/user-attachments/assets/2606fdbd-995f-4990-b83e-8f04e6b545c5
 
 ## Overview and Core Value Proposition
 
