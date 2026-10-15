@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 from collections.abc import Iterator
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 from pathlib import Path
 from sqlite3 import IntegrityError
@@ -295,12 +296,15 @@ def restock(mode: str, user_id: str) -> None:
 
 
 def finish_grading(request: SubmitRequest, submissions: list[dict], user_id: str) -> None:
+    pool = ThreadPoolExecutor(max_workers=1)
     try:
-        graded[user_id] = GradingStatus(result=recorded(request, submissions, grade(submissions, user_id=user_id), user_id))
+        state = pool.submit(grade, submissions, user_id=user_id).result(timeout=300)
+        graded[user_id] = GradingStatus(result=recorded(request, submissions, state, user_id))
     except Exception:
         graded[user_id] = GradingStatus(error="Chưa chấm xong bài. Bấm Nộp lại để chấm tiếp.")
         raise
     finally:
+        pool.shutdown(wait=False)
         main.grading.pop(user_id, None)
 
     restock(request.mode, user_id)

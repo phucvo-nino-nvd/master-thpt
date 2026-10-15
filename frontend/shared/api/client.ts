@@ -253,23 +253,29 @@ async function stream(path: string, body: object, onChunk: (text: string) => voi
 	}
 
 	const token = await getToken?.();
-	const response = await fetch(`${api.defaults.baseURL}${path}`, {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
-		body: JSON.stringify(body),
-	});
-	if (!response.ok || !response.body) throw new Error((await response.json().catch(() => null))?.detail ?? 'Trợ lý chưa trả lời được.');
+	const signal = AbortSignal.timeout(90000);
+	try {
+		const response = await fetch(`${api.defaults.baseURL}${path}`, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
+			body: JSON.stringify(body),
+			signal,
+		});
+		if (!response.ok || !response.body) throw new Error((await response.json().catch(() => null))?.detail ?? 'Trợ lý chưa trả lời được.');
 
-	const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
-	let buffer = '';
-	for (let chunk = await reader.read(); !chunk.done; chunk = await reader.read()) {
-		const events = (buffer + chunk.value).split('\n\n');
-		buffer = events.pop() ?? '';
-		for (const event of events) {
-			const data = JSON.parse(event.replace(/^data: /, ''));
-			if (data.type === 'error') throw new Error('Trợ lý chưa trả lời được.');
-			if (data.type === 'model') onModel?.(data.content);
-			else onChunk(data.content);
+		const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+		let buffer = '';
+		for (let chunk = await reader.read(); !chunk.done; chunk = await reader.read()) {
+			const events = (buffer + chunk.value).split('\n\n');
+			buffer = events.pop() ?? '';
+			for (const event of events) {
+				const data = JSON.parse(event.replace(/^data: /, ''));
+				if (data.type === 'error') throw new Error('Trợ lý chưa trả lời được.');
+				if (data.type === 'model') onModel?.(data.content);
+				else onChunk(data.content);
+			}
 		}
+	} catch (error) {
+		throw signal.aborted ? new Error('Trợ lý chưa trả lời được.') : error;
 	}
 }
