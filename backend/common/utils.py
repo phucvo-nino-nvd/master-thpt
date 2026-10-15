@@ -47,6 +47,6 @@ def chat_model(model: str, **kwargs) -> ChatOpenRouter:
         base_url=OPENROUTER_BASE_URL,
         temperature=0,
         max_retries=0,
-        openrouter_provider={"require_parameters": True},
+        openrouter_provider={"require_parameters": True, "ignore": ["SiliconFlow", "CoreWeave"]},
         **kwargs,
     )
