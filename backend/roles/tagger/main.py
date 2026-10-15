@@ -194,15 +194,12 @@ def tag_with_llm(items: Sequence[Item]) -> list[list[str]]:
             list(dict.fromkeys(
                 knowledge_id.strip()
                 for knowledge_id in question.knowledge_ids
-            ))
+                if knowledge_id.strip() in names
+            ))[:MAX_TAGS]
             for question in decision.questions
         ]
 
-        if len(knowledge_ids) == len(items) and all(
-            1 <= len(question_ids) <= MAX_TAGS
-            and all(knowledge_id in names for knowledge_id in question_ids)
-            for question_ids in knowledge_ids
-        ):
+        if len(knowledge_ids) == len(items) and all(knowledge_ids):
             return knowledge_ids
 
     raise ValueError(
