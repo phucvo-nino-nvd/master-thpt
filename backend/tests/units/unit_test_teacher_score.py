@@ -154,3 +154,8 @@ def test_concurrent_initialization_migrates_old_database_once(tmp_path, monkeypa
         list(pool.map(lambda _: db.init_db(), range(4)))
     with db.get_connection() as conn:
         assert [row["name"] for row in conn.execute("PRAGMA table_info(history_question)")].count("max_score") == 1
+
+
+def test_restore_latex_recovers_unescaped_json_backslashes():
+    broken = '$\x0crac{1}{2} \times 3 \neq x$, \x08eta \rightarrow\nĐúng.\r\nHết'
+    assert teacher.restore_latex(broken) == '$\\frac{1}{2} \\times 3 \\neq x$, \\beta \\rightarrow\nĐúng.\r\nHết'

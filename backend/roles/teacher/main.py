@@ -5,6 +5,7 @@ from functools import lru_cache
 from langsmith import traceable
 
 import os
+import re
 
 from common.schema import Evaluation
 from common.utils import chat_model
@@ -16,6 +17,8 @@ from .schema import ChatMessage
 
 TEACHER_MODEL = os.getenv("OPENROUTER_TEACHER_MODEL")
 MAX_HINT_LEVEL = len(HINT_LEVELS)
+CONTROL_ESCAPES = {"\b": "\\b", "\f": "\\f", "\t": "\\t", "\r": "\\r", "\n": "\\n"}
+CONTROL_PATTERN = re.compile(r"[\b\f\t]|\r(?!\n)|\n(?=(?:eq|e|abla|otin|exists|u|leq|geq|ot|mid|parallel)\b)")
 
 
 @lru_cache(maxsize=1)
@@ -25,6 +28,10 @@ def evaluator():
         method="json_schema",
         strict=True,
     )
+
+
+def restore_latex(text: str) -> str:
+    return CONTROL_PATTERN.sub(lambda match: CONTROL_ESCAPES[match.group()], text)
 
 
 def streamed(prompt: str | list[tuple[str, str]]) -> Iterator[dict]:
@@ -164,6 +171,7 @@ def evaluate(item: Item, student_answer: str | list[bool | None]) -> Evaluation:
 
     for _ in range(2):
         evaluation = Evaluation.model_validate(evaluator().invoke(prompt))
+        evaluation.feedback = restore_latex(evaluation.feedback)
 
         if keyed or len(evaluation.part_correct) == len(item.parts):
             return apply_rubric(item, student_answer, evaluation)
