@@ -30,6 +30,15 @@ def evaluator():
     )
 
 
+@lru_cache(maxsize=1)
+def hinter():
+    return chat_model(TEACHER_MODEL).with_structured_output(
+        {"title": "Hint", "type": "object", "properties": {"hint": {"type": "string"}}, "required": ["hint"], "additionalProperties": False},
+        method="json_schema",
+        strict=True,
+    )
+
+
 def restore_latex(text: str) -> str:
     return CONTROL_PATTERN.sub(lambda match: CONTROL_ESCAPES[match.group()], text)
 
@@ -184,7 +193,12 @@ def evaluate(item: Item, student_answer: str | list[bool | None]) -> Evaluation:
 
 @traceable(name="[TEACHER]: Give hint")
 def give_hint(item: Item, level: int = 1, student_answer: str | list[bool | None] = "") -> Iterator[dict]:
-    yield from streamed(build_hint_prompt(item, min(max(level, 1), MAX_HINT_LEVEL), student_answer))
+    sent = ""
+    for partial in hinter().stream(build_hint_prompt(item, min(max(level, 1), MAX_HINT_LEVEL), student_answer)):
+        hint = restore_latex(partial.get("hint", ""))
+        if len(hint) > len(sent):
+            yield {"type": "content", "content": hint[len(sent):]}
+            sent = hint
 
 
 @traceable(name="[TEACHER]: Chat")
