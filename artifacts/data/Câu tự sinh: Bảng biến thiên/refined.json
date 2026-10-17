@@ -1,0 +1,149 @@
+{
+  "source_url": "generated://bang-bien-thien",
+  "title": "Câu tự sinh: Bảng biến thiên",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ có bảng biến thiên như sau:\n\n\\[\n\\begin{array}{c|cccccc}\nx & -\\infty & & -1 & & 1 & +\\infty \\\\\n\\hline\n$f'(x)$ & & - & 0 & + & 0 & - \\\\\n\\hline\n$f(x)$ & +\\infty & \\searrow & 2 & \\nearrow & 5 & \\searrow & -\\infty\n\\end{array}\n\\]\n\nHàm số đã cho đồng biến trên khoảng nào dưới đây?",
+      "options": [
+        {
+          "label": "A",
+          "content": "A. $(0;2)$"
+        },
+        {
+          "label": "B",
+          "content": "B. $(-1;1)$"
+        },
+        {
+          "label": "C",
+          "content": "C. $(1;+\\infty)$"
+        },
+        {
+          "label": "D",
+          "content": "D. $(-\\infty;0)$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Cho hàm số $y = f(x)$ có bảng biến thiên như sau:\n\n\\[\n\\begin{array}{c|cccccc}\nx & -\\infty & & -1 & & 1 & +\\infty \\\\\n\\hline\n$f'(x)$ & & - & 0 & + & 0 & - \\\\\n\\hline\n$f(x)$ & +\\infty & \\searrow & 2 & \\nearrow & 5 & \\searrow & -\\infty\n\\end{array}\n\\]\n\nXét tính đúng sai của các mệnh đề sau:",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "a) Hàm số đạt cực đại tại $x = 1$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "b) Hàm số có giá trị cực tiểu bằng $2$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "c) Hàm số đồng biến trên khoảng $(-\\infty; -1)$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "d) Hàm số nghịch biến trên khoảng $(1; +\\infty)$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "III",
+      "number": "2",
+      "type": "short_answer",
+      "content": "Cho hàm số $y = f(x)$ có bảng biến thiên như sau:\n\n\\[\n\\begin{array}{c|cccccc}\nx & -\\infty & & 0 & & 2 & +\\infty \\\\\n\\hline\n$f'(x)$ & & + & 0 & - & 0 & + \\\\\n\\hline\n$f(x)$ & -\\infty & \\nearrow & 3 & \\searrow & 1 & \\nearrow & +\\infty\n\\end{array}\n\\]\n\nSố điểm cực trị của hàm số là bao nhiêu?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "I",
+      "number": "4",
+      "type": "multiple_choice",
+      "content": "Một công ty sản xuất một loại sản phẩm có hàm lợi nhuận $P(x)$ (triệu đồng) phụ thuộc vào số lượng sản phẩm $x$ (nghìn sản phẩm) được sản xuất. Bảng biến thiên của hàm số $P(x)$ như sau:\n\n\\[\n\\begin{array}{c|cccccc}\nx & 0 & & 3 & & 8 & 10 \\\\\n\\hline\n$P'(x)$ & & + & 0 & - & & \\\\\n\\hline\n$P(x)$ & 0 & \\nearrow & 15 & \\searrow & 5 & \\searrow & 2\n\\end{array}\n\\]\n\nHỏi công ty nên sản xuất bao nhiêu nghìn sản phẩm để đạt lợi nhuận lớn nhất?",
+      "options": [
+        {
+          "label": "A",
+          "content": "A. $2$"
+        },
+        {
+          "label": "B",
+          "content": "B. $3$"
+        },
+        {
+          "label": "C",
+          "content": "C. $5$"
+        },
+        {
+          "label": "D",
+          "content": "D. $8$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "II",
+      "number": "3",
+      "type": "true_false",
+      "content": "Cho hàm số $y = f(x)$ có bảng biến thiên như sau:\n\n\\[\n\\begin{array}{c|cccccc}\nx & -\\infty & & 1 & & +\\infty \\\\\n\\hline\n$f'(x)$ & & - & \\parallel & - & \\\\\n\\hline\n$f(x)$ & 2 & \\searrow & -\\infty \\parallel +\\infty & \\searrow & 2\n\\end{array}\n\\]\n\nXét tính đúng sai của các mệnh đề sau:",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "a) Hàm số có tiệm cận đứng $x = 1$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "b) Hàm số có tiệm cận ngang $y = -2$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "c) Hàm số đồng biến trên khoảng $(-\\infty; 1)$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "d) Hàm số nghịch biến trên khoảng $(1; +\\infty)$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "III",
+      "number": "3",
+      "type": "short_answer",
+      "content": "Cho hàm số $y = f(x)$ có bảng biến thiên như sau:\n\n\\[\n\\begin{array}{c|cccccc}\nx & -\\infty & & -1 & & 0 & & 1 & +\\infty \\\\\n\\hline\n$f'(x)$ & & + & 0 & - & \\parallel & + & 0 & - \\\\\n\\hline\n$f(x)$ & -\\infty & \\nearrow & 4 & \\searrow & -\\infty \\parallel +\\infty & \\nearrow & 3 & \\searrow & -\\infty\n\\end{array}\n\\]\n\nSố điểm tới hạn của hàm số là bao nhiêu?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    }
+  ]
+}

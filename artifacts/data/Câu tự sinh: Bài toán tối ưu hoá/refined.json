@@ -1,0 +1,78 @@
+{
+  "source_url": "generated://bai-toan-toi-uu-hoa",
+  "title": "Câu tự sinh: Bài toán tối ưu hoá",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Một người có một đoạn dây thép dài $40$ cm. Người đó uốn đoạn dây thành hình chữ nhật. Hỏi diện tích lớn nhất của hình chữ nhật đó có thể đạt được là bao nhiêu?",
+      "options": [
+        {
+          "label": "A",
+          "content": "A. $100$ cm$^2$"
+        },
+        {
+          "label": "B",
+          "content": "B. $200$ cm$^2$"
+        },
+        {
+          "label": "C",
+          "content": "C. $400$ cm$^2$"
+        },
+        {
+          "label": "D",
+          "content": "D. $1600$ cm$^2$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Một nông dân có $120$ mét lưới thép để rào một mảnh vườn hình chữ nhật dọc theo bờ sông (một cạnh dọc theo bờ sông không cần rào). Tính diện tích lớn nhất (m$^2$) của mảnh vườn có thể rào được.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Một nhà máy sản xuất hộp đựng sữa hình trụ tròn xoay có thể tích $1$ lít ($1000$ cm$^3$). Người ta muốn thiết kế hộp sao cho diện tích toàn phần (kể cả nắp) là nhỏ nhất để tiết kiệm nguyên liệu. Gọi $r$ (cm) là bán kính đáy và $h$ (cm) là chiều cao của hộp.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "a) Diện tích toàn phần của hộp là $S = 2\\pi r^2 + 2\\pi rh$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "b) Thể tích hộp là $V = \\pi r^2 h = 1000$, suy ra $h = \\frac{1000}{\\pi r^2}$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "c) Hàm số $S(r) = 2\\pi r^2 + \\frac{2000}{r}$ đạt giá trị nhỏ nhất khi $r = \\sqrt[3]{\\frac{500}{\\pi}}$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "d) Khi đó chiều cao $h$ bằng bán kính $r$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    }
+  ]
+}

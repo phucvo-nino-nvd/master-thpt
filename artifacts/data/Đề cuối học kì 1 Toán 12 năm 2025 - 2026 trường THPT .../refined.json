@@ -1,0 +1,1217 @@
+{
+  "source_url": "https://toanmath.com/toanmath-pdf/de-cuoi-hoc-ki-1-toan-12-nam-2025-2026-truong-thpt-nhu-van-lan-hai-phong.pdf",
+  "title": "Đề cuối học kì 1 Toán 12 năm 2025 - 2026 trường THPT ...",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ liên tục và có bảng biến thiên trên đoạn $[-1;3]$ như hình vẽ bên. Khẳng định nào sau đây đúng?\n\n<table>\n<tr><td>$x$</td><td>-1</td><td>0</td><td>2</td><td>3</td></tr>\n<tr><td>$y'$</td><td>+</td><td>0</td><td>-</td><td>0</td><td>+</td></tr>\n<tr><td>$y$</td><td colspan=\"4\"></td></tr>\n</table>",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\max_{[-1;3]} f(x) = f(3)$."
+        },
+        {
+          "label": "B",
+          "content": "$\\max_{[-1;3]} f(x) = f(-1)$."
+        },
+        {
+          "label": "C",
+          "content": "$\\max_{[-1;3]} f(x) = f(0)$."
+        },
+        {
+          "label": "D",
+          "content": "$\\max_{[-1;3]} f(x) = f(2)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/6",
+          "page": 0,
+          "bbox": [
+            143.0,
+            490.0,
+            1519.0,
+            584.0
+          ]
+        },
+        {
+          "id": "/page/0/Table/7",
+          "page": 0,
+          "bbox": [
+            497.0,
+            593.0,
+            1128.0,
+            822.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/8",
+          "page": 0,
+          "bbox": [
+            181.0,
+            851.0,
+            1511.0,
+            911.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Đồ thị của hàm số $y = -2x^3 + 3x^2 - 5$ cắt trục tung tại điểm có tung độ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "-1."
+        },
+        {
+          "label": "B",
+          "content": "0."
+        },
+        {
+          "label": "C",
+          "content": "2."
+        },
+        {
+          "label": "D",
+          "content": "-5."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/9",
+          "page": 0,
+          "bbox": [
+            143.0,
+            956.0,
+            1297.0,
+            1001.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/10",
+          "page": 0,
+          "bbox": [
+            181.0,
+            1005.0,
+            1340.0,
+            1046.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Trong không gian $Oxyz$, cho điểm $A(-2;3;5)$. Tọa độ của vectơ $\\overline{OA}$ là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-2;-3;5)$."
+        },
+        {
+          "label": "B",
+          "content": "$(-2;3;5)$."
+        },
+        {
+          "label": "C",
+          "content": "$(2;-3;-5)$."
+        },
+        {
+          "label": "D",
+          "content": "$(2;-3;5)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/11",
+          "page": 0,
+          "bbox": [
+            143.0,
+            1050.0,
+            1246.0,
+            1095.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/12",
+          "page": 0,
+          "bbox": [
+            181.0,
+            1099.0,
+            1415.0,
+            1142.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "4",
+      "type": "multiple_choice",
+      "content": "Tiệm cận ngang của đồ thị hàm số $y = \\frac{3x+1}{x-1}$ là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$y = 3$."
+        },
+        {
+          "label": "B",
+          "content": "$y = 1$."
+        },
+        {
+          "label": "C",
+          "content": "$y = -1$."
+        },
+        {
+          "label": "D",
+          "content": "$y = \\frac{1}{3}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/13",
+          "page": 0,
+          "bbox": [
+            143.0,
+            1149.0,
+            922.0,
+            1225.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/14",
+          "page": 0,
+          "bbox": [
+            181.0,
+            1232.0,
+            1372.0,
+            1308.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "5",
+      "type": "multiple_choice",
+      "content": "Giá trị lớn nhất của hàm số $f(x) = x^3 - 3x^2 - 9x + 10$ trên đoạn $[-2;2]$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "15."
+        },
+        {
+          "label": "B",
+          "content": "-12."
+        },
+        {
+          "label": "C",
+          "content": "10."
+        },
+        {
+          "label": "D",
+          "content": "-2."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/15",
+          "page": 0,
+          "bbox": [
+            143.0,
+            1312.0,
+            1303.0,
+            1357.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/16",
+          "page": 0,
+          "bbox": [
+            181.0,
+            1361.0,
+            1334.0,
+            1402.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "6",
+      "type": "multiple_choice",
+      "content": "Mỗi ngày bác Hương đều đi bộ để rèn luyện sức khoẻ. Quãng đường đi bộ mỗi ngày (đơn vị: $km$) của bác Hương trong 20 ngày được thống kê lại ở bảng sau:\n\n<table>\n<tr><td>Quãng đường ($km$)</td><td>$[2,7;3,0)$</td><td>$[3,0;3,3)$</td><td>$[3,3;3,6)$</td><td>$[3,6;3,9)$</td><td>$[3,9;4,2)$</td></tr>\n<tr><td>Số ngày</td><td>3</td><td>6</td><td>5</td><td>4</td><td>2</td></tr>\n</table>\n\nPhương sai của mẫu số liệu ghép nhóm là",
+      "options": [
+        {
+          "label": "A",
+          "content": "0,36."
+        },
+        {
+          "label": "B",
+          "content": "11,62."
+        },
+        {
+          "label": "C",
+          "content": "3,39."
+        },
+        {
+          "label": "D",
+          "content": "0,1314."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/17",
+          "page": 0,
+          "bbox": [
+            143.0,
+            1404.0,
+            1519.0,
+            1485.0
+          ]
+        },
+        {
+          "id": "/page/0/Table/18",
+          "page": 0,
+          "bbox": [
+            143.0,
+            1480.0,
+            1511.0,
+            1612.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/19",
+          "page": 0,
+          "bbox": [
+            276.0,
+            1612.0,
+            865.0,
+            1653.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/20",
+          "page": 0,
+          "bbox": [
+            181.0,
+            1650.0,
+            1388.0,
+            1691.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "7",
+      "type": "multiple_choice",
+      "content": "Mỗi ngày bác Hương đều đi bộ để rèn luyện sức khỏe. Quãng đường đi bộ mỗi ngày (đơn vị: $km$) của bác Hương trong 20 ngày được thống kê lại ở bảng sau:\n\n<table>\n<tr><td>Quãng đường ($km$)</td><td>$[2,7; 3,0)$</td><td>$[3,0; 3,3)$</td><td>$[3,3; 3,6)$</td><td>$[3,6; 3,9)$</td><td>$[3,9; 4,2)$</td></tr>\n<tr><td>Số ngày</td><td>3</td><td>6</td><td>5</td><td>4</td><td>2</td></tr>\n</table>\n\nKhoảng biến thiên của mẫu số liệu ghép nhóm là",
+      "options": [
+        {
+          "label": "A",
+          "content": "0,3."
+        },
+        {
+          "label": "B",
+          "content": "0,9."
+        },
+        {
+          "label": "C",
+          "content": "0,6."
+        },
+        {
+          "label": "D",
+          "content": "1,5."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/21",
+          "page": 0,
+          "bbox": [
+            143.0,
+            1691.0,
+            1519.0,
+            1774.0
+          ]
+        },
+        {
+          "id": "/page/0/Table/22",
+          "page": 0,
+          "bbox": [
+            143.0,
+            1769.0,
+            1436.0,
+            1856.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/23",
+          "page": 0,
+          "bbox": [
+            143.0,
+            1895.0,
+            834.0,
+            1939.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/24",
+          "page": 0,
+          "bbox": [
+            181.0,
+            1937.0,
+            1335.0,
+            1977.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "8",
+      "type": "multiple_choice",
+      "content": "Trong không gian với hệ trục tọa độ $Oxyz$, cho $\\vec{a} = -\\vec{i} + 2\\vec{j} - 3\\vec{k}$. Tọa độ của vectơ $\\vec{a}$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-3;2;-1)$."
+        },
+        {
+          "label": "B",
+          "content": "$(2;-1;-3)$."
+        },
+        {
+          "label": "C",
+          "content": "$(-1;2;-3)$."
+        },
+        {
+          "label": "D",
+          "content": "$(2;-3;-1)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/25",
+          "page": 0,
+          "bbox": [
+            143.0,
+            1977.0,
+            1458.0,
+            2020.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/26",
+          "page": 0,
+          "bbox": [
+            181.0,
+            2022.0,
+            1436.0,
+            2067.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "9",
+      "type": "multiple_choice",
+      "content": "Cho hình lập phương $ABCD.A'B'C'D'$. Mệnh đề nào sau đây sai?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\overrightarrow{AC} = \\overrightarrow{AB} + \\overrightarrow{AD}$."
+        },
+        {
+          "label": "B",
+          "content": "$|\\overrightarrow{AB}| = |\\overrightarrow{CD}|$."
+        },
+        {
+          "label": "C",
+          "content": "$\\overrightarrow{AB} + \\overrightarrow{AD} + \\overrightarrow{AA'} = \\overrightarrow{AC'}$."
+        },
+        {
+          "label": "D",
+          "content": "$\\overrightarrow{AB} = \\overrightarrow{CD}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/27",
+          "page": 0,
+          "bbox": [
+            143.0,
+            2072.0,
+            1181.0,
+            2114.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/0",
+          "page": 1,
+          "bbox": [
+            181.0,
+            73.0,
+            1434.0,
+            132.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "10",
+      "type": "multiple_choice",
+      "content": "Hình vẽ sau đây là đồ thị của hàm số nào ?\n\n![Line chart: Graph of a cubic function on a Cartesian coordinate plane.](images/e05232e09f8d0a603eef5812f7313d4b_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$y = \\frac{1}{3}x^3 - \\frac{7}{3}x - 2$"
+        },
+        {
+          "label": "B",
+          "content": "$y = x^3 - 3x + 2$."
+        },
+        {
+          "label": "C",
+          "content": "$y = x^3 - 3x - 2$"
+        },
+        {
+          "label": "D",
+          "content": "$y = -x^3 + 3x - 2$"
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "e05232e09f8d0a603eef5812f7313d4b_img.jpg",
+          "path": "images/e05232e09f8d0a603eef5812f7313d4b_img.jpg",
+          "page": 1,
+          "bbox": [
+            660.0,
+            172.0,
+            1005.0,
+            499.0
+          ],
+          "alt": "Line chart: Graph of a cubic function on a Cartesian coordinate plane."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/1",
+          "page": 1,
+          "bbox": [
+            146.0,
+            134.0,
+            871.0,
+            179.0
+          ]
+        },
+        {
+          "id": "/page/1/Figure/2",
+          "page": 1,
+          "bbox": [
+            660.0,
+            172.0,
+            1005.0,
+            499.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/3",
+          "page": 1,
+          "bbox": [
+            181.0,
+            499.0,
+            1509.0,
+            573.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "11",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ có đồ thị như hình vẽ.\n\n![Graph of a rational function f(x) = (x-2)/(x-1). The curve is green and has a vertical asymptote at x=1 (red line) and a horizontal asymptote at y=-1 (red line). The x-axis is labeled with O, 1, 2, and x. The y-axis is labeled with y, -1, and -2. The curve passes through the x-axis at x=2 and the y-axis at y=-2.](images/258c1507ae7e731f704a016f660cd469_img.jpg)\n\nĐồ thị hàm số đã cho có đường tiệm cận đứng bằng:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$x = 1$."
+        },
+        {
+          "label": "B",
+          "content": "$x = -1$."
+        },
+        {
+          "label": "C",
+          "content": "$x = 0$."
+        },
+        {
+          "label": "D",
+          "content": "$y = -1$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "258c1507ae7e731f704a016f660cd469_img.jpg",
+          "path": "images/258c1507ae7e731f704a016f660cd469_img.jpg",
+          "page": 1,
+          "bbox": [
+            529.0,
+            627.0,
+            1123.0,
+            1037.0
+          ],
+          "alt": "Graph of a rational function f(x) = (x-2)/(x-1). The curve is green and has a vertical asymptote at x=1 (red line) and a horizontal asymptote at y=-1 (red line). The x-axis is labeled with O, 1, 2, and x. The y-axis is labeled with y, -1, and -2. The curve passes through the x-axis at x=2 and the y-axis at y=-2."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/4",
+          "page": 1,
+          "bbox": [
+            146.0,
+            577.0,
+            892.0,
+            624.0
+          ]
+        },
+        {
+          "id": "/page/1/Figure/5",
+          "page": 1,
+          "bbox": [
+            529.0,
+            627.0,
+            1123.0,
+            1037.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/6",
+          "page": 1,
+          "bbox": [
+            146.0,
+            1032.0,
+            880.0,
+            1077.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/7",
+          "page": 1,
+          "bbox": [
+            181.0,
+            1072.0,
+            1391.0,
+            1120.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "12",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ có đồ thị là đường cong trong hình bên. Hàm số đã cho đồng biến trên khoảng nào dưới đây?\n\n![Line chart: Graph of a cubic function with a local minimum and maximum.](images/d3c0b3d5dd4387321d7fa3c128341bb4_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-2; 2)$."
+        },
+        {
+          "label": "B",
+          "content": "$(2; +\\infty)$."
+        },
+        {
+          "label": "C",
+          "content": "$(-\\infty; 2)$."
+        },
+        {
+          "label": "D",
+          "content": "$(0; 2)$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "d3c0b3d5dd4387321d7fa3c128341bb4_img.jpg",
+          "path": "images/d3c0b3d5dd4387321d7fa3c128341bb4_img.jpg",
+          "page": 1,
+          "bbox": [
+            625.0,
+            1205.0,
+            1024.0,
+            1451.0
+          ],
+          "alt": "Line chart: Graph of a cubic function with a local minimum and maximum."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/8",
+          "page": 1,
+          "bbox": [
+            146.0,
+            1120.0,
+            1535.0,
+            1207.0
+          ]
+        },
+        {
+          "id": "/page/1/Figure/9",
+          "page": 1,
+          "bbox": [
+            625.0,
+            1205.0,
+            1024.0,
+            1451.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/10",
+          "page": 1,
+          "bbox": [
+            181.0,
+            1451.0,
+            1372.0,
+            1494.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Một bác tài xế thống kê lại độ dài quãng đường (đơn vị: km) bác đã lái xe mỗi ngày trong một tháng ở bảng sau:\n\n<table>\n<tr><th>Độ dài quãng đường (km)</th><th>$[50;100)$</th><th>$[100;150)$</th><th>$[150;200)$</th><th>$[200;250)$</th><th>$[250;300)$</th></tr>\n<tr><td>Số ngày</td><td>5</td><td>10</td><td>9</td><td>4</td><td>2</td></tr>\n</table>",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Khoảng biến thiên của mẫu số liệu ghép nhóm là 250( km).",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Số trung bình của mẫu số liệu ghép nhóm là 145 .",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Khoảng tứ phân vị của mẫu số liệu ghép nhóm gần bằng 79,17.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Độ lệch chuẩn của mẫu số liệu ghép nhóm gần bằng 55,68.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/12",
+          "page": 1,
+          "bbox": [
+            146.0,
+            1615.0,
+            1535.0,
+            1697.0
+          ]
+        },
+        {
+          "id": "/page/1/Table/13",
+          "page": 1,
+          "bbox": [
+            288.0,
+            1702.0,
+            1509.0,
+            1883.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/14",
+          "page": 1,
+          "bbox": [
+            181.0,
+            1890.0,
+            1112.0,
+            2072.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Cho hàm số bậc ba $f(x) = ax^3 + bx^2 + cx + d(a \\neq 0)$ liên tục trên $\\mathbb{R}$ và có đồ thị như hình vẽ.\n\n![Line chart: Graph of a cubic polynomial function with local extrema and x-intercepts.](images/d9d706121d1c4ba9ad2c793746382361_img.jpg)\n\nCác mệnh đề sau đúng hay sai?",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Gọi $M$ là giá trị cực đại và $m$ là giá trị cực tiểu của hàm số thì $M + m = 0$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Đường thẳng đi qua hai điểm cực trị có phương trình là $y = 2x + 1$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Hàm số nghịch biến trên khoảng $(-2, 2)$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Trong bốn giá trị $a, b, c, d$ có đúng hai giá trị dương.",
+          "solution": null
+        }
+      ],
+      "images": [
+        {
+          "id": "d9d706121d1c4ba9ad2c793746382361_img.jpg",
+          "path": "images/d9d706121d1c4ba9ad2c793746382361_img.jpg",
+          "page": 2,
+          "bbox": [
+            150.0,
+            163.0,
+            528.0,
+            400.0
+          ],
+          "alt": "Line chart: Graph of a cubic polynomial function with local extrema and x-intercepts."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/0",
+          "page": 2,
+          "bbox": [
+            146.0,
+            71.0,
+            1490.0,
+            161.0
+          ]
+        },
+        {
+          "id": "/page/2/Figure/1",
+          "page": 2,
+          "bbox": [
+            150.0,
+            163.0,
+            528.0,
+            400.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/2",
+          "page": 2,
+          "bbox": [
+            264.0,
+            400.0,
+            708.0,
+            443.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/3",
+          "page": 2,
+          "bbox": [
+            181.0,
+            439.0,
+            1262.0,
+            620.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "3",
+      "type": "true_false",
+      "content": "Hỏi hàm số $y = \\frac{x^2 - 3x + 5}{x + 1}$ có đồ thị $(C)$.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Đường thẳng đi qua điểm cực đại và điểm cực tiểu của đồ thị hàm số là $y = 2x + 3$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Đồ thị $(",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "$ có tiệm cận ngang là đường thẳng $$x =$ -1$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Đường thẳng $y = x + 1$ là tiệm cận xiên của đồ thị $(",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Hàm số nghịch biến trên khoảng $(-4; -1)$ và $(-1; 2)$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/4",
+          "page": 2,
+          "bbox": [
+            146.0,
+            627.0,
+            833.0,
+            710.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/5",
+          "page": 2,
+          "bbox": [
+            181.0,
+            707.0,
+            1394.0,
+            907.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "4",
+      "type": "true_false",
+      "content": "Biết hàm số $y = f(x) = \\frac{x + a}{x + 1}$ ($a$ là số thực cho trước và $a \\neq 1$ ) có đồ thị như hình vẽ bên dưới.\n\n![Graph of a rational function with a vertical asymptote at x = -1 and a horizontal asymptote at y = 1. The curve passes through (0, -1) and (1, 0).](images/87658d45f2d2f009cbb9cd1079519cb5_img.jpg)",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Tâm đối xứng của đồ thị hàm số là $I(-1; 1)$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "$\\max_{[0;3]} f(x) = \\frac{1}{3}$ đạt được khi $x = 3$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Số đường thẳng cắt đồ thị $f(x)$ tại những điểm tọa độ nguyên là 6 .",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "$f'(x) > 0, \\forall x \\neq -1$ và hàm số không có điểm cực trị",
+          "solution": null
+        }
+      ],
+      "images": [
+        {
+          "id": "87658d45f2d2f009cbb9cd1079519cb5_img.jpg",
+          "path": "images/87658d45f2d2f009cbb9cd1079519cb5_img.jpg",
+          "page": 2,
+          "bbox": [
+            657.0,
+            1061.0,
+            1015.0,
+            1370.0
+          ],
+          "alt": "Graph of a rational function with a vertical asymptote at x = -1 and a horizontal asymptote at y = 1. The curve passes through (0, -1) and (1, 0)."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/6",
+          "page": 2,
+          "bbox": [
+            146.0,
+            916.0,
+            1514.0,
+            1034.0
+          ]
+        },
+        {
+          "id": "/page/2/Figure/7",
+          "page": 2,
+          "bbox": [
+            657.0,
+            1061.0,
+            1015.0,
+            1370.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/8",
+          "page": 2,
+          "bbox": [
+            181.0,
+            1377.0,
+            1169.0,
+            1619.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Lương tháng của một số nhân viên một văn phòng được ghi lại như sau (đơn vị: triệu đồng):\n\n<table>\n<tr><th>Lương tháng (triệu đồng)</th><td>$[6; 8)$</td><td>$[8; 10)$</td><td>$[10; 12)$</td><td>$[12; 14)$</td></tr>\n<tr><th>Số nhân viên</th><td>3</td><td>6</td><td>8</td><td>7</td></tr>\n</table>\n\nTìm khoảng tứ phân vị của mẫu số liệu ghép nhóm trên.Làm tròn đến hàng phần chục.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/10",
+          "page": 2,
+          "bbox": [
+            146.0,
+            1662.0,
+            1457.0,
+            1747.0
+          ]
+        },
+        {
+          "id": "/page/2/Table/11",
+          "page": 2,
+          "bbox": [
+            339.0,
+            1738.0,
+            1313.0,
+            1843.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/12",
+          "page": 2,
+          "bbox": [
+            146.0,
+            1843.0,
+            1359.0,
+            1888.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "2",
+      "type": "short_answer",
+      "content": "Điều tra 42 học sinh của một lớp 12 về số giờ tự học ở nhà, người ta có bảng thống kê sau:\n\n<table>\n<tr><td>Số giờ tự học</td><td>$[1; 2)$</td><td>$[2; 3)$</td><td>$[3; 4)$</td><td>$[4; 5)$</td><td>$[5; 6)$</td></tr>\n<tr><td>Số học sinh</td><td>8</td><td>10</td><td>12</td><td>9</td><td>3</td></tr>\n</table>\n\nTính phương sai của mẫu số liệu ghép nhóm trên. Làm tròn đến hàng phần trăm.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/13",
+          "page": 2,
+          "bbox": [
+            146.0,
+            1919.0,
+            1469.0,
+            2004.0
+          ]
+        },
+        {
+          "id": "/page/2/Table/14",
+          "page": 2,
+          "bbox": [
+            427.0,
+            2002.0,
+            1356.0,
+            2103.0
+          ]
+        },
+        {
+          "id": "/page/3/Text/0",
+          "page": 3,
+          "bbox": [
+            146.0,
+            69.0,
+            1267.0,
+            114.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "3",
+      "type": "short_answer",
+      "content": "Trong không gian $Oxyz$, cho hai điểm $A(3; -1; 2)$, $B(1; 2; 3)$. Tọa độ giao điểm $E(a; b; c)$ của đường thẳng $AB$ với mặt phẳng toạ độ $(Oxy)$. Tính $2a + b + c$",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/1",
+          "page": 3,
+          "bbox": [
+            146.0,
+            114.0,
+            1503.0,
+            221.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "4",
+      "type": "short_answer",
+      "content": "Giả sử sự lây lan của một loại virus ở một địa phương có thể được mô hình hoá bằng hàm số $N(t) = -t^3 + 12t^2$, $0 \\leq t \\leq 12$, trong đó $N$ là số người bị nhiễm bệnh (đơn vị là trăm người) và $t$ là thời gian (tuần). Gọi $(a; b)$ là khoảng thời gian lâu nhất mà số người bị nhiễm bệnh tăng lên.\n\nTính giá trị $P = 2a^2 - b^2$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/2",
+          "page": 3,
+          "bbox": [
+            146.0,
+            230.0,
+            1525.0,
+            380.0
+          ]
+        },
+        {
+          "id": "/page/3/Text/3",
+          "page": 3,
+          "bbox": [
+            146.0,
+            396.0,
+            489.0,
+            441.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "5",
+      "type": "short_answer",
+      "content": "Trong không gian với hệ tọa độ $Oxyz$ (đơn vị trên mỗi trục tọa độ là $1m)$, một cabin cáp treo xuất phát từ điểm $A(10; 3; 0)$ và chuyển động đều theo đường cáp thẳng đến vị trí D cách A là $4050m$. Biết đường đi của cabin cùng phương với vectơ $\\vec{u}(2; -2; 1)$ và sau 3 phút kể từ khi xuất phát thì cabin đến vị trí B có hoành độ $X_B = 550$. Hỏi thời gian di chuyển của cabin trên quãng đường AD là bao nhiêu phút?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/4",
+          "page": 3,
+          "bbox": [
+            146.0,
+            441.0,
+            1528.0,
+            701.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "6",
+      "type": "short_answer",
+      "content": "Bác Minh có một khu đất hình thang vuông ABCD với $AB=100(m)$, $DC=60(m)$ và $AD=40(m)$. Bác ấy đã đào một cái ao để nuôi cá, ao được bao bởi cạnh AB và một phần của đường cong $f(x)$, biết rằng $f(x)$ chứa các điểm K sao cho tích khoảng cách từ K đến AD và BC luôn bằng $600\\sqrt{2}$ (m). Đồng thời Bác muốn làm một con đường đi từ điểm M trên cạnh AD ra một điểm E trên mép ao cá, rồi lại từ điểm E đó tới một điểm F trên cạnh DC. Hỏi tổng chiều dài con đường đó ngắn nhất là bao nhiêu mét? (làm tròn đến hàng đơn vị).\n\n![Scientific illustration: Geometric diagram of a trapezoid with a shaded region under a curve.](images/12a6537c92844d5b393104c02e8dfc2f_img.jpg)",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "12a6537c92844d5b393104c02e8dfc2f_img.jpg",
+          "path": "images/12a6537c92844d5b393104c02e8dfc2f_img.jpg",
+          "page": 3,
+          "bbox": [
+            408.0,
+            976.0,
+            1252.0,
+            1368.0
+          ],
+          "alt": "Scientific illustration: Geometric diagram of a trapezoid with a shaded region under a curve."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/5",
+          "page": 3,
+          "bbox": [
+            146.0,
+            707.0,
+            1519.0,
+            960.0
+          ]
+        },
+        {
+          "id": "/page/3/Diagram/6",
+          "page": 3,
+          "bbox": [
+            408.0,
+            976.0,
+            1252.0,
+            1368.0
+          ]
+        }
+      ]
+    }
+  ]
+}

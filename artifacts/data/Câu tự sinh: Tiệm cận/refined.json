@@ -1,0 +1,106 @@
+{
+  "source_url": "generated://tiem-can",
+  "title": "Câu tự sinh: Tiệm cận",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = \\frac{2x+1}{x-3}$. Đường tiệm cận ngang của đồ thị hàm số đã cho có phương trình là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$y = 2$"
+        },
+        {
+          "label": "B",
+          "content": "$x = 3$"
+        },
+        {
+          "label": "C",
+          "content": "$y = \\frac{1}{2}$"
+        },
+        {
+          "label": "D",
+          "content": "$y = -2$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "I",
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Một hồ cá nhân tạo được thả một loài cá cảnh. Sau $t$ tháng, số lượng cá thể của loài cá đó trong hồ được ước tính bởi công thức $N(t) = \\frac{200t + 100}{t + 5}$ (với $t \\ge 0$). Khi thời gian đủ lớn, số lượng cá thể của loài cá đó trong hồ sẽ tiến dần đến giá trị nào dưới đây?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$200$"
+        },
+        {
+          "label": "B",
+          "content": "$100$"
+        },
+        {
+          "label": "C",
+          "content": "$20$"
+        },
+        {
+          "label": "D",
+          "content": "$0$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Cho hàm số $y = \\frac{2x^2 + 3x - 5}{x^2 - 1}$. Xét tính đúng sai của các khẳng định sau:",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Đồ thị hàm số có tiệm cận đứng là $x=1$ và $x=-1$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Đồ thị hàm số có tiệm cận ngang là $y=2$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Đồ thị hàm số có tiệm cận xiên là $y=2x+3$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Tiệm cận ngang của đồ thị hàm số cắt trục tung tại điểm có tung độ bằng $2$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Tổng số đường tiệm cận đứng và tiệm cận ngang của đồ thị hàm số $y = \\frac{x^2 + x - 2}{x^2 - 4x + 3}$ là bao nhiêu?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    }
+  ]
+}

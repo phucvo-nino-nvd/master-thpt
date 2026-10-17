@@ -1,0 +1,1099 @@
+{
+  "source_url": "https://toanmath.com/toanmath-pdf/de-thi-thu-tot-nghiep-thpt-nam-2025-mon-toan-so-gddt-an-giang.pdf",
+  "title": "Đề thi thử tốt nghiệp THPT năm 2025 môn Toán sở GD&ĐT An Giang - TOANMATH.com",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Thống kê thu nhập theo tháng (đơn vị: triệu đồng) của một nhóm người chạy xe điện chở khách được cho trong bảng sau:\n\n<table>\n<tr><th>Thu nhập (triệu đồng)</th><th>$[3; 5)$</th><th>$[5; 7)$</th><th>$[7; 9)$</th><th>$[9; 11)$</th></tr>\n<tr><td>Số người</td><td>5</td><td>10</td><td>5</td><td>2</td></tr>\n</table>\n\nTứ phân vị thứ ba của mẫu số liệu ghép nhóm trên là",
+      "options": [
+        {
+          "label": "A",
+          "content": "8,2."
+        },
+        {
+          "label": "B",
+          "content": "8,1."
+        },
+        {
+          "label": "C",
+          "content": "7,5."
+        },
+        {
+          "label": "D",
+          "content": "7,6."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/8",
+          "page": 0,
+          "bbox": [
+            114.0,
+            443.0,
+            1490.0,
+            533.0
+          ]
+        },
+        {
+          "id": "/page/0/Table/9",
+          "page": 0,
+          "bbox": [
+            231.0,
+            544.0,
+            1351.0,
+            754.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/10",
+          "page": 0,
+          "bbox": [
+            154.0,
+            770.0,
+            895.0,
+            817.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/11",
+          "page": 0,
+          "bbox": [
+            151.0,
+            837.0,
+            1335.0,
+            882.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Mệnh đề nào SAI trong các mệnh đề sau?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\int \\left( \\frac{1}{\\cos^2 x} \\right) dx = \\tan x + C.$"
+        },
+        {
+          "label": "B",
+          "content": "$\\int \\frac{1}{\\sin^2 x} dx = -\\cot x + C.$"
+        },
+        {
+          "label": "C",
+          "content": "$\\int \\sin x dx = \\cos x + C.$"
+        },
+        {
+          "label": "D",
+          "content": "$\\int \\cos x dx = \\sin x + C.$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/12",
+          "page": 0,
+          "bbox": [
+            108.0,
+            898.0,
+            809.0,
+            943.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/13",
+          "page": 0,
+          "bbox": [
+            151.0,
+            963.0,
+            1297.0,
+            1093.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Cho hình phẳng $(H)$ giới hạn bởi đường cong $y = \\sqrt{x+1}$, trục hoành và các đường thẳng $x = -1, x = 2$. Thể tích $V$ của khối tròn xoay tạo thành khi quay $(H)$ quanh trục hoành được tính bởi công thức nào dưới đây?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$V = \\pi \\int_{-1}^2 (x+1) dx.$"
+        },
+        {
+          "label": "B",
+          "content": "$V = \\pi \\int_{-1}^2 \\sqrt{x+1} dx.$"
+        },
+        {
+          "label": "C",
+          "content": "$V = \\pi^2 \\int_{-1}^2 \\sqrt{x+1} dx.$"
+        },
+        {
+          "label": "D",
+          "content": "$V = \\pi^2 \\int_{-1}^2 (x+1) dx.$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/14",
+          "page": 0,
+          "bbox": [
+            108.0,
+            1120.0,
+            1498.0,
+            1254.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/15",
+          "page": 0,
+          "bbox": [
+            151.0,
+            1272.0,
+            1235.0,
+            1411.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "4",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = \\frac{ax+b}{cx+d}$ ($c \\neq 0, ad - bc \\neq 0$) có đồ thị như hình vẽ bên. Tiệm cận đứng của đồ thị hàm số là\n\n![Graph of a rational function with a vertical asymptote at x=1/2 and a horizontal asymptote at y=1. The curve is in the first and third quadrants, passing through the origin O.](images/86e94f72474a61c64cef298d56f29bae_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$x = \\frac{1}{2}.$"
+        },
+        {
+          "label": "B",
+          "content": "$y = 1.$"
+        },
+        {
+          "label": "C",
+          "content": "$x = 1.$"
+        },
+        {
+          "label": "D",
+          "content": "$y = \\frac{1}{2}.$"
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "86e94f72474a61c64cef298d56f29bae_img.jpg",
+          "path": "images/86e94f72474a61c64cef298d56f29bae_img.jpg",
+          "page": 0,
+          "bbox": [
+            1099.0,
+            1422.0,
+            1474.0,
+            1792.0
+          ],
+          "alt": "Graph of a rational function with a vertical asymptote at x=1/2 and a horizontal asymptote at y=1. The curve is in the first and third quadrants, passing through the origin O."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/16",
+          "page": 0,
+          "bbox": [
+            105.0,
+            1429.0,
+            1086.0,
+            1541.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/17",
+          "page": 0,
+          "bbox": [
+            151.0,
+            1563.0,
+            663.0,
+            1704.0
+          ]
+        },
+        {
+          "id": "/page/0/Diagram/18",
+          "page": 0,
+          "bbox": [
+            1099.0,
+            1422.0,
+            1474.0,
+            1792.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "5",
+      "type": "multiple_choice",
+      "content": "Chọn ngẫu nhiên ba đỉnh của một hình lập phương để tạo thành một tam giác. Xác suất để ba đỉnh được chọn tạo thành một tam giác có ba góc đều nhọn là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{7}.$"
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{56}.$"
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{8}.$"
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{8}.$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/19",
+          "page": 0,
+          "bbox": [
+            108.0,
+            1794.0,
+            1398.0,
+            1886.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/20",
+          "page": 0,
+          "bbox": [
+            151.0,
+            1904.0,
+            1308.0,
+            1971.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "6",
+      "type": "multiple_choice",
+      "content": "Trong không gian $Oxyz$, cho mặt phẳng $(P): 2x - 3y + 6z - 5 = 0$ và điểm $A(2; -3; 1)$. Đường thẳng $(d)$ đi qua điểm $(A)$ và vuông góc với mặt phẳng $(P)$ có phương trình tham số là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\begin{cases} x = 2 + 2t \\\\ y = -3 - 3t \\\\ z = 1 + 6t \\end{cases}$"
+        },
+        {
+          "label": "B",
+          "content": "$\\begin{cases} x = 2 + 2t \\\\ y = -3 - 3t \\\\ z = 1 - 5t \\end{cases}$"
+        },
+        {
+          "label": "C",
+          "content": "$\\begin{cases} x = -2 + 2t \\\\ y = 3 - 3t \\\\ z = -1 + 6t \\end{cases}$"
+        },
+        {
+          "label": "D",
+          "content": "$\\begin{cases} x = 2 + 2t \\\\ y = -3 - 3t \\\\ z = 6 + t \\end{cases}$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/0",
+          "page": 1,
+          "bbox": [
+            98.0,
+            105.0,
+            1489.0,
+            244.0
+          ]
+        },
+        {
+          "id": "/page/1/Equation/1",
+          "page": 1,
+          "bbox": [
+            138.0,
+            262.0,
+            1465.0,
+            385.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "7",
+      "type": "multiple_choice",
+      "content": "Số $n$ nào trong các số sau đây để $\\lg 2; \\lg 3; \\lg n$ là độ dài ba cạnh của một tam giác",
+      "options": [
+        {
+          "label": "A",
+          "content": "7."
+        },
+        {
+          "label": "B",
+          "content": "1."
+        },
+        {
+          "label": "C",
+          "content": "6."
+        },
+        {
+          "label": "D",
+          "content": "5."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/2",
+          "page": 1,
+          "bbox": [
+            98.0,
+            405.0,
+            1378.0,
+            450.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/3",
+          "page": 1,
+          "bbox": [
+            140.0,
+            470.0,
+            1308.0,
+            508.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "8",
+      "type": "multiple_choice",
+      "content": "Trong không gian $Oxyz$, mặt phẳng $(P): 2x - 3y + 4z - 1 = 0$ có một vectơ pháp tuyến $\\vec{n}$ có tọa độ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{n} = (2; 3; 4)$."
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{n} = (-1; 2; -3)$."
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{n} = (-3; 4; -1)$."
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{n} = (2; -3; 4)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/4",
+          "page": 1,
+          "bbox": [
+            98.0,
+            530.0,
+            1484.0,
+            620.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/5",
+          "page": 1,
+          "bbox": [
+            140.0,
+            645.0,
+            1481.0,
+            692.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "9",
+      "type": "multiple_choice",
+      "content": "Giá trị nhỏ nhất của hàm số $y = x - 3 + \\frac{9}{x+2}$ trên đoạn $[-1; 3]$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "0."
+        },
+        {
+          "label": "B",
+          "content": "5."
+        },
+        {
+          "label": "C",
+          "content": "1."
+        },
+        {
+          "label": "D",
+          "content": "9/5."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/6",
+          "page": 1,
+          "bbox": [
+            102.0,
+            710.0,
+            1176.0,
+            779.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/7",
+          "page": 1,
+          "bbox": [
+            146.0,
+            795.0,
+            1345.0,
+            837.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "10",
+      "type": "multiple_choice",
+      "content": "Hàm số $y = f(x)$ có đạo hàm $f'(x) = x(x - 3)$ với mọi $x \\in \\mathbb{R}$. Khẳng định nào sau đây là đúng.",
+      "options": [
+        {
+          "label": "A",
+          "content": "$f(1) > f(3)$."
+        },
+        {
+          "label": "B",
+          "content": "$f(-1) > f(0)$."
+        },
+        {
+          "label": "C",
+          "content": "$f(3) > f(5)$."
+        },
+        {
+          "label": "D",
+          "content": "$f(3) > f(0)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/8",
+          "page": 1,
+          "bbox": [
+            105.0,
+            860.0,
+            1481.0,
+            952.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/9",
+          "page": 1,
+          "bbox": [
+            143.0,
+            972.0,
+            1473.0,
+            1016.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "11",
+      "type": "multiple_choice",
+      "content": "Cho hình lăng trụ tam giác $ABC.A'B'C'$, hình vẽ. Đặt $\\overrightarrow{AA'} = \\vec{a}, \\overrightarrow{AB} = \\vec{b}, \\overrightarrow{AC} = \\vec{c}$. Phát biểu nào sau đây là đúng?\n\n![A 3D geometric diagram of a triangular prism. The top face is triangle A'B'C and the bottom face is triangle ABC. A' is connected to A, B' to B, and C to C. A dashed line represents the hidden edge AC of the bottom face. A solid line connects vertex B to vertex C on the top face.](images/72bc1a2b64dd6bac8285f560440c1218_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\overrightarrow{BC'} = -\\vec{a} + \\vec{b} + \\vec{c}$."
+        },
+        {
+          "label": "B",
+          "content": "$\\overrightarrow{BC'} = \\vec{a} - \\vec{b} + \\vec{c}$."
+        },
+        {
+          "label": "C",
+          "content": "$\\overrightarrow{BC'} = \\vec{a} + \\vec{b} + \\vec{c}$."
+        },
+        {
+          "label": "D",
+          "content": "$\\overrightarrow{BC'} = \\vec{a} + \\vec{b} - \\vec{c}$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "72bc1a2b64dd6bac8285f560440c1218_img.jpg",
+          "path": "images/72bc1a2b64dd6bac8285f560440c1218_img.jpg",
+          "page": 1,
+          "bbox": [
+            1099.0,
+            1128.0,
+            1380.0,
+            1420.0
+          ],
+          "alt": "A 3D geometric diagram of a triangular prism. The top face is triangle A'B'C and the bottom face is triangle ABC. A' is connected to A, B' to B, and C to C. A dashed line represents the hidden edge AC of the bottom face. A solid line connects vertex B to vertex C on the top face."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/10",
+          "page": 1,
+          "bbox": [
+            105.0,
+            1039.0,
+            1481.0,
+            1135.0
+          ]
+        },
+        {
+          "id": "/page/1/Diagram/11",
+          "page": 1,
+          "bbox": [
+            1099.0,
+            1128.0,
+            1380.0,
+            1420.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/12",
+          "page": 1,
+          "bbox": [
+            143.0,
+            1279.0,
+            813.0,
+            1404.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "12",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = \\frac{ax^2 + bx + c}{a'x + b'}$ ($a, a' \\neq 0$) có đồ thị như hình vẽ bên. Hàm số đã cho nghịch biến trên khoảng nào trong các khoảng sau đây?\n\n![Graph of a function f(x) on a Cartesian coordinate system. The function has a local maximum at (-2, -2) and a local minimum at (0, 0). A dashed line represents the tangent line at the local maximum. The x-axis is labeled with -2, -1, O, and 1. The y-axis is labeled with y. The x-axis is labeled with x.](images/6343a896ff7c6a10ec2f48bad236b8bf_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-2; 0)$."
+        },
+        {
+          "label": "B",
+          "content": "$(-1; 1)$."
+        },
+        {
+          "label": "C",
+          "content": "$(-\\infty; -2)$."
+        },
+        {
+          "label": "D",
+          "content": "$(-2; -1)$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "6343a896ff7c6a10ec2f48bad236b8bf_img.jpg",
+          "path": "images/6343a896ff7c6a10ec2f48bad236b8bf_img.jpg",
+          "page": 1,
+          "bbox": [
+            1042.0,
+            1556.0,
+            1418.0,
+            1953.0
+          ],
+          "alt": "Graph of a function f(x) on a Cartesian coordinate system. The function has a local maximum at (-2, -2) and a local minimum at (0, 0). A dashed line represents the tangent line at the local maximum. The x-axis is labeled with -2, -1, O, and 1. The y-axis is labeled with y. The x-axis is labeled with x."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/13",
+          "page": 1,
+          "bbox": [
+            102.0,
+            1552.0,
+            1010.0,
+            1720.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/14",
+          "page": 1,
+          "bbox": [
+            145.0,
+            1740.0,
+            711.0,
+            1850.0
+          ]
+        },
+        {
+          "id": "/page/1/Diagram/15",
+          "page": 1,
+          "bbox": [
+            1042.0,
+            1556.0,
+            1418.0,
+            1953.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Cho hàm số $f(x) = 2 \\cos x - x + \\pi$.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "$f\\left(\\frac{\\pi}{2}\\right) = \\frac{\\pi}{2}$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Đạo hàm của hàm số đã cho là $f'(x) = 2 \\sin x - 1$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Số nghiệm của phương trình $f'(x) = 0$ trên $\\left[-\\frac{\\pi}{2}; \\frac{\\pi}{2}\\right]$ là 2 nghiệm.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Giá trị lớn nhất của $f(x)$ trên đoạn $\\left[-\\frac{\\pi}{2}; \\frac{\\pi}{2}\\right]$ là $\\frac{3\\pi}{2}$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/1",
+          "page": 2,
+          "bbox": [
+            116.0,
+            206.0,
+            746.0,
+            248.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/2",
+          "page": 2,
+          "bbox": [
+            167.0,
+            266.0,
+            1131.0,
+            519.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Một xe ô tô bắt đầu chuyển động nhanh dần đều với vận tốc $v_1(t) = 2t$ (m/s) trong đó thời gian $t$ được tính bằng giây. Sau khi chuyển động 12 giây thì ô tô gặp chướng ngại vật và tài xế phanh gấp, ô tô tiếp tục chuyển động chậm dần đều với gia tốc là $a = -8$ $(m/s2)$ cho đến khi dừng hẳn. Khi đó:",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Quãng đường ô tô chuyển động nhanh dần đều là $144m$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Vận tốc của ô tô tại thời điểm người tài xế phanh gấp là 24 m/s.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Thời gian lúc ô tô đạp phanh đến khi dừng hẳn là 3 giây.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Tổng quãng đường ô tô chuyển động từ lúc xuất phát đến khi dừng hẳn là $180m$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/3",
+          "page": 2,
+          "bbox": [
+            110.0,
+            537.0,
+            1477.0,
+            723.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/4",
+          "page": 2,
+          "bbox": [
+            161.0,
+            745.0,
+            1329.0,
+            936.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "3",
+      "type": "true_false",
+      "content": "Giả sử trong một nhóm 100 người có 10 người nhiễm bệnh X, 90 người còn lại không nhiễm bệnh X. Để phát hiện ra người nhiễm bệnh X, người ta tiến hành xét nghiệm tất cả mọi người của nhóm đó. Một loại xét nghiệm cho kết quả như sau: Đối với người nhiễm bệnh X, xác suất xét nghiệm có kết quả dương tính là 80%, còn đối với người không nhiễm bệnh X thì xác suất xét nghiệm có phản ứng dương tính là 9%. Chọn ngẫu nhiên một người trong nhóm được xét nghiệm. Xét các biến cố:\n\nA: \"Người được chọn có kết quả xét nghiệm dương tính\" ,\n\nB: \"Người được chọn là người nhiễm bệnh X\".",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "$P(\\overline{B}) = 0,9$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "$P(\\overline{A}|",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "$=$ 0,2$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "$P(\\overline{A}) = 0,89$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Ti lệ người bị nhiễm bệnh X trong số những người cho kết quả âm tính thấp hơn 2%.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/5",
+          "page": 2,
+          "bbox": [
+            110.0,
+            954.0,
+            1484.0,
+            1229.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/6",
+          "page": 2,
+          "bbox": [
+            242.0,
+            1252.0,
+            1054.0,
+            1296.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/7",
+          "page": 2,
+          "bbox": [
+            242.0,
+            1317.0,
+            904.0,
+            1359.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/8",
+          "page": 2,
+          "bbox": [
+            167.0,
+            1382.0,
+            1396.0,
+            1650.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "4",
+      "type": "true_false",
+      "content": "Trong không gian $Oxyz$ cho bốn điểm $A(1; -2; 0)$, $B(2; 0; 0)$, $C(0; 0; 2)$, $D(1; -1; 1)$. Khi đó:",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "$\\overrightarrow{AB} = (1; 2; 0)$, $\\overrightarrow{AC} = (-1; 2; 2)$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Phương trình mặt phẳng $(ABC)$: $2x - y + 2z - 4 = 0$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Khoảng cách từ điểm $D$ đến mặt phẳng $(ABC)$ bằng 3.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Sin của góc hợp bởi trục hoành $Ox$ và mặt phẳng $(ABC)$ bằng 1/3.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/9",
+          "page": 2,
+          "bbox": [
+            110.0,
+            1668.0,
+            1422.0,
+            1758.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/10",
+          "page": 2,
+          "bbox": [
+            162.0,
+            1783.0,
+            1139.0,
+            1977.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Hai hàm số $y = f(x)$; $y = g(x)$ đều là những hàm số bậc hai có đồ thị như hình vẽ bên. Tính diện tích phần tô đậm (làm tròn đến hai chữ số thập phân).\n\n![Line chart: Shaded region between two parabolic curves on a Cartesian coordinate plane.](images/7fb5215fd72210a2e4cce6df55550c89_img.jpg)",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "7fb5215fd72210a2e4cce6df55550c89_img.jpg",
+          "path": "images/7fb5215fd72210a2e4cce6df55550c89_img.jpg",
+          "page": 3,
+          "bbox": [
+            1088.0,
+            120.0,
+            1461.0,
+            546.0
+          ],
+          "alt": "Line chart: Shaded region between two parabolic curves on a Cartesian coordinate plane."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/1",
+          "page": 3,
+          "bbox": [
+            103.0,
+            170.0,
+            1078.0,
+            309.0
+          ]
+        },
+        {
+          "id": "/page/3/Figure/2",
+          "page": 3,
+          "bbox": [
+            1088.0,
+            120.0,
+            1461.0,
+            546.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "2",
+      "type": "short_answer",
+      "content": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có đáy là tam giác $ABC$ vuông tại $A$, $AB = 1\\text{cm}$, $BC = \\sqrt{3}\\text{ cm}$. Khoảng cách giữa hai đường thẳng $AA'$ và $BC'$ bằng bao nhiêu xen-ti-mét (cm) ? (làm tròn đến hai chữ số thập phân).",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/3",
+          "page": 3,
+          "bbox": [
+            103.0,
+            580.0,
+            1489.0,
+            723.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "3",
+      "type": "short_answer",
+      "content": "Ông A vay của ngân hàng với hợp đồng vay như sau: Số tiền vay 200 triệu đồng, thời hạn vay 6 tháng, trả gốc và lãi cuối kỳ, lãi suất cho vay 11% năm. Tiền lãi tính theo dư nợ ban đầu (lãi đơn). Tính tổng số tiền mà ông A phải trả cho ngân hàng cuối kỳ vay (làm tròn đến triệu đồng).",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/4",
+          "page": 3,
+          "bbox": [
+            103.0,
+            739.0,
+            1487.0,
+            882.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "4",
+      "type": "short_answer",
+      "content": "Trong không gian với hệ trục toạ độ $Oxyz$ cho điểm $M(a; b; c)$ cách đều bốn điểm $A(0; 4; 0)$, $B(-1; 0; -3)$, $C(3; 3; 0)$, $D(2; 1; 0)$. Tính giá trị biểu thức $T = 5a + 50b + 500c$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/5",
+          "page": 3,
+          "bbox": [
+            103.0,
+            960.0,
+            1482.0,
+            1059.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "5",
+      "type": "short_answer",
+      "content": "Một chiếc thùng đựng rượu vang như hình vẽ bên được ghép bởi các thanh gỗ uốn cong có dạng là một parabol và được buộc chắc bằng các đai thép hình tròn. Biết hai đáy của thùng rượu là hình tròn có bán kính bằng 30 cm, chiều cao của thùng rượu là 1 m, thiết diện chính giữa thùng song song với hai đáy là hình tròn có bán kính 40 cm. Hỏi thùng rượu chứa được tối đa bao nhiêu lít rượu (làm tròn đến hàng đơn vị lít).\n\n![Illustration of a wooden barrel with metal hoops.](images/451417078c55730b2f3f9ea924407f78_img.jpg)",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "451417078c55730b2f3f9ea924407f78_img.jpg",
+          "path": "images/451417078c55730b2f3f9ea924407f78_img.jpg",
+          "page": 3,
+          "bbox": [
+            1278.0,
+            1128.0,
+            1476.0,
+            1406.0
+          ],
+          "alt": "Illustration of a wooden barrel with metal hoops."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/6",
+          "page": 3,
+          "bbox": [
+            103.0,
+            1135.0,
+            1262.0,
+            1408.0
+          ]
+        },
+        {
+          "id": "/page/3/Picture/7",
+          "page": 3,
+          "bbox": [
+            1278.0,
+            1128.0,
+            1476.0,
+            1406.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "6",
+      "type": "short_answer",
+      "content": "Một công ty có hai chi nhánh: Chi nhánh A có 45 nhân viên, trong đó có 30 người làm ở bộ phận kỹ thuật và 15 người làm ở bộ phận hành chính. Chi nhánh B có 40 nhân viên, trong đó số lượng nhân viên kỹ thuật và hành chính là bằng nhau. Do cần tăng cường nhân sự, công ty chọn ngẫu nhiên 1 nhân viên từ chi nhánh A chuyển sang chi nhánh B. Sau đó, công ty chọn ngẫu nhiên 2 nhân viên từ chi nhánh B để tham dự một khóa đào tạo. Tính xác suất để 2 nhân viên được chọn đều thuộc bộ phận hành chính (làm tròn đến hai chữ số thập phân).",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/8",
+          "page": 3,
+          "bbox": [
+            103.0,
+            1491.0,
+            1497.0,
+            1774.0
+          ]
+        }
+      ]
+    }
+  ]
+}

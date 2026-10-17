@@ -1,0 +1,2460 @@
+{
+  "ocr": {
+    "children": [
+      {
+        "html": "<p><b>Họ, tên thí sinh:</b>.....<br/><b>Số báo danh:</b> .....</p><p><b>Mã đề thi: 0101</b></p><p><b>PHẦN I.</b> Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</p><p><b>Câu 1.</b> Số nghiệm của phương trình <math>2^{x^2-2x} = 128</math> là</p><p><b>A.</b> 2. <b>B.</b> 0. <b>C.</b> 1. <b>D.</b> 3.</p><p><b>Câu 2.</b> Tập nghiệm của phương trình <math>\\cos x = -1</math> là</p><p><b>A.</b> <math>S = \\left\\{ -\\frac{\\pi}{2} + k2\\pi, k \\in \\mathbb{Z} \\right\\}</math>. <b>B.</b> <math>S = \\{ \\pi + k2\\pi, k \\in \\mathbb{Z} \\}</math>.<br/><b>C.</b> <math>S = \\left\\{ \\frac{\\pi}{2} + k2\\pi, k \\in \\mathbb{Z} \\right\\}</math>. <b>D.</b> <math>S = \\left\\{ -\\frac{\\pi}{3} + k2\\pi, k \\in \\mathbb{Z} \\right\\}</math>.</p><p><b>Câu 3.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math>, phương trình của đường thẳng đi qua hai điểm <math>M(1;2;1)</math> và <math>N(3;1;-2)</math> là</p><p><b>A.</b> <math>\\frac{x+1}{4} = \\frac{y+2}{3} = \\frac{z+1}{-1}</math>. <b>B.</b> <math>\\frac{x-1}{2} = \\frac{y-2}{-1} = \\frac{z-1}{-3}</math>.<br/><b>C.</b> <math>\\frac{x+1}{2} = \\frac{y+2}{-1} = \\frac{z+1}{-3}</math>. <b>D.</b> <math>\\frac{x-1}{4} = \\frac{y-2}{3} = \\frac{z-1}{-1}</math>.</p><p><b>Câu 4.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math>, cho mặt phẳng <math>(P): x + 2z - 7 = 0</math>. Véc-tơ nào dưới đây là một véc-tơ pháp tuyến của mặt phẳng <math>(P)</math>?</p><p><b>A.</b> <math>\\vec{n}_2 = (1;0;2)</math>. <b>B.</b> <math>\\vec{n}_3 = (1;2;0)</math>. <b>C.</b> <math>\\vec{n}_1 = (1;2;0)</math>. <b>D.</b> <math>\\vec{n}_4 = (1;2;-7)</math>.</p><p><b>Câu 5.</b> Mỗi ngày bác Hương đều đi bộ để rèn luyện sức khỏe. Quãng đường đi bộ mỗi ngày (đơn vị: <math>km</math>) của bác Hương trong 20 ngày được thống kê lại ở bảng sau:</p><table><tr><td>Quãng đường<br/>(<math>km</math>)</td><td>[2,7;3,0)</td><td>[3,0;3,3)</td><td>[3,3;3,6)</td><td>[3,6;3,9)</td><td>[3,9;4,2)</td></tr><tr><td>Số ngày</td><td>3</td><td>6</td><td>5</td><td>4</td><td>2</td></tr></table><p>Khoảng biến thiên của mẫu số liệu ghép nhóm là</p><p><b>A.</b> 0,6. <b>B.</b> 0,3. <b>C.</b> 0,9. <b>D.</b> 1,5.</p><p><b>Câu 6.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math>, cho hai điểm <math>E(-1;-2;1)</math> và <math>F(2;3;2)</math>. Vector <math>\\overline{EF}</math> có tọa độ là</p><p><b>A.</b> <math>(-1;-2;3)</math>. <b>B.</b> <math>(1;2;3)</math>. <b>C.</b> <math>(3;5;1)</math>. <b>D.</b> <math>(3;4;1)</math>.</p><p><b>Câu 7.</b> Trong không gian, cho điểm <math>A</math> và đường thẳng <math>d</math>. Có bao nhiêu mặt phẳng đi qua điểm <math>A</math> và vuông góc với đường thẳng <math>d</math>?</p><p><b>A.</b> 1. <b>B.</b> 2. <b>C.</b> 0. <b>D.</b> 3.</p><p><b>Câu 8.</b> Cho hàm số <math>y = f(x)</math> có đạo hàm <math>f'(x) = x - 1, \\forall x \\in \\mathbb{R}</math>. Mệnh đề nào dưới đây đúng?</p><p><b>A.</b> Hàm số đã cho đồng biến trên <math>(-\\infty;1)</math>. <b>B.</b> Hàm số đã cho đồng biến trên <math>\\mathbb{R}</math>.<br/><b>C.</b> Hàm số đã cho đồng biến trên <math>\\mathbb{R} \\setminus \\{1\\}</math>. <b>D.</b> Hàm số đã cho đồng biến trên <math>(1;+\\infty)</math>.</p><p><b>Câu 9.</b> Trên khoảng <math>(0;+\\infty)</math>, đạo hàm của hàm số <math>y = \\ln(7x)</math> là</p><p><b>A.</b> <math>y' = \\frac{1}{x}</math>. <b>B.</b> <math>y' = \\frac{x}{7}</math>. <b>C.</b> <math>y' = \\frac{7}{x}</math>. <b>D.</b> <math>y' = \\frac{1}{7x}</math>.</p>",
+        "bbox": [
+          0.0,
+          0.0,
+          1596.0,
+          2240.0
+        ],
+        "polygon": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1596.0,
+            0.0
+          ],
+          [
+            1596.0,
+            2240.0
+          ],
+          [
+            0.0,
+            2240.0
+          ]
+        ],
+        "id": "/page/0/Page/0",
+        "block_type": "Page",
+        "children": [
+          {
+            "id": "/page/0/PageHeader/0",
+            "block_type": "PageHeader",
+            "html": "",
+            "page": 0,
+            "polygon": [
+              [
+                137.0,
+                67.0
+              ],
+              [
+                566.0,
+                67.0
+              ],
+              [
+                566.0,
+                185.0
+              ],
+              [
+                137.0,
+                185.0
+              ]
+            ],
+            "bbox": [
+              137.0,
+              67.0,
+              566.0,
+              185.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/PageHeader/1",
+            "block_type": "PageHeader",
+            "html": "",
+            "page": 0,
+            "polygon": [
+              [
+                675.0,
+                67.0
+              ],
+              [
+                1402.0,
+                67.0
+              ],
+              [
+                1402.0,
+                185.0
+              ],
+              [
+                675.0,
+                185.0
+              ]
+            ],
+            "bbox": [
+              675.0,
+              67.0,
+              1402.0,
+              185.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/2",
+            "block_type": "Text",
+            "html": "<p><b>Họ, tên thí sinh:</b>.....<br/><b>Số báo danh:</b> .....</p>",
+            "page": 0,
+            "polygon": [
+              [
+                90.0,
+                224.0
+              ],
+              [
+                737.0,
+                224.0
+              ],
+              [
+                737.0,
+                295.0
+              ],
+              [
+                90.0,
+                295.0
+              ]
+            ],
+            "bbox": [
+              90.0,
+              224.0,
+              737.0,
+              295.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/3",
+            "block_type": "Text",
+            "html": "<p><b>Mã đề thi: 0101</b></p>",
+            "page": 0,
+            "polygon": [
+              [
+                1161.0,
+                224.0
+              ],
+              [
+                1398.0,
+                224.0
+              ],
+              [
+                1398.0,
+                259.0
+              ],
+              [
+                1161.0,
+                259.0
+              ]
+            ],
+            "bbox": [
+              1161.0,
+              224.0,
+              1398.0,
+              259.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/4",
+            "block_type": "Text",
+            "html": "<p><b>PHẦN I.</b> Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                367.0
+              ],
+              [
+                1318.0,
+                367.0
+              ],
+              [
+                1318.0,
+                409.0
+              ],
+              [
+                132.0,
+                409.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              367.0,
+              1318.0,
+              409.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/5",
+            "block_type": "Text",
+            "html": "<p><b>Câu 1.</b> Số nghiệm của phương trình <math>2^{x^2-2x} = 128</math> là</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                414.0
+              ],
+              [
+                812.0,
+                414.0
+              ],
+              [
+                812.0,
+                461.0
+              ],
+              [
+                132.0,
+                461.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              414.0,
+              812.0,
+              461.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/6",
+            "block_type": "Text",
+            "html": "<p><b>A.</b> 2. <b>B.</b> 0. <b>C.</b> 1. <b>D.</b> 3.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                169.0,
+                461.0
+              ],
+              [
+                1295.0,
+                461.0
+              ],
+              [
+                1295.0,
+                497.0
+              ],
+              [
+                169.0,
+                497.0
+              ]
+            ],
+            "bbox": [
+              169.0,
+              461.0,
+              1295.0,
+              497.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/7",
+            "block_type": "Text",
+            "html": "<p><b>Câu 2.</b> Tập nghiệm của phương trình <math>\\cos x = -1</math> là</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                497.0
+              ],
+              [
+                793.0,
+                497.0
+              ],
+              [
+                793.0,
+                537.0
+              ],
+              [
+                132.0,
+                537.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              497.0,
+              793.0,
+              537.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/8",
+            "block_type": "Text",
+            "html": "<p><b>A.</b> <math>S = \\left\\{ -\\frac{\\pi}{2} + k2\\pi, k \\in \\mathbb{Z} \\right\\}</math>. <b>B.</b> <math>S = \\{ \\pi + k2\\pi, k \\in \\mathbb{Z} \\}</math>.<br/><b>C.</b> <math>S = \\left\\{ \\frac{\\pi}{2} + k2\\pi, k \\in \\mathbb{Z} \\right\\}</math>. <b>D.</b> <math>S = \\left\\{ -\\frac{\\pi}{3} + k2\\pi, k \\in \\mathbb{Z} \\right\\}</math>.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                167.0,
+                542.0
+              ],
+              [
+                1228.0,
+                542.0
+              ],
+              [
+                1228.0,
+                719.0
+              ],
+              [
+                167.0,
+                719.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              542.0,
+              1228.0,
+              719.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/9",
+            "block_type": "Text",
+            "html": "<p><b>Câu 3.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math>, phương trình của đường thẳng đi qua hai điểm <math>M(1;2;1)</math> và <math>N(3;1;-2)</math> là</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                725.0
+              ],
+              [
+                1546.0,
+                725.0
+              ],
+              [
+                1546.0,
+                826.0
+              ],
+              [
+                132.0,
+                826.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              725.0,
+              1546.0,
+              826.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/10",
+            "block_type": "Text",
+            "html": "<p><b>A.</b> <math>\\frac{x+1}{4} = \\frac{y+2}{3} = \\frac{z+1}{-1}</math>. <b>B.</b> <math>\\frac{x-1}{2} = \\frac{y-2}{-1} = \\frac{z-1}{-3}</math>.<br/><b>C.</b> <math>\\frac{x+1}{2} = \\frac{y+2}{-1} = \\frac{z+1}{-3}</math>. <b>D.</b> <math>\\frac{x-1}{4} = \\frac{y-2}{3} = \\frac{z-1}{-1}</math>.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                167.0,
+                835.0
+              ],
+              [
+                1182.0,
+                835.0
+              ],
+              [
+                1182.0,
+                992.0
+              ],
+              [
+                167.0,
+                992.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              835.0,
+              1182.0,
+              992.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/11",
+            "block_type": "Text",
+            "html": "<p><b>Câu 4.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math>, cho mặt phẳng <math>(P): x + 2z - 7 = 0</math>. Véc-tơ nào dưới đây là một véc-tơ pháp tuyến của mặt phẳng <math>(P)</math>?</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                999.0
+              ],
+              [
+                1530.0,
+                999.0
+              ],
+              [
+                1530.0,
+                1097.0
+              ],
+              [
+                132.0,
+                1097.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              999.0,
+              1530.0,
+              1097.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/12",
+            "block_type": "Text",
+            "html": "<p><b>A.</b> <math>\\vec{n}_2 = (1;0;2)</math>. <b>B.</b> <math>\\vec{n}_3 = (1;2;0)</math>. <b>C.</b> <math>\\vec{n}_1 = (1;2;0)</math>. <b>D.</b> <math>\\vec{n}_4 = (1;2;-7)</math>.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                169.0,
+                1108.0
+              ],
+              [
+                1465.0,
+                1108.0
+              ],
+              [
+                1465.0,
+                1155.0
+              ],
+              [
+                169.0,
+                1155.0
+              ]
+            ],
+            "bbox": [
+              169.0,
+              1108.0,
+              1465.0,
+              1155.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/13",
+            "block_type": "Text",
+            "html": "<p><b>Câu 5.</b> Mỗi ngày bác Hương đều đi bộ để rèn luyện sức khỏe. Quãng đường đi bộ mỗi ngày (đơn vị: <math>km</math>) của bác Hương trong 20 ngày được thống kê lại ở bảng sau:</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                1160.0
+              ],
+              [
+                1557.0,
+                1160.0
+              ],
+              [
+                1557.0,
+                1238.0
+              ],
+              [
+                132.0,
+                1238.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              1160.0,
+              1557.0,
+              1238.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Table/14",
+            "block_type": "Table",
+            "html": "<table><tr><td>Quãng đường<br/>(<math>km</math>)</td><td>[2,7;3,0)</td><td>[3,0;3,3)</td><td>[3,3;3,6)</td><td>[3,6;3,9)</td><td>[3,9;4,2)</td></tr><tr><td>Số ngày</td><td>3</td><td>6</td><td>5</td><td>4</td><td>2</td></tr></table>",
+            "page": 0,
+            "polygon": [
+              [
+                180.0,
+                1234.0
+              ],
+              [
+                1500.0,
+                1234.0
+              ],
+              [
+                1500.0,
+                1357.0
+              ],
+              [
+                180.0,
+                1357.0
+              ]
+            ],
+            "bbox": [
+              180.0,
+              1234.0,
+              1500.0,
+              1357.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/15",
+            "block_type": "Text",
+            "html": "<p>Khoảng biến thiên của mẫu số liệu ghép nhóm là</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                1355.0
+              ],
+              [
+                766.0,
+                1355.0
+              ],
+              [
+                766.0,
+                1395.0
+              ],
+              [
+                132.0,
+                1395.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              1355.0,
+              766.0,
+              1395.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/16",
+            "block_type": "Text",
+            "html": "<p><b>A.</b> 0,6. <b>B.</b> 0,3. <b>C.</b> 0,9. <b>D.</b> 1,5.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                169.0,
+                1395.0
+              ],
+              [
+                1318.0,
+                1395.0
+              ],
+              [
+                1318.0,
+                1433.0
+              ],
+              [
+                169.0,
+                1433.0
+              ]
+            ],
+            "bbox": [
+              169.0,
+              1395.0,
+              1318.0,
+              1433.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/17",
+            "block_type": "Text",
+            "html": "<p><b>Câu 6.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math>, cho hai điểm <math>E(-1;-2;1)</math> và <math>F(2;3;2)</math>. Vector <math>\\overline{EF}</math> có tọa độ là</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                1440.0
+              ],
+              [
+                1516.0,
+                1440.0
+              ],
+              [
+                1516.0,
+                1532.0
+              ],
+              [
+                132.0,
+                1532.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              1440.0,
+              1516.0,
+              1532.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/18",
+            "block_type": "Text",
+            "html": "<p><b>A.</b> <math>(-1;-2;3)</math>. <b>B.</b> <math>(1;2;3)</math>. <b>C.</b> <math>(3;5;1)</math>. <b>D.</b> <math>(3;4;1)</math>.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                169.0,
+                1534.0
+              ],
+              [
+                1375.0,
+                1534.0
+              ],
+              [
+                1375.0,
+                1576.0
+              ],
+              [
+                169.0,
+                1576.0
+              ]
+            ],
+            "bbox": [
+              169.0,
+              1534.0,
+              1375.0,
+              1576.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/19",
+            "block_type": "Text",
+            "html": "<p><b>Câu 7.</b> Trong không gian, cho điểm <math>A</math> và đường thẳng <math>d</math>. Có bao nhiêu mặt phẳng đi qua điểm <math>A</math> và vuông góc với đường thẳng <math>d</math>?</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                1581.0
+              ],
+              [
+                1557.0,
+                1581.0
+              ],
+              [
+                1557.0,
+                1662.0
+              ],
+              [
+                132.0,
+                1662.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              1581.0,
+              1557.0,
+              1662.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/20",
+            "block_type": "Text",
+            "html": "<p><b>A.</b> 1. <b>B.</b> 2. <b>C.</b> 0. <b>D.</b> 3.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                169.0,
+                1659.0
+              ],
+              [
+                1295.0,
+                1659.0
+              ],
+              [
+                1295.0,
+                1697.0
+              ],
+              [
+                169.0,
+                1697.0
+              ]
+            ],
+            "bbox": [
+              169.0,
+              1659.0,
+              1295.0,
+              1697.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/21",
+            "block_type": "Text",
+            "html": "<p><b>Câu 8.</b> Cho hàm số <math>y = f(x)</math> có đạo hàm <math>f'(x) = x - 1, \\forall x \\in \\mathbb{R}</math>. Mệnh đề nào dưới đây đúng?</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                1697.0
+              ],
+              [
+                1345.0,
+                1697.0
+              ],
+              [
+                1345.0,
+                1738.0
+              ],
+              [
+                132.0,
+                1738.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              1697.0,
+              1345.0,
+              1738.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/22",
+            "block_type": "Text",
+            "html": "<p><b>A.</b> Hàm số đã cho đồng biến trên <math>(-\\infty;1)</math>. <b>B.</b> Hàm số đã cho đồng biến trên <math>\\mathbb{R}</math>.<br/><b>C.</b> Hàm số đã cho đồng biến trên <math>\\mathbb{R} \\setminus \\{1\\}</math>. <b>D.</b> Hàm số đã cho đồng biến trên <math>(1;+\\infty)</math>.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                169.0,
+                1738.0
+              ],
+              [
+                1417.0,
+                1738.0
+              ],
+              [
+                1417.0,
+                1830.0
+              ],
+              [
+                169.0,
+                1830.0
+              ]
+            ],
+            "bbox": [
+              169.0,
+              1738.0,
+              1417.0,
+              1830.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/23",
+            "block_type": "Text",
+            "html": "<p><b>Câu 9.</b> Trên khoảng <math>(0;+\\infty)</math>, đạo hàm của hàm số <math>y = \\ln(7x)</math> là</p>",
+            "page": 0,
+            "polygon": [
+              [
+                132.0,
+                1836.0
+              ],
+              [
+                971.0,
+                1836.0
+              ],
+              [
+                971.0,
+                1881.0
+              ],
+              [
+                132.0,
+                1881.0
+              ]
+            ],
+            "bbox": [
+              132.0,
+              1836.0,
+              971.0,
+              1881.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/Text/24",
+            "block_type": "Text",
+            "html": "<p><b>A.</b> <math>y' = \\frac{1}{x}</math>. <b>B.</b> <math>y' = \\frac{x}{7}</math>. <b>C.</b> <math>y' = \\frac{7}{x}</math>. <b>D.</b> <math>y' = \\frac{1}{7x}</math>.</p>",
+            "page": 0,
+            "polygon": [
+              [
+                169.0,
+                1890.0
+              ],
+              [
+                1386.0,
+                1890.0
+              ],
+              [
+                1386.0,
+                1966.0
+              ],
+              [
+                169.0,
+                1966.0
+              ]
+            ],
+            "bbox": [
+              169.0,
+              1890.0,
+              1386.0,
+              1966.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/0/PageFooter/25",
+            "block_type": "PageFooter",
+            "html": "",
+            "page": 0,
+            "polygon": [
+              [
+                1185.0,
+                2116.0
+              ],
+              [
+                1557.0,
+                2116.0
+              ],
+              [
+                1557.0,
+                2159.0
+              ],
+              [
+                1185.0,
+                2159.0
+              ]
+            ],
+            "bbox": [
+              1185.0,
+              2116.0,
+              1557.0,
+              2159.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          }
+        ],
+        "section_hierarchy": {}
+      },
+      {
+        "html": "<p><b>Câu 10.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math>, cho mặt cầu <math>(S) : x^2 + y^2 + z^2 - 2x + 2y - \\frac{1}{2} = 0</math>. Tọa độ tâm <math>I</math> của mặt cầu <math>(S)</math> đã cho là</p><ul style=\"list-style-type: none\"><li><b>A.</b> <math>(-1; 1; -3)</math>. <b>B.</b> <math>(1; 1; 0)</math>. <b>C.</b> <math>(1; -1; 0)</math>. <b>D.</b> <math>(1; -1; 3)</math>.</li></ul><p><b>Câu 11.</b> Cho hàm số <math>y = f(x)</math> liên tục trên đoạn <math>[a; b]</math>. Gọi <math>F(x)</math> là một nguyên hàm của hàm số <math>f(x)</math> trên đoạn <math>[a; b]</math>. Khẳng định nào dưới đây là đúng?</p><ul style=\"list-style-type: none\"><li><table><tr><td><b>A.</b> <math>\\int_a^b f(x) dx = F(a) - F(b)</math>.</td><td><b>B.</b> <math>\\int_a^b f(x) dx = f(b) - f(a)</math>.</td></tr><tr><td><b>C.</b> <math>\\int_a^b f(x) dx = F(b) - F(a)</math>.</td><td><b>D.</b> <math>\\int_a^b f(x) dx = f(a) - f(b)</math>.</td></tr></table></li></ul><p><b>Câu 12.</b> Cho hàm số <math>f(x) = e^x + 1</math>. Khẳng định nào dưới đây là đúng?</p><ul style=\"list-style-type: none\"><li><table><tr><td><b>A.</b> <math>\\int f(x) dx = e^x + x + C</math>.</td><td><b>B.</b> <math>\\int f(x) dx = e^x - x + C</math>.</td></tr><tr><td><b>C.</b> <math>\\int f(x) dx = xe^{x-1} + C</math>.</td><td><b>D.</b> <math>\\int f(x) dx = e^x + C</math>.</td></tr></table></li></ul><p><b>PHẦN II.</b> Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý <b>a), b), c), d)</b> ở mỗi câu, thí sinh chọn đúng hoặc sai.</p><p><b>Câu 1.</b> Cho hàm số <math>f(x) = -e^x - x</math>.</p><ul style=\"list-style-type: none\"><li><b>a)</b> Đạo hàm của hàm số đã cho là <math>f'(x) = -e^x - 1</math>.</li><li><b>b)</b> Hàm số đã cho nghịch biến trên đoạn <math>[0; \\ln 3]</math>.</li><li><b>c)</b> Phương trình <math>f'(x) = 0</math> có nghiệm trên đoạn <math>[0; \\ln 3]</math>.</li><li><b>d)</b> Giá trị lớn nhất của <math>f(x)</math> trên đoạn <math>[0; \\ln 3]</math> là <math>-3 - \\ln 3</math>.</li></ul><p><b>Câu 2.</b> Bác An cần thiết kế một nhà vườn ngoài trời để trồng hoa. Bác đã thiết kế và vẽ mô hình nhà vườn trong hệ trục tọa độ <math>Axyz</math> như hình vẽ, với các cột nhà là các đoạn thẳng <math>AA', BB', CC'</math> và <math>DD'</math>. Phần mái là tứ giác <math>A'B'C'D'</math> và hình vuông <math>ABCD</math> nằm trên mặt đất. Biết độ dài các đoạn thẳng</p><p><math>AB = 25m, AA' = BB' = 4m</math> và <math>CC' = DD' = 3m</math>.</p><img alt=\"Scientific illustration: Rectangular prism in a 3D coordinate system with vertices labeled.\" src=\"72bc1a2b64dd6bac8285f560440c1218_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><p class=\"img-text\">z<br/>E<br/>A'<br/>B'<br/>A<br/>B<br/>C'<br/>D'<br/>D<br/>C<br/>x</p><p class=\"img-desc\">A 3D coordinate system with axes x, y, and z showing a rectangular prism with vertices labeled A, B, C, D on the bottom and A', B', C', D' on the top.</p><div class=\"img-alt\">Scientific illustration: Rectangular prism in a 3D coordinate system with vertices labeled.</div></div><ul style=\"list-style-type: none\"><li><b>a)</b> Tọa độ điểm <math>A'(0; 0; 4)</math>.</li></ul><ul style=\"list-style-type: none\"><li><b>b)</b> Đường thẳng <math>A'D'</math> có phương trình tham số là <math>\\begin{cases} x = 25t \\\\ y = 0 \\\\ z = 4 - t \\end{cases}, t \\in \\mathbb{R}</math>.</li></ul><p><b>c)</b> Bác An đặt một camera ở vị trí <math>E</math> trên cột <math>AA'</math> và cách mặt đất <math>7m</math>. Một vật ở vị trí <math>M(a; b; c)</math> thỏa mãn <math>MA = MB = MC = MD = \\sqrt{\\frac{697}{2}}</math> thì cách camera <math>\\frac{\\sqrt{1266}}{2}m</math>.</p><ul style=\"list-style-type: none\"><li><b>d)</b> Gọi <math>\\alpha</math> là góc hợp bởi đường thẳng <math>A'D'</math> và mặt đất. Khi đó <math>\\cos \\alpha = \\frac{1}{\\sqrt{626}}</math>.</li></ul>",
+        "bbox": [
+          0.0,
+          0.0,
+          1596.0,
+          2240.0
+        ],
+        "polygon": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1596.0,
+            0.0
+          ],
+          [
+            1596.0,
+            2240.0
+          ],
+          [
+            0.0,
+            2240.0
+          ]
+        ],
+        "id": "/page/1/Page/1",
+        "block_type": "Page",
+        "children": [
+          {
+            "id": "/page/1/Text/0",
+            "block_type": "Text",
+            "html": "<p><b>Câu 10.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math>, cho mặt cầu <math>(S) : x^2 + y^2 + z^2 - 2x + 2y - \\frac{1}{2} = 0</math>. Tọa độ tâm <math>I</math> của mặt cầu <math>(S)</math> đã cho là</p>",
+            "page": 1,
+            "polygon": [
+              [
+                130.0,
+                76.0
+              ],
+              [
+                1546.0,
+                76.0
+              ],
+              [
+                1546.0,
+                194.0
+              ],
+              [
+                130.0,
+                194.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              76.0,
+              1546.0,
+              194.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/ListGroup/1",
+            "block_type": "ListGroup",
+            "html": "<ul style=\"list-style-type: none\"><li><b>A.</b> <math>(-1; 1; -3)</math>. <b>B.</b> <math>(1; 1; 0)</math>. <b>C.</b> <math>(1; -1; 0)</math>. <b>D.</b> <math>(1; -1; 3)</math>.</li></ul>",
+            "page": 1,
+            "polygon": [
+              [
+                167.0,
+                201.0
+              ],
+              [
+                1383.0,
+                201.0
+              ],
+              [
+                1383.0,
+                239.0
+              ],
+              [
+                167.0,
+                239.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              201.0,
+              1383.0,
+              239.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/Text/2",
+            "block_type": "Text",
+            "html": "<p><b>Câu 11.</b> Cho hàm số <math>y = f(x)</math> liên tục trên đoạn <math>[a; b]</math>. Gọi <math>F(x)</math> là một nguyên hàm của hàm số <math>f(x)</math> trên đoạn <math>[a; b]</math>. Khẳng định nào dưới đây là đúng?</p>",
+            "page": 1,
+            "polygon": [
+              [
+                130.0,
+                244.0
+              ],
+              [
+                1511.0,
+                244.0
+              ],
+              [
+                1511.0,
+                342.0
+              ],
+              [
+                130.0,
+                342.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              244.0,
+              1511.0,
+              342.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/ListGroup/3",
+            "block_type": "ListGroup",
+            "html": "<ul style=\"list-style-type: none\"><li><table><tr><td><b>A.</b> <math>\\int_a^b f(x) dx = F(a) - F(b)</math>.</td><td><b>B.</b> <math>\\int_a^b f(x) dx = f(b) - f(a)</math>.</td></tr><tr><td><b>C.</b> <math>\\int_a^b f(x) dx = F(b) - F(a)</math>.</td><td><b>D.</b> <math>\\int_a^b f(x) dx = f(a) - f(b)</math>.</td></tr></table></li></ul>",
+            "page": 1,
+            "polygon": [
+              [
+                167.0,
+                353.0
+              ],
+              [
+                1244.0,
+                353.0
+              ],
+              [
+                1244.0,
+                571.0
+              ],
+              [
+                167.0,
+                571.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              353.0,
+              1244.0,
+              571.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/Text/4",
+            "block_type": "Text",
+            "html": "<p><b>Câu 12.</b> Cho hàm số <math>f(x) = e^x + 1</math>. Khẳng định nào dưới đây là đúng?</p>",
+            "page": 1,
+            "polygon": [
+              [
+                130.0,
+                582.0
+              ],
+              [
+                1050.0,
+                582.0
+              ],
+              [
+                1050.0,
+                627.0
+              ],
+              [
+                130.0,
+                627.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              582.0,
+              1050.0,
+              627.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/ListGroup/5",
+            "block_type": "ListGroup",
+            "html": "<ul style=\"list-style-type: none\"><li><table><tr><td><b>A.</b> <math>\\int f(x) dx = e^x + x + C</math>.</td><td><b>B.</b> <math>\\int f(x) dx = e^x - x + C</math>.</td></tr><tr><td><b>C.</b> <math>\\int f(x) dx = xe^{x-1} + C</math>.</td><td><b>D.</b> <math>\\int f(x) dx = e^x + C</math>.</td></tr></table></li></ul>",
+            "page": 1,
+            "polygon": [
+              [
+                167.0,
+                638.0
+              ],
+              [
+                1197.0,
+                638.0
+              ],
+              [
+                1197.0,
+                750.0
+              ],
+              [
+                167.0,
+                750.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              638.0,
+              1197.0,
+              750.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/Text/6",
+            "block_type": "Text",
+            "html": "<p><b>PHẦN II.</b> Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý <b>a), b), c), d)</b> ở mỗi câu, thí sinh chọn đúng hoặc sai.</p>",
+            "page": 1,
+            "polygon": [
+              [
+                130.0,
+                750.0
+              ],
+              [
+                1556.0,
+                750.0
+              ],
+              [
+                1556.0,
+                828.0
+              ],
+              [
+                130.0,
+                828.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              750.0,
+              1556.0,
+              828.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/Text/7",
+            "block_type": "Text",
+            "html": "<p><b>Câu 1.</b> Cho hàm số <math>f(x) = -e^x - x</math>.</p>",
+            "page": 1,
+            "polygon": [
+              [
+                130.0,
+                840.0
+              ],
+              [
+                601.0,
+                840.0
+              ],
+              [
+                601.0,
+                882.0
+              ],
+              [
+                130.0,
+                882.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              840.0,
+              601.0,
+              882.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/ListGroup/8",
+            "block_type": "ListGroup",
+            "html": "<ul style=\"list-style-type: none\"><li><b>a)</b> Đạo hàm của hàm số đã cho là <math>f'(x) = -e^x - 1</math>.</li><li><b>b)</b> Hàm số đã cho nghịch biến trên đoạn <math>[0; \\ln 3]</math>.</li><li><b>c)</b> Phương trình <math>f'(x) = 0</math> có nghiệm trên đoạn <math>[0; \\ln 3]</math>.</li><li><b>d)</b> Giá trị lớn nhất của <math>f(x)</math> trên đoạn <math>[0; \\ln 3]</math> là <math>-3 - \\ln 3</math>.</li></ul>",
+            "page": 1,
+            "polygon": [
+              [
+                167.0,
+                891.0
+              ],
+              [
+                941.0,
+                891.0
+              ],
+              [
+                941.0,
+                1093.0
+              ],
+              [
+                167.0,
+                1093.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              891.0,
+              941.0,
+              1093.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/Text/9",
+            "block_type": "Text",
+            "html": "<p><b>Câu 2.</b> Bác An cần thiết kế một nhà vườn ngoài trời để trồng hoa. Bác đã thiết kế và vẽ mô hình nhà vườn trong hệ trục tọa độ <math>Axyz</math> như hình vẽ, với các cột nhà là các đoạn thẳng <math>AA', BB', CC'</math> và <math>DD'</math>. Phần mái là tứ giác <math>A'B'C'D'</math> và hình vuông <math>ABCD</math> nằm trên mặt đất. Biết độ dài các đoạn thẳng</p>",
+            "page": 1,
+            "polygon": [
+              [
+                130.0,
+                1097.0
+              ],
+              [
+                1466.0,
+                1097.0
+              ],
+              [
+                1466.0,
+                1218.0
+              ],
+              [
+                130.0,
+                1218.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              1097.0,
+              1466.0,
+              1218.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/Text/10",
+            "block_type": "Text",
+            "html": "<p><math>AB = 25m, AA' = BB' = 4m</math> và <math>CC' = DD' = 3m</math>.</p>",
+            "page": 1,
+            "polygon": [
+              [
+                138.0,
+                1254.0
+              ],
+              [
+                759.0,
+                1254.0
+              ],
+              [
+                759.0,
+                1292.0
+              ],
+              [
+                138.0,
+                1292.0
+              ]
+            ],
+            "bbox": [
+              138.0,
+              1254.0,
+              759.0,
+              1292.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/Diagram/11",
+            "block_type": "Figure",
+            "html": "<img alt=\"Scientific illustration: Rectangular prism in a 3D coordinate system with vertices labeled.\" src=\"72bc1a2b64dd6bac8285f560440c1218_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><p class=\"img-text\">z<br/>E<br/>A'<br/>B'<br/>A<br/>B<br/>C'<br/>D'<br/>D<br/>C<br/>x</p><p class=\"img-desc\">A 3D coordinate system with axes x, y, and z showing a rectangular prism with vertices labeled A, B, C, D on the bottom and A', B', C', D' on the top.</p><div class=\"img-alt\">Scientific illustration: Rectangular prism in a 3D coordinate system with vertices labeled.</div></div>",
+            "page": 1,
+            "polygon": [
+              [
+                598.0,
+                1305.0
+              ],
+              [
+                1061.0,
+                1305.0
+              ],
+              [
+                1061.0,
+                1650.0
+              ],
+              [
+                598.0,
+                1650.0
+              ]
+            ],
+            "bbox": [
+              598.0,
+              1305.0,
+              1061.0,
+              1650.0
+            ],
+            "section_hierarchy": {},
+            "images": {
+              "72bc1a2b64dd6bac8285f560440c1218_img.jpg": "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FAHHt8K/ArIFPhmxwPRSD0x1z/nrSf8ACqfAuxk/4RqywTk8Nn885FdjRQBxx+FXgUsx/wCEZsstnPDd/TnjpVpfhz4LWJYx4W0napyCbVCfzxk109FAHM/8K68F73f/AIRbSMt1/wBETH4DGB+FA+HfgwJGv/CLaRhDkf6ImT9Tjn8a6aigDnF+H/g5SSPCui8+tjGf6e9P/wCEE8IbQv8AwiuiYByB/Z8X/wATXQUUAc9/wgfg/wD6FTQ//BfF/wDE01/AHg6RCjeFdFAP92xjU/mBmujrP11L+Tw/qKaW4TUGtpBbMe0m07f1xQBk2vifR4pZdJ0Kznvk05PLkTToVMUG0cR7iQu7jG0EkdwK1tD1i31/RbXVbWOaOC5TeiTpscDOOR26VwHwn17QtM8EWGimcxazCzi8sWRjc+cXO4lANxHI56AYyeK9PoAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK828X+MdR1bWz4K8Fur6s4xfX45Swj6E5/v8/h9egAnjLxXqmta+PA3g6TbqDj/AImOorythGeoyP48flkAc9Os8J+EdK8G6Oun6XDgnBmnfmSd/wC8x7/ToO1R+D/Bml+C9J+x6eheaT5rm6k5kuH/ALzH8TgdvzNdFQBzvjXwt/wmXhuXRW1CWyhmdWleJAxdVOdvPTkA/h70228G2Yu9Iub2eW6fSIRFZw8JDGQoXzAg6vgYyScdgK6SigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAMDOcc0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUV83+FvHGof2RqXhrw1K7eINV1e5m+03DYjs4CFzISeAeD64574BAPSfG/jXUZtV/4Q3wYguPEE65nuAcx2EecFmPZufwyOpIFdL4M8IWfg3QksbdjNcyHzLu7f79xKerE/XOB2H51T8AeFtH8MaVNDYXsWo38shfUL7eHkmlPPzHJx14HvnqSa66gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigArxTxX8O/h54PvLbUtU0a/ubHULsxSOlw5S1ZhlcIuGIJBHf+Ve115l8df8AkQ7b/sJ2/wD7NQB1fg/RNP0XTZ10/wAPf2IsszFoC6uzgcK5Ksw5HbPFdFSL90fSloAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//9k="
+            },
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null,
+            "image": {
+              "alt": "Scientific illustration: Rectangular prism in a 3D coordinate system with vertices labeled.",
+              "text": "z\nE\nA'\nB'\nA\nB\nC'\nD'\nD\nC\nx",
+              "axes": null,
+              "data": null,
+              "mermaid": null,
+              "description": "A 3D coordinate system with axes x, y, and z showing a rectangular prism with vertices labeled A, B, C, D on the bottom and A', B', C', D' on the top."
+            }
+          },
+          {
+            "id": "/page/1/ListGroup/12",
+            "block_type": "ListGroup",
+            "html": "<ul style=\"list-style-type: none\"><li><b>a)</b> Tọa độ điểm <math>A'(0; 0; 4)</math>.</li></ul>",
+            "page": 1,
+            "polygon": [
+              [
+                167.0,
+                1659.0
+              ],
+              [
+                521.0,
+                1659.0
+              ],
+              [
+                521.0,
+                1704.0
+              ],
+              [
+                167.0,
+                1704.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              1659.0,
+              521.0,
+              1704.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/ListGroup/13",
+            "block_type": "ListGroup",
+            "html": "<ul style=\"list-style-type: none\"><li><b>b)</b> Đường thẳng <math>A'D'</math> có phương trình tham số là <math>\\begin{cases} x = 25t \\\\ y = 0 \\\\ z = 4 - t \\end{cases}, t \\in \\mathbb{R}</math>.</li></ul>",
+            "page": 1,
+            "polygon": [
+              [
+                167.0,
+                1713.0
+              ],
+              [
+                1029.0,
+                1713.0
+              ],
+              [
+                1029.0,
+                1852.0
+              ],
+              [
+                167.0,
+                1852.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              1713.0,
+              1029.0,
+              1852.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/Text/14",
+            "block_type": "Text",
+            "html": "<p><b>c)</b> Bác An đặt một camera ở vị trí <math>E</math> trên cột <math>AA'</math> và cách mặt đất <math>7m</math>. Một vật ở vị trí <math>M(a; b; c)</math> thỏa mãn <math>MA = MB = MC = MD = \\sqrt{\\frac{697}{2}}</math> thì cách camera <math>\\frac{\\sqrt{1266}}{2}m</math>.</p>",
+            "page": 1,
+            "polygon": [
+              [
+                130.0,
+                1861.0
+              ],
+              [
+                1527.0,
+                1861.0
+              ],
+              [
+                1527.0,
+                2002.0
+              ],
+              [
+                130.0,
+                2002.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              1861.0,
+              1527.0,
+              2002.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/ListGroup/15",
+            "block_type": "ListGroup",
+            "html": "<ul style=\"list-style-type: none\"><li><b>d)</b> Gọi <math>\\alpha</math> là góc hợp bởi đường thẳng <math>A'D'</math> và mặt đất. Khi đó <math>\\cos \\alpha = \\frac{1}{\\sqrt{626}}</math>.</li></ul>",
+            "page": 1,
+            "polygon": [
+              [
+                167.0,
+                2007.0
+              ],
+              [
+                1187.0,
+                2007.0
+              ],
+              [
+                1187.0,
+                2089.0
+              ],
+              [
+                167.0,
+                2089.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              2007.0,
+              1187.0,
+              2089.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/1/PageFooter/16",
+            "block_type": "PageFooter",
+            "html": "",
+            "page": 1,
+            "polygon": [
+              [
+                1184.0,
+                2119.0
+              ],
+              [
+                1552.0,
+                2119.0
+              ],
+              [
+                1552.0,
+                2163.0
+              ],
+              [
+                1184.0,
+                2163.0
+              ]
+            ],
+            "bbox": [
+              1184.0,
+              2119.0,
+              1552.0,
+              2163.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          }
+        ],
+        "section_hierarchy": {}
+      },
+      {
+        "html": "<p><b>Câu 3.</b> Tại một khu di tích vào ngày lễ hội hàng năm, tốc độ thay đổi lượng khách tham quan được biểu diễn bằng hàm số <math>Q'(t) = 4t^3 - 72t^2 + 288t</math>, trong đó <math>t</math> tính bằng giờ (<math>0 \\leq t \\leq 12</math>), <math>Q'(t)</math> tính bằng khách/giờ (Nguồn: R.Larson and B Edwards, Calculus 10e, Cengage). Sau 2 giờ đã có 400 người có mặt.</p><ul style=\"list-style-type: none\"><li>a) Lượng khách tham quan được biểu diễn bởi hàm số <math>Q(t) = t^4 - 24t^3 + 144t^2</math>.</li><li>b) Tốc độ thay đổi lượng khách tham quan lớn nhất tại thời điểm <math>t = 6</math>.</li><li>c) Lượng khách tham quan lớn nhất là 1096 người.</li><li>d) Sau 4 giờ lượng khách tham quan là 1024 người.</li></ul><p><b>Câu 4.</b> Hộp thứ nhất chứa 6 viên bi vàng, 3 viên bi xanh. Hộp thứ hai chứa 5 viên bi vàng, 5 viên bi xanh và 3 viên bi đỏ. Lấy ngẫu nhiên 1 viên bi từ hộp thứ nhất bỏ vào hộp thứ hai, sau đó lấy ra 2 viên bi bất kỳ từ hộp thứ hai.</p><ul style=\"list-style-type: none\"><li>a) Xác suất để lấy được bi xanh từ hộp thứ nhất là <math>\\frac{1}{3}</math>.</li><li>b) Xác suất để lấy được bi vàng từ hộp thứ nhất là <math>\\frac{1}{3}</math>.</li><li>c) Biết rằng lấy được bi màu xanh từ hộp thứ nhất. Xác suất để lấy được 2 viên bi khác màu từ hộp thứ hai là <math>\\frac{9}{13}</math>.</li><li>d) Xác suất để lấy được 2 bi vàng từ hộp thứ hai là <math>\\frac{30}{273}</math>.</li></ul><h1><p><b>PHẦN III.</b> Thí sinh trả lời từ câu 1 đến câu 6.</p></h1><p><b>Câu 1.</b> Cho lăng trụ đứng <math>ABC.A'B'C'</math> có đáy <math>ABC</math> là tam giác vuông cân tại <math>A</math>, <math>AB = 3</math>, cạnh bên <math>AA' = 3\\sqrt{2}</math>. Góc giữa đường thẳng <math>BC'</math> và mặt phẳng <math>(ACC'A')</math> bằng <math>x^\\circ</math>. Tìm giá trị <math>x</math>.</p><p><b>Câu 2.</b> Nhà cô Anh có một khu vườn hình chữ nhật (có kích thước như trong hình), cô Anh muốn đổ bê tông một đường đi trong vườn (phần được tô đậm). Biết rằng đường cong <math>AB</math> có dáng là một phần của đồ thị hàm số bậc ba và đường cong <math>DC</math> nhận được từ đường cong <math>AB</math> bằng cách tịnh tiến theo phương thẳng đứng lên phía trên 2m. Ngoài ra, cô Anh quyết định đổ lớp bê tông dày 20 cm và giá tiền 1 <math>m^3</math> bê tông là 1150 nghìn đồng. Hỏi cô Anh cần dùng bao nhiêu nghìn đồng để đổ bê tông con đường đó?</p><img alt=\"Technical illustration: Geometric diagram of a rectangle with a shaded curved strip.\" src=\"7a1dee155822446f7828dcb055c465c3_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><p class=\"img-text\"><math>D</math><br/><math>A</math><br/>6m<br/><math>C</math><br/>2m<br/><math>B</math><br/>20m</p><p class=\"img-desc\">A rectangle with vertices labeled A, B, C, and D has a total width of 20m and a total height of 6m. A shaded band curves from the top edge to the bottom edge, with a vertical dimension of 2m indicated at the right.</p><div class=\"img-alt\">Technical illustration: Geometric diagram of a rectangle with a shaded curved strip.</div></div><p><b>Câu 3.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math> (đơn vị trên mỗi trục tọa độ là kilômét), một máy bay đang ở vị trí <math>A\\left(\\frac{7}{2}; -2; \\frac{2}{5}\\right)</math> và sẽ hạ cánh ở vị trí <math>B\\left(\\frac{7}{2}; \\frac{11}{2}; 0\\right)</math>. Có một lớp mây được mô phỏng bởi một mặt phẳng <math>(\\alpha)</math> đi qua ba điểm <math>M(6; 0; 0), N(0; -6; 0), P\\left(0; 0; \\frac{3}{5}\\right)</math>. Gọi điểm <math>C</math> là vị trí mà máy bay xuyên qua đám mây để hạ cánh. Khoảng cách từ vị trí <math>C</math> đến <math>B</math> bao nhiêu kilômét? (Làm tròn đến hàng phần trăm).</p><p><b>Câu 4.</b> Một loại linh kiện do hai nhà máy <math>I, II</math> cùng sản xuất. Tỉ lệ phế phẩm của nhà máy <math>I, II</math> lần lượt là: 0,05; 0,04. Trong một lô linh kiện để lẫn lộn 100 sản phẩm của nhà máy <math>I</math> và 150 sản phẩm của nhà máy <math>II</math>. Một khách hàng lấy ngẫu nhiên một linh kiện của lô hàng đó. Giả sử linh kiện được chọn là phế phẩm. Tính xác suất linh kiện này thuộc nhà máy <math>I</math> (làm tròn kết quả đến chữ số hàng phần trăm).</p>",
+        "bbox": [
+          0.0,
+          0.0,
+          1596.0,
+          2240.0
+        ],
+        "polygon": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1596.0,
+            0.0
+          ],
+          [
+            1596.0,
+            2240.0
+          ],
+          [
+            0.0,
+            2240.0
+          ]
+        ],
+        "id": "/page/2/Page/2",
+        "block_type": "Page",
+        "children": [
+          {
+            "id": "/page/2/Text/0",
+            "block_type": "Text",
+            "html": "<p><b>Câu 3.</b> Tại một khu di tích vào ngày lễ hội hàng năm, tốc độ thay đổi lượng khách tham quan được biểu diễn bằng hàm số <math>Q'(t) = 4t^3 - 72t^2 + 288t</math>, trong đó <math>t</math> tính bằng giờ (<math>0 \\leq t \\leq 12</math>), <math>Q'(t)</math> tính bằng khách/giờ (Nguồn: R.Larson and B Edwards, Calculus 10e, Cengage). Sau 2 giờ đã có 400 người có mặt.</p>",
+            "page": 2,
+            "polygon": [
+              [
+                130.0,
+                67.0
+              ],
+              [
+                1498.0,
+                67.0
+              ],
+              [
+                1498.0,
+                206.0
+              ],
+              [
+                130.0,
+                206.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              67.0,
+              1498.0,
+              206.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/2/ListGroup/1",
+            "block_type": "ListGroup",
+            "html": "<ul style=\"list-style-type: none\"><li>a) Lượng khách tham quan được biểu diễn bởi hàm số <math>Q(t) = t^4 - 24t^3 + 144t^2</math>.</li><li>b) Tốc độ thay đổi lượng khách tham quan lớn nhất tại thời điểm <math>t = 6</math>.</li><li>c) Lượng khách tham quan lớn nhất là 1096 người.</li><li>d) Sau 4 giờ lượng khách tham quan là 1024 người.</li></ul>",
+            "page": 2,
+            "polygon": [
+              [
+                169.0,
+                208.0
+              ],
+              [
+                1171.0,
+                208.0
+              ],
+              [
+                1171.0,
+                374.0
+              ],
+              [
+                169.0,
+                374.0
+              ]
+            ],
+            "bbox": [
+              169.0,
+              208.0,
+              1171.0,
+              374.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/2/Text/2",
+            "block_type": "Text",
+            "html": "<p><b>Câu 4.</b> Hộp thứ nhất chứa 6 viên bi vàng, 3 viên bi xanh. Hộp thứ hai chứa 5 viên bi vàng, 5 viên bi xanh và 3 viên bi đỏ. Lấy ngẫu nhiên 1 viên bi từ hộp thứ nhất bỏ vào hộp thứ hai, sau đó lấy ra 2 viên bi bất kỳ từ hộp thứ hai.</p>",
+            "page": 2,
+            "polygon": [
+              [
+                130.0,
+                378.0
+              ],
+              [
+                1484.0,
+                378.0
+              ],
+              [
+                1484.0,
+                495.0
+              ],
+              [
+                130.0,
+                495.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              378.0,
+              1484.0,
+              495.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/2/ListGroup/3",
+            "block_type": "ListGroup",
+            "html": "<ul style=\"list-style-type: none\"><li>a) Xác suất để lấy được bi xanh từ hộp thứ nhất là <math>\\frac{1}{3}</math>.</li><li>b) Xác suất để lấy được bi vàng từ hộp thứ nhất là <math>\\frac{1}{3}</math>.</li><li>c) Biết rằng lấy được bi màu xanh từ hộp thứ nhất. Xác suất để lấy được 2 viên bi khác màu từ hộp thứ hai là <math>\\frac{9}{13}</math>.</li><li>d) Xác suất để lấy được 2 bi vàng từ hộp thứ hai là <math>\\frac{30}{273}</math>.</li></ul>",
+            "page": 2,
+            "polygon": [
+              [
+                130.0,
+                497.0
+              ],
+              [
+                1513.0,
+                497.0
+              ],
+              [
+                1513.0,
+                855.0
+              ],
+              [
+                130.0,
+                855.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              497.0,
+              1513.0,
+              855.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/2/SectionHeader/4",
+            "block_type": "SectionHeader",
+            "html": "<h1><p><b>PHẦN III.</b> Thí sinh trả lời từ câu 1 đến câu 6.</p></h1>",
+            "page": 2,
+            "polygon": [
+              [
+                130.0,
+                855.0
+              ],
+              [
+                730.0,
+                855.0
+              ],
+              [
+                730.0,
+                896.0
+              ],
+              [
+                130.0,
+                896.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              855.0,
+              730.0,
+              896.0
+            ],
+            "section_hierarchy": {},
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/2/Text/5",
+            "block_type": "Text",
+            "html": "<p><b>Câu 1.</b> Cho lăng trụ đứng <math>ABC.A'B'C'</math> có đáy <math>ABC</math> là tam giác vuông cân tại <math>A</math>, <math>AB = 3</math>, cạnh bên <math>AA' = 3\\sqrt{2}</math>. Góc giữa đường thẳng <math>BC'</math> và mặt phẳng <math>(ACC'A')</math> bằng <math>x^\\circ</math>. Tìm giá trị <math>x</math>.</p>",
+            "page": 2,
+            "polygon": [
+              [
+                130.0,
+                893.0
+              ],
+              [
+                1557.0,
+                893.0
+              ],
+              [
+                1557.0,
+                985.0
+              ],
+              [
+                130.0,
+                985.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              893.0,
+              1557.0,
+              985.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/2/Text/6",
+            "block_type": "Text",
+            "html": "<p><b>Câu 2.</b> Nhà cô Anh có một khu vườn hình chữ nhật (có kích thước như trong hình), cô Anh muốn đổ bê tông một đường đi trong vườn (phần được tô đậm). Biết rằng đường cong <math>AB</math> có dáng là một phần của đồ thị hàm số bậc ba và đường cong <math>DC</math> nhận được từ đường cong <math>AB</math> bằng cách tịnh tiến theo phương thẳng đứng lên phía trên 2m. Ngoài ra, cô Anh quyết định đổ lớp bê tông dày 20 cm và giá tiền 1 <math>m^3</math> bê tông là 1150 nghìn đồng. Hỏi cô Anh cần dùng bao nhiêu nghìn đồng để đổ bê tông con đường đó?</p>",
+            "page": 2,
+            "polygon": [
+              [
+                130.0,
+                987.0
+              ],
+              [
+                1557.0,
+                987.0
+              ],
+              [
+                1557.0,
+                1193.0
+              ],
+              [
+                130.0,
+                1193.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              987.0,
+              1557.0,
+              1193.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/2/Diagram/7",
+            "block_type": "Figure",
+            "html": "<img alt=\"Technical illustration: Geometric diagram of a rectangle with a shaded curved strip.\" src=\"7a1dee155822446f7828dcb055c465c3_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><p class=\"img-text\"><math>D</math><br/><math>A</math><br/>6m<br/><math>C</math><br/>2m<br/><math>B</math><br/>20m</p><p class=\"img-desc\">A rectangle with vertices labeled A, B, C, and D has a total width of 20m and a total height of 6m. A shaded band curves from the top edge to the bottom edge, with a vertical dimension of 2m indicated at the right.</p><div class=\"img-alt\">Technical illustration: Geometric diagram of a rectangle with a shaded curved strip.</div></div>",
+            "page": 2,
+            "polygon": [
+              [
+                507.0,
+                1207.0
+              ],
+              [
+                1145.0,
+                1207.0
+              ],
+              [
+                1145.0,
+                1570.0
+              ],
+              [
+                507.0,
+                1570.0
+              ]
+            ],
+            "bbox": [
+              507.0,
+              1207.0,
+              1145.0,
+              1570.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {
+              "7a1dee155822446f7828dcb055c465c3_img.jpg": "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"
+            },
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null,
+            "image": {
+              "alt": "Technical illustration: Geometric diagram of a rectangle with a shaded curved strip.",
+              "text": "D\nA\n6m\nC\n2m\nB\n20m",
+              "axes": null,
+              "data": null,
+              "mermaid": null,
+              "description": "A rectangle with vertices labeled A, B, C, and D has a total width of 20m and a total height of 6m. A shaded band curves from the top edge to the bottom edge, with a vertical dimension of 2m indicated at the right."
+            }
+          },
+          {
+            "id": "/page/2/Text/8",
+            "block_type": "Text",
+            "html": "<p><b>Câu 3.</b> Trong không gian với hệ trục tọa độ <math>Oxyz</math> (đơn vị trên mỗi trục tọa độ là kilômét), một máy bay đang ở vị trí <math>A\\left(\\frac{7}{2}; -2; \\frac{2}{5}\\right)</math> và sẽ hạ cánh ở vị trí <math>B\\left(\\frac{7}{2}; \\frac{11}{2}; 0\\right)</math>. Có một lớp mây được mô phỏng bởi một mặt phẳng <math>(\\alpha)</math> đi qua ba điểm <math>M(6; 0; 0), N(0; -6; 0), P\\left(0; 0; \\frac{3}{5}\\right)</math>. Gọi điểm <math>C</math> là vị trí mà máy bay xuyên qua đám mây để hạ cánh. Khoảng cách từ vị trí <math>C</math> đến <math>B</math> bao nhiêu kilômét? (Làm tròn đến hàng phần trăm).</p>",
+            "page": 2,
+            "polygon": [
+              [
+                130.0,
+                1570.0
+              ],
+              [
+                1557.0,
+                1570.0
+              ],
+              [
+                1557.0,
+                1836.0
+              ],
+              [
+                130.0,
+                1836.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              1570.0,
+              1557.0,
+              1836.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/2/Text/9",
+            "block_type": "Text",
+            "html": "<p><b>Câu 4.</b> Một loại linh kiện do hai nhà máy <math>I, II</math> cùng sản xuất. Tỉ lệ phế phẩm của nhà máy <math>I, II</math> lần lượt là: 0,05; 0,04. Trong một lô linh kiện để lẫn lộn 100 sản phẩm của nhà máy <math>I</math> và 150 sản phẩm của nhà máy <math>II</math>. Một khách hàng lấy ngẫu nhiên một linh kiện của lô hàng đó. Giả sử linh kiện được chọn là phế phẩm. Tính xác suất linh kiện này thuộc nhà máy <math>I</math> (làm tròn kết quả đến chữ số hàng phần trăm).</p>",
+            "page": 2,
+            "polygon": [
+              [
+                130.0,
+                1832.0
+              ],
+              [
+                1546.0,
+                1832.0
+              ],
+              [
+                1546.0,
+                2000.0
+              ],
+              [
+                130.0,
+                2000.0
+              ]
+            ],
+            "bbox": [
+              130.0,
+              1832.0,
+              1546.0,
+              2000.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/2/PageFooter/10",
+            "block_type": "PageFooter",
+            "html": "",
+            "page": 2,
+            "polygon": [
+              [
+                1184.0,
+                2119.0
+              ],
+              [
+                1556.0,
+                2119.0
+              ],
+              [
+                1556.0,
+                2161.0
+              ],
+              [
+                1184.0,
+                2161.0
+              ]
+            ],
+            "bbox": [
+              1184.0,
+              2119.0,
+              1556.0,
+              2161.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          }
+        ],
+        "section_hierarchy": {}
+      },
+      {
+        "html": "<p><b>Câu 5.</b> Một công ty sản xuất dụng cụ thể thao nhận được một đơn đặt hàng sản xuất 300 000 quả bóng Pickleball. Công ty này sở hữu một số máy móc, mỗi máy có thể sản xuất được 60 quả bóng trong một giờ. Chi phí thiết lập các máy này là 125 nghìn đồng cho mỗi máy. Khi được thiết lập, hoạt động sản xuất sẽ hoàn toàn diễn ra tự động dưới sự giám sát. Số tiền phải trả cho người giám sát là 90 nghìn đồng một giờ. Số máy móc công ty nên sử dụng là bao nhiêu để chi phí hoạt động là thấp nhất?</p><p><b>Câu 6.</b> Cho một đồ thị gồm có 6 đỉnh được nối với nhau bằng 12 cạnh (như hình vẽ dưới). Giả sử có một con kiến bắt đầu đi từ đỉnh <math>A</math> và đi trên các cạnh, nhưng không được đi cạnh nào quá 1 lần. Biết con kiến đã đi qua mỗi đỉnh đúng 1 lần trước khi quay trở về đỉnh <math>A</math>. Hỏi có bao nhiêu đường đi thỏa mãn?</p><img alt=\"Network diagram: Complete graph with six vertices labeled A through F.\" src=\"9e6062272bbe3ddbb7c0606721d64cf0_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><p class=\"img-text\">A<br/>F<br/>E<br/>C<br/>D<br/>B</p><pre class=\"mermaid\">graph TD\n    A --- B\n    A --- C\n    A --- D\n    A --- E\n    A --- F\n    B --- C\n    B --- D\n    B --- E\n    B --- F\n    C --- D\n    C --- E\n    C --- F\n    D --- E\n    D --- F\n    E --- F</pre><p class=\"img-desc\">A complete graph K6 with vertices A, B, C, D, E, and F arranged in a hexagon, where every pair of vertices is connected by a straight line.</p><div class=\"img-alt\">Network diagram: Complete graph with six vertices labeled A through F.</div></div><p>----- <b>HẾT</b> -----</p><p><b><i>Thí sinh không sử dụng tài liệu. Giám thị không giải thích gì thêm.</i></b></p>",
+        "bbox": [
+          0.0,
+          0.0,
+          1596.0,
+          2240.0
+        ],
+        "polygon": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1596.0,
+            0.0
+          ],
+          [
+            1596.0,
+            2240.0
+          ],
+          [
+            0.0,
+            2240.0
+          ]
+        ],
+        "id": "/page/3/Page/3",
+        "block_type": "Page",
+        "children": [
+          {
+            "id": "/page/3/Text/0",
+            "block_type": "Text",
+            "html": "<p><b>Câu 5.</b> Một công ty sản xuất dụng cụ thể thao nhận được một đơn đặt hàng sản xuất 300 000 quả bóng Pickleball. Công ty này sở hữu một số máy móc, mỗi máy có thể sản xuất được 60 quả bóng trong một giờ. Chi phí thiết lập các máy này là 125 nghìn đồng cho mỗi máy. Khi được thiết lập, hoạt động sản xuất sẽ hoàn toàn diễn ra tự động dưới sự giám sát. Số tiền phải trả cho người giám sát là 90 nghìn đồng một giờ. Số máy móc công ty nên sử dụng là bao nhiêu để chi phí hoạt động là thấp nhất?</p>",
+            "page": 3,
+            "polygon": [
+              [
+                129.0,
+                67.0
+              ],
+              [
+                1541.0,
+                67.0
+              ],
+              [
+                1541.0,
+                266.0
+              ],
+              [
+                129.0,
+                266.0
+              ]
+            ],
+            "bbox": [
+              129.0,
+              67.0,
+              1541.0,
+              266.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/3/Text/1",
+            "block_type": "Text",
+            "html": "<p><b>Câu 6.</b> Cho một đồ thị gồm có 6 đỉnh được nối với nhau bằng 12 cạnh (như hình vẽ dưới). Giả sử có một con kiến bắt đầu đi từ đỉnh <math>A</math> và đi trên các cạnh, nhưng không được đi cạnh nào quá 1 lần. Biết con kiến đã đi qua mỗi đỉnh đúng 1 lần trước khi quay trở về đỉnh <math>A</math>. Hỏi có bao nhiêu đường đi thỏa mãn?</p>",
+            "page": 3,
+            "polygon": [
+              [
+                129.0,
+                264.0
+              ],
+              [
+                1541.0,
+                264.0
+              ],
+              [
+                1541.0,
+                416.0
+              ],
+              [
+                129.0,
+                416.0
+              ]
+            ],
+            "bbox": [
+              129.0,
+              264.0,
+              1541.0,
+              416.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/3/Diagram/2",
+            "block_type": "Figure",
+            "html": "<img alt=\"Network diagram: Complete graph with six vertices labeled A through F.\" src=\"9e6062272bbe3ddbb7c0606721d64cf0_img.jpg\"/><div class=\"img-description\" style=\"border: 1px solid #ccc; padding: 10px;\"><p class=\"img-text\">A<br/>F<br/>E<br/>C<br/>D<br/>B</p><pre class=\"mermaid\">graph TD\n    A --- B\n    A --- C\n    A --- D\n    A --- E\n    A --- F\n    B --- C\n    B --- D\n    B --- E\n    B --- F\n    C --- D\n    C --- E\n    C --- F\n    D --- E\n    D --- F\n    E --- F</pre><p class=\"img-desc\">A complete graph K6 with vertices A, B, C, D, E, and F arranged in a hexagon, where every pair of vertices is connected by a straight line.</p><div class=\"img-alt\">Network diagram: Complete graph with six vertices labeled A through F.</div></div>",
+            "page": 3,
+            "polygon": [
+              [
+                636.0,
+                432.0
+              ],
+              [
+                1024.0,
+                432.0
+              ],
+              [
+                1024.0,
+                931.0
+              ],
+              [
+                636.0,
+                931.0
+              ]
+            ],
+            "bbox": [
+              636.0,
+              432.0,
+              1024.0,
+              931.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {
+              "9e6062272bbe3ddbb7c0606721d64cf0_img.jpg": "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AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAryjxx8KJZdSXxP4HmXStegO8xRYSOc9/YMe+eG79Sa9XooA+RfGvi+91DVtJ1u90+XSfFunOqTgxFUnCNlJAD0IYMpB4PGD2Hqvjz4sWz/CO0vdPkEepa7CYUjQ5MGOJs/TlQfcGuy8f/DfR/HlgftKCDU40It71B8y+it/eXPbtk4xXzj4W+Feva94wOhXtvdWMFuz/arl4G2IBx8ucA7uMexz2oA2fh3rGtjQ/wDhF/Atp/xOtQkMuoao6YW3jxhVDYOABk7iOrEKDwa9k8A/CfTfCcg1XUZP7T8QSEyS3cvIR2+9sB75J+Y8n2ziuq8L+FNI8IaQmm6RbCKIcu55eVv7zN3P8u2K2qACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA89+JHxOf4d3FgsmjLfQ3quUZbvy2UrjIK7Dx8wwc+vpVdPi0dP8V6foPiXQZNJl1CKOS3mS6E6/OcKGwq45BB64PtzXm/xRlvPGPxt0/QdMjW5exVI1iZ9qFx+9ky2DjjAP+7Wx4et7Lxp8ZrqfxhMbfX9Nkxa6TGuYQsfzKRJn58ZLYwM9enAAPeqKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA+dfhQTffH7xJcXX72ZFvHV26g+cq5H/ASR+NN8Jk3v7UGpy3JMkkVxdbGb+HapRfyXiiigD6MooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+            },
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null,
+            "image": {
+              "alt": "Network diagram: Complete graph with six vertices labeled A through F.",
+              "text": "A\nF\nE\nC\nD\nB",
+              "axes": null,
+              "data": null,
+              "mermaid": "graph TD\n    A --- B\n    A --- C\n    A --- D\n    A --- E\n    A --- F\n    B --- C\n    B --- D\n    B --- E\n    B --- F\n    C --- D\n    C --- E\n    C --- F\n    D --- E\n    D --- F\n    E --- F",
+              "description": "A complete graph K6 with vertices A, B, C, D, E, and F arranged in a hexagon, where every pair of vertices is connected by a straight line."
+            }
+          },
+          {
+            "id": "/page/3/Text/3",
+            "block_type": "Text",
+            "html": "<p>----- <b>HẾT</b> -----</p>",
+            "page": 3,
+            "polygon": [
+              [
+                726.0,
+                978.0
+              ],
+              [
+                941.0,
+                978.0
+              ],
+              [
+                941.0,
+                1016.0
+              ],
+              [
+                726.0,
+                1016.0
+              ]
+            ],
+            "bbox": [
+              726.0,
+              978.0,
+              941.0,
+              1016.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/3/Text/4",
+            "block_type": "Text",
+            "html": "<p><b><i>Thí sinh không sử dụng tài liệu. Giám thị không giải thích gì thêm.</i></b></p>",
+            "page": 3,
+            "polygon": [
+              [
+                386.0,
+                1019.0
+              ],
+              [
+                1283.0,
+                1019.0
+              ],
+              [
+                1283.0,
+                1059.0
+              ],
+              [
+                386.0,
+                1059.0
+              ]
+            ],
+            "bbox": [
+              386.0,
+              1019.0,
+              1283.0,
+              1059.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/3/PageFooter/5",
+            "block_type": "PageFooter",
+            "html": "",
+            "page": 3,
+            "polygon": [
+              [
+                1192.0,
+                2119.0
+              ],
+              [
+                1546.0,
+                2119.0
+              ],
+              [
+                1546.0,
+                2163.0
+              ],
+              [
+                1192.0,
+                2163.0
+              ]
+            ],
+            "bbox": [
+              1192.0,
+              2119.0,
+              1546.0,
+              2163.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          }
+        ],
+        "section_hierarchy": {
+          "1": "/page/2/SectionHeader/4"
+        }
+      },
+      {
+        "html": "<table><tr><th rowspan=\"2\">PHẦN</th><th colspan=\"2\" rowspan=\"2\">CÂU HỎI</th><th colspan=\"4\">MÃ ĐỀ</th></tr><tr><th>0101</th><th>0102</th><th>0103</th><th>0104</th></tr><tr><td rowspan=\"12\">I</td><td colspan=\"2\">1</td><td>A</td><td>D</td><td>B</td><td>B</td></tr><tr><td colspan=\"2\">2</td><td>B</td><td>A</td><td>D</td><td>C</td></tr><tr><td colspan=\"2\">3</td><td>B</td><td>B</td><td>B</td><td>A</td></tr><tr><td colspan=\"2\">4</td><td>A</td><td>A</td><td>A</td><td>A</td></tr><tr><td colspan=\"2\">5</td><td>D</td><td>A</td><td>A</td><td>D</td></tr><tr><td colspan=\"2\">6</td><td>C</td><td>A</td><td>A</td><td>C</td></tr><tr><td colspan=\"2\">7</td><td>A</td><td>D</td><td>A</td><td>B</td></tr><tr><td colspan=\"2\">8</td><td>D</td><td>B</td><td>B</td><td>D</td></tr><tr><td colspan=\"2\">9</td><td>A</td><td>B</td><td>A</td><td>C</td></tr><tr><td colspan=\"2\">10</td><td>C</td><td>B</td><td>A</td><td>B</td></tr><tr><td colspan=\"2\">11</td><td>C</td><td>B</td><td>D</td><td>D</td></tr><tr><td colspan=\"2\">12</td><td>A</td><td>C</td><td>B</td><td>C</td></tr><tr><td rowspan=\"16\">II</td><td rowspan=\"4\">1</td><td>a</td><td>D</td><td>D</td><td>D</td><td>D</td></tr><tr><td>b</td><td>D</td><td>S</td><td>S</td><td>S</td></tr><tr><td>c</td><td>S</td><td>D</td><td>D</td><td>D</td></tr><tr><td>d</td><td>S</td><td>S</td><td>S</td><td>S</td></tr><tr><td rowspan=\"4\">2</td><td>a</td><td>D</td><td>D</td><td>D</td><td>D</td></tr><tr><td>b</td><td>D</td><td>D</td><td>S</td><td>D</td></tr><tr><td>c</td><td>S</td><td>S</td><td>S</td><td>S</td></tr><tr><td>d</td><td>S</td><td>S</td><td>D</td><td>S</td></tr><tr><td rowspan=\"4\">3</td><td>a</td><td>D</td><td>D</td><td>D</td><td>D</td></tr><tr><td>b</td><td>S</td><td>S</td><td>D</td><td>S</td></tr><tr><td>c</td><td>S</td><td>D</td><td>S</td><td>D</td></tr><tr><td>d</td><td>D</td><td>S</td><td>S</td><td>S</td></tr><tr><td rowspan=\"4\">4</td><td>a</td><td>D</td><td>D</td><td>D</td><td>D</td></tr><tr><td>b</td><td>S</td><td>D</td><td>D</td><td>D</td></tr><tr><td>c</td><td>D</td><td>S</td><td>S</td><td>S</td></tr><tr><td>d</td><td>S</td><td>S</td><td>S</td><td>S</td></tr><tr><td rowspan=\"6\">III</td><td colspan=\"2\">1</td><td>30</td><td>60</td><td>5,22</td><td>5,22</td></tr><tr><td colspan=\"2\">2</td><td>9200</td><td>5,22</td><td>60</td><td>9200</td></tr><tr><td colspan=\"2\">3</td><td>5,22</td><td>30</td><td>9200</td><td>60</td></tr><tr><td colspan=\"2\">4</td><td>0,45</td><td>32</td><td>0,45</td><td>0,45</td></tr><tr><td colspan=\"2\">5</td><td>60</td><td>9200</td><td>32</td><td>32</td></tr><tr><td colspan=\"2\">6</td><td>32</td><td>0,45</td><td>30</td><td>30</td></tr></table>",
+        "bbox": [
+          0.0,
+          0.0,
+          1596.0,
+          2240.0
+        ],
+        "polygon": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1596.0,
+            0.0
+          ],
+          [
+            1596.0,
+            2240.0
+          ],
+          [
+            0.0,
+            2240.0
+          ]
+        ],
+        "id": "/page/4/Page/4",
+        "block_type": "Page",
+        "children": [
+          {
+            "id": "/page/4/PageHeader/0",
+            "block_type": "PageHeader",
+            "html": "",
+            "page": 4,
+            "polygon": [
+              [
+                167.0,
+                138.0
+              ],
+              [
+                588.0,
+                138.0
+              ],
+              [
+                588.0,
+                219.0
+              ],
+              [
+                167.0,
+                219.0
+              ]
+            ],
+            "bbox": [
+              167.0,
+              138.0,
+              588.0,
+              219.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/4/PageHeader/1",
+            "block_type": "PageHeader",
+            "html": "",
+            "page": 4,
+            "polygon": [
+              [
+                729.0,
+                138.0
+              ],
+              [
+                1383.0,
+                138.0
+              ],
+              [
+                1383.0,
+                259.0
+              ],
+              [
+                729.0,
+                259.0
+              ]
+            ],
+            "bbox": [
+              729.0,
+              138.0,
+              1383.0,
+              259.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          },
+          {
+            "id": "/page/4/Table/2",
+            "block_type": "Table",
+            "html": "<table><tr><th rowspan=\"2\">PHẦN</th><th colspan=\"2\" rowspan=\"2\">CÂU HỎI</th><th colspan=\"4\">MÃ ĐỀ</th></tr><tr><th>0101</th><th>0102</th><th>0103</th><th>0104</th></tr><tr><td rowspan=\"12\">I</td><td colspan=\"2\">1</td><td>A</td><td>D</td><td>B</td><td>B</td></tr><tr><td colspan=\"2\">2</td><td>B</td><td>A</td><td>D</td><td>C</td></tr><tr><td colspan=\"2\">3</td><td>B</td><td>B</td><td>B</td><td>A</td></tr><tr><td colspan=\"2\">4</td><td>A</td><td>A</td><td>A</td><td>A</td></tr><tr><td colspan=\"2\">5</td><td>D</td><td>A</td><td>A</td><td>D</td></tr><tr><td colspan=\"2\">6</td><td>C</td><td>A</td><td>A</td><td>C</td></tr><tr><td colspan=\"2\">7</td><td>A</td><td>D</td><td>A</td><td>B</td></tr><tr><td colspan=\"2\">8</td><td>D</td><td>B</td><td>B</td><td>D</td></tr><tr><td colspan=\"2\">9</td><td>A</td><td>B</td><td>A</td><td>C</td></tr><tr><td colspan=\"2\">10</td><td>C</td><td>B</td><td>A</td><td>B</td></tr><tr><td colspan=\"2\">11</td><td>C</td><td>B</td><td>D</td><td>D</td></tr><tr><td colspan=\"2\">12</td><td>A</td><td>C</td><td>B</td><td>C</td></tr><tr><td rowspan=\"16\">II</td><td rowspan=\"4\">1</td><td>a</td><td>D</td><td>D</td><td>D</td><td>D</td></tr><tr><td>b</td><td>D</td><td>S</td><td>S</td><td>S</td></tr><tr><td>c</td><td>S</td><td>D</td><td>D</td><td>D</td></tr><tr><td>d</td><td>S</td><td>S</td><td>S</td><td>S</td></tr><tr><td rowspan=\"4\">2</td><td>a</td><td>D</td><td>D</td><td>D</td><td>D</td></tr><tr><td>b</td><td>D</td><td>D</td><td>S</td><td>D</td></tr><tr><td>c</td><td>S</td><td>S</td><td>S</td><td>S</td></tr><tr><td>d</td><td>S</td><td>S</td><td>D</td><td>S</td></tr><tr><td rowspan=\"4\">3</td><td>a</td><td>D</td><td>D</td><td>D</td><td>D</td></tr><tr><td>b</td><td>S</td><td>S</td><td>D</td><td>S</td></tr><tr><td>c</td><td>S</td><td>D</td><td>S</td><td>D</td></tr><tr><td>d</td><td>D</td><td>S</td><td>S</td><td>S</td></tr><tr><td rowspan=\"4\">4</td><td>a</td><td>D</td><td>D</td><td>D</td><td>D</td></tr><tr><td>b</td><td>S</td><td>D</td><td>D</td><td>D</td></tr><tr><td>c</td><td>D</td><td>S</td><td>S</td><td>S</td></tr><tr><td>d</td><td>S</td><td>S</td><td>S</td><td>S</td></tr><tr><td rowspan=\"6\">III</td><td colspan=\"2\">1</td><td>30</td><td>60</td><td>5,22</td><td>5,22</td></tr><tr><td colspan=\"2\">2</td><td>9200</td><td>5,22</td><td>60</td><td>9200</td></tr><tr><td colspan=\"2\">3</td><td>5,22</td><td>30</td><td>9200</td><td>60</td></tr><tr><td colspan=\"2\">4</td><td>0,45</td><td>32</td><td>0,45</td><td>0,45</td></tr><tr><td colspan=\"2\">5</td><td>60</td><td>9200</td><td>32</td><td>32</td></tr><tr><td colspan=\"2\">6</td><td>32</td><td>0,45</td><td>30</td><td>30</td></tr></table>",
+            "page": 4,
+            "polygon": [
+              [
+                239.0,
+                300.0
+              ],
+              [
+                1302.0,
+                300.0
+              ],
+              [
+                1302.0,
+                1767.0
+              ],
+              [
+                239.0,
+                1767.0
+              ]
+            ],
+            "bbox": [
+              239.0,
+              300.0,
+              1302.0,
+              1767.0
+            ],
+            "section_hierarchy": {
+              "1": "/page/2/SectionHeader/4"
+            },
+            "images": {},
+            "markdown": null,
+            "inference_failed": false,
+            "metadata": null
+          }
+        ],
+        "section_hierarchy": {
+          "1": "/page/2/SectionHeader/4"
+        }
+      }
+    ],
+    "metadata": {
+      "page_stats": [
+        {
+          "page_id": 0,
+          "num_blocks": 26
+        },
+        {
+          "page_id": 1,
+          "num_blocks": 17
+        },
+        {
+          "page_id": 2,
+          "num_blocks": 11
+        },
+        {
+          "page_id": 3,
+          "num_blocks": 6
+        },
+        {
+          "page_id": 4,
+          "num_blocks": 3
+        }
+      ],
+      "failed_pages": []
+    }
+  }
+}

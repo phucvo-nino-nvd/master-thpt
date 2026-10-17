@@ -1,0 +1,1259 @@
+{
+  "source_url": "https://toanmath.com/toanmath-pdf/loi-giai-chi-tiet-de-tham-khao-ky-thi-tot-nghiep-thpt-mon-toan-tu-nam-2025.pdf",
+  "title": "Lời giải chi tiết đề tham khảo kỳ thi tốt nghiệp THPT môn Toán từ năm 2025 - TOANMATH.com",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Nguyên hàm của hàm số $f(x) = e^x$ là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{e^{x+1}}{x+1} + C$."
+        },
+        {
+          "label": "B",
+          "content": "$e^x + C$."
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{e^x}{x} + C$."
+        },
+        {
+          "label": "D",
+          "content": "$x.e^{x-1} + C$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/7",
+          "page": 0,
+          "bbox": [
+            206.0,
+            434.0,
+            800.0,
+            474.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/8",
+          "page": 0,
+          "bbox": [
+            206.0,
+            487.0,
+            1313.0,
+            567.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ liên tục, nhận giá trị dương trên đoạn $[a;b]$. Xét hình phẳng $(H)$ giới hạn bởi đồ thị hàm số $y = f(x)$, trục hoành và hai đường thẳng $x = a$, $x = b$. Khối tròn xoay được tạo thành khi quay hình phẳng $(H)$ quanh trục $Ox$ có thể tích là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$V = \\pi \\int_a^b |f(x)| dx$."
+        },
+        {
+          "label": "B",
+          "content": "$V = \\pi^2 \\int_a^b f(x) dx$."
+        },
+        {
+          "label": "C",
+          "content": "$V = \\pi^2 \\int_a^b [f(x)]^2 dx$."
+        },
+        {
+          "label": "D",
+          "content": "$V = \\pi \\int_a^b [f(x)]^2 dx$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/9",
+          "page": 0,
+          "bbox": [
+            206.0,
+            575.0,
+            1456.0,
+            737.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/10",
+          "page": 0,
+          "bbox": [
+            206.0,
+            749.0,
+            1451.0,
+            844.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Hai mẫu số liệu ghép nhóm $M_1, M_2$ có bảng tần số ghép nhóm như sau:\n\n<table>\n<tr><td rowspan=\"2\">$M_1$</td><td>Nhóm</td><td>$[8;10)$</td><td>$[10;12)$</td><td>$[12;14)$</td><td>$[14;16)$</td><td>$[16;18)$</td></tr>\n<tr><td>Tần số</td><td>3</td><td>4</td><td>8</td><td>6</td><td>4</td></tr>\n</table>\n\n<table>\n<tr><td rowspan=\"2\">$M_2$</td><td>Nhóm</td><td>$[8;10)$</td><td>$[10;12)$</td><td>$[12;14)$</td><td>$[14;16)$</td><td>$[16;18)$</td></tr>\n<tr><td>Tần số</td><td>6</td><td>8</td><td>16</td><td>12</td><td>8</td></tr>\n</table>\n\nGọi $s_1, s_2$ lần lượt là độ lệch chuẩn của mẫu số liệu ghép nhóm $M_1, M_2$. Phát biểu nào sau đây là đúng?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$s_1 = s_2$."
+        },
+        {
+          "label": "B",
+          "content": "$s_1 = 2s_2$."
+        },
+        {
+          "label": "C",
+          "content": "$2s_1 = s_2$."
+        },
+        {
+          "label": "D",
+          "content": "$4s_1 = s_2$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/11",
+          "page": 0,
+          "bbox": [
+            206.0,
+            854.0,
+            1239.0,
+            896.0
+          ]
+        },
+        {
+          "id": "/page/0/Table/12",
+          "page": 0,
+          "bbox": [
+            266.0,
+            905.0,
+            1292.0,
+            1014.0
+          ]
+        },
+        {
+          "id": "/page/0/Table/13",
+          "page": 0,
+          "bbox": [
+            266.0,
+            1056.0,
+            1292.0,
+            1167.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/14",
+          "page": 0,
+          "bbox": [
+            206.0,
+            1176.0,
+            1459.0,
+            1218.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/15",
+          "page": 0,
+          "bbox": [
+            206.0,
+            1234.0,
+            1305.0,
+            1274.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "4",
+      "type": "multiple_choice",
+      "content": "Trong không gian với hệ trục tọa độ $Oxyz$, phương trình của đường thẳng đi qua điểm $M(1;-3;5)$ và có một vectơ chỉ phương $\\vec{u}(2;-1;1)$ là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x-1}{2} = \\frac{y-3}{-1} = \\frac{z-5}{1}$."
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-1}{2} = \\frac{y-3}{-1} = \\frac{z+5}{1}$."
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x-1}{2} = \\frac{y+3}{-1} = \\frac{z-5}{1}$."
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x+1}{2} = \\frac{y+3}{-1} = \\frac{z-5}{1}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/16",
+          "page": 0,
+          "bbox": [
+            206.0,
+            1281.0,
+            1459.0,
+            1377.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/17",
+          "page": 0,
+          "bbox": [
+            206.0,
+            1394.0,
+            1065.0,
+            1566.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "5",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = \\frac{ax+b}{cx+d}$ ($c \\neq 0, ad - bc \\neq 0$) có đồ thị như hình vẽ bên. Tiệm cận ngang của đồ thị hàm số là:\n\n![Graph of a rational function with vertical asymptote x = -1 and horizontal asymptotes y = 1/2 and y = -1/2. The curve passes through (0, -1/2) and (1, 0).](images/f0336491e3ec8593c18ae7d5b759fb82_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$x = -1$."
+        },
+        {
+          "label": "B",
+          "content": "$y = \\frac{1}{2}$."
+        },
+        {
+          "label": "C",
+          "content": "$y = -1$."
+        },
+        {
+          "label": "D",
+          "content": "$x = \\frac{1}{2}$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "f0336491e3ec8593c18ae7d5b759fb82_img.jpg",
+          "path": "images/f0336491e3ec8593c18ae7d5b759fb82_img.jpg",
+          "page": 0,
+          "bbox": [
+            993.0,
+            1617.0,
+            1443.0,
+            1934.0
+          ],
+          "alt": "Graph of a rational function with vertical asymptote x = -1 and horizontal asymptotes y = 1/2 and y = -1/2. The curve passes through (0, -1/2) and (1, 0)."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/18",
+          "page": 0,
+          "bbox": [
+            206.0,
+            1581.0,
+            971.0,
+            1709.0
+          ]
+        },
+        {
+          "id": "/page/0/ListGroup/19",
+          "page": 0,
+          "bbox": [
+            222.0,
+            1717.0,
+            873.0,
+            1890.0
+          ]
+        },
+        {
+          "id": "/page/0/Diagram/20",
+          "page": 0,
+          "bbox": [
+            993.0,
+            1617.0,
+            1443.0,
+            1934.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "6",
+      "type": "multiple_choice",
+      "content": "Tập nghiệm của bất phương trình $\\log_2(x-1) < 3$ là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(1;9)$."
+        },
+        {
+          "label": "B",
+          "content": "$(-\\infty;9)$."
+        },
+        {
+          "label": "C",
+          "content": "$(9;+\\infty)$."
+        },
+        {
+          "label": "D",
+          "content": "$(1;7)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/0",
+          "page": 1,
+          "bbox": [
+            215.0,
+            100.0,
+            993.0,
+            142.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/1",
+          "page": 1,
+          "bbox": [
+            215.0,
+            157.0,
+            1360.0,
+            203.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "7",
+      "type": "multiple_choice",
+      "content": "Trong không gian với hệ trục tọa độ $Oxyz$, cho mặt phẳng $(P)$ có phương trình $x-3y-z+8=0$. Vector nào sau đây là một vector pháp tuyến của mặt phẳng $(P)$?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{n}_1(1;-3;1)$."
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{n}_2(1;-3;-1)$."
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{n}_3(1;-3;8)$."
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{n}_4(1;3;8)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/2",
+          "page": 1,
+          "bbox": [
+            215.0,
+            216.0,
+            1456.0,
+            315.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/3",
+          "page": 1,
+          "bbox": [
+            215.0,
+            325.0,
+            1326.0,
+            371.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "8",
+      "type": "multiple_choice",
+      "content": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình chữ nhật và $SA \\perp (ABCD)$. Mặt phẳng nào sau đây vuông góc với mặt phẳng $(ABCD)$?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(SAB)$."
+        },
+        {
+          "label": "B",
+          "content": "$(SBC)$."
+        },
+        {
+          "label": "C",
+          "content": "$(SCD)$."
+        },
+        {
+          "label": "D",
+          "content": "$(SBD)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/4",
+          "page": 1,
+          "bbox": [
+            215.0,
+            388.0,
+            1456.0,
+            485.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/5",
+          "page": 1,
+          "bbox": [
+            215.0,
+            497.0,
+            1294.0,
+            543.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "9",
+      "type": "multiple_choice",
+      "content": "Nghiệm của phương trình $2^x = 6$ là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$x = \\log_6 2$."
+        },
+        {
+          "label": "B",
+          "content": "$x = 3$."
+        },
+        {
+          "label": "C",
+          "content": "$x = 4$."
+        },
+        {
+          "label": "D",
+          "content": "$x = \\log_2 6$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/6",
+          "page": 1,
+          "bbox": [
+            215.0,
+            560.0,
+            786.0,
+            600.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/7",
+          "page": 1,
+          "bbox": [
+            215.0,
+            611.0,
+            1326.0,
+            653.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "10",
+      "type": "multiple_choice",
+      "content": "Cấp số cộng $(u_n)$ có $u_1 = 1$ và $u_2 = 3$. Số hạng $u_5$ của cấp số cộng là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "5."
+        },
+        {
+          "label": "B",
+          "content": "7."
+        },
+        {
+          "label": "C",
+          "content": "9."
+        },
+        {
+          "label": "D",
+          "content": "11."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/8",
+          "page": 1,
+          "bbox": [
+            215.0,
+            663.0,
+            1222.0,
+            707.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/9",
+          "page": 1,
+          "bbox": [
+            215.0,
+            720.0,
+            1239.0,
+            758.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "11",
+      "type": "multiple_choice",
+      "content": "Cho hình hộp $ABCD.A'B'C'D'$ (minh họa như hình bên).\n\nPhát biểu nào sau đây là đúng?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{AB} + \\vec{BB'} + \\vec{B'A'} = \\vec{AC'}$."
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{AB} + \\vec{BC'} + \\vec{C'D'} = \\vec{AC'}$."
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{AB} + \\vec{AC} + \\vec{AA'} = \\vec{AC'}$."
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{AB} + \\vec{AA'} + \\vec{AD} = \\vec{AC'}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/10",
+          "page": 1,
+          "bbox": [
+            215.0,
+            764.0,
+            1078.0,
+            806.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/11",
+          "page": 1,
+          "bbox": [
+            212.0,
+            810.0,
+            620.0,
+            848.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/12",
+          "page": 1,
+          "bbox": [
+            212.0,
+            846.0,
+            1049.0,
+            936.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "12",
+      "type": "multiple_choice",
+      "content": "Cho hàm số có đồ thị như hình vẽ bên. Hàm số đã cho đồng biến trên khoảng nào sau đây?\n\n![Scientific illustration: Geometric diagram of a parallelogram prism and a plotted cubic function.](images/6343a896ff7c6a10ec2f48bad236b8bf_img.jpg)",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-\\infty; -1)$."
+        },
+        {
+          "label": "B",
+          "content": "$(-\\infty; 1)$."
+        },
+        {
+          "label": "C",
+          "content": "$(-1; 1)$."
+        },
+        {
+          "label": "D",
+          "content": "$(1; +\\infty)$."
+        }
+      ],
+      "parts": [],
+      "images": [
+        {
+          "id": "6343a896ff7c6a10ec2f48bad236b8bf_img.jpg",
+          "path": "images/6343a896ff7c6a10ec2f48bad236b8bf_img.jpg",
+          "page": 1,
+          "bbox": [
+            1130.0,
+            764.0,
+            1416.0,
+            1184.0
+          ],
+          "alt": "Scientific illustration: Geometric diagram of a parallelogram prism and a plotted cubic function."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/13",
+          "page": 1,
+          "bbox": [
+            212.0,
+            959.0,
+            1073.0,
+            1050.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/14",
+          "page": 1,
+          "bbox": [
+            212.0,
+            1054.0,
+            842.0,
+            1155.0
+          ]
+        },
+        {
+          "id": "/page/1/Diagram/15",
+          "page": 1,
+          "bbox": [
+            1130.0,
+            764.0,
+            1416.0,
+            1184.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Cho hàm số $f(x) = 2 \\cos x + x$.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "$f(0) = 2$; $f\\left(\\frac{\\pi}{2}\\right) = \\frac{\\pi}{2}$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Đạo hàm của hàm số đã cho là $f'(x) = 2 \\sin x + 1$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Nghiệm của phương trình $f'(x) = 0$ trên đoạn $\\left[0; \\frac{\\pi}{2}\\right]$ là $\\frac{\\pi}{6}$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Giá trị lớn nhất của $f(x)$ trên đoạn $\\left[0; \\frac{\\pi}{2}\\right]$ là $\\sqrt{3} + \\frac{\\pi}{6}$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/17",
+          "page": 1,
+          "bbox": [
+            212.0,
+            1283.0,
+            711.0,
+            1323.0
+          ]
+        },
+        {
+          "id": "/page/1/Equation/18",
+          "page": 1,
+          "bbox": [
+            207.0,
+            1339.0,
+            534.0,
+            1423.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/19",
+          "page": 1,
+          "bbox": [
+            209.0,
+            1440.0,
+            878.0,
+            1480.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/20",
+          "page": 1,
+          "bbox": [
+            207.0,
+            1497.0,
+            1034.0,
+            1581.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/21",
+          "page": 1,
+          "bbox": [
+            207.0,
+            1598.0,
+            958.0,
+            1682.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Một người điều khiển ô tô đang ở đường dẫn muốn nhập làn vào đường cao tốc. Khi ô tô cách điểm nhập làn 200 m, tốc độ của ô tô là 36 km/h. Hai giây sau đó, ô tô bắt đầu tăng tốc với tốc độ $v(t) = at + b$ ($a, b \\in \\mathbb{R}$, $a > 0$), trong đó $t$ là thời gian tính bằng giây kể từ khi bắt đầu tăng tốc. Biết rằng ô tô nhập làn cao tốc sau 12 giây và duy trì sự tăng tốc trong 24 giây kể từ khi bắt đầu tăng tốc.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Quãng đường ô tô đi được từ khi bắt đầu tăng tốc đến khi nhập làn là 180 m.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Giá trị của b là 10.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Quãng đường $S(t)$ (đơn vị: mét) mà ô tô đi được trong thời gian $t$ giây ($0 \\leq t \\leq 24$) kể từ khi tăng tốc được tính theo công thức $S(t) = \\int_0^{24} v(t)dt$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Sau 24 giây kể từ khi tăng tốc, tốc độ của ô tô không vượt quá tốc độ tối đa cho phép là 100 km/h.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/22",
+          "page": 1,
+          "bbox": [
+            206.0,
+            1696.0,
+            1450.0,
+            1911.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/0",
+          "page": 2,
+          "bbox": [
+            214.0,
+            142.0,
+            1243.0,
+            186.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/1",
+          "page": 2,
+          "bbox": [
+            214.0,
+            199.0,
+            506.0,
+            235.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/2",
+          "page": 2,
+          "bbox": [
+            214.0,
+            239.0,
+            1466.0,
+            392.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/3",
+          "page": 2,
+          "bbox": [
+            214.0,
+            405.0,
+            1459.0,
+            449.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "3",
+      "type": "true_false",
+      "content": "Trước khi đưa một loại sản phẩm ra thị trường, người ta đã phỏng vấn ngẫu nhiên 200 khách hàng về sản phẩm đó. Kết quả thống kê như sau: có 105 người trả lời “sẽ mua”; có 95 người trả lời “không mua”. Kinh nghiệm cho thấy tỉ lệ khách hàng thực sự sẽ mua sản phẩm tương ứng với những cách trả lời “sẽ mua” và “không mua” lần lượt là 70% và 30%.\n\nGọi $A$ là biến cố “Người được phỏng vấn thực sự sẽ mua sản phẩm”.\n\nGọi $B$ là biến cố “Người được phỏng vấn trả lời sẽ mua sản phẩm”.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Xác suất $P(",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "$=$ \\frac{21}{40}$ và $P(\\bar{B}) $=$ \\frac{19}{40}$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Xác suất có điều kiện $P(A|",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "$=$ 0,3$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Xác suất $P(",
+          "solution": null
+        },
+        {
+          "label": "a",
+          "content": "$=$ 0,51$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Trong số những người được phỏng vấn thực sự sẽ mua sản phẩm có 70% người đã trả lời “sẽ mua” khi được phỏng vấn (kết quả tính theo phần trăm được làm tròn đến hàng đơn vị).",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/4",
+          "page": 2,
+          "bbox": [
+            214.0,
+            453.0,
+            1466.0,
+            627.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/5",
+          "page": 2,
+          "bbox": [
+            214.0,
+            632.0,
+            1117.0,
+            674.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/6",
+          "page": 2,
+          "bbox": [
+            214.0,
+            676.0,
+            1099.0,
+            720.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/7",
+          "page": 2,
+          "bbox": [
+            214.0,
+            732.0,
+            734.0,
+            812.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/8",
+          "page": 2,
+          "bbox": [
+            214.0,
+            825.0,
+            743.0,
+            869.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/9",
+          "page": 2,
+          "bbox": [
+            214.0,
+            884.0,
+            550.0,
+            928.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/10",
+          "page": 2,
+          "bbox": [
+            214.0,
+            938.0,
+            1469.0,
+            1026.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "4",
+      "type": "true_false",
+      "content": "Các thiên thạch có đường kính lớn hơn 140 m và có thể lại gần Trái Đất ở khoảng cách nhỏ hơn 7 500 000 km được coi là những vật thể có khả năng va chạm gây nguy hiểm cho Trái Đất. Để theo dõi những thiên thạch này, người ta đã thiết lập các trạm quan sát các vật thể bay gần Trái Đất. Giả sử có một hệ thống quan sát có khả năng theo dõi các vật thể ở độ cao không vượt quá 6 600 km so với mực nước biển. Coi Trái Đất là khối cầu có bán kính 6 400 km. Chọn hệ trục tọa độ $Oxyz$ trong không gian có gốc $O$ tại tâm Trái Đất và đơn vị độ dài trên mỗi trục tọa độ là 1 000 km. Một thiên thạch (coi như một hạt) chuyển động với tốc độ không đổi theo một đường thẳng từ điểm $M(6;20;0)$ đến điểm $N(-6;-12;16)$.\n\n![Scientific illustration: Geometric diagram of two concentric circles with a secant line.](images/8239bdc2ad69faed67c2741625a1ca79_img.jpg)",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Đường thẳng $MN$ có phương trình tham số là $\\begin{cases} x = 6 + 3t \\\\ y = 20 + 8t, (t \\in \\mathbb{R}) \\\\ z = -4t \\end{cases}$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Vị trí đầu tiên thiên thạch di chuyển vào phạm vi theo dõi của hệ thống quan sát là điểm $A(-3;-4;12)$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Khoảng cách giữa vị trí đầu tiên và vị trí cuối cùng mà thiên thạch di chuyển trong phạm vi theo dõi của hệ thống quan sát là 18 900 km (kết quả làm tròn đến hàng trăm theo đơn vị ki-lô-mét).",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Nếu thời gian di chuyển của thiên thạch trong phạm vi theo dõi của hệ thống quan sát là 3 phút thì thời gian nó di chuyển từ $M$ đến $N$ là 6 phút.",
+          "solution": null
+        }
+      ],
+      "images": [
+        {
+          "id": "8239bdc2ad69faed67c2741625a1ca79_img.jpg",
+          "path": "images/8239bdc2ad69faed67c2741625a1ca79_img.jpg",
+          "page": 2,
+          "bbox": [
+            1034.0,
+            1056.0,
+            1450.0,
+            1407.0
+          ],
+          "alt": "Scientific illustration: Geometric diagram of two concentric circles with a secant line."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/11",
+          "page": 2,
+          "bbox": [
+            214.0,
+            1035.0,
+            1469.0,
+            1522.0
+          ]
+        },
+        {
+          "id": "/page/2/Diagram/12",
+          "page": 2,
+          "bbox": [
+            1034.0,
+            1056.0,
+            1450.0,
+            1407.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/13",
+          "page": 2,
+          "bbox": [
+            214.0,
+            1528.0,
+            1130.0,
+            1671.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/14",
+          "page": 2,
+          "bbox": [
+            214.0,
+            1675.0,
+            1469.0,
+            1766.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/15",
+          "page": 2,
+          "bbox": [
+            214.0,
+            1770.0,
+            1469.0,
+            1862.0
+          ]
+        },
+        {
+          "id": "/page/2/Text/16",
+          "page": 2,
+          "bbox": [
+            214.0,
+            1871.0,
+            1466.0,
+            1961.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Cho hình lăng trụ đứng $ABC.A'B'C'$ có $AB = 5, BC = 6, CA = 7$. Khoảng cách giữa hai đường thẳng $AA'$ và $BC$ bằng bao nhiêu? (làm tròn kết quả đến hàng phần mười).",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/1",
+          "page": 3,
+          "bbox": [
+            212.0,
+            191.0,
+            1464.0,
+            279.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "2",
+      "type": "short_answer",
+      "content": "Một trò chơi điện tử quy định như sau: Có 4 trụ $A, B, C, D$ với số lượng các thử thách trên đường đi giữa các cặp trụ được mô tả trong hình bên. Người chơi xuất phát từ một trụ nào đó, đi qua tất cả các trụ còn lại, mỗi khi đi qua một trụ thì trụ đó sẽ bị phá hủy và không thể quay trở lại trụ đó được nữa, nhưng người chơi vẫn phải trở về trụ ban đầu. Tổng số thử thách của đường đi thoả mãn điều kiện trên nhận giá trị nhỏ nhất là bao nhiêu?\n\n![Other diagram: Geometric diagram of triangle ABC with an interior point D and labeled segment lengths.](images/d3ca266c298aeb34b019960c6c36f187_img.jpg)",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "d3ca266c298aeb34b019960c6c36f187_img.jpg",
+          "path": "images/d3ca266c298aeb34b019960c6c36f187_img.jpg",
+          "page": 3,
+          "bbox": [
+            1076.0,
+            321.0,
+            1429.0,
+            562.0
+          ],
+          "alt": "Other diagram: Geometric diagram of triangle ABC with an interior point D and labeled segment lengths."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/2",
+          "page": 3,
+          "bbox": [
+            212.0,
+            287.0,
+            1050.0,
+            596.0
+          ]
+        },
+        {
+          "id": "/page/3/Diagram/3",
+          "page": 3,
+          "bbox": [
+            1076.0,
+            321.0,
+            1429.0,
+            562.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "3",
+      "type": "short_answer",
+      "content": "Hệ thống định vị toàn cầu GPS là một hệ thống cho phép xác định vị trí của một vật thể trong không gian. Trong cùng một thời điểm, vị trí của một điểm $M$ trong không gian sẽ được xác định bởi bốn vệ tinh cho trước nhờ các bộ thu phát tín hiệu đặt trên các vệ tinh. Giả sử trong không gian với hệ tọa độ $Oxyz$, có bốn vệ tinh lần lượt đặt tại các điểm $A(3;1;0), B(3;6;6), C(4;6;2), D(6;2;14)$; vị trí $M(a;b;c)$ thỏa mãn $MA = 3, MB = 6, MC = 5, MD = 13$.\n\nKhoảng cách từ điểm $M$ đến điểm $O$ bằng bao nhiêu?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/4",
+          "page": 3,
+          "bbox": [
+            212.0,
+            604.0,
+            1468.0,
+            844.0
+          ]
+        },
+        {
+          "id": "/page/3/Text/5",
+          "page": 3,
+          "bbox": [
+            212.0,
+            854.0,
+            920.0,
+            894.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "4",
+      "type": "short_answer",
+      "content": "Kiến trúc sư thiết kế một khu sinh hoạt cộng đồng có dạng hình chữ nhật với chiều rộng và chiều dài lần lượt là $60m$ và $80m$. Trong đó, phần được tô màu đậm là sân chơi, phần còn lại để trồng hoa. Mỗi phần trồng hoa có đường biên cong là một phần của parabol với đỉnh thuộc một trục đối xứng của hình chữ nhật và khoảng cách từ đỉnh đó đến trung điểm cạnh tương ứng của hình chữ nhật bằng $20m$ (xem hình minh họa). Diện tích của phần sân chơi là bao nhiêu mét vuông?\n\n![A diagram of a rectangular field with a semicircular cutout at the top and bottom. The height of the semicircular cutouts is labeled as 20m. The area between the cutouts is shaded, representing the grassy area.](images/0c9723d1620cf51bc2b7a380ce7e23c0_img.jpg)",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "0c9723d1620cf51bc2b7a380ce7e23c0_img.jpg",
+          "path": "images/0c9723d1620cf51bc2b7a380ce7e23c0_img.jpg",
+          "page": 3,
+          "bbox": [
+            1190.0,
+            900.0,
+            1448.0,
+            1230.0
+          ],
+          "alt": "A diagram of a rectangular field with a semicircular cutout at the top and bottom. The height of the semicircular cutouts is labeled as 20m. The area between the cutouts is shaded, representing the grassy area."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/6",
+          "page": 3,
+          "bbox": [
+            212.0,
+            898.0,
+            1159.0,
+            1222.0
+          ]
+        },
+        {
+          "id": "/page/3/Diagram/7",
+          "page": 3,
+          "bbox": [
+            1190.0,
+            900.0,
+            1448.0,
+            1230.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "5",
+      "type": "short_answer",
+      "content": "Một doanh nghiệp dự định sản xuất không quá 500 sản phẩm. Nếu doanh nghiệp sản xuất $x$ sản phẩm ($1 \\leq x \\leq 500$) thì doanh thu nhận được khi bán hết số sản phẩm đó là $F(x) = x^3 - 1999x^2 + 1001000x + 250000$ (đồng), trong khi chi phí sản xuất bình quân cho một sản phẩm là $G(x) = x + 1000 + \\frac{250000}{x}$ (đồng). Doanh nghiệp cần sản xuất bao nhiêu sản phẩm để lợi nhuận thu được là lớn nhất?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/8",
+          "page": 3,
+          "bbox": [
+            212.0,
+            1239.0,
+            1468.0,
+            1526.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "6",
+      "type": "short_answer",
+      "content": "Có hai chiếc hộp, hộp I có 6 quả bóng màu đỏ và 4 quả bóng màu vàng, hộp II có 7 quả bóng màu đỏ và 3 quả bóng màu vàng, các quả bóng có cùng kích thước và khối lượng. Lấy ngẫu nhiên một quả bóng từ hộp I bỏ vào hộp II. Sau đó, lấy ra ngẫu nhiên một quả bóng từ hộp II. Tính xác suất để quả bóng được lấy ra từ hộp II là quả bóng được chuyển từ hộp I sang, biết rằng quả bóng đó có màu đỏ (làm tròn kết quả đến hàng phần trăm).",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/9",
+          "page": 3,
+          "bbox": [
+            212.0,
+            1528.0,
+            1468.0,
+            1749.0
+          ]
+        }
+      ]
+    }
+  ]
+}

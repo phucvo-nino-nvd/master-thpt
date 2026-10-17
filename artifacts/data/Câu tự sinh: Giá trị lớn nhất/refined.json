@@ -1,0 +1,35 @@
+{
+  "source_url": "generated://gia-tri-lon-nhat",
+  "title": "Câu tự sinh: Giá trị lớn nhất",
+  "grade": 10,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = -x^2 + 2x + 3$ trên đoạn $[0;2]$. Giá trị lớn nhất của hàm số là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "4"
+        },
+        {
+          "label": "B",
+          "content": "3"
+        },
+        {
+          "label": "C",
+          "content": "2"
+        },
+        {
+          "label": "D",
+          "content": "1"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    }
+  ]
+}

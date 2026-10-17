@@ -1,0 +1,1073 @@
+{
+  "source_url": "https://toanmath.com/toanmath-pdf/de-thi-thu-tot-nghiep-thpt-nam-2025-mon-toan-so-gddt-phu-yen.pdf",
+  "title": "Đề thi thử tốt nghiệp THPT năm 2025 môn Toán sở GD&ĐT Phú Yên - TOANMATH.com",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Số nghiệm của phương trình $2^{x^2-2x} = 128$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "2."
+        },
+        {
+          "label": "B",
+          "content": "0."
+        },
+        {
+          "label": "C",
+          "content": "1."
+        },
+        {
+          "label": "D",
+          "content": "3."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/5",
+          "page": 0,
+          "bbox": [
+            132.0,
+            414.0,
+            812.0,
+            461.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/6",
+          "page": 0,
+          "bbox": [
+            169.0,
+            461.0,
+            1295.0,
+            497.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Tập nghiệm của phương trình $\\cos x = -1$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$S = \\left\\{ -\\frac{\\pi}{2} + k2\\pi, k \\in \\mathbb{Z} \\right\\}$."
+        },
+        {
+          "label": "B",
+          "content": "$S = \\{ \\pi + k2\\pi, k \\in \\mathbb{Z} \\}$."
+        },
+        {
+          "label": "C",
+          "content": "$S = \\left\\{ \\frac{\\pi}{2} + k2\\pi, k \\in \\mathbb{Z} \\right\\}$."
+        },
+        {
+          "label": "D",
+          "content": "$S = \\left\\{ -\\frac{\\pi}{3} + k2\\pi, k \\in \\mathbb{Z} \\right\\}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/7",
+          "page": 0,
+          "bbox": [
+            132.0,
+            497.0,
+            793.0,
+            537.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/8",
+          "page": 0,
+          "bbox": [
+            167.0,
+            542.0,
+            1228.0,
+            719.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Trong không gian với hệ trục tọa độ $Oxyz$, phương trình của đường thẳng đi qua hai điểm $M(1;2;1)$ và $N(3;1;-2)$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x+1}{4} = \\frac{y+2}{3} = \\frac{z+1}{-1}$."
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-1}{2} = \\frac{y-2}{-1} = \\frac{z-1}{-3}$."
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x+1}{2} = \\frac{y+2}{-1} = \\frac{z+1}{-3}$."
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x-1}{4} = \\frac{y-2}{3} = \\frac{z-1}{-1}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/9",
+          "page": 0,
+          "bbox": [
+            132.0,
+            725.0,
+            1546.0,
+            826.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/10",
+          "page": 0,
+          "bbox": [
+            167.0,
+            835.0,
+            1182.0,
+            992.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "4",
+      "type": "multiple_choice",
+      "content": "Trong không gian với hệ trục tọa độ $Oxyz$, cho mặt phẳng $(P): x + 2z - 7 = 0$. Véc-tơ nào dưới đây là một véc-tơ pháp tuyến của mặt phẳng $(P)$?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{n}_2 = (1;0;2)$."
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{n}_3 = (1;2;0)$."
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{n}_1 = (1;2;0)$."
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{n}_4 = (1;2;-7)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/11",
+          "page": 0,
+          "bbox": [
+            132.0,
+            999.0,
+            1530.0,
+            1097.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/12",
+          "page": 0,
+          "bbox": [
+            169.0,
+            1108.0,
+            1465.0,
+            1155.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "5",
+      "type": "multiple_choice",
+      "content": "Mỗi ngày bác Hương đều đi bộ để rèn luyện sức khỏe. Quãng đường đi bộ mỗi ngày (đơn vị: $km$) của bác Hương trong 20 ngày được thống kê lại ở bảng sau:\n\n<table>\n<tr><td>Quãng đường ($km$)</td><td>$[2,7;3,0)$</td><td>$[3,0;3,3)$</td><td>$[3,3;3,6)$</td><td>$[3,6;3,9)$</td><td>$[3,9;4,2)$</td></tr>\n<tr><td>Số ngày</td><td>3</td><td>6</td><td>5</td><td>4</td><td>2</td></tr>\n</table>\n\nKhoảng biến thiên của mẫu số liệu ghép nhóm là",
+      "options": [
+        {
+          "label": "A",
+          "content": "0,6."
+        },
+        {
+          "label": "B",
+          "content": "0,3."
+        },
+        {
+          "label": "C",
+          "content": "0,9."
+        },
+        {
+          "label": "D",
+          "content": "1,5."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/13",
+          "page": 0,
+          "bbox": [
+            132.0,
+            1160.0,
+            1557.0,
+            1238.0
+          ]
+        },
+        {
+          "id": "/page/0/Table/14",
+          "page": 0,
+          "bbox": [
+            180.0,
+            1234.0,
+            1500.0,
+            1357.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/15",
+          "page": 0,
+          "bbox": [
+            132.0,
+            1355.0,
+            766.0,
+            1395.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/16",
+          "page": 0,
+          "bbox": [
+            169.0,
+            1395.0,
+            1318.0,
+            1433.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "6",
+      "type": "multiple_choice",
+      "content": "Trong không gian với hệ trục tọa độ $Oxyz$, cho hai điểm $E(-1;-2;1)$ và $F(2;3;2)$. Vector $\\overline{EF}$ có tọa độ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-1;-2;3)$."
+        },
+        {
+          "label": "B",
+          "content": "$(1;2;3)$."
+        },
+        {
+          "label": "C",
+          "content": "$(3;5;1)$."
+        },
+        {
+          "label": "D",
+          "content": "$(3;4;1)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/17",
+          "page": 0,
+          "bbox": [
+            132.0,
+            1440.0,
+            1516.0,
+            1532.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/18",
+          "page": 0,
+          "bbox": [
+            169.0,
+            1534.0,
+            1375.0,
+            1576.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "7",
+      "type": "multiple_choice",
+      "content": "Trong không gian, cho điểm $A$ và đường thẳng $d$. Có bao nhiêu mặt phẳng đi qua điểm $A$ và vuông góc với đường thẳng $d$?",
+      "options": [
+        {
+          "label": "A",
+          "content": "1."
+        },
+        {
+          "label": "B",
+          "content": "2."
+        },
+        {
+          "label": "C",
+          "content": "0."
+        },
+        {
+          "label": "D",
+          "content": "3."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/19",
+          "page": 0,
+          "bbox": [
+            132.0,
+            1581.0,
+            1557.0,
+            1662.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/20",
+          "page": 0,
+          "bbox": [
+            169.0,
+            1659.0,
+            1295.0,
+            1697.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "8",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ có đạo hàm $f'(x) = x - 1, \\forall x \\in \\mathbb{R}$. Mệnh đề nào dưới đây đúng?",
+      "options": [
+        {
+          "label": "A",
+          "content": "Hàm số đã cho đồng biến trên $(-\\infty;1)$."
+        },
+        {
+          "label": "B",
+          "content": "Hàm số đã cho đồng biến trên $\\mathbb{R}$."
+        },
+        {
+          "label": "C",
+          "content": "Hàm số đã cho đồng biến trên $\\mathbb{R} \\setminus \\{1\\}$."
+        },
+        {
+          "label": "D",
+          "content": "Hàm số đã cho đồng biến trên $(1;+\\infty)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/21",
+          "page": 0,
+          "bbox": [
+            132.0,
+            1697.0,
+            1345.0,
+            1738.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/22",
+          "page": 0,
+          "bbox": [
+            169.0,
+            1738.0,
+            1417.0,
+            1830.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "9",
+      "type": "multiple_choice",
+      "content": "Trên khoảng $(0;+\\infty)$, đạo hàm của hàm số $y = \\ln(7x)$ là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$y' = \\frac{1}{x}$."
+        },
+        {
+          "label": "B",
+          "content": "$y' = \\frac{x}{7}$."
+        },
+        {
+          "label": "C",
+          "content": "$y' = \\frac{7}{x}$."
+        },
+        {
+          "label": "D",
+          "content": "$y' = \\frac{1}{7x}$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/0/Text/23",
+          "page": 0,
+          "bbox": [
+            132.0,
+            1836.0,
+            971.0,
+            1881.0
+          ]
+        },
+        {
+          "id": "/page/0/Text/24",
+          "page": 0,
+          "bbox": [
+            169.0,
+            1890.0,
+            1386.0,
+            1966.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "10",
+      "type": "multiple_choice",
+      "content": "Trong không gian với hệ trục tọa độ $Oxyz$, cho mặt cầu $(S) : x^2 + y^2 + z^2 - 2x + 2y - \\frac{1}{2} = 0$. Tọa độ tâm $I$ của mặt cầu $(S)$ đã cho là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-1; 1; -3)$."
+        },
+        {
+          "label": "B",
+          "content": "$(1; 1; 0)$."
+        },
+        {
+          "label": "C",
+          "content": "$(1; -1; 0)$."
+        },
+        {
+          "label": "D",
+          "content": "$(1; -1; 3)$."
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/0",
+          "page": 1,
+          "bbox": [
+            130.0,
+            76.0,
+            1546.0,
+            194.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/1",
+          "page": 1,
+          "bbox": [
+            167.0,
+            201.0,
+            1383.0,
+            239.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "11",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $y = f(x)$ liên tục trên đoạn $[a; b]$. Gọi $F(x)$ là một nguyên hàm của hàm số $f(x)$ trên đoạn $[a; b]$. Khẳng định nào dưới đây là đúng?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\int_a^b f(x) dx = F(a) - F(b)$$.</td><td>$"
+        },
+        {
+          "label": "B",
+          "content": "$\\int_a^b f(x) dx = f(b) - f(a)$$.</td></tr>$\n<tr><td>"
+        },
+        {
+          "label": "C",
+          "content": "$\\int_a^b f(x) dx = F(b) - F(a)$$.</td><td>$"
+        },
+        {
+          "label": "D",
+          "content": "$\\int_a^b f(x) dx = f(a) - f(b)$$.</td></tr>$\n</table>"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/2",
+          "page": 1,
+          "bbox": [
+            130.0,
+            244.0,
+            1511.0,
+            342.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/3",
+          "page": 1,
+          "bbox": [
+            167.0,
+            353.0,
+            1244.0,
+            571.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "I",
+      "number": "12",
+      "type": "multiple_choice",
+      "content": "Cho hàm số $f(x) = e^x + 1$. Khẳng định nào dưới đây là đúng?",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\int f(x) dx = e^x + x + C$$.</td><td>$"
+        },
+        {
+          "label": "B",
+          "content": "$\\int f(x) dx = e^x - x + C$$.</td></tr>$\n<tr><td>"
+        },
+        {
+          "label": "C",
+          "content": "$\\int f(x) dx = xe^{x-1} + C$$.</td><td>$"
+        },
+        {
+          "label": "D",
+          "content": "$\\int f(x) dx = e^x + C$$.</td></tr>$\n</table>"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/4",
+          "page": 1,
+          "bbox": [
+            130.0,
+            582.0,
+            1050.0,
+            627.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/5",
+          "page": 1,
+          "bbox": [
+            167.0,
+            638.0,
+            1197.0,
+            750.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Cho hàm số $f(x) = -e^x - x$.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Đạo hàm của hàm số đã cho là $f'(x) = -e^x - 1$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Hàm số đã cho nghịch biến trên đoạn $[0; \\ln 3]$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Phương trình $f'(x) = 0$ có nghiệm trên đoạn $[0; \\ln 3]$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Giá trị lớn nhất của $f(x)$ trên đoạn $[0; \\ln 3]$ là $-3 - \\ln 3$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/7",
+          "page": 1,
+          "bbox": [
+            130.0,
+            840.0,
+            601.0,
+            882.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/8",
+          "page": 1,
+          "bbox": [
+            167.0,
+            891.0,
+            941.0,
+            1093.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Bác An cần thiết kế một nhà vườn ngoài trời để trồng hoa. Bác đã thiết kế và vẽ mô hình nhà vườn trong hệ trục tọa độ $Axyz$ như hình vẽ, với các cột nhà là các đoạn thẳng $AA', BB', CC'$ và $DD'$. Phần mái là tứ giác $A'B'C'D'$ và hình vuông $ABCD$ nằm trên mặt đất. Biết độ dài các đoạn thẳng\n\n$AB = 25m, AA' = BB' = 4m$ và $CC' = DD' = 3m$.\n\n![Scientific illustration: Rectangular prism in a 3D coordinate system with vertices labeled.](images/72bc1a2b64dd6bac8285f560440c1218_img.jpg)",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Tọa độ điểm $A'(0; 0; 4)$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Đường thẳng $A'D'$ có phương trình tham số là $\\begin{cases} x = 25t \\\\ y = 0 \\\\ z = 4 - t \\end{cases}, t \\in \\mathbb{R}$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Bác An đặt một camera ở vị trí $E$ trên cột $AA'$ và cách mặt đất $7m$. Một vật ở vị trí $M(a; b;",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "$ thỏa mãn $$MA = MB = MC = MD =$ \\sqrt{\\frac{697}{2}}$ thì cách camera $\\frac{\\sqrt{1266}}{2}m$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Gọi $\\alpha$ là góc hợp bởi đường thẳng $A'D'$ và mặt đất. Khi đó $\\cos \\alpha = \\frac{1}{\\sqrt{626}}$.",
+          "solution": null
+        }
+      ],
+      "images": [
+        {
+          "id": "72bc1a2b64dd6bac8285f560440c1218_img.jpg",
+          "path": "images/72bc1a2b64dd6bac8285f560440c1218_img.jpg",
+          "page": 1,
+          "bbox": [
+            598.0,
+            1305.0,
+            1061.0,
+            1650.0
+          ],
+          "alt": "Scientific illustration: Rectangular prism in a 3D coordinate system with vertices labeled."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/1/Text/9",
+          "page": 1,
+          "bbox": [
+            130.0,
+            1097.0,
+            1466.0,
+            1218.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/10",
+          "page": 1,
+          "bbox": [
+            138.0,
+            1254.0,
+            759.0,
+            1292.0
+          ]
+        },
+        {
+          "id": "/page/1/Diagram/11",
+          "page": 1,
+          "bbox": [
+            598.0,
+            1305.0,
+            1061.0,
+            1650.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/12",
+          "page": 1,
+          "bbox": [
+            167.0,
+            1659.0,
+            521.0,
+            1704.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/13",
+          "page": 1,
+          "bbox": [
+            167.0,
+            1713.0,
+            1029.0,
+            1852.0
+          ]
+        },
+        {
+          "id": "/page/1/Text/14",
+          "page": 1,
+          "bbox": [
+            130.0,
+            1861.0,
+            1527.0,
+            2002.0
+          ]
+        },
+        {
+          "id": "/page/1/ListGroup/15",
+          "page": 1,
+          "bbox": [
+            167.0,
+            2007.0,
+            1187.0,
+            2089.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "3",
+      "type": "true_false",
+      "content": "Tại một khu di tích vào ngày lễ hội hàng năm, tốc độ thay đổi lượng khách tham quan được biểu diễn bằng hàm số $Q'(t) = 4t^3 - 72t^2 + 288t$, trong đó $t$ tính bằng giờ ($0 \\leq t \\leq 12$), $Q'(t)$ tính bằng khách/giờ (Nguồn: R.Larson and B Edwards, Calculus $10e$, Cengage). Sau 2 giờ đã có 400 người có mặt.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Lượng khách tham quan được biểu diễn bởi hàm số $Q(t) = t^4 - 24t^3 + 144t^2$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Tốc độ thay đổi lượng khách tham quan lớn nhất tại thời điểm $t = 6$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Lượng khách tham quan lớn nhất là 1096 người.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Sau 4 giờ lượng khách tham quan là 1024 người.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/0",
+          "page": 2,
+          "bbox": [
+            130.0,
+            67.0,
+            1498.0,
+            206.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/1",
+          "page": 2,
+          "bbox": [
+            169.0,
+            208.0,
+            1171.0,
+            374.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "II",
+      "number": "4",
+      "type": "true_false",
+      "content": "Hộp thứ nhất chứa 6 viên bi vàng, 3 viên bi xanh. Hộp thứ hai chứa 5 viên bi vàng, 5 viên bi xanh và 3 viên bi đỏ. Lấy ngẫu nhiên 1 viên bi từ hộp thứ nhất bỏ vào hộp thứ hai, sau đó lấy ra 2 viên bi bất kỳ từ hộp thứ hai.",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Xác suất để lấy được bi xanh từ hộp thứ nhất là $\\frac{1}{3}$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Xác suất để lấy được bi vàng từ hộp thứ nhất là $\\frac{1}{3}$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Biết rằng lấy được bi màu xanh từ hộp thứ nhất. Xác suất để lấy được 2 viên bi khác màu từ hộp thứ hai là $\\frac{9}{13}$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Xác suất để lấy được 2 bi vàng từ hộp thứ hai là $\\frac{30}{273}$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/2",
+          "page": 2,
+          "bbox": [
+            130.0,
+            378.0,
+            1484.0,
+            495.0
+          ]
+        },
+        {
+          "id": "/page/2/ListGroup/3",
+          "page": 2,
+          "bbox": [
+            130.0,
+            497.0,
+            1513.0,
+            855.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Cho lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác vuông cân tại $A$, $AB = 3$, cạnh bên $AA' = 3\\sqrt{2}$. Góc giữa đường thẳng $BC'$ và mặt phẳng $(ACC'A')$ bằng $x^\\circ$. Tìm giá trị $x$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/5",
+          "page": 2,
+          "bbox": [
+            130.0,
+            893.0,
+            1557.0,
+            985.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "2",
+      "type": "short_answer",
+      "content": "Nhà cô Anh có một khu vườn hình chữ nhật (có kích thước như trong hình), cô Anh muốn đổ bê tông một đường đi trong vườn (phần được tô đậm). Biết rằng đường cong $AB$ có dáng là một phần của đồ thị hàm số bậc ba và đường cong $DC$ nhận được từ đường cong $AB$ bằng cách tịnh tiến theo phương thẳng đứng lên phía trên $2m$. Ngoài ra, cô Anh quyết định đổ lớp bê tông dày 20 cm và giá tiền 1 $m^3$ bê tông là 1150 nghìn đồng. Hỏi cô Anh cần dùng bao nhiêu nghìn đồng để đổ bê tông con đường đó?\n\n![Technical illustration: Geometric diagram of a rectangle with a shaded curved strip.](images/7a1dee155822446f7828dcb055c465c3_img.jpg)",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "7a1dee155822446f7828dcb055c465c3_img.jpg",
+          "path": "images/7a1dee155822446f7828dcb055c465c3_img.jpg",
+          "page": 2,
+          "bbox": [
+            507.0,
+            1207.0,
+            1145.0,
+            1570.0
+          ],
+          "alt": "Technical illustration: Geometric diagram of a rectangle with a shaded curved strip."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/6",
+          "page": 2,
+          "bbox": [
+            130.0,
+            987.0,
+            1557.0,
+            1193.0
+          ]
+        },
+        {
+          "id": "/page/2/Diagram/7",
+          "page": 2,
+          "bbox": [
+            507.0,
+            1207.0,
+            1145.0,
+            1570.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "3",
+      "type": "short_answer",
+      "content": "Trong không gian với hệ trục tọa độ $Oxyz$ (đơn vị trên mỗi trục tọa độ là kilômét), một máy bay đang ở vị trí $A\\left(\\frac{7}{2}; -2; \\frac{2}{5}\\right)$ và sẽ hạ cánh ở vị trí $B\\left(\\frac{7}{2}; \\frac{11}{2}; 0\\right)$. Có một lớp mây được mô phỏng bởi một mặt phẳng $(\\alpha)$ đi qua ba điểm $M(6; 0; 0), N(0; -6; 0), P\\left(0; 0; \\frac{3}{5}\\right)$. Gọi điểm $C$ là vị trí mà máy bay xuyên qua đám mây để hạ cánh. Khoảng cách từ vị trí $C$ đến $B$ bao nhiêu kilômét? (Làm tròn đến hàng phần trăm).",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/8",
+          "page": 2,
+          "bbox": [
+            130.0,
+            1570.0,
+            1557.0,
+            1836.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "4",
+      "type": "short_answer",
+      "content": "Một loại linh kiện do hai nhà máy $I, II$ cùng sản xuất. Tỉ lệ phế phẩm của nhà máy $I, II$ lần lượt là: $0,05; 0,04$. Trong một lô linh kiện để lẫn lộn 100 sản phẩm của nhà máy $I$ và 150 sản phẩm của nhà máy $II$. Một khách hàng lấy ngẫu nhiên một linh kiện của lô hàng đó. Giả sử linh kiện được chọn là phế phẩm. Tính xác suất linh kiện này thuộc nhà máy $I$ (làm tròn kết quả đến chữ số hàng phần trăm).",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/2/Text/9",
+          "page": 2,
+          "bbox": [
+            130.0,
+            1832.0,
+            1546.0,
+            2000.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "5",
+      "type": "short_answer",
+      "content": "Một công ty sản xuất dụng cụ thể thao nhận được một đơn đặt hàng sản xuất 300 000 quả bóng Pickleball. Công ty này sở hữu một số máy móc, mỗi máy có thể sản xuất được 60 quả bóng trong một giờ. Chi phí thiết lập các máy này là 125 nghìn đồng cho mỗi máy. Khi được thiết lập, hoạt động sản xuất sẽ hoàn toàn diễn ra tự động dưới sự giám sát. Số tiền phải trả cho người giám sát là 90 nghìn đồng một giờ. Số máy móc công ty nên sử dụng là bao nhiêu để chi phí hoạt động là thấp nhất?",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/0",
+          "page": 3,
+          "bbox": [
+            129.0,
+            67.0,
+            1541.0,
+            266.0
+          ]
+        }
+      ]
+    },
+    {
+      "section": "III",
+      "number": "6",
+      "type": "short_answer",
+      "content": "Cho một đồ thị gồm có 6 đỉnh được nối với nhau bằng 12 cạnh (như hình vẽ dưới). Giả sử có một con kiến bắt đầu đi từ đỉnh $A$ và đi trên các cạnh, nhưng không được đi cạnh nào quá 1 lần. Biết con kiến đã đi qua mỗi đỉnh đúng 1 lần trước khi quay trở về đỉnh $A$. Hỏi có bao nhiêu đường đi thỏa mãn?\n\n![Network diagram: Complete graph with six vertices labeled A through F.](images/9e6062272bbe3ddbb7c0606721d64cf0_img.jpg)",
+      "options": [],
+      "parts": [],
+      "images": [
+        {
+          "id": "9e6062272bbe3ddbb7c0606721d64cf0_img.jpg",
+          "path": "images/9e6062272bbe3ddbb7c0606721d64cf0_img.jpg",
+          "page": 3,
+          "bbox": [
+            636.0,
+            432.0,
+            1024.0,
+            931.0
+          ],
+          "alt": "Network diagram: Complete graph with six vertices labeled A through F."
+        }
+      ],
+      "solution": null,
+      "source_blocks": [
+        {
+          "id": "/page/3/Text/1",
+          "page": 3,
+          "bbox": [
+            129.0,
+            264.0,
+            1541.0,
+            416.0
+          ]
+        },
+        {
+          "id": "/page/3/Diagram/2",
+          "page": 3,
+          "bbox": [
+            636.0,
+            432.0,
+            1024.0,
+            931.0
+          ]
+        }
+      ]
+    }
+  ]
+}

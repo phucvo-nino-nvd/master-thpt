@@ -1,0 +1,106 @@
+{
+  "source_url": "generated://dao-ham-cua-cac-ham-so-so-cap-co-ban",
+  "title": "Câu tự sinh: Đạo hàm của các hàm số sơ cấp cơ bản",
+  "grade": 11,
+  "questions": [
+    {
+      "section": "I",
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Tính đạo hàm của hàm số $f(x) = x^3 - 2x^2 + 5x - 1$.",
+      "options": [
+        {
+          "label": "A",
+          "content": "$3x^2 - 4x + 5$"
+        },
+        {
+          "label": "B",
+          "content": "$3x^2 - 4x$"
+        },
+        {
+          "label": "C",
+          "content": "$3x^2 - 2x + 5$"
+        },
+        {
+          "label": "D",
+          "content": "$x^2 - 4x + 5$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Xét tính đúng sai của các mệnh đề sau về đạo hàm của các hàm số sơ cấp cơ bản:",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Đạo hàm của hàm số $y = \\sin(2x)$ là $y' = 2\\cos(2x)$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Đạo hàm của hàm số $y = e^{3x}$ là $y' = 3e^{3x}$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Đạo hàm của hàm số $y = \\ln(x^2+1)$ là $y' = \\frac{2x}{x^2+1}$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Đạo hàm của hàm số $y = \\cos(2x)$ là $y' = -\\sin(2x)$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "III",
+      "number": "2",
+      "type": "short_answer",
+      "content": "Cho hàm số $f(x) = x^3 - 3x^2 + 2$. Tính $f'(1)$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "I",
+      "number": "4",
+      "type": "multiple_choice",
+      "content": "Một chất điểm chuyển động theo phương trình $s(t) = 2t^3 - 3t^2 + 4t + 1$ ($s$ tính bằng mét, $t$ tính bằng giây). Vận tốc của chất điểm tại thời điểm $t = 1$ giây là:",
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$ m/s"
+        },
+        {
+          "label": "B",
+          "content": "$5$ m/s"
+        },
+        {
+          "label": "C",
+          "content": "$6$ m/s"
+        },
+        {
+          "label": "D",
+          "content": "$7$ m/s"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    }
+  ]
+}

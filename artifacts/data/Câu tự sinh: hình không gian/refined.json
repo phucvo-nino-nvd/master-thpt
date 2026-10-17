@@ -1,0 +1,166 @@
+{
+  "source_url": "generated://hinh-khong-gian",
+  "title": "Câu tự sinh: hình không gian",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB = a$, $AD = b$, $AA' = c$. Khoảng cách từ điểm $A$ đến mặt phẳng $(A'BD)$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{abc}{\\sqrt{a^2b^2+b^2c^2+c^2a^2}}$"
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{ab}{\\sqrt{a^2+b^2}}$"
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{bc}{\\sqrt{b^2+c^2}}$"
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{ac}{\\sqrt{a^2+c^2}}$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "I",
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Một chiếc lều có dạng hình chóp tứ giác đều với thể tích $32\\ \\text{m}^3$ và chiều cao $6\\ \\text{m}$. Độ dài cạnh đáy của lều là",
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\ \\text{m}$"
+        },
+        {
+          "label": "B",
+          "content": "$8\\ \\text{m}$"
+        },
+        {
+          "label": "C",
+          "content": "$2\\ \\text{m}$"
+        },
+        {
+          "label": "D",
+          "content": "$6\\ \\text{m}$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Cho hình hộp chữ nhật $ABCD.A'B'C'D'$ có $AB = 3$, $AD = 4$, $AA' = 6$. Xét tính đúng sai của các mệnh đề sau:",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Khoảng cách từ $A$ đến mặt phẳng $(A'BD)$ bằng $\\frac{72}{\\sqrt{1044}}$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Góc giữa đường thẳng $AC'$ và mặt phẳng $(ABCD)$ bằng $45^\\circ$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Thể tích khối hộp bằng $72$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Đường thẳng $A'C$ vuông góc với mặt phẳng $(AB'D)$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Cho hình lập phương $ABCD.A'B'C'D'$ cạnh $a$. Tính khoảng cách giữa hai đường thẳng $AC$ và $BD'$.",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "I",
+      "number": "3",
+      "type": "multiple_choice",
+      "content": "Cho hình chóp $S.ABC$ có đáy $ABC$ là tam giác vuông tại $B$, $AB = a$, $BC = a\\sqrt{2}$, $SA$ vuông góc với đáy và $SA = a$. Góc giữa đường thẳng $SC$ và mặt phẳng $(ABC)$ bằng",
+      "options": [
+        {
+          "label": "A",
+          "content": "$30^\\circ$"
+        },
+        {
+          "label": "B",
+          "content": "$45^\\circ$"
+        },
+        {
+          "label": "C",
+          "content": "$60^\\circ$"
+        },
+        {
+          "label": "D",
+          "content": "$90^\\circ$"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Cho lăng trụ đứng $ABC.A'B'C'$ có đáy $ABC$ là tam giác đều cạnh $a$, $AA' = a$. Xét tính đúng sai của các mệnh đề sau:",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "Thể tích khối lăng trụ bằng $\\frac{a^3\\sqrt{3}}{4}$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "Góc giữa đường thẳng $AB'$ và mặt phẳng $(ABC)$ bằng $45^\\circ$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "Khoảng cách từ $A$ đến mặt phẳng $(A'BC)$ bằng $\\frac{a\\sqrt{3}}{2}$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "Đường thẳng $A'C$ vuông góc với mặt phẳng $(AB'C')$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    }
+  ]
+}

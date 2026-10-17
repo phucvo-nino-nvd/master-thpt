@@ -1,0 +1,149 @@
+{
+  "source_url": "generated://diem-cuc-tri",
+  "title": "Câu tự sinh: Điểm cực trị",
+  "grade": 12,
+  "questions": [
+    {
+      "section": "I",
+      "number": "1",
+      "type": "multiple_choice",
+      "content": "Điểm cực trị",
+      "options": [
+        {
+          "label": "A",
+          "content": "A. 0"
+        },
+        {
+          "label": "B",
+          "content": "B. 1"
+        },
+        {
+          "label": "C",
+          "content": "C. 2"
+        },
+        {
+          "label": "D",
+          "content": "D. 3"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "I",
+      "number": "2",
+      "type": "multiple_choice",
+      "content": "Điểm cực trị",
+      "options": [
+        {
+          "label": "A",
+          "content": "A. 5"
+        },
+        {
+          "label": "B",
+          "content": "B. 6"
+        },
+        {
+          "label": "C",
+          "content": "C. 7"
+        },
+        {
+          "label": "D",
+          "content": "D. 8"
+        }
+      ],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "II",
+      "number": "1",
+      "type": "true_false",
+      "content": "Điểm cực trị",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "a) Hàm số có đúng 2 điểm cực trị.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "b) Hàm số đạt cực đại tại $x=0$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "c) Hàm số đạt cực tiểu tại $x=1$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "d) Hàm số đạt cực tiểu tại $x=-1$.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "III",
+      "number": "1",
+      "type": "short_answer",
+      "content": "Điểm cực trị",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "III",
+      "number": "2",
+      "type": "short_answer",
+      "content": "Điểm cực trị",
+      "options": [],
+      "parts": [],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    },
+    {
+      "section": "II",
+      "number": "2",
+      "type": "true_false",
+      "content": "Điểm cực trị",
+      "options": [],
+      "parts": [
+        {
+          "label": "a",
+          "content": "a) Hàm số đạt cực đại tại $x=0$.",
+          "solution": null
+        },
+        {
+          "label": "b",
+          "content": "b) Hàm số đạt cực tiểu tại $x=2$.",
+          "solution": null
+        },
+        {
+          "label": "c",
+          "content": "c) Hàm số đạt cực đại tại $x=2$.",
+          "solution": null
+        },
+        {
+          "label": "d",
+          "content": "d) Hàm số không có điểm cực trị.",
+          "solution": null
+        }
+      ],
+      "images": [],
+      "solution": null,
+      "source_blocks": []
+    }
+  ]
+}
