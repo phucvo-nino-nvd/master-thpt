@@ -379,7 +379,8 @@
 	border-radius: 14px;
 	outline: 0;
 	background: #fff;
-	font: 800 16px var(--mono);
+	font: 800 16px var(--sans);
+	font-variant-numeric: tabular-nums;
 }
 
 .short:disabled {
