@@ -1,0 +1,31 @@
+name: Backend
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        type: choice
+        options: [start, stop]
+        required: true
+
+env:
+  HOST: ubuntu@18.143.40.148
+  DOMAIN: masterthpt-api.duckdns.org
+
+jobs:
+  toggle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ${{ inputs.action }}
+        env:
+          SSH_KEY: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+          CMD: ${{ inputs.action == 'start' && 'up -d' || 'stop' }}
+        run: |
+          install -m 600 /dev/null key
+          echo "$SSH_KEY" > key
+          ssh -i key -o StrictHostKeyChecking=accept-new "$HOST" \
+            "cd ~/master-thpt/backend && sudo DOMAIN=$DOMAIN docker compose $CMD && sudo DOMAIN=$DOMAIN docker compose ps"
+
+      - name: health check
+        if: inputs.action == 'start'
+        run: curl -fsS -o /dev/null --retry 10 --retry-delay 3 --retry-all-errors "https://$DOMAIN/docs"
